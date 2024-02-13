@@ -4,6 +4,9 @@ project:
 
 website:
   title: ""
+  twitter-card: true
+  open-graph: true
+  google-analytics: "G-PE6RLP594L"
   navbar:
     logo: "/img/Logo-Black2.png"
     background: transparent

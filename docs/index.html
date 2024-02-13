@@ -67,6 +67,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PE6RLP594L"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
+</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
 
@@ -148,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig1_zoom.png" class="lightbox" data-gallery="my-gallery" data-description="Carbon-I
+<p><a href="./img/Fig1_zoom.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-description="Carbon-I
 
 fills
 
@@ -218,7 +227,7 @@ and
 
 climate
 
-feedback" data-glightbox="description: .lightbox-desc-1" title="Carbon-I fills the data hole in the humid tropics"><img src="./img/Fig1_zoom.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I fills the data hole in the humid tropics"></a></p>
+feedback" data-gallery="my-gallery" title="Carbon-I fills the data hole in the humid tropics"><img src="./img/Fig1_zoom.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I fills the data hole in the humid tropics"></a></p>
 <figcaption>Carbon-I fills the data hole in the humid tropics</figcaption>
 </figure>
 </div>
@@ -226,7 +235,7 @@ feedback" data-glightbox="description: .lightbox-desc-1" title="Carbon-I fills t
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig3_yields.png" class="lightbox" data-gallery="my-gallery" data-description="The
+<p><a href="./img/Fig3_yields.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-description="The
 
 humid
 
@@ -242,7 +251,7 @@ by
 
 current
 
-satellites" data-glightbox="description: .lightbox-desc-2" title="The humid tropics are hardly observed by current satellites"><img src="./img/Fig3_yields.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="The humid tropics are hardly observed by current satellites"></a></p>
+satellites" data-gallery="my-gallery" title="The humid tropics are hardly observed by current satellites"><img src="./img/Fig3_yields.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="The humid tropics are hardly observed by current satellites"></a></p>
 <figcaption>The humid tropics are hardly observed by current satellites</figcaption>
 </figure>
 </div>
@@ -250,7 +259,7 @@ satellites" data-glightbox="description: .lightbox-desc-2" title="The humid trop
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig4_methane.png" class="lightbox" data-gallery="my-gallery" data-description="The
+<p><a href="./img/Fig4_methane.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-description="The
 
 humid
 
@@ -266,7 +275,7 @@ by
 
 current
 
-satellites" data-glightbox="description: .lightbox-desc-3" title="CH4 emissions are heterogenous across the globe, highest in the tropics."><img src="./img/Fig4_methane.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="CH4 emissions are heterogenous across the globe, highest in the tropics."></a></p>
+satellites" data-gallery="my-gallery" title="CH4 emissions are heterogenous across the globe, highest in the tropics."><img src="./img/Fig4_methane.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="CH4 emissions are heterogenous across the globe, highest in the tropics."></a></p>
 <figcaption>CH4 emissions are heterogenous across the globe, highest in the tropics.</figcaption>
 </figure>
 </div>
@@ -274,7 +283,7 @@ satellites" data-glightbox="description: .lightbox-desc-3" title="CH4 emissions 
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig5_plumes.png" class="lightbox" data-gallery="my-gallery" data-description="The
+<p><a href="./img/Fig5_plumes.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-description="The
 
 humid
 
@@ -290,7 +299,7 @@ by
 
 current
 
-satellites" data-glightbox="description: .lightbox-desc-4" title="Carbon-I will investigate hotspots and flux heterogeneity globally."><img src="./img/Fig5_plumes.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I will investigate hotspots and flux heterogeneity globally."></a></p>
+satellites" data-gallery="my-gallery" title="Carbon-I will investigate hotspots and flux heterogeneity globally."><img src="./img/Fig5_plumes.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I will investigate hotspots and flux heterogeneity globally."></a></p>
 <figcaption>Carbon-I will investigate hotspots and flux heterogeneity globally.</figcaption>
 </figure>
 </div>
@@ -357,7 +366,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
