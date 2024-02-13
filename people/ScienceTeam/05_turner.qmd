@@ -1,0 +1,39 @@
+---
+title: "Paul Wennberg"
+started: "2015"
+image: /img/people/wennberg.jpg
+subtitle: "Validation Lead"
+sortby: "1"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/cfranken/
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/chr_fronge
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+    - icon: mortarboard
+      text: ResearchID
+      href: https://www.webofscience.com/wos/author/record/408887
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-0546-5857 
+---
+
+Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+
+## Education
+
+- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
+- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+
+## Professional Experience
+
+- [2018-present:]{.fw-bold} Professor, 	Caltech 
+- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
+- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
+- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\

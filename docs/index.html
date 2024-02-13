@@ -164,7 +164,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig1_zoom.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-description="Carbon-I
+<p><a href="./img/Fig1_zoom.png" class="lightbox" data-gallery="my-gallery" data-glightbox="description: .lightbox-desc-1" data-description="Carbon-I
 
 fills
 
@@ -234,7 +234,7 @@ and
 
 climate
 
-feedback" data-gallery="my-gallery" title="Carbon-I fills the data hole in the humid tropics"><img src="./img/Fig1_zoom.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I fills the data hole in the humid tropics"></a></p>
+feedback" title="Carbon-I fills the data hole in the humid tropics"><img src="./img/Fig1_zoom.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I fills the data hole in the humid tropics"></a></p>
 <figcaption>Carbon-I fills the data hole in the humid tropics</figcaption>
 </figure>
 </div>
@@ -242,7 +242,7 @@ feedback" data-gallery="my-gallery" title="Carbon-I fills the data hole in the h
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig3_yields.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-description="The
+<p><a href="./img/Fig3_yields.png" class="lightbox" data-gallery="my-gallery" data-glightbox="description: .lightbox-desc-2" data-description="The
 
 humid
 
@@ -258,7 +258,7 @@ by
 
 current
 
-satellites" data-gallery="my-gallery" title="The humid tropics are hardly observed by current satellites"><img src="./img/Fig3_yields.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="The humid tropics are hardly observed by current satellites"></a></p>
+satellites" title="The humid tropics are hardly observed by current satellites"><img src="./img/Fig3_yields.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="The humid tropics are hardly observed by current satellites"></a></p>
 <figcaption>The humid tropics are hardly observed by current satellites</figcaption>
 </figure>
 </div>
@@ -266,7 +266,7 @@ satellites" data-gallery="my-gallery" title="The humid tropics are hardly observ
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig4_methane.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-description="The
+<p><a href="./img/Fig4_methane.png" class="lightbox" data-gallery="my-gallery" data-glightbox="description: .lightbox-desc-3" data-description="The
 
 humid
 
@@ -282,7 +282,7 @@ by
 
 current
 
-satellites" data-gallery="my-gallery" title="CH4 emissions are heterogenous across the globe, highest in the tropics."><img src="./img/Fig4_methane.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="CH4 emissions are heterogenous across the globe, highest in the tropics."></a></p>
+satellites" title="CH4 emissions are heterogenous across the globe, highest in the tropics."><img src="./img/Fig4_methane.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="CH4 emissions are heterogenous across the globe, highest in the tropics."></a></p>
 <figcaption>CH4 emissions are heterogenous across the globe, highest in the tropics.</figcaption>
 </figure>
 </div>
@@ -290,7 +290,7 @@ satellites" data-gallery="my-gallery" title="CH4 emissions are heterogenous acro
 <div class="grid-item">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./img/Fig5_plumes.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-description="The
+<p><a href="./img/Fig5_plumes.png" class="lightbox" data-gallery="my-gallery" data-glightbox="description: .lightbox-desc-4" data-description="The
 
 humid
 
@@ -306,7 +306,7 @@ by
 
 current
 
-satellites" data-gallery="my-gallery" title="Carbon-I will investigate hotspots and flux heterogeneity globally."><img src="./img/Fig5_plumes.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I will investigate hotspots and flux heterogeneity globally."></a></p>
+satellites" title="Carbon-I will investigate hotspots and flux heterogeneity globally."><img src="./img/Fig5_plumes.png" class="shadow-effect img-fluid figure-img" loading="lightbox" alt="Carbon-I will investigate hotspots and flux heterogeneity globally."></a></p>
 <figcaption>Carbon-I will investigate hotspots and flux heterogeneity globally.</figcaption>
 </figure>
 </div>
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
