@@ -12,9 +12,17 @@ website:
         text: Home
       - href: team.qmd
         text: Team
+      - href: science.qmd
+        text: Science
+      - href: publications.qmd
+        text: Publications
+    right:
+      - icon: github
+        href: https://github.com/Carbon-I/
+        aria-label: GitHub
   page-footer:
     left: |
-      [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=65px}](https://www.caltech.edu/)
+      [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=75px}](https://www.caltech.edu/)
     #center:
     #  - text: "About"
     #    href: about.qmd
