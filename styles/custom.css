@@ -1,0 +1,75 @@
+body::before {
+    content: '';
+    position: fixed; /* Fixed position to cover the whole page */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background: url('../img/CI_cover.jpeg') center center / cover no-repeat; /* Adjust path */
+    opacity: 0.3; /* Adjust transparency as needed */
+    z-index: -1; /* Ensures the image stays in the background */
+  }
+  
+  body {
+    position: relative; /* Ensures the page content appears above the background */
+    opacity: 0.9;
+    /* Your existing body styles */
+  }
+
+  .lb-caption {
+    position: absolute;
+    left: -250px; /* Adjust based on your layout and description length */
+    width: 200px; /* Adjust as necessary */
+    text-align: left;
+  }
+
+  
+  .shadow-effect {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adjust as needed */
+  }
+/* Fixed size for image previews */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-width: 90%; /* Adjust as needed */
+    max-height: 200px;
+    object-fit: cover; /* Ensures the image covers the area */
+  }
+  
+  /* Zoom effect on hover */
+  .grid-item img:hover {
+    transform: scale(1.1); /* Adjust zoom level as needed */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the spacing between images */
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc; /* Optional border */
+  }
+  
+  .footer {
+    background-color: #FF6C0C; /* Replace with your desired color */
+    opacity: 0.8;
+    /* Other styling properties for the footer */
+  }
+
+  .navbar {
+    background-color: whitesmoke; /* Replace with your desired color */
+    /* Other styling properties as needed */
+  }
+
+  .navbar-logo {
+    width: 190px; /* Adjust the height as needed */
+    
+  }
+
+
+  

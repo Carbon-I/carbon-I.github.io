@@ -1,0 +1,57 @@
+---
+comments: false
+page-layout: full
+format:
+  html: 
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    filters:
+        - lightbox
+    lightbox: auto
+---
+![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}<br>
+
+# High-resolution Mapping of Obscured Greenhouse Gases
+
+Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources.
+
+---
+
+
+::: {.grid-layout}
+::: {.grid-item}
+![Carbon-I fills the data hole in the humid tropics](/img/Fig1_zoom.png){description="Carbon-I fills the data hole in the humid tropics. With its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback" group="my-gallery" .shadow-effect loading=lightbox desc-position="left" }
+:::
+::: {.grid-item}
+![The humid tropics are hardly observed by current satellites](/img/Fig3_yields.png){group="my-gallery" .shadow-effect loading=lightbox description="The humid tropics are hardly observed by current satellites"}
+:::
+::: {.grid-item}
+![CH4 emissions are heterogenous across the globe, highest in the tropics.](/img/Fig4_methane.png){group="my-gallery" .shadow-effect  loading=lightbox description="The humid tropics are hardly observed by current satellites" }
+:::
+::: {.grid-item}
+![Carbon-I will investigate hotspots and flux heterogeneity
+globally.](/img/Fig5_plumes.png){group="my-gallery" .shadow-effect #fig:image4 loading=lightbox description="The humid tropics are hardly observed by current satellites" }
+:::
+:::
+
+<!-- JavaScript added at the end -->
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY;
+    let images = document.querySelectorAll('.grid-item img');
+    images.forEach(img => {
+      // Adjust the calculation as needed for desired effect
+      let imgPos = img.getBoundingClientRect().top + window.scrollY;
+      if (imgPos < (scrollPos + window.innerHeight)) {
+        img.style.transform = "scale(1.1)";
+      } else {
+        img.style.transform = "scale(1)";
+      }
+    });
+  });
+});
+</script>
