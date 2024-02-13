@@ -25,7 +25,9 @@ website:
         aria-label: GitHub
   page-footer:
     left: |
-      [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=75px}](https://www.caltech.edu/)
+      [![](/img/Caltech_Logo.png){fig-alt="Caltech" height=20px}](https://www.caltech.edu/) &nbsp;&nbsp;&nbsp;&nbsp;
+      [![](/img/Carnegie.svg){fig-alt="Carnegie" height=20px}](https://carnegiescience.edu/) &nbsp;&nbsp;&nbsp;&nbsp;
+      [![](/img/img_acmg_logo_seas.png){fig-alt="Harvard" height=20px}](https://eps.harvard.edu/)
     #center:
     #  - text: "About"
     #    href: about.qmd

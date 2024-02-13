@@ -20,6 +20,13 @@ Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales a
 
 ---
 
+With many GHG missions already in space or planned, Carbon-I will specifically tackle the weaknesses of the current program of record:
+
+- Data density in the humid tropics is dismal, we don't have enough data in the tropics, especially in the wet season
+- We need to obtain fine spatial resolution to identify and quantify emission hotspots globally
+- We need attribution of fluxes to processes, either through geographic or chemical fingerprinting
+
+---
 
 ::: {.grid-layout}
 ::: {.grid-item}
