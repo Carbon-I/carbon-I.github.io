@@ -1,3 +1,51 @@
 project:
   type: website
   output-dir: docs
+
+website:
+  title: ""
+  navbar:
+    logo: "/img/Logo-Black2.png"
+    background: transparent
+    left:
+      - href: index.qmd
+        text: Home
+      - href: team.qmd
+        text: Team
+  page-footer:
+    left: |
+      [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=65px}](https://www.caltech.edu/)
+    #center:
+    #  - text: "About"
+    #    href: about.qmd
+    #  - text: "FAQ"
+    #    href: docs/faq/index.qmd
+    #  - text: "License"
+    #    href: license.qmd
+    #  - text: "Trademark"
+    #    href: trademark.qmd
+    right:
+      - text: "{{< ai google-scholar >}} Google Scholar"
+        href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+      - icon: twitter
+        href: https://twitter.com/chr_fronge
+        aria-label: PI Twitter
+      - icon: github
+        href: https://github.com/RemoteSensingTools/
+        aria-label: Quarto GitHub
+
+format:
+  html:
+    css: styles/custom.css
+    page-layout: full
+    theme:
+      - flatly
+      - styles/custom.scss
+    toc: true
+    
+    grid:
+      sidebar-width: 0px
+      body-width: 1000px
+      margin-width: 250px
+
+editor: visual
