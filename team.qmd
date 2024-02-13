@@ -1,0 +1,38 @@
+---
+pagetitle: "ScienceTeam | Carbon-I"
+toc: false
+lightbox:
+  match: auto
+  effect: fade
+html:
+    page-layout: full
+listing:
+  - id: science-team
+    contents: "people/ScienceTeam/*.qmd"
+    type: grid
+    image-height: 250px
+    grid-columns: 3
+    fields: [image, title, subtitle]
+    grid-item-align: center
+    sort: sortby
+    field-display-names: 
+      started: "Started"
+  
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">People</li>
+  </ol>
+</nav>
+```
+
+
+## Science Team
+
+:::{#science-team}
+:::
+
+
