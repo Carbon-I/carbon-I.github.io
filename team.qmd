@@ -10,8 +10,8 @@ listing:
   - id: science-team
     contents: "people/ScienceTeam/*.qmd"
     type: grid
-    image-height: 200px
-    grid-columns: 4
+    image-height: 250px
+    grid-columns: 5
     fields: [image, title, subtitle]
     grid-item-align: center
     sort: sortby
@@ -19,6 +19,8 @@ listing:
       started: "Started"
   
 ---
+
+
 
 ```{=html}
 <nav aria-label="breadcrumb">
@@ -31,6 +33,11 @@ listing:
 
 
 ## Science Team
+
+::: {.callout-note}
+The Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.
+:::
+
 
 :::{#science-team}
 :::

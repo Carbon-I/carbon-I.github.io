@@ -1,8 +1,8 @@
 ---
 title: "Robert Green"
 started: "2015"
-image: /img/people/wennberg.jpg
-subtitle: "Validation Lead"
+image: /img/people/green.jpg
+subtitle: "Calibration support"
 sortby: "5"
 about:
   id: hero-heading

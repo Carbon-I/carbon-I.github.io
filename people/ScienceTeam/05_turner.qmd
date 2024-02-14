@@ -1,9 +1,9 @@
 ---
-title: "Paul Wennberg"
+title: "Alex Turner"
 started: "2015"
-image: /img/people/wennberg.jpg
-subtitle: "Validation Lead"
-sortby: "1"
+image: /img/people/turner.jpeg
+subtitle: "Atmospheric Chemistry & Carbon Cycle feedbacks"
+sortby: "5"
 about:
   id: hero-heading
   template: solana

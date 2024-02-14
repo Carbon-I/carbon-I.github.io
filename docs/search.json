@@ -1,22 +1,43 @@
 [
   {
+    "objectID": "people/ScienceTeam/14_Chadwick.html",
+    "href": "people/ScienceTeam/14_Chadwick.html",
+    "title": "K. Dana Chadwick",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html#education",
+    "href": "people/ScienceTeam/14_Chadwick.html#education",
+    "title": "K. Dana Chadwick",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html#professional-experience",
+    "href": "people/ScienceTeam/14_Chadwick.html#professional-experience",
+    "title": "K. Dana Chadwick",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
     "objectID": "people/ScienceTeam/05_turner.html",
     "href": "people/ScienceTeam/05_turner.html",
-    "title": "Paul Wennberg",
+    "title": "Alex Turner",
     "section": "",
     "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
   },
   {
     "objectID": "people/ScienceTeam/05_turner.html#education",
     "href": "people/ScienceTeam/05_turner.html#education",
-    "title": "Paul Wennberg",
+    "title": "Alex Turner",
     "section": "Education",
     "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
   },
   {
     "objectID": "people/ScienceTeam/05_turner.html#professional-experience",
     "href": "people/ScienceTeam/05_turner.html#professional-experience",
-    "title": "Paul Wennberg",
+    "title": "Alex Turner",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   },
@@ -65,21 +86,21 @@
   {
     "objectID": "people/ScienceTeam/08_hoyt.html",
     "href": "people/ScienceTeam/08_hoyt.html",
-    "title": "Alyson Hoyt",
+    "title": "Alison Hoyt",
     "section": "",
     "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
   },
   {
     "objectID": "people/ScienceTeam/08_hoyt.html#education",
     "href": "people/ScienceTeam/08_hoyt.html#education",
-    "title": "Alyson Hoyt",
+    "title": "Alison Hoyt",
     "section": "Education",
     "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
   },
   {
     "objectID": "people/ScienceTeam/08_hoyt.html#professional-experience",
     "href": "people/ScienceTeam/08_hoyt.html#professional-experience",
-    "title": "Alyson Hoyt",
+    "title": "Alison Hoyt",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   },
@@ -144,7 +165,7 @@
     "href": "team.html#science-team",
     "title": "",
     "section": "Science Team",
-    "text": "Science Team\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nPrincipal Investigator\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnna Michalak\n\n\nDeputy Principal Investigator – Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Jacob\n\n\nFlux Inversion Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Wennberg\n\n\nValidation Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Wennberg\n\n\nValidation Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nYi Yin\n\n\nFlux Inversions\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndrew Thorpe\n\n\nProject Scientist\n\n\n\n\n\n\n\n\n\n\n\n\n\nLori Bruhwiler\n\n\nNOAA cross-validation, flux inversions\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlyson Hoyt\n\n\nValidation Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nErmias Kebreab\n\n\nValidation Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobert Green\n\n\nValidation Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Thompson\n\n\nValidation Lead\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Science Team\n\n\n\n\n\n\nNote\n\n\n\nThe Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.\n\n\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nPrincipal Investigator\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnna Michalak\n\n\nDeputy Principal Investigator – Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Jacob\n\n\nFlux Inversion Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nYi Yin\n\n\nFlux Inversions\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlex Turner\n\n\nAtmospheric Chemistry & Carbon Cycle feedbacks\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Wennberg\n\n\nValidation Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndrew Thorpe\n\n\nProject Scientist\n\n\n\n\n\n\n\n\n\n\n\n\n\nLori Bruhwiler\n\n\nNOAA cross-validation, flux inversions\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlison Hoyt\n\n\nFlux validation lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nErmias Kebreab\n\n\nAgriculture Applications\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobert Green\n\n\nCalibration support\n\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Thompson\n\n\nCalibration Lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilip Brodrick\n\n\nScience Data System lead\n\n\n\n\n\n\n\n\n\n\n\n\n\nK. Dana Chadwick\n\n\nApplications Lead\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "people/ScienceTeam/11_green.html",
@@ -269,6 +290,27 @@
     "objectID": "people/ScienceTeam/05_wennberg.html#professional-experience",
     "href": "people/ScienceTeam/05_wennberg.html#professional-experience",
     "title": "Paul Wennberg",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/13_brodrick.html",
+    "href": "people/ScienceTeam/13_brodrick.html",
+    "title": "Philip Brodrick",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/13_brodrick.html#education",
+    "href": "people/ScienceTeam/13_brodrick.html#education",
+    "title": "Philip Brodrick",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/13_brodrick.html#professional-experience",
+    "href": "people/ScienceTeam/13_brodrick.html#professional-experience",
+    "title": "Philip Brodrick",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   }

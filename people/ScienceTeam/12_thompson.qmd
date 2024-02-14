@@ -1,8 +1,8 @@
 ---
 title: "David Thompson"
 started: "2015"
-image: /img/people/wennberg.jpg
-subtitle: "Validation Lead"
+image: /img/people/thompson.jpg
+subtitle: "Calibration Lead"
 sortby: "5"
 about:
   id: hero-heading

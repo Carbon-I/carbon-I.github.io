@@ -1,8 +1,8 @@
 ---
 title: "Ermias Kebreab"
 started: "2015"
-image: /img/people/wennberg.jpg
-subtitle: "Validation Lead"
+image: /img/people/kebreab.png
+subtitle: "Agriculture Applications"
 sortby: "5"
 about:
   id: hero-heading

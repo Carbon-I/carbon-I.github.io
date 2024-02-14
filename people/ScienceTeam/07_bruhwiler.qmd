@@ -1,7 +1,7 @@
 ---
 title: "Lori Bruhwiler"
 started: "2015"
-image: /img/people/wennberg.jpg
+image: /img/people/Lori.jpg
 subtitle: "NOAA cross-validation, flux inversions"
 sortby: "5"
 about:

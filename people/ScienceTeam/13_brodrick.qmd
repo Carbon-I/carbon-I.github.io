@@ -1,8 +1,8 @@
 ---
-title: "Andrew Thorpe"
+title: "Philip Brodrick"
 started: "2015"
-image: /img/people/thorpe.png
-subtitle: "Project Scientist"
+image: /img/people/brodrick.jpeg
+subtitle: "Science Data System lead"
 sortby: "5"
 about:
   id: hero-heading

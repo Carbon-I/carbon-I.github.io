@@ -3,7 +3,7 @@ title: "Paul Wennberg"
 started: "2015"
 image: /img/people/wennberg.jpg
 subtitle: "Validation Lead"
-sortby: "1"
+sortby: "5"
 about:
   id: hero-heading
   template: solana

@@ -1,8 +1,8 @@
 ---
-title: "Alyson Hoyt"
+title: "Alison Hoyt"
 started: "2015"
-image: /img/people/wennberg.jpg
-subtitle: "Validation Lead"
+image: /img/people/hoyt.jpeg
+subtitle: "Flux validation lead"
 sortby: "5"
 about:
   id: hero-heading

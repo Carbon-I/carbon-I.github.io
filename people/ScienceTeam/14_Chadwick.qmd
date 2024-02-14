@@ -1,8 +1,8 @@
 ---
-title: "Andrew Thorpe"
+title: "K. Dana Chadwick"
 started: "2015"
-image: /img/people/thorpe.png
-subtitle: "Project Scientist"
+image: /img/people/chadwick.jpg
+subtitle: "Applications Lead"
 sortby: "5"
 about:
   id: hero-heading
