@@ -1,6 +1,6 @@
 ---
 title: "Alex Turner"
-started: "2015"
+started: "2021"
 image: /img/people/turner.jpeg
 subtitle: "Atmospheric Chemistry & Carbon Cycle feedbacks"
 sortby: "5"
@@ -11,29 +11,20 @@ about:
   links:
     - icon: github
       text: Github
-      href: https://github.com/cfranken/
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/chr_fronge
+      href: https://github.com/alexjturner/
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
-    - icon: mortarboard
-      text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      href: https://scholar.google.com/citations?user=tfmVgv0AAAAJ&hl=en
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0003-1406-7372
 ---
-
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Alex Turner is an Assistant Professor of Atmospheric Sciences at the University of Washington where he works on atmospheric chemistry and the carbon cycle.
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Atmospheric Chemistry]{.fw-bold} | Harvard University | 2012 - 2017
+- [BS in Mechanical Engineering]{.fw-bold} | University of Colorado at Boulder  | 2008 - 2012  
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2021 - present:]{.fw-bold} Assistant Professor,  University of Washington 
+- [2017 - 2020:]{.fw-bold}   Miller Postdoctoral Fellow, University of California at Berkeley
