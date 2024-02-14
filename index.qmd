@@ -12,37 +12,37 @@ format:
         - lightbox
     lightbox: auto
 ---
-![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}<br>
+## The Carbon Investigation  
 
-# High-resolution Mapping of Obscured Greenhouse Gases
+![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}   
 
-Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources.
+## High-resolution Mapping of Obscured Greenhouse Gases
 
+### *Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments*
+
+
+## Carbon-I Will:
+
+- #### Collect 1000 times more data in the tropics by observing between clouds
+- #### Differentiate the sources and composition of emissions at the city block level anywhere
 ---
 
-With many GHG missions already in space or planned, Carbon-I will specifically tackle the weaknesses of the current program of record:
+## Objectives
 
-- Data density in the humid tropics is dismal, we don't have enough data in the tropics, especially in the wet season
-- We need to obtain fine spatial resolution to identify and quantify emission hotspots globally
-- We need attribution of fluxes to processes, either through geographic or chemical fingerprinting
+1. #### Identify, characterize and quantify hotspots of CH<sub>4</sub> and CO<sub>2</sub> emissions across the globe
+2. #### Quantify global CH<sub>4</sub> and CO<sub>2</sub>, and CO monthly fluxes at unprecendet 12-100km resolution 
+3. #### Attribute and quantify the processes driving natural and anthorpogenic greenhouse gas fluxes
 
+--- 
+
+## Mission Overview
+
+- #### Global mode: <400m samppling of land ans coastal oceans monthly
+- #### Target mode: <50m sampling of key regions (95kmx95km); over 2 million acres)
+- #### Absorption spectroscopy to measure CH<sub>4</sub>, CO<sub>2</sub>, CO and relevant chemical tracers
 ---
 
-::: {.grid-layout}
-::: {.grid-item}
-![Carbon-I fills the data hole in the humid tropics](/img/Fig1_zoom.png){description="Carbon-I fills the data hole in the humid tropics. With its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback" group="my-gallery" .shadow-effect loading=lightbox desc-position="left" }
-:::
-::: {.grid-item}
-![The humid tropics are hardly observed by current satellites](/img/Fig3_yields.png){group="my-gallery" .shadow-effect loading=lightbox description="The humid tropics are hardly observed by current satellites"}
-:::
-::: {.grid-item}
-![CH4 emissions are heterogenous across the globe, highest in the tropics.](/img/Fig4_methane.png){group="my-gallery" .shadow-effect  loading=lightbox description="The humid tropics are hardly observed by current satellites" }
-:::
-::: {.grid-item}
-![Carbon-I will investigate hotspots and flux heterogeneity
-globally.](/img/Fig5_plumes.png){group="my-gallery" .shadow-effect #fig:image4 loading=lightbox description="The humid tropics are hardly observed by current satellites" }
-:::
-:::
+
 
 <!-- JavaScript added at the end -->
 <script>

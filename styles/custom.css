@@ -6,8 +6,8 @@ body::before {
     right: 0;
     bottom: 0;
     background-color: black;
-    background: url('../img/CI_cover.jpeg') center center / cover no-repeat; /* Adjust path */
-    opacity: 0.3; /* Adjust transparency as needed */
+    background: url('../img/CarbonI_overview.jpeg') center center / cover no-repeat; /* Adjust path */
+    opacity: 0.8; /* Adjust transparency as needed */
     z-index: -1; /* Ensures the image stays in the background */
   }
   
