@@ -31,14 +31,14 @@ format:
 
 1. #### Identify, characterize and quantify hotspots of CH<sub>4</sub> and CO<sub>2</sub> emissions across the globe
 2. #### Quantify global CH<sub>4</sub> and CO<sub>2</sub>, and CO monthly fluxes at unprecendet 12-100km resolution 
-3. #### Attribute and quantify the processes driving natural and anthorpogenic greenhouse gas fluxes
+3. #### Attribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes
 
 --- 
 
 ## Mission Overview
 
-- #### Global mode: <400m samppling of land ans coastal oceans monthly
-- #### Target mode: <50m sampling of key regions (95kmx95km); over 2 million acres)
+- #### Global mode: <400m sampling of land and coastal oceans monthly
+- #### Target mode: <50m sampling of key regions (95kmx95km; over 2 million acres)
 - #### Absorption spectroscopy to measure CH<sub>4</sub>, CO<sub>2</sub>, CO and relevant chemical tracers
 ---
 
