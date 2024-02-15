@@ -3,6 +3,7 @@ title: "Daniel Jacob"
 started: "2015"
 image: /img/people/jacob.jpeg
 subtitle: "Flux Inversion Lead"
+description: "Harvard"
 sortby: "3"
 about:
   id: hero-heading

@@ -3,6 +3,7 @@ title: "Yi Yin"
 started: "2015"
 image: /img/people/yin.jpeg
 subtitle: "Flux Inversions"
+description: "NYU"
 sortby: "4"
 about:
   id: hero-heading

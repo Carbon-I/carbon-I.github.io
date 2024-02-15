@@ -12,11 +12,10 @@ listing:
     type: grid
     image-height: 250px
     grid-columns: 5
-    fields: [image, title, subtitle]
-    grid-item-align: center
+    fields: [image, title, subtitle, description]
+    grid-item-align: left
     sort: sortby
-    field-display-names: 
-      started: "Started"
+ 
   
 ---
 

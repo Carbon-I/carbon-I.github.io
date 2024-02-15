@@ -3,6 +3,7 @@ title: "Alison Hoyt"
 started: "2015"
 image: /img/people/hoyt.jpeg
 subtitle: "Flux validation lead"
+description: "Stanford"
 sortby: "5"
 about:
   id: hero-heading

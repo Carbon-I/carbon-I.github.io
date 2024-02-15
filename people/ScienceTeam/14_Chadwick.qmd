@@ -3,6 +3,7 @@ title: "K. Dana Chadwick"
 started: "2015"
 image: /img/people/chadwick.jpg
 subtitle: "Applications Lead"
+description: "JPL"
 sortby: "5"
 about:
   id: hero-heading

@@ -3,6 +3,7 @@ title: "Alex Turner"
 started: "2021"
 image: /img/people/turner.jpeg
 subtitle: "Atmospheric Chemistry & Carbon Cycle feedbacks"
+description: "University of Washington"
 sortby: "5"
 about:
   id: hero-heading

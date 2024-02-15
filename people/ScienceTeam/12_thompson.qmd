@@ -3,6 +3,7 @@ title: "David Thompson"
 started: "2015"
 image: /img/people/thompson.jpg
 subtitle: "Calibration Lead"
+description: "JPL"
 sortby: "5"
 about:
   id: hero-heading

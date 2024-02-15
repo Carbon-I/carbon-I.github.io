@@ -3,6 +3,7 @@ title: "Ermias Kebreab"
 started: "2015"
 image: /img/people/kebreab.png
 subtitle: "Agriculture Applications"
+description: "UC Davis"
 sortby: "5"
 about:
   id: hero-heading

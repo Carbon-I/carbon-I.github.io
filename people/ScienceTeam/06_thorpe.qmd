@@ -3,6 +3,7 @@ title: "Andrew Thorpe"
 started: "2015"
 image: /img/people/thorpe.png
 subtitle: "Project Scientist"
+description: "JPL"
 sortby: "5"
 about:
   id: hero-heading

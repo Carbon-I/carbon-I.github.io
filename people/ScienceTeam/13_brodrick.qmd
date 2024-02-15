@@ -3,6 +3,7 @@ title: "Philip Brodrick"
 started: "2015"
 image: /img/people/brodrick.jpeg
 subtitle: "Science Data System lead"
+description: "JPL"
 sortby: "5"
 about:
   id: hero-heading

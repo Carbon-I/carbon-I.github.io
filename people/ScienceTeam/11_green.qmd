@@ -3,6 +3,7 @@ title: "Robert Green"
 started: "2015"
 image: /img/people/green.jpg
 subtitle: "Calibration support"
+description: "JPL"
 sortby: "5"
 about:
   id: hero-heading

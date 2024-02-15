@@ -3,6 +3,7 @@ title: "Christian Frankenberg"
 started: "2015"
 image: /img/people/frankenberg.png
 subtitle: "Principal Investigator"
+description: "Caltech/JPL"
 sortby: "1"
 about:
   id: hero-heading
