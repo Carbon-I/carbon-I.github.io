@@ -4,8 +4,9 @@ toc: false
 lightbox:
   match: auto
   effect: fade
-html:
-    page-layout: full
+format:
+  html:
+    css: styles/other-background.css
 listing:
   - id: science-team
     contents: "people/ScienceTeam/*.qmd"

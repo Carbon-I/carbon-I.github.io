@@ -147,11 +147,25 @@
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   },
   {
-    "objectID": "science.html",
-    "href": "science.html",
+    "objectID": "science.html#clouds-pose-a-major-problem-for-observing-the-tropics",
+    "href": "science.html#clouds-pose-a-major-problem-for-observing-the-tropics",
     "title": "High-resolution Mapping of Obscured Greenhouse Gases",
-    "section": "",
-    "text": "High-resolution Mapping of Obscured Greenhouse Gases\nCarbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources.\n\n\n\n\n\nCarbon-I fills the data hole in the humid tropics\n\n\n\n\n\n\n\nThe humid tropics are hardly observed by current satellites\n\n\n\n\n\n\n\nCH4 emissions are heterogenous across the globe, highest in the tropics.\n\n\n\n\n\n\n\nCarbon-I will investigate hotspots and flux heterogeneity globally.\n\n\n\n\n\n\n\n\n\nCarbon-I fills the data hole in the humid tropics\nThe humid tropics are hardly observed by current satellites\nCH4 emissions are heterogenous across the globe, highest in the tropics.\nCarbon-I will investigate hotspots and flux heterogeneity globally."
+    "section": "Clouds pose a major problem for observing the tropics",
+    "text": "Clouds pose a major problem for observing the tropics\n\n\n\n\nClouds in the humid tropics are the primary reason for low data yields in current GHG missions\nWith its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClouds in the humid tropics are the primary reason for low data yields in current GHG missions\nWith its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback"
+  },
+  {
+    "objectID": "science.html#the-humid-tropics-are-crucial-for-understanding-global-carbon-cycles",
+    "href": "science.html#the-humid-tropics-are-crucial-for-understanding-global-carbon-cycles",
+    "title": "High-resolution Mapping of Obscured Greenhouse Gases",
+    "section": "The humid tropics are crucial for understanding global carbon cycles",
+    "text": "The humid tropics are crucial for understanding global carbon cycles\n\n\n\n\nCH4 emissions are heterogenous across the globe and highest in the tropics.\nBottom-up methane emissions distributions show key regions, which dominate global emissions (red colors=50%ile of total emissions). However, hypothesized sources in the inventory may be entirely wrong. Carbon-I will use the global and target modes in concert to identify and focus on local verified sources driving global fluxes."
+  },
+  {
+    "objectID": "science.html#high-spatial-resolution-overcomes-the-data-yield-problem-in-the-tropics-and-allows-flux-attribution",
+    "href": "science.html#high-spatial-resolution-overcomes-the-data-yield-problem-in-the-tropics-and-allows-flux-attribution",
+    "title": "High-resolution Mapping of Obscured Greenhouse Gases",
+    "section": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution",
+    "text": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution\n\n\n\n\n\n\n\nHigh spatial resolution enables plume mapping, allowing direct attribution\nCarbon-I will investigate hotspots and flux heterogeneity globally and use the target mode as a magnifying glass. The detection of localized plumes across various source types (airborne on the left, EMIT on the right) enables applications and field campaigns (bottom left)."
   },
   {
     "objectID": "team.html",

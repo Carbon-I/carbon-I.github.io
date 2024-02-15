@@ -1,21 +1,4 @@
-body::before {
-    content: '';
-    position: fixed; /* Fixed position to cover the whole page */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    background: url('../img/CarbonI_overview.jpeg') center center / cover no-repeat; /* Adjust path */
-    opacity: 0.8; /* Adjust transparency as needed */
-    z-index: -1; /* Ensures the image stays in the background */
-  }
-  
-  body {
-    position: relative; /* Ensures the page content appears above the background */
-    opacity: 0.9;
-    /* Your existing body styles */
-  }
+
 
   .lb-caption {
     position: absolute;
@@ -71,5 +54,106 @@ body::before {
     
   }
 
+  .navbar-title:hover > .icon-line {
+    animation-duration: 600ms;
+    animation-name: line-expand;
+  }
+  
+  @keyframes line-expand {
+    from {
+      width: 0%;
+    }
+    
+    to {
+      width: 100%;
+    }
+  }
+  
+  
+  /*
+  // left align edge of callout block with text
+  // without this, text inside callout block is left aligned with body text,
+  // which maybe looks better?
+  div.callout.callout {
+    margin-left: 0;
+  }
+  */
+  
+  code span.cf {
+    font-weight: normal;
+  }
+  
+  .top-callout {
+    margin-top: 0;
+  }
+  
+  .profile-pic {
+    border-radius: 5px;
+  }
+  
+  .content-container {
+    padding-left: -1em;
+    padding-right: 0em;
+  }
+  
+  .top-story {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 1em; 
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-story img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .top-story-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+  }
+  
+  .top-story-text h2 {
+    margin-top: 1.5rem;
+  }
+  
+  .top-story-img p {
+    margin-bottom: 0;
+  }
+  
+  .header-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-banner .header-image {
+    position: absolute;
+    display: none;
+    height: auto;
+  }
+  
+  .header-text p {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .header-block {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 1.8em; 
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+  }
+
+  .caltech-background {
+    background-color: #ff6d0c6a;
+  }
 
   

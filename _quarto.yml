@@ -51,6 +51,8 @@ format:
   html:
     css: styles/custom.css
     page-layout: full
+    smooth-scroll: true
+    
     theme:
       - flatly
       - styles/custom.scss

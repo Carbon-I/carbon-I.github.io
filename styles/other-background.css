@@ -1,0 +1,13 @@
+body::before {
+    content: '';
+    position: fixed; /* Fixed position to cover the whole page */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background: url('../img/CI_cover.jpeg') center center / cover no-repeat; /* Adjust path */
+    opacity: 0.1; /* Adjust transparency as needed */
+    z-index: -1; /* Ensures the image stays in the background */
+  }
+  

@@ -2,7 +2,8 @@
 comments: false
 page-layout: full
 format:
-  html: 
+  html:
+    css: styles/other-background.css  
     margin-top: 0em
     margin-bottom: 0em
     minimal: true
@@ -16,40 +17,105 @@ format:
 
 # High-resolution Mapping of Obscured Greenhouse Gases
 
-Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources.
+Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources. We will address specific weaknesses of the current program of record.
 
 
-::: {.grid-layout}
-::: {.grid-item}
-![Carbon-I fills the data hole in the humid tropics](/img/Fig1_zoom.png){description="Carbon-I fills the data hole in the humid tropics. With its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback" group="my-gallery" .shadow-effect loading=lightbox desc-position="left" }
+## Clouds pose a major problem for observing the tropics
+
+::: {.content-container}
+::: {.top-story .caltech-background}
+
+
+::: grid
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
+### Clouds in the humid tropics are the primary reason for low data yields in current GHG missions
+With its fine spatial sampling, Carbon-I can peek through cloud gaps,
+dramatically increasing data availability in regions with the largest carbon
+fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions.  
 :::
-::: {.grid-item}
-![The humid tropics are hardly observed by current satellites](/img/Fig3_yields.png){group="my-gallery" .shadow-effect loading=lightbox description="The humid tropics are hardly observed by current satellites"}
-:::
-::: {.grid-item}
-![CH4 emissions are heterogenous across the globe, highest in the tropics.](/img/Fig4_methane.png){group="my-gallery" .shadow-effect  loading=lightbox description="The humid tropics are hardly observed by current satellites" }
-:::
-::: {.grid-item}
-![Carbon-I will investigate hotspots and flux heterogeneity
-globally.](/img/Fig5_plumes.png){group="my-gallery" .shadow-effect #fig:image4 loading=lightbox description="The humid tropics are hardly observed by current satellites" }
+::: {.g-col-12 .g-col-lg-8 .top-story-img}
+![](/img/Fig1_zoom.png)
 :::
 :::
 
-<!-- JavaScript added at the end -->
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  window.addEventListener('scroll', () => {
-    let scrollPos = window.scrollY;
-    let images = document.querySelectorAll('.grid-item img');
-    images.forEach(img => {
-      // Adjust the calculation as needed for desired effect
-      let imgPos = img.getBoundingClientRect().top + window.scrollY;
-      if (imgPos < (scrollPos + window.innerHeight)) {
-        img.style.transform = "scale(1.1)";
-      } else {
-        img.style.transform = "scale(1)";
-      }
-    });
-  });
-});
-</script>
+:::
+:::
+
+
+---
+
+
+::: {.content-container}
+::: {.top-story .caltech-background}
+
+
+::: grid
+::: {.g-col-12 .g-col-lg-8 .top-story-img}
+![](/img/Fig3_yields.png)
+:::
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
+### Clouds in the humid tropics are the primary reason for low data yields in current GHG missions
+With its fine spatial sampling, Carbon-I can peek through cloud gaps,
+dramatically increasing data availability in regions with the largest carbon
+fluxes, greatest uncertainties and climate feedback  
+:::
+
+:::
+
+:::
+:::
+
+
+---
+
+## The humid tropics are crucial for understanding global carbon cycles
+
+::: {.content-container}
+::: {.top-story .caltech-background}
+
+
+::: grid
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
+### CH<sub>4</sub> emissions are heterogenous across the globe and highest in the tropics.
+Bottom-up methane emissions distributions show key regions, which
+dominate global emissions (red colors=50%ile of total emissions).
+However, hypothesized sources in the inventory may be entirely
+wrong. Carbon-I will use the global and target modes in concert to
+identify and focus on local verified sources driving global fluxes.
+:::
+::: {.g-col-12 .g-col-lg-8 .top-story-img}
+![](/img/Fig4_methane.png)
+:::
+:::
+
+:::
+:::
+
+---
+
+## High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution
+
+::: {.content-container}
+::: {.top-story .caltech-background}
+
+
+::: grid
+::: {.g-col-12 .g-col-lg-8 .top-story-img}
+![](/img/Fig5_plumes.png)
+:::
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
+### High spatial resolution enables plume mapping, allowing direct attribution
+Carbon-I will investigate hotspots and flux heterogeneity
+globally and use the target mode as a magnifying glass. The detection of
+localized plumes across various source types (airborne on the left, EMIT
+on the right) enables applications and field campaigns (bottom left). 
+:::
+
+:::
+
+:::
+:::
+
+
+
+

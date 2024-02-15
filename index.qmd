@@ -2,7 +2,8 @@
 comments: false
 page-layout: full
 format:
-  html: 
+  html:
+    css: styles/index-background.css 
     margin-top: 0em
     margin-bottom: 0em
     minimal: true
