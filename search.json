@@ -14,254 +14,51 @@
     "text": "Science Team\n\n\n\n\n\n\nNote\n\n\n\nThe Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.\n\n\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nPrincipal Investigator\n\n\nCaltech/JPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnna Michalak\n\n\nDeputy Principal Investigator – Science\n\n\nCarnegie/Stanford\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Jacob\n\n\nFlux Inversion Lead\n\n\nHarvard\n\n\n\n\n\n\n\n\n\n\n\n\n\nYi Yin\n\n\nFlux Inversions\n\n\nNYU\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlex Turner\n\n\nAtmospheric Chemistry & Carbon Cycle feedbacks\n\n\nUniversity of Washington\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Wennberg\n\n\nValidation Lead\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndrew Thorpe\n\n\nProject Scientist\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nLori Bruhwiler\n\n\nNOAA cross-validation, flux inversions\n\n\nNOAA\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlison Hoyt\n\n\nFlux validation lead\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\nErmias Kebreab\n\n\nAgriculture Applications\n\n\nUC Davis\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobert Green\n\n\nCalibration support\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nDavid Thompson\n\n\nCalibration Lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilip Brodrick\n\n\nScience Data System lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nK. Dana Chadwick\n\n\nApplications Lead\n\n\nJPL\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "people/ScienceTeam/01_frankenberg.html",
-    "href": "people/ScienceTeam/01_frankenberg.html",
-    "title": "Christian Frankenberg",
+    "objectID": "science.html",
+    "href": "science.html",
+    "title": "",
+    "section": "",
+    "text": "Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources. We will address specific weaknesses of the current program of record."
+  },
+  {
+    "objectID": "science.html#clouds-pose-a-major-problem-for-observing-the-tropics",
+    "href": "science.html#clouds-pose-a-major-problem-for-observing-the-tropics",
+    "title": "",
+    "section": "Clouds pose a major problem for observing the tropics",
+    "text": "Clouds pose a major problem for observing the tropics\n\n\n\n\nClouds in the humid tropics are the primary reason for low data yields in current GHG missions\nWith its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClouds in the humid tropics are the primary reason for low data yields in current GHG missions\nWith its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback"
+  },
+  {
+    "objectID": "science.html#the-humid-tropics-are-crucial-for-understanding-global-carbon-cycles",
+    "href": "science.html#the-humid-tropics-are-crucial-for-understanding-global-carbon-cycles",
+    "title": "",
+    "section": "The humid tropics are crucial for understanding global carbon cycles",
+    "text": "The humid tropics are crucial for understanding global carbon cycles\n\n\n\n\nCH4 emissions are heterogenous across the globe and highest in the tropics.\nBottom-up methane emissions distributions show key regions, which dominate global emissions (red colors=50%ile of total emissions). However, hypothesized sources in the inventory may be entirely wrong. Carbon-I will use the global and target modes in concert to identify and focus on local verified sources driving global fluxes."
+  },
+  {
+    "objectID": "science.html#high-spatial-resolution-overcomes-the-data-yield-problem-in-the-tropics-and-allows-flux-attribution",
+    "href": "science.html#high-spatial-resolution-overcomes-the-data-yield-problem-in-the-tropics-and-allows-flux-attribution",
+    "title": "",
+    "section": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution",
+    "text": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution\n\n\n\n\n\n\n\nHigh spatial resolution enables plume mapping, allowing direct attribution\nCarbon-I will investigate hotspots and flux heterogeneity globally and use the target mode as a magnifying glass. The detection of localized plumes across various source types (airborne on the left, EMIT on the right) enables applications and field campaigns (bottom left)."
+  },
+  {
+    "objectID": "people/ScienceTeam/09_kebreab.html",
+    "href": "people/ScienceTeam/09_kebreab.html",
+    "title": "Ermias Kebreab",
     "section": "",
     "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
   },
   {
-    "objectID": "people/ScienceTeam/01_frankenberg.html#education",
-    "href": "people/ScienceTeam/01_frankenberg.html#education",
-    "title": "Christian Frankenberg",
+    "objectID": "people/ScienceTeam/09_kebreab.html#education",
+    "href": "people/ScienceTeam/09_kebreab.html#education",
+    "title": "Ermias Kebreab",
     "section": "Education",
     "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
   },
   {
-    "objectID": "people/ScienceTeam/01_frankenberg.html#professional-experience",
-    "href": "people/ScienceTeam/01_frankenberg.html#professional-experience",
-    "title": "Christian Frankenberg",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/14_Chadwick.html",
-    "href": "people/ScienceTeam/14_Chadwick.html",
-    "title": "K. Dana Chadwick",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/14_Chadwick.html#education",
-    "href": "people/ScienceTeam/14_Chadwick.html#education",
-    "title": "K. Dana Chadwick",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/14_Chadwick.html#professional-experience",
-    "href": "people/ScienceTeam/14_Chadwick.html#professional-experience",
-    "title": "K. Dana Chadwick",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/08_hoyt.html",
-    "href": "people/ScienceTeam/08_hoyt.html",
-    "title": "Alison Hoyt",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/08_hoyt.html#education",
-    "href": "people/ScienceTeam/08_hoyt.html#education",
-    "title": "Alison Hoyt",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/08_hoyt.html#professional-experience",
-    "href": "people/ScienceTeam/08_hoyt.html#professional-experience",
-    "title": "Alison Hoyt",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/11_green.html",
-    "href": "people/ScienceTeam/11_green.html",
-    "title": "Robert Green",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/11_green.html#education",
-    "href": "people/ScienceTeam/11_green.html#education",
-    "title": "Robert Green",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/11_green.html#professional-experience",
-    "href": "people/ScienceTeam/11_green.html#professional-experience",
-    "title": "Robert Green",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/05_turner.html",
-    "href": "people/ScienceTeam/05_turner.html",
-    "title": "Alex Turner",
-    "section": "",
-    "text": "Alex Turner is an Assistant Professor of Atmospheric Sciences at the University of Washington where he works on atmospheric chemistry and the carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/05_turner.html#education",
-    "href": "people/ScienceTeam/05_turner.html#education",
-    "title": "Alex Turner",
-    "section": "Education",
-    "text": "Education\n\nPhD in Atmospheric Chemistry | Harvard University | 2012 - 2017\nBS in Mechanical Engineering | University of Colorado at Boulder | 2008 - 2012"
-  },
-  {
-    "objectID": "people/ScienceTeam/05_turner.html#professional-experience",
-    "href": "people/ScienceTeam/05_turner.html#professional-experience",
-    "title": "Alex Turner",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2021 - present: Assistant Professor, University of Washington\n2017 - 2020: Miller Postdoctoral Fellow, University of California at Berkeley"
-  },
-  {
-    "objectID": "people/ScienceTeam/07_bruhwiler.html",
-    "href": "people/ScienceTeam/07_bruhwiler.html",
-    "title": "Lori Bruhwiler",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/07_bruhwiler.html#education",
-    "href": "people/ScienceTeam/07_bruhwiler.html#education",
-    "title": "Lori Bruhwiler",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/07_bruhwiler.html#professional-experience",
-    "href": "people/ScienceTeam/07_bruhwiler.html#professional-experience",
-    "title": "Lori Bruhwiler",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/04_Yin.html",
-    "href": "people/ScienceTeam/04_Yin.html",
-    "title": "Yi Yin",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/04_Yin.html#education",
-    "href": "people/ScienceTeam/04_Yin.html#education",
-    "title": "Yi Yin",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/04_Yin.html#professional-experience",
-    "href": "people/ScienceTeam/04_Yin.html#professional-experience",
-    "title": "Yi Yin",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/13_brodrick.html",
-    "href": "people/ScienceTeam/13_brodrick.html",
-    "title": "Philip Brodrick",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/13_brodrick.html#education",
-    "href": "people/ScienceTeam/13_brodrick.html#education",
-    "title": "Philip Brodrick",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/13_brodrick.html#professional-experience",
-    "href": "people/ScienceTeam/13_brodrick.html#professional-experience",
-    "title": "Philip Brodrick",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/05_wennberg.html",
-    "href": "people/ScienceTeam/05_wennberg.html",
-    "title": "Paul Wennberg",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/05_wennberg.html#education",
-    "href": "people/ScienceTeam/05_wennberg.html#education",
-    "title": "Paul Wennberg",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/05_wennberg.html#professional-experience",
-    "href": "people/ScienceTeam/05_wennberg.html#professional-experience",
-    "title": "Paul Wennberg",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/12_thompson.html",
-    "href": "people/ScienceTeam/12_thompson.html",
-    "title": "David Thompson",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/12_thompson.html#education",
-    "href": "people/ScienceTeam/12_thompson.html#education",
-    "title": "David Thompson",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/12_thompson.html#professional-experience",
-    "href": "people/ScienceTeam/12_thompson.html#professional-experience",
-    "title": "David Thompson",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/06_thorpe.html",
-    "href": "people/ScienceTeam/06_thorpe.html",
-    "title": "Andrew Thorpe",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/06_thorpe.html#education",
-    "href": "people/ScienceTeam/06_thorpe.html#education",
-    "title": "Andrew Thorpe",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/06_thorpe.html#professional-experience",
-    "href": "people/ScienceTeam/06_thorpe.html#professional-experience",
-    "title": "Andrew Thorpe",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
-  },
-  {
-    "objectID": "people/ScienceTeam/03_jacob.html",
-    "href": "people/ScienceTeam/03_jacob.html",
-    "title": "Daniel Jacob",
-    "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/03_jacob.html#education",
-    "href": "people/ScienceTeam/03_jacob.html#education",
-    "title": "Daniel Jacob",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/03_jacob.html#professional-experience",
-    "href": "people/ScienceTeam/03_jacob.html#professional-experience",
-    "title": "Daniel Jacob",
+    "objectID": "people/ScienceTeam/09_kebreab.html#professional-experience",
+    "href": "people/ScienceTeam/09_kebreab.html#professional-experience",
+    "title": "Ermias Kebreab",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   },
@@ -287,45 +84,262 @@
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   },
   {
-    "objectID": "people/ScienceTeam/09_kebreab.html",
-    "href": "people/ScienceTeam/09_kebreab.html",
-    "title": "Ermias Kebreab",
+    "objectID": "people/ScienceTeam/03_jacob.html",
+    "href": "people/ScienceTeam/03_jacob.html",
+    "title": "Daniel Jacob",
     "section": "",
     "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
   },
   {
-    "objectID": "people/ScienceTeam/09_kebreab.html#education",
-    "href": "people/ScienceTeam/09_kebreab.html#education",
-    "title": "Ermias Kebreab",
+    "objectID": "people/ScienceTeam/03_jacob.html#education",
+    "href": "people/ScienceTeam/03_jacob.html#education",
+    "title": "Daniel Jacob",
     "section": "Education",
     "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
   },
   {
-    "objectID": "people/ScienceTeam/09_kebreab.html#professional-experience",
-    "href": "people/ScienceTeam/09_kebreab.html#professional-experience",
-    "title": "Ermias Kebreab",
+    "objectID": "people/ScienceTeam/03_jacob.html#professional-experience",
+    "href": "people/ScienceTeam/03_jacob.html#professional-experience",
+    "title": "Daniel Jacob",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
   },
   {
-    "objectID": "science.html#clouds-pose-a-major-problem-for-observing-the-tropics",
-    "href": "science.html#clouds-pose-a-major-problem-for-observing-the-tropics",
-    "title": "High-resolution Mapping of Obscured Greenhouse Gases",
-    "section": "Clouds pose a major problem for observing the tropics",
-    "text": "Clouds pose a major problem for observing the tropics\n\n\n\n\nClouds in the humid tropics are the primary reason for low data yields in current GHG missions\nWith its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClouds in the humid tropics are the primary reason for low data yields in current GHG missions\nWith its fine spatial sampling, Carbon-I can peek through cloud gaps, dramatically increasing data availability in regions with the largest carbon fluxes, greatest uncertainties and climate feedback"
+    "objectID": "people/ScienceTeam/06_thorpe.html",
+    "href": "people/ScienceTeam/06_thorpe.html",
+    "title": "Andrew Thorpe",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
   },
   {
-    "objectID": "science.html#the-humid-tropics-are-crucial-for-understanding-global-carbon-cycles",
-    "href": "science.html#the-humid-tropics-are-crucial-for-understanding-global-carbon-cycles",
-    "title": "High-resolution Mapping of Obscured Greenhouse Gases",
-    "section": "The humid tropics are crucial for understanding global carbon cycles",
-    "text": "The humid tropics are crucial for understanding global carbon cycles\n\n\n\n\nCH4 emissions are heterogenous across the globe and highest in the tropics.\nBottom-up methane emissions distributions show key regions, which dominate global emissions (red colors=50%ile of total emissions). However, hypothesized sources in the inventory may be entirely wrong. Carbon-I will use the global and target modes in concert to identify and focus on local verified sources driving global fluxes."
+    "objectID": "people/ScienceTeam/06_thorpe.html#education",
+    "href": "people/ScienceTeam/06_thorpe.html#education",
+    "title": "Andrew Thorpe",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
   },
   {
-    "objectID": "science.html#high-spatial-resolution-overcomes-the-data-yield-problem-in-the-tropics-and-allows-flux-attribution",
-    "href": "science.html#high-spatial-resolution-overcomes-the-data-yield-problem-in-the-tropics-and-allows-flux-attribution",
-    "title": "High-resolution Mapping of Obscured Greenhouse Gases",
-    "section": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution",
-    "text": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution\n\n\n\n\n\n\n\nHigh spatial resolution enables plume mapping, allowing direct attribution\nCarbon-I will investigate hotspots and flux heterogeneity globally and use the target mode as a magnifying glass. The detection of localized plumes across various source types (airborne on the left, EMIT on the right) enables applications and field campaigns (bottom left)."
+    "objectID": "people/ScienceTeam/06_thorpe.html#professional-experience",
+    "href": "people/ScienceTeam/06_thorpe.html#professional-experience",
+    "title": "Andrew Thorpe",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/12_thompson.html",
+    "href": "people/ScienceTeam/12_thompson.html",
+    "title": "David Thompson",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/12_thompson.html#education",
+    "href": "people/ScienceTeam/12_thompson.html#education",
+    "title": "David Thompson",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/12_thompson.html#professional-experience",
+    "href": "people/ScienceTeam/12_thompson.html#professional-experience",
+    "title": "David Thompson",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/05_wennberg.html",
+    "href": "people/ScienceTeam/05_wennberg.html",
+    "title": "Paul Wennberg",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/05_wennberg.html#education",
+    "href": "people/ScienceTeam/05_wennberg.html#education",
+    "title": "Paul Wennberg",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/05_wennberg.html#professional-experience",
+    "href": "people/ScienceTeam/05_wennberg.html#professional-experience",
+    "title": "Paul Wennberg",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/13_brodrick.html",
+    "href": "people/ScienceTeam/13_brodrick.html",
+    "title": "Philip Brodrick",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/13_brodrick.html#education",
+    "href": "people/ScienceTeam/13_brodrick.html#education",
+    "title": "Philip Brodrick",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/13_brodrick.html#professional-experience",
+    "href": "people/ScienceTeam/13_brodrick.html#professional-experience",
+    "title": "Philip Brodrick",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/04_Yin.html",
+    "href": "people/ScienceTeam/04_Yin.html",
+    "title": "Yi Yin",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/04_Yin.html#education",
+    "href": "people/ScienceTeam/04_Yin.html#education",
+    "title": "Yi Yin",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/04_Yin.html#professional-experience",
+    "href": "people/ScienceTeam/04_Yin.html#professional-experience",
+    "title": "Yi Yin",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/07_bruhwiler.html",
+    "href": "people/ScienceTeam/07_bruhwiler.html",
+    "title": "Lori Bruhwiler",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/07_bruhwiler.html#education",
+    "href": "people/ScienceTeam/07_bruhwiler.html#education",
+    "title": "Lori Bruhwiler",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/07_bruhwiler.html#professional-experience",
+    "href": "people/ScienceTeam/07_bruhwiler.html#professional-experience",
+    "title": "Lori Bruhwiler",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/05_turner.html",
+    "href": "people/ScienceTeam/05_turner.html",
+    "title": "Alex Turner",
+    "section": "",
+    "text": "Alex Turner is an Assistant Professor of Atmospheric Sciences at the University of Washington where he works on atmospheric chemistry and the carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/05_turner.html#education",
+    "href": "people/ScienceTeam/05_turner.html#education",
+    "title": "Alex Turner",
+    "section": "Education",
+    "text": "Education\n\nPhD in Atmospheric Chemistry | Harvard University | 2012 - 2017\nBS in Mechanical Engineering | University of Colorado at Boulder | 2008 - 2012"
+  },
+  {
+    "objectID": "people/ScienceTeam/05_turner.html#professional-experience",
+    "href": "people/ScienceTeam/05_turner.html#professional-experience",
+    "title": "Alex Turner",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2021 - present: Assistant Professor, University of Washington\n2017 - 2020: Miller Postdoctoral Fellow, University of California at Berkeley"
+  },
+  {
+    "objectID": "people/ScienceTeam/11_green.html",
+    "href": "people/ScienceTeam/11_green.html",
+    "title": "Robert Green",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/11_green.html#education",
+    "href": "people/ScienceTeam/11_green.html#education",
+    "title": "Robert Green",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/11_green.html#professional-experience",
+    "href": "people/ScienceTeam/11_green.html#professional-experience",
+    "title": "Robert Green",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/08_hoyt.html",
+    "href": "people/ScienceTeam/08_hoyt.html",
+    "title": "Alison Hoyt",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/08_hoyt.html#education",
+    "href": "people/ScienceTeam/08_hoyt.html#education",
+    "title": "Alison Hoyt",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/08_hoyt.html#professional-experience",
+    "href": "people/ScienceTeam/08_hoyt.html#professional-experience",
+    "title": "Alison Hoyt",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html",
+    "href": "people/ScienceTeam/14_Chadwick.html",
+    "title": "K. Dana Chadwick",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html#education",
+    "href": "people/ScienceTeam/14_Chadwick.html#education",
+    "title": "K. Dana Chadwick",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html#professional-experience",
+    "href": "people/ScienceTeam/14_Chadwick.html#professional-experience",
+    "title": "K. Dana Chadwick",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/01_frankenberg.html",
+    "href": "people/ScienceTeam/01_frankenberg.html",
+    "title": "Christian Frankenberg",
+    "section": "",
+    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/01_frankenberg.html#education",
+    "href": "people/ScienceTeam/01_frankenberg.html#education",
+    "title": "Christian Frankenberg",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/01_frankenberg.html#professional-experience",
+    "href": "people/ScienceTeam/01_frankenberg.html#professional-experience",
+    "title": "Christian Frankenberg",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Test, e.g. we see Jongaramrungruang et al. (2019), Jongaramrungruang et al. (2021), Jongaramrungruang et al. (2022), D. R. Thompson et al. (2016), D. Thompson et al. (2016), Christian Frankenberg et al. (2016), Ayasse et al. (2018), Borchardt et al. (2020), Cusworth et al. (2019), Cusworth, Duren, Thorpe, Pandey, et al. (2021), Cusworth, Duren, Thorpe, Eastwood, et al. (2021), Duren et al. (2019), Foote et al. (2020), A. Thorpe, Frankenberg, and Roberts (2014), A. K. Thorpe, Frankenberg, Green, et al. (2016), A. K. Thorpe, Frankenberg, Aubrey, et al. (2016), A. K. Thorpe et al. (2017), A. K. Thorpe et al. (2020), A. K. Thorpe, Green, et al. (2023), A. K. Thorpe, Kort, et al. (2023), C. Frankenberg et al. (2005), Christian Frankenberg, Platt, and Wagner (2005), C. Frankenberg et al. (2006), Christian Frankenberg, Warneke, et al. (2008), Christian Frankenberg, Bergamaschi, et al. (2008), Christian Frankenberg et al. (2011)\n\n\n\n\nReferences\n\nAyasse, Alana K, Andrew K Thorpe, Dar A Roberts, Christopher C Funk, Philip E Dennison, Christian Frankenberg, Andrea Steffke, and Andrew D Aubrey. 2018. “Evaluating the Effects of Surface Properties on Methane Retrievals Using a Synthetic Airborne Visible/Infrared Imaging Spectrometer Next Generation (AVIRIS-NG) Image.” Remote Sensing of Environment 215: 386–97. https://doi.org/10.1016/j.rse.2018.06.018.\n\n\nBorchardt, Jakob, Konstantin Gerilowski, Sven Krautwurst, Heinrich Bovensmann, Andrew Kenji Thorpe, David Ray Thompson, Christian Frankenberg, Charles E Miller, Riley M Duren, and John Philip Burrows. 2020. “Detection and Quantification of CH 4 Plumes Using the WFM-DOAS Retrieval on AVIRIS-NG Hyperspectral Data.” Atmospheric Measurement Techniques Discussions 2020: 1–34. https://doi.org/10.5194/amt-14-1267-2021.\n\n\nCusworth, Daniel H, Riley M Duren, Andrew K Thorpe, Michael L Eastwood, Robert O Green, Philip E Dennison, Christian Frankenberg, Joseph W Heckler, Gregory P Asner, and Charles E Miller. 2021. “Quantifying Global Power Plant Carbon Dioxide Emissions with Imaging Spectroscopy.” AGU Advances 2 (2): e2020AV000350. https://doi.org/10.1029/2020av000350.\n\n\nCusworth, Daniel H, Riley M Duren, Andrew K Thorpe, Sudhanshu Pandey, Joannes D Maasakkers, Ilse Aben, Dylan Jervis, et al. 2021. “Multisatellite Imaging of a Gas Well Blowout Enables Quantification of Total Methane Emissions.” Geophysical Research Letters 48 (2): e2020GL090864. https://doi.org/10.1029/2020gl090864.\n\n\nCusworth, Daniel H, Daniel J Jacob, Daniel J Varon, Christopher Chan Miller, Xiong Liu, Kelly Chance, Andrew K Thorpe, et al. 2019. “Potential of Next-Generation Imaging Spectrometers to Detect and Quantify Methane Point Sources from Space.” Atmospheric Measurement Techniques 12 (10): 5655–68. https://doi.org/10.5194/amt-2019-202-rc2.\n\n\nDuren, Riley M, Andrew K Thorpe, Kelsey T Foster, Talha Rafiq, Francesca M Hopkins, Vineet Yadav, Brian D Bue, et al. 2019. “California’s Methane Super-Emitters.” Nature 575 (7781): 180–84. https://doi.org/10.21203/rs.3.rs-952096/v1.\n\n\nFoote, Markus D, Philip E Dennison, Andrew K Thorpe, David R Thompson, Siraput Jongaramrungruang, Christian Frankenberg, and Sarang C Joshi. 2020. “Fast and Accurate Retrieval of Methane Concentration from Imaging Spectrometer Data Using Sparsity Prior.” IEEE Transactions on Geoscience and Remote Sensing 58 (9): 6480–92. https://doi.org/10.1109/tgrs.2020.2976888.\n\n\nFrankenberg, Christian, IPBJDE Aben, P Bergamaschi, EJ Dlugokencky, R Van Hees, S Houweling, P Van Der Meer, R Snel, and P Tol. 2011. “Global Column-Averaged Methane Mixing Ratios from 2003 to 2009 as Derived from SCIAMACHY: Trends and Variability.” Journal of Geophysical Research: Atmospheres 116 (D4). https://doi.org/10.1029/2010jd014849.\n\n\nFrankenberg, Christian, Peter Bergamaschi, André Butz, Sander Houweling, Jan Fokke Meirink, Justus Notholt, Anna Katinka Petersen, Hans Schrijver, Thorsten Warneke, and Ilse Aben. 2008. “Tropical Methane Emissions: A Revised View from SCIAMACHY Onboard ENVISAT.” Geophysical Research Letters 35 (15). https://doi.org/10.1029/2008gl034300.\n\n\nFrankenberg, Christian, U Platt, and T Wagner. 2005. “Iterative Maximum a Posteriori (IMAP)-DOAS for Retrieval of Strongly Absorbing Trace Gases: Model Studies for CH 4 and CO 2 Retrieval from Near Infrared Spectra of SCIAMACHY Onboard ENVISAT.” Atmospheric Chemistry and Physics 5 (1): 9–22. https://doi.org/10.5194/acp-5-9-2005.\n\n\nFrankenberg, Christian, Andrew K Thorpe, David R Thompson, Glynn Hulley, Eric Adam Kort, Nick Vance, Jakob Borchardt, et al. 2016. “Airborne Methane Remote Measurements Reveal Heavy-Tail Flux Distribution in Four Corners Region.” Proceedings of the National Academy of Sciences 113 (35): 9734–39. https://doi.org/10.1073/pnas.1605617113.\n\n\nFrankenberg, Christian, Thorsten Warneke, André Butz, Ilse Aben, Frank Hase, Peter Spietz, and Linda R Brown. 2008. “Pressure Broadening in the 2\\(\\nu\\) 3 Band of Methane and Its Implication on Atmospheric Retrievals.” Atmospheric Chemistry and Physics 8 (17): 5061–75. https://doi.org/10.5194/acp-8-5061-2008.\n\n\nFrankenberg, C, JF Meirink, P Bergamaschi, APH Goede, M Heimann, S Körner, U Platt, M Van Weele, and T Wagner. 2006. “Satellite Chartography of Atmospheric Methane from SCIAMACHY on Board ENVISAT: Analysis of the Years 2003 and 2004.” Journal of Geophysical Research 111 (D7): D07303. https://doi.org/10.1029/2005jd006235.\n\n\nFrankenberg, C, JF Meirink, Michael van Weele, U Platt, and T Wagner. 2005. “Assessing Methane Emissions from Global Space-Borne Observations.” Science 308 (5724): 1010–14. https://doi.org/10.1126/science.1106644.\n\n\nJongaramrungruang, Siraput, Christian Frankenberg, Georgios Matheou, Andrew K Thorpe, David R Thompson, Le Kuai, and Riley M Duren. 2019. “Towards Accurate Methane Point-Source Quantification from High-Resolution 2-d Plume Imagery.” Atmospheric Measurement Techniques 12 (12): 6667–81. https://doi.org/10.5194/amt-12-6667-2019.\n\n\nJongaramrungruang, Siraput, Georgios Matheou, Andrew K Thorpe, Zhao-Cheng Zeng, and Christian Frankenberg. 2021. “Remote Sensing of Methane Plumes: Instrument Tradeoff Analysis for Detecting and Quantifying Local Sources at Global Scale.” Atmospheric Measurement Techniques 14 (12): 7999–8017. https://doi.org/10.5194/amt-14-7999-2021.\n\n\nJongaramrungruang, Siraput, Andrew K Thorpe, Georgios Matheou, and Christian Frankenberg. 2022. “MethaNet–an AI-Driven Approach to Quantifying Methane Point-Source Emission from High-Resolution 2-d Plume Imagery.” Remote Sensing of Environment 269: 112809. https://doi.org/10.1016/j.rse.2021.112809.\n\n\nThompson, David R, Andrew K Thorpe, Christian Frankenberg, Robert O Green, Riley M Duren, Andrew D Aubrey, Luis Guanter, et al. 2016. “The Aliso Canyon Super-Emitter: Initial Results of Observations by AVIRIS-c and the Hyperion Spacecraft, with Implications for Global Spectroscopic CH 4 Monitoring.” In AGU Fall Meeting Abstracts, 2016:GC52A–04. https://doi.org/10.5642/aliso.19951402.05.\n\n\nThompson, DR, AK Thorpe, C Frankenberg, RO Green, R Duren, Luis Guanter, Andre Hollstein, E Middleton, L Ong, and S Ungar. 2016. “Space-Based Remote Imaging Spectroscopy of the Aliso Canyon CH4 Superemitter.” Geophysical Research Letters 43 (12): 6571–78. https://doi.org/10.1002/2016gl069079.\n\n\nThorpe, AK, C Frankenberg, and DA Roberts. 2014. “Retrieval Techniques for Airborne Imaging of Methane Concentrations Using High Spatial and Moderate Spectral Resolution: Application to AVIRIS.” Atmospheric Measurement Techniques 7 (2): 491–506. https://doi.org/10.5194/amt-7-491-2014.\n\n\nThorpe, Andrew K, Riley M Duren, Stephen Conley, Kuldeep R Prasad, Brian D Bue, Vineet Yadav, Kelsey T Foster, et al. 2020. “Methane Emissions from Underground Gas Storage in California.” Environmental Research Letters 15 (4): 045005. https://doi.org/10.1088/1748-9326/ab751d.\n\n\nThorpe, Andrew K, Christian Frankenberg, AD Aubrey, DA Roberts, AA Nottrott, TA Rahn, JA Sauer, et al. 2016. “Mapping Methane Concentrations from a Controlled Release Experiment Using the Next Generation Airborne Visible/Infrared Imaging Spectrometer (AVIRIS-NG).” Remote Sensing of Environment 179: 104–15. https://doi.org/10.1016/j.rse.2018.06.018.\n\n\nThorpe, Andrew K, Christian Frankenberg, Robert O Green, David R Thompson, Andrew D Aubrey, Pantazis Mouroulis, Michael L Eastwood, and Georgios Matheou. 2016. “The Airborne Methane Plume Spectrometer (AMPS): Quantitative Imaging of Methane Plumes in Real Time.” In 2016 IEEE Aerospace Conference, 1–14. IEEE. https://doi.org/10.1109/aero.2016.7500756.\n\n\nThorpe, Andrew K, Christian Frankenberg, David R Thompson, Riley M Duren, Andrew D Aubrey, Brian D Bue, Robert O Green, et al. 2017. “Airborne DOAS Retrievals of Methane, Carbon Dioxide, and Water Vapor Concentrations at High Spatial Resolution: Application to AVIRIS-NG.” Atmospheric Measurement Techniques 10 (10): 3833–50. https://doi.org/10.5194/amt-10-3833-2017.\n\n\nThorpe, Andrew K, Robert O Green, David R Thompson, Philip G Brodrick, John W Chapman, Clayton D Elder, Itziar Irakulis-Loitxate, et al. 2023. “Attribution of Individual Methane and Carbon Dioxide Emission Sources Using EMIT Observations from Space.” Science Advances 9 (46): eadh2391. https://doi.org/10.1126/sciadv.adh2391.\n\n\nThorpe, Andrew K, Eric A Kort, DH Cusworth, AK Ayasse, Brian D Bue, Vineet Yadav, David R Thompson, et al. 2023. “Methane Emissions Decline from Reduced Oil, Natural Gas, and Refinery Production During COVID-19.” Environmental Research Communications 5 (2): 021006. https://doi.org/10.1088/2515-7620/acb5e5."
   }
 ]
