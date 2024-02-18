@@ -1,0 +1,159 @@
+
+
+  .lb-caption {
+    position: absolute;
+    left: -250px; /* Adjust based on your layout and description length */
+    width: 200px; /* Adjust as necessary */
+    text-align: left;
+  }
+
+  
+  .shadow-effect {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adjust as needed */
+  }
+/* Fixed size for image previews */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-width: 90%; /* Adjust as needed */
+    max-height: 200px;
+    object-fit: cover; /* Ensures the image covers the area */
+  }
+  
+  /* Zoom effect on hover */
+  .grid-item img:hover {
+    transform: scale(1.1); /* Adjust zoom level as needed */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the spacing between images */
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc; /* Optional border */
+  }
+  
+  .footer {
+    background-color: #FF6C0C; /* Replace with your desired color */
+    opacity: 0.8;
+    /* Other styling properties for the footer */
+  }
+
+  .navbar {
+    background-color: whitesmoke; /* Replace with your desired color */
+    /* Other styling properties as needed */
+  }
+
+  .navbar-logo {
+    width: 190px; /* Adjust the height as needed */
+    
+  }
+
+  .navbar-title:hover > .icon-line {
+    animation-duration: 600ms;
+    animation-name: line-expand;
+  }
+  
+  @keyframes line-expand {
+    from {
+      width: 0%;
+    }
+    
+    to {
+      width: 100%;
+    }
+  }
+  
+  
+  /*
+  // left align edge of callout block with text
+  // without this, text inside callout block is left aligned with body text,
+  // which maybe looks better?
+  div.callout.callout {
+    margin-left: 0;
+  }
+  */
+  
+  code span.cf {
+    font-weight: normal;
+  }
+  
+  .top-callout {
+    margin-top: 0;
+  }
+  
+  .profile-pic {
+    border-radius: 5px;
+  }
+  
+  .content-container {
+    padding-left: -1em;
+    padding-right: 0em;
+  }
+  
+  .top-story {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 1em; 
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-story img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .top-story-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+  }
+  
+  .top-story-text h2 {
+    margin-top: 1.5rem;
+  }
+  
+  .top-story-img p {
+    margin-bottom: 0;
+  }
+  
+  .header-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-banner .header-image {
+    position: absolute;
+    display: none;
+    height: auto;
+  }
+  
+  .header-text p {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .header-block {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 1.8em; 
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+  }
+
+  .caltech-background {
+    background-color: #ff6d0c6a;
+  }
+
+  
