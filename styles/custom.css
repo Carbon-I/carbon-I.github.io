@@ -1,5 +1,22 @@
 
 
+/* Style for navbar links on hover */
+.navbar a:hover {
+  animation-duration: 600ms;
+  animation-name: line-expand;
+  border-bottom: 1px solid #000; /* Adjust color and thickness to your preference */
+}
+
+/* Style for active navbar link */
+.navbar a.active {
+  color: #000;
+  border-bottom: 2px solid #FF6C0C; /* Adjust color and thickness to your preference */
+}
+
+.navbar a:hover, .navbar a:active {
+  color: black !important;
+}
+
   .lb-caption {
     position: absolute;
     left: -250px; /* Adjust based on your layout and description length */
@@ -52,43 +69,6 @@
   .navbar-logo {
     width: 190px; /* Adjust the height as needed */
     
-  }
-
-  .navbar-title:hover > .icon-line {
-    animation-duration: 600ms;
-    animation-name: line-expand;
-  }
-  
-  @keyframes line-expand {
-    from {
-      width: 0%;
-    }
-    
-    to {
-      width: 100%;
-    }
-  }
-  
-  
-  /*
-  // left align edge of callout block with text
-  // without this, text inside callout block is left aligned with body text,
-  // which maybe looks better?
-  div.callout.callout {
-    margin-left: 0;
-  }
-  */
-  
-  code span.cf {
-    font-weight: normal;
-  }
-  
-  .top-callout {
-    margin-top: 0;
-  }
-  
-  .profile-pic {
-    border-radius: 5px;
   }
   
   .content-container {

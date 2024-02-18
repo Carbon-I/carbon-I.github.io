@@ -1,0 +1,6 @@
+---
+title: "Publications"
+bibliography: publications/cfranken2024_doi.bib
+---
+
+Test, e.g. we see @jongaramrungruang2019towards, @jongaramrungruang2021remote, @jongaramrungruang2022methanet, @thompson2016aliso, @thompson2016space, @frankenberg2016airborne, @ayasse2018evaluating, @borchardt2020detection, @cusworth2019potential, @cusworth2021multisatellite, @cusworth2021quantifying, @duren2019california, @foote2020fast, @thorpe2014retrieval, @thorpe2016airborne, @thorpe2016mapping, @thorpe2017airborne, @thorpe2020methane, @thorpe2023attribution, @thorpe2023methane, @frankenberg2005assessing, @frankenberg2005iterative, @frankenberg2006satellite, @frankenberg2008pressure, @frankenberg2008tropical, @frankenberg2011global 

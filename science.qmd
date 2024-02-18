@@ -13,9 +13,7 @@ format:
         - lightbox
     lightbox: auto
 ---
-![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}<br>
-
-# High-resolution Mapping of Obscured Greenhouse Gases
+![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=60%}<br>
 
 Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources. We will address specific weaknesses of the current program of record.
 

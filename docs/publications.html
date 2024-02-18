@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ScienceTeam | Carbon-I</title>
+<title>Publications</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,35 +88,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-science-team .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-science-team'] = new List('listing-science-team', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PE6RLP594L"></script>
 
 <script type="text/javascript">
@@ -141,9 +130,10 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles/custom.css">
-<link rel="stylesheet" href="styles/other-background.css">
-<meta property="og:title" content="ScienceTeam | Carbon-I">
-<meta name="twitter:title" content="ScienceTeam | Carbon-I">
+<meta property="og:title" content="Publications">
+<meta property="og:description" content="">
+<meta name="twitter:title" content="Publications">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -169,7 +159,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./team.html" aria-current="page"> 
+    <a class="nav-link" href="./team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item">
@@ -177,7 +167,7 @@ window.Quarto = {
 <span class="menu-text">Science</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.qmd"> 
+    <a class="nav-link active" href="./publications.html" aria-current="page"> 
 <span class="menu-text">Publications</span></a>
   </li>  
 </ul>
@@ -198,327 +188,116 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
 
-
-
-
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">People</li>
-  </ol>
-</nav>
-<section id="science-team" class="level2">
-<h2 class="anchored" data-anchor-id="science-team">Science Team</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.</p>
-</div>
-</div>
-<div id="listing-science-team" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-5">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/01_frankenberg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/frankenberg.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Christian Frankenberg
-</h5>
-<div class="card-subtitle listing-subtitle">
-Principal Investigator
-</div>
-<div class="card-text listing-description">
-Caltech/JPL
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/02_michalak.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/michalak.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Anna Michalak
-</h5>
-<div class="card-subtitle listing-subtitle">
-Deputy Principal Investigator – Science
-</div>
-<div class="card-text listing-description">
-Carnegie/Stanford
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/03_jacob.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/jacob.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Daniel Jacob
-</h5>
-<div class="card-subtitle listing-subtitle">
-Flux Inversion Lead
-</div>
-<div class="card-text listing-description">
-Harvard
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/04_Yin.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/yin.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Yi Yin
-</h5>
-<div class="card-subtitle listing-subtitle">
-Flux Inversions
-</div>
-<div class="card-text listing-description">
-NYU
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
-<a href="./people/ScienceTeam/05_turner.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/turner.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Alex Turner
-</h5>
-<div class="card-subtitle listing-subtitle">
-Atmospheric Chemistry &amp; Carbon Cycle feedbacks
-</div>
-<div class="card-text listing-description">
-University of Washington
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/05_wennberg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/wennberg.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Paul Wennberg
-</h5>
-<div class="card-subtitle listing-subtitle">
-Validation Lead
-</div>
-<div class="card-text listing-description">
-Caltech
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1708216859294" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/06_thorpe.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/thorpe.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Andrew Thorpe
-</h5>
-<div class="card-subtitle listing-subtitle">
-Project Scientist
-</div>
-<div class="card-text listing-description">
-JPL
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/07_bruhwiler.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/Lori.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lori Bruhwiler
-</h5>
-<div class="card-subtitle listing-subtitle">
-NOAA cross-validation, flux inversions
-</div>
-<div class="card-text listing-description">
-NOAA
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/08_hoyt.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/hoyt.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Alison Hoyt
-</h5>
-<div class="card-subtitle listing-subtitle">
-Flux validation lead
-</div>
-<div class="card-text listing-description">
-Stanford
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/09_kebreab.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/kebreab.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Ermias Kebreab
-</h5>
-<div class="card-subtitle listing-subtitle">
-Agriculture Applications
-</div>
-<div class="card-text listing-description">
-UC Davis
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/11_green.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/green.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Robert Green
-</h5>
-<div class="card-subtitle listing-subtitle">
-Calibration support
-</div>
-<div class="card-text listing-description">
-JPL
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/12_thompson.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/thompson.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-David Thompson
-</h5>
-<div class="card-subtitle listing-subtitle">
-Calibration Lead
-</div>
-<div class="card-text listing-description">
-JPL
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/13_brodrick.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/brodrick.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Philip Brodrick
-</h5>
-<div class="card-subtitle listing-subtitle">
-Science Data System lead
-</div>
-<div class="card-text listing-description">
-JPL
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1708097277180" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
-<a href="./people/ScienceTeam/14_Chadwick.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./img/people/chadwick.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-K. Dana Chadwick
-</h5>
-<div class="card-subtitle listing-subtitle">
-Applications Lead
-</div>
-<div class="card-text listing-description">
-JPL
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Publications</h1>
 </div>
 
 
 
-</section>
+<div class="quarto-title-meta column-page">
 
-</main> <!-- /main -->
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Test, e.g.&nbsp;we see <span class="citation" data-cites="jongaramrungruang2019towards">Jongaramrungruang et al. (<a href="#ref-jongaramrungruang2019towards" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="jongaramrungruang2021remote">Jongaramrungruang et al. (<a href="#ref-jongaramrungruang2021remote" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="jongaramrungruang2022methanet">Jongaramrungruang et al. (<a href="#ref-jongaramrungruang2022methanet" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="thompson2016aliso">D. R. Thompson et al. (<a href="#ref-thompson2016aliso" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="thompson2016space">D. Thompson et al. (<a href="#ref-thompson2016space" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="frankenberg2016airborne">Christian Frankenberg et al. (<a href="#ref-frankenberg2016airborne" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="ayasse2018evaluating">Ayasse et al. (<a href="#ref-ayasse2018evaluating" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="borchardt2020detection">Borchardt et al. (<a href="#ref-borchardt2020detection" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="cusworth2019potential">Cusworth et al. (<a href="#ref-cusworth2019potential" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="cusworth2021multisatellite">Cusworth, Duren, Thorpe, Pandey, et al. (<a href="#ref-cusworth2021multisatellite" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="cusworth2021quantifying">Cusworth, Duren, Thorpe, Eastwood, et al. (<a href="#ref-cusworth2021quantifying" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="duren2019california">Duren et al. (<a href="#ref-duren2019california" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="foote2020fast">Foote et al. (<a href="#ref-foote2020fast" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="thorpe2014retrieval">A. Thorpe, Frankenberg, and Roberts (<a href="#ref-thorpe2014retrieval" role="doc-biblioref">2014</a>)</span>, <span class="citation" data-cites="thorpe2016airborne">A. K. Thorpe, Frankenberg, Green, et al. (<a href="#ref-thorpe2016airborne" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="thorpe2016mapping">A. K. Thorpe, Frankenberg, Aubrey, et al. (<a href="#ref-thorpe2016mapping" role="doc-biblioref">2016</a>)</span>, <span class="citation" data-cites="thorpe2017airborne">A. K. Thorpe et al. (<a href="#ref-thorpe2017airborne" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="thorpe2020methane">A. K. Thorpe et al. (<a href="#ref-thorpe2020methane" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="thorpe2023attribution">A. K. Thorpe, Green, et al. (<a href="#ref-thorpe2023attribution" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="thorpe2023methane">A. K. Thorpe, Kort, et al. (<a href="#ref-thorpe2023methane" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="frankenberg2005assessing">C. Frankenberg et al. (<a href="#ref-frankenberg2005assessing" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="frankenberg2005iterative">Christian Frankenberg, Platt, and Wagner (<a href="#ref-frankenberg2005iterative" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="frankenberg2006satellite">C. Frankenberg et al. (<a href="#ref-frankenberg2006satellite" role="doc-biblioref">2006</a>)</span>, <span class="citation" data-cites="frankenberg2008pressure">Christian Frankenberg, Warneke, et al. (<a href="#ref-frankenberg2008pressure" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="frankenberg2008tropical">Christian Frankenberg, Bergamaschi, et al. (<a href="#ref-frankenberg2008tropical" role="doc-biblioref">2008</a>)</span>, <span class="citation" data-cites="frankenberg2011global">Christian Frankenberg et al. (<a href="#ref-frankenberg2011global" role="doc-biblioref">2011</a>)</span></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ayasse2018evaluating" class="csl-entry" role="listitem">
+Ayasse, Alana K, Andrew K Thorpe, Dar A Roberts, Christopher C Funk, Philip E Dennison, Christian Frankenberg, Andrea Steffke, and Andrew D Aubrey. 2018. <span>“Evaluating the Effects of Surface Properties on Methane Retrievals Using a Synthetic Airborne Visible/Infrared Imaging Spectrometer Next Generation (AVIRIS-NG) Image.”</span> <em>Remote Sensing of Environment</em> 215: 386–97. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>.
+</div>
+<div id="ref-borchardt2020detection" class="csl-entry" role="listitem">
+Borchardt, Jakob, Konstantin Gerilowski, Sven Krautwurst, Heinrich Bovensmann, Andrew Kenji Thorpe, David Ray Thompson, Christian Frankenberg, Charles E Miller, Riley M Duren, and John Philip Burrows. 2020. <span>“Detection and Quantification of CH 4 Plumes Using the WFM-DOAS Retrieval on AVIRIS-NG Hyperspectral Data.”</span> <em>Atmospheric Measurement Techniques Discussions</em> 2020: 1–34. <a href="https://doi.org/10.5194/amt-14-1267-2021">https://doi.org/10.5194/amt-14-1267-2021</a>.
+</div>
+<div id="ref-cusworth2021quantifying" class="csl-entry" role="listitem">
+Cusworth, Daniel H, Riley M Duren, Andrew K Thorpe, Michael L Eastwood, Robert O Green, Philip E Dennison, Christian Frankenberg, Joseph W Heckler, Gregory P Asner, and Charles E Miller. 2021. <span>“Quantifying Global Power Plant Carbon Dioxide Emissions with Imaging Spectroscopy.”</span> <em>AGU Advances</em> 2 (2): e2020AV000350. <a href="https://doi.org/10.1029/2020av000350">https://doi.org/10.1029/2020av000350</a>.
+</div>
+<div id="ref-cusworth2021multisatellite" class="csl-entry" role="listitem">
+Cusworth, Daniel H, Riley M Duren, Andrew K Thorpe, Sudhanshu Pandey, Joannes D Maasakkers, Ilse Aben, Dylan Jervis, et al. 2021. <span>“Multisatellite Imaging of a Gas Well Blowout Enables Quantification of Total Methane Emissions.”</span> <em>Geophysical Research Letters</em> 48 (2): e2020GL090864. <a href="https://doi.org/10.1029/2020gl090864">https://doi.org/10.1029/2020gl090864</a>.
+</div>
+<div id="ref-cusworth2019potential" class="csl-entry" role="listitem">
+Cusworth, Daniel H, Daniel J Jacob, Daniel J Varon, Christopher Chan Miller, Xiong Liu, Kelly Chance, Andrew K Thorpe, et al. 2019. <span>“Potential of Next-Generation Imaging Spectrometers to Detect and Quantify Methane Point Sources from Space.”</span> <em>Atmospheric Measurement Techniques</em> 12 (10): 5655–68. <a href="https://doi.org/10.5194/amt-2019-202-rc2">https://doi.org/10.5194/amt-2019-202-rc2</a>.
+</div>
+<div id="ref-duren2019california" class="csl-entry" role="listitem">
+Duren, Riley M, Andrew K Thorpe, Kelsey T Foster, Talha Rafiq, Francesca M Hopkins, Vineet Yadav, Brian D Bue, et al. 2019. <span>“California’s Methane Super-Emitters.”</span> <em>Nature</em> 575 (7781): 180–84. <a href="https://doi.org/10.21203/rs.3.rs-952096/v1">https://doi.org/10.21203/rs.3.rs-952096/v1</a>.
+</div>
+<div id="ref-foote2020fast" class="csl-entry" role="listitem">
+Foote, Markus D, Philip E Dennison, Andrew K Thorpe, David R Thompson, Siraput Jongaramrungruang, Christian Frankenberg, and Sarang C Joshi. 2020. <span>“Fast and Accurate Retrieval of Methane Concentration from Imaging Spectrometer Data Using Sparsity Prior.”</span> <em>IEEE Transactions on Geoscience and Remote Sensing</em> 58 (9): 6480–92. <a href="https://doi.org/10.1109/tgrs.2020.2976888">https://doi.org/10.1109/tgrs.2020.2976888</a>.
+</div>
+<div id="ref-frankenberg2011global" class="csl-entry" role="listitem">
+Frankenberg, Christian, IPBJDE Aben, P Bergamaschi, EJ Dlugokencky, R Van Hees, S Houweling, P Van Der Meer, R Snel, and P Tol. 2011. <span>“Global Column-Averaged Methane Mixing Ratios from 2003 to 2009 as Derived from SCIAMACHY: Trends and Variability.”</span> <em>Journal of Geophysical Research: Atmospheres</em> 116 (D4). <a href="https://doi.org/10.1029/2010jd014849">https://doi.org/10.1029/2010jd014849</a>.
+</div>
+<div id="ref-frankenberg2008tropical" class="csl-entry" role="listitem">
+Frankenberg, Christian, Peter Bergamaschi, André Butz, Sander Houweling, Jan Fokke Meirink, Justus Notholt, Anna Katinka Petersen, Hans Schrijver, Thorsten Warneke, and Ilse Aben. 2008. <span>“Tropical Methane Emissions: A Revised View from SCIAMACHY Onboard ENVISAT.”</span> <em>Geophysical Research Letters</em> 35 (15). <a href="https://doi.org/10.1029/2008gl034300">https://doi.org/10.1029/2008gl034300</a>.
+</div>
+<div id="ref-frankenberg2005iterative" class="csl-entry" role="listitem">
+Frankenberg, Christian, U Platt, and T Wagner. 2005. <span>“Iterative Maximum a Posteriori (IMAP)-DOAS for Retrieval of Strongly Absorbing Trace Gases: Model Studies for CH 4 and CO 2 Retrieval from Near Infrared Spectra of SCIAMACHY Onboard ENVISAT.”</span> <em>Atmospheric Chemistry and Physics</em> 5 (1): 9–22. <a href="https://doi.org/10.5194/acp-5-9-2005">https://doi.org/10.5194/acp-5-9-2005</a>.
+</div>
+<div id="ref-frankenberg2016airborne" class="csl-entry" role="listitem">
+Frankenberg, Christian, Andrew K Thorpe, David R Thompson, Glynn Hulley, Eric Adam Kort, Nick Vance, Jakob Borchardt, et al. 2016. <span>“Airborne Methane Remote Measurements Reveal Heavy-Tail Flux Distribution in Four Corners Region.”</span> <em>Proceedings of the National Academy of Sciences</em> 113 (35): 9734–39. <a href="https://doi.org/10.1073/pnas.1605617113">https://doi.org/10.1073/pnas.1605617113</a>.
+</div>
+<div id="ref-frankenberg2008pressure" class="csl-entry" role="listitem">
+Frankenberg, Christian, Thorsten Warneke, André Butz, Ilse Aben, Frank Hase, Peter Spietz, and Linda R Brown. 2008. <span>“Pressure Broadening in the 2<span class="math inline">\(\nu\)</span> 3 Band of Methane and Its Implication on Atmospheric Retrievals.”</span> <em>Atmospheric Chemistry and Physics</em> 8 (17): 5061–75. <a href="https://doi.org/10.5194/acp-8-5061-2008">https://doi.org/10.5194/acp-8-5061-2008</a>.
+</div>
+<div id="ref-frankenberg2006satellite" class="csl-entry" role="listitem">
+Frankenberg, C, JF Meirink, P Bergamaschi, APH Goede, M Heimann, S Körner, U Platt, M Van Weele, and T Wagner. 2006. <span>“Satellite Chartography of Atmospheric Methane from SCIAMACHY on Board ENVISAT: Analysis of the Years 2003 and 2004.”</span> <em>Journal of Geophysical Research</em> 111 (D7): D07303. <a href="https://doi.org/10.1029/2005jd006235">https://doi.org/10.1029/2005jd006235</a>.
+</div>
+<div id="ref-frankenberg2005assessing" class="csl-entry" role="listitem">
+Frankenberg, C, JF Meirink, Michael van Weele, U Platt, and T Wagner. 2005. <span>“Assessing Methane Emissions from Global Space-Borne Observations.”</span> <em>Science</em> 308 (5724): 1010–14. <a href="https://doi.org/10.1126/science.1106644">https://doi.org/10.1126/science.1106644</a>.
+</div>
+<div id="ref-jongaramrungruang2019towards" class="csl-entry" role="listitem">
+Jongaramrungruang, Siraput, Christian Frankenberg, Georgios Matheou, Andrew K Thorpe, David R Thompson, Le Kuai, and Riley M Duren. 2019. <span>“Towards Accurate Methane Point-Source Quantification from High-Resolution 2-d Plume Imagery.”</span> <em>Atmospheric Measurement Techniques</em> 12 (12): 6667–81. <a href="https://doi.org/10.5194/amt-12-6667-2019">https://doi.org/10.5194/amt-12-6667-2019</a>.
+</div>
+<div id="ref-jongaramrungruang2021remote" class="csl-entry" role="listitem">
+Jongaramrungruang, Siraput, Georgios Matheou, Andrew K Thorpe, Zhao-Cheng Zeng, and Christian Frankenberg. 2021. <span>“Remote Sensing of Methane Plumes: Instrument Tradeoff Analysis for Detecting and Quantifying Local Sources at Global Scale.”</span> <em>Atmospheric Measurement Techniques</em> 14 (12): 7999–8017. <a href="https://doi.org/10.5194/amt-14-7999-2021">https://doi.org/10.5194/amt-14-7999-2021</a>.
+</div>
+<div id="ref-jongaramrungruang2022methanet" class="csl-entry" role="listitem">
+Jongaramrungruang, Siraput, Andrew K Thorpe, Georgios Matheou, and Christian Frankenberg. 2022. <span>“MethaNet–an AI-Driven Approach to Quantifying Methane Point-Source Emission from High-Resolution 2-d Plume Imagery.”</span> <em>Remote Sensing of Environment</em> 269: 112809. <a href="https://doi.org/10.1016/j.rse.2021.112809">https://doi.org/10.1016/j.rse.2021.112809</a>.
+</div>
+<div id="ref-thompson2016aliso" class="csl-entry" role="listitem">
+Thompson, David R, Andrew K Thorpe, Christian Frankenberg, Robert O Green, Riley M Duren, Andrew D Aubrey, Luis Guanter, et al. 2016. <span>“The Aliso Canyon Super-Emitter: Initial Results of Observations by AVIRIS-c and the Hyperion Spacecraft, with Implications for Global Spectroscopic CH 4 Monitoring.”</span> In <em>AGU Fall Meeting Abstracts</em>, 2016:GC52A–04. <a href="https://doi.org/10.5642/aliso.19951402.05">https://doi.org/10.5642/aliso.19951402.05</a>.
+</div>
+<div id="ref-thompson2016space" class="csl-entry" role="listitem">
+Thompson, DR, AK Thorpe, C Frankenberg, RO Green, R Duren, Luis Guanter, Andre Hollstein, E Middleton, L Ong, and S Ungar. 2016. <span>“Space-Based Remote Imaging Spectroscopy of the Aliso Canyon CH4 Superemitter.”</span> <em>Geophysical Research Letters</em> 43 (12): 6571–78. <a href="https://doi.org/10.1002/2016gl069079">https://doi.org/10.1002/2016gl069079</a>.
+</div>
+<div id="ref-thorpe2014retrieval" class="csl-entry" role="listitem">
+Thorpe, AK, C Frankenberg, and DA Roberts. 2014. <span>“Retrieval Techniques for Airborne Imaging of Methane Concentrations Using High Spatial and Moderate Spectral Resolution: Application to AVIRIS.”</span> <em>Atmospheric Measurement Techniques</em> 7 (2): 491–506. <a href="https://doi.org/10.5194/amt-7-491-2014">https://doi.org/10.5194/amt-7-491-2014</a>.
+</div>
+<div id="ref-thorpe2020methane" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Riley M Duren, Stephen Conley, Kuldeep R Prasad, Brian D Bue, Vineet Yadav, Kelsey T Foster, et al. 2020. <span>“Methane Emissions from Underground Gas Storage in California.”</span> <em>Environmental Research Letters</em> 15 (4): 045005. <a href="https://doi.org/10.1088/1748-9326/ab751d">https://doi.org/10.1088/1748-9326/ab751d</a>.
+</div>
+<div id="ref-thorpe2016mapping" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Christian Frankenberg, AD Aubrey, DA Roberts, AA Nottrott, TA Rahn, JA Sauer, et al. 2016. <span>“Mapping Methane Concentrations from a Controlled Release Experiment Using the Next Generation Airborne Visible/Infrared Imaging Spectrometer (AVIRIS-NG).”</span> <em>Remote Sensing of Environment</em> 179: 104–15. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>.
+</div>
+<div id="ref-thorpe2016airborne" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Christian Frankenberg, Robert O Green, David R Thompson, Andrew D Aubrey, Pantazis Mouroulis, Michael L Eastwood, and Georgios Matheou. 2016. <span>“The Airborne Methane Plume Spectrometer (AMPS): Quantitative Imaging of Methane Plumes in Real Time.”</span> In <em>2016 IEEE Aerospace Conference</em>, 1–14. IEEE. <a href="https://doi.org/10.1109/aero.2016.7500756">https://doi.org/10.1109/aero.2016.7500756</a>.
+</div>
+<div id="ref-thorpe2017airborne" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Christian Frankenberg, David R Thompson, Riley M Duren, Andrew D Aubrey, Brian D Bue, Robert O Green, et al. 2017. <span>“Airborne DOAS Retrievals of Methane, Carbon Dioxide, and Water Vapor Concentrations at High Spatial Resolution: Application to AVIRIS-NG.”</span> <em>Atmospheric Measurement Techniques</em> 10 (10): 3833–50. <a href="https://doi.org/10.5194/amt-10-3833-2017">https://doi.org/10.5194/amt-10-3833-2017</a>.
+</div>
+<div id="ref-thorpe2023attribution" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Robert O Green, David R Thompson, Philip G Brodrick, John W Chapman, Clayton D Elder, Itziar Irakulis-Loitxate, et al. 2023. <span>“Attribution of Individual Methane and Carbon Dioxide Emission Sources Using EMIT Observations from Space.”</span> <em>Science Advances</em> 9 (46): eadh2391. <a href="https://doi.org/10.1126/sciadv.adh2391">https://doi.org/10.1126/sciadv.adh2391</a>.
+</div>
+<div id="ref-thorpe2023methane" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Eric A Kort, DH Cusworth, AK Ayasse, Brian D Bue, Vineet Yadav, David R Thompson, et al. 2023. <span>“Methane Emissions Decline from Reduced Oil, Natural Gas, and Refinery Production During COVID-19.”</span> <em>Environmental Research Communications</em> 5 (2): 021006. <a href="https://doi.org/10.1088/2515-7620/acb5e5">https://doi.org/10.1088/2515-7620/acb5e5</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
