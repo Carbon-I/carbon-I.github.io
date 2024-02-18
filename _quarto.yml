@@ -50,7 +50,7 @@ website:
 format:
   html:
     theme:
-      - flatly
+      - cosmo
       - styles/custom.scss
     toc: true
     css: styles/custom.css

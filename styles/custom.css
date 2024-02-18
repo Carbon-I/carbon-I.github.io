@@ -13,6 +13,11 @@
   border-bottom: 2px solid #FF6C0C; /* Adjust color and thickness to your preference */
 }
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: #FF6C0C;
+}
+
+
 .navbar a:hover, .navbar a:active {
   color: black !important;
 }
