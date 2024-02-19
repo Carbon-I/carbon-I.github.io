@@ -4,6 +4,7 @@ project:
 
 website:
   title: ""
+  site-url: https://carbon-i.github.io/
   twitter-card: true
   open-graph: true
   google-analytics: "G-PE6RLP594L"
