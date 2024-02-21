@@ -8,7 +8,52 @@ format:
     code-tools: true
 ---
 
+
 A simple example for cloud statistics from our data in the recent GRL paper (just for one location in the Amazon):
+
+
+```{ojs}
+//| panel: input
+viewof point = {
+  const width = 600.0
+  const height = width / 2;
+  const context = DOM.context2d(width, height);
+  const projection = d3.geoEqualEarth().fitSize([width, height], {type: "Sphere"});
+  const path = d3.geoPath(projection, context);
+  let mousedown = false;
+
+  context.beginPath(), path(graticule), context.strokeStyle = "#ccc", context.stroke();
+  context.beginPath(), path(land), context.fill();
+  context.beginPath(), path(sphere), context.strokeStyle = "#000", context.stroke();
+  context.lineWidth = 2, context.strokeStyle = "#f00";
+  const image = context.getImageData(0, 0, context.canvas.width, context.canvas.height);
+
+  function render(coordinates) {
+    context.canvas.value = coordinates;
+    context.clearRect(0, 0, width, height);
+    context.putImageData(image, 0, 0);
+    context.beginPath(), path({type: "Point", coordinates}), context.stroke();
+  }
+
+  context.canvas.onmousedown = event => {
+    mousedown = true;
+    context.canvas.onmousemove(event);
+  };
+
+  context.canvas.onmousemove = ({layerX, layerY}) => {
+    if (!mousedown) return;
+    render(projection.invert([layerX, layerY]));
+    context.canvas.dispatchEvent(new CustomEvent("input"));
+  };
+
+  context.canvas.onmouseup = event => {
+    mousedown = false;
+  };
+
+  render([-55, 0]);
+  return context.canvas;
+}
+```
 
 ```{ojs}
 //| panel: input
@@ -16,8 +61,9 @@ viewof thresh = Inputs.range(
   [5, 50], 
   {value: 17, step: 2, label: "Number of bins"}
 )
-
 ```
+
+
 
 ```{ojs}
 binBoundaries1 = calculateLogBins(0.0001, 1.01, thresh);
@@ -120,4 +166,24 @@ title = ([d]) => {
   const hi = Math.pow(10, (1 + Math.floor(Math.log10(d) * 5)) / 5);
   return `[${Math.floor(lo)}-${Math.floor(hi - 1)}]`;
 }
+```
+
+```{ojs}
+sphere = ({type: "Sphere"})
+```
+
+```{ojs}
+graticule = d3.geoGraticule10()
+```
+
+```{ojs}
+land = topojson.feature(world, world.objects.land)
+```
+
+```{ojs}
+world = FileAttachment("data/land-50m.json").json()
+```
+
+```{ojs}
+topojson = require("topojson-client@3")
 ```
