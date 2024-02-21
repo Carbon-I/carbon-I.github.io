@@ -39,6 +39,8 @@ function calculateLogBins(start, end, nBins) {
 
 ## Plot
 
+Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)
+
 ```{ojs}
 Plot.plot({
 width,
@@ -54,6 +56,7 @@ transform: d => Math.max(.01, 100*d)},
 })
 ```
 
+Below is the corresponding time-series in the same colors.
 ```{ojs}
 Plot.plot({
   width,  
@@ -65,22 +68,26 @@ Plot.plot({
       x: "Date", 
       y: "cf_200",
       stroke: "steelblue", // Custom line color
-      strokeWidth: 1 // Thin line
+      fillOpacity: 0.5,
+      strokeWidth: 0.2 // Thin line
     }),
     Plot.dot(filtered, {
       x: "Date",
       y: "cf_200",
+      fillOpacity: 0.75,
       fill: "steelblue",
     }),
     Plot.lineY(filtered, { 
       x: "Date", 
       y: "cf_2000",
       stroke: "tomato", // Custom line color
-      strokeWidth: 1
+      fillOpacity: 0.5,
+      strokeWidth: 0.2
     }),
     Plot.dot(filtered, {
       x: "Date",
       y: "cf_2000",
+      fillOpacity: 0.75,
       fill: "tomato"
     }),
     Plot.ruleY([0])
