@@ -1,0 +1,91 @@
+```{ojs}
+import {d3} from "d3@7"
+Plot.plot({
+  y: {grid: true},
+  color: {legend: true},
+  marks: [
+    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cloud_free_fraction02",thresholds: thresh})),
+    Plot.ruleY([0])
+  ]
+})
+
+viewof latitude = slider({
+  min: -90, max: 90, step: 1, value: 40, title: "Latitude"
+})
+
+viewof longitude = slider({
+  min: -180, max: 180, step: 1, value: -74, title: "Longitude"
+})
+
+viewof startDate = date({
+  title: "Start Date",
+  value: "2021-01-01"
+})
+
+viewof endDate = date({
+  title: "End Date",
+  value: "2022-12-31"
+})
+
+
+
+function getDataUrl(lat, lon) {
+  return `https://web.gps.caltech.edu/~cfranken/subset_data.csv`;
+}
+
+async function loadData() {
+  const url = getDataUrl(latitude, longitude);
+  const data = await csv(url);
+  return data.filter(d => 
+    new Date(d.time) >= new Date(startDate) && 
+    new Date(d.time) <= new Date(endDate)
+  );
+}
+
+filteredData = loadData();
+```
+
+```{ojs}
+// Set the dimensions of the graph
+width = 800;
+height = 500;
+margin = {top: 20, right: 30, bottom: 40, left: 90};
+
+// Set up scales
+const xScale = d3.scaleBand()
+  .domain(filteredData.map(d => d.time))
+  .range([margin.left, width - margin.right])
+  .padding(0.1);
+
+const yScale = d3.scaleLinear()
+  .domain([0, d3.max(filteredData, d => d.cloud_free_fraction)])
+  .nice()
+  .range([height - margin.bottom, margin.top]);
+
+// SVG container
+const svg = d3.create("svg")
+    .attr("viewBox", [0, 0, width, height]);
+
+// Bars
+svg.append("g")
+  .attr("fill", "steelblue")
+  .selectAll("rect")
+  .data(filteredData)
+  .join("rect")
+    .attr("x", d => xScale(d.time))
+    .attr("y", d => yScale(d.cloud_free_fraction))
+    .attr("height", d => yScale(0) - yScale(d.cloud_free_fraction))
+    .attr("width", xScale.bandwidth());
+
+// X-axis
+svg.append("g")
+  .attr("transform", `translate(0,${height - margin.bottom})`)
+  .call(d3.axisBottom(xScale));
+
+// Y-axis
+svg.append("g")
+  .attr("transform", `translate(${margin.left},0)`)
+  .call(d3.axisLeft(yScale));
+
+return svg.node();
+```

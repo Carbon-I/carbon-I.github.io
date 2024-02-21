@@ -1,0 +1,65 @@
+---
+title: "Sentinel-2 cloud statistics"
+format:
+  html:
+    toc: false
+    echo: false
+    keep-hidden: true
+    code-tools: true
+---
+
+A simple on cloud statistics from our data in bla:
+
+```{ojs}
+//| panel: input
+viewof thresh = Inputs.range(
+  [10, 150], 
+  {value: 35, step: 10, label: "Number of bins"}
+)
+
+```
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs}
+Plot.plot({
+  x: { type: "log",base:10,
+transform: d => Math.max(.1, 100*d)}, 
+  y: {grid: true},
+  color: {legend: true},
+  marks: [
+    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", thresholds: thresh, fill: "steelblue", fillOpacity: 0.5 })),
+    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_2000", thresholds: thresh, fill: "tomato", fillOpacity: 0.5 })),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+## Data
+
+```{ojs}
+Inputs.table(data)
+```
+
+:::
+
+```{ojs}
+data = FileAttachment("data/subset_data.csv").csv({ typed: true })
+```
+
+```{ojs}
+filtered = data.filter(function(s2) {
+  return s2.cf_2000 < 1.1;
+})
+```
+
+```{ojs}
+// a brave function that takes a sample value and returns the interval that contains it
+title = ([d]) => {
+  const lo = Math.pow(10, Math.floor(Math.log10(d) * 5) / 5);
+  const hi = Math.pow(10, (1 + Math.floor(Math.log10(d) * 5)) / 5);
+  return `[${Math.floor(lo)}-${Math.floor(hi - 1)}]`;
+}
+```
