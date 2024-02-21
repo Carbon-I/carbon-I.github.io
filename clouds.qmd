@@ -8,16 +8,32 @@ format:
     code-tools: true
 ---
 
-A simple on cloud statistics from our data in bla:
+A simple example for cloud statistics from our data in the recent GRL paper (just for one location in the Amazon):
 
 ```{ojs}
 //| panel: input
 viewof thresh = Inputs.range(
-  [10, 150], 
-  {value: 35, step: 10, label: "Number of bins"}
+  [5, 50], 
+  {value: 17, step: 2, label: "Number of bins"}
 )
 
 ```
+
+```{ojs}
+binBoundaries1 = calculateLogBins(0.0001, 1.01, thresh);
+```
+
+```{ojs}
+function calculateLogBins(start, end, nBins) {
+  const logStart = Math.log10(start);
+  const logEnd = Math.log10(end);
+  const bins = Array.from({length: nBins + 1}, (_, i) => 
+    Math.pow(10, logStart + (logEnd - logStart) * i / nBins)
+  );
+  return bins;
+}
+```
+
 
 ::: {.panel-tabset}
 
@@ -26,12 +42,45 @@ viewof thresh = Inputs.range(
 ```{ojs}
 Plot.plot({
   x: { type: "log",base:10,
-transform: d => Math.max(.1, 100*d)}, 
+transform: d => Math.max(.01, 100*d)}, 
   y: {grid: true},
   color: {legend: true},
   marks: [
-    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", thresholds: thresh, fill: "steelblue", fillOpacity: 0.5 })),
-    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_2000", thresholds: thresh, fill: "tomato", fillOpacity: 0.5 })),
+    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", fill: "steelblue", fillOpacity: 0.5,thresholds: binBoundaries1 })),
+    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_2000", fill: "tomato", fillOpacity: 0.5,thresholds: binBoundaries1 })),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+```{ojs}
+Plot.plot({
+  y: { grid: true },
+  color: { legend: true },
+  marks: [
+    Plot.axisX({ ticks: d3.utcMonth.every(3) }),
+    Plot.lineY(filtered, { 
+      x: "Date", 
+      y: "cf_200",
+      stroke: "steelblue", // Custom line color
+      strokeWidth: 1 // Thin line
+    }),
+    Plot.dot(filtered, {
+      x: "Date",
+      y: "cf_200",
+      fill: "steelblue",
+    }),
+    Plot.lineY(filtered, { 
+      x: "Date", 
+      y: "cf_2000",
+      stroke: "tomato", // Custom line color
+      strokeWidth: 1
+    }),
+    Plot.dot(filtered, {
+      x: "Date",
+      y: "cf_2000",
+      fill: "tomato"
+    }),
     Plot.ruleY([0])
   ]
 })

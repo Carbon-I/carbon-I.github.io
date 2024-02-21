@@ -22,6 +22,7 @@ time_2 = data2['system:index']
 df1['timestamp'] = [pd.to_datetime(s.split('_')[0],format='%Y%m%dT%H%M%S') for s in time_]
 df2['timestamp'] = [pd.to_datetime(s.split('_')[0],format='%Y%m%dT%H%M%S') for s in time_2]
 result = pd.merge(df1[['timestamp', 'cf_200']], df2[['timestamp', 'cf_2000']], on='timestamp', how='inner')
-result[['timestamp','cf_200', 'cf_2000']].to_csv('subset_data.csv', index=False)
+result['Date'] = result['timestamp'].dt.strftime('%Y-%m-%d')
+result[['Date','cf_200', 'cf_2000']].to_csv('data/subset_data.csv', index=False)
 parquet_file = 'your_file.parquet'
 data.to_parquet(parquet_file, engine='pyarrow')
