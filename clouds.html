@@ -237,57 +237,63 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Plot</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="42" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 41;"><span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>width<span class="op">,</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">"log"</span><span class="op">,</span><span class="dt">base</span><span class="op">:</span><span class="dv">10</span><span class="op">,</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="dt">transform</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">.</span><span class="bn">01</span><span class="op">,</span> <span class="dv">100</span><span class="op">*</span>d)}<span class="op">,</span> </span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span><span class="dt">thresholds</span><span class="op">:</span> binBoundaries1 }))<span class="op">,</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"tomato"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span><span class="dt">thresholds</span><span class="op">:</span> binBoundaries1 }))<span class="op">,</span></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="44" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 43;"><span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>width<span class="op">,</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">"log"</span><span class="op">,</span><span class="dt">base</span><span class="op">:</span><span class="dv">10</span><span class="op">,</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="dt">transform</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">.</span><span class="bn">01</span><span class="op">,</span> <span class="dv">100</span><span class="op">*</span>d)}<span class="op">,</span> </span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span><span class="dt">thresholds</span><span class="op">:</span> binBoundaries1 }))<span class="op">,</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">binX</span>({<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"tomato"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span><span class="dt">thresholds</span><span class="op">:</span> binBoundaries1 }))<span class="op">,</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="expression">
 
 </div>
 </div>
 </div>
+<p>Below is the corresponding time-series in the same colors.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span>  </span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> { <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">axisX</span>({ <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="at">utcMonth</span><span class="op">.</span><span class="fu">every</span>(<span class="dv">3</span>) })<span class="op">,</span></span>
-<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(filtered<span class="op">,</span> { </span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span></span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span> <span class="co">// Thin line</span></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {</span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span></span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span></span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(filtered<span class="op">,</span> { </span>
-<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
-<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
-<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"tomato"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
-<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span></span>
-<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {</span>
-<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span></span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
-<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"tomato"</span></span>
-<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="60" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 59;"><span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span>  </span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> { <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">axisX</span>({ <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="at">utcMonth</span><span class="op">.</span><span class="fu">every</span>(<span class="dv">3</span>) })<span class="op">,</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(filtered<span class="op">,</span> { </span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.2</span> <span class="co">// Thin line</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.75</span><span class="op">,</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(filtered<span class="op">,</span> { </span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"tomato"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.2</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.75</span><span class="op">,</span></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"tomato"</span></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="expression">
 
@@ -297,7 +303,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="93" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 92;"><span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="100" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="expression">
 
@@ -308,7 +314,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="99" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 98;"><span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/subset_data.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="106" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 105;"><span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/subset_data.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="declaration">
 
@@ -316,9 +322,9 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="103" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 102;"><span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(s2) {</span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s2<span class="op">.</span><span class="at">cf_2000</span> <span class="op">&lt;</span> <span class="fl">1.1</span><span class="op">;</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="110" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 109;"><span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(s2) {</span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s2<span class="op">.</span><span class="at">cf_2000</span> <span class="op">&lt;</span> <span class="fl">1.1</span><span class="op">;</span></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
@@ -326,12 +332,12 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="109" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 108;"><span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a><span class="co">// a brave function that takes a sample value and returns the interval that contains it</span></span>
-<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>title <span class="op">=</span> ([d]) <span class="kw">=&gt;</span> {</span>
-<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(<span class="dv">10</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">log10</span>(d) <span class="op">*</span> <span class="dv">5</span>) <span class="op">/</span> <span class="dv">5</span>)<span class="op">;</span></span>
-<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> hi <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(<span class="dv">10</span><span class="op">,</span> (<span class="dv">1</span> <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">log10</span>(d) <span class="op">*</span> <span class="dv">5</span>)) <span class="op">/</span> <span class="dv">5</span>)<span class="op">;</span></span>
-<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="vs">`[</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(lo)<span class="sc">}</span><span class="vs">-</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(hi <span class="op">-</span> <span class="dv">1</span>)<span class="sc">}</span><span class="vs">]`</span><span class="op">;</span></span>
-<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="116" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 115;"><span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a><span class="co">// a brave function that takes a sample value and returns the interval that contains it</span></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>title <span class="op">=</span> ([d]) <span class="kw">=&gt;</span> {</span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(<span class="dv">10</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">log10</span>(d) <span class="op">*</span> <span class="dv">5</span>) <span class="op">/</span> <span class="dv">5</span>)<span class="op">;</span></span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> hi <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(<span class="dv">10</span><span class="op">,</span> (<span class="dv">1</span> <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">log10</span>(d) <span class="op">*</span> <span class="dv">5</span>)) <span class="op">/</span> <span class="dv">5</span>)<span class="op">;</span></span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="vs">`[</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(lo)<span class="sc">}</span><span class="vs">-</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(hi <span class="op">-</span> <span class="dv">1</span>)<span class="sc">}</span><span class="vs">]`</span><span class="op">;</span></span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="declaration">
 
@@ -345,7 +351,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiB0aHJlc2ggPSBJbnB1dHMucmFuZ2UoXG4gIFs1LCA1MF0sIFxuICB7dmFsdWU6IDE3LCBzdGVwOiAyLCBsYWJlbDogXCJOdW1iZXIgb2YgYmluc1wifVxuKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJiaW5Cb3VuZGFyaWVzMSA9IGNhbGN1bGF0ZUxvZ0JpbnMoMC4wMDAxLCAxLjAxLCB0aHJlc2gpO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZnVuY3Rpb24gY2FsY3VsYXRlTG9nQmlucyhzdGFydCwgZW5kLCBuQmlucykge1xuICBjb25zdCBsb2dTdGFydCA9IE1hdGgubG9nMTAoc3RhcnQpO1xuICBjb25zdCBsb2dFbmQgPSBNYXRoLmxvZzEwKGVuZCk7XG4gIGNvbnN0IGJpbnMgPSBBcnJheS5mcm9tKHtsZW5ndGg6IG5CaW5zICsgMX0sIChfLCBpKSA9PiBcbiAgICBNYXRoLnBvdygxMCwgbG9nU3RhcnQgKyAobG9nRW5kIC0gbG9nU3RhcnQpICogaSAvIG5CaW5zKVxuICApO1xuICByZXR1cm4gYmlucztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG53aWR0aCxcbiAgeDogeyB0eXBlOiBcImxvZ1wiLGJhc2U6MTAsXG50cmFuc2Zvcm06IGQgPT4gTWF0aC5tYXgoLjAxLCAxMDAqZCl9LCBcbiAgeToge2dyaWQ6IHRydWV9LFxuICBjb2xvcjoge2xlZ2VuZDogdHJ1ZX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5yZWN0WShmaWx0ZXJlZCwgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCJjZl8yMDBcIiwgZmlsbDogXCJzdGVlbGJsdWVcIiwgZmlsbE9wYWNpdHk6IDAuNSx0aHJlc2hvbGRzOiBiaW5Cb3VuZGFyaWVzMSB9KSksXG4gICAgUGxvdC5yZWN0WShmaWx0ZXJlZCwgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCJjZl8yMDAwXCIsIGZpbGw6IFwidG9tYXRvXCIsIGZpbGxPcGFjaXR5OiAwLjUsdGhyZXNob2xkczogYmluQm91bmRhcmllczEgfSkpLFxuICAgIFBsb3QucnVsZVkoWzBdKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgd2lkdGgsICBcbiAgeTogeyBncmlkOiB0cnVlIH0sXG4gIGNvbG9yOiB7IGxlZ2VuZDogdHJ1ZSB9LFxuICBtYXJrczogW1xuICAgIFBsb3QuYXhpc1goeyB0aWNrczogZDMudXRjTW9udGguZXZlcnkoMykgfSksXG4gICAgUGxvdC5saW5lWShmaWx0ZXJlZCwgeyBcbiAgICAgIHg6IFwiRGF0ZVwiLCBcbiAgICAgIHk6IFwiY2ZfMjAwXCIsXG4gICAgICBzdHJva2U6IFwic3RlZWxibHVlXCIsIC8vIEN1c3RvbSBsaW5lIGNvbG9yXG4gICAgICBzdHJva2VXaWR0aDogMSAvLyBUaGluIGxpbmVcbiAgICB9KSxcbiAgICBQbG90LmRvdChmaWx0ZXJlZCwge1xuICAgICAgeDogXCJEYXRlXCIsXG4gICAgICB5OiBcImNmXzIwMFwiLFxuICAgICAgZmlsbDogXCJzdGVlbGJsdWVcIixcbiAgICB9KSxcbiAgICBQbG90LmxpbmVZKGZpbHRlcmVkLCB7IFxuICAgICAgeDogXCJEYXRlXCIsIFxuICAgICAgeTogXCJjZl8yMDAwXCIsXG4gICAgICBzdHJva2U6IFwidG9tYXRvXCIsIC8vIEN1c3RvbSBsaW5lIGNvbG9yXG4gICAgICBzdHJva2VXaWR0aDogMVxuICAgIH0pLFxuICAgIFBsb3QuZG90KGZpbHRlcmVkLCB7XG4gICAgICB4OiBcIkRhdGVcIixcbiAgICAgIHk6IFwiY2ZfMjAwMFwiLFxuICAgICAgZmlsbDogXCJ0b21hdG9cIlxuICAgIH0pLFxuICAgIFBsb3QucnVsZVkoWzBdKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiSW5wdXRzLnRhYmxlKGRhdGEpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJkYXRhID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3N1YnNldF9kYXRhLmNzdlwiKS5jc3YoeyB0eXBlZDogdHJ1ZSB9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZmlsdGVyZWQgPSBkYXRhLmZpbHRlcihmdW5jdGlvbihzMikge1xuICByZXR1cm4gczIuY2ZfMjAwMCA8IDEuMTtcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIvLyBhIGJyYXZlIGZ1bmN0aW9uIHRoYXQgdGFrZXMgYSBzYW1wbGUgdmFsdWUgYW5kIHJldHVybnMgdGhlIGludGVydmFsIHRoYXQgY29udGFpbnMgaXRcbnRpdGxlID0gKFtkXSkgPT4ge1xuICBjb25zdCBsbyA9IE1hdGgucG93KDEwLCBNYXRoLmZsb29yKE1hdGgubG9nMTAoZCkgKiA1KSAvIDUpO1xuICBjb25zdCBoaSA9IE1hdGgucG93KDEwLCAoMSArIE1hdGguZmxvb3IoTWF0aC5sb2cxMChkKSAqIDUpKSAvIDUpO1xuICByZXR1cm4gYFske01hdGguZmxvb3IobG8pfS0ke01hdGguZmxvb3IoaGkgLSAxKX1dYDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGhyZXNoJykifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiB0aHJlc2ggPSBJbnB1dHMucmFuZ2UoXG4gIFs1LCA1MF0sIFxuICB7dmFsdWU6IDE3LCBzdGVwOiAyLCBsYWJlbDogXCJOdW1iZXIgb2YgYmluc1wifVxuKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJiaW5Cb3VuZGFyaWVzMSA9IGNhbGN1bGF0ZUxvZ0JpbnMoMC4wMDAxLCAxLjAxLCB0aHJlc2gpO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZnVuY3Rpb24gY2FsY3VsYXRlTG9nQmlucyhzdGFydCwgZW5kLCBuQmlucykge1xuICBjb25zdCBsb2dTdGFydCA9IE1hdGgubG9nMTAoc3RhcnQpO1xuICBjb25zdCBsb2dFbmQgPSBNYXRoLmxvZzEwKGVuZCk7XG4gIGNvbnN0IGJpbnMgPSBBcnJheS5mcm9tKHtsZW5ndGg6IG5CaW5zICsgMX0sIChfLCBpKSA9PiBcbiAgICBNYXRoLnBvdygxMCwgbG9nU3RhcnQgKyAobG9nRW5kIC0gbG9nU3RhcnQpICogaSAvIG5CaW5zKVxuICApO1xuICByZXR1cm4gYmlucztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG53aWR0aCxcbiAgeDogeyB0eXBlOiBcImxvZ1wiLGJhc2U6MTAsXG50cmFuc2Zvcm06IGQgPT4gTWF0aC5tYXgoLjAxLCAxMDAqZCl9LCBcbiAgeToge2dyaWQ6IHRydWV9LFxuICBjb2xvcjoge2xlZ2VuZDogdHJ1ZX0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5yZWN0WShmaWx0ZXJlZCwgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCJjZl8yMDBcIiwgZmlsbDogXCJzdGVlbGJsdWVcIiwgZmlsbE9wYWNpdHk6IDAuNSx0aHJlc2hvbGRzOiBiaW5Cb3VuZGFyaWVzMSB9KSksXG4gICAgUGxvdC5yZWN0WShmaWx0ZXJlZCwgUGxvdC5iaW5YKHt5OiBcImNvdW50XCJ9LCB7eDogXCJjZl8yMDAwXCIsIGZpbGw6IFwidG9tYXRvXCIsIGZpbGxPcGFjaXR5OiAwLjUsdGhyZXNob2xkczogYmluQm91bmRhcmllczEgfSkpLFxuICAgIFBsb3QucnVsZVkoWzBdKVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgd2lkdGgsICBcbiAgeTogeyBncmlkOiB0cnVlIH0sXG4gIGNvbG9yOiB7IGxlZ2VuZDogdHJ1ZSB9LFxuICBtYXJrczogW1xuICAgIFBsb3QuYXhpc1goeyB0aWNrczogZDMudXRjTW9udGguZXZlcnkoMykgfSksXG4gICAgUGxvdC5saW5lWShmaWx0ZXJlZCwgeyBcbiAgICAgIHg6IFwiRGF0ZVwiLCBcbiAgICAgIHk6IFwiY2ZfMjAwXCIsXG4gICAgICBzdHJva2U6IFwic3RlZWxibHVlXCIsIC8vIEN1c3RvbSBsaW5lIGNvbG9yXG4gICAgICBmaWxsT3BhY2l0eTogMC41LFxuICAgICAgc3Ryb2tlV2lkdGg6IDAuMiAvLyBUaGluIGxpbmVcbiAgICB9KSxcbiAgICBQbG90LmRvdChmaWx0ZXJlZCwge1xuICAgICAgeDogXCJEYXRlXCIsXG4gICAgICB5OiBcImNmXzIwMFwiLFxuICAgICAgZmlsbE9wYWNpdHk6IDAuNzUsXG4gICAgICBmaWxsOiBcInN0ZWVsYmx1ZVwiLFxuICAgIH0pLFxuICAgIFBsb3QubGluZVkoZmlsdGVyZWQsIHsgXG4gICAgICB4OiBcIkRhdGVcIiwgXG4gICAgICB5OiBcImNmXzIwMDBcIixcbiAgICAgIHN0cm9rZTogXCJ0b21hdG9cIiwgLy8gQ3VzdG9tIGxpbmUgY29sb3JcbiAgICAgIGZpbGxPcGFjaXR5OiAwLjUsXG4gICAgICBzdHJva2VXaWR0aDogMC4yXG4gICAgfSksXG4gICAgUGxvdC5kb3QoZmlsdGVyZWQsIHtcbiAgICAgIHg6IFwiRGF0ZVwiLFxuICAgICAgeTogXCJjZl8yMDAwXCIsXG4gICAgICBmaWxsT3BhY2l0eTogMC43NSxcbiAgICAgIGZpbGw6IFwidG9tYXRvXCJcbiAgICB9KSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IklucHV0cy50YWJsZShkYXRhKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZGF0YSA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9zdWJzZXRfZGF0YS5jc3ZcIikuY3N2KHsgdHlwZWQ6IHRydWUgfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZpbHRlcmVkID0gZGF0YS5maWx0ZXIoZnVuY3Rpb24oczIpIHtcbiAgcmV0dXJuIHMyLmNmXzIwMDAgPCAxLjE7XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gYSBicmF2ZSBmdW5jdGlvbiB0aGF0IHRha2VzIGEgc2FtcGxlIHZhbHVlIGFuZCByZXR1cm5zIHRoZSBpbnRlcnZhbCB0aGF0IGNvbnRhaW5zIGl0XG50aXRsZSA9IChbZF0pID0+IHtcbiAgY29uc3QgbG8gPSBNYXRoLnBvdygxMCwgTWF0aC5mbG9vcihNYXRoLmxvZzEwKGQpICogNSkgLyA1KTtcbiAgY29uc3QgaGkgPSBNYXRoLnBvdygxMCwgKDEgKyBNYXRoLmZsb29yKE1hdGgubG9nMTAoZCkgKiA1KSkgLyA1KTtcbiAgcmV0dXJuIGBbJHtNYXRoLmZsb29yKGxvKX0tJHtNYXRoLmZsb29yKGhpIC0gMSl9XWA7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RocmVzaCcpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -834,81 +840,88 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Plot</span></span>
 <span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="in">Plot.plot({</span></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="in">width,</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="in">  x: { type: "log",base:10,</span></span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a><span class="in">transform: d =&gt; Math.max(.01, 100*d)}, </span></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="in">  y: {grid: true},</span></span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a><span class="in">  color: {legend: true},</span></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="in">  marks: [</span></span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", fill: "steelblue", fillOpacity: 0.5,thresholds: binBoundaries1 })),</span></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_2000", fill: "tomato", fillOpacity: 0.5,thresholds: binBoundaries1 })),</span></span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.ruleY([0])</span></span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="in">Plot.plot({</span></span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a><span class="in">  width,  </span></span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="in">  y: { grid: true },</span></span>
-<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="in">  color: { legend: true },</span></span>
-<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a><span class="in">  marks: [</span></span>
-<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.axisX({ ticks: d3.utcMonth.every(3) }),</span></span>
-<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.lineY(filtered, { </span></span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
-<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_200",</span></span>
-<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "steelblue", // Custom line color</span></span>
-<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 1 // Thin line</span></span>
-<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, {</span></span>
-<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date",</span></span>
-<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_200",</span></span>
-<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="in">      fill: "steelblue",</span></span>
-<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.lineY(filtered, { </span></span>
-<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
-<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
-<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "tomato", // Custom line color</span></span>
-<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 1</span></span>
-<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, {</span></span>
-<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date",</span></span>
-<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="in">      fill: "tomato"</span></span>
-<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.ruleY([0])</span></span>
-<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
-<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a><span class="in">Inputs.table(data)</span></span>
-<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="in">data = FileAttachment("data/subset_data.csv").csv({ typed: true })</span></span>
-<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = data.filter(function(s2) {</span></span>
-<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a><span class="in">  return s2.cf_2000 &lt; 1.1;</span></span>
-<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a><span class="in">// a brave function that takes a sample value and returns the interval that contains it</span></span>
-<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a><span class="in">title = ([d]) =&gt; {</span></span>
-<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a><span class="in">  const lo = Math.pow(10, Math.floor(Math.log10(d) * 5) / 5);</span></span>
-<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a><span class="in">  const hi = Math.pow(10, (1 + Math.floor(Math.log10(d) * 5)) / 5);</span></span>
-<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a><span class="in">  return `[${Math.floor(lo)}-${Math.floor(hi - 1)}]`;</span></span>
-<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="in">Plot.plot({</span></span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a><span class="in">width,</span></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="in">  x: { type: "log",base:10,</span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a><span class="in">transform: d =&gt; Math.max(.01, 100*d)}, </span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="in">  y: {grid: true},</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="in">  color: {legend: true},</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="in">  marks: [</span></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", fill: "steelblue", fillOpacity: 0.5,thresholds: binBoundaries1 })),</span></span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_2000", fill: "tomato", fillOpacity: 0.5,thresholds: binBoundaries1 })),</span></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.ruleY([0])</span></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>Below is the corresponding time-series in the same colors.</span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="in">Plot.plot({</span></span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a><span class="in">  width,  </span></span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a><span class="in">  y: { grid: true },</span></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a><span class="in">  color: { legend: true },</span></span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a><span class="in">  marks: [</span></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.axisX({ ticks: d3.utcMonth.every(3) }),</span></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.lineY(filtered, { </span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_200",</span></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "steelblue", // Custom line color</span></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.5,</span></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 0.2 // Thin line</span></span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, {</span></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date",</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_200",</span></span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.75,</span></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a><span class="in">      fill: "steelblue",</span></span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.lineY(filtered, { </span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "tomato", // Custom line color</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.5,</span></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 0.2</span></span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, {</span></span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date",</span></span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.75,</span></span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a><span class="in">      fill: "tomato"</span></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.ruleY([0])</span></span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a><span class="in">Inputs.table(data)</span></span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a><span class="in">data = FileAttachment("data/subset_data.csv").csv({ typed: true })</span></span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = data.filter(function(s2) {</span></span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a><span class="in">  return s2.cf_2000 &lt; 1.1;</span></span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a><span class="in">// a brave function that takes a sample value and returns the interval that contains it</span></span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a><span class="in">title = ([d]) =&gt; {</span></span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a><span class="in">  const lo = Math.pow(10, Math.floor(Math.log10(d) * 5) / 5);</span></span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a><span class="in">  const hi = Math.pow(10, (1 + Math.floor(Math.log10(d) * 5)) / 5);</span></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a><span class="in">  return `[${Math.floor(lo)}-${Math.floor(hi - 1)}]`;</span></span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
