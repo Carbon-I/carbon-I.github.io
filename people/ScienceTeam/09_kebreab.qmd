@@ -10,31 +10,26 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/cfranken/
     - icon: twitter
       text: twitter
-      href: https://twitter.com/chr_fronge
+      href: https://twitter.com/ErmiasKebreab
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+      href: https://scholar.google.com/citations?hl=en&user=SwXk1rcAAAAJ 
     - icon: mortarboard
-      text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
-    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+          - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-0833-1352
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Ermias Kebreab is Professor of Sustainable Agriculture at University of California, Davis and works on reducing enteric methane emissions.
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Integrative Biology]{.fw-bold} | University of Reading, UK | 1995 -  1998
+- [BSc in Biology/Chemistry ]{.fw-bold} | University of Asmara, Eritrea  | 1983-1987  
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2009-present:]{.fw-bold} Professor, 	UC Davis 
+- [2007-2009:]{.fw-bold} 	Associate Professor/Canada Research Chair, University of Manitoba, Canada 
+- [2003-2006:]{.fw-bold} 	Adjustn Professor, University of Guelph, Canada 
+- [1998- 2002:]{.fw-bold}	Post Doctoral Fellow, University of Reading, UK\\
