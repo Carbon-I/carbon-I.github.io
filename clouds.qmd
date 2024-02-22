@@ -57,6 +57,7 @@ viewof point = {
 
 ```{ojs}
 fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
+//fileUrl = `/data/subset_data.csv`;
 ```
 
 ```{ojs}
@@ -163,7 +164,8 @@ Inputs.table(data)
 //data = FileAttachment("data/subset_data.csv").csv({ typed: true })
 //data = d3.csv("https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv")
 //print(fileUrl)
-data = d3.csv(fileUrl)
+data = d3.csv(fileUrl, d3.autoType)
+//data = FileAttachment("data/subset_data.csv").csv()
 ```
 
 ```{ojs}
