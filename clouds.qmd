@@ -56,6 +56,14 @@ viewof point = {
 ```
 
 ```{ojs}
+fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
+```
+
+```{ojs}
+fileUrl
+```
+
+```{ojs}
 //| panel: input
 viewof thresh = Inputs.range(
   [5, 50], 
@@ -106,7 +114,7 @@ Below is the corresponding time-series in the same colors.
 ```{ojs}
 Plot.plot({
   width,  
-  y: { grid: true },
+  y: { grid: true, domain: [0.0, 1.02]  },
   color: { legend: true },
   marks: [
     Plot.axisX({ ticks: d3.utcMonth.every(3) }),
@@ -147,10 +155,15 @@ Plot.plot({
 Inputs.table(data)
 ```
 
+
+
 :::
 
 ```{ojs}
-data = FileAttachment("data/subset_data.csv").csv({ typed: true })
+//data = FileAttachment("data/subset_data.csv").csv({ typed: true })
+//data = d3.csv("https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv")
+//print(fileUrl)
+data = d3.csv(fileUrl)
 ```
 
 ```{ojs}
