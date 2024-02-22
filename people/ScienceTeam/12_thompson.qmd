@@ -12,29 +12,32 @@ about:
   links:
     - icon: github
       text: Github
-      href: https://github.com/cfranken/
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/chr_fronge
+      href: https://github.com/davidraythompson/
+    - icon: linkedin
+      text: linkedin
+      href: https://www.linkedin.com/in/davidraythompson/
+    - icon: twitter-x
+      text: x
+      href: https://twitter.com/davidray
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
-    - icon: mortarboard
-      text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      href: https://scholar.google.com/citations?user=4587ffMAAAAJ&hl=en 
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0003-1100-7550
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California.  His work advances the theory and practice of imaging spectroscopy for remote sensing.
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Robotics]{.fw-bold} | Carnegie Mellon University, Pittsburgh, USA | 2003-2008
+- [MSc in Informatics]{.fw-bold} | University of Edinburgh, Scotland, UK  | 2001-2002  
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2023-present:]{.fw-bold} Deputy Project Scientist, SBG-VSWIR Imaging Spectrometer Mission
+- [2020-present:]{.fw-bold} Adjunct Professor, Arizona State University
+- [2019-present:]{.fw-bold} Instrument Scientist, HVM3 on Lunar Trailblazer
+- [2018-present:]{.fw-bold} Instrument Scientist, EMIT Imaging Spectrometer Mission
+- [2016-present:]{.fw-bold} Investigation Scientist, AVIRIS Airborne Imaging Spectrometer
+- [2016-present:]{.fw-bold} Technical Group Lead, Imaging Spectroscopy Group at Jet Propulsion Laboratory
+- [2008-present:]{.fw-bold} Research Technologist, Jet Propulsion Laboratory\\
