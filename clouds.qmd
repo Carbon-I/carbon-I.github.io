@@ -1,15 +1,26 @@
 ---
-title: "Sentinel-2 cloud statistics"
+comments: false
+page-layout: full
 format:
   html:
+    css: styles/other-background.css  
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    filters:
+        - lightbox
+    lightbox: auto
     toc: false
     echo: false
     keep-hidden: true
     code-tools: true
 ---
 
+## The impact of cloud on GHG remote sensing is strongly dependent on the footprint size. 
 
-A simple example for cloud statistics from our data in the recent GRL paper (just for one location in the Amazon):
+Here, we provide a simple interactive example for cloud statistics from our data in the recent GRL paper. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series.
 
 
 ```{ojs}
