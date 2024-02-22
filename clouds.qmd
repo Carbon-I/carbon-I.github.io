@@ -56,7 +56,7 @@ viewof point = {
 ```
 
 ```{ojs}
-fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
+fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
 ```
 
 ```{ojs}
@@ -170,15 +170,6 @@ data = d3.csv(fileUrl)
 filtered = data.filter(function(s2) {
   return s2.cf_2000 < 1.1;
 })
-```
-
-```{ojs}
-// a brave function that takes a sample value and returns the interval that contains it
-title = ([d]) => {
-  const lo = Math.pow(10, Math.floor(Math.log10(d) * 5) / 5);
-  const hi = Math.pow(10, (1 + Math.floor(Math.log10(d) * 5)) / 5);
-  return `[${Math.floor(lo)}-${Math.floor(hi - 1)}]`;
-}
 ```
 
 ```{ojs}
