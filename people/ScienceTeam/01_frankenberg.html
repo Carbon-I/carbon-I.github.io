@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -80,6 +100,35 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles/custom.css">
 <meta property="og:title" content="Christian Frankenberg">
@@ -197,7 +246,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
       <div class="about-contents"><main class="content column-page-left" id="quarto-document-content">
 
-<p>Christian Frankenberg is Professor of Environmental Sciences &amp; Engineering (ESE) at Caltech and works on the global carbon cycle.</p>
+<p>Christian Frankenberg is Professor of Environmental Sciences &amp; Engineering (ESE) at Caltech and works on the global carbon cycle. He ist he Carbon-I Principal Investigator and responsible for the quality and direction of the investigation.</p>
+<p>Dr.&nbsp;Frankenberg has two decades of experience in remote sensing of atmospheric trace gases, in particular methane <span class="citation" data-cites="frankenberg2005assessing">Christian Frankenberg, Bergamaschi, et al. (<a href="#ref-frankenberg2008tropical" role="doc-biblioref">2008</a>)</span>, carbon monoxide and carbon dioxide. Dr.&nbsp;Frankenberg’s main research focus is the global carbon cycle and how to connect models with remote sensing data, both for the atmosphere as well as the surface <span class="citation" data-cites="frankenberg2011global">Jacob et al. (<a href="#ref-jacob2022quantifying" role="doc-biblioref">2022</a>)</span>. He has developed the proxy method for accurate methane retrievals <span class="citation" data-cites="frankenberg2005assessing">(<a href="#ref-frankenberg2005assessing" role="doc-biblioref">C. Frankenberg et al. 2005</a>)</span>, improved methane spectroscopy <span class="citation" data-cites="frankenberg2008methane">Tran et al. (<a href="#ref-tran20102nu3" role="doc-biblioref">2010</a>)</span> to minimize biases in satellite data, developed solar chlorophyll fluorescence retrievals from space <span class="citation" data-cites="frankenberg2011disentangling">Christian Frankenberg et al. (<a href="#ref-frankenberg2011global" role="doc-biblioref">2011</a>)</span>, wrote the IMAP pre-processor code for OCO-2/3, organized a <a href="https://www.workshop.caltech.edu/methane/presentations.html">methane workshop</a> with global experts at Caltech and is currently leading the land surface model development in the Climate Modelling Alliance (<a href="https://www.workshop.caltech.edu/methane/presentations.html">CliMA</a>). He also c0-organized the first airborne campaigns for controlled released experiments of methane <span class="citation" data-cites="thorpe2016mapping">(<a href="#ref-thorpe2016mapping" role="doc-biblioref">Thorpe et al. 2016</a>)</span> as well as the first wide-area coverage investigation in the Four Corners area <span class="citation" data-cites="frankenberg2016airborne">(<a href="#ref-frankenberg2016airborne" role="doc-biblioref">Christian Frankenberg et al. 2016</a>)</span>.</p>
 <section id="education" class="level2">
 <h2 data-anchor-id="education">Education</h2>
 <ul>
@@ -215,8 +265,67 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </ul>
 
 
+
 </section>
-</main></div>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-frankenberg2011disentangling" class="csl-entry" role="listitem">
+Frankenberg, C, A Butz, and GC Toon. 2011. <span>“Disentangling Chlorophyll Fluorescence from Atmospheric Scattering Effects in O2 a-Band Spectra of Reflected Sun-Light.”</span> <em>Geophysical Research Letters</em> 38 (3). <a href="https://doi.org/10.1029/2010gl045896">https://doi.org/10.1029/2010gl045896</a>.
+</div>
+<div id="ref-frankenberg2011global" class="csl-entry" role="listitem">
+Frankenberg, Christian, IPBJDE Aben, P Bergamaschi, EJ Dlugokencky, R Van Hees, S Houweling, P Van Der Meer, R Snel, and P Tol. 2011. <span>“Global Column-Averaged Methane Mixing Ratios from 2003 to 2009 as Derived from SCIAMACHY: Trends and Variability.”</span> <em>Journal of Geophysical Research: Atmospheres</em> 116 (D4). <a href="https://doi.org/10.1029/2010jd014849">https://doi.org/10.1029/2010jd014849</a>.
+</div>
+<div id="ref-frankenberg2008tropical" class="csl-entry" role="listitem">
+Frankenberg, Christian, Peter Bergamaschi, André Butz, Sander Houweling, Jan Fokke Meirink, Justus Notholt, Anna Katinka Petersen, Hans Schrijver, Thorsten Warneke, and Ilse Aben. 2008. <span>“Tropical Methane Emissions: A Revised View from SCIAMACHY Onboard ENVISAT.”</span> <em>Geophysical Research Letters</em> 35 (15). <a href="https://doi.org/10.1029/2008gl034300">https://doi.org/10.1029/2008gl034300</a>.
+</div>
+<div id="ref-frankenberg2018chlorophyll" class="csl-entry" role="listitem">
+Frankenberg, Christian, Philipp Köhler, Troy S Magney, Sven Geier, Peter Lawson, Mark Schwochert, James McDuffie, Darren T Drewry, Ryan Pavlick, and Andreas Kuhnert. 2018. <span>“The Chlorophyll Fluorescence Imaging Spectrometer (CFIS), Mapping Far Red Fluorescence from Aircraft.”</span> <em>Remote Sensing of Environment</em> 217: 523–36. <a href="https://doi.org/10.1016/j.rse.2018.08.032">https://doi.org/10.1016/j.rse.2018.08.032</a>.
+</div>
+<div id="ref-frankenberg2016airborne" class="csl-entry" role="listitem">
+Frankenberg, Christian, Andrew K Thorpe, David R Thompson, Glynn Hulley, Eric Adam Kort, Nick Vance, Jakob Borchardt, et al. 2016. <span>“Airborne Methane Remote Measurements Reveal Heavy-Tail Flux Distribution in Four Corners Region.”</span> <em>Proceedings of the National Academy of Sciences</em> 113 (35): 9734–39. <a href="https://doi.org/10.1073/pnas.1605617113">https://doi.org/10.1073/pnas.1605617113</a>.
+</div>
+<div id="ref-frankenberg2008methane" class="csl-entry" role="listitem">
+Frankenberg, Christian, T Warneke, A Butz, I Aben, F Hase, P Spietz, and LR Brown. 2008. <span>“Methane Spectroscopy in the Near Infrared and Its Implication on Atmospheric Retrievals.”</span> <em>Atmospheric Chemistry and Physics Discussions</em> 8 (3): 10021–55. <a href="https://doi.org/10.5194/acp-8-5061-2008">https://doi.org/10.5194/acp-8-5061-2008</a>.
+</div>
+<div id="ref-frankenberg2005assessing" class="csl-entry" role="listitem">
+Frankenberg, C, JF Meirink, Michael van Weele, U Platt, and T Wagner. 2005. <span>“Assessing Methane Emissions from Global Space-Borne Observations.”</span> <em>Science</em> 308 (5724): 1010–14. <a href="https://doi.org/10.1126/science.1106644">https://doi.org/10.1126/science.1106644</a>.
+</div>
+<div id="ref-frankenberg2012chlorophyll" class="csl-entry" role="listitem">
+Frankenberg, C, C O’Dell, L Guanter, and J McDuffie. 2012. <span>“Chlorophyll Fluorescence Remote Sensing from Space in Scattering Atmospheres: Implications for Its Retrieval and Interferences with Atmospheric CO2 Retrievals.”</span> <a href="https://doi.org/10.5194/amt-5-2081-2012">https://doi.org/10.5194/amt-5-2081-2012</a>.
+</div>
+<div id="ref-frankenberg2014orbiting" class="csl-entry" role="listitem">
+Frankenberg, C, R Pollock, RAM Lee, R Rosenberg, JF Blavier, D Crisp, CW O’Dell, et al. 2014. <span>“The Orbiting Carbon Observatory (OCO-2): Spectrometer Performance Evaluation Using Pre-Launch Direct Sun Measurements.”</span> <em>Atmospheric Measurement Techniques Discussions</em> 7 (7). <a href="https://doi.org/10.5194/amt-8-301-2015">https://doi.org/10.5194/amt-8-301-2015</a>.
+</div>
+<div id="ref-hayashida2013methane" class="csl-entry" role="listitem">
+Hayashida, S, A Ono, S Yoshizaki, C Frankenberg, W Takeuchi, and X Yan. 2013. <span>“Methane Concentrations over Monsoon Asia as Observed by SCIAMACHY: Signals of Methane Emission from Rice Cultivation.”</span> <em>Remote Sensing of Environment</em> 139: 246–56. <a href="https://doi.org/10.1016/j.rse.2013.08.008">https://doi.org/10.1016/j.rse.2013.08.008</a>.
+</div>
+<div id="ref-he2020ground" class="csl-entry" role="listitem">
+He, Liyin, Troy Magney, Debsunder Dutta, Yi Yin, Philipp Köhler, Katja Grossmann, Jochen Stutz, et al. 2020. <span>“From the Ground to Space: Using Solar-Induced Chlorophyll Fluorescence to Estimate Crop Productivity.”</span> <em>Geophysical Research Letters</em> 47 (7): e2020GL087474. <a href="https://doi.org/10.1029/2020gl087474">https://doi.org/10.1029/2020gl087474</a>.
+</div>
+<div id="ref-he2023weekly" class="csl-entry" role="listitem">
+He, Liyin, Lorenzo Rosa, David B Lobell, Yuan Wang, Yi Yin, Russell Doughty, Yitong Yao, Joseph A Berry, and Christian Frankenberg. 2023. <span>“The Weekly Cycle of Photosynthesis in Europe Reveals the Negative Impact of Particulate Pollution on Ecosystem Productivity.”</span> <em>Proceedings of the National Academy of Sciences</em> 120 (49): e2306507120. <a href="https://doi.org/10.1073/pnas.2306507120">https://doi.org/10.1073/pnas.2306507120</a>.
+</div>
+<div id="ref-he2019atmospheric" class="csl-entry" role="listitem">
+He, Liyin, Zhao-Cheng Zeng, Thomas J Pongetti, Clare Wong, Jianming Liang, Kevin R Gurney, Sally Newman, et al. 2019. <span>“Atmospheric Methane Emissions Correlate with Natural Gas Consumption from Residential and Commercial Sectors in Los Angeles.”</span> <em>Geophysical Research Letters</em> 46 (14): 8563–71. <a href="https://doi.org/10.1029/2019gl083400">https://doi.org/10.1029/2019gl083400</a>.
+</div>
+<div id="ref-houweling2014multi" class="csl-entry" role="listitem">
+Houweling, Sander, M Krol, Peter Bergamaschi, Christian Frankenberg, EJ Dlugokencky, I Morino, Justus Notholt, et al. 2014. <span>“A Multi-Year Methane Inversion Using SCIAMACHY, Accounting for Systematic Errors Using TCCON Measurements.”</span> <em>Atmospheric Chemistry and Physics</em> 14 (8): 3991–4012. <a href="https://doi.org/10.5194/acp-14-3991-2014">https://doi.org/10.5194/acp-14-3991-2014</a>.
+</div>
+<div id="ref-humphrey2021soil" class="csl-entry" role="listitem">
+Humphrey, Vincent, Alexis Berg, Philippe Ciais, Pierre Gentine, Martin Jung, Markus Reichstein, Sonia I Seneviratne, and Christian Frankenberg. 2021. <span>“Soil Moisture–Atmosphere Feedback Dominates Land Carbon Uptake Variability.”</span> <em>Nature</em> 592 (7852): 65–69. <a href="https://doi.org/10.1038/s41586-021-03325-5">https://doi.org/10.1038/s41586-021-03325-5</a>.
+</div>
+<div id="ref-irakulis2021satellite" class="csl-entry" role="listitem">
+Irakulis-Loitxate, Itziar, Luis Guanter, Yin-Nian Liu, Daniel J Varon, Joannes D Maasakkers, Yuzhong Zhang, Apisada Chulakadabba, et al. 2021. <span>“Satellite-Based Survey of Extreme Methane Emissions in the Permian Basin.”</span> <em>Science Advances</em> 7 (27): eabf4507. <a href="https://doi.org/10.31223/x5k661">https://doi.org/10.31223/x5k661</a>.
+</div>
+<div id="ref-jacob2022quantifying" class="csl-entry" role="listitem">
+Jacob, Daniel J, Daniel J Varon, Daniel H Cusworth, Philip E Dennison, Christian Frankenberg, Ritesh Gautam, Luis Guanter, et al. 2022. <span>“Quantifying Methane Emissions from the Global Scale down to Point Sources Using Satellite Observations of Atmospheric Methane.”</span> <em>Atmospheric Chemistry and Physics</em> 22 (14): 9617–46. <a href="https://doi.org/10.5194/acp-22-9617-2022">https://doi.org/10.5194/acp-22-9617-2022</a>.
+</div>
+<div id="ref-thorpe2016mapping" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Christian Frankenberg, AD Aubrey, DA Roberts, AA Nottrott, TA Rahn, JA Sauer, et al. 2016. <span>“Mapping Methane Concentrations from a Controlled Release Experiment Using the Next Generation Airborne Visible/Infrared Imaging Spectrometer (AVIRIS-NG).”</span> <em>Remote Sensing of Environment</em> 179: 104–15. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>.
+</div>
+<div id="ref-tran20102nu3" class="csl-entry" role="listitem">
+Tran, H, J-M Hartmann, G Toon, LR Brown, C Frankenberg, T Warneke, P Spietz, and F Hase. 2010. <span>“The 2<span class="math inline">\(\nu\)</span>3 Band of CH4 Revisited with Line Mixing: Consequences for Spectroscopy and Atmospheric Retrievals at 1.67 <span class="math inline">\(\mu\)</span>m.”</span> <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em> 111 (10): 1344–56. <a href="https://doi.org/10.1016/j.jqsrt.2010.02.015">https://doi.org/10.1016/j.jqsrt.2010.02.015</a>.
+</div>
+</div></section></div></main></div>
     </div>
     <img src="/img/people/frankenberg.png" class="about-image
   round " style="height: 15em; width: 15em;">
