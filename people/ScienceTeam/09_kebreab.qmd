@@ -15,8 +15,7 @@ about:
       href: https://twitter.com/ErmiasKebreab
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?hl=en&user=SwXk1rcAAAAJ 
-    - icon: mortarboard
-          - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0833-1352
 ---
 
