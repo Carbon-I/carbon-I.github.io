@@ -3,38 +3,32 @@ title: "Anna Michalak"
 started: "2015"
 image: /img/people/michalak.jpg
 subtitle: "Deputy Principal Investigator -- Science"
-description: "Carnegie/Stanford"
 sortby: "2"
 about:
   id: hero-heading
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/cfranken/
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/chr_fronge
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+      href: https://https://scholar.google.com/citations?user=NDg0XsIAAAAJ&hl=en
     - icon: mortarboard
       text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      href: https://www.webofscience.com/wos/author/record/KBA-4622-2024
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0002-6152-7979
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality.
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Civil and Environmental Engineering]{.fw-bold} | Stanford University | 2003
+- [MS in Civil and Environmental Engineering]{.fw-bold} | Stanford University | 1998
+- [BSc(Eng) in Environmental Engineering]{.fw-bold} | University of Guelph, Canada  | 1997  
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2011-present:]{.fw-bold} 	Faculty member and Director, 	Carnegie Institution for Science 
+- [2011-present:]{.fw-bold} 	Professor (2016 - ) and Associate Professor (2011-2016), Stanford 
+- [2004-2011:]{.fw-bold} 	Associate Professor (2010-2011) and Assistant Professor (2004-2010), University of Michigan 
+- [2003- 2004:]{.fw-bold}	NOAA Climate & Global Change (C&GC) Fellow, NOAA\\
