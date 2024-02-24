@@ -12,29 +12,24 @@ about:
   links:
     - icon: github
       text: Github
-      href: https://github.com/cfranken/
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/chr_fronge
-    - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+      href: https://github.com/djxjacob/
     - icon: mortarboard
-      text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      text: website
+      href: https://acmg.seas.harvard.edu
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0002-6373-3100 
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Daniel Jacob is the Vasco McCoy Family Professor of Atmospheric Chemistry and Environmental Engineering at Harvard and works on interpretation of satellite observations of atmospheric composition.
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Environmental Engineering]{.fw-bold} | Caltech | 1980 - 1985
+- [Ingenieur Chimiste]{.fw-bold} | ESPCI Paris  | 1977-1980  
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [1994-present:]{.fw-bold} Professor, 	Harvard
+- [1992-1994:]{.fw-bold} 	Associate Professor, 	Harvard 
+- [1987-1992:]{.fw-bold} 	Assistant Professor, 	Harvard 
+- [1985- 1987:]{.fw-bold}	Postdoctoral Fellow, Harvard\\
