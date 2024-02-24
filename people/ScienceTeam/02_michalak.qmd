@@ -3,6 +3,7 @@ title: "Anna Michalak"
 started: "2015"
 image: /img/people/michalak.jpg
 subtitle: "Deputy Principal Investigator -- Science"
+description: "Carnegie Institution for Science / Stanford"
 sortby: "2"
 about:
   id: hero-heading
