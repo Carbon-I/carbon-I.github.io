@@ -22,10 +22,14 @@ about:
       href: https://orcid.org/my-orcid?orcid=0000-0003-4750-4997
 ---
 Yi Yin is an Associate Professor of Environmental Studies at New York University and works on the global carbon cycle and impacts of climate extremes.
+
 ## Education
+
 - [PhD in Ecology]{.fw-bold} | Peking University, China | 2012
 - [BS in Physical Geography]{.fw-bold} | Beijing Normal University, China  | 2006  
+
 ## Professional Experience
+
 - [2023-present:]{.fw-bold}     Associate Professor,    New York University
 - [2017-2023:]{.fw-bold}    Research Scientist,     California Institute of Technology 
 - [2016-2017:]{.fw-bold}    NASA NPP Postdoc,   Jet PL 
