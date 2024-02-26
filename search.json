@@ -228,7 +228,7 @@
     "href": "people/ScienceTeam/12_thompson.html",
     "title": "David Thompson",
     "section": "",
-    "text": "David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing."
+    "text": "David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing. David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso]. He is currently the Instrument Scientist for NASA’s EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration. In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit]. David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT."
   },
   {
     "objectID": "people/ScienceTeam/12_thompson.html#education",
