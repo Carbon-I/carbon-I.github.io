@@ -84,6 +84,7 @@ yMin = d3.min(filtered, d => d.average); // Get the minimum value of the 'averag
 
 ```{ojs}
 Plot.plot({
+    width,
   y: {
     grid: true,
     domain: [yMin, d3.max(filtered, d => d.average)] // Set the y-axis domain
@@ -94,7 +95,7 @@ Plot.plot({
       x: "Date", 
       y: "average",
       title: (d) =>
-        `${formatDate(d.Date)} \n Average CH4: ${d.average}ppb`, // \n makes a new line
+        `${formatDate(d.Date)} \n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \n makes a new line
     })
   ]
 })
