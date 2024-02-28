@@ -12,29 +12,38 @@ about:
   links:
     - icon: github
       text: Github
-      href: https://github.com/cfranken/
+      href: https://github.com/PaulWennberg/
     - icon: twitter
       text: twitter
-      href: https://twitter.com/chr_fronge
+      href: https://twitter.com/PaulOWennberg
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+      href: https://scholar.google.com/citations?user=4ICfOZgAAAAJ&hl=en
     - icon: mortarboard
       text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      href: https://www.webofscience.com/wos/author/record/A-5460-2012
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0002-6126-3854
 ---
-
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+  
+Paul Wennberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on atmospheric chemistry and the global carbon cycle.
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Chemistry]{.fw-bold} | Harvard University | 1994
+- [BA in Chemistry ]{.fw-bold} | Oberlin College  | 1985
 
 ## Professional Experience
+2016 – 2017	Visiting Professor, Department of Chemistry, Copenhagen University, Denmark
+2016 – 2023	Division Executive Council, Engineering and Applied Science, Caltech
+2014 – 2023	Director, The Linde Center for Global Environmental Science, Caltech
+2012 –	2023	Executive Officer for Environmental Science and Engineering
+2008 – 2011	Director, The Linde Center for Global Environmental Science, Caltech 
+2005	Visiting Professor, Department of Chemistry, University of Otago, New Zealand
+2005 – 2006	Secretary of the Atmospheric Sciences Section, American Geophysical Union
+2004 –	R. Stanton Avery Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
+2001 – 2004	Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
+1998 – 2001	Associate Professor of Atmospheric Chemistry and Environmental Engineering Science, California Institute of Technology
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2004-present:]{.fw-bold} 	R. Stanton Avery Professor, Caltech 
+- [2001 – 2004:]{.fw-bold} 	Associate Professor, Caltech
+- [1998 – 2001:]{.fw-bold}	Associate Professor, Caltech\\
