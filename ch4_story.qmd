@@ -1,0 +1,109 @@
+---
+comments: false
+page-layout: full
+format:
+  html:
+    css: styles/other-background.css  
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    toc: false
+    echo: false
+    keep-hidden: true
+    code-tools: true
+---
+
+## CH<sub>4</sub> data from NOAA
+
+Read and plot a CSV of NOAA's Monthly [CH<sub>4</sub> concentration data](https://gml.noaa.gov/ccgg/trends_ch4/), globally averaged per month:
+
+```{ojs}
+fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');
+//fileUrl = `/data/subset_data.csv`;
+```
+
+```{ojs}
+csvText = d3.text(fileUrl)
+```
+
+```{ojs}
+processedData = {
+  const lines = csvText.split('\n').filter(line => line.trim().length > 0 && !line.startsWith('#'));
+  return d3.csvParse(lines.join('\n'),d3.autoType);
+}
+```
+
+```{ojs}
+processedData2 = processedData.map(d => ({
+  ...d,
+  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date
+}));
+```
+
+```{ojs}
+start = new Date(1980, 0)
+end   = new Date(2024,0)
+```
+
+```{ojs}
+viewof slider = rangeSlider({
+  min: 0,
+  max: d3.timeDay.count(start, end),
+  step: 1,
+  format: d => formatDate(d3.timeDay.offset(start, d)),
+  title: 'Pick a date range',
+})
+```
+
+```{ojs}
+startDate = d3.timeDay.offset(start, slider[0])
+stopDate  = d3.timeDay.offset(start, slider[1]) 
+```
+
+```{ojs}
+filtered = processedData2.filter(function(s2) {
+  return s2.Date >= startDate && s2.Date <= stopDate;
+})
+```
+
+```{ojs}
+import { rangeSlider as rangeSlider } from '@mootari/range-slider'
+```
+
+```{ojs}
+formatDate = d3.timeFormat("%Y-%m-%d")
+```
+
+```{ojs}
+// Assuming 'filtered' is your dataset
+yMin = d3.min(filtered, d => d.average); // Get the minimum value of the 'average' field
+```
+
+
+```{ojs}
+Plot.plot({
+  y: {
+    grid: true,
+    domain: [yMin, d3.max(filtered, d => d.average)] // Set the y-axis domain
+  },
+  color: { legend: true },
+  marks: [
+    Plot.lineY(filtered, { 
+      x: "Date", 
+      y: "average",
+      stroke: "steelblue", // Custom line color
+      fillOpacity: 0.9,
+      strokeWidth: 1.2 // Thin line
+    }),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+
+
+
+
+
