@@ -125,6 +125,8 @@ function calculateLogBins(start, end, nBins) {
 
 ## Plot
 
+
+
 Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)
 
 ```{ojs}
@@ -146,7 +148,7 @@ Below is the corresponding time-series in the same colors.
 ```{ojs}
 Plot.plot({
   width,  
-  y: { grid: true, domain: [0.0, 1.02]  },
+  y: { grid: true },
   color: { legend: true },
   marks: [
     Plot.axisX({ ticks: d3.utcMonth.every(3) }),
