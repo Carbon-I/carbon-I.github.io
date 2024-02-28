@@ -90,19 +90,19 @@ Plot.plot({
   },
   color: { legend: true },
   marks: [
-    Plot.lineY(filtered, { 
+    Plot.line(filtered, { 
       x: "Date", 
       y: "average",
-      stroke: "steelblue", // Custom line color
-      fillOpacity: 0.9,
-      strokeWidth: 1.2 // Thin line
-    }),
-    Plot.ruleY([0])
+      title: (d) =>
+        `${formatDate(d.Date)} \n Average CH4: ${d.average}ppb`, // \n makes a new line
+    })
   ]
 })
 ```
 
-
+```{ojs}
+import {Plot} from "@mkfreeman/plot-tooltip"
+```
 
 
 
