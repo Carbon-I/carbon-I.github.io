@@ -9,9 +9,6 @@ format:
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-    filters:
-        - lightbox
-    lightbox: auto
     toc: false
     echo: false
     keep-hidden: true
@@ -66,6 +63,8 @@ viewof point = {
 }
 ```
 
+
+
 ```{ojs}
 fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
 //fileUrl = `/data/subset_data.csv`;
@@ -73,6 +72,27 @@ fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Ma
 
 ```{ojs}
 fileUrl
+```
+
+
+
+```{ojs}
+start = new Date(2018, 0)
+end   = new Date(2022,0)
+```
+
+```{ojs}
+viewof slider = rangeSlider({
+  min: 0,
+  max: d3.timeDay.count(start, end),
+  step: 1,
+  format: d => formatDate(d3.timeDay.offset(start, d)),
+  title: 'Pick a date range',
+})
+```
+
+```{ojs}
+formatDate = d3.timeFormat("%Y-%m-%d")
 ```
 
 ```{ojs}
@@ -180,8 +200,13 @@ data = d3.csv(fileUrl, d3.autoType)
 ```
 
 ```{ojs}
+startDate = d3.timeDay.offset(start, slider[0])
+stopDate  = d3.timeDay.offset(start, slider[1]) 
+```
+
+```{ojs}
 filtered = data.filter(function(s2) {
-  return s2.cf_2000 < 1.1;
+  return s2.Date >= startDate && s2.Date <= stopDate;
 })
 ```
 
@@ -203,4 +228,8 @@ world = FileAttachment("data/land-50m.json").json()
 
 ```{ojs}
 topojson = require("topojson-client@3")
+```
+
+```{ojs}
+import { rangeSlider as rangeSlider } from '@mootari/range-slider'
 ```
