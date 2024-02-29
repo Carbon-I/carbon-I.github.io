@@ -10,8 +10,8 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
+    ##- icon: github
+    ##text: Github
       href: https://github.com/cfranken/
     - icon: twitter
       text: twitter
