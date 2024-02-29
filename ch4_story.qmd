@@ -87,9 +87,11 @@ Plot.plot({
     width,
   y: {
     grid: true,
+    label: "CH₄ (ppb)",
     domain: [yMin, d3.max(filtered, d => d.average)] // Set the y-axis domain
   },
   color: { legend: true },
+  style: { fontSize: "12px",},
   marks: [
     Plot.line(filtered, { 
       x: "Date", 
