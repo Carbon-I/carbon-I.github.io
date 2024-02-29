@@ -1,0 +1,39 @@
+---
+title: "Hartmut Boesch"
+started: "2015"
+image: /img/people/hboesch_photo.jpg
+subtitle: "Science Team"
+description: "University of Bremen"
+sortby: "1"
+
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/HartmutBoesch
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=u3gBe5sAAAAJ&hl=en 
+    - icon: mortarboard
+      text: ResearchID
+      href: https://www.webofscience.com/wos/author/record/G-6021-2012
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0003-3944-9879
+---
+
+Hartmut Boesch is Professor of Atmospheric Remote Sensing at the University of Bremen in Germany and works on remote sensing methods of atmospheric composition with a focus in greenhouse gases CO2 and CH4.
+
+
+## Education
+
+- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002
+- [Diploma in Physics and Astronomy ]{.fw-bold} | University of Heidelberg, Germany  | 1998  
+
+## Professional Experience
+
+- [2022-present:]{.fw-bold} Professor, 	University of Bremen, Germany 
+- [2007-2022:]{.fw-bold} 	Professor (2017-2022), Reader (2013-2017), Lecturer (2012-2013), Research Fellow (2007-2012), University of Leicester, UK
+- [2003-2007:]{.fw-bold} 	Postdoc (2003-2005), Scientist (2006-2007), 	Earth Atmospheric Science, JPL, USA 
+- [2002- 2003:]{.fw-bold}	Postodc, University of Heidelberg, Germany\\

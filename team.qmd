@@ -16,6 +16,14 @@ listing:
     fields: [image, title, subtitle, description]
     grid-item-align: left
     sort: sortby
+  - id: international-team
+    contents: "people/International/*.qmd"
+    type: grid
+    image-height: 150px
+    grid-columns: 6
+    fields: [image, title, description]
+    grid-item-align: left
+    sort: sortby
  
   
 ---
@@ -30,6 +38,11 @@ The Carbon-I team includes experts in the global carbon cycle, remote sensing, f
 
 
 :::{#science-team}
+:::
+
+## International Partners
+
+:::{#international-team}
 :::
 
 
