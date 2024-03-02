@@ -17,7 +17,9 @@ format:
 
 ## The impact of cloud on GHG remote sensing is strongly dependent on the footprint size. 
 
-Here, we provide a simple interactive example for cloud statistics from our data in the recent GRL paper. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series.
+In **Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing**, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions [Pre-print](https://doi.org/10.22541/essoar.170923255.57545328/v1we). 
+
+Here, we provide a simple interactive example for cloud statistics from our data in the manuscript under review. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series. Note that the coverage is not fully global due to the computation demand of computing these likelihoods from 10m Sentinel-2 data.
 
 
 ```{ojs}
@@ -71,7 +73,7 @@ fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Ma
 ```
 
 ```{ojs}
-fileUrl
+`You picked: Latitude: ${Math.round(point[1])}, Longitude: ${Math.round(point[0])}`
 ```
 
 
@@ -125,8 +127,6 @@ function calculateLogBins(start, end, nBins) {
 
 ## Plot
 
-
-
 Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)
 
 ```{ojs}
@@ -135,6 +135,7 @@ width,
   x: { type: "log",base:10,
 transform: d => Math.max(.01, 100*d)}, 
   y: {grid: true},
+  style: { fontSize: "12px",},
   color: {legend: true},
   marks: [
     Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", fill: "steelblue", fillOpacity: 0.5,thresholds: binBoundaries1 })),
@@ -144,12 +145,16 @@ transform: d => Math.max(.01, 100*d)},
 })
 ```
 
-Below is the corresponding time-series in the same colors.
+Below is the corresponding time-series in the same colors (You can hover over the data to get exact values at each time-step). You can find that there are extended times in the humid tropics, where larger pixels hamper data collection, specifically in the wet season. Try out regions in the Amazon or Indonesia, for example. Outside the humid tropics, the differences are far less severe, as large-scale cloud cover without gaps can persist, and so do larger areas without clouds. Thus, in many areas, footprints larger than 2km can be perfectly fine (e.g. with TROPOMI). 
+
+However, if you want to improve understanding in the humid tropics, fine spatial resolution is key!
 ```{ojs}
 Plot.plot({
   width,  
-  y: { grid: true, label: "Likelihood of cloud free pixel", },
+  y: { grid: true, label: "Likelihood of cloud free pixel",domain:[0,1.099] },
   color: { legend: true },
+  style: { fontSize: "12px",},
+  marginBottom: 37,
   marks: [
     Plot.axisX({ ticks: d3.utcMonth.every(3) }),
     Plot.lineY(filtered, { 
@@ -157,14 +162,16 @@ Plot.plot({
       y: "cf_200",
       stroke: "steelblue", // Custom line color
       fillOpacity: 0.75,
-      strokeWidth: 0.8 // Thin line
+      marker: "circle",
+      strokeWidth: 1.2 // Thin line
     }),
     Plot.lineY(filtered, { 
       x: "Date", 
       y: "cf_2000",
       stroke: "tomato", // Custom line color
       fillOpacity: 0.75,
-      strokeWidth: 0.8
+      marker: "circle",
+      strokeWidth: 1.5
     }),
     //Plot.ruleX(filtered, Plot.pointerX({x: "Date", py: "cf_2000", stroke: "black",fillOpacity: 0.75,strokeWidth: 0.8 })),
     Plot.dot(filtered, Plot.pointerX({x: "Date", y: "cf_200", stroke: "blue"})),
@@ -174,14 +181,6 @@ Plot.plot({
   ]
 })
 ```
-
-## Data
-
-```{ojs}
-Inputs.table(data)
-```
-
-
 
 :::
 

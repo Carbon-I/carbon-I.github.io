@@ -1,9 +1,9 @@
 ---
 comments: false
 page-layout: full
+bibliography: publications/cfranken2024_doi.bib
 format:
   html:
-    css: styles/other-background.css  
     margin-top: 0em
     margin-bottom: 0em
     minimal: true
@@ -15,9 +15,15 @@ format:
     code-tools: true
 ---
 
+## What is going on with methane?
+
+Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use [@turner2019interpreting; @saunois2017variability].
+The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks [@Zhang_2023] and anthropogenic sources [@Jackson_2020].
+
 ## CH<sub>4</sub> data from NOAA
 
-Read and plot a CSV of NOAA's Monthly [CH<sub>4</sub> concentration data](https://gml.noaa.gov/ccgg/trends_ch4/), globally averaged per month:
+Ground based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from  
+NOAA's Monthly [CH<sub>4</sub> concentration data](https://gml.noaa.gov/ccgg/trends_ch4/), globally averaged per month:
 
 ```{ojs}
 fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');
