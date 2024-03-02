@@ -17,6 +17,12 @@
   color: #FF6C0C;
 }
 
+.navbar-list li:hover .dropdown {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
 
 .navbar a:hover, .navbar a:active {
   color: black !important;
