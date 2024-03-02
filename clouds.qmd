@@ -148,7 +148,7 @@ Below is the corresponding time-series in the same colors.
 ```{ojs}
 Plot.plot({
   width,  
-  y: { grid: true },
+  y: { grid: true, label: "Likelihood of cloud free pixel", },
   color: { legend: true },
   marks: [
     Plot.axisX({ ticks: d3.utcMonth.every(3) }),
@@ -156,32 +156,20 @@ Plot.plot({
       x: "Date", 
       y: "cf_200",
       stroke: "steelblue", // Custom line color
-      fillOpacity: 0.5,
-      strokeWidth: 0.2 // Thin line
-    }),
-    Plot.dot(filtered, {
-      x: "Date",
-      y: "cf_200",
       fillOpacity: 0.75,
-      fill: "steelblue",
-      title: (d) =>
-        `${formatDate(d.Date)} \n Cloud Free Fraction:\n 2000m: ${d.cf_2000} \n 200m: ${d.cf_200}`, // \n makes a new 
+      strokeWidth: 0.8 // Thin line
     }),
     Plot.lineY(filtered, { 
       x: "Date", 
       y: "cf_2000",
       stroke: "tomato", // Custom line color
-      fillOpacity: 0.5,
-      strokeWidth: 0.2
-    }),
-    Plot.dot(filtered, {
-      x: "Date",
-      y: "cf_2000",
-      title: (d) =>
-        `${formatDate(d.Date)} \n Cloud Free Fraction:\n 2000m: ${d.cf_2000} \n 200m: ${d.cf_200}`, // \n makes a new 
       fillOpacity: 0.75,
-      fill: "tomato"
+      strokeWidth: 0.8
     }),
+    //Plot.ruleX(filtered, Plot.pointerX({x: "Date", py: "cf_2000", stroke: "black",fillOpacity: 0.75,strokeWidth: 0.8 })),
+    Plot.dot(filtered, Plot.pointerX({x: "Date", y: "cf_200", stroke: "blue"})),
+    Plot.dot(filtered, Plot.pointerX({x: "Date", y: "cf_2000", stroke: "red"})),
+    Plot.text(filtered, Plot.pointerX({px: "Date", py: "cf_2000", dy: +0.15, frameAnchor: "top-left", fontVariant: "tabular-nums", text: (d) => [`Date ${Plot.formatIsoDate(d.Date)}`, `200m ${d.cf_200?.toFixed(4)}`, `2000m ${d.cf_2000?.toFixed(4)}`].join("   ")})),
     Plot.ruleY([0])
   ]
 })

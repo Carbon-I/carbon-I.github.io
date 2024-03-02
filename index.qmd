@@ -9,9 +9,7 @@ format:
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-    filters:
-        - lightbox
-    lightbox: auto
+
 ---
 # DISCLAIMER: **This is work in progress, no official website yet**
 ## The Carbon Investigation  
