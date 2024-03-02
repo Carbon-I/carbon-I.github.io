@@ -20,8 +20,12 @@ website:
         text: Science
       - href: publications.qmd
         text: Publications
-      - href: clouds.qmd
-        text: Clouds
+      - text: Visual Stories
+        menu:
+          - text: CH4 
+            href:  ch4_story.qmd
+          - href: clouds.qmd
+            text: Clouds
     right:
       - icon: github
         href: https://github.com/Carbon-I/
