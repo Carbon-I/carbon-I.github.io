@@ -346,7 +346,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <div class="cell">
 <div class="sourceCode cell-code hidden" id="cb11" data-startfrom="148" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 147;"><span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span>  </span>
-<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Likelihood of cloud free pixel"</span><span class="op">,</span> }<span class="op">,</span></span>
 <span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> { <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
 <span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
 <span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">axisX</span>({ <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="at">utcMonth</span><span class="op">.</span><span class="fu">every</span>(<span class="dv">3</span>) })<span class="op">,</span></span>
@@ -354,35 +354,23 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
 <span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span></span>
 <span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
-<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.2</span> <span class="co">// Thin line</span></span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.75</span><span class="op">,</span></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.8</span> <span class="co">// Thin line</span></span>
 <span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {</span>
-<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span></span>
-<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span></span>
-<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.75</span><span class="op">,</span></span>
-<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span></span>
-<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a>      <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span></span>
-<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span><span class="sc">${</span><span class="fu">formatDate</span>(d<span class="op">.</span><span class="at">Date</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> Cloud Free Fraction:</span><span class="sc">\n</span><span class="vs"> 2000m: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">cf_2000</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> 200m: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">cf_200</span><span class="sc">}</span><span class="vs">`</span><span class="op">,</span> <span class="co">// \n makes a new </span></span>
-<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(filtered<span class="op">,</span> { </span>
-<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
-<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
-<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"tomato"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
-<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.2</span></span>
-<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {</span>
-<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span></span>
-<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
-<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a>      <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span></span>
-<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span><span class="sc">${</span><span class="fu">formatDate</span>(d<span class="op">.</span><span class="at">Date</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> Cloud Free Fraction:</span><span class="sc">\n</span><span class="vs"> 2000m: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">cf_2000</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> 200m: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">cf_200</span><span class="sc">}</span><span class="vs">`</span><span class="op">,</span> <span class="co">// \n makes a new </span></span>
-<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.75</span><span class="op">,</span></span>
-<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"tomato"</span></span>
-<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
-<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(filtered<span class="op">,</span> { </span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> </span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span></span>
+<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"tomato"</span><span class="op">,</span> <span class="co">// Custom line color</span></span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.75</span><span class="op">,</span></span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">0.8</span></span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Plot.ruleX(filtered, Plot.pointerX({x: "Date", py: "cf_2000", stroke: "black",fillOpacity: 0.75,strokeWidth: 0.8 })),</span></span>
+<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_200"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"blue"</span>}))<span class="op">,</span></span>
+<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"red"</span>}))<span class="op">,</span></span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(filtered<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({<span class="dt">px</span><span class="op">:</span> <span class="st">"Date"</span><span class="op">,</span> <span class="dt">py</span><span class="op">:</span> <span class="st">"cf_2000"</span><span class="op">,</span> <span class="dt">dy</span><span class="op">:</span> <span class="op">+</span><span class="fl">0.15</span><span class="op">,</span> <span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-left"</span><span class="op">,</span> <span class="dt">fontVariant</span><span class="op">:</span> <span class="st">"tabular-nums"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> [<span class="vs">`Date </span><span class="sc">${</span>Plot<span class="op">.</span><span class="fu">formatIsoDate</span>(d<span class="op">.</span><span class="at">Date</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">,</span> <span class="vs">`200m </span><span class="sc">${</span>d<span class="op">.</span><span class="at">cf_200</span><span class="op">?.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">,</span> <span class="vs">`2000m </span><span class="sc">${</span>d<span class="op">.</span><span class="at">cf_2000</span><span class="op">?.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">`</span>]<span class="op">.</span><span class="fu">join</span>(<span class="st">"   "</span>)}))<span class="op">,</span></span>
+<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])</span>
+<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-11" data-nodetype="expression">
 
@@ -392,7 +380,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="192" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 191;"><span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="180" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 179;"><span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="expression">
 
@@ -403,11 +391,11 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="200" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 199;"><span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a><span class="co">//data = FileAttachment("data/subset_data.csv").csv({ typed: true })</span></span>
-<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a><span class="co">//data = d3.csv("https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv")</span></span>
-<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a><span class="co">//print(fileUrl)</span></span>
-<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(fileUrl<span class="op">,</span> d3<span class="op">.</span><span class="at">autoType</span>)</span>
-<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a><span class="co">//data = FileAttachment("data/subset_data.csv").csv()</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="188" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 187;"><span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a><span class="co">//data = FileAttachment("data/subset_data.csv").csv({ typed: true })</span></span>
+<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a><span class="co">//data = d3.csv("https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv")</span></span>
+<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a><span class="co">//print(fileUrl)</span></span>
+<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(fileUrl<span class="op">,</span> d3<span class="op">.</span><span class="at">autoType</span>)</span>
+<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a><span class="co">//data = FileAttachment("data/subset_data.csv").csv()</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-13" data-nodetype="declaration">
 
@@ -415,8 +403,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="209" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 208;"><span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>startDate <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">0</span>])</span>
-<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>stopDate  <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="197" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 196;"><span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>startDate <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">0</span>])</span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>stopDate  <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">1</span>])</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-14-1" data-nodetype="declaration">
@@ -433,9 +421,9 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="213" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 212;"><span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(s2) {</span>
-<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&gt;=</span> startDate <span class="op">&amp;&amp;</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&lt;=</span> stopDate<span class="op">;</span></span>
-<span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="201" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 200;"><span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(s2) {</span>
+<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&gt;=</span> startDate <span class="op">&amp;&amp;</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&lt;=</span> stopDate<span class="op">;</span></span>
+<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="declaration">
 
@@ -443,7 +431,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb16" data-startfrom="219" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 218;"><span id="cb16-219"><a href="#cb16-219" aria-hidden="true" tabindex="-1"></a>sphere <span class="op">=</span> ({<span class="dt">type</span><span class="op">:</span> <span class="st">"Sphere"</span>})</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb16" data-startfrom="207" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 206;"><span id="cb16-207"><a href="#cb16-207" aria-hidden="true" tabindex="-1"></a>sphere <span class="op">=</span> ({<span class="dt">type</span><span class="op">:</span> <span class="st">"Sphere"</span>})</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-16" data-nodetype="declaration">
 
@@ -451,7 +439,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb17" data-startfrom="223" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 222;"><span id="cb17-223"><a href="#cb17-223" aria-hidden="true" tabindex="-1"></a>graticule <span class="op">=</span> d3<span class="op">.</span><span class="fu">geoGraticule10</span>()</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb17" data-startfrom="211" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 210;"><span id="cb17-211"><a href="#cb17-211" aria-hidden="true" tabindex="-1"></a>graticule <span class="op">=</span> d3<span class="op">.</span><span class="fu">geoGraticule10</span>()</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-17" data-nodetype="declaration">
 
@@ -459,7 +447,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb18" data-startfrom="227" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 226;"><span id="cb18-227"><a href="#cb18-227" aria-hidden="true" tabindex="-1"></a>land <span class="op">=</span> topojson<span class="op">.</span><span class="fu">feature</span>(world<span class="op">,</span> world<span class="op">.</span><span class="at">objects</span><span class="op">.</span><span class="at">land</span>)</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb18" data-startfrom="215" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 214;"><span id="cb18-215"><a href="#cb18-215" aria-hidden="true" tabindex="-1"></a>land <span class="op">=</span> topojson<span class="op">.</span><span class="fu">feature</span>(world<span class="op">,</span> world<span class="op">.</span><span class="at">objects</span><span class="op">.</span><span class="at">land</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-18" data-nodetype="declaration">
 
@@ -467,7 +455,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb19" data-startfrom="231" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 230;"><span id="cb19-231"><a href="#cb19-231" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/land-50m.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb19" data-startfrom="219" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 218;"><span id="cb19-219"><a href="#cb19-219" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/land-50m.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-19" data-nodetype="declaration">
 
@@ -475,7 +463,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb20" data-startfrom="235" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 234;"><span id="cb20-235"><a href="#cb20-235" aria-hidden="true" tabindex="-1"></a>topojson <span class="op">=</span> <span class="pp">require</span>(<span class="st">"topojson-client@3"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb20" data-startfrom="223" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 222;"><span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>topojson <span class="op">=</span> <span class="pp">require</span>(<span class="st">"topojson-client@3"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-20" data-nodetype="declaration">
 
@@ -483,7 +471,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb21" data-startfrom="239" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 238;"><span id="cb21-239"><a href="#cb21-239" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rangeSlider <span class="im">as</span> rangeSlider } <span class="im">from</span> <span class="st">'@mootari/range-slider'</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb21" data-startfrom="227" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 226;"><span id="cb21-227"><a href="#cb21-227" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rangeSlider <span class="im">as</span> rangeSlider } <span class="im">from</span> <span class="st">'@mootari/range-slider'</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-21" data-nodetype="declaration">
 
@@ -491,7 +479,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb22" data-startfrom="243" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 242;"><span id="cb22-243"><a href="#cb22-243" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb22" data-startfrom="231" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 230;"><span id="cb22-231"><a href="#cb22-231" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-22" data-nodetype="declaration">
 
@@ -506,7 +494,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwb2ludCA9IHtcbiAgY29uc3Qgd2lkdGggPSA2MDAuMFxuICBjb25zdCBoZWlnaHQgPSB3aWR0aCAvIDI7XG4gIGNvbnN0IGNvbnRleHQgPSBET00uY29udGV4dDJkKHdpZHRoLCBoZWlnaHQpO1xuICBjb25zdCBwcm9qZWN0aW9uID0gZDMuZ2VvRXF1YWxFYXJ0aCgpLmZpdFNpemUoW3dpZHRoLCBoZWlnaHRdLCB7dHlwZTogXCJTcGhlcmVcIn0pO1xuICBjb25zdCBwYXRoID0gZDMuZ2VvUGF0aChwcm9qZWN0aW9uLCBjb250ZXh0KTtcbiAgbGV0IG1vdXNlZG93biA9IGZhbHNlO1xuXG4gIGNvbnRleHQuYmVnaW5QYXRoKCksIHBhdGgoZ3JhdGljdWxlKSwgY29udGV4dC5zdHJva2VTdHlsZSA9IFwiI2NjY1wiLCBjb250ZXh0LnN0cm9rZSgpO1xuICBjb250ZXh0LmJlZ2luUGF0aCgpLCBwYXRoKGxhbmQpLCBjb250ZXh0LmZpbGwoKTtcbiAgY29udGV4dC5iZWdpblBhdGgoKSwgcGF0aChzcGhlcmUpLCBjb250ZXh0LnN0cm9rZVN0eWxlID0gXCIjMDAwXCIsIGNvbnRleHQuc3Ryb2tlKCk7XG4gIGNvbnRleHQubGluZVdpZHRoID0gMiwgY29udGV4dC5zdHJva2VTdHlsZSA9IFwiI2YwMFwiO1xuICBjb25zdCBpbWFnZSA9IGNvbnRleHQuZ2V0SW1hZ2VEYXRhKDAsIDAsIGNvbnRleHQuY2FudmFzLndpZHRoLCBjb250ZXh0LmNhbnZhcy5oZWlnaHQpO1xuXG4gIGZ1bmN0aW9uIHJlbmRlcihjb29yZGluYXRlcykge1xuICAgIGNvbnRleHQuY2FudmFzLnZhbHVlID0gY29vcmRpbmF0ZXM7XG4gICAgY29udGV4dC5jbGVhclJlY3QoMCwgMCwgd2lkdGgsIGhlaWdodCk7XG4gICAgY29udGV4dC5wdXRJbWFnZURhdGEoaW1hZ2UsIDAsIDApO1xuICAgIGNvbnRleHQuYmVnaW5QYXRoKCksIHBhdGgoe3R5cGU6IFwiUG9pbnRcIiwgY29vcmRpbmF0ZXN9KSwgY29udGV4dC5zdHJva2UoKTtcbiAgfVxuXG4gIGNvbnRleHQuY2FudmFzLm9ubW91c2Vkb3duID0gZXZlbnQgPT4ge1xuICAgIG1vdXNlZG93biA9IHRydWU7XG4gICAgY29udGV4dC5jYW52YXMub25tb3VzZW1vdmUoZXZlbnQpO1xuICB9O1xuXG4gIGNvbnRleHQuY2FudmFzLm9ubW91c2Vtb3ZlID0gKHtsYXllclgsIGxheWVyWX0pID0+IHtcbiAgICBpZiAoIW1vdXNlZG93bikgcmV0dXJuO1xuICAgIHJlbmRlcihwcm9qZWN0aW9uLmludmVydChbbGF5ZXJYLCBsYXllclldKSk7XG4gICAgY29udGV4dC5jYW52YXMuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gIH07XG5cbiAgY29udGV4dC5jYW52YXMub25tb3VzZXVwID0gZXZlbnQgPT4ge1xuICAgIG1vdXNlZG93biA9IGZhbHNlO1xuICB9O1xuXG4gIHJlbmRlcihbLTU1LCAwXSk7XG4gIHJldHVybiBjb250ZXh0LmNhbnZhcztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZpbGVVcmwgPSBgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NmcmFua2VuL3MyX2RhdGEvbWFpbi9maWxlcy9TMl8ke01hdGgucm91bmQocG9pbnRbMV0pfS4wXyR7TWF0aC5yb3VuZChwb2ludFswXSl9LjAuY3N2YDtcbi8vZmlsZVVybCA9IGAvZGF0YS9zdWJzZXRfZGF0YS5jc3ZgO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZmlsZVVybFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoic3RhcnQgPSBuZXcgRGF0ZSgyMDE4LCAwKVxuZW5kICAgPSBuZXcgRGF0ZSgyMDIyLDApXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc2xpZGVyID0gcmFuZ2VTbGlkZXIoe1xuICBtaW46IDAsXG4gIG1heDogZDMudGltZURheS5jb3VudChzdGFydCwgZW5kKSxcbiAgc3RlcDogMSxcbiAgZm9ybWF0OiBkID0+IGZvcm1hdERhdGUoZDMudGltZURheS5vZmZzZXQoc3RhcnQsIGQpKSxcbiAgdGl0bGU6ICdQaWNrIGEgZGF0ZSByYW5nZScsXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZm9ybWF0RGF0ZSA9IGQzLnRpbWVGb3JtYXQoXCIlWS0lbS0lZFwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHRocmVzaCA9IElucHV0cy5yYW5nZShcbiAgWzUsIDUwXSwgXG4gIHt2YWx1ZTogMTcsIHN0ZXA6IDIsIGxhYmVsOiBcIk51bWJlciBvZiBiaW5zXCJ9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJiaW5Cb3VuZGFyaWVzMSA9IGNhbGN1bGF0ZUxvZ0JpbnMoMC4wMDAxLCAxLjAxLCB0aHJlc2gpO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZnVuY3Rpb24gY2FsY3VsYXRlTG9nQmlucyhzdGFydCwgZW5kLCBuQmlucykge1xuICBjb25zdCBsb2dTdGFydCA9IE1hdGgubG9nMTAoc3RhcnQpO1xuICBjb25zdCBsb2dFbmQgPSBNYXRoLmxvZzEwKGVuZCk7XG4gIGNvbnN0IGJpbnMgPSBBcnJheS5mcm9tKHtsZW5ndGg6IG5CaW5zICsgMX0sIChfLCBpKSA9PiBcbiAgICBNYXRoLnBvdygxMCwgbG9nU3RhcnQgKyAobG9nRW5kIC0gbG9nU3RhcnQpICogaSAvIG5CaW5zKVxuICApO1xuICByZXR1cm4gYmlucztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xud2lkdGgsXG4gIHg6IHsgdHlwZTogXCJsb2dcIixiYXNlOjEwLFxudHJhbnNmb3JtOiBkID0+IE1hdGgubWF4KC4wMSwgMTAwKmQpfSwgXG4gIHk6IHtncmlkOiB0cnVlfSxcbiAgY29sb3I6IHtsZWdlbmQ6IHRydWV9LFxuICBtYXJrczogW1xuICAgIFBsb3QucmVjdFkoZmlsdGVyZWQsIFBsb3QuYmluWCh7eTogXCJjb3VudFwifSwge3g6IFwiY2ZfMjAwXCIsIGZpbGw6IFwic3RlZWxibHVlXCIsIGZpbGxPcGFjaXR5OiAwLjUsdGhyZXNob2xkczogYmluQm91bmRhcmllczEgfSkpLFxuICAgIFBsb3QucmVjdFkoZmlsdGVyZWQsIFBsb3QuYmluWCh7eTogXCJjb3VudFwifSwge3g6IFwiY2ZfMjAwMFwiLCBmaWxsOiBcInRvbWF0b1wiLCBmaWxsT3BhY2l0eTogMC41LHRocmVzaG9sZHM6IGJpbkJvdW5kYXJpZXMxIH0pKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICB3aWR0aCwgIFxuICB5OiB7IGdyaWQ6IHRydWUgfSxcbiAgY29sb3I6IHsgbGVnZW5kOiB0cnVlIH0sXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5heGlzWCh7IHRpY2tzOiBkMy51dGNNb250aC5ldmVyeSgzKSB9KSxcbiAgICBQbG90LmxpbmVZKGZpbHRlcmVkLCB7IFxuICAgICAgeDogXCJEYXRlXCIsIFxuICAgICAgeTogXCJjZl8yMDBcIixcbiAgICAgIHN0cm9rZTogXCJzdGVlbGJsdWVcIiwgLy8gQ3VzdG9tIGxpbmUgY29sb3JcbiAgICAgIGZpbGxPcGFjaXR5OiAwLjUsXG4gICAgICBzdHJva2VXaWR0aDogMC4yIC8vIFRoaW4gbGluZVxuICAgIH0pLFxuICAgIFBsb3QuZG90KGZpbHRlcmVkLCB7XG4gICAgICB4OiBcIkRhdGVcIixcbiAgICAgIHk6IFwiY2ZfMjAwXCIsXG4gICAgICBmaWxsT3BhY2l0eTogMC43NSxcbiAgICAgIGZpbGw6IFwic3RlZWxibHVlXCIsXG4gICAgICB0aXRsZTogKGQpID0+XG4gICAgICAgIGAke2Zvcm1hdERhdGUoZC5EYXRlKX0gXFxuIENsb3VkIEZyZWUgRnJhY3Rpb246XFxuIDIwMDBtOiAke2QuY2ZfMjAwMH0gXFxuIDIwMG06ICR7ZC5jZl8yMDB9YCwgLy8gXFxuIG1ha2VzIGEgbmV3IFxuICAgIH0pLFxuICAgIFBsb3QubGluZVkoZmlsdGVyZWQsIHsgXG4gICAgICB4OiBcIkRhdGVcIiwgXG4gICAgICB5OiBcImNmXzIwMDBcIixcbiAgICAgIHN0cm9rZTogXCJ0b21hdG9cIiwgLy8gQ3VzdG9tIGxpbmUgY29sb3JcbiAgICAgIGZpbGxPcGFjaXR5OiAwLjUsXG4gICAgICBzdHJva2VXaWR0aDogMC4yXG4gICAgfSksXG4gICAgUGxvdC5kb3QoZmlsdGVyZWQsIHtcbiAgICAgIHg6IFwiRGF0ZVwiLFxuICAgICAgeTogXCJjZl8yMDAwXCIsXG4gICAgICB0aXRsZTogKGQpID0+XG4gICAgICAgIGAke2Zvcm1hdERhdGUoZC5EYXRlKX0gXFxuIENsb3VkIEZyZWUgRnJhY3Rpb246XFxuIDIwMDBtOiAke2QuY2ZfMjAwMH0gXFxuIDIwMG06ICR7ZC5jZl8yMDB9YCwgLy8gXFxuIG1ha2VzIGEgbmV3IFxuICAgICAgZmlsbE9wYWNpdHk6IDAuNzUsXG4gICAgICBmaWxsOiBcInRvbWF0b1wiXG4gICAgfSksXG4gICAgUGxvdC5ydWxlWShbMF0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiSW5wdXRzLnRhYmxlKGRhdGEpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEzIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy9kYXRhID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3N1YnNldF9kYXRhLmNzdlwiKS5jc3YoeyB0eXBlZDogdHJ1ZSB9KVxuLy9kYXRhID0gZDMuY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NmcmFua2VuL3MyX2RhdGEvbWFpbi9maWxlcy8xLjBfLTU1LjAuY3N2XCIpXG4vL3ByaW50KGZpbGVVcmwpXG5kYXRhID0gZDMuY3N2KGZpbGVVcmwsIGQzLmF1dG9UeXBlKVxuLy9kYXRhID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL3N1YnNldF9kYXRhLmNzdlwiKS5jc3YoKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InN0YXJ0RGF0ZSA9IGQzLnRpbWVEYXkub2Zmc2V0KHN0YXJ0LCBzbGlkZXJbMF0pXG5zdG9wRGF0ZSAgPSBkMy50aW1lRGF5Lm9mZnNldChzdGFydCwgc2xpZGVyWzFdKSBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJmaWx0ZXJlZCA9IGRhdGEuZmlsdGVyKGZ1bmN0aW9uKHMyKSB7XG4gIHJldHVybiBzMi5EYXRlID49IHN0YXJ0RGF0ZSAmJiBzMi5EYXRlIDw9IHN0b3BEYXRlO1xufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzcGhlcmUgPSAoe3R5cGU6IFwiU3BoZXJlXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImdyYXRpY3VsZSA9IGQzLmdlb0dyYXRpY3VsZTEwKClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJsYW5kID0gdG9wb2pzb24uZmVhdHVyZSh3b3JsZCwgd29ybGQub2JqZWN0cy5sYW5kKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IndvcmxkID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL2xhbmQtNTBtLmpzb25cIikuanNvbigpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9wb2pzb24gPSByZXF1aXJlKFwidG9wb2pzb24tY2xpZW50QDNcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQgeyByYW5nZVNsaWRlciBhcyByYW5nZVNsaWRlciB9IGZyb20gJ0Btb290YXJpL3JhbmdlLXNsaWRlcidcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQge1Bsb3R9IGZyb20gXCJAbWtmcmVlbWFuL3Bsb3QtdG9vbHRpcFwiXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3BvaW50JykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3NsaWRlcicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd0aHJlc2gnKSJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwb2ludCA9IHtcbiAgY29uc3Qgd2lkdGggPSA2MDAuMFxuICBjb25zdCBoZWlnaHQgPSB3aWR0aCAvIDI7XG4gIGNvbnN0IGNvbnRleHQgPSBET00uY29udGV4dDJkKHdpZHRoLCBoZWlnaHQpO1xuICBjb25zdCBwcm9qZWN0aW9uID0gZDMuZ2VvRXF1YWxFYXJ0aCgpLmZpdFNpemUoW3dpZHRoLCBoZWlnaHRdLCB7dHlwZTogXCJTcGhlcmVcIn0pO1xuICBjb25zdCBwYXRoID0gZDMuZ2VvUGF0aChwcm9qZWN0aW9uLCBjb250ZXh0KTtcbiAgbGV0IG1vdXNlZG93biA9IGZhbHNlO1xuXG4gIGNvbnRleHQuYmVnaW5QYXRoKCksIHBhdGgoZ3JhdGljdWxlKSwgY29udGV4dC5zdHJva2VTdHlsZSA9IFwiI2NjY1wiLCBjb250ZXh0LnN0cm9rZSgpO1xuICBjb250ZXh0LmJlZ2luUGF0aCgpLCBwYXRoKGxhbmQpLCBjb250ZXh0LmZpbGwoKTtcbiAgY29udGV4dC5iZWdpblBhdGgoKSwgcGF0aChzcGhlcmUpLCBjb250ZXh0LnN0cm9rZVN0eWxlID0gXCIjMDAwXCIsIGNvbnRleHQuc3Ryb2tlKCk7XG4gIGNvbnRleHQubGluZVdpZHRoID0gMiwgY29udGV4dC5zdHJva2VTdHlsZSA9IFwiI2YwMFwiO1xuICBjb25zdCBpbWFnZSA9IGNvbnRleHQuZ2V0SW1hZ2VEYXRhKDAsIDAsIGNvbnRleHQuY2FudmFzLndpZHRoLCBjb250ZXh0LmNhbnZhcy5oZWlnaHQpO1xuXG4gIGZ1bmN0aW9uIHJlbmRlcihjb29yZGluYXRlcykge1xuICAgIGNvbnRleHQuY2FudmFzLnZhbHVlID0gY29vcmRpbmF0ZXM7XG4gICAgY29udGV4dC5jbGVhclJlY3QoMCwgMCwgd2lkdGgsIGhlaWdodCk7XG4gICAgY29udGV4dC5wdXRJbWFnZURhdGEoaW1hZ2UsIDAsIDApO1xuICAgIGNvbnRleHQuYmVnaW5QYXRoKCksIHBhdGgoe3R5cGU6IFwiUG9pbnRcIiwgY29vcmRpbmF0ZXN9KSwgY29udGV4dC5zdHJva2UoKTtcbiAgfVxuXG4gIGNvbnRleHQuY2FudmFzLm9ubW91c2Vkb3duID0gZXZlbnQgPT4ge1xuICAgIG1vdXNlZG93biA9IHRydWU7XG4gICAgY29udGV4dC5jYW52YXMub25tb3VzZW1vdmUoZXZlbnQpO1xuICB9O1xuXG4gIGNvbnRleHQuY2FudmFzLm9ubW91c2Vtb3ZlID0gKHtsYXllclgsIGxheWVyWX0pID0+IHtcbiAgICBpZiAoIW1vdXNlZG93bikgcmV0dXJuO1xuICAgIHJlbmRlcihwcm9qZWN0aW9uLmludmVydChbbGF5ZXJYLCBsYXllclldKSk7XG4gICAgY29udGV4dC5jYW52YXMuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gIH07XG5cbiAgY29udGV4dC5jYW52YXMub25tb3VzZXVwID0gZXZlbnQgPT4ge1xuICAgIG1vdXNlZG93biA9IGZhbHNlO1xuICB9O1xuXG4gIHJlbmRlcihbLTU1LCAwXSk7XG4gIHJldHVybiBjb250ZXh0LmNhbnZhcztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZpbGVVcmwgPSBgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NmcmFua2VuL3MyX2RhdGEvbWFpbi9maWxlcy9TMl8ke01hdGgucm91bmQocG9pbnRbMV0pfS4wXyR7TWF0aC5yb3VuZChwb2ludFswXSl9LjAuY3N2YDtcbi8vZmlsZVVybCA9IGAvZGF0YS9zdWJzZXRfZGF0YS5jc3ZgO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZmlsZVVybFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoic3RhcnQgPSBuZXcgRGF0ZSgyMDE4LCAwKVxuZW5kICAgPSBuZXcgRGF0ZSgyMDIyLDApXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygc2xpZGVyID0gcmFuZ2VTbGlkZXIoe1xuICBtaW46IDAsXG4gIG1heDogZDMudGltZURheS5jb3VudChzdGFydCwgZW5kKSxcbiAgc3RlcDogMSxcbiAgZm9ybWF0OiBkID0+IGZvcm1hdERhdGUoZDMudGltZURheS5vZmZzZXQoc3RhcnQsIGQpKSxcbiAgdGl0bGU6ICdQaWNrIGEgZGF0ZSByYW5nZScsXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZm9ybWF0RGF0ZSA9IGQzLnRpbWVGb3JtYXQoXCIlWS0lbS0lZFwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHRocmVzaCA9IElucHV0cy5yYW5nZShcbiAgWzUsIDUwXSwgXG4gIHt2YWx1ZTogMTcsIHN0ZXA6IDIsIGxhYmVsOiBcIk51bWJlciBvZiBiaW5zXCJ9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJiaW5Cb3VuZGFyaWVzMSA9IGNhbGN1bGF0ZUxvZ0JpbnMoMC4wMDAxLCAxLjAxLCB0aHJlc2gpO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZnVuY3Rpb24gY2FsY3VsYXRlTG9nQmlucyhzdGFydCwgZW5kLCBuQmlucykge1xuICBjb25zdCBsb2dTdGFydCA9IE1hdGgubG9nMTAoc3RhcnQpO1xuICBjb25zdCBsb2dFbmQgPSBNYXRoLmxvZzEwKGVuZCk7XG4gIGNvbnN0IGJpbnMgPSBBcnJheS5mcm9tKHtsZW5ndGg6IG5CaW5zICsgMX0sIChfLCBpKSA9PiBcbiAgICBNYXRoLnBvdygxMCwgbG9nU3RhcnQgKyAobG9nRW5kIC0gbG9nU3RhcnQpICogaSAvIG5CaW5zKVxuICApO1xuICByZXR1cm4gYmlucztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xud2lkdGgsXG4gIHg6IHsgdHlwZTogXCJsb2dcIixiYXNlOjEwLFxudHJhbnNmb3JtOiBkID0+IE1hdGgubWF4KC4wMSwgMTAwKmQpfSwgXG4gIHk6IHtncmlkOiB0cnVlfSxcbiAgY29sb3I6IHtsZWdlbmQ6IHRydWV9LFxuICBtYXJrczogW1xuICAgIFBsb3QucmVjdFkoZmlsdGVyZWQsIFBsb3QuYmluWCh7eTogXCJjb3VudFwifSwge3g6IFwiY2ZfMjAwXCIsIGZpbGw6IFwic3RlZWxibHVlXCIsIGZpbGxPcGFjaXR5OiAwLjUsdGhyZXNob2xkczogYmluQm91bmRhcmllczEgfSkpLFxuICAgIFBsb3QucmVjdFkoZmlsdGVyZWQsIFBsb3QuYmluWCh7eTogXCJjb3VudFwifSwge3g6IFwiY2ZfMjAwMFwiLCBmaWxsOiBcInRvbWF0b1wiLCBmaWxsT3BhY2l0eTogMC41LHRocmVzaG9sZHM6IGJpbkJvdW5kYXJpZXMxIH0pKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICB3aWR0aCwgIFxuICB5OiB7IGdyaWQ6IHRydWUsIGxhYmVsOiBcIkxpa2VsaWhvb2Qgb2YgY2xvdWQgZnJlZSBwaXhlbFwiLCB9LFxuICBjb2xvcjogeyBsZWdlbmQ6IHRydWUgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmF4aXNYKHsgdGlja3M6IGQzLnV0Y01vbnRoLmV2ZXJ5KDMpIH0pLFxuICAgIFBsb3QubGluZVkoZmlsdGVyZWQsIHsgXG4gICAgICB4OiBcIkRhdGVcIiwgXG4gICAgICB5OiBcImNmXzIwMFwiLFxuICAgICAgc3Ryb2tlOiBcInN0ZWVsYmx1ZVwiLCAvLyBDdXN0b20gbGluZSBjb2xvclxuICAgICAgZmlsbE9wYWNpdHk6IDAuNzUsXG4gICAgICBzdHJva2VXaWR0aDogMC44IC8vIFRoaW4gbGluZVxuICAgIH0pLFxuICAgIFBsb3QubGluZVkoZmlsdGVyZWQsIHsgXG4gICAgICB4OiBcIkRhdGVcIiwgXG4gICAgICB5OiBcImNmXzIwMDBcIixcbiAgICAgIHN0cm9rZTogXCJ0b21hdG9cIiwgLy8gQ3VzdG9tIGxpbmUgY29sb3JcbiAgICAgIGZpbGxPcGFjaXR5OiAwLjc1LFxuICAgICAgc3Ryb2tlV2lkdGg6IDAuOFxuICAgIH0pLFxuICAgIC8vUGxvdC5ydWxlWChmaWx0ZXJlZCwgUGxvdC5wb2ludGVyWCh7eDogXCJEYXRlXCIsIHB5OiBcImNmXzIwMDBcIiwgc3Ryb2tlOiBcImJsYWNrXCIsZmlsbE9wYWNpdHk6IDAuNzUsc3Ryb2tlV2lkdGg6IDAuOCB9KSksXG4gICAgUGxvdC5kb3QoZmlsdGVyZWQsIFBsb3QucG9pbnRlclgoe3g6IFwiRGF0ZVwiLCB5OiBcImNmXzIwMFwiLCBzdHJva2U6IFwiYmx1ZVwifSkpLFxuICAgIFBsb3QuZG90KGZpbHRlcmVkLCBQbG90LnBvaW50ZXJYKHt4OiBcIkRhdGVcIiwgeTogXCJjZl8yMDAwXCIsIHN0cm9rZTogXCJyZWRcIn0pKSxcbiAgICBQbG90LnRleHQoZmlsdGVyZWQsIFBsb3QucG9pbnRlclgoe3B4OiBcIkRhdGVcIiwgcHk6IFwiY2ZfMjAwMFwiLCBkeTogKzAuMTUsIGZyYW1lQW5jaG9yOiBcInRvcC1sZWZ0XCIsIGZvbnRWYXJpYW50OiBcInRhYnVsYXItbnVtc1wiLCB0ZXh0OiAoZCkgPT4gW2BEYXRlICR7UGxvdC5mb3JtYXRJc29EYXRlKGQuRGF0ZSl9YCwgYDIwMG0gJHtkLmNmXzIwMD8udG9GaXhlZCg0KX1gLCBgMjAwMG0gJHtkLmNmXzIwMDA/LnRvRml4ZWQoNCl9YF0uam9pbihcIiAgIFwiKX0pKSxcbiAgICBQbG90LnJ1bGVZKFswXSlcbiAgXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUoZGF0YSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIvL2RhdGEgPSBGaWxlQXR0YWNobWVudChcImRhdGEvc3Vic2V0X2RhdGEuY3N2XCIpLmNzdih7IHR5cGVkOiB0cnVlIH0pXG4vL2RhdGEgPSBkMy5jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vY2ZyYW5rZW4vczJfZGF0YS9tYWluL2ZpbGVzLzEuMF8tNTUuMC5jc3ZcIilcbi8vcHJpbnQoZmlsZVVybClcbmRhdGEgPSBkMy5jc3YoZmlsZVVybCwgZDMuYXV0b1R5cGUpXG4vL2RhdGEgPSBGaWxlQXR0YWNobWVudChcImRhdGEvc3Vic2V0X2RhdGEuY3N2XCIpLmNzdigpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE0IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoic3RhcnREYXRlID0gZDMudGltZURheS5vZmZzZXQoc3RhcnQsIHNsaWRlclswXSlcbnN0b3BEYXRlICA9IGQzLnRpbWVEYXkub2Zmc2V0KHN0YXJ0LCBzbGlkZXJbMV0pIFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZpbHRlcmVkID0gZGF0YS5maWx0ZXIoZnVuY3Rpb24oczIpIHtcbiAgcmV0dXJuIHMyLkRhdGUgPj0gc3RhcnREYXRlICYmIHMyLkRhdGUgPD0gc3RvcERhdGU7XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNwaGVyZSA9ICh7dHlwZTogXCJTcGhlcmVcIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZ3JhdGljdWxlID0gZDMuZ2VvR3JhdGljdWxlMTAoKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImxhbmQgPSB0b3BvanNvbi5mZWF0dXJlKHdvcmxkLCB3b3JsZC5vYmplY3RzLmxhbmQpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE5IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoid29ybGQgPSBGaWxlQXR0YWNobWVudChcImRhdGEvbGFuZC01MG0uanNvblwiKS5qc29uKClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMjAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0b3BvanNvbiA9IHJlcXVpcmUoXCJ0b3BvanNvbi1jbGllbnRAM1wiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7IHJhbmdlU2xpZGVyIGFzIHJhbmdlU2xpZGVyIH0gZnJvbSAnQG1vb3RhcmkvcmFuZ2Utc2xpZGVyJ1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7UGxvdH0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC10b29sdGlwXCJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncG9pbnQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc2xpZGVyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RocmVzaCcpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -739,7 +727,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-170"><a href="#cb23-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
 <span id="cb23-171"><a href="#cb23-171" aria-hidden="true" tabindex="-1"></a><span class="in">Plot.plot({</span></span>
 <span id="cb23-172"><a href="#cb23-172" aria-hidden="true" tabindex="-1"></a><span class="in">  width,  </span></span>
-<span id="cb23-173"><a href="#cb23-173" aria-hidden="true" tabindex="-1"></a><span class="in">  y: { grid: true },</span></span>
+<span id="cb23-173"><a href="#cb23-173" aria-hidden="true" tabindex="-1"></a><span class="in">  y: { grid: true, label: "Likelihood of cloud free pixel", },</span></span>
 <span id="cb23-174"><a href="#cb23-174" aria-hidden="true" tabindex="-1"></a><span class="in">  color: { legend: true },</span></span>
 <span id="cb23-175"><a href="#cb23-175" aria-hidden="true" tabindex="-1"></a><span class="in">  marks: [</span></span>
 <span id="cb23-176"><a href="#cb23-176" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.axisX({ ticks: d3.utcMonth.every(3) }),</span></span>
@@ -747,93 +735,81 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb23-178"><a href="#cb23-178" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
 <span id="cb23-179"><a href="#cb23-179" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_200",</span></span>
 <span id="cb23-180"><a href="#cb23-180" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "steelblue", // Custom line color</span></span>
-<span id="cb23-181"><a href="#cb23-181" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.5,</span></span>
-<span id="cb23-182"><a href="#cb23-182" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 0.2 // Thin line</span></span>
+<span id="cb23-181"><a href="#cb23-181" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.75,</span></span>
+<span id="cb23-182"><a href="#cb23-182" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 0.8 // Thin line</span></span>
 <span id="cb23-183"><a href="#cb23-183" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb23-184"><a href="#cb23-184" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, {</span></span>
-<span id="cb23-185"><a href="#cb23-185" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date",</span></span>
-<span id="cb23-186"><a href="#cb23-186" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_200",</span></span>
-<span id="cb23-187"><a href="#cb23-187" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.75,</span></span>
-<span id="cb23-188"><a href="#cb23-188" aria-hidden="true" tabindex="-1"></a><span class="in">      fill: "steelblue",</span></span>
-<span id="cb23-189"><a href="#cb23-189" aria-hidden="true" tabindex="-1"></a><span class="in">      title: (d) =&gt;</span></span>
-<span id="cb23-190"><a href="#cb23-190" aria-hidden="true" tabindex="-1"></a><span class="in">        `${formatDate(d.Date)} \n Cloud Free Fraction:\n 2000m: ${d.cf_2000} \n 200m: ${d.cf_200}`, // \n makes a new </span></span>
-<span id="cb23-191"><a href="#cb23-191" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb23-192"><a href="#cb23-192" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.lineY(filtered, { </span></span>
-<span id="cb23-193"><a href="#cb23-193" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
-<span id="cb23-194"><a href="#cb23-194" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
-<span id="cb23-195"><a href="#cb23-195" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "tomato", // Custom line color</span></span>
-<span id="cb23-196"><a href="#cb23-196" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.5,</span></span>
-<span id="cb23-197"><a href="#cb23-197" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 0.2</span></span>
-<span id="cb23-198"><a href="#cb23-198" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb23-199"><a href="#cb23-199" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, {</span></span>
-<span id="cb23-200"><a href="#cb23-200" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date",</span></span>
-<span id="cb23-201"><a href="#cb23-201" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
-<span id="cb23-202"><a href="#cb23-202" aria-hidden="true" tabindex="-1"></a><span class="in">      title: (d) =&gt;</span></span>
-<span id="cb23-203"><a href="#cb23-203" aria-hidden="true" tabindex="-1"></a><span class="in">        `${formatDate(d.Date)} \n Cloud Free Fraction:\n 2000m: ${d.cf_2000} \n 200m: ${d.cf_200}`, // \n makes a new </span></span>
-<span id="cb23-204"><a href="#cb23-204" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.75,</span></span>
-<span id="cb23-205"><a href="#cb23-205" aria-hidden="true" tabindex="-1"></a><span class="in">      fill: "tomato"</span></span>
-<span id="cb23-206"><a href="#cb23-206" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
-<span id="cb23-207"><a href="#cb23-207" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.ruleY([0])</span></span>
-<span id="cb23-208"><a href="#cb23-208" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
-<span id="cb23-209"><a href="#cb23-209" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-184"><a href="#cb23-184" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.lineY(filtered, { </span></span>
+<span id="cb23-185"><a href="#cb23-185" aria-hidden="true" tabindex="-1"></a><span class="in">      x: "Date", </span></span>
+<span id="cb23-186"><a href="#cb23-186" aria-hidden="true" tabindex="-1"></a><span class="in">      y: "cf_2000",</span></span>
+<span id="cb23-187"><a href="#cb23-187" aria-hidden="true" tabindex="-1"></a><span class="in">      stroke: "tomato", // Custom line color</span></span>
+<span id="cb23-188"><a href="#cb23-188" aria-hidden="true" tabindex="-1"></a><span class="in">      fillOpacity: 0.75,</span></span>
+<span id="cb23-189"><a href="#cb23-189" aria-hidden="true" tabindex="-1"></a><span class="in">      strokeWidth: 0.8</span></span>
+<span id="cb23-190"><a href="#cb23-190" aria-hidden="true" tabindex="-1"></a><span class="in">    }),</span></span>
+<span id="cb23-191"><a href="#cb23-191" aria-hidden="true" tabindex="-1"></a><span class="in">    //Plot.ruleX(filtered, Plot.pointerX({x: "Date", py: "cf_2000", stroke: "black",fillOpacity: 0.75,strokeWidth: 0.8 })),</span></span>
+<span id="cb23-192"><a href="#cb23-192" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, Plot.pointerX({x: "Date", y: "cf_200", stroke: "blue"})),</span></span>
+<span id="cb23-193"><a href="#cb23-193" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.dot(filtered, Plot.pointerX({x: "Date", y: "cf_2000", stroke: "red"})),</span></span>
+<span id="cb23-194"><a href="#cb23-194" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.text(filtered, Plot.pointerX({px: "Date", py: "cf_2000", dy: +0.15, frameAnchor: "top-left", fontVariant: "tabular-nums", text: (d) =&gt; [`Date ${Plot.formatIsoDate(d.Date)}`, `200m ${d.cf_200?.toFixed(4)}`, `2000m ${d.cf_2000?.toFixed(4)}`].join("   ")})),</span></span>
+<span id="cb23-195"><a href="#cb23-195" aria-hidden="true" tabindex="-1"></a><span class="in">    Plot.ruleY([0])</span></span>
+<span id="cb23-196"><a href="#cb23-196" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
+<span id="cb23-197"><a href="#cb23-197" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb23-198"><a href="#cb23-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-199"><a href="#cb23-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-200"><a href="#cb23-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb23-201"><a href="#cb23-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-204"><a href="#cb23-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb23-205"><a href="#cb23-205" aria-hidden="true" tabindex="-1"></a><span class="in">Inputs.table(data)</span></span>
+<span id="cb23-206"><a href="#cb23-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-207"><a href="#cb23-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-208"><a href="#cb23-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-209"><a href="#cb23-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb23-211"><a href="#cb23-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-212"><a href="#cb23-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb23-213"><a href="#cb23-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-216"><a href="#cb23-216" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-217"><a href="#cb23-217" aria-hidden="true" tabindex="-1"></a><span class="in">Inputs.table(data)</span></span>
-<span id="cb23-218"><a href="#cb23-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-219"><a href="#cb23-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-220"><a href="#cb23-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-214"><a href="#cb23-214" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb23-215"><a href="#cb23-215" aria-hidden="true" tabindex="-1"></a><span class="in">//data = FileAttachment("data/subset_data.csv").csv({ typed: true })</span></span>
+<span id="cb23-216"><a href="#cb23-216" aria-hidden="true" tabindex="-1"></a><span class="in">//data = d3.csv("https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv")</span></span>
+<span id="cb23-217"><a href="#cb23-217" aria-hidden="true" tabindex="-1"></a><span class="in">//print(fileUrl)</span></span>
+<span id="cb23-218"><a href="#cb23-218" aria-hidden="true" tabindex="-1"></a><span class="in">data = d3.csv(fileUrl, d3.autoType)</span></span>
+<span id="cb23-219"><a href="#cb23-219" aria-hidden="true" tabindex="-1"></a><span class="in">//data = FileAttachment("data/subset_data.csv").csv()</span></span>
+<span id="cb23-220"><a href="#cb23-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-221"><a href="#cb23-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-222"><a href="#cb23-222" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb23-223"><a href="#cb23-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-226"><a href="#cb23-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-227"><a href="#cb23-227" aria-hidden="true" tabindex="-1"></a><span class="in">//data = FileAttachment("data/subset_data.csv").csv({ typed: true })</span></span>
-<span id="cb23-228"><a href="#cb23-228" aria-hidden="true" tabindex="-1"></a><span class="in">//data = d3.csv("https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv")</span></span>
-<span id="cb23-229"><a href="#cb23-229" aria-hidden="true" tabindex="-1"></a><span class="in">//print(fileUrl)</span></span>
-<span id="cb23-230"><a href="#cb23-230" aria-hidden="true" tabindex="-1"></a><span class="in">data = d3.csv(fileUrl, d3.autoType)</span></span>
-<span id="cb23-231"><a href="#cb23-231" aria-hidden="true" tabindex="-1"></a><span class="in">//data = FileAttachment("data/subset_data.csv").csv()</span></span>
-<span id="cb23-232"><a href="#cb23-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-233"><a href="#cb23-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-236"><a href="#cb23-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-237"><a href="#cb23-237" aria-hidden="true" tabindex="-1"></a><span class="in">startDate = d3.timeDay.offset(start, slider[0])</span></span>
-<span id="cb23-238"><a href="#cb23-238" aria-hidden="true" tabindex="-1"></a><span class="in">stopDate  = d3.timeDay.offset(start, slider[1]) </span></span>
-<span id="cb23-239"><a href="#cb23-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-240"><a href="#cb23-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-243"><a href="#cb23-243" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-244"><a href="#cb23-244" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = data.filter(function(s2) {</span></span>
-<span id="cb23-245"><a href="#cb23-245" aria-hidden="true" tabindex="-1"></a><span class="in">  return s2.Date &gt;= startDate &amp;&amp; s2.Date &lt;= stopDate;</span></span>
-<span id="cb23-246"><a href="#cb23-246" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb23-224"><a href="#cb23-224" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb23-225"><a href="#cb23-225" aria-hidden="true" tabindex="-1"></a><span class="in">startDate = d3.timeDay.offset(start, slider[0])</span></span>
+<span id="cb23-226"><a href="#cb23-226" aria-hidden="true" tabindex="-1"></a><span class="in">stopDate  = d3.timeDay.offset(start, slider[1]) </span></span>
+<span id="cb23-227"><a href="#cb23-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-228"><a href="#cb23-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-231"><a href="#cb23-231" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb23-232"><a href="#cb23-232" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = data.filter(function(s2) {</span></span>
+<span id="cb23-233"><a href="#cb23-233" aria-hidden="true" tabindex="-1"></a><span class="in">  return s2.Date &gt;= startDate &amp;&amp; s2.Date &lt;= stopDate;</span></span>
+<span id="cb23-234"><a href="#cb23-234" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb23-235"><a href="#cb23-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-236"><a href="#cb23-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-239"><a href="#cb23-239" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb23-240"><a href="#cb23-240" aria-hidden="true" tabindex="-1"></a><span class="in">sphere = ({type: "Sphere"})</span></span>
+<span id="cb23-241"><a href="#cb23-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-242"><a href="#cb23-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-245"><a href="#cb23-245" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb23-246"><a href="#cb23-246" aria-hidden="true" tabindex="-1"></a><span class="in">graticule = d3.geoGraticule10()</span></span>
 <span id="cb23-247"><a href="#cb23-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-248"><a href="#cb23-248" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-251"><a href="#cb23-251" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-252"><a href="#cb23-252" aria-hidden="true" tabindex="-1"></a><span class="in">sphere = ({type: "Sphere"})</span></span>
+<span id="cb23-252"><a href="#cb23-252" aria-hidden="true" tabindex="-1"></a><span class="in">land = topojson.feature(world, world.objects.land)</span></span>
 <span id="cb23-253"><a href="#cb23-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-254"><a href="#cb23-254" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-257"><a href="#cb23-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-258"><a href="#cb23-258" aria-hidden="true" tabindex="-1"></a><span class="in">graticule = d3.geoGraticule10()</span></span>
+<span id="cb23-258"><a href="#cb23-258" aria-hidden="true" tabindex="-1"></a><span class="in">world = FileAttachment("data/land-50m.json").json()</span></span>
 <span id="cb23-259"><a href="#cb23-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-260"><a href="#cb23-260" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-263"><a href="#cb23-263" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-264"><a href="#cb23-264" aria-hidden="true" tabindex="-1"></a><span class="in">land = topojson.feature(world, world.objects.land)</span></span>
+<span id="cb23-264"><a href="#cb23-264" aria-hidden="true" tabindex="-1"></a><span class="in">topojson = require("topojson-client@3")</span></span>
 <span id="cb23-265"><a href="#cb23-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-266"><a href="#cb23-266" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-269"><a href="#cb23-269" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-270"><a href="#cb23-270" aria-hidden="true" tabindex="-1"></a><span class="in">world = FileAttachment("data/land-50m.json").json()</span></span>
+<span id="cb23-270"><a href="#cb23-270" aria-hidden="true" tabindex="-1"></a><span class="in">import { rangeSlider as rangeSlider } from '@mootari/range-slider'</span></span>
 <span id="cb23-271"><a href="#cb23-271" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-272"><a href="#cb23-272" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-275"><a href="#cb23-275" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-276"><a href="#cb23-276" aria-hidden="true" tabindex="-1"></a><span class="in">topojson = require("topojson-client@3")</span></span>
+<span id="cb23-276"><a href="#cb23-276" aria-hidden="true" tabindex="-1"></a><span class="in">import {Plot} from "@mkfreeman/plot-tooltip"</span></span>
 <span id="cb23-277"><a href="#cb23-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-278"><a href="#cb23-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-281"><a href="#cb23-281" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-282"><a href="#cb23-282" aria-hidden="true" tabindex="-1"></a><span class="in">import { rangeSlider as rangeSlider } from '@mootari/range-slider'</span></span>
-<span id="cb23-283"><a href="#cb23-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-284"><a href="#cb23-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-287"><a href="#cb23-287" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb23-288"><a href="#cb23-288" aria-hidden="true" tabindex="-1"></a><span class="in">import {Plot} from "@mkfreeman/plot-tooltip"</span></span>
-<span id="cb23-289"><a href="#cb23-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
