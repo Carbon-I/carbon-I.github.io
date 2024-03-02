@@ -15,6 +15,7 @@ format:
 ---
 # DISCLAIMER: **This is work in progress, no official website yet**
 ## The Carbon Investigation  
+A mission proposed to NASA's [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) call 
 
 ![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}   
 
