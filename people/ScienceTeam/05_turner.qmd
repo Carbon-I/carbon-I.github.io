@@ -17,6 +17,9 @@ about:
       href: https://scholar.google.com/citations?user=tfmVgv0AAAAJ&hl=en
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0003-1406-7372
+    - icon: mortarboard
+      text: Website
+      href: https://alexjturner.github.io/index.html
 ---
 Alex Turner is an Assistant Professor of Atmospheric Sciences at the University of Washington where he works on atmospheric chemistry and the carbon cycle.
 

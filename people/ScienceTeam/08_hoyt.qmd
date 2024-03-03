@@ -10,31 +10,23 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/cfranken/
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/chr_fronge
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
-    - icon: mortarboard
-      text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      href: https://scholar.google.com/citations?user=KAZ0cjMAAAAJ&hl=en&oi=ao
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0002-2810-1722 
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Alison Hoyt is an Assistant Professor of Earth System Science at Stanford.  She studies tropical soil carbon and greenhouse gas emissions and their response to climate and land use change, with a particular focus on the carbon cycle of tropical wetlands and peatlands. Her research group takes field measurement of CO<sub>2</sub> and CH<sub>4</sub> emissions from these ecosystems, as well as other biogeochemical, isotopic, and hydrological measurements, and synthesizes them with a combination of modeling and remote sensing to understand ecosystem processes and changes resulting from climate and land use change. She has conducted fieldwork across the tropics, including in Southeast Asia, Africa, and South America.
 
 ## Education
+ Ph.D., Civil & Environmental Engineering, Massachusetts Institute of Technology, 2017
+• M.Phil., Environment, Society and Development, University of Cambridge, 2010
+• B.S., Physics and Engineering Sciences (Environmental), Yale University, 2009
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [Ph.D., Civil & Environmental Engineering]{.fw-bold} | Massachusetts Institute of Technology | 2017
+- [M.Phil., Environment, Society and Development]{.fw-bold} | University of Cambridge  | 2010
+-  [B.S., Physics and Engineering Sciences (Environmental)]{.fw-bold} | Yale University  | 2009
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2016-present:]{.fw-bold} Assistant Professor, 	Stanford

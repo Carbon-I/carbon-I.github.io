@@ -10,31 +10,31 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/cfranken/
     - icon: twitter
       text: twitter
-      href: https://twitter.com/chr_fronge
+      href: https://twitter.com/kd_chadwick
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+      href: https://scholar.google.com/citations?user=Wxj3Sq8AAAAJ&hl=en
     - icon: mortarboard
-      text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887
+      text: Website
+      href: https://kdchadwick.github.io/
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-0546-5857 
+      href: https://orcid.org/0000-0002-5633-4865 
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Dana Chadwick is a Scientist at JPL and Mission Applications Lead, for the Earth Surface Mineral Dust Source Investigation (EMIT).
 
 ## Education
+• Ph.D., Earth System Science, Stanford University, 2017
+• B.A., Molecular and Cell Biology, University of California
+Berkeley, 2008
+• B.S., Environmental Economics and Policy, University of
+California Berkeley, 2008
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+- [Ph.D., Earth System Science]{.fw-bold} |  Stanford University | 2017
+- [B.A., Molecular and Cell Biology]{.fw-bold} | University of California Berkeley  | 2008
+- [B.S., Environmental Economics and Policy]{.fw-bold} | University of California Berkeley  | 2008
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [2018-present:]{.fw-bold} Scientist, JPL

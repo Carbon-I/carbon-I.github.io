@@ -25,16 +25,18 @@ about:
       href: https://orcid.org/0000-0002-0546-5857 
 ---
 
-Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
+Rob Green is a Senior Scientist at JPL. He is the Principal Investigator of the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) that originated to use of imaging spectroscopy for carbon dioxide and methane point source mapping. Principal Investigator of the competed Earth Ventures the Earth Surface Mineral Dust Source Investigation (EMIT) space imaging spectrometer that along with the Prime Mission objectives has demonstrated carbon dioxide and methane point source mapping from the ISS across six continents. Instrument Scientist or Co-I in five other space imaging spectrometers (CPM, MISE, M3, Hyperion, CRISM).
+
 
 ## Education
 
-- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
-- [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
+• PhD, Spectroscopy, University of California, Santa Barbara (2003) • MSc, Applied Earth Science, Stanford University, (1986)
+• BSc, Geology, Stanford University (1984)
+
+- [PhD in Spectroscopy]{.fw-bold} | University of California, Santa Barbara | 2003
+- [MSc, Applied Earth Science ]{.fw-bold} | Stanford University  | 1986
+- [BSc, Geology ]{.fw-bold} | Stanford University  | 1984
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Professor, 	Caltech 
-- [2015-2018:]{.fw-bold} 	Associate Professor, 	Caltech 
-- [2010-present:]{.fw-bold} 	Scientist, 	Earth Atmospheric Science, JPL 
-- [2006- 2009:]{.fw-bold}	VENI Postd at SRON-Netherlands Institute of Space Research\\
+- [20xx-present:]{.fw-bold} Scientist, JPL

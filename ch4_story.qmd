@@ -90,7 +90,7 @@ yMax = d3.max(filtered, d => d.average);
 stagnationDate = new Date("2005-01-01") 
 increaseDate   = new Date("2010-01-01") 
 accelerationDate = new Date("2015-01-01") 
-topMargin= 5
+topMargin= 1750
 ```
 
 ```{ojs}
@@ -151,16 +151,13 @@ Plot.plot({
         `${formatDate(d.Date)} \n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \n makes a new line
     }),
     Plot.lineY(filtered, Plot.windowY({k: 12, reduce: "mean"}, {x: "Date", y: "average", stroke: "red"})),
-    Plot.text([{
-      date: adjustTextPosition(d3.extent(filtered, d => d.Date), stagnationDate, stagnationDate),
-      value: topMargin,
-      text: "Stagnation Period"
-    }], {
-      x: "date",
-      y: "value",
+    Plot.text([{}], {
+      x: stagnationDate,
+      y: 1820,
       textAnchor: "middle",
       dy: "-0.5em", // Adjust vertical position
-      fontWeight: "bold"
+      fontWeight: "bold",
+      text: "Stagnation Period"
     })
   ]
 })

@@ -23,6 +23,9 @@ about:
     - icon: mortarboard
       text: ResearchID
       href: https://www.webofscience.com/wos/author/record/408887
+    - icon: mortarboard
+      text: Website
+      href: https://rsfralab.github.io/
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0546-5857 
 ---
