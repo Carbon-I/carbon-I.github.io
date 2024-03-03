@@ -46,7 +46,7 @@
     "href": "ch4_story.html#ch4-data-from-noaa",
     "title": "",
     "section": "CH4 data from NOAA",
-    "text": "CH4 data from NOAA\nGround based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly CH4 concentration data, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.\n\nfileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\ncsvText = d3.text(fileUrl)\n\n\n\n\n\n\n\nprocessedData = {\n  const lines = csvText.split('\\n').filter(line =&gt; line.trim().length &gt; 0 && !line.startsWith('#'));\n  return d3.csvParse(lines.join('\\n'),d3.autoType);\n}\n\n\n\n\n\n\n\nprocessedData2 = processedData.map(d =&gt; ({\n  ...d,\n  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date\n}));\n\n\n\n\n\n\n\nstart = new Date(1980, 0)\nend   = new Date(2024,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = processedData2.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nyMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field\nyMax = d3.max(filtered, d =&gt; d.average);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstagnationDate = new Date(\"2005-01-01\") \nincreaseDate   = new Date(\"2010-01-01\") \naccelerationDate = new Date(\"2015-01-01\") \ntopMargin= 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction adjustTextPosition(plotDomain, fixedDate, defaultPosition) {\n  if (fixedDate &lt; plotDomain[0] || fixedDate &gt; plotDomain[1]) {\n    // Adjust the position to be within the domain\n    // For example, set it to the start or end of the domain\n    return plotDomain[0]; // or plotDomain[1]\n  }\n  return defaultPosition;\n}\n\n\n\n\n\n\n\nPlot.plot({\n    width,\n  y: {\n    grid: true,\n    label: \"CH₄ (ppb)\",\n    domain: [yMin, yMax] // Set the y-axis domain\n  },\n  x: {\n    grid: true,\n    label: \"time\",\n    domain: [d3.min(filtered, d =&gt; d.Date), d3.max(filtered, d =&gt; d.Date)] // Set the y-axis domain\n  },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marks: [\n    Plot.rectY([{}], { \n      x1: new Date(\"2000-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2007-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"blue\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2007-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2015-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"yellow\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2015-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2024-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"red\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.line(filtered, { \n      x: \"Date\", \n      y: \"average\",\n      title: (d) =&gt;\n        `${formatDate(d.Date)} \\n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \\n makes a new line\n    }),\n    Plot.lineY(filtered, Plot.windowY({k: 12, reduce: \"mean\"}, {x: \"Date\", y: \"average\", stroke: \"red\"})),\n    Plot.text([{\n      date: adjustTextPosition(d3.extent(filtered, d =&gt; d.Date), stagnationDate, stagnationDate),\n      value: topMargin,\n      text: \"Stagnation Period\"\n    }], {\n      x: \"date\",\n      y: \"value\",\n      textAnchor: \"middle\",\n      dy: \"-0.5em\", // Adjust vertical position\n      fontWeight: \"bold\"\n    })\n  ]\n})\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
+    "text": "CH4 data from NOAA\nGround based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly CH4 concentration data, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.\n\nfileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\ncsvText = d3.text(fileUrl)\n\n\n\n\n\n\n\nprocessedData = {\n  const lines = csvText.split('\\n').filter(line =&gt; line.trim().length &gt; 0 && !line.startsWith('#'));\n  return d3.csvParse(lines.join('\\n'),d3.autoType);\n}\n\n\n\n\n\n\n\nprocessedData2 = processedData.map(d =&gt; ({\n  ...d,\n  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date\n}));\n\n\n\n\n\n\n\nstart = new Date(1980, 0)\nend   = new Date(2024,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = processedData2.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nyMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field\nyMax = d3.max(filtered, d =&gt; d.average);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstagnationDate = new Date(\"2005-01-01\") \nincreaseDate   = new Date(\"2010-01-01\") \naccelerationDate = new Date(\"2015-01-01\") \ntopMargin= 1750\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction adjustTextPosition(plotDomain, fixedDate, defaultPosition) {\n  if (fixedDate &lt; plotDomain[0] || fixedDate &gt; plotDomain[1]) {\n    // Adjust the position to be within the domain\n    // For example, set it to the start or end of the domain\n    return plotDomain[0]; // or plotDomain[1]\n  }\n  return defaultPosition;\n}\n\n\n\n\n\n\n\nPlot.plot({\n    width,\n  y: {\n    grid: true,\n    label: \"CH₄ (ppb)\",\n    domain: [yMin, yMax] // Set the y-axis domain\n  },\n  x: {\n    grid: true,\n    label: \"time\",\n    domain: [d3.min(filtered, d =&gt; d.Date), d3.max(filtered, d =&gt; d.Date)] // Set the y-axis domain\n  },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marks: [\n    Plot.rectY([{}], { \n      x1: new Date(\"2000-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2007-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"blue\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2007-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2015-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"yellow\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2015-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2024-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"red\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.line(filtered, { \n      x: \"Date\", \n      y: \"average\",\n      title: (d) =&gt;\n        `${formatDate(d.Date)} \\n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \\n makes a new line\n    }),\n    Plot.lineY(filtered, Plot.windowY({k: 12, reduce: \"mean\"}, {x: \"Date\", y: \"average\", stroke: \"red\"})),\n    Plot.text([{}], {\n      x: stagnationDate,\n      y: 1820,\n      textAnchor: \"middle\",\n      dy: \"-0.5em\", // Adjust vertical position\n      fontWeight: \"bold\",\n      text: \"Stagnation Period\"\n    })\n  ]\n})\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
   },
   {
     "objectID": "index.html",
@@ -235,63 +235,63 @@
     "href": "people/ScienceTeam/14_Chadwick.html",
     "title": "K. Dana Chadwick",
     "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+    "text": "Dana Chadwick is a Scientist at JPL and Mission Applications Lead, for the Earth Surface Mineral Dust Source Investigation (EMIT)."
   },
   {
     "objectID": "people/ScienceTeam/14_Chadwick.html#education",
     "href": "people/ScienceTeam/14_Chadwick.html#education",
     "title": "K. Dana Chadwick",
     "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+    "text": "Education\n• Ph.D., Earth System Science, Stanford University, 2017 • B.A., Molecular and Cell Biology, University of California Berkeley, 2008 • B.S., Environmental Economics and Policy, University of California Berkeley, 2008\n\nPh.D., Earth System Science | Stanford University | 2017\nB.A., Molecular and Cell Biology | University of California Berkeley | 2008\nB.S., Environmental Economics and Policy | University of California Berkeley | 2008"
   },
   {
     "objectID": "people/ScienceTeam/14_Chadwick.html#professional-experience",
     "href": "people/ScienceTeam/14_Chadwick.html#professional-experience",
     "title": "K. Dana Chadwick",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+    "text": "Professional Experience\n\n2018-present: Scientist, JPL"
   },
   {
     "objectID": "people/ScienceTeam/08_hoyt.html",
     "href": "people/ScienceTeam/08_hoyt.html",
     "title": "Alison Hoyt",
     "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+    "text": "Alison Hoyt is an Assistant Professor of Earth System Science at Stanford. She studies tropical soil carbon and greenhouse gas emissions and their response to climate and land use change, with a particular focus on the carbon cycle of tropical wetlands and peatlands. Her research group takes field measurement of CO2 and CH4 emissions from these ecosystems, as well as other biogeochemical, isotopic, and hydrological measurements, and synthesizes them with a combination of modeling and remote sensing to understand ecosystem processes and changes resulting from climate and land use change. She has conducted fieldwork across the tropics, including in Southeast Asia, Africa, and South America."
   },
   {
     "objectID": "people/ScienceTeam/08_hoyt.html#education",
     "href": "people/ScienceTeam/08_hoyt.html#education",
     "title": "Alison Hoyt",
     "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+    "text": "Education\nPh.D., Civil & Environmental Engineering, Massachusetts Institute of Technology, 2017 • M.Phil., Environment, Society and Development, University of Cambridge, 2010 • B.S., Physics and Engineering Sciences (Environmental), Yale University, 2009\n\nPh.D., Civil & Environmental Engineering | Massachusetts Institute of Technology | 2017\nM.Phil., Environment, Society and Development | University of Cambridge | 2010\nB.S., Physics and Engineering Sciences (Environmental) | Yale University | 2009"
   },
   {
     "objectID": "people/ScienceTeam/08_hoyt.html#professional-experience",
     "href": "people/ScienceTeam/08_hoyt.html#professional-experience",
     "title": "Alison Hoyt",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+    "text": "Professional Experience\n\n2016-present: Assistant Professor, Stanford"
   },
   {
     "objectID": "people/ScienceTeam/11_green.html",
     "href": "people/ScienceTeam/11_green.html",
     "title": "Robert Green",
     "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+    "text": "Rob Green is a Senior Scientist at JPL. He is the Principal Investigator of the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) that originated to use of imaging spectroscopy for carbon dioxide and methane point source mapping. Principal Investigator of the competed Earth Ventures the Earth Surface Mineral Dust Source Investigation (EMIT) space imaging spectrometer that along with the Prime Mission objectives has demonstrated carbon dioxide and methane point source mapping from the ISS across six continents. Instrument Scientist or Co-I in five other space imaging spectrometers (CPM, MISE, M3, Hyperion, CRISM)."
   },
   {
     "objectID": "people/ScienceTeam/11_green.html#education",
     "href": "people/ScienceTeam/11_green.html#education",
     "title": "Robert Green",
     "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
+    "text": "Education\n• PhD, Spectroscopy, University of California, Santa Barbara (2003) • MSc, Applied Earth Science, Stanford University, (1986) • BSc, Geology, Stanford University (1984)\n\nPhD in Spectroscopy | University of California, Santa Barbara | 2003\nMSc, Applied Earth Science | Stanford University | 1986\nBSc, Geology | Stanford University | 1984"
   },
   {
     "objectID": "people/ScienceTeam/11_green.html#professional-experience",
     "href": "people/ScienceTeam/11_green.html#professional-experience",
     "title": "Robert Green",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+    "text": "Professional Experience\n\n20xx-present: Scientist, JPL"
   },
   {
     "objectID": "people/ScienceTeam/05_turner.html",
@@ -319,21 +319,14 @@
     "href": "people/ScienceTeam/07_bruhwiler.html",
     "title": "Lori Bruhwiler",
     "section": "",
-    "text": "Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle."
+    "text": "Lori Bruhwiler is the principal investigator of the NOAA CarbonTracker-CH4 modeling system. She has extensive experience using atmospheric models and in situ network observations to constrain the atmospheric methane budget. Her most recent work examines the use of methane isotopic data to improve our ability to partition the global methane budget among microbial and fossil fuel contributions."
   },
   {
     "objectID": "people/ScienceTeam/07_bruhwiler.html#education",
     "href": "people/ScienceTeam/07_bruhwiler.html#education",
     "title": "Lori Bruhwiler",
     "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002 - 2005\nDiploma in Geoecology | University of Bayreuth, Germany | 1996-2002"
-  },
-  {
-    "objectID": "people/ScienceTeam/07_bruhwiler.html#professional-experience",
-    "href": "people/ScienceTeam/07_bruhwiler.html#professional-experience",
-    "title": "Lori Bruhwiler",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postd at SRON-Netherlands Institute of Space Research\\"
+    "text": "Education\n\nPhD in Astrophysical, Planetary and Atmospheric Science | University of Colorado, Boulder | 1992\nM.S., Astrophysical, Planetary and Atmospheric Science | University of Colorado, Boulder | 1988\nB.S., Physics, Mathematics | University of Texas, Austin | 1985"
   },
   {
     "objectID": "people/ScienceTeam/04_Yin.html",
