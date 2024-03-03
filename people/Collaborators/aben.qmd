@@ -1,0 +1,33 @@
+---
+title: "Ilse Aben"
+started: "2018"
+image: /img/people/woman-avatar.webp
+subtitle: "International Collaborator"
+description: "SRON, Netherlands"
+sortby: "?"
+bibliography: ../../publications/abutz.bib
+
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/ATMO-IUP-UHEI/
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?hl=de&user=syIQ3FwAAAAJ 
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0003-0593-1608
+---
+
+... is ... .
+
+## Education
+
+- [PhD in ...]{.fw-bold} | Heidelberg University, Germany | ??? -  ???
+
+
+## Professional Experience
+
+- [2018-present:]{.fw-bold} Whatever, wherre

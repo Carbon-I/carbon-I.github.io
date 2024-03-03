@@ -1,0 +1,39 @@
+---
+title: "Andre Butz"
+started: "2018"
+image: /img/people/abutz.jpg
+subtitle: "Science team member"
+description: "Heidelberg University, Germany"
+sortby: "?"
+bibliography: ../../publications/abutz.bib
+
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/ATMO-IUP-UHEI/
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?hl=de&user=syIQ3FwAAAAJ 
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0003-0593-1608
+---
+
+Andre Butz is Professor of Atmospheric Physics at the Institute of Environmental Physics at Heidelberg University, Germany. He is a member of the Carbon-I Science Team.
+
+Dr. Butz’ research centers on understanding the variability and trends in the gaseous composition of the atmosphere and how these relate to mechanistic changes in the Earth system. To this end, for more than 20 years, Dr. Butz has been developing next-generation spectroscopic instruments [@strandgren_towards_2020;@palmer_role_2022;low_portable_2023;schmitt_open-path_2023] and algorithms [@butz_toward_2011] that enable more precise and more granular insights [@jungmann_zooming-for_2022] into the composition of the Earth’s atmosphere with a particular focus on carbon dioxide and methane. Using these methods in remote sensing applications and collecting data from various platforms including satellites [@hu_toward_2018], balloons [@butz_observational_2007;@butz_constraints_2009] and ground-based carriers [@butz_versatile_2022,knapp_spectrometric_2023], Dr. Butz aims at deciphering the processes that drive the variability in the global carbon cycle [@metz_soil_2023] and in atmospheric photochemistry [@voss_novel_2024].
+
+## Education
+
+- [PhD in Physics]{.fw-bold} | Heidelberg University, Germany | 2002 -  2006
+- [M.A. in Physics]{.fw-bold} | State University of New York at Stony Brook, USA  | 2001 - 2002  
+- [Undergraduate Studies in Physics]{.fw-bold} | University of Wuerzburg, Germany  | 1998 - 2001  
+
+## Professional Experience
+
+- [2018-present:]{.fw-bold} Professor, 	Institute of Environmental Physics, Heidelberg University, Germany
+- [2016-2018:]{.fw-bold} 	Head of department, German Aerospace Center (DLR e.V); Professor, Meteorological Institute, University of Munich (LMU), Germany
+- [2011-2016:]{.fw-bold} 	Group leader (Emmy-Noether fellow of DFG), Karlsruhe Institute of Technology (KIT), Germany
+- [2007-2011:]{.fw-bold}	Postdoctoral research at SRON-Netherlands Institute of Space Research, The Netherlands\\

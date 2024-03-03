@@ -9,8 +9,6 @@ format:
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-    filters:
-        - lightbox
     lightbox: auto
 ---
 ![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=60%}<br>
