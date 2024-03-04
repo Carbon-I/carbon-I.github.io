@@ -18,7 +18,7 @@
     "href": "team.html#collaborators",
     "title": "",
     "section": "Collaborators",
-    "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes Maasakkers\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniv. Edinburgh, Scotland\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL/Caltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes Maasakkers\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniv. Edinburgh, Scotland\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "testMap.html",
@@ -130,21 +130,21 @@
     "href": "people/Collaborators/sanghavi.html",
     "title": "Suniti Sanghavi",
     "section": "",
-    "text": "… is … ."
+    "text": "Suniti Sanghavi is a remote sensing scientist at the Jet Propulsion Laboratory with a focus on radiative transfer modeling and inversion algorithm development.\nDr. Sanghavi recognized the need for fast and accurate radiative transfer modeling while carrying out the first Optimal Estimation based inversion of aerosol properties using SCIAMACHY data (Suniti Sanghavi, Platt, and Landgraf 2010; S. Sanghavi et al. 2012). She later expanded her approach to MISR (Diner et al. 2012), leading to state-of-the-art refinements in aerosol electromagnetic scattering simulations (Suniti Sanghavi 2014; Suniti Sanghavi and Stephens 2015) and forward modeling (Suniti Sanghavi and Natraj 2013; S. V. Sanghavi et al. 2013; Suniti Sanghavi, Davis, and Eldering 2014). The resulting framework was used to carry out sensitivity studies and information content analyses of the influence of aerosol and cloud properties on OCO/GOSAT measurements (S. Sanghavi, Lebsock, and Stephens 2015; Suniti Sanghavi et al. 2020). The vSmartMOM modeling framework has also been applied to study the cloudy atmospheres of exoplanets and brown dwarfs (Suniti Sanghavi and Shporer 2018; Suniti Sanghavi and West 2019; Suniti Sanghavi, West, and Jiang 2021). Following the GPU adaptation of vSmartMOM (Jeyaram, Sanghavi, and Frankenberg 2022), Dr. Sanghavi’s work led to the development of a GPU accelerated inelastic scattering model (Suniti Sanghavi 2022; Suniti Sanghavi and Frankenberg 2023) that allows the correction of hyperspectral retrievals for biases caused by Raman scattering. Similar corrections due to the hyperspectral effects of canopy radiative transfer are being developed jointly with Dr. Frankenberg."
   },
   {
     "objectID": "people/Collaborators/sanghavi.html#education",
     "href": "people/Collaborators/sanghavi.html#education",
     "title": "Suniti Sanghavi",
     "section": "Education",
-    "text": "Education\n\nPhD in … | Heidelberg University, Germany | ??? - ???"
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2004 - 2008\nDiploma in Physics | University of Heidelberg, Germany | 1999 - 2003"
   },
   {
     "objectID": "people/Collaborators/sanghavi.html#professional-experience",
     "href": "people/Collaborators/sanghavi.html#professional-experience",
     "title": "Suniti Sanghavi",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
+    "text": "Professional Experience\n\n2015-present: Data scientist, 298K, JPL\n2014-2015: CSU Postdoc, JPL\n2010-2013: Caltech Postdoc, JPL\n2008-2009: Postdoc at SRON-Netherlands Institute of Space Research\\"
   },
   {
     "objectID": "people/Collaborators/houweling.html",
