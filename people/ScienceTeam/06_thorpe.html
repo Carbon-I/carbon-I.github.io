@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -200,23 +220,47 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
       <div class="about-contents"><main class="content column-page-left" id="quarto-document-content">
 
-<p>Andrew Thorpe…</p>
+<p>Andrew Thorpe is a technologist in the JPL imaging spectroscopy group with a decade of experience working with imaging spectrometer data. He has developed quantitative gas retrievals for AVIRIS, AVIRIS-NG, and EMIT using differential optical absorption spectroscopy, methods to estimate emission rates, and contributed to projects aimed at visualizing methane results and reducing data latency. Andrew is currently an EMIT Science Team member leading the EMIT greenhouse gas mapping application, and the Deputy Instrument Scientist for Carbon Plume Mapper.</p>
 <section id="education" class="level2">
 <h2 data-anchor-id="education">Education</h2>
 <ul>
-<li><span class="fw-bold">PhD in Environmental Physics</span> | University of Heidelberg, Germany | 2002 - 2005</li>
-<li><span class="fw-bold">Diploma in Geoecology</span> | University of Bayreuth, Germany | 1996-2002</li>
+<li><span class="fw-bold">Ph.D., Geography</span> | Univ. of California, Santa Barbaray | 2015</li>
+<li><span class="fw-bold">B.S., Geology</span> | Brown University | 2004</li>
 </ul>
 </section>
 <section id="professional-experience" class="level2">
 <h2 data-anchor-id="professional-experience">Professional Experience</h2>
-<ul>
-<li><span class="fw-bold">2018-present:</span> Bla, Bla</li>
-</ul>
+<p>Andrew Thorpe has extensive experience in high-resolution methane mapping, ranging from retrieval algorithms <span class="citation" data-cites="thorpe2014retrieval thorpe2017airborne THORPE2021112681">(<a href="#ref-thorpe2014retrieval" role="doc-biblioref">A. Thorpe, Frankenberg, and Roberts 2014</a>; <a href="#ref-thorpe2017airborne" role="doc-biblioref">Andrew K. Thorpe et al. 2017</a>; <a href="#ref-THORPE2021112681" role="doc-biblioref">Andrew K. Thorpe et al. 2021</a>)</span> and the first ever controlled release experiment involving aircraft and spectroscopic mapping <span class="citation" data-cites="thorpe2016mapping">(<a href="#ref-thorpe2016mapping" role="doc-biblioref">Andrew K. Thorpe et al. 2016</a>)</span> to data analysis and sectorial up-scaling of methane fluxes <span class="citation" data-cites="thorpe2023attribution cusworth_pnas thorpe2020methane duren2019california">(<a href="#ref-thorpe2023attribution" role="doc-biblioref">Andrew K. Thorpe et al. 2023</a>, <a href="#ref-thorpe2020methane" role="doc-biblioref">2020</a>; <a href="#ref-cusworth_pnas" role="doc-biblioref">Cusworth et al. 2022</a>; <a href="#ref-duren2019california" role="doc-biblioref">Duren et al. 2019</a>)</span>.</p>
+
 
 
 </section>
-</main></div>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cusworth_pnas" class="csl-entry" role="listitem">
+Cusworth, Daniel H., Andrew K. Thorpe, Alana K. Ayasse, David Stepp, Joseph Heckler, Gregory P. Asner, Charles E. Miller, et al. 2022. <span>“Strong Methane Point Sources Contribute a Disproportionate Fraction of Total Emissions Across Multiple Basins in the United States.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (38): e2202338119. <a href="https://doi.org/10.1073/pnas.2202338119">https://doi.org/10.1073/pnas.2202338119</a>.
+</div>
+<div id="ref-duren2019california" class="csl-entry" role="listitem">
+Duren, Riley M, Andrew K Thorpe, Kelsey T Foster, Talha Rafiq, Francesca M Hopkins, Vineet Yadav, Brian D Bue, et al. 2019. <span>“California’s Methane Super-Emitters.”</span> <em>Nature</em> 575 (7781): 180–84. <a href="https://doi.org/10.21203/rs.3.rs-952096/v1">https://doi.org/10.21203/rs.3.rs-952096/v1</a>.
+</div>
+<div id="ref-thorpe2014retrieval" class="csl-entry" role="listitem">
+Thorpe, AK, C Frankenberg, and DA Roberts. 2014. <span>“Retrieval Techniques for Airborne Imaging of Methane Concentrations Using High Spatial and Moderate Spectral Resolution: Application to AVIRIS.”</span> <em>Atmospheric Measurement Techniques</em> 7 (2): 491–506. <a href="https://doi.org/10.5194/amt-7-491-2014">https://doi.org/10.5194/amt-7-491-2014</a>.
+</div>
+<div id="ref-thorpe2020methane" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Riley M Duren, Stephen Conley, Kuldeep R Prasad, Brian D Bue, Vineet Yadav, Kelsey T Foster, et al. 2020. <span>“Methane Emissions from Underground Gas Storage in California.”</span> <em>Environmental Research Letters</em> 15 (4): 045005. <a href="https://doi.org/10.1088/1748-9326/ab751d">https://doi.org/10.1088/1748-9326/ab751d</a>.
+</div>
+<div id="ref-thorpe2016mapping" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Christian Frankenberg, AD Aubrey, DA Roberts, AA Nottrott, TA Rahn, JA Sauer, et al. 2016. <span>“Mapping Methane Concentrations from a Controlled Release Experiment Using the Next Generation Airborne Visible/Infrared Imaging Spectrometer (AVIRIS-NG).”</span> <em>Remote Sensing of Environment</em> 179: 104–15. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>.
+</div>
+<div id="ref-thorpe2017airborne" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Christian Frankenberg, David R Thompson, Riley M Duren, Andrew D Aubrey, Brian D Bue, Robert O Green, et al. 2017. <span>“Airborne DOAS Retrievals of Methane, Carbon Dioxide, and Water Vapor Concentrations at High Spatial Resolution: Application to AVIRIS-NG.”</span> <em>Atmospheric Measurement Techniques</em> 10 (10): 3833–50. <a href="https://doi.org/10.5194/amt-10-3833-2017">https://doi.org/10.5194/amt-10-3833-2017</a>.
+</div>
+<div id="ref-thorpe2023attribution" class="csl-entry" role="listitem">
+Thorpe, Andrew K, Robert O Green, David R Thompson, Philip G Brodrick, John W Chapman, Clayton D Elder, Itziar Irakulis-Loitxate, et al. 2023. <span>“Attribution of Individual Methane and Carbon Dioxide Emission Sources Using EMIT Observations from Space.”</span> <em>Science Advances</em> 9 (46): eadh2391. <a href="https://doi.org/10.1126/sciadv.adh2391">https://doi.org/10.1126/sciadv.adh2391</a>.
+</div>
+<div id="ref-THORPE2021112681" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Christopher O’Handley, George D. Emmitt, Philip L. DeCola, Francesca M. Hopkins, Vineet Yadav, Abhinav Guha, et al. 2021. <span>“Improved Methane Emission Estimates Using AVIRIS-NG and an Airborne Doppler Wind Lidar.”</span> <em>Remote Sensing of Environment</em> 266: 112681. https://doi.org/<a href="https://doi.org/10.1016/j.rse.2021.112681">https://doi.org/10.1016/j.rse.2021.112681</a>.
+</div>
+</div></section></div></main></div>
     </div>
     <img src="/img/people/thorpe.jpg" class="about-image
   round " style="height: 15em; width: 15em;">
