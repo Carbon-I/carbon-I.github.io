@@ -1,33 +1,35 @@
 ---
 title: "Ilse Aben"
 started: "2018"
-image: /img/people/woman-avatar.webp
+image: /img/people/aben.jpg
 subtitle: "International Collaborator"
 description: "SRON, Netherlands"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
+bibliography: ../../publications/carbonI.bib
 
 about:
   id: hero-heading
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/ATMO-IUP-UHEI/
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?hl=de&user=syIQ3FwAAAAJ 
+      href: https://scholar.google.com/citations?user=yBuk28EAAAAJ&hl=nl 
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0003-0593-1608
+      href: https://orcid.org/0000-0003-2198-0768
 ---
 
-... is ... .
+Dr. Ilse Aben is the Dutch co-Principal Investigator and co-initiator of the TROPOMI instrument on ESA’s Sentinel-5 Precursor mission. Her research focuses on methane, and CO emissions, with high relevance to Carbon-I related science questions and technical approachs [@pandey2019satellite;@van2021vast;@sadavarte2021;@maasakkers2022using;@irakulis2022satellites;@pandey2023daily;@schuit2023automated;@naus2023assessing]
 
 ## Education
 
-- [PhD in ...]{.fw-bold} | Heidelberg University, Germany | ??? -  ???
+- [PhD in Physics]{.fw-bold} | Vrije Universiteit, Amsterdam, The Netherlands | 1992
+- [Diploma in Chemistry]{.fw-bold} | Vrije Universiteit, Amsterdam, The Netherlands | 1987
 
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Whatever, wherre
+- [2003-present]{.fw-bold} Senior Scientist SRON Netherlands Institute for Space Research, Leiden, The Netherlands
+- [1994-2002]{.fw-bold} Scientist SRON Netherlands Institute for Space Research, Leiden, the Netherlands
+- [1992-1994]{.fw-bold}Postdoc at Institute of Mass Spectrometry, University Amsterdam, The Netherlands
+- [2021-present]{.fw-bold} Endowed Professor Earth Sciences Vrije Universiteit, Amsterdam, The Netherlands
+- [2001-2021]{.fw-bold} Endowed Professor Physics Department Vrije Universiteit, Amsterdam, The Netherlands
