@@ -1,7 +1,7 @@
 ---
 title: "Clayton Elder"
 started: "2018"
-image: /img/people/man-avatar.jpeg
+image: /img/people/elder.jpg
 subtitle: "Collaborator"
 description: "JPL"
 sortby: "?"
@@ -12,20 +12,16 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/ATMO-IUP-UHEI/
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?hl=de&user=syIQ3FwAAAAJ 
-    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0003-0593-1608
+      href: https://scholar.google.com/citations?user=yF91FwgAAAAJ&hl=en&oi=ao
+
 ---
 
-... is ... .
+Clayton Elder merged the scales of in-situ observations with high resolution remote sensing datasets to constrain complex ecological processes in the Arctic
 
 ## Education
 
-- [PhD in ...]{.fw-bold} | Heidelberg University, Germany | ??? -  ???
+- [PhD in ...]{.fw-bold} | ... | ??? -  ???
 
 
 ## Professional Experience

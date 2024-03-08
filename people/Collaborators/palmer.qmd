@@ -1,7 +1,7 @@
 ---
 title: "Paul Palmer"
 started: "2018"
-image: /img/people/man-avatar.jpeg
+image: /img/people/palmer.jpeg
 subtitle: "International Collaborator"
 description: "Univ. Edinburgh, Scotland"
 sortby: "?"
@@ -12,22 +12,21 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/ATMO-IUP-UHEI/
-    - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?hl=de&user=syIQ3FwAAAAJ 
+    - icon: mortarboard
+      text: Website
+      href: https://sites.google.com/view/palmer-group/home
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0003-0593-1608
+      href: https://orcid.org/0000-0002-1487-0969
 ---
 
-... is ... .
+Paul Palmer studies the atmosphere on Earth and other planets using data, models, and theory.
 
 ## Education
 
-- [PhD in ...]{.fw-bold} | Heidelberg University, Germany | ??? -  ???
+- [PhD in ...]{.fw-bold} | ...y | ??? -  ???
 
 
 ## Professional Experience
 
 - [2018-present:]{.fw-bold} Whatever, wherre
+
