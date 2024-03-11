@@ -5,7 +5,6 @@ image: /img/people/duren.png
 subtitle: "Collaborator"
 description: "Carbon Mapper"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
 
 about:
   id: hero-heading
