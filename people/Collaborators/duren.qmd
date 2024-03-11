@@ -14,6 +14,9 @@ about:
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=I6eIZpQAAAAJ&hl=en 
+bibliography: ../../publications/duren.bib
+nocite: |
+  @*
 ---
 
 Riley Duren is a Research Scientist at the University of Arizona's Office of Research, Innovation and Impact and Chief Executive Officer for the non-profit organization [Carbon Mapper](https://carbonmapper.org/)
