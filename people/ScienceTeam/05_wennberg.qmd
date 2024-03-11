@@ -32,18 +32,16 @@ Paul Wennberg is Professor of Environmental Sciences & Engineering (ESE) at Calt
 - [PhD in Chemistry]{.fw-bold} | Harvard University | 1994
 - [BA in Chemistry ]{.fw-bold} | Oberlin College  | 1985
 
-## Professional Experience
-2016 – 2017	Visiting Professor, Department of Chemistry, Copenhagen University, Denmark
-2016 – 2023	Division Executive Council, Engineering and Applied Science, Caltech
-2014 – 2023	Director, The Linde Center for Global Environmental Science, Caltech
-2012 –	2023	Executive Officer for Environmental Science and Engineering
-2008 – 2011	Director, The Linde Center for Global Environmental Science, Caltech 
-2005	Visiting Professor, Department of Chemistry, University of Otago, New Zealand
-2005 – 2006	Secretary of the Atmospheric Sciences Section, American Geophysical Union
-2004 –	R. Stanton Avery Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
-2001 – 2004	Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
-1998 – 2001	Associate Professor of Atmospheric Chemistry and Environmental Engineering Science, California Institute of Technology
+## Professional Experience   
 
-- [2004-present:]{.fw-bold} 	R. Stanton Avery Professor, Caltech 
-- [2001 – 2004:]{.fw-bold} 	Associate Professor, Caltech
-- [1998 – 2001:]{.fw-bold}	Associate Professor, Caltech\\
+- [2016 – 2017]{.fw-bold} 	Visiting Professor, Department of Chemistry, Copenhagen University, Denmark
+- [2016 – 2023]{.fw-bold} 	Division Executive Council, Engineering and Applied Science, Caltech
+- [2014 – 2023]{.fw-bold} 	Director, The Linde Center for Global Environmental Science, Caltech
+- [2012 –	2023]{.fw-bold} 	Executive Officer for Environmental Science and Engineering
+- [2008 – 2011]{.fw-bold} 	Director, The Linde Center for Global Environmental Science, Caltech 
+- [2005	Visiting Professor, Department of Chemistry, University of Otago, New Zealand
+- [2005 – 2006]{.fw-bold} 	Secretary of the Atmospheric Sciences Section, American Geophysical Union
+- [2004 –]{.fw-bold} 	R. Stanton Avery Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
+- [2001 – 2004]{.fw-bold} 	Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
+- [1998 – 2001]{.fw-bold} 	Associate Professor of Atmospheric Chemistry and Environmental Engineering Science, California Institute of Technology
+
