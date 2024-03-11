@@ -17,6 +17,9 @@ about:
       href: https://www.webofscience.com/wos/author/record/KBA-4622-2024
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6152-7979
+bibliography: ../../publications/michalak.bib
+nocite: |
+  @*
 ---
 
 Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality.
