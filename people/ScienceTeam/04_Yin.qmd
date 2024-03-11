@@ -20,6 +20,9 @@ about:
       href: https://scholar.google.com/citations?user=z1EI0IgAAAAJ&hl=en
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/my-orcid?orcid=0000-0003-4750-4997
+bibliography: ../../publications/yin.bib
+nocite: |
+  @*
 ---
 Yi Yin is an Associate Professor of Environmental Studies at New York University and works on the global carbon cycle and impacts of climate extremes.
 

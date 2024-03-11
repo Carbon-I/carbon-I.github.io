@@ -12,6 +12,9 @@ about:
   links:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-3554-9250 
+bibliography: ../../publications/bruhwiler.bib
+nocite: |
+  @*
 ---
 
 Lori Bruhwiler is the principal investigator of the NOAA CarbonTracker-CH<sub>4</sub> modeling system. She has extensive experience using atmospheric models and in situ network observations to constrain the atmospheric methane budget. Her most recent work examines the use of methane isotopic data to improve our ability to partition the global methane budget among microbial and fossil fuel contributions.

@@ -20,6 +20,9 @@ about:
     - icon: mortarboard
       text: Website
       href: https://alexjturner.github.io/index.html
+bibliography: ../../publications/turner.bib
+nocite: |
+  @*
 ---
 Alex Turner is an Assistant Professor of Atmospheric Sciences at the University of Washington where he works on atmospheric chemistry and the carbon cycle.
 
