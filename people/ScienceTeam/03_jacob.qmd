@@ -18,6 +18,9 @@ about:
       href: https://acmg.seas.harvard.edu
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6373-3100 
+bibliography: ../../publications/jacob.bib
+nocite: |
+  @*
 ---
 
 Daniel Jacob is the Vasco McCoy Family Professor of Atmospheric Chemistry and Environmental Engineering at Harvard and works on interpretation of satellite observations of atmospheric composition.
