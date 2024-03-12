@@ -18,13 +18,22 @@ nocite: |
   @*
 ---
 
-Riley Duren is a Research Scientist at the University of Arizona's Office of Research, Innovation and Impact and Chief Executive Officer for the non-profit organization [Carbon Mapper](https://carbonmapper.org/)
+Riley Duren is Chief Executive Officer of [Carbon Mapper](https://carbonmapper.org/), a non-profit organization focused on delivering precise and transparent methane and carbon dioxide data to guide emissions mitigation action. Since 2010 he has led research efforts to develop and test multi-scale monitoring systems that support quantification and mitigation of greenhouse gas emissions including serving as principal investigator for multiple projects funded by NASA, NIST and California agencies. 
+
 
 ## Education
 
-- [PhD in ...]{.fw-bold} | ... | ??? -  ???
+- [BS in Electrical Engineering]{.fw-bold} | Auburn University | 1991
 
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Whatever, wherre
+- [2020 – present]{.fw-bold} Chief Executive Officer, Carbon Mapper
+- [2019 – present]{.fw-bold} Research Scientist, University of Arizona
+- [2017 – 2023]{.fw-bold} Engineering Fellow, JPL
+- [2008 – 2019]{.fw-bold} Chief Systems Engineer, Earth Science Directorate, JPL
+- [2002 – 2009]{.fw-bold} Chief Engineer, Kepler mission, JPL
+- [2000 – 2002]{.fw-bold} Instrument System Engineer, Starlight mission, JPL
+- [1996 – 2000]{.fw-bold} Metrology System Engineer, Shuttle Radar Topography Mission, JPL
+- [1988 – 1995]{.fw-bold} Payload Integration Engineer, NASA Kennedy Space Center
+
