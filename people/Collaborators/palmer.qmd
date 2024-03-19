@@ -3,7 +3,7 @@ title: "Paul Palmer"
 started: "2018"
 image: /img/people/palmer.jpeg
 subtitle: "International Collaborator"
-description: "Univ. Edinburgh, Scotland"
+description: "University Edinburgh, UK"
 sortby: "?"
 bibliography: ../../publications/abutz.bib
 
@@ -15,18 +15,18 @@ about:
     - icon: mortarboard
       text: Website
       href: https://sites.google.com/view/palmer-group/home
-    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0002-1487-0969
 ---
 
-Paul Palmer studies the atmosphere on Earth and other planets using data, models, and theory.
+Paul Palmer studies the atmosphere on Earth and other planets using data, models, and theory. 
 
 ## Education
 
-- [PhD in ...]{.fw-bold} | ...y | ??? -  ???
-
+- [D.Phil. in Physics]{.fw-bold} | University of Oxford | 1995 - 1998
+- [B.Sc. in Physics]{.fw-bold} | University of Bristol | 1992 - 1995
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Whatever, wherre
+- [2006-present:]{.fw-bold} Professor (2009-), Lecturer (2006-2009), University of Edinburgh
+- [1995-2006:]{.fw-bold} University Research Fellow, University of Leeds, 2005-2006
+- [1999-2005:]{.fw-bold} Postdoctoral Researcher/Research Associate, Harvard University, 1999-2005
 
