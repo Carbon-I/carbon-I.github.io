@@ -17,7 +17,7 @@ format:
 
 ## The impact of cloud on GHG remote sensing is strongly dependent on the footprint size. 
 
-In **Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing**, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions [Pre-print](https://doi.org/10.22541/essoar.170923255.57545328/v1we). 
+In **Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing**, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions [GRL paper](https://doi.org/10.1029/2024GL108791). 
 
 Here, we provide a simple interactive example for cloud statistics from our data in the manuscript under review. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series. Note that the coverage is not fully global due to the computation demand of computing these likelihoods from 10m Sentinel-2 data.
 
