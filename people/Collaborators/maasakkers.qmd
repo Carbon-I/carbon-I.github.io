@@ -1,34 +1,39 @@
 ---
-title: "Johannes (Bram) Maasakkers"
-started: "2018"
-image: /img/people/maasakkers.jpeg
+title: "Joannes D. (Bram) Maasakkers"
+image: /img/people/JDMaasakkers_Crop.jpg
 subtitle: "International Collaborator"
-description: "SRON, Netherlands"
-sortby: "?"
-bibliography: ../../publications/abutz.bib
+description: "SRON, The Netherlands"
 
 about:
   id: hero-heading
   template: solana
   image-shape: round
   links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/jdmaasakkers
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=0rLePx8AAAAJ&hl=en 
-    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-      href: https://orcid.org/0000-0003-0593-1608
+      href: https://scholar.google.com/citations?user=0rLePx8AAAAJ
+    - icon: linkedin
+      text: LinedIn
+      href: https://www.linkedin.com/in/jdmaasakkers/
     - icon: mortarboard
       text: Website
       href: https://jdmaasakkers.github.io/
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0001-8118-0311 
 ---
 
-Bram is a scientist at SRON Netherlands Institute for Space Research focusing on better understanding emissions of methane and carbon monoxide using observations from space.
+Joannes D. (Bram) Maasakkers is a Senior Scientist at SRON Netherlands Institute for Space Research. His work focuses on better understanding anthropogenic methane and carbon monoxide emissions using observations of atmospheric concentrations from satellites.
 
 ## Education
 
-- [PhD in ...]{.fw-bold} | ...y | ??? -  ???
-
+- [PhD in Environmental Science and Engineering]{.fw-bold} | Harvard University, US | 2013 - 2018
+- [M.Sc. in Environmental Science and Engineering]{.fw-bold} | Harvard University, US | 2013 - 2015
+- [B.Sc. and M.Sc. in Applied Physics ]{.fw-bold} | Eindhoven University of Technology, The Netherlands | 2008 - 2013  
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Whatever, wherre
-
+- [2024-present:]{.fw-bold} Senior Scientist at SRON Netherlands Institute for Space Research, The Netherlands 
+- [2021-2024:]{.fw-bold} Scientist at SRON Netherlands Institute for Space Research, The Netherlands 
+- [2018-2020:]{.fw-bold} Postdoc at SRON Netherlands Institute for Space Research, The Netherlands\\

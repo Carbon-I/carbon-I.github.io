@@ -1,6 +1,6 @@
 ---
 pagetitle: "ScienceTeam | Carbon-I"
-toc: false
+toc: true
 lightbox:
   match: auto
   effect: fade

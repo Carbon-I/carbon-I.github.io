@@ -9,7 +9,7 @@ format:
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-    toc: false
+    toc: true
     echo: false
     keep-hidden: true
     code-tools: true
