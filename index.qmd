@@ -12,7 +12,7 @@ format:
 
 ---
 ## The Carbon Investigation  
-A mission proposed to NASA's [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) call 
+A mission selected by NASA for a Phase A concept study as an [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html). 
 
 ![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}   
 
