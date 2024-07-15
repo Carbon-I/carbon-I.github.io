@@ -13,7 +13,7 @@ about:
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.ca/citations?user=k7q00AwAAAAJ&hl=en 
-bibliography: ../../publications/wunch.bib
+
 nocite: |
   @*
 ---
