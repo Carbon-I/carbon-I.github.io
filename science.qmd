@@ -27,7 +27,7 @@ Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales a
 ### Clouds in the humid tropics are the primary reason for low data yields in current GHG missions
 With its fine spatial sampling, Carbon-I can peek through cloud gaps,
 dramatically increasing data availability in regions with the largest carbon
-fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions.  
+fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions. Read more about clouds in the tropics in our [GRL paper](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108791). 
 :::
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
 ![](/img/Fig1_zoom.png)
