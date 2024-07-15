@@ -1,0 +1,37 @@
+---
+title: "Debra Wunch"
+started: "2018"
+image: /img/people/debra_cropped.jpg
+subtitle: "International Collaborator"
+description: "University of Toronto"
+sortby: "?"
+
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.ca/citations?user=k7q00AwAAAAJ&hl=en 
+bibliography: ../../publications/wunch.bib
+nocite: |
+  @*
+---
+
+Debra Wunch is an Associate Professor at the University of Toronto, cross-appointed between the Department of Physics and the School of the Environment. Since 2020, she has served as the Chair of the Total Carbon Column Observing Network (TCCON), and runs the TCCON station located at East Trout Lake, Saskatchewan, in the Canadian Boreal forest.
+
+## Education
+
+- [PhD in Atmospheric Physics]{.fw-bold} | University of Toronto | 2007
+- [MSc in Atmospheric Physics]{.fw-bold} | University of Toronto | 2002
+- [BS in Physics]{.fw-bold} | University of Toronto | 2000
+
+
+## Professional Experience
+
+- [2022 – present]{.fw-bold} Associate Professor, University of Toronto
+- [2016 – 2022]{.fw-bold} Assistant Professor, University of Toronto
+- [2010 – 2015]{.fw-bold} Senior Staff Scientist, California Institute of Technology
+- [2009 – 2010]{.fw-bold} Staff Scientist, California Institute of Technology
+- [2007 – 2009]{.fw-bold} Postdoctoral Scholar, California Institute of Technology
+
