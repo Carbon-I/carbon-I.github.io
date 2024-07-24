@@ -2,6 +2,8 @@
   {
     "listing": "/news.html",
     "items": [
+      "/News/latimes.html",
+      "/News/Selected.html",
       "/News/Carbon-I.html"
     ]
   },

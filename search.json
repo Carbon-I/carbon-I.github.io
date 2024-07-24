@@ -28,6 +28,20 @@
     "text": "A Carbon-I website…\nWhy create a website for something that isn’t even funded yet? Honestly, Quarto makes this a lot more fun and provides an ideal system for scientists to run their own website, and describe science in fun interactive ways. Carbon-I is still very rudimentary but creating some interactive graphics with ObservableJS has been fun, even though I dislike java script syntax. So it has been absolutely worth it and we learned a lot along the way…"
   },
   {
+    "objectID": "News/latimes.html",
+    "href": "News/latimes.html",
+    "title": "LA Times article",
+    "section": "",
+    "text": "AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found here"
+  },
+  {
+    "objectID": "News/latimes.html#la-times-article-on-carbon-i-efforts",
+    "href": "News/latimes.html#la-times-article-on-carbon-i-efforts",
+    "title": "LA Times article",
+    "section": "",
+    "text": "AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found here"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "",
@@ -760,7 +774,7 @@
     "href": "news.html",
     "title": "News from Carbon-I",
     "section": "",
-    "text": "Carbon-I proposal to NASA’s ESE call\n\n\n\n\n\n\nGreenhouse Gases\n\n\nSpectroscopy\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nOur journey for a satellite mission proposal to tackle greenhouse gases\n\n\n\n\n\nMarch 6, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
+    "text": "LA Times article\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nAAAS media fellow Noah Haggerty reports on our journey \n\n\n\n\n\nJuly 2, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I has been selected for Phase A\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nNASA announced the selection of four ESE Explorer mission concepts\n\n\n\n\n\nMay 7, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I proposal to NASA’s ESE call\n\n\n\n\n\n\nGreenhouse Gases\n\n\nSpectroscopy\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nOur journey for a satellite mission proposal to tackle greenhouse gases\n\n\n\n\n\nMarch 6, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "test/tester.html",
@@ -789,5 +803,19 @@
     "title": "",
     "section": "Collaborators",
     "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL/Caltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniversity Edinburgh, UK\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebra Wunch\n\n\nUniversity of Toronto\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes D. (Bram) Maasakkers\n\n\nSRON, The Netherlands\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "News/Selected.html",
+    "href": "News/Selected.html",
+    "title": "Carbon-I has been selected for Phase A",
+    "section": "",
+    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
+  },
+  {
+    "objectID": "News/Selected.html#nasas-ese-concept-study-selection",
+    "href": "News/Selected.html#nasas-ese-concept-study-selection",
+    "title": "Carbon-I has been selected for Phase A",
+    "section": "",
+    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
   }
 ]
