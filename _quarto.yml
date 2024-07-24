@@ -26,6 +26,8 @@ website:
             href:  ch4_story.qmd
           - href: clouds.qmd
             text: Clouds
+      - href: News.qmd
+        text: News
     right:
       - icon: github
         href: https://github.com/Carbon-I/
