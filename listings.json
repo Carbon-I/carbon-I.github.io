@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/news.html",
+    "items": [
+      "/News/Carbon-I.html"
+    ]
+  },
+  {
     "listing": "/team.html",
     "items": [
       "/people/ScienceTeam/01_frankenberg.html",
