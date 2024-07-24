@@ -1,0 +1,19 @@
+---
+title: "Carbon-I has been selected for Phase A"
+description: "NASA announced the selection of four ESE Explorer mission concepts"
+author: "Christian Frankenberg"
+date: "05/07/2024"
+image: "https://www.nasa.gov/wp-content/uploads/2024/05/globe.jpg"
+categories:
+  - Greenhouse Gases
+  - Earth System Explorer
+  - Satellite mission
+  - Remote Sensing
+---
+
+
+## NASA's ESE Concept Study selection
+
+We received more than welcome [News](https://www.nasa.gov/news-release/new-proposals-to-help-nasa-advance-knowledge-of-our-changing-climate/)!
+Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/) call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions.   
+
