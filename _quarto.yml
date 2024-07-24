@@ -8,6 +8,7 @@ website:
   twitter-card: true
   open-graph: true
   google-analytics: "G-PE6RLP594L"
+  favicon: img/ci_icon.png
   navbar:
     logo: "/img/Logo-Black2.png"
     background: transparent
