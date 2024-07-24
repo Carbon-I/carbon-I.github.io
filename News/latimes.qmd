@@ -14,4 +14,4 @@ categories:
 
 ## LA Times article on Carbon-I efforts
 
-AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found [here](https://www.latimes.com/environment/story/2024-07-02/nasa-jpl-hopes-to-boost-this-satellites-vision)
+AAAS media fellow [Noah Haggerty](https://www.aaas.org/programs/mass-media-fellowship/noah-haggerty) just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found [here](https://www.latimes.com/environment/story/2024-07-02/nasa-jpl-hopes-to-boost-this-satellites-vision). It nicely outlines our path from the [Four Corners campaign](https://www.pnas.org/doi/full/10.1073/pnas.1605617113) to more routine observations of methane plumes. We have come a long way and have to go further still. Maybe we should follow up with a post here about the history of methane observations from space...  
