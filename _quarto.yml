@@ -26,7 +26,7 @@ website:
             href:  ch4_story.qmd
           - href: clouds.qmd
             text: Clouds
-      - href: News.qmd
+      - href: news.qmd
         text: News
     right:
       - icon: github
@@ -41,11 +41,12 @@ website:
     #  - text: "About"
     #    href: about.qmd
     #  - text: "FAQ"
-    #    href: docs/faq/index.qmd
+    #    href: docs/faq/index.qmd 
     #  - text: "License"
     #    href: license.qmd
     #  - text: "Trademark"
     #    href: trademark.qmd
+
     right:
       - text: "{{< ai google-scholar >}} Google Scholar"
         href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
