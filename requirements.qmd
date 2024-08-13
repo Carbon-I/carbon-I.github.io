@@ -1,0 +1,17 @@
+```{mermaid}
+flowchart LR
+    A[L1.1 Global CO2, CH4, CO measurements over land monthly] -->|requires| B(Nadir viewing)
+    A[L1.1 Global CO2, CH4, CO measurements over land monthly] -->|requires| C(SWIR absorption spectroscopy )
+    A[L1.1 Global CO2, CH4, CO measurements over land monthly] -->|requires| D(>90km swath)
+    A[("L1.1 Global CO2, CH4, CO measurements over land monthly"] -->|requires| F(Light path proxy)
+
+    AA[L1.2 Regional and seasonal measurements within the tropics] -->|requires| E(Spatial resolution <400m globally)
+    AA[("L1.2 Regional and seasonal measurements within the tropics"] -->|requires| F(Light path proxy)
+
+    AB[L1.3 Attribution of strong localized sources] -->|requires| E(Spatial resolution <400m globally)
+    AB[("L1.3 Attribution of strong localized sources"] -->|requires| G(Spatial resolution <100m in select areas)
+
+    AC[L1.4 Measure at fine spatial scales over selected areas up to weekly] -->|requires| H(Off-nadir pointing)
+    AC[L1.4 Measure at fine spatial scales over selected areas up to weekly] -->|requires| I(Image motion compensation)
+    AC[("L1.4 Measure at fine spatial scales over selected areas up to weekly"] -->|requires| G(Spatial resolution <100m in select areas)
+```

@@ -1,0 +1,71 @@
+---
+title: "Interactive Vector Visualization"
+format: html
+---
+
+```{ojs}
+import { slider } from "@jashkenas/inputs"
+import { svg } from "d3"
+
+viewof length1Slider = slider({
+  min: 50,
+  max: 150,
+  step: 1,
+  value: 100,
+  title: "Length of the first vector"
+})
+
+length1 = length1Slider
+
+const length2 = 100;
+let length3 = 100;
+
+const angle1 = Math.PI / 4;
+const angle2 = -Math.PI / 4;
+const endpointX = 300;
+const endpointY = 300;
+
+function updateVectors(length1) {
+  const width = 600;
+  const height = 400;
+
+  const svgElement = svg.create('svg').attr('width', width).attr('height', height).style("border", "1px solid black");
+
+  const x1 = length1 * Math.cos(angle1);
+  const y1 = length1 * Math.sin(angle1);
+
+  const x2 = length2 * Math.cos(angle2);
+  const y2 = length2 * Math.sin(angle2);
+
+  const x3 = endpointX - (x1 + x2);
+  const y3 = endpointY - (y1 + y2);
+  length3 = Math.sqrt(x3 * x3 + y3 * y3);
+
+  svgElement.append("line")
+    .attr("x1", 0)
+    .attr("y1", height)
+    .attr("x2", x1)
+    .attr("y2", height - y1)
+    .attr("stroke", "black")
+    .attr("stroke-width", 2);
+
+  svgElement.append("line")
+    .attr("x1", x1)
+    .attr("y1", height - y1)
+    .attr("x2", x1 + x2)
+    .attr("y2", height - y1 - y2)
+    .attr("stroke", "red")
+    .attr("stroke-width", 2);
+
+  svgElement.append("line")
+    .attr("x1", x1 + x2)
+    .attr("y1", height - y1 - y2)
+    .attr("x2", endpointX)
+    .attr("y2", endpointY)
+    .attr("stroke", "blue")
+    .attr("stroke-width", 2);
+
+  return svgElement.node();
+}
+
+html`${updateVectors(length1)}`

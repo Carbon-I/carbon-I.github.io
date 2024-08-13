@@ -1,0 +1,88 @@
+---
+comments: false
+page-layout: full
+bibliography: publications/cfranken2024_doi.bib
+format:
+  html:
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    toc: false
+    echo: false
+    keep-hidden: true
+    code-tools: true
+---
+
+## Edgar stuff
+
+```{ojs}
+viewof dataSource = Inputs.radio(new Map(sources.map((d, i) => [d.label, i])), {
+  label: "Choose data source",
+  value: 0
+})
+```
+
+```{ojs}
+netcdf = import("https://cdn.skypack.dev/netcdfjs@2.0.2?min").then((d) => d.NetCDFReader)
+```
+
+```{ojs}
+sources = [
+  {src: "data/v8.0_FT2022_GHG_CH4_2022_TOTALS_flx.nc", variable: "fluxes", label: "CH4 Fluxes"},
+]
+```
+
+```{ojs}
+reader = new netcdf(await fetch("https://rawgit.com/PBrockmann/D3_netcdfjs/master/" + source.src).then(function(response) {
+    return response.arrayBuffer();
+  }))
+```
+
+```{ojs}
+isize = reader.header.dimensions[0].size
+```
+
+```{ojs}
+jsize = reader.header.dimensions[1].size
+```
+
+```{ojs}
+values = {
+  var values = new Float32Array(reader.getDataVariable(source.variable));
+  if (source.preprocess)
+      values = preprocessWnd(values);
+  return values;
+}
+```
+
+```{ojs}
+projection = {
+  switch (projName) {
+    case "ortho":
+      var p = d3.geoOrthographic().precision(0.1);
+      d3.timer(_ =>
+        p.rotate([p.rotate()[0] + 0.1, p.rotate()[1], p.rotate()[2] || 0])
+      );
+      return p;
+    case "hill":
+      return d3.geoHill();
+    case "azequalarea":
+      return d3.geoAzimuthalEqualArea();
+    case "equalearth":
+      return d3.geoEqualEarth();
+    case "equirectangular":
+    default:
+      return d3.geoEquirectangular().rotate([120, 0]);
+  }
+}
+```
+
+```{ojs}
+topojson = require('topojson')
+```
+
+```{ojs}
+source = sources[dataSource]
+```

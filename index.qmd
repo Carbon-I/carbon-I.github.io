@@ -18,6 +18,8 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 
 ## High-resolution Mapping of Obscured Greenhouse Gases
 
+![](/img/carbonI_anim.gif)
+
 ### *Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments*
 
 
