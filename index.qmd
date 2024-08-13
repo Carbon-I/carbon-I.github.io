@@ -17,9 +17,9 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 ![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=80%}   
 
 ## High-resolution Mapping of Obscured Greenhouse Gases
-
+<center>
 ![](/img/carbonI_anim.gif)
-
+</center>
 ### *Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments*
 
 
