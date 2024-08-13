@@ -1,5 +1,89 @@
 [
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Carbon-I related publications",
+    "section": "",
+    "text": "Over the past two decades, remarkable advancements have been achieved in retrieving GHG data from space-based platforms. Lessons learned from the past play a crucial role in shaping our requirements and approach. We now know that a) very high spectral resolution (&lt;1 nm) is not always necessary (Cusworth et al., 2019; Jongaramrungruang et al., 2021; A. Thorpe et al., 2014), b) the humid tropics yield far less reliable retrievals than previously anticipated at km-scale resolutions, c) high spatial resolution provides attribution, enables direct ground-truthing of remote retrievals, and is the only way to obtain more cloud-free data in the humid tropics. This list of papers is far from complete and will be updated in the near future.\nCarbon-I leverages the advances made by previous dedicated satellite missions such as SCIAMACHY (C. Frankenberg et al., 2005), GOSAT, and OCO-2. In addition, we merge the advantages of high spatial resolution, which has now enabled revolutionary measurements of gas plumes, leading to actionable results (A. Thorpe et al., 2014). Our retrieval and point flux inversion approach is based on many publication from Carbon-I team members, e.g. Jongaramrungruang et al. (2019), Jongaramrungruang et al. (2021), Jongaramrungruang et al. (2022), D. R. Thompson et al. (2016), D. Thompson et al. (2016), Christian Frankenberg et al. (2016), Ayasse et al. (2018), Borchardt et al. (2020), Cusworth et al. (2019), Cusworth, Duren, Thorpe, Pandey, et al. (2021), Cusworth, Duren, Thorpe, Eastwood, et al. (2021), Duren et al. (2019), Foote et al. (2020), A. Thorpe et al. (2014), A. K. Thorpe, Frankenberg, Green, et al. (2016), A. K. Thorpe, Frankenberg, Aubrey, et al. (2016), A. K. Thorpe et al. (2017), A. K. Thorpe et al. (2020), A. K. Thorpe, Green, et al. (2023), A. K. Thorpe, Kort, et al. (2023), C. Frankenberg et al. (2005), Christian Frankenberg et al. (2005), C. Frankenberg et al. (2006), Christian Frankenberg, Warneke, et al. (2008), Christian Frankenberg, Bergamaschi, et al. (2008), Christian Frankenberg et al. (2011)\n\n\n\n\nReferences\n\nAyasse, A. K., Thorpe, A. K., Roberts, D. A., Funk, C. C., Dennison, P. E., Frankenberg, C., et al. (2018). Evaluating the effects of surface properties on methane retrievals using a synthetic airborne visible/infrared imaging spectrometer next generation (AVIRIS-NG) image. Remote Sensing of Environment, 215, 386–397. https://doi.org/10.1016/j.rse.2018.06.018\n\n\nBorchardt, J., Gerilowski, K., Krautwurst, S., Bovensmann, H., Thorpe, A. K., Thompson, D. R., et al. (2020). Detection and quantification of CH 4 plumes using the WFM-DOAS retrieval on AVIRIS-NG hyperspectral data. Atmospheric Measurement Techniques Discussions, 2020, 1–34. https://doi.org/10.5194/amt-14-1267-2021\n\n\nCusworth, D. H., Jacob, D. J., Varon, D. J., Chan Miller, C., Liu, X., Chance, K., et al. (2019). Potential of next-generation imaging spectrometers to detect and quantify methane point sources from space. Atmospheric Measurement Techniques, 12(10), 5655–5668. https://doi.org/10.5194/amt-2019-202-rc2\n\n\nCusworth, D. H., Duren, R. M., Thorpe, A. K., Pandey, S., Maasakkers, J. D., Aben, I., et al. (2021). Multisatellite imaging of a gas well blowout enables quantification of total methane emissions. Geophysical Research Letters, 48(2), e2020GL090864. https://doi.org/10.1029/2020gl090864\n\n\nCusworth, D. H., Duren, R. M., Thorpe, A. K., Eastwood, M. L., Green, R. O., Dennison, P. E., et al. (2021). Quantifying global power plant carbon dioxide emissions with imaging spectroscopy. AGU Advances, 2(2), e2020AV000350. https://doi.org/10.1029/2020av000350\n\n\nDuren, R. M., Thorpe, A. K., Foster, K. T., Rafiq, T., Hopkins, F. M., Yadav, V., et al. (2019). California’s methane super-emitters. Nature, 575(7781), 180–184. https://doi.org/10.21203/rs.3.rs-952096/v1\n\n\nFoote, M. D., Dennison, P. E., Thorpe, A. K., Thompson, D. R., Jongaramrungruang, S., Frankenberg, C., & Joshi, S. C. (2020). Fast and accurate retrieval of methane concentration from imaging spectrometer data using sparsity prior. IEEE Transactions on Geoscience and Remote Sensing, 58(9), 6480–6492. https://doi.org/10.1109/tgrs.2020.2976888\n\n\nFrankenberg, C., Meirink, J., Weele, M. van, Platt, U., & Wagner, T. (2005). Assessing methane emissions from global space-borne observations. Science, 308(5724), 1010–1014. https://doi.org/10.1126/science.1106644\n\n\nFrankenberg, Christian, Platt, U., & Wagner, T. (2005). Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT. Atmospheric Chemistry and Physics, 5(1), 9–22. https://doi.org/10.5194/acp-5-9-2005\n\n\nFrankenberg, C., Meirink, J., Bergamaschi, P., Goede, A., Heimann, M., Körner, S., et al. (2006). Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: Analysis of the years 2003 and 2004. Journal of Geophysical Research, 111(D7), D07303. https://doi.org/10.1029/2005jd006235\n\n\nFrankenberg, Christian, Warneke, T., Butz, A., Aben, I., Hase, F., Spietz, P., & Brown, L. R. (2008). Pressure broadening in the 2\\(\\nu\\) 3 band of methane and its implication on atmospheric retrievals. Atmospheric Chemistry and Physics, 8(17), 5061–5075. https://doi.org/10.5194/acp-8-5061-2008\n\n\nFrankenberg, Christian, Bergamaschi, P., Butz, A., Houweling, S., Meirink, J. F., Notholt, J., et al. (2008). Tropical methane emissions: A revised view from SCIAMACHY onboard ENVISAT. Geophysical Research Letters, 35(15). https://doi.org/10.1029/2008gl034300\n\n\nFrankenberg, Christian, Aben, I., Bergamaschi, P., Dlugokencky, E., Van Hees, R., Houweling, S., et al. (2011). Global column-averaged methane mixing ratios from 2003 to 2009 as derived from SCIAMACHY: Trends and variability. Journal of Geophysical Research: Atmospheres, 116(D4). https://doi.org/10.1029/2010jd014849\n\n\nFrankenberg, Christian, Thorpe, A. K., Thompson, D. R., Hulley, G., Kort, E. A., Vance, N., et al. (2016). Airborne methane remote measurements reveal heavy-tail flux distribution in four corners region. Proceedings of the National Academy of Sciences, 113(35), 9734–9739. https://doi.org/10.1073/pnas.1605617113\n\n\nJongaramrungruang, S., Frankenberg, C., Matheou, G., Thorpe, A. K., Thompson, D. R., Kuai, L., & Duren, R. M. (2019). Towards accurate methane point-source quantification from high-resolution 2-d plume imagery. Atmospheric Measurement Techniques, 12(12), 6667–6681. https://doi.org/10.5194/amt-12-6667-2019\n\n\nJongaramrungruang, S., Matheou, G., Thorpe, A. K., Zeng, Z.-C., & Frankenberg, C. (2021). Remote sensing of methane plumes: Instrument tradeoff analysis for detecting and quantifying local sources at global scale. Atmospheric Measurement Techniques, 14(12), 7999–8017. https://doi.org/10.5194/amt-14-7999-2021\n\n\nJongaramrungruang, S., Thorpe, A. K., Matheou, G., & Frankenberg, C. (2022). MethaNet–an AI-driven approach to quantifying methane point-source emission from high-resolution 2-d plume imagery. Remote Sensing of Environment, 269, 112809. https://doi.org/10.1016/j.rse.2021.112809\n\n\nThompson, D., Thorpe, A., Frankenberg, C., Green, R., Duren, R., Guanter, L., et al. (2016). Space-based remote imaging spectroscopy of the aliso canyon CH4 superemitter. Geophysical Research Letters, 43(12), 6571–6578. https://doi.org/10.1002/2016gl069079\n\n\nThompson, D. R., Thorpe, A. K., Frankenberg, C., Green, R. O., Duren, R. M., Aubrey, A. D., et al. (2016). The aliso canyon super-emitter: Initial results of observations by AVIRIS-c and the hyperion spacecraft, with implications for global spectroscopic CH 4 monitoring. In AGU fall meeting abstracts (Vol. 2016, pp. GC52A–04). https://doi.org/10.5642/aliso.19951402.05\n\n\nThorpe, A., Frankenberg, C., & Roberts, D. (2014). Retrieval techniques for airborne imaging of methane concentrations using high spatial and moderate spectral resolution: Application to AVIRIS. Atmospheric Measurement Techniques, 7(2), 491–506. https://doi.org/10.5194/amt-7-491-2014\n\n\nThorpe, A. K., Frankenberg, C., Aubrey, A., Roberts, D., Nottrott, A., Rahn, T., et al. (2016). Mapping methane concentrations from a controlled release experiment using the next generation airborne visible/infrared imaging spectrometer (AVIRIS-NG). Remote Sensing of Environment, 179, 104–115. https://doi.org/10.1016/j.rse.2018.06.018\n\n\nThorpe, A. K., Frankenberg, C., Green, R. O., Thompson, D. R., Aubrey, A. D., Mouroulis, P., et al. (2016). The airborne methane plume spectrometer (AMPS): Quantitative imaging of methane plumes in real time. In 2016 IEEE aerospace conference (pp. 1–14). IEEE. https://doi.org/10.1109/aero.2016.7500756\n\n\nThorpe, A. K., Frankenberg, C., Thompson, D. R., Duren, R. M., Aubrey, A. D., Bue, B. D., et al. (2017). Airborne DOAS retrievals of methane, carbon dioxide, and water vapor concentrations at high spatial resolution: Application to AVIRIS-NG. Atmospheric Measurement Techniques, 10(10), 3833–3850. https://doi.org/10.5194/amt-10-3833-2017\n\n\nThorpe, A. K., Duren, R. M., Conley, S., Prasad, K. R., Bue, B. D., Yadav, V., et al. (2020). Methane emissions from underground gas storage in california. Environmental Research Letters, 15(4), 045005. https://doi.org/10.1088/1748-9326/ab751d\n\n\nThorpe, A. K., Green, R. O., Thompson, D. R., Brodrick, P. G., Chapman, J. W., Elder, C. D., et al. (2023). Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space. Science Advances, 9(46), eadh2391. https://doi.org/10.1126/sciadv.adh2391\n\n\nThorpe, A. K., Kort, E. A., Cusworth, D., Ayasse, A., Bue, B. D., Yadav, V., et al. (2023). Methane emissions decline from reduced oil, natural gas, and refinery production during COVID-19. Environmental Research Communications, 5(2), 021006. https://doi.org/10.1088/2515-7620/acb5e5"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "A Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
+  },
+  {
+    "objectID": "index.html#the-carbon-investigation",
+    "href": "index.html#the-carbon-investigation",
+    "title": "",
+    "section": "",
+    "text": "A Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
+  },
+  {
+    "objectID": "index.html#high-resolution-mapping-of-obscured-greenhouse-gases",
+    "href": "index.html#high-resolution-mapping-of-obscured-greenhouse-gases",
+    "title": "",
+    "section": "High-resolution Mapping of Obscured Greenhouse Gases",
+    "text": "High-resolution Mapping of Obscured Greenhouse Gases\n\n\nGreenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments"
+  },
+  {
+    "objectID": "index.html#carbon-i-will",
+    "href": "index.html#carbon-i-will",
+    "title": "",
+    "section": "Carbon-I Will:",
+    "text": "Carbon-I Will:\n\nCollect 1000 times more data in the tropics by observing between clouds\nDifferentiate the sources and composition of emissions at the city block level anywhere"
+  },
+  {
+    "objectID": "index.html#objectives",
+    "href": "index.html#objectives",
+    "title": "",
+    "section": "Objectives",
+    "text": "Objectives\n\nIdentify, characterize and quantify hotspots of CH4 and CO2 emissions across the globe\nQuantify global CH4 and CO2, and CO monthly fluxes at unprecedented 12-100km resolution\nAttribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes"
+  },
+  {
+    "objectID": "index.html#mission-overview",
+    "href": "index.html#mission-overview",
+    "title": "",
+    "section": "Mission Overview",
+    "text": "Mission Overview\n\nGlobal mode: &lt;400m sampling of land and coastal oceans monthly\nTarget mode: &lt;50m sampling of key regions (95kmx95km; over 2 million acres)\nAbsorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers"
+  },
+  {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "",
+    "section": "",
+    "text": "Note\n\n\n\nThe Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrincipal Investigator\n\n\nCaltech/JPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeputy Principal Investigator – Science\n\n\nCarnegie Institution for Science / Stanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversion Lead\n\n\nHarvard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversions\n\n\nNew York University\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtmospheric Chemistry & Carbon Cycle feedbacks\n\n\nUniversity of Washington\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValidation Lead\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Scientist\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNOAA cross-validation, flux inversions\n\n\nNOAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux validation lead\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgriculture Applications\n\n\nUC Davis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration support\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration Lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScience Data System lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplications Lead\n\n\nJPL\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "team.html#science-team",
+    "href": "team.html#science-team",
+    "title": "",
+    "section": "",
+    "text": "Note\n\n\n\nThe Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrincipal Investigator\n\n\nCaltech/JPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeputy Principal Investigator – Science\n\n\nCarnegie Institution for Science / Stanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversion Lead\n\n\nHarvard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversions\n\n\nNew York University\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtmospheric Chemistry & Carbon Cycle feedbacks\n\n\nUniversity of Washington\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValidation Lead\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Scientist\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNOAA cross-validation, flux inversions\n\n\nNOAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux validation lead\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgriculture Applications\n\n\nUC Davis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration support\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration Lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScience Data System lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplications Lead\n\n\nJPL\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "team.html#collaborators",
+    "href": "team.html#collaborators",
+    "title": "",
+    "section": "Collaborators",
+    "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL/Caltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniversity Edinburgh, UK\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebra Wunch\n\n\nUniversity of Toronto\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes D. (Bram) Maasakkers\n\n\nSRON, The Netherlands\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "News/latimes.html",
+    "href": "News/latimes.html",
+    "title": "LA Times article",
+    "section": "",
+    "text": "AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found here. It nicely outlines our path from the Four Corners campaign to more routine observations of methane plumes. We have come a long way and have to go further still. Maybe we should follow up with a post here about the history of methane observations from space…\nTo quote the article and re-quote our Co-PI Anna Michalak:\nThe NASA program for which Carbon-I was selected as a finalist aims to fund space-based Earth science that will benefit society. The team was awarded $5 million to sharpen its project proposal before a final NASA review in 2025. There are three other finalists, and two will be selected for the launch.\nThis two-step process for selecting missions is new for NASA’s Earth science programs and requires JPL to compete with the rest of the scientific community, independent of their association with the space agency.\n“If we’re talking about grocery money, $5 million seems like a lot of money, but it’s really a bargain,” said Michalak. “If you think about the fact that you’re committing $300 million toward a mission, spending 1.5% of that to really make sure it’s going to be fabulous and successful is extremely smart.”\nIn the meantime, the Carbon-I team is focused on showing NASA that it has the technical know-how to execute the project on time and under budget.\n“I think all four of the missions in the current phase are absolutely worthwhile scientific missions,” said Michalak, “and 50% odds are not bad odds for a satellite mission.”"
+  },
+  {
+    "objectID": "News/latimes.html#la-times-article-on-carbon-i-efforts",
+    "href": "News/latimes.html#la-times-article-on-carbon-i-efforts",
+    "title": "LA Times article",
+    "section": "",
+    "text": "AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found here. It nicely outlines our path from the Four Corners campaign to more routine observations of methane plumes. We have come a long way and have to go further still. Maybe we should follow up with a post here about the history of methane observations from space…\nTo quote the article and re-quote our Co-PI Anna Michalak:\nThe NASA program for which Carbon-I was selected as a finalist aims to fund space-based Earth science that will benefit society. The team was awarded $5 million to sharpen its project proposal before a final NASA review in 2025. There are three other finalists, and two will be selected for the launch.\nThis two-step process for selecting missions is new for NASA’s Earth science programs and requires JPL to compete with the rest of the scientific community, independent of their association with the space agency.\n“If we’re talking about grocery money, $5 million seems like a lot of money, but it’s really a bargain,” said Michalak. “If you think about the fact that you’re committing $300 million toward a mission, spending 1.5% of that to really make sure it’s going to be fabulous and successful is extremely smart.”\nIn the meantime, the Carbon-I team is focused on showing NASA that it has the technical know-how to execute the project on time and under budget.\n“I think all four of the missions in the current phase are absolutely worthwhile scientific missions,” said Michalak, “and 50% odds are not bad odds for a satellite mission.”"
+  },
+  {
     "objectID": "News/Carbon-I.html",
     "href": "News/Carbon-I.html",
     "title": "Carbon-I proposal to NASA’s ESE call",
@@ -28,69 +112,6 @@
     "text": "A Carbon-I website…\nWhy create a website for something that isn’t even funded yet? Honestly, Quarto makes this a lot more fun and provides an ideal system for scientists to run their own website, and describe science in fun interactive ways. Carbon-I is still very rudimentary but creating some interactive graphics with ObservableJS has been fun, even though I dislike java script syntax. So it has been absolutely worth it and we learned a lot along the way…"
   },
   {
-    "objectID": "News/latimes.html",
-    "href": "News/latimes.html",
-    "title": "LA Times article",
-    "section": "",
-    "text": "AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found here. It nicely outlines our path from the Four Corners campaign to more routine observations of methane plumes. We have come a long way and have to go further still. Maybe we should follow up with a post here about the history of methane observations from space…\nTo quote the article and re-quote our Co-PI Anna Michalak:\nThe NASA program for which Carbon-I was selected as a finalist aims to fund space-based Earth science that will benefit society. The team was awarded $5 million to sharpen its project proposal before a final NASA review in 2025. There are three other finalists, and two will be selected for the launch.\nThis two-step process for selecting missions is new for NASA’s Earth science programs and requires JPL to compete with the rest of the scientific community, independent of their association with the space agency.\n“If we’re talking about grocery money, $5 million seems like a lot of money, but it’s really a bargain,” said Michalak. “If you think about the fact that you’re committing $300 million toward a mission, spending 1.5% of that to really make sure it’s going to be fabulous and successful is extremely smart.”\nIn the meantime, the Carbon-I team is focused on showing NASA that it has the technical know-how to execute the project on time and under budget.\n“I think all four of the missions in the current phase are absolutely worthwhile scientific missions,” said Michalak, “and 50% odds are not bad odds for a satellite mission.”"
-  },
-  {
-    "objectID": "News/latimes.html#la-times-article-on-carbon-i-efforts",
-    "href": "News/latimes.html#la-times-article-on-carbon-i-efforts",
-    "title": "LA Times article",
-    "section": "",
-    "text": "AAAS media fellow Noah Haggerty just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found here. It nicely outlines our path from the Four Corners campaign to more routine observations of methane plumes. We have come a long way and have to go further still. Maybe we should follow up with a post here about the history of methane observations from space…\nTo quote the article and re-quote our Co-PI Anna Michalak:\nThe NASA program for which Carbon-I was selected as a finalist aims to fund space-based Earth science that will benefit society. The team was awarded $5 million to sharpen its project proposal before a final NASA review in 2025. There are three other finalists, and two will be selected for the launch.\nThis two-step process for selecting missions is new for NASA’s Earth science programs and requires JPL to compete with the rest of the scientific community, independent of their association with the space agency.\n“If we’re talking about grocery money, $5 million seems like a lot of money, but it’s really a bargain,” said Michalak. “If you think about the fact that you’re committing $300 million toward a mission, spending 1.5% of that to really make sure it’s going to be fabulous and successful is extremely smart.”\nIn the meantime, the Carbon-I team is focused on showing NASA that it has the technical know-how to execute the project on time and under budget.\n“I think all four of the missions in the current phase are absolutely worthwhile scientific missions,” said Michalak, “and 50% odds are not bad odds for a satellite mission.”"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "A Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
-  },
-  {
-    "objectID": "index.html#the-carbon-investigation",
-    "href": "index.html#the-carbon-investigation",
-    "title": "",
-    "section": "",
-    "text": "A Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
-  },
-  {
-    "objectID": "index.html#high-resolution-mapping-of-obscured-greenhouse-gases",
-    "href": "index.html#high-resolution-mapping-of-obscured-greenhouse-gases",
-    "title": "",
-    "section": "High-resolution Mapping of Obscured Greenhouse Gases",
-    "text": "High-resolution Mapping of Obscured Greenhouse Gases\n\nGreenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments"
-  },
-  {
-    "objectID": "index.html#carbon-i-will",
-    "href": "index.html#carbon-i-will",
-    "title": "",
-    "section": "Carbon-I Will:",
-    "text": "Carbon-I Will:\n\nCollect 1000 times more data in the tropics by observing between clouds\nDifferentiate the sources and composition of emissions at the city block level anywhere"
-  },
-  {
-    "objectID": "index.html#objectives",
-    "href": "index.html#objectives",
-    "title": "",
-    "section": "Objectives",
-    "text": "Objectives\n\nIdentify, characterize and quantify hotspots of CH4 and CO2 emissions across the globe\nQuantify global CH4 and CO2, and CO monthly fluxes at unprecedented 12-100km resolution\nAttribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes"
-  },
-  {
-    "objectID": "index.html#mission-overview",
-    "href": "index.html#mission-overview",
-    "title": "",
-    "section": "Mission Overview",
-    "text": "Mission Overview\n\nGlobal mode: &lt;400m sampling of land and coastal oceans monthly\nTarget mode: &lt;50m sampling of key regions (95kmx95km; over 2 million acres)\nAbsorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers"
-  },
-  {
-    "objectID": "clouds_test.html",
-    "href": "clouds_test.html",
-    "title": "",
-    "section": "",
-    "text": "import {d3} from \"d3@7\"\nPlot.plot({\n  y: {grid: true},\n  color: {legend: true},\n  marks: [\n    Plot.rectY(filtered, Plot.binX({y: \"count\"}, {x: \"cloud_free_fraction02\",thresholds: thresh})),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof latitude = slider({\n  min: -90, max: 90, step: 1, value: 40, title: \"Latitude\"\n})\n\nviewof longitude = slider({\n  min: -180, max: 180, step: 1, value: -74, title: \"Longitude\"\n})\n\nviewof startDate = date({\n  title: \"Start Date\",\n  value: \"2021-01-01\"\n})\n\nviewof endDate = date({\n  title: \"End Date\",\n  value: \"2022-12-31\"\n})\n\n\n\nfunction getDataUrl(lat, lon) {\n  return `https://web.gps.caltech.edu/~cfranken/subset_data.csv`;\n}\n\nasync function loadData() {\n  const url = getDataUrl(latitude, longitude);\n  const data = await csv(url);\n  return data.filter(d =&gt; \n    new Date(d.time) &gt;= new Date(startDate) && \n    new Date(d.time) &lt;= new Date(endDate)\n  );\n}\n\nfilteredData = loadData();\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```{ojs}\n// Set the dimensions of the graph\nwidth = 800;\nheight = 500;\nmargin = {top: 20, right: 30, bottom: 40, left: 90};\n\n// Set up scales\nconst xScale = d3.scaleBand()\n  .domain(filteredData.map(d =&gt; d.time))\n  .range([margin.left, width - margin.right])\n  .padding(0.1);\n\nconst yScale = d3.scaleLinear()\n  .domain([0, d3.max(filteredData, d =&gt; d.cloud_free_fraction)])\n  .nice()\n  .range([height - margin.bottom, margin.top]);\n\n// SVG container\nconst svg = d3.create(\"svg\")\n    .attr(\"viewBox\", [0, 0, width, height]);\n\n// Bars\nsvg.append(\"g\")\n  .attr(\"fill\", \"steelblue\")\n  .selectAll(\"rect\")\n  .data(filteredData)\n  .join(\"rect\")\n    .attr(\"x\", d =&gt; xScale(d.time))\n    .attr(\"y\", d =&gt; yScale(d.cloud_free_fraction))\n    .attr(\"height\", d =&gt; yScale(0) - yScale(d.cloud_free_fraction))\n    .attr(\"width\", xScale.bandwidth());\n\n// X-axis\nsvg.append(\"g\")\n  .attr(\"transform\", `translate(0,${height - margin.bottom})`)\n  .call(d3.axisBottom(xScale));\n\n// Y-axis\nsvg.append(\"g\")\n  .attr(\"transform\", `translate(${margin.left},0)`)\n  .call(d3.axisLeft(yScale));\n\nreturn svg.node();\n```\n\n\n\n\n\n\n\nOJS Syntax Error (line 52, column 25)Unexpected token"
-  },
-  {
     "objectID": "testMap.html",
     "href": "testMap.html",
     "title": "",
@@ -98,116 +119,39 @@
     "text": "Code\n\n\n\n\n\nviewof projName = Inputs.radio(\n  new Map([\n    [\"Orthographic\", \"ortho\"],\n    [\"Equirectangular\", \"equirectangular\"],\n    [\"Hill\", \"hill\"],\n    [\"Equal-Earth\", \"equalearth\"],\n    [\"AzEqualArea\", \"azequalarea\"]\n  ]),\n  {\n    label: \"Choose projection\",\n    value: \"hill\"\n  }\n)\n\n\n\n\n\n\n\nd3 = require(\"d3@7\", \"d3-geo-projection@4\", \"d3-inertia@0.4\")\n\n\n\n\n\n\n\nnetcdf = import(\"https://cdn.skypack.dev/netcdfjs@2.0.2?min\").then((d) =&gt; d.NetCDFReader)\n\n\n\n\n\n\n\nreader = new netcdf(await fetch(\"https://raw.githubusercontent.com/cfranken/s2_data/main/files/\" + source.src).then(function(response) {\n    return response.arrayBuffer();\n  }))\n\n\n\n\n\n\n\nsources = [\n  {src: \"S2_200_2000_median.nc\", variable: \"cloud_free_fraction02\", label: \"Median Ratio\"},\n]\n\n\n\n\n\n\n\nsource = sources[dataSource]\n\n\n\n\n\n\n\nisize = reader.header.dimensions[0].size\njsize = reader.header.dimensions[1].size\nzsize = reader.header.dimensions[2].size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nisize\n\n\n\n\n\n\n\njsize\n\n\n\n\n\n\n\nzsize\n\n\n\n\n\n\n\ntopojson     = require('topojson')\n\n\n\n\n\n\n\nvalues = {\n  var values = new Float32Array(reader.getDataVariable(source.variable));\n  return values;\n}\n\n\n\n\n\n\n\npolygons = contours(cylinder(topdown(values))).map(invert).map(function(p) {\n  return p.type == \"Polygon\" ? simplify(p, 0.01) : p;\n})\n\n\n\n\n\n\n\nfunction simplify(polygon, s) {\n    var topology = topojson.topology({polygon: polygon});\n    topology = topojson.simplify(topojson.presimplify(topology), s);\n    topology = topojson.filter(topology, r =&gt; topology.arcs[r[0]].length &gt; 2);\n    var p = topojson.feature(topology, topology.objects.polygon);\n    p.value = polygon.value;\n    return p;\n  }\n\n\n\n\n\n\n\nfunction invert(d) {\n    var shared = {};\n    var p = {\n      type: \"Polygon\",\n      coordinates: d3.merge(d.coordinates.map(function(polygon) {\n        return polygon.map(function(ring) {\n          return ring.map(function(point) {\n            return [point[0] / (isize + 1) * 360 - 180, 90 - point[1] / jsize * 180];\n          }).reverse();\n        });\n      }))\n    };\n\n    // Add contact points with the antimeridian.\n    var epsilon = 1e-5;\n    p.coordinates = p.coordinates\n    .map(function(ring) {\n      ring.pop();\n      var r = [];\n      for (var i = 0, l = ring.length; i &lt; l; i++) {\n        var p = ring[i];\n        if (p[0] === 180 && ring[(i+l-1)%l][0] &lt; 180)\n            r.push([p[0], p[1] + epsilon]);\n        if (p[0] === -180 && ring[(i+l-1)%l][0] &gt; -180)\n            r.push([p[0], p[1] - epsilon]);\n        r.push(p);\n        if (p[0] === 180 && ring[(i+1)%l][0] &lt; 180)\n            r.push([p[0], p[1] - epsilon]);\n        if (p[0] === -180 && ring[(i+1)%l][0] &gt; -180)\n            r.push([p[0], p[1] + epsilon]);\n      }\n      r.push(r[0]);\n      return r;\n    });\n\n    // Record the y-intersections with the antimeridian.\n    p.coordinates.forEach(function(ring) {\n      ring.forEach(function(p) {\n        if (p[0] === -180 || p[0] === 180) {\n          shared[p[1]] |= p[0] === -180 ? 1 : 2;\n        }\n      });\n    });\n\n    // Offset any unshared antimeridian points to prevent their stitching.\n    p.coordinates.forEach(function(ring) {\n      ring.forEach(function(p) {\n        if ((p[0] === -180 || p[0] === 180) && shared[p[1]] !== 3) {\n          p[0] = p[0] === -180 ? -179.9995 : 179.9995;\n        }\n      });\n    });\n\n    p = d3.geoStitch(p);\n\n    // After stitching remove the shared points -- they are off\n    // see https://github.com/d3/d3-contour/issues/25\n    p.coordinates = p.coordinates\n    .map(function(ring) {\n      ring.pop();\n      ring = ring\n      .map(function(p) {\n        var p0 = (p[0] + 180) * (isize + 1) / isize - 180;\n        return [p0, p[1]];\n      });\n      ring = ring.filter(function(p) {\n        return Math.abs(p[0]) &lt; 179.9999;\n      });\n      ring.push(ring[0]);\n      return ring;\n    })\n    .filter(function(ring) {\n      return ring.length &gt; 0;\n    });\n\n    // If the MultiPolygon is empty, treat it as the Sphere.\n    return p.coordinates.length\n        ? {type: \"Polygon\", coordinates: p.coordinates, value: d.value}\n        : {type: \"Sphere\", value: d.value};\n    \n  }\n\n\n\n\n\n\n\nfunction topdown(values) {\n  var v = new Float32Array(values);\n  for (var j = 0; j &lt; jsize; j++) {\n    for (var i = 0; i &lt; isize; i++) {\n      v[ (jsize-1-j) * isize + i ] = values[ j * isize + i ];\n    }\n  }\n  return v;\n}\n\n\n\n\n\n\n\n// torus: copy left column to the right\nfunction cylinder(values) {\n  var v = new Float32Array(jsize * (isize+1));\n  for (var j = 0; j &lt; jsize; j++) {\n    for (var i = 0; i &lt; isize + 1; i++) {\n      v[ j * (isize+1) + i ] = values[ j * isize + i%isize ];\n     }\n }\n return v;\n}\n\n\n\n\n\n\n\ncontours = d3.contours()\n      .smooth(true)\n      .size([isize + 1, jsize])\n\n\n\n\n\n\n\npolygons"
   },
   {
-    "objectID": "ch4_story.html",
-    "href": "ch4_story.html",
-    "title": "",
+    "objectID": "people/ScienceTeam/13_brodrick.html",
+    "href": "people/ScienceTeam/13_brodrick.html",
+    "title": "Philip Brodrick",
     "section": "",
-    "text": "Code"
+    "text": "Philip G. Brodrick is a Data Scientist at the Jet Propulsion Laboratory in Pasadena, CA, working on the science and application of imaging spectroscopy."
   },
   {
-    "objectID": "ch4_story.html#what-is-going-on-with-methane",
-    "href": "ch4_story.html#what-is-going-on-with-methane",
-    "title": "",
-    "section": "What is going on with methane?",
-    "text": "What is going on with methane?\nHuman activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO2) and methane (CH4). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use (Turner, Frankenberg, and Kort 2019; Saunois et al. 2017). The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks (Zhang et al. 2023) and anthropogenic sources (Jackson et al. 2020)."
-  },
-  {
-    "objectID": "ch4_story.html#ch4-data-from-noaa",
-    "href": "ch4_story.html#ch4-data-from-noaa",
-    "title": "",
-    "section": "CH4 data from NOAA",
-    "text": "CH4 data from NOAA\nGround based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly CH4 concentration data, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.\n\nfileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\ncsvText = d3.text(fileUrl)\n\n\n\n\n\n\n\nprocessedData = {\n  const lines = csvText.split('\\n').filter(line =&gt; line.trim().length &gt; 0 && !line.startsWith('#'));\n  return d3.csvParse(lines.join('\\n'),d3.autoType);\n}\n\n\n\n\n\n\n\nprocessedData2 = processedData.map(d =&gt; ({\n  ...d,\n  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date\n}));\n\n\n\n\n\n\n\nstart = new Date(1980, 0)\nend   = new Date(2024,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = processedData2.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nyMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field\nyMax = d3.max(filtered, d =&gt; d.average);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstagnationDate = new Date(\"2005-01-01\") \nincreaseDate   = new Date(\"2010-01-01\") \naccelerationDate = new Date(\"2015-01-01\") \ntopMargin= 1750\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction adjustTextPosition(plotDomain, fixedDate, defaultPosition) {\n  if (fixedDate &lt; plotDomain[0] || fixedDate &gt; plotDomain[1]) {\n    // Adjust the position to be within the domain\n    // For example, set it to the start or end of the domain\n    return plotDomain[0]; // or plotDomain[1]\n  }\n  return defaultPosition;\n}\n\n\n\n\n\n\n\nPlot.plot({\n    width,\n  y: {\n    grid: true,\n    label: \"CH₄ (ppb)\",\n    domain: [yMin, yMax] // Set the y-axis domain\n  },\n  x: {\n    grid: true,\n    label: \"time\",\n    domain: [d3.min(filtered, d =&gt; d.Date), d3.max(filtered, d =&gt; d.Date)] // Set the y-axis domain\n  },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marks: [\n    Plot.rectY([{}], { \n      x1: new Date(\"2000-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2007-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"blue\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2007-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2015-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"yellow\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2015-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2024-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"red\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.line(filtered, { \n      x: \"Date\", \n      y: \"average\",\n      title: (d) =&gt;\n        `${formatDate(d.Date)} \\n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \\n makes a new line\n    }),\n    Plot.lineY(filtered, Plot.windowY({k: 12, reduce: \"mean\"}, {x: \"Date\", y: \"average\", stroke: \"red\"})),\n    Plot.text([{}], {\n      x: stagnationDate,\n      y: 1820,\n      textAnchor: \"middle\",\n      dy: \"-0.5em\", // Adjust vertical position\n      fontWeight: \"bold\",\n      text: \"Stagnation Period\"\n    })\n  ]\n})\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Carbon-I related publications",
-    "section": "",
-    "text": "Over the past two decades, remarkable advancements have been achieved in retrieving GHG data from space-based platforms. Lessons learned from the past play a crucial role in shaping our requirements and approach. We now know that a) very high spectral resolution (&lt;1 nm) is not always necessary (Cusworth et al., 2019; Jongaramrungruang et al., 2021; A. Thorpe et al., 2014), b) the humid tropics yield far less reliable retrievals than previously anticipated at km-scale resolutions, c) high spatial resolution provides attribution, enables direct ground-truthing of remote retrievals, and is the only way to obtain more cloud-free data in the humid tropics. This list of papers is far from complete and will be updated in the near future.\nCarbon-I leverages the advances made by previous dedicated satellite missions such as SCIAMACHY (C. Frankenberg et al., 2005), GOSAT, and OCO-2. In addition, we merge the advantages of high spatial resolution, which has now enabled revolutionary measurements of gas plumes, leading to actionable results (A. Thorpe et al., 2014). Our retrieval and point flux inversion approach is based on many publication from Carbon-I team members, e.g. Jongaramrungruang et al. (2019), Jongaramrungruang et al. (2021), Jongaramrungruang et al. (2022), D. R. Thompson et al. (2016), D. Thompson et al. (2016), Christian Frankenberg et al. (2016), Ayasse et al. (2018), Borchardt et al. (2020), Cusworth et al. (2019), Cusworth, Duren, Thorpe, Pandey, et al. (2021), Cusworth, Duren, Thorpe, Eastwood, et al. (2021), Duren et al. (2019), Foote et al. (2020), A. Thorpe et al. (2014), A. K. Thorpe, Frankenberg, Green, et al. (2016), A. K. Thorpe, Frankenberg, Aubrey, et al. (2016), A. K. Thorpe et al. (2017), A. K. Thorpe et al. (2020), A. K. Thorpe, Green, et al. (2023), A. K. Thorpe, Kort, et al. (2023), C. Frankenberg et al. (2005), Christian Frankenberg et al. (2005), C. Frankenberg et al. (2006), Christian Frankenberg, Warneke, et al. (2008), Christian Frankenberg, Bergamaschi, et al. (2008), Christian Frankenberg et al. (2011)\n\n\n\n\nReferences\n\nAyasse, A. K., Thorpe, A. K., Roberts, D. A., Funk, C. C., Dennison, P. E., Frankenberg, C., et al. (2018). Evaluating the effects of surface properties on methane retrievals using a synthetic airborne visible/infrared imaging spectrometer next generation (AVIRIS-NG) image. Remote Sensing of Environment, 215, 386–397. https://doi.org/10.1016/j.rse.2018.06.018\n\n\nBorchardt, J., Gerilowski, K., Krautwurst, S., Bovensmann, H., Thorpe, A. K., Thompson, D. R., et al. (2020). Detection and quantification of CH 4 plumes using the WFM-DOAS retrieval on AVIRIS-NG hyperspectral data. Atmospheric Measurement Techniques Discussions, 2020, 1–34. https://doi.org/10.5194/amt-14-1267-2021\n\n\nCusworth, D. H., Jacob, D. J., Varon, D. J., Chan Miller, C., Liu, X., Chance, K., et al. (2019). Potential of next-generation imaging spectrometers to detect and quantify methane point sources from space. Atmospheric Measurement Techniques, 12(10), 5655–5668. https://doi.org/10.5194/amt-2019-202-rc2\n\n\nCusworth, D. H., Duren, R. M., Thorpe, A. K., Pandey, S., Maasakkers, J. D., Aben, I., et al. (2021). Multisatellite imaging of a gas well blowout enables quantification of total methane emissions. Geophysical Research Letters, 48(2), e2020GL090864. https://doi.org/10.1029/2020gl090864\n\n\nCusworth, D. H., Duren, R. M., Thorpe, A. K., Eastwood, M. L., Green, R. O., Dennison, P. E., et al. (2021). Quantifying global power plant carbon dioxide emissions with imaging spectroscopy. AGU Advances, 2(2), e2020AV000350. https://doi.org/10.1029/2020av000350\n\n\nDuren, R. M., Thorpe, A. K., Foster, K. T., Rafiq, T., Hopkins, F. M., Yadav, V., et al. (2019). California’s methane super-emitters. Nature, 575(7781), 180–184. https://doi.org/10.21203/rs.3.rs-952096/v1\n\n\nFoote, M. D., Dennison, P. E., Thorpe, A. K., Thompson, D. R., Jongaramrungruang, S., Frankenberg, C., & Joshi, S. C. (2020). Fast and accurate retrieval of methane concentration from imaging spectrometer data using sparsity prior. IEEE Transactions on Geoscience and Remote Sensing, 58(9), 6480–6492. https://doi.org/10.1109/tgrs.2020.2976888\n\n\nFrankenberg, C., Meirink, J., Weele, M. van, Platt, U., & Wagner, T. (2005). Assessing methane emissions from global space-borne observations. Science, 308(5724), 1010–1014. https://doi.org/10.1126/science.1106644\n\n\nFrankenberg, Christian, Platt, U., & Wagner, T. (2005). Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT. Atmospheric Chemistry and Physics, 5(1), 9–22. https://doi.org/10.5194/acp-5-9-2005\n\n\nFrankenberg, C., Meirink, J., Bergamaschi, P., Goede, A., Heimann, M., Körner, S., et al. (2006). Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: Analysis of the years 2003 and 2004. Journal of Geophysical Research, 111(D7), D07303. https://doi.org/10.1029/2005jd006235\n\n\nFrankenberg, Christian, Warneke, T., Butz, A., Aben, I., Hase, F., Spietz, P., & Brown, L. R. (2008). Pressure broadening in the 2\\(\\nu\\) 3 band of methane and its implication on atmospheric retrievals. Atmospheric Chemistry and Physics, 8(17), 5061–5075. https://doi.org/10.5194/acp-8-5061-2008\n\n\nFrankenberg, Christian, Bergamaschi, P., Butz, A., Houweling, S., Meirink, J. F., Notholt, J., et al. (2008). Tropical methane emissions: A revised view from SCIAMACHY onboard ENVISAT. Geophysical Research Letters, 35(15). https://doi.org/10.1029/2008gl034300\n\n\nFrankenberg, Christian, Aben, I., Bergamaschi, P., Dlugokencky, E., Van Hees, R., Houweling, S., et al. (2011). Global column-averaged methane mixing ratios from 2003 to 2009 as derived from SCIAMACHY: Trends and variability. Journal of Geophysical Research: Atmospheres, 116(D4). https://doi.org/10.1029/2010jd014849\n\n\nFrankenberg, Christian, Thorpe, A. K., Thompson, D. R., Hulley, G., Kort, E. A., Vance, N., et al. (2016). Airborne methane remote measurements reveal heavy-tail flux distribution in four corners region. Proceedings of the National Academy of Sciences, 113(35), 9734–9739. https://doi.org/10.1073/pnas.1605617113\n\n\nJongaramrungruang, S., Frankenberg, C., Matheou, G., Thorpe, A. K., Thompson, D. R., Kuai, L., & Duren, R. M. (2019). Towards accurate methane point-source quantification from high-resolution 2-d plume imagery. Atmospheric Measurement Techniques, 12(12), 6667–6681. https://doi.org/10.5194/amt-12-6667-2019\n\n\nJongaramrungruang, S., Matheou, G., Thorpe, A. K., Zeng, Z.-C., & Frankenberg, C. (2021). Remote sensing of methane plumes: Instrument tradeoff analysis for detecting and quantifying local sources at global scale. Atmospheric Measurement Techniques, 14(12), 7999–8017. https://doi.org/10.5194/amt-14-7999-2021\n\n\nJongaramrungruang, S., Thorpe, A. K., Matheou, G., & Frankenberg, C. (2022). MethaNet–an AI-driven approach to quantifying methane point-source emission from high-resolution 2-d plume imagery. Remote Sensing of Environment, 269, 112809. https://doi.org/10.1016/j.rse.2021.112809\n\n\nThompson, D., Thorpe, A., Frankenberg, C., Green, R., Duren, R., Guanter, L., et al. (2016). Space-based remote imaging spectroscopy of the aliso canyon CH4 superemitter. Geophysical Research Letters, 43(12), 6571–6578. https://doi.org/10.1002/2016gl069079\n\n\nThompson, D. R., Thorpe, A. K., Frankenberg, C., Green, R. O., Duren, R. M., Aubrey, A. D., et al. (2016). The aliso canyon super-emitter: Initial results of observations by AVIRIS-c and the hyperion spacecraft, with implications for global spectroscopic CH 4 monitoring. In AGU fall meeting abstracts (Vol. 2016, pp. GC52A–04). https://doi.org/10.5642/aliso.19951402.05\n\n\nThorpe, A., Frankenberg, C., & Roberts, D. (2014). Retrieval techniques for airborne imaging of methane concentrations using high spatial and moderate spectral resolution: Application to AVIRIS. Atmospheric Measurement Techniques, 7(2), 491–506. https://doi.org/10.5194/amt-7-491-2014\n\n\nThorpe, A. K., Frankenberg, C., Aubrey, A., Roberts, D., Nottrott, A., Rahn, T., et al. (2016). Mapping methane concentrations from a controlled release experiment using the next generation airborne visible/infrared imaging spectrometer (AVIRIS-NG). Remote Sensing of Environment, 179, 104–115. https://doi.org/10.1016/j.rse.2018.06.018\n\n\nThorpe, A. K., Frankenberg, C., Green, R. O., Thompson, D. R., Aubrey, A. D., Mouroulis, P., et al. (2016). The airborne methane plume spectrometer (AMPS): Quantitative imaging of methane plumes in real time. In 2016 IEEE aerospace conference (pp. 1–14). IEEE. https://doi.org/10.1109/aero.2016.7500756\n\n\nThorpe, A. K., Frankenberg, C., Thompson, D. R., Duren, R. M., Aubrey, A. D., Bue, B. D., et al. (2017). Airborne DOAS retrievals of methane, carbon dioxide, and water vapor concentrations at high spatial resolution: Application to AVIRIS-NG. Atmospheric Measurement Techniques, 10(10), 3833–3850. https://doi.org/10.5194/amt-10-3833-2017\n\n\nThorpe, A. K., Duren, R. M., Conley, S., Prasad, K. R., Bue, B. D., Yadav, V., et al. (2020). Methane emissions from underground gas storage in california. Environmental Research Letters, 15(4), 045005. https://doi.org/10.1088/1748-9326/ab751d\n\n\nThorpe, A. K., Green, R. O., Thompson, D. R., Brodrick, P. G., Chapman, J. W., Elder, C. D., et al. (2023). Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space. Science Advances, 9(46), eadh2391. https://doi.org/10.1126/sciadv.adh2391\n\n\nThorpe, A. K., Kort, E. A., Cusworth, D., Ayasse, A., Bue, B. D., Yadav, V., et al. (2023). Methane emissions decline from reduced oil, natural gas, and refinery production during COVID-19. Environmental Research Communications, 5(2), 021006. https://doi.org/10.1088/2515-7620/acb5e5"
-  },
-  {
-    "objectID": "people/ScienceTeam/11_green.html",
-    "href": "people/ScienceTeam/11_green.html",
-    "title": "Robert Green",
-    "section": "",
-    "text": "Rob Green is a Senior Scientist at JPL. He is the Principal Investigator of the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) that originated to use of imaging spectroscopy for carbon dioxide and methane point source mapping. Principal Investigator of the competed Earth Ventures the Earth Surface Mineral Dust Source Investigation (EMIT) space imaging spectrometer that along with the Prime Mission objectives has demonstrated carbon dioxide and methane point source mapping from the ISS across six continents. Instrument Scientist or Co-I in five other space imaging spectrometers (CPM, MISE, M3, Hyperion, CRISM)."
-  },
-  {
-    "objectID": "people/ScienceTeam/11_green.html#education",
-    "href": "people/ScienceTeam/11_green.html#education",
-    "title": "Robert Green",
+    "objectID": "people/ScienceTeam/13_brodrick.html#education",
+    "href": "people/ScienceTeam/13_brodrick.html#education",
+    "title": "Philip Brodrick",
     "section": "Education",
-    "text": "Education\n• PhD, Spectroscopy, University of California, Santa Barbara (2003) • MSc, Applied Earth Science, Stanford University, (1986) • BSc, Geology, Stanford University (1984)\n\nPhD in Spectroscopy | University of California, Santa Barbara | 2003\nMSc, Applied Earth Science | Stanford University | 1986\nBSc, Geology | Stanford University | 1984"
+    "text": "Education\n\nPhD in Energy Systems Engineering | Stanford University, USA | 2012 - 2017\nMS in Renewable and Clean Energy | University of Dayton, USA | 2010 - 2012\n\nBS in Physics | University of Dayton, USA | 2008 - 2010"
   },
   {
-    "objectID": "people/ScienceTeam/11_green.html#professional-experience",
-    "href": "people/ScienceTeam/11_green.html#professional-experience",
-    "title": "Robert Green",
+    "objectID": "people/ScienceTeam/13_brodrick.html#professional-experience",
+    "href": "people/ScienceTeam/13_brodrick.html#professional-experience",
+    "title": "Philip Brodrick",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n20xx-present: Scientist, JPL"
+    "text": "Professional Experience\n\n2023-present: Project Algorithm Scientist, SBG-VSWIR Imaging Spectrometer Mission\n2022-present: Project Algorithm Scientist, EMIT Imaging Spectrometer Mission\n2019-present: Data Scientist, Jet Propulsion Laboratory"
   },
   {
-    "objectID": "people/ScienceTeam/06_thorpe.html",
-    "href": "people/ScienceTeam/06_thorpe.html",
-    "title": "Andrew Thorpe",
+    "objectID": "people/ScienceTeam/07_bruhwiler.html",
+    "href": "people/ScienceTeam/07_bruhwiler.html",
+    "title": "Lori Bruhwiler",
     "section": "",
-    "text": "Andrew Thorpe is a technologist in the JPL imaging spectroscopy group with a decade of experience working with imaging spectrometer data. He has developed quantitative gas retrievals for AVIRIS, AVIRIS-NG, and EMIT using differential optical absorption spectroscopy, methods to estimate emission rates, and contributed to projects aimed at visualizing methane results and reducing data latency. Andrew is currently an EMIT Science Team member leading the EMIT greenhouse gas mapping application, and the Deputy Instrument Scientist for Carbon Plume Mapper."
+    "text": "Lori Bruhwiler is the principal investigator of the NOAA CarbonTracker-CH4 modeling system. She has extensive experience using atmospheric models and in situ network observations to constrain the atmospheric methane budget. Her most recent work examines the use of methane isotopic data to improve our ability to partition the global methane budget among microbial and fossil fuel contributions."
   },
   {
-    "objectID": "people/ScienceTeam/06_thorpe.html#education",
-    "href": "people/ScienceTeam/06_thorpe.html#education",
-    "title": "Andrew Thorpe",
+    "objectID": "people/ScienceTeam/07_bruhwiler.html#education",
+    "href": "people/ScienceTeam/07_bruhwiler.html#education",
+    "title": "Lori Bruhwiler",
     "section": "Education",
-    "text": "Education\n\nPh.D., Geography | Univ. of California, Santa Barbaray | 2015\nB.S., Geology | Brown University | 2004"
-  },
-  {
-    "objectID": "people/ScienceTeam/06_thorpe.html#professional-experience",
-    "href": "people/ScienceTeam/06_thorpe.html#professional-experience",
-    "title": "Andrew Thorpe",
-    "section": "Professional Experience",
-    "text": "Professional Experience\nAndrew Thorpe has extensive experience in high-resolution methane mapping, ranging from retrieval algorithms (A. Thorpe, Frankenberg, and Roberts 2014; Andrew K. Thorpe et al. 2017; Andrew K. Thorpe et al. 2021) and the first ever controlled release experiment involving aircraft and spectroscopic mapping (Andrew K. Thorpe et al. 2016) to data analysis and sectorial up-scaling of methane fluxes (Andrew K. Thorpe et al. 2023, 2020; Cusworth et al. 2022; Duren et al. 2019)."
-  },
-  {
-    "objectID": "people/ScienceTeam/05_wennberg.html",
-    "href": "people/ScienceTeam/05_wennberg.html",
-    "title": "Paul Wennberg",
-    "section": "",
-    "text": "Paul Wennberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on atmospheric chemistry and the global carbon cycle."
-  },
-  {
-    "objectID": "people/ScienceTeam/05_wennberg.html#education",
-    "href": "people/ScienceTeam/05_wennberg.html#education",
-    "title": "Paul Wennberg",
-    "section": "Education",
-    "text": "Education\n\nPhD in Chemistry | Harvard University | 1994\nBA in Chemistry | Oberlin College | 1985"
-  },
-  {
-    "objectID": "people/ScienceTeam/05_wennberg.html#professional-experience",
-    "href": "people/ScienceTeam/05_wennberg.html#professional-experience",
-    "title": "Paul Wennberg",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2016 – 2017 Visiting Professor, Department of Chemistry, Copenhagen University, Denmark\n2016 – 2023 Division Executive Council, Engineering and Applied Science, Caltech\n2014 – 2023 Director, The Linde Center for Global Environmental Science, Caltech\n2012 – 2023 Executive Officer for Environmental Science and Engineering\n2008 – 2011 Director, The Linde Center for Global Environmental Science, Caltech\n[2005 Visiting Professor, Department of Chemistry, University of Otago, New Zealand\n2005 – 2006 Secretary of the Atmospheric Sciences Section, American Geophysical Union\n2004 – R. Stanton Avery Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology\n2001 – 2004 Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology\n1998 – 2001 Associate Professor of Atmospheric Chemistry and Environmental Engineering Science, California Institute of Technology"
-  },
-  {
-    "objectID": "people/ScienceTeam/09_kebreab.html",
-    "href": "people/ScienceTeam/09_kebreab.html",
-    "title": "Ermias Kebreab",
-    "section": "",
-    "text": "Ermias Kebreab is Professor of Sustainable Agriculture at University of California, Davis and works on reducing enteric methane emissions."
-  },
-  {
-    "objectID": "people/ScienceTeam/09_kebreab.html#education",
-    "href": "people/ScienceTeam/09_kebreab.html#education",
-    "title": "Ermias Kebreab",
-    "section": "Education",
-    "text": "Education\n\nPhD in Integrative Biology | University of Reading, UK | 1995 - 1998\nBSc in Biology/Chemistry | University of Asmara, Eritrea | 1983-1987"
-  },
-  {
-    "objectID": "people/ScienceTeam/09_kebreab.html#professional-experience",
-    "href": "people/ScienceTeam/09_kebreab.html#professional-experience",
-    "title": "Ermias Kebreab",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2009-present: Professor, UC Davis\n2007-2009: Associate Professor/Canada Research Chair, University of Manitoba, Canada\n2003-2006: Adjustn Professor, University of Guelph, Canada\n1998- 2002: Post Doctoral Fellow, University of Reading, UK\\"
+    "text": "Education\n\nPhD in Astrophysical, Planetary and Atmospheric Science | University of Colorado, Boulder | 1992\nM.S., Astrophysical, Planetary and Atmospheric Science | University of Colorado, Boulder | 1988\nB.S., Physics, Mathematics | University of Texas, Austin | 1985"
   },
   {
     "objectID": "people/ScienceTeam/03_jacob.html",
@@ -231,27 +175,6 @@
     "text": "Professional Experience\n\n1994-present: Professor, Harvard\n1992-1994: Associate Professor, Harvard\n1987-1992: Assistant Professor, Harvard\n1985- 1987: Postdoctoral Fellow, Harvard\\"
   },
   {
-    "objectID": "people/ScienceTeam/14_Chadwick.html",
-    "href": "people/ScienceTeam/14_Chadwick.html",
-    "title": "K. Dana Chadwick",
-    "section": "",
-    "text": "Dana Chadwick is a Scientist at JPL and Mission Applications Lead, for the Earth Surface Mineral Dust Source Investigation (EMIT)."
-  },
-  {
-    "objectID": "people/ScienceTeam/14_Chadwick.html#education",
-    "href": "people/ScienceTeam/14_Chadwick.html#education",
-    "title": "K. Dana Chadwick",
-    "section": "Education",
-    "text": "Education\n• Ph.D., Earth System Science, Stanford University, 2017 • B.A., Molecular and Cell Biology, University of California Berkeley, 2008 • B.S., Environmental Economics and Policy, University of California Berkeley, 2008\n\nPh.D., Earth System Science | Stanford University | 2017\nB.A., Molecular and Cell Biology | University of California Berkeley | 2008\nB.S., Environmental Economics and Policy | University of California Berkeley | 2008"
-  },
-  {
-    "objectID": "people/ScienceTeam/14_Chadwick.html#professional-experience",
-    "href": "people/ScienceTeam/14_Chadwick.html#professional-experience",
-    "title": "K. Dana Chadwick",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Scientist, JPL"
-  },
-  {
     "objectID": "people/ScienceTeam/05_turner.html",
     "href": "people/ScienceTeam/05_turner.html",
     "title": "Alex Turner",
@@ -273,25 +196,109 @@
     "text": "Professional Experience\n\n2021 - present: Assistant Professor, University of Washington\n2017 - 2020: Miller Postdoctoral Fellow, University of California at Berkeley"
   },
   {
-    "objectID": "people/Collaborators/duren.html",
-    "href": "people/Collaborators/duren.html",
-    "title": "Riley Duren",
+    "objectID": "people/ScienceTeam/08_hoyt.html",
+    "href": "people/ScienceTeam/08_hoyt.html",
+    "title": "Alison Hoyt",
     "section": "",
-    "text": "Riley Duren is Chief Executive Officer of Carbon Mapper, a non-profit organization focused on delivering precise and transparent methane and carbon dioxide data to guide emissions mitigation action. Since 2010 he has led research efforts to develop and test multi-scale monitoring systems that support quantification and mitigation of greenhouse gas emissions including serving as principal investigator for multiple projects funded by NASA, NIST and California agencies."
+    "text": "Alison Hoyt is an Assistant Professor of Earth System Science at Stanford. She studies tropical soil carbon and greenhouse gas emissions and their response to climate and land use change, with a particular focus on the carbon cycle of tropical wetlands and peatlands. Her research group takes field measurement of CO2 and CH4 emissions from these ecosystems, as well as other biogeochemical, isotopic, and hydrological measurements, and synthesizes them with a combination of modeling and remote sensing to understand ecosystem processes and changes resulting from climate and land use change. She has conducted fieldwork across the tropics, including in Southeast Asia, Africa, and South America."
   },
   {
-    "objectID": "people/Collaborators/duren.html#education",
-    "href": "people/Collaborators/duren.html#education",
-    "title": "Riley Duren",
+    "objectID": "people/ScienceTeam/08_hoyt.html#education",
+    "href": "people/ScienceTeam/08_hoyt.html#education",
+    "title": "Alison Hoyt",
     "section": "Education",
-    "text": "Education\n\nBS in Electrical Engineering | Auburn University | 1991"
+    "text": "Education\nPh.D., Civil & Environmental Engineering, Massachusetts Institute of Technology, 2017 • M.Phil., Environment, Society and Development, University of Cambridge, 2010 • B.S., Physics and Engineering Sciences (Environmental), Yale University, 2009\n\nPh.D., Civil & Environmental Engineering | Massachusetts Institute of Technology | 2017\nM.Phil., Environment, Society and Development | University of Cambridge | 2010\nB.S., Physics and Engineering Sciences (Environmental) | Yale University | 2009"
   },
   {
-    "objectID": "people/Collaborators/duren.html#professional-experience",
-    "href": "people/Collaborators/duren.html#professional-experience",
-    "title": "Riley Duren",
+    "objectID": "people/ScienceTeam/08_hoyt.html#professional-experience",
+    "href": "people/ScienceTeam/08_hoyt.html#professional-experience",
+    "title": "Alison Hoyt",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2020 – present Chief Executive Officer, Carbon Mapper\n2019 – present Research Scientist, University of Arizona\n2017 – 2023 Engineering Fellow, JPL\n2008 – 2019 Chief Systems Engineer, Earth Science Directorate, JPL\n2002 – 2009 Chief Engineer, Kepler mission, JPL\n2000 – 2002 Instrument System Engineer, Starlight mission, JPL\n1996 – 2000 Metrology System Engineer, Shuttle Radar Topography Mission, JPL\n1988 – 1995 Payload Integration Engineer, NASA Kennedy Space Center"
+    "text": "Professional Experience\n\n2016-present: Assistant Professor, Stanford"
+  },
+  {
+    "objectID": "people/ScienceTeam/05_wennberg.html",
+    "href": "people/ScienceTeam/05_wennberg.html",
+    "title": "Paul Wennberg",
+    "section": "",
+    "text": "Paul Wennberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on atmospheric chemistry and the global carbon cycle."
+  },
+  {
+    "objectID": "people/ScienceTeam/05_wennberg.html#education",
+    "href": "people/ScienceTeam/05_wennberg.html#education",
+    "title": "Paul Wennberg",
+    "section": "Education",
+    "text": "Education\n\nPhD in Chemistry | Harvard University | 1994\nBA in Chemistry | Oberlin College | 1985"
+  },
+  {
+    "objectID": "people/ScienceTeam/05_wennberg.html#professional-experience",
+    "href": "people/ScienceTeam/05_wennberg.html#professional-experience",
+    "title": "Paul Wennberg",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2016 – 2017 Visiting Professor, Department of Chemistry, Copenhagen University, Denmark\n2016 – 2023 Division Executive Council, Engineering and Applied Science, Caltech\n2014 – 2023 Director, The Linde Center for Global Environmental Science, Caltech\n2012 – 2023 Executive Officer for Environmental Science and Engineering\n2008 – 2011 Director, The Linde Center for Global Environmental Science, Caltech\n[2005 Visiting Professor, Department of Chemistry, University of Otago, New Zealand\n2005 – 2006 Secretary of the Atmospheric Sciences Section, American Geophysical Union\n2004 – R. Stanton Avery Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology\n2001 – 2004 Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology\n1998 – 2001 Associate Professor of Atmospheric Chemistry and Environmental Engineering Science, California Institute of Technology"
+  },
+  {
+    "objectID": "people/ScienceTeam/02_michalak.html",
+    "href": "people/ScienceTeam/02_michalak.html",
+    "title": "Anna Michalak",
+    "section": "",
+    "text": "Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality."
+  },
+  {
+    "objectID": "people/ScienceTeam/02_michalak.html#education",
+    "href": "people/ScienceTeam/02_michalak.html#education",
+    "title": "Anna Michalak",
+    "section": "Education",
+    "text": "Education\n\nPhD in Civil and Environmental Engineering | Stanford University | 2003\nMS in Civil and Environmental Engineering | Stanford University | 1998\nBSc(Eng) in Environmental Engineering | University of Guelph, Canada | 1997"
+  },
+  {
+    "objectID": "people/ScienceTeam/02_michalak.html#professional-experience",
+    "href": "people/ScienceTeam/02_michalak.html#professional-experience",
+    "title": "Anna Michalak",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2011-present: Faculty member and Director, Carnegie Institution for Science\n2011-present: Professor (2016 - ) and Associate Professor (2011-2016), Stanford\n2004-2011: Associate Professor (2010-2011) and Assistant Professor (2004-2010), University of Michigan\n2003- 2004: NOAA Climate & Global Change (C&GC) Fellow, NOAA\\"
+  },
+  {
+    "objectID": "people/Collaborators/ciais.html",
+    "href": "people/Collaborators/ciais.html",
+    "title": "Philippe Ciais",
+    "section": "",
+    "text": "Philippe Ciais is a researcher of the Laboratoire des Sciences du Climat et de l’Environnement (LSCE), the climate change research unit of the Institut Pierre Simon Laplace (IPSL). He is a physicist working on the global carbon cycle of planet Earth, climate change, ecology and geosciences."
+  },
+  {
+    "objectID": "people/Collaborators/ciais.html#education",
+    "href": "people/Collaborators/ciais.html#education",
+    "title": "Philippe Ciais",
+    "section": "Education",
+    "text": "Education\n\nPhD in … | Heidelberg University, Germany | ??? - ???"
+  },
+  {
+    "objectID": "people/Collaborators/ciais.html#professional-experience",
+    "href": "people/Collaborators/ciais.html#professional-experience",
+    "title": "Philippe Ciais",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
+  },
+  {
+    "objectID": "people/Collaborators/elder.html",
+    "href": "people/Collaborators/elder.html",
+    "title": "Clayton Elder",
+    "section": "",
+    "text": "Clayton Elder merged the scales of in-situ observations with high resolution remote sensing datasets to constrain complex ecological processes in the Arctic"
+  },
+  {
+    "objectID": "people/Collaborators/elder.html#education",
+    "href": "people/Collaborators/elder.html#education",
+    "title": "Clayton Elder",
+    "section": "Education",
+    "text": "Education\n\nPhD in … | … | ??? - ???"
+  },
+  {
+    "objectID": "people/Collaborators/elder.html#professional-experience",
+    "href": "people/Collaborators/elder.html#professional-experience",
+    "title": "Clayton Elder",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
   },
   {
     "objectID": "people/Collaborators/abutz.html",
@@ -315,67 +322,25 @@
     "text": "Professional Experience\n\n2018-present: Professor, Institute of Environmental Physics, Heidelberg University, Germany\n2016-2018: Head of department, German Aerospace Center (DLR e.V); Professor, Meteorological Institute, University of Munich (LMU), Germany\n2011-2016: Group leader (Emmy-Noether fellow of DFG), Karlsruhe Institute of Technology (KIT), Germany\n2007-2011: Postdoctoral research at SRON-Netherlands Institute of Space Research, The Netherlands\\"
   },
   {
-    "objectID": "people/Collaborators/hase.html",
-    "href": "people/Collaborators/hase.html",
-    "title": "Frank Hase",
+    "objectID": "people/Collaborators/ehlmann.html",
+    "href": "people/Collaborators/ehlmann.html",
+    "title": "Bethany Ehlmann",
     "section": "",
-    "text": "Frank Hase is the head of the groundbased remote sensing group of IMK-ASF, KIT, and leads the COCCON network, which is based on a new type of portable FTIR spectrometer for the measurement of the main greenhouse gases was developed by the KIT in cooperation with Bruker Optics (Ettlingen, Germany)."
+    "text": "Bethany Ehlmann is a professor of planetary science at Caltech. She is also Director of Caltech’s Keck Institute for Space Studies. Her research focuses on the mineralogy and chemistry of planetary surfaces, remote sensing techniques and instruments, astrobiology, and science policy and outreach."
   },
   {
-    "objectID": "people/Collaborators/hase.html#education",
-    "href": "people/Collaborators/hase.html#education",
-    "title": "Frank Hase",
+    "objectID": "people/Collaborators/ehlmann.html#education",
+    "href": "people/Collaborators/ehlmann.html#education",
+    "title": "Bethany Ehlmann",
     "section": "Education",
-    "text": "Education\n\nPhD in Physics | University of Karlsruhe | 1997 - 2000\nDiploma in Physics | University of Karlsruhe | 1995"
+    "text": "Education\n\nPhD in … | … | ??? - ???"
   },
   {
-    "objectID": "people/Collaborators/hase.html#professional-experience",
-    "href": "people/Collaborators/hase.html#professional-experience",
-    "title": "Frank Hase",
+    "objectID": "people/Collaborators/ehlmann.html#professional-experience",
+    "href": "people/Collaborators/ehlmann.html#professional-experience",
+    "title": "Bethany Ehlmann",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2022 Habilitation at KIT (Department of Civil Engineering, Geo and Environmental Sciences),\n2021-now Head of the groundbased remote sensing group of IMK-ASF, KIT\n2017-now Head of COCCON project\n2002-2021 Staff scientist in groundbased remote sensing group of IMK-ASF, KIT,\n2002 Visiting Scientist at NCAR 2002\n2000-2002 Postdoc in groundbased remote sensing group of IMK-ASF, KIT"
-  },
-  {
-    "objectID": "people/Collaborators/wunch.html",
-    "href": "people/Collaborators/wunch.html",
-    "title": "Debra Wunch",
-    "section": "",
-    "text": "Debra Wunch is an Associate Professor at the University of Toronto, cross-appointed between the Department of Physics and the School of the Environment. Since 2020, she has served as the Chair of the Total Carbon Column Observing Network (TCCON), and runs the TCCON station located at East Trout Lake, Saskatchewan, in the Canadian Boreal forest."
-  },
-  {
-    "objectID": "people/Collaborators/wunch.html#education",
-    "href": "people/Collaborators/wunch.html#education",
-    "title": "Debra Wunch",
-    "section": "Education",
-    "text": "Education\n\nPhD in Atmospheric Physics | University of Toronto | 2007\nMSc in Atmospheric Physics | University of Toronto | 2002\nBS in Physics | University of Toronto | 2000"
-  },
-  {
-    "objectID": "people/Collaborators/wunch.html#professional-experience",
-    "href": "people/Collaborators/wunch.html#professional-experience",
-    "title": "Debra Wunch",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2022 – present Associate Professor, University of Toronto\n2016 – 2022 Assistant Professor, University of Toronto\n2010 – 2015 Senior Staff Scientist, California Institute of Technology\n2009 – 2010 Staff Scientist, California Institute of Technology\n2007 – 2009 Postdoctoral Scholar, California Institute of Technology"
-  },
-  {
-    "objectID": "people/Collaborators/hboesch.html",
-    "href": "people/Collaborators/hboesch.html",
-    "title": "Hartmut Boesch",
-    "section": "",
-    "text": "Hartmut Boesch is Professor of Atmospheric Remote Sensing at the University of Bremen in Germany and works on remote sensing methods of atmospheric composition with a focus in greenhouse gases CO2 and CH4."
-  },
-  {
-    "objectID": "people/Collaborators/hboesch.html#education",
-    "href": "people/Collaborators/hboesch.html#education",
-    "title": "Hartmut Boesch",
-    "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002\nDiploma in Physics and Astronomy | University of Heidelberg, Germany | 1998"
-  },
-  {
-    "objectID": "people/Collaborators/hboesch.html#professional-experience",
-    "href": "people/Collaborators/hboesch.html#professional-experience",
-    "title": "Hartmut Boesch",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2022-present: Professor, University of Bremen, Germany\n2007-2022: Professor (2017-2022), Reader (2013-2017), Lecturer (2012-2013), Research Fellow (2007-2012), University of Leicester, UK\n2003-2007: Postdoc (2003-2005), Scientist (2006-2007), Earth Atmospheric Science, JPL, USA\n2002- 2003: Postodc, University of Heidelberg, Germany\\"
+    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
   },
   {
     "objectID": "people/Collaborators/palmer.html",
@@ -420,25 +385,25 @@
     "text": "Professional Experience\n\n2018-present: Whatever, wherre"
   },
   {
-    "objectID": "people/Collaborators/sanghavi.html",
-    "href": "people/Collaborators/sanghavi.html",
-    "title": "Suniti Sanghavi",
+    "objectID": "people/Collaborators/wunch.html",
+    "href": "people/Collaborators/wunch.html",
+    "title": "Debra Wunch",
     "section": "",
-    "text": "Suniti Sanghavi is a remote sensing scientist at the Jet Propulsion Laboratory with a focus on radiative transfer modeling and inversion algorithm development.\nDr. Sanghavi recognized the need for fast and accurate radiative transfer modeling while carrying out the first Optimal Estimation based inversion of aerosol properties using SCIAMACHY data (Suniti Sanghavi, Platt, and Landgraf 2010; S. Sanghavi et al. 2012). She later expanded her approach to MISR (Diner et al. 2012), leading to state-of-the-art refinements in aerosol electromagnetic scattering simulations (Suniti Sanghavi 2014; Suniti Sanghavi and Stephens 2015) and forward modeling (Suniti Sanghavi and Natraj 2013; S. V. Sanghavi et al. 2013; Suniti Sanghavi, Davis, and Eldering 2014). The resulting framework was used to carry out sensitivity studies and information content analyses of the influence of aerosol and cloud properties on OCO/GOSAT measurements (S. Sanghavi, Lebsock, and Stephens 2015; Suniti Sanghavi et al. 2020). The vSmartMOM modeling framework has also been applied to study the cloudy atmospheres of exoplanets and brown dwarfs (Suniti Sanghavi and Shporer 2018; Suniti Sanghavi and West 2019; Suniti Sanghavi, West, and Jiang 2021). Following the GPU adaptation of vSmartMOM (Jeyaram, Sanghavi, and Frankenberg 2022), Dr. Sanghavi’s work led to the development of a GPU accelerated inelastic scattering model (Suniti Sanghavi 2022; Suniti Sanghavi and Frankenberg 2023) that allows the correction of hyperspectral retrievals for biases caused by Raman scattering. Similar corrections due to the hyperspectral effects of canopy radiative transfer are being developed jointly with Dr. Frankenberg."
+    "text": "Debra Wunch is an Associate Professor at the University of Toronto, cross-appointed between the Department of Physics and the School of the Environment. Since 2020, she has served as the Chair of the Total Carbon Column Observing Network (TCCON), and runs the TCCON station located at East Trout Lake, Saskatchewan, in the Canadian Boreal forest."
   },
   {
-    "objectID": "people/Collaborators/sanghavi.html#education",
-    "href": "people/Collaborators/sanghavi.html#education",
-    "title": "Suniti Sanghavi",
+    "objectID": "people/Collaborators/wunch.html#education",
+    "href": "people/Collaborators/wunch.html#education",
+    "title": "Debra Wunch",
     "section": "Education",
-    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2004 - 2008\nDiploma in Physics | University of Heidelberg, Germany | 1999 - 2003"
+    "text": "Education\n\nPhD in Atmospheric Physics | University of Toronto | 2007\nMSc in Atmospheric Physics | University of Toronto | 2002\nBS in Physics | University of Toronto | 2000"
   },
   {
-    "objectID": "people/Collaborators/sanghavi.html#professional-experience",
-    "href": "people/Collaborators/sanghavi.html#professional-experience",
-    "title": "Suniti Sanghavi",
+    "objectID": "people/Collaborators/wunch.html#professional-experience",
+    "href": "people/Collaborators/wunch.html#professional-experience",
+    "title": "Debra Wunch",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2015-present: Data scientist, 298K, JPL\n2014-2015: CSU Postdoc, JPL\n2010-2013: Caltech Postdoc, JPL\n2008-2009: Postdoc at SRON-Netherlands Institute of Space Research\\"
+    "text": "Professional Experience\n\n2022 – present Associate Professor, University of Toronto\n2016 – 2022 Assistant Professor, University of Toronto\n2010 – 2015 Senior Staff Scientist, California Institute of Technology\n2009 – 2010 Staff Scientist, California Institute of Technology\n2007 – 2009 Postdoctoral Scholar, California Institute of Technology"
   },
   {
     "objectID": "people/Collaborators/aben.html",
@@ -462,23 +427,135 @@
     "text": "Professional Experience\n\n2003-present Senior Scientist SRON Netherlands Institute for Space Research, Leiden, The Netherlands\n1994-2002 Scientist SRON Netherlands Institute for Space Research, Leiden, the Netherlands\n1992-1994Postdoc at Institute of Mass Spectrometry, University Amsterdam, The Netherlands\n2021-present Endowed Professor Earth Sciences Vrije Universiteit, Amsterdam, The Netherlands\n2001-2021 Endowed Professor Physics Department Vrije Universiteit, Amsterdam, The Netherlands"
   },
   {
-    "objectID": "people/Collaborators/elder.html",
-    "href": "people/Collaborators/elder.html",
-    "title": "Clayton Elder",
+    "objectID": "requirements.html",
+    "href": "requirements.html",
+    "title": "",
     "section": "",
-    "text": "Clayton Elder merged the scales of in-situ observations with high resolution remote sensing datasets to constrain complex ecological processes in the Arctic"
+    "text": "flowchart LR\n    A[L1.1 Global CO2, CH4, CO measurements over land monthly] --&gt;|requires| B(Nadir viewing)\n    A[L1.1 Global CO2, CH4, CO measurements over land monthly] --&gt;|requires| C(SWIR absorption spectroscopy )\n    A[L1.1 Global CO2, CH4, CO measurements over land monthly] --&gt;|requires| D(&gt;90km swath)\n    A[(\"L1.1 Global CO2, CH4, CO measurements over land monthly\"] --&gt;|requires| F(Light path proxy)\n\n    AA[L1.2 Regional and seasonal measurements within the tropics] --&gt;|requires| E(Spatial resolution &lt;400m globally)\n    AA[(\"L1.2 Regional and seasonal measurements within the tropics\"] --&gt;|requires| F(Light path proxy)\n\n    AB[L1.3 Attribution of strong localized sources] --&gt;|requires| E(Spatial resolution &lt;400m globally)\n    AB[(\"L1.3 Attribution of strong localized sources\"] --&gt;|requires| G(Spatial resolution &lt;100m in select areas)\n\n    AC[L1.4 Measure at fine spatial scales over selected areas up to weekly] --&gt;|requires| H(Off-nadir pointing)\n    AC[L1.4 Measure at fine spatial scales over selected areas up to weekly] --&gt;|requires| I(Image motion compensation)\n    AC[(\"L1.4 Measure at fine spatial scales over selected areas up to weekly\"] --&gt;|requires| G(Spatial resolution &lt;100m in select areas)"
   },
   {
-    "objectID": "people/Collaborators/elder.html#education",
-    "href": "people/Collaborators/elder.html#education",
-    "title": "Clayton Elder",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News from Carbon-I",
+    "section": "",
+    "text": "LA Times article\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nAAAS media fellow Noah Haggerty reports on our journey \n\n\n\n\n\nJuly 2, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I has been selected for Phase A\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nNASA announced the selection of four ESE Explorer mission concepts\n\n\n\n\n\nMay 7, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I proposal to NASA’s ESE call\n\n\n\n\n\n\nGreenhouse Gases\n\n\nSpectroscopy\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nOur journey for a satellite mission proposal to tackle greenhouse gases\n\n\n\n\n\nMarch 6, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "test/tester.html",
+    "href": "test/tester.html",
+    "title": "",
+    "section": "",
+    "text": "sequenceDiagram\n  participant Alice\n  participant Bob\n  Alice-&gt;&gt;John: Hello John, how are you?\n  loop Healthcheck\n    John-&gt;&gt;John: Fight against hypochondria\n  end\n  Note right of John: Rational thoughts &lt;br/&gt;prevail!\n  John--&gt;&gt;Alice: Great!\n  John-&gt;&gt;Bob: How about you?\n  Bob--&gt;&gt;John: Jolly good!"
+  },
+  {
+    "objectID": "co2_story.html",
+    "href": "co2_story.html",
+    "title": "Interactive Vector Visualization",
+    "section": "",
+    "text": "import { slider } from “@jashkenas/inputs” import { svg } from “d3”\nviewof length1Slider = slider({ min: 50, max: 150, step: 1, value: 100, title: “Length of the first vector” })\nlength1 = length1Slider\nconst length2 = 100; let length3 = 100;\nconst angle1 = Math.PI / 4; const angle2 = -Math.PI / 4; const endpointX = 300; const endpointY = 300;\nfunction updateVectors(length1) { const width = 600; const height = 400;\nconst svgElement = svg.create(‘svg’).attr(‘width’, width).attr(‘height’, height).style(“border”, “1px solid black”);\nconst x1 = length1 * Math.cos(angle1); const y1 = length1 * Math.sin(angle1);\nconst x2 = length2 * Math.cos(angle2); const y2 = length2 * Math.sin(angle2);\nconst x3 = endpointX - (x1 + x2); const y3 = endpointY - (y1 + y2); length3 = Math.sqrt(x3 * x3 + y3 * y3);\nsvgElement.append(“line”) .attr(“x1”, 0) .attr(“y1”, height) .attr(“x2”, x1) .attr(“y2”, height - y1) .attr(“stroke”, “black”) .attr(“stroke-width”, 2);\nsvgElement.append(“line”) .attr(“x1”, x1) .attr(“y1”, height - y1) .attr(“x2”, x1 + x2) .attr(“y2”, height - y1 - y2) .attr(“stroke”, “red”) .attr(“stroke-width”, 2);\nsvgElement.append(“line”) .attr(“x1”, x1 + x2) .attr(“y1”, height - y1 - y2) .attr(“x2”, endpointX) .attr(“y2”, endpointY) .attr(“stroke”, “blue”) .attr(“stroke-width”, 2);\nreturn svgElement.node(); }\nhtml${updateVectors(length1)}"
+  },
+  {
+    "objectID": "people/Collaborators/sanghavi.html",
+    "href": "people/Collaborators/sanghavi.html",
+    "title": "Suniti Sanghavi",
+    "section": "",
+    "text": "Suniti Sanghavi is a remote sensing scientist at the Jet Propulsion Laboratory with a focus on radiative transfer modeling and inversion algorithm development.\nDr. Sanghavi recognized the need for fast and accurate radiative transfer modeling while carrying out the first Optimal Estimation based inversion of aerosol properties using SCIAMACHY data (Suniti Sanghavi, Platt, and Landgraf 2010; S. Sanghavi et al. 2012). She later expanded her approach to MISR (Diner et al. 2012), leading to state-of-the-art refinements in aerosol electromagnetic scattering simulations (Suniti Sanghavi 2014; Suniti Sanghavi and Stephens 2015) and forward modeling (Suniti Sanghavi and Natraj 2013; S. V. Sanghavi et al. 2013; Suniti Sanghavi, Davis, and Eldering 2014). The resulting framework was used to carry out sensitivity studies and information content analyses of the influence of aerosol and cloud properties on OCO/GOSAT measurements (S. Sanghavi, Lebsock, and Stephens 2015; Suniti Sanghavi et al. 2020). The vSmartMOM modeling framework has also been applied to study the cloudy atmospheres of exoplanets and brown dwarfs (Suniti Sanghavi and Shporer 2018; Suniti Sanghavi and West 2019; Suniti Sanghavi, West, and Jiang 2021). Following the GPU adaptation of vSmartMOM (Jeyaram, Sanghavi, and Frankenberg 2022), Dr. Sanghavi’s work led to the development of a GPU accelerated inelastic scattering model (Suniti Sanghavi 2022; Suniti Sanghavi and Frankenberg 2023) that allows the correction of hyperspectral retrievals for biases caused by Raman scattering. Similar corrections due to the hyperspectral effects of canopy radiative transfer are being developed jointly with Dr. Frankenberg."
+  },
+  {
+    "objectID": "people/Collaborators/sanghavi.html#education",
+    "href": "people/Collaborators/sanghavi.html#education",
+    "title": "Suniti Sanghavi",
+    "section": "Education",
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2004 - 2008\nDiploma in Physics | University of Heidelberg, Germany | 1999 - 2003"
+  },
+  {
+    "objectID": "people/Collaborators/sanghavi.html#professional-experience",
+    "href": "people/Collaborators/sanghavi.html#professional-experience",
+    "title": "Suniti Sanghavi",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2015-present: Data scientist, 298K, JPL\n2014-2015: CSU Postdoc, JPL\n2010-2013: Caltech Postdoc, JPL\n2008-2009: Postdoc at SRON-Netherlands Institute of Space Research\\"
+  },
+  {
+    "objectID": "people/Collaborators/hase.html",
+    "href": "people/Collaborators/hase.html",
+    "title": "Frank Hase",
+    "section": "",
+    "text": "Frank Hase is the head of the groundbased remote sensing group of IMK-ASF, KIT, and leads the COCCON network, which is based on a new type of portable FTIR spectrometer for the measurement of the main greenhouse gases was developed by the KIT in cooperation with Bruker Optics (Ettlingen, Germany)."
+  },
+  {
+    "objectID": "people/Collaborators/hase.html#education",
+    "href": "people/Collaborators/hase.html#education",
+    "title": "Frank Hase",
+    "section": "Education",
+    "text": "Education\n\nPhD in Physics | University of Karlsruhe | 1997 - 2000\nDiploma in Physics | University of Karlsruhe | 1995"
+  },
+  {
+    "objectID": "people/Collaborators/hase.html#professional-experience",
+    "href": "people/Collaborators/hase.html#professional-experience",
+    "title": "Frank Hase",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2022 Habilitation at KIT (Department of Civil Engineering, Geo and Environmental Sciences),\n2021-now Head of the groundbased remote sensing group of IMK-ASF, KIT\n2017-now Head of COCCON project\n2002-2021 Staff scientist in groundbased remote sensing group of IMK-ASF, KIT,\n2002 Visiting Scientist at NCAR 2002\n2000-2002 Postdoc in groundbased remote sensing group of IMK-ASF, KIT"
+  },
+  {
+    "objectID": "people/Collaborators/roiger.html",
+    "href": "people/Collaborators/roiger.html",
+    "title": "Anke Roiger",
+    "section": "",
+    "text": "Anke Roiger is Department Head at the DLR, Institute of Atmospheric Physics, Munich"
+  },
+  {
+    "objectID": "people/Collaborators/roiger.html#education",
+    "href": "people/Collaborators/roiger.html#education",
+    "title": "Anke Roiger",
     "section": "Education",
     "text": "Education\n\nPhD in … | … | ??? - ???"
   },
   {
-    "objectID": "people/Collaborators/elder.html#professional-experience",
-    "href": "people/Collaborators/elder.html#professional-experience",
-    "title": "Clayton Elder",
+    "objectID": "people/Collaborators/roiger.html#professional-experience",
+    "href": "people/Collaborators/roiger.html#professional-experience",
+    "title": "Anke Roiger",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
+  },
+  {
+    "objectID": "people/Collaborators/duren.html",
+    "href": "people/Collaborators/duren.html",
+    "title": "Riley Duren",
+    "section": "",
+    "text": "Riley Duren is Chief Executive Officer of Carbon Mapper, a non-profit organization focused on delivering precise and transparent methane and carbon dioxide data to guide emissions mitigation action. Since 2010 he has led research efforts to develop and test multi-scale monitoring systems that support quantification and mitigation of greenhouse gas emissions including serving as principal investigator for multiple projects funded by NASA, NIST and California agencies."
+  },
+  {
+    "objectID": "people/Collaborators/duren.html#education",
+    "href": "people/Collaborators/duren.html#education",
+    "title": "Riley Duren",
+    "section": "Education",
+    "text": "Education\n\nBS in Electrical Engineering | Auburn University | 1991"
+  },
+  {
+    "objectID": "people/Collaborators/duren.html#professional-experience",
+    "href": "people/Collaborators/duren.html#professional-experience",
+    "title": "Riley Duren",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2020 – present Chief Executive Officer, Carbon Mapper\n2019 – present Research Scientist, University of Arizona\n2017 – 2023 Engineering Fellow, JPL\n2008 – 2019 Chief Systems Engineer, Earth Science Directorate, JPL\n2002 – 2009 Chief Engineer, Kepler mission, JPL\n2000 – 2002 Instrument System Engineer, Starlight mission, JPL\n1996 – 2000 Metrology System Engineer, Shuttle Radar Topography Mission, JPL\n1988 – 1995 Payload Integration Engineer, NASA Kennedy Space Center"
+  },
+  {
+    "objectID": "people/Collaborators/elvidge.html",
+    "href": "people/Collaborators/elvidge.html",
+    "title": "Chris Elvidge",
+    "section": "",
+    "text": "Chris Elvidge is the director of the Earth Observation Group at Colorado School of Mines"
+  },
+  {
+    "objectID": "people/Collaborators/elvidge.html#education",
+    "href": "people/Collaborators/elvidge.html#education",
+    "title": "Chris Elvidge",
+    "section": "Education",
+    "text": "Education\n\nPhD in … | … | ??? - ???"
+  },
+  {
+    "objectID": "people/Collaborators/elvidge.html#professional-experience",
+    "href": "people/Collaborators/elvidge.html#professional-experience",
+    "title": "Chris Elvidge",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2018-present: Whatever, wherre"
   },
@@ -504,165 +581,25 @@
     "text": "Professional Experience\n\n2024-present: Senior Scientist at SRON Netherlands Institute for Space Research, The Netherlands\n2021-2024: Scientist at SRON Netherlands Institute for Space Research, The Netherlands\n2018-2020: Postdoc at SRON Netherlands Institute for Space Research, The Netherlands\\"
   },
   {
-    "objectID": "people/Collaborators/roiger.html",
-    "href": "people/Collaborators/roiger.html",
-    "title": "Anke Roiger",
+    "objectID": "people/Collaborators/hboesch.html",
+    "href": "people/Collaborators/hboesch.html",
+    "title": "Hartmut Boesch",
     "section": "",
-    "text": "Anke Roiger is Department Head at the DLR, Institute of Atmospheric Physics, Munich"
+    "text": "Hartmut Boesch is Professor of Atmospheric Remote Sensing at the University of Bremen in Germany and works on remote sensing methods of atmospheric composition with a focus in greenhouse gases CO2 and CH4."
   },
   {
-    "objectID": "people/Collaborators/roiger.html#education",
-    "href": "people/Collaborators/roiger.html#education",
-    "title": "Anke Roiger",
+    "objectID": "people/Collaborators/hboesch.html#education",
+    "href": "people/Collaborators/hboesch.html#education",
+    "title": "Hartmut Boesch",
     "section": "Education",
-    "text": "Education\n\nPhD in … | … | ??? - ???"
+    "text": "Education\n\nPhD in Environmental Physics | University of Heidelberg, Germany | 2002\nDiploma in Physics and Astronomy | University of Heidelberg, Germany | 1998"
   },
   {
-    "objectID": "people/Collaborators/roiger.html#professional-experience",
-    "href": "people/Collaborators/roiger.html#professional-experience",
-    "title": "Anke Roiger",
+    "objectID": "people/Collaborators/hboesch.html#professional-experience",
+    "href": "people/Collaborators/hboesch.html#professional-experience",
+    "title": "Hartmut Boesch",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
-  },
-  {
-    "objectID": "people/Collaborators/ehlmann.html",
-    "href": "people/Collaborators/ehlmann.html",
-    "title": "Bethany Ehlmann",
-    "section": "",
-    "text": "Bethany Ehlmann is a professor of planetary science at Caltech. She is also Director of Caltech’s Keck Institute for Space Studies. Her research focuses on the mineralogy and chemistry of planetary surfaces, remote sensing techniques and instruments, astrobiology, and science policy and outreach."
-  },
-  {
-    "objectID": "people/Collaborators/ehlmann.html#education",
-    "href": "people/Collaborators/ehlmann.html#education",
-    "title": "Bethany Ehlmann",
-    "section": "Education",
-    "text": "Education\n\nPhD in … | … | ??? - ???"
-  },
-  {
-    "objectID": "people/Collaborators/ehlmann.html#professional-experience",
-    "href": "people/Collaborators/ehlmann.html#professional-experience",
-    "title": "Bethany Ehlmann",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
-  },
-  {
-    "objectID": "people/Collaborators/elvidge.html",
-    "href": "people/Collaborators/elvidge.html",
-    "title": "Chris Elvidge",
-    "section": "",
-    "text": "Chris Elvidge is the director of the Earth Observation Group at Colorado School of Mines"
-  },
-  {
-    "objectID": "people/Collaborators/elvidge.html#education",
-    "href": "people/Collaborators/elvidge.html#education",
-    "title": "Chris Elvidge",
-    "section": "Education",
-    "text": "Education\n\nPhD in … | … | ??? - ???"
-  },
-  {
-    "objectID": "people/Collaborators/elvidge.html#professional-experience",
-    "href": "people/Collaborators/elvidge.html#professional-experience",
-    "title": "Chris Elvidge",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
-  },
-  {
-    "objectID": "people/Collaborators/ciais.html",
-    "href": "people/Collaborators/ciais.html",
-    "title": "Philippe Ciais",
-    "section": "",
-    "text": "Philippe Ciais is a researcher of the Laboratoire des Sciences du Climat et de l’Environnement (LSCE), the climate change research unit of the Institut Pierre Simon Laplace (IPSL). He is a physicist working on the global carbon cycle of planet Earth, climate change, ecology and geosciences."
-  },
-  {
-    "objectID": "people/Collaborators/ciais.html#education",
-    "href": "people/Collaborators/ciais.html#education",
-    "title": "Philippe Ciais",
-    "section": "Education",
-    "text": "Education\n\nPhD in … | Heidelberg University, Germany | ??? - ???"
-  },
-  {
-    "objectID": "people/Collaborators/ciais.html#professional-experience",
-    "href": "people/Collaborators/ciais.html#professional-experience",
-    "title": "Philippe Ciais",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2018-present: Whatever, wherre"
-  },
-  {
-    "objectID": "people/ScienceTeam/08_hoyt.html",
-    "href": "people/ScienceTeam/08_hoyt.html",
-    "title": "Alison Hoyt",
-    "section": "",
-    "text": "Alison Hoyt is an Assistant Professor of Earth System Science at Stanford. She studies tropical soil carbon and greenhouse gas emissions and their response to climate and land use change, with a particular focus on the carbon cycle of tropical wetlands and peatlands. Her research group takes field measurement of CO2 and CH4 emissions from these ecosystems, as well as other biogeochemical, isotopic, and hydrological measurements, and synthesizes them with a combination of modeling and remote sensing to understand ecosystem processes and changes resulting from climate and land use change. She has conducted fieldwork across the tropics, including in Southeast Asia, Africa, and South America."
-  },
-  {
-    "objectID": "people/ScienceTeam/08_hoyt.html#education",
-    "href": "people/ScienceTeam/08_hoyt.html#education",
-    "title": "Alison Hoyt",
-    "section": "Education",
-    "text": "Education\nPh.D., Civil & Environmental Engineering, Massachusetts Institute of Technology, 2017 • M.Phil., Environment, Society and Development, University of Cambridge, 2010 • B.S., Physics and Engineering Sciences (Environmental), Yale University, 2009\n\nPh.D., Civil & Environmental Engineering | Massachusetts Institute of Technology | 2017\nM.Phil., Environment, Society and Development | University of Cambridge | 2010\nB.S., Physics and Engineering Sciences (Environmental) | Yale University | 2009"
-  },
-  {
-    "objectID": "people/ScienceTeam/08_hoyt.html#professional-experience",
-    "href": "people/ScienceTeam/08_hoyt.html#professional-experience",
-    "title": "Alison Hoyt",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2016-present: Assistant Professor, Stanford"
-  },
-  {
-    "objectID": "people/ScienceTeam/07_bruhwiler.html",
-    "href": "people/ScienceTeam/07_bruhwiler.html",
-    "title": "Lori Bruhwiler",
-    "section": "",
-    "text": "Lori Bruhwiler is the principal investigator of the NOAA CarbonTracker-CH4 modeling system. She has extensive experience using atmospheric models and in situ network observations to constrain the atmospheric methane budget. Her most recent work examines the use of methane isotopic data to improve our ability to partition the global methane budget among microbial and fossil fuel contributions."
-  },
-  {
-    "objectID": "people/ScienceTeam/07_bruhwiler.html#education",
-    "href": "people/ScienceTeam/07_bruhwiler.html#education",
-    "title": "Lori Bruhwiler",
-    "section": "Education",
-    "text": "Education\n\nPhD in Astrophysical, Planetary and Atmospheric Science | University of Colorado, Boulder | 1992\nM.S., Astrophysical, Planetary and Atmospheric Science | University of Colorado, Boulder | 1988\nB.S., Physics, Mathematics | University of Texas, Austin | 1985"
-  },
-  {
-    "objectID": "people/ScienceTeam/13_brodrick.html",
-    "href": "people/ScienceTeam/13_brodrick.html",
-    "title": "Philip Brodrick",
-    "section": "",
-    "text": "Philip G. Brodrick is a Data Scientist at the Jet Propulsion Laboratory in Pasadena, CA, working on the science and application of imaging spectroscopy."
-  },
-  {
-    "objectID": "people/ScienceTeam/13_brodrick.html#education",
-    "href": "people/ScienceTeam/13_brodrick.html#education",
-    "title": "Philip Brodrick",
-    "section": "Education",
-    "text": "Education\n\nPhD in Energy Systems Engineering | Stanford University, USA | 2012 - 2017\nMS in Renewable and Clean Energy | University of Dayton, USA | 2010 - 2012\n\nBS in Physics | University of Dayton, USA | 2008 - 2010"
-  },
-  {
-    "objectID": "people/ScienceTeam/13_brodrick.html#professional-experience",
-    "href": "people/ScienceTeam/13_brodrick.html#professional-experience",
-    "title": "Philip Brodrick",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2023-present: Project Algorithm Scientist, SBG-VSWIR Imaging Spectrometer Mission\n2022-present: Project Algorithm Scientist, EMIT Imaging Spectrometer Mission\n2019-present: Data Scientist, Jet Propulsion Laboratory"
-  },
-  {
-    "objectID": "people/ScienceTeam/02_michalak.html",
-    "href": "people/ScienceTeam/02_michalak.html",
-    "title": "Anna Michalak",
-    "section": "",
-    "text": "Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality."
-  },
-  {
-    "objectID": "people/ScienceTeam/02_michalak.html#education",
-    "href": "people/ScienceTeam/02_michalak.html#education",
-    "title": "Anna Michalak",
-    "section": "Education",
-    "text": "Education\n\nPhD in Civil and Environmental Engineering | Stanford University | 2003\nMS in Civil and Environmental Engineering | Stanford University | 1998\nBSc(Eng) in Environmental Engineering | University of Guelph, Canada | 1997"
-  },
-  {
-    "objectID": "people/ScienceTeam/02_michalak.html#professional-experience",
-    "href": "people/ScienceTeam/02_michalak.html#professional-experience",
-    "title": "Anna Michalak",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\n2011-present: Faculty member and Director, Carnegie Institution for Science\n2011-present: Professor (2016 - ) and Associate Professor (2011-2016), Stanford\n2004-2011: Associate Professor (2010-2011) and Assistant Professor (2004-2010), University of Michigan\n2003- 2004: NOAA Climate & Global Change (C&GC) Fellow, NOAA\\"
+    "text": "Professional Experience\n\n2022-present: Professor, University of Bremen, Germany\n2007-2022: Professor (2017-2022), Reader (2013-2017), Lecturer (2012-2013), Research Fellow (2007-2012), University of Leicester, UK\n2003-2007: Postdoc (2003-2005), Scientist (2006-2007), Earth Atmospheric Science, JPL, USA\n2002- 2003: Postodc, University of Heidelberg, Germany\\"
   },
   {
     "objectID": "people/ScienceTeam/01_frankenberg.html",
@@ -686,25 +623,46 @@
     "text": "Professional Experience\n\n2018-present: Professor, Caltech\n2015-2018: Associate Professor, Caltech\n2010-present: Scientist, Earth Atmospheric Science, JPL\n2006- 2009: VENI Postdoc at SRON-Netherlands Institute of Space Research\\"
   },
   {
-    "objectID": "people/ScienceTeam/12_thompson.html",
-    "href": "people/ScienceTeam/12_thompson.html",
-    "title": "David Thompson",
+    "objectID": "people/ScienceTeam/06_thorpe.html",
+    "href": "people/ScienceTeam/06_thorpe.html",
+    "title": "Andrew Thorpe",
     "section": "",
-    "text": "David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing. David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso]. He is currently the Instrument Scientist for NASA’s EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration. In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit]. David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT."
+    "text": "Andrew Thorpe is a technologist in the JPL imaging spectroscopy group with a decade of experience working with imaging spectrometer data. He has developed quantitative gas retrievals for AVIRIS, AVIRIS-NG, and EMIT using differential optical absorption spectroscopy, methods to estimate emission rates, and contributed to projects aimed at visualizing methane results and reducing data latency. Andrew is currently an EMIT Science Team member leading the EMIT greenhouse gas mapping application, and the Deputy Instrument Scientist for Carbon Plume Mapper."
   },
   {
-    "objectID": "people/ScienceTeam/12_thompson.html#education",
-    "href": "people/ScienceTeam/12_thompson.html#education",
-    "title": "David Thompson",
+    "objectID": "people/ScienceTeam/06_thorpe.html#education",
+    "href": "people/ScienceTeam/06_thorpe.html#education",
+    "title": "Andrew Thorpe",
     "section": "Education",
-    "text": "Education\n\nPhD in Robotics | Carnegie Mellon University, Pittsburgh, USA | 2003-2008\nMSc in Informatics | University of Edinburgh, Scotland, UK | 2001-2002"
+    "text": "Education\n\nPh.D., Geography | Univ. of California, Santa Barbaray | 2015\nB.S., Geology | Brown University | 2004"
   },
   {
-    "objectID": "people/ScienceTeam/12_thompson.html#professional-experience",
-    "href": "people/ScienceTeam/12_thompson.html#professional-experience",
-    "title": "David Thompson",
+    "objectID": "people/ScienceTeam/06_thorpe.html#professional-experience",
+    "href": "people/ScienceTeam/06_thorpe.html#professional-experience",
+    "title": "Andrew Thorpe",
     "section": "Professional Experience",
-    "text": "Professional Experience\n\n2023-present: Deputy Project Scientist, SBG-VSWIR Imaging Spectrometer Mission\n2020-present: Adjunct Professor, Arizona State University\n2019-present: Instrument Scientist, HVM3 on Lunar Trailblazer\n2018-present: Instrument Scientist, EMIT Imaging Spectrometer Mission\n2016-present: Investigation Scientist, AVIRIS Airborne Imaging Spectrometer\n2016-present: Technical Group Lead, Imaging Spectroscopy Group at Jet Propulsion Laboratory\n2008-present: Research Technologist, Jet Propulsion Laboratory\\"
+    "text": "Professional Experience\nAndrew Thorpe has extensive experience in high-resolution methane mapping, ranging from retrieval algorithms (A. Thorpe, Frankenberg, and Roberts 2014; Andrew K. Thorpe et al. 2017; Andrew K. Thorpe et al. 2021) and the first ever controlled release experiment involving aircraft and spectroscopic mapping (Andrew K. Thorpe et al. 2016) to data analysis and sectorial up-scaling of methane fluxes (Andrew K. Thorpe et al. 2023, 2020; Cusworth et al. 2022; Duren et al. 2019)."
+  },
+  {
+    "objectID": "people/ScienceTeam/09_kebreab.html",
+    "href": "people/ScienceTeam/09_kebreab.html",
+    "title": "Ermias Kebreab",
+    "section": "",
+    "text": "Ermias Kebreab is Professor of Sustainable Agriculture at University of California, Davis and works on reducing enteric methane emissions."
+  },
+  {
+    "objectID": "people/ScienceTeam/09_kebreab.html#education",
+    "href": "people/ScienceTeam/09_kebreab.html#education",
+    "title": "Ermias Kebreab",
+    "section": "Education",
+    "text": "Education\n\nPhD in Integrative Biology | University of Reading, UK | 1995 - 1998\nBSc in Biology/Chemistry | University of Asmara, Eritrea | 1983-1987"
+  },
+  {
+    "objectID": "people/ScienceTeam/09_kebreab.html#professional-experience",
+    "href": "people/ScienceTeam/09_kebreab.html#professional-experience",
+    "title": "Ermias Kebreab",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2009-present: Professor, UC Davis\n2007-2009: Associate Professor/Canada Research Chair, University of Manitoba, Canada\n2003-2006: Adjustn Professor, University of Guelph, Canada\n1998- 2002: Post Doctoral Fellow, University of Reading, UK\\"
   },
   {
     "objectID": "people/ScienceTeam/04_Yin.html",
@@ -726,6 +684,118 @@
     "title": "Yi Yin",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2023-present: Associate Professor, New York University\n2017-2023: Research Scientist, California Institute of Technology\n2016-2017: NASA NPP Postdoc, Jet PL\n2013-2016: Postdoc, LSCE, France\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html",
+    "href": "people/ScienceTeam/14_Chadwick.html",
+    "title": "K. Dana Chadwick",
+    "section": "",
+    "text": "Dana Chadwick is a Scientist at JPL and Mission Applications Lead, for the Earth Surface Mineral Dust Source Investigation (EMIT)."
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html#education",
+    "href": "people/ScienceTeam/14_Chadwick.html#education",
+    "title": "K. Dana Chadwick",
+    "section": "Education",
+    "text": "Education\n• Ph.D., Earth System Science, Stanford University, 2017 • B.A., Molecular and Cell Biology, University of California Berkeley, 2008 • B.S., Environmental Economics and Policy, University of California Berkeley, 2008\n\nPh.D., Earth System Science | Stanford University | 2017\nB.A., Molecular and Cell Biology | University of California Berkeley | 2008\nB.S., Environmental Economics and Policy | University of California Berkeley | 2008"
+  },
+  {
+    "objectID": "people/ScienceTeam/14_Chadwick.html#professional-experience",
+    "href": "people/ScienceTeam/14_Chadwick.html#professional-experience",
+    "title": "K. Dana Chadwick",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2018-present: Scientist, JPL"
+  },
+  {
+    "objectID": "people/ScienceTeam/12_thompson.html",
+    "href": "people/ScienceTeam/12_thompson.html",
+    "title": "David Thompson",
+    "section": "",
+    "text": "David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing. David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso]. He is currently the Instrument Scientist for NASA’s EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration. In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit]. David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT."
+  },
+  {
+    "objectID": "people/ScienceTeam/12_thompson.html#education",
+    "href": "people/ScienceTeam/12_thompson.html#education",
+    "title": "David Thompson",
+    "section": "Education",
+    "text": "Education\n\nPhD in Robotics | Carnegie Mellon University, Pittsburgh, USA | 2003-2008\nMSc in Informatics | University of Edinburgh, Scotland, UK | 2001-2002"
+  },
+  {
+    "objectID": "people/ScienceTeam/12_thompson.html#professional-experience",
+    "href": "people/ScienceTeam/12_thompson.html#professional-experience",
+    "title": "David Thompson",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2023-present: Deputy Project Scientist, SBG-VSWIR Imaging Spectrometer Mission\n2020-present: Adjunct Professor, Arizona State University\n2019-present: Instrument Scientist, HVM3 on Lunar Trailblazer\n2018-present: Instrument Scientist, EMIT Imaging Spectrometer Mission\n2016-present: Investigation Scientist, AVIRIS Airborne Imaging Spectrometer\n2016-present: Technical Group Lead, Imaging Spectroscopy Group at Jet Propulsion Laboratory\n2008-present: Research Technologist, Jet Propulsion Laboratory\\"
+  },
+  {
+    "objectID": "people/ScienceTeam/11_green.html",
+    "href": "people/ScienceTeam/11_green.html",
+    "title": "Robert Green",
+    "section": "",
+    "text": "Rob Green is a Senior Scientist at JPL. He is the Principal Investigator of the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) that originated to use of imaging spectroscopy for carbon dioxide and methane point source mapping. Principal Investigator of the competed Earth Ventures the Earth Surface Mineral Dust Source Investigation (EMIT) space imaging spectrometer that along with the Prime Mission objectives has demonstrated carbon dioxide and methane point source mapping from the ISS across six continents. Instrument Scientist or Co-I in five other space imaging spectrometers (CPM, MISE, M3, Hyperion, CRISM)."
+  },
+  {
+    "objectID": "people/ScienceTeam/11_green.html#education",
+    "href": "people/ScienceTeam/11_green.html#education",
+    "title": "Robert Green",
+    "section": "Education",
+    "text": "Education\n• PhD, Spectroscopy, University of California, Santa Barbara (2003) • MSc, Applied Earth Science, Stanford University, (1986) • BSc, Geology, Stanford University (1984)\n\nPhD in Spectroscopy | University of California, Santa Barbara | 2003\nMSc, Applied Earth Science | Stanford University | 1986\nBSc, Geology | Stanford University | 1984"
+  },
+  {
+    "objectID": "people/ScienceTeam/11_green.html#professional-experience",
+    "href": "people/ScienceTeam/11_green.html#professional-experience",
+    "title": "Robert Green",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n20xx-present: Scientist, JPL"
+  },
+  {
+    "objectID": "ch4_story.html",
+    "href": "ch4_story.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "ch4_story.html#what-is-going-on-with-methane",
+    "href": "ch4_story.html#what-is-going-on-with-methane",
+    "title": "",
+    "section": "What is going on with methane?",
+    "text": "What is going on with methane?\nHuman activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO2) and methane (CH4). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use (Turner, Frankenberg, and Kort 2019; Saunois et al. 2017). The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks (Zhang et al. 2023) and anthropogenic sources (Jackson et al. 2020)."
+  },
+  {
+    "objectID": "ch4_story.html#ch4-data-from-noaa",
+    "href": "ch4_story.html#ch4-data-from-noaa",
+    "title": "",
+    "section": "CH4 data from NOAA",
+    "text": "CH4 data from NOAA\nGround based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly CH4 concentration data, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.\n\nfileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\ncsvText = d3.text(fileUrl)\n\n\n\n\n\n\n\nprocessedData = {\n  const lines = csvText.split('\\n').filter(line =&gt; line.trim().length &gt; 0 && !line.startsWith('#'));\n  return d3.csvParse(lines.join('\\n'),d3.autoType);\n}\n\n\n\n\n\n\n\nprocessedData2 = processedData.map(d =&gt; ({\n  ...d,\n  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date\n}));\n\n\n\n\n\n\n\nstart = new Date(1980, 0)\nend   = new Date(2024,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = processedData2.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nyMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field\nyMax = d3.max(filtered, d =&gt; d.average);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstagnationDate = new Date(\"2005-01-01\") \nincreaseDate   = new Date(\"2010-01-01\") \naccelerationDate = new Date(\"2015-01-01\") \ntopMargin= 1750\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction adjustTextPosition(plotDomain, fixedDate, defaultPosition) {\n  if (fixedDate &lt; plotDomain[0] || fixedDate &gt; plotDomain[1]) {\n    // Adjust the position to be within the domain\n    // For example, set it to the start or end of the domain\n    return plotDomain[0]; // or plotDomain[1]\n  }\n  return defaultPosition;\n}\n\n\n\n\n\n\n\nPlot.plot({\n    width,\n  y: {\n    grid: true,\n    label: \"CH₄ (ppb)\",\n    domain: [yMin, yMax] // Set the y-axis domain\n  },\n  x: {\n    grid: true,\n    label: \"time\",\n    domain: [d3.min(filtered, d =&gt; d.Date), d3.max(filtered, d =&gt; d.Date)] // Set the y-axis domain\n  },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marks: [\n    Plot.rectY([{}], { \n      x1: new Date(\"2000-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2007-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"blue\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2007-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2015-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"yellow\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2015-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2024-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"red\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.line(filtered, { \n      x: \"Date\", \n      y: \"average\",\n      title: (d) =&gt;\n        `${formatDate(d.Date)} \\n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \\n makes a new line\n    }),\n    Plot.lineY(filtered, Plot.windowY({k: 12, reduce: \"mean\"}, {x: \"Date\", y: \"average\", stroke: \"red\"})),\n    Plot.text([{}], {\n      x: stagnationDate,\n      y: 1820,\n      textAnchor: \"middle\",\n      dy: \"-0.5em\", // Adjust vertical position\n      fontWeight: \"bold\",\n      text: \"Stagnation Period\"\n    })\n  ]\n})\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
+  },
+  {
+    "objectID": "clouds.html",
+    "href": "clouds.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "clouds.html#the-impact-of-cloud-on-ghg-remote-sensing-is-strongly-dependent-on-the-footprint-size.",
+    "href": "clouds.html#the-impact-of-cloud-on-ghg-remote-sensing-is-strongly-dependent-on-the-footprint-size.",
+    "title": "",
+    "section": "The impact of cloud on GHG remote sensing is strongly dependent on the footprint size.",
+    "text": "The impact of cloud on GHG remote sensing is strongly dependent on the footprint size.\nIn Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions GRL paper.\nHere, we provide a simple interactive example for cloud statistics from our data in the manuscript under review. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series. Note that the coverage is not fully global due to the computation demand of computing these likelihoods from 10m Sentinel-2 data.\n\nviewof point = {\n  const width = 600.0\n  const height = width / 2;\n  const context = DOM.context2d(width, height);\n  const projection = d3.geoEqualEarth().fitSize([width, height], {type: \"Sphere\"});\n  const path = d3.geoPath(projection, context);\n  let mousedown = false;\n\n  context.beginPath(), path(graticule), context.strokeStyle = \"#ccc\", context.stroke();\n  context.beginPath(), path(land), context.fill();\n  context.beginPath(), path(sphere), context.strokeStyle = \"#000\", context.stroke();\n  context.lineWidth = 2, context.strokeStyle = \"#f00\";\n  const image = context.getImageData(0, 0, context.canvas.width, context.canvas.height);\n\n  function render(coordinates) {\n    context.canvas.value = coordinates;\n    context.clearRect(0, 0, width, height);\n    context.putImageData(image, 0, 0);\n    context.beginPath(), path({type: \"Point\", coordinates}), context.stroke();\n  }\n\n  context.canvas.onmousedown = event =&gt; {\n    mousedown = true;\n    context.canvas.onmousemove(event);\n  };\n\n  context.canvas.onmousemove = ({layerX, layerY}) =&gt; {\n    if (!mousedown) return;\n    render(projection.invert([layerX, layerY]));\n    context.canvas.dispatchEvent(new CustomEvent(\"input\"));\n  };\n\n  context.canvas.onmouseup = event =&gt; {\n    mousedown = false;\n  };\n\n  render([-55, 0]);\n  return context.canvas;\n}\n\n\n\n\n\n\n\nfileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\n`You picked: Latitude: ${Math.round(point[1])}, Longitude: ${Math.round(point[0])}`\n\n\n\n\n\n\n\nstart = new Date(2018, 0)\nend   = new Date(2022,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nviewof thresh = Inputs.range(\n  [5, 50], \n  {value: 17, step: 2, label: \"Number of bins\"}\n)\n\n\n\n\n\n\n\nbinBoundaries1 = calculateLogBins(0.0001, 1.01, thresh);\n\n\n\n\n\n\n\nfunction calculateLogBins(start, end, nBins) {\n  const logStart = Math.log10(start);\n  const logEnd = Math.log10(end);\n  const bins = Array.from({length: nBins + 1}, (_, i) =&gt; \n    Math.pow(10, logStart + (logEnd - logStart) * i / nBins)\n  );\n  return bins;\n}\n\n\n\n\n\n\n\n// Custom tick format function\nfunction customTickFormat(d) {\n  if (d &lt; 0.1) return d.toFixed(2);  // Display 1 as '1'\n  if (d &lt; 1) return d.toFixed(1);  // Display 0.01 as '0.01'\n  return d;  // Default formatting for other values\n}\n\n\n\n\n\n\n\nPlot\n\n\nBelow is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)\n\nPlot.plot({\nwidth,\n  x: { type: \"log\",base:10,\ntransform: d =&gt; Math.max(.01, 100*d)}, \n  y: {grid: true},\n  style: { fontSize: \"12px\",},\n  color: {legend: true},\n  marks: [\n    Plot.rectY(filtered, Plot.binX({y: \"count\"}, {x: \"cf_200\", fill: \"steelblue\", fillOpacity: 0.5,thresholds: binBoundaries1, tip: \"xy\" })),\n    Plot.rectY(filtered, Plot.binX({y: \"count\"}, {x: \"cf_2000\", fill: \"tomato\", fillOpacity: 0.5,thresholds: binBoundaries1, tip: \"xy\" })),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\nBelow is the corresponding time-series in the same colors (You can hover over the data to get exact values at each time-step). You can find that there are extended times in the humid tropics, where larger pixels hamper data collection, specifically in the wet season. Try out regions in the Amazon or Indonesia, for example. Outside the humid tropics, the differences are far less severe, as large-scale cloud cover without gaps can persist, and so do larger areas without clouds. Thus, in many areas, footprints larger than 2km can be perfectly fine (e.g. with TROPOMI).\nHowever, if you want to improve understanding in the humid tropics, fine spatial resolution is key!\n\nPlot.plot({\n  width,  \n  y: { grid: true, label: \"Likelihood of cloud free pixel\",domain:[0,1.099] },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marginBottom: 37,\n  marks: [\n    Plot.axisX({ ticks: d3.utcMonth.every(3) }),\n    Plot.lineY(filtered, { \n      x: \"Date\", \n      y: \"cf_200\",\n      stroke: \"steelblue\", // Custom line color\n      fillOpacity: 0.75,\n      marker: \"circle\",\n      strokeWidth: 1.2 // Thin line\n    }),\n    Plot.lineY(filtered, { \n      x: \"Date\", \n      y: \"cf_2000\",\n      stroke: \"tomato\", // Custom line color\n      fillOpacity: 0.75,\n      marker: \"circle\",\n      strokeWidth: 1.5\n    }),\n    //Plot.ruleX(filtered, Plot.pointerX({x: \"Date\", py: \"cf_2000\", stroke: \"black\",fillOpacity: 0.75,strokeWidth: 0.8 })),\n    Plot.dot(filtered, Plot.pointerX({x: \"Date\", y: \"cf_200\", stroke: \"blue\"})),\n    Plot.dot(filtered, Plot.pointerX({x: \"Date\", y: \"cf_2000\", stroke: \"red\"})),\n    Plot.text(filtered, Plot.pointerX({px: \"Date\", py: \"cf_2000\", dy: +0.15, frameAnchor: \"top-left\", fontVariant: \"tabular-nums\", text: (d) =&gt; [`Date ${Plot.formatIsoDate(d.Date)}`, `200m ${d.cf_200?.toFixed(4)}`, `2000m ${d.cf_2000?.toFixed(4)}`].join(\"   \")})),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n//data = FileAttachment(\"data/subset_data.csv\").csv({ typed: true })\n//data = d3.csv(\"https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv\")\n//print(fileUrl)\ndata = d3.csv(fileUrl, d3.autoType)\n//data = FileAttachment(\"data/subset_data.csv\").csv()\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nsphere = ({type: \"Sphere\"})\n\n\n\n\n\n\n\ngraticule = d3.geoGraticule10()\n\n\n\n\n\n\n\nland = topojson.feature(world, world.objects.land)\n\n\n\n\n\n\n\nworld = FileAttachment(\"data/land-50m.json\").json()\n\n\n\n\n\n\n\ntopojson = require(\"topojson-client@3\")\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
+  },
+  {
+    "objectID": "News/Selected.html",
+    "href": "News/Selected.html",
+    "title": "Carbon-I has been selected for Phase A",
+    "section": "",
+    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
+  },
+  {
+    "objectID": "News/Selected.html#nasas-ese-concept-study-selection",
+    "href": "News/Selected.html#nasas-ese-concept-study-selection",
+    "title": "Carbon-I has been selected for Phase A",
+    "section": "",
+    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
   },
   {
     "objectID": "science.html",
@@ -756,66 +826,24 @@
     "text": "High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution\n\n\n\n\n\n\n\nHigh spatial resolution enables plume mapping, allowing direct attribution\nCarbon-I will investigate hotspots and flux heterogeneity globally and use the target mode as a magnifying glass. The detection of localized plumes across various source types (airborne on the left, EMIT on the right) enables applications and field campaigns (bottom left)."
   },
   {
-    "objectID": "clouds.html",
-    "href": "clouds.html",
+    "objectID": "edgar.html",
+    "href": "edgar.html",
     "title": "",
     "section": "",
     "text": "Code"
   },
   {
-    "objectID": "clouds.html#the-impact-of-cloud-on-ghg-remote-sensing-is-strongly-dependent-on-the-footprint-size.",
-    "href": "clouds.html#the-impact-of-cloud-on-ghg-remote-sensing-is-strongly-dependent-on-the-footprint-size.",
+    "objectID": "edgar.html#edgar-stuff",
+    "href": "edgar.html#edgar-stuff",
     "title": "",
-    "section": "The impact of cloud on GHG remote sensing is strongly dependent on the footprint size.",
-    "text": "The impact of cloud on GHG remote sensing is strongly dependent on the footprint size.\nIn Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions GRL paper.\nHere, we provide a simple interactive example for cloud statistics from our data in the manuscript under review. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series. Note that the coverage is not fully global due to the computation demand of computing these likelihoods from 10m Sentinel-2 data.\n\nviewof point = {\n  const width = 600.0\n  const height = width / 2;\n  const context = DOM.context2d(width, height);\n  const projection = d3.geoEqualEarth().fitSize([width, height], {type: \"Sphere\"});\n  const path = d3.geoPath(projection, context);\n  let mousedown = false;\n\n  context.beginPath(), path(graticule), context.strokeStyle = \"#ccc\", context.stroke();\n  context.beginPath(), path(land), context.fill();\n  context.beginPath(), path(sphere), context.strokeStyle = \"#000\", context.stroke();\n  context.lineWidth = 2, context.strokeStyle = \"#f00\";\n  const image = context.getImageData(0, 0, context.canvas.width, context.canvas.height);\n\n  function render(coordinates) {\n    context.canvas.value = coordinates;\n    context.clearRect(0, 0, width, height);\n    context.putImageData(image, 0, 0);\n    context.beginPath(), path({type: \"Point\", coordinates}), context.stroke();\n  }\n\n  context.canvas.onmousedown = event =&gt; {\n    mousedown = true;\n    context.canvas.onmousemove(event);\n  };\n\n  context.canvas.onmousemove = ({layerX, layerY}) =&gt; {\n    if (!mousedown) return;\n    render(projection.invert([layerX, layerY]));\n    context.canvas.dispatchEvent(new CustomEvent(\"input\"));\n  };\n\n  context.canvas.onmouseup = event =&gt; {\n    mousedown = false;\n  };\n\n  render([-55, 0]);\n  return context.canvas;\n}\n\n\n\n\n\n\n\nfileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\n`You picked: Latitude: ${Math.round(point[1])}, Longitude: ${Math.round(point[0])}`\n\n\n\n\n\n\n\nstart = new Date(2018, 0)\nend   = new Date(2022,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nviewof thresh = Inputs.range(\n  [5, 50], \n  {value: 17, step: 2, label: \"Number of bins\"}\n)\n\n\n\n\n\n\n\nbinBoundaries1 = calculateLogBins(0.0001, 1.01, thresh);\n\n\n\n\n\n\n\nfunction calculateLogBins(start, end, nBins) {\n  const logStart = Math.log10(start);\n  const logEnd = Math.log10(end);\n  const bins = Array.from({length: nBins + 1}, (_, i) =&gt; \n    Math.pow(10, logStart + (logEnd - logStart) * i / nBins)\n  );\n  return bins;\n}\n\n\n\n\n\n\n\n// Custom tick format function\nfunction customTickFormat(d) {\n  if (d &lt; 0.1) return d.toFixed(2);  // Display 1 as '1'\n  if (d &lt; 1) return d.toFixed(1);  // Display 0.01 as '0.01'\n  return d;  // Default formatting for other values\n}\n\n\n\n\n\n\n\nPlot\n\n\nBelow is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1 to 100%)\n\nPlot.plot({\nwidth,\n  x: { type: \"log\",base:10,\ntransform: d =&gt; Math.max(.01, 100*d)}, \n  y: {grid: true},\n  style: { fontSize: \"12px\",},\n  color: {legend: true},\n  marks: [\n    Plot.rectY(filtered, Plot.binX({y: \"count\"}, {x: \"cf_200\", fill: \"steelblue\", fillOpacity: 0.5,thresholds: binBoundaries1, tip: \"xy\" })),\n    Plot.rectY(filtered, Plot.binX({y: \"count\"}, {x: \"cf_2000\", fill: \"tomato\", fillOpacity: 0.5,thresholds: binBoundaries1, tip: \"xy\" })),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\nBelow is the corresponding time-series in the same colors (You can hover over the data to get exact values at each time-step). You can find that there are extended times in the humid tropics, where larger pixels hamper data collection, specifically in the wet season. Try out regions in the Amazon or Indonesia, for example. Outside the humid tropics, the differences are far less severe, as large-scale cloud cover without gaps can persist, and so do larger areas without clouds. Thus, in many areas, footprints larger than 2km can be perfectly fine (e.g. with TROPOMI).\nHowever, if you want to improve understanding in the humid tropics, fine spatial resolution is key!\n\nPlot.plot({\n  width,  \n  y: { grid: true, label: \"Likelihood of cloud free pixel\",domain:[0,1.099] },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marginBottom: 37,\n  marks: [\n    Plot.axisX({ ticks: d3.utcMonth.every(3) }),\n    Plot.lineY(filtered, { \n      x: \"Date\", \n      y: \"cf_200\",\n      stroke: \"steelblue\", // Custom line color\n      fillOpacity: 0.75,\n      marker: \"circle\",\n      strokeWidth: 1.2 // Thin line\n    }),\n    Plot.lineY(filtered, { \n      x: \"Date\", \n      y: \"cf_2000\",\n      stroke: \"tomato\", // Custom line color\n      fillOpacity: 0.75,\n      marker: \"circle\",\n      strokeWidth: 1.5\n    }),\n    //Plot.ruleX(filtered, Plot.pointerX({x: \"Date\", py: \"cf_2000\", stroke: \"black\",fillOpacity: 0.75,strokeWidth: 0.8 })),\n    Plot.dot(filtered, Plot.pointerX({x: \"Date\", y: \"cf_200\", stroke: \"blue\"})),\n    Plot.dot(filtered, Plot.pointerX({x: \"Date\", y: \"cf_2000\", stroke: \"red\"})),\n    Plot.text(filtered, Plot.pointerX({px: \"Date\", py: \"cf_2000\", dy: +0.15, frameAnchor: \"top-left\", fontVariant: \"tabular-nums\", text: (d) =&gt; [`Date ${Plot.formatIsoDate(d.Date)}`, `200m ${d.cf_200?.toFixed(4)}`, `2000m ${d.cf_2000?.toFixed(4)}`].join(\"   \")})),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n//data = FileAttachment(\"data/subset_data.csv\").csv({ typed: true })\n//data = d3.csv(\"https://raw.githubusercontent.com/cfranken/s2_data/main/files/1.0_-55.0.csv\")\n//print(fileUrl)\ndata = d3.csv(fileUrl, d3.autoType)\n//data = FileAttachment(\"data/subset_data.csv\").csv()\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nsphere = ({type: \"Sphere\"})\n\n\n\n\n\n\n\ngraticule = d3.geoGraticule10()\n\n\n\n\n\n\n\nland = topojson.feature(world, world.objects.land)\n\n\n\n\n\n\n\nworld = FileAttachment(\"data/land-50m.json\").json()\n\n\n\n\n\n\n\ntopojson = require(\"topojson-client@3\")\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
+    "section": "Edgar stuff",
+    "text": "Edgar stuff\n\nviewof dataSource = Inputs.radio(new Map(sources.map((d, i) =&gt; [d.label, i])), {\n  label: \"Choose data source\",\n  value: 0\n})\n\n\n\n\n\n\n\nnetcdf = import(\"https://cdn.skypack.dev/netcdfjs@2.0.2?min\").then((d) =&gt; d.NetCDFReader)\n\n\n\n\n\n\n\nsources = [\n  {src: \"data/v8.0_FT2022_GHG_CH4_2022_TOTALS_flx.nc\", variable: \"fluxes\", label: \"CH4 Fluxes\"},\n]\n\n\n\n\n\n\n\nreader = new netcdf(await fetch(\"https://rawgit.com/PBrockmann/D3_netcdfjs/master/\" + source.src).then(function(response) {\n    return response.arrayBuffer();\n  }))\n\n\n\n\n\n\n\nisize = reader.header.dimensions[0].size\n\n\n\n\n\n\n\njsize = reader.header.dimensions[1].size\n\n\n\n\n\n\n\nvalues = {\n  var values = new Float32Array(reader.getDataVariable(source.variable));\n  if (source.preprocess)\n      values = preprocessWnd(values);\n  return values;\n}\n\n\n\n\n\n\n\nprojection = {\n  switch (projName) {\n    case \"ortho\":\n      var p = d3.geoOrthographic().precision(0.1);\n      d3.timer(_ =&gt;\n        p.rotate([p.rotate()[0] + 0.1, p.rotate()[1], p.rotate()[2] || 0])\n      );\n      return p;\n    case \"hill\":\n      return d3.geoHill();\n    case \"azequalarea\":\n      return d3.geoAzimuthalEqualArea();\n    case \"equalearth\":\n      return d3.geoEqualEarth();\n    case \"equirectangular\":\n    default:\n      return d3.geoEquirectangular().rotate([120, 0]);\n  }\n}\n\n\n\n\n\n\n\ntopojson = require('topojson')\n\n\n\n\n\n\n\nsource = sources[dataSource]"
   },
   {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News from Carbon-I",
-    "section": "",
-    "text": "LA Times article\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nAAAS media fellow Noah Haggerty reports on our journey \n\n\n\n\n\nJuly 2, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I has been selected for Phase A\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nNASA announced the selection of four ESE Explorer mission concepts\n\n\n\n\n\nMay 7, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I proposal to NASA’s ESE call\n\n\n\n\n\n\nGreenhouse Gases\n\n\nSpectroscopy\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nOur journey for a satellite mission proposal to tackle greenhouse gases\n\n\n\n\n\nMarch 6, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "test/tester.html",
-    "href": "test/tester.html",
+    "objectID": "clouds_test.html",
+    "href": "clouds_test.html",
     "title": "",
     "section": "",
-    "text": "sequenceDiagram\n  participant Alice\n  participant Bob\n  Alice-&gt;&gt;John: Hello John, how are you?\n  loop Healthcheck\n    John-&gt;&gt;John: Fight against hypochondria\n  end\n  Note right of John: Rational thoughts &lt;br/&gt;prevail!\n  John--&gt;&gt;Alice: Great!\n  John-&gt;&gt;Bob: How about you?\n  Bob--&gt;&gt;John: Jolly good!"
-  },
-  {
-    "objectID": "team.html",
-    "href": "team.html",
-    "title": "",
-    "section": "",
-    "text": "Note\n\n\n\nThe Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrincipal Investigator\n\n\nCaltech/JPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeputy Principal Investigator – Science\n\n\nCarnegie Institution for Science / Stanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversion Lead\n\n\nHarvard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversions\n\n\nNew York University\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtmospheric Chemistry & Carbon Cycle feedbacks\n\n\nUniversity of Washington\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValidation Lead\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Scientist\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNOAA cross-validation, flux inversions\n\n\nNOAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux validation lead\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgriculture Applications\n\n\nUC Davis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration support\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration Lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScience Data System lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplications Lead\n\n\nJPL\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "team.html#science-team",
-    "href": "team.html#science-team",
-    "title": "",
-    "section": "",
-    "text": "Note\n\n\n\nThe Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrincipal Investigator\n\n\nCaltech/JPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeputy Principal Investigator – Science\n\n\nCarnegie Institution for Science / Stanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversion Lead\n\n\nHarvard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux Inversions\n\n\nNew York University\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtmospheric Chemistry & Carbon Cycle feedbacks\n\n\nUniversity of Washington\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValidation Lead\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject Scientist\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNOAA cross-validation, flux inversions\n\n\nNOAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFlux validation lead\n\n\nStanford\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgriculture Applications\n\n\nUC Davis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration support\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalibration Lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScience Data System lead\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApplications Lead\n\n\nJPL\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "team.html#collaborators",
-    "href": "team.html#collaborators",
-    "title": "",
-    "section": "Collaborators",
-    "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL/Caltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniversity Edinburgh, UK\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebra Wunch\n\n\nUniversity of Toronto\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes D. (Bram) Maasakkers\n\n\nSRON, The Netherlands\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "News/Selected.html",
-    "href": "News/Selected.html",
-    "title": "Carbon-I has been selected for Phase A",
-    "section": "",
-    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
-  },
-  {
-    "objectID": "News/Selected.html#nasas-ese-concept-study-selection",
-    "href": "News/Selected.html#nasas-ese-concept-study-selection",
-    "title": "Carbon-I has been selected for Phase A",
-    "section": "",
-    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
+    "text": "import {d3} from \"d3@7\"\nPlot.plot({\n  y: {grid: true},\n  color: {legend: true},\n  marks: [\n    Plot.rectY(filtered, Plot.binX({y: \"count\"}, {x: \"cloud_free_fraction02\",thresholds: thresh})),\n    Plot.ruleY([0])\n  ]\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof latitude = slider({\n  min: -90, max: 90, step: 1, value: 40, title: \"Latitude\"\n})\n\nviewof longitude = slider({\n  min: -180, max: 180, step: 1, value: -74, title: \"Longitude\"\n})\n\nviewof startDate = date({\n  title: \"Start Date\",\n  value: \"2021-01-01\"\n})\n\nviewof endDate = date({\n  title: \"End Date\",\n  value: \"2022-12-31\"\n})\n\n\n\nfunction getDataUrl(lat, lon) {\n  return `https://web.gps.caltech.edu/~cfranken/subset_data.csv`;\n}\n\nasync function loadData() {\n  const url = getDataUrl(latitude, longitude);\n  const data = await csv(url);\n  return data.filter(d =&gt; \n    new Date(d.time) &gt;= new Date(startDate) && \n    new Date(d.time) &lt;= new Date(endDate)\n  );\n}\n\nfilteredData = loadData();\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```{ojs}\n// Set the dimensions of the graph\nwidth = 800;\nheight = 500;\nmargin = {top: 20, right: 30, bottom: 40, left: 90};\n\n// Set up scales\nconst xScale = d3.scaleBand()\n  .domain(filteredData.map(d =&gt; d.time))\n  .range([margin.left, width - margin.right])\n  .padding(0.1);\n\nconst yScale = d3.scaleLinear()\n  .domain([0, d3.max(filteredData, d =&gt; d.cloud_free_fraction)])\n  .nice()\n  .range([height - margin.bottom, margin.top]);\n\n// SVG container\nconst svg = d3.create(\"svg\")\n    .attr(\"viewBox\", [0, 0, width, height]);\n\n// Bars\nsvg.append(\"g\")\n  .attr(\"fill\", \"steelblue\")\n  .selectAll(\"rect\")\n  .data(filteredData)\n  .join(\"rect\")\n    .attr(\"x\", d =&gt; xScale(d.time))\n    .attr(\"y\", d =&gt; yScale(d.cloud_free_fraction))\n    .attr(\"height\", d =&gt; yScale(0) - yScale(d.cloud_free_fraction))\n    .attr(\"width\", xScale.bandwidth());\n\n// X-axis\nsvg.append(\"g\")\n  .attr(\"transform\", `translate(0,${height - margin.bottom})`)\n  .call(d3.axisBottom(xScale));\n\n// Y-axis\nsvg.append(\"g\")\n  .attr(\"transform\", `translate(${margin.left},0)`)\n  .call(d3.axisLeft(yScale));\n\nreturn svg.node();\n```\n\n\n\n\n\n\n\nOJS Syntax Error (line 52, column 25)Unexpected token"
   }
 ]
