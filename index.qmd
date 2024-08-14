@@ -15,11 +15,12 @@ format:
 
 
 ![](/img/Logo-Black.png){fig-alt="" fig-align="left" width=80%} 
+
 A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.   
 
 ## The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases
 <center>
-![](/img/carbonI_anim.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width=300}
+![](/img/carbonI_anim.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width=400}
 </center>
 
 ### *Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments*
