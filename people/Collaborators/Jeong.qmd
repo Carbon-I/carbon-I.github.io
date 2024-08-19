@@ -1,0 +1,38 @@
+---
+title: "Sujong Jeong"
+started: "2020"
+image: /img/people/sujong.jpeg
+subtitle: "International Collaborator"
+description: "Seoul National University, South Korea"
+sortby: "1"
+#bibliography: ../../publications/sanghavi2024_doi.bib
+
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  
+  links:
+    - icon: mortarboard
+      text: Website
+      href: https://climatelab.snu.ac.kr/
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=nmzS5xQAAAAJ&hl=en&oi=ao
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0003-4586-4534
+---
+
+Sujong Jeong is a professor of climate science at the Seoul National University. His research focuses on global carbon cycle by utilizing various measurements, process-based models, and AI. 
+
+## Education
+- [PhD in Atmospheric Science]{.fw-bold} | Seoul National University | 2010
+
+## Professional Experience
+2018 – present Professor, Seoul National University
+2023 – present Principal Investigator, Korea Carbon Project (https://www.korea-carbon-project.org), South Korea
+2023 – present Director, Climate Tech Center, Seoul National University
+
+
+- [2018 – present:]{.fw-bold} 	Professor, Seoul National University
+- [2023 – present:]{.fw-bold} 	Principal Investigator, [Korea Carbon Project](https://www.korea-carbon-project.org), South Korea
+- [023 – present:]{.fw-bold} 	Director, Climate Tech Center, Seoul National University
