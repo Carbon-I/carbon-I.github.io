@@ -1,7 +1,7 @@
 ---
 title: "Sujong Jeong"
 started: "2020"
-image: /img/people/sujong.jpeg
+image: /img/people/sujong.jpg
 subtitle: "International Collaborator"
 description: "Seoul National University, South Korea"
 sortby: "1"
