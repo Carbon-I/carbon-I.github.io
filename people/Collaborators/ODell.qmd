@@ -1,48 +1,25 @@
 ---
-
 title: "Chris O'Dell"
-
 started: "2020"
-
 image: /img/people/odell.jpg
-
 subtitle: "Collaborator"
-
 description: "Colorado State University, Fort Collins, CO, USA"
-
-sortby: "1"
-
+sortby: "?"
 #bibliography: ../../publications/sanghavi2024_doi.bib
 
-
-
 about:
-
   id: hero-heading
-
   template: solana
-
   image-shape: round
-
-  
-
   links:
-
     - icon: mortarboard
-
       text: Website
-
       href: https://www.cira.colostate.edu/staff/odell-chris/
-
     - text: "{{< ai google-scholar >}} Google Scholar"
-
       href: https://scholar.google.com/citations?user=GxCn_64AAAAJ&hl=en
-
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
-
       href: https://orcid.org/0000-0002-0271-8433
 
----
 
 
 
