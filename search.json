@@ -60,7 +60,7 @@
     "href": "team.html#collaborators",
     "title": "",
     "section": "Collaborators",
-    "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nSujong Jeong\n\n\nSeoul National University, South Korea\n\n\n\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nEric Kort\n\n\nUniversity of Michigan\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL/Caltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniversity Edinburgh, UK\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebra Wunch\n\n\nUniversity of Toronto\n\n\n\n\n\n\n\n\n\n\n\nEducation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes D. (Bram) Maasakkers\n\n\nSRON, The Netherlands\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Collaborators\n\n\n\n\n\n\n\n\n\n\nSujong Jeong\n\n\nSeoul National University, South Korea\n\n\n\n\n\n\n\n\n\n\n\n\n\nHartmut Boesch\n\n\nUniversity of Bremen\n\n\n\n\n\n\n\n\n\n\n\n\n\nEric Kort\n\n\nUniversity of Michigan\n\n\n\n\n\n\n\n\n\n\n\n\n\nSuniti Sanghavi\n\n\nJPL/Caltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris O’Dell\n\n\nColorado State University, Fort Collins, CO, USA\n\n\n\n\n\n\n\n\n\n\n\n\n\nIlse Aben\n\n\nSRON, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndre Butz\n\n\nHeidelberg University, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhilippe Ciais\n\n\nLSCE, France\n\n\n\n\n\n\n\n\n\n\n\n\n\nRiley Duren\n\n\nCarbon Mapper\n\n\n\n\n\n\n\n\n\n\n\n\n\nBethany Ehlmann\n\n\nCaltech\n\n\n\n\n\n\n\n\n\n\n\n\n\nClayton Elder\n\n\nJPL\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Elvidge\n\n\nCO Sch. of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrank Hase\n\n\nKIT, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Houweling\n\n\nU. Amsterdam, Netherlands\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaul Palmer\n\n\nUniversity Edinburgh, UK\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnke Roiger\n\n\nDLR, Germany\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebra Wunch\n\n\nUniversity of Toronto\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoannes D. (Bram) Maasakkers\n\n\nSRON, The Netherlands\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "News/latimes.html",
@@ -275,21 +275,21 @@
   {
     "objectID": "people/Collaborators/ODell.html",
     "href": "people/Collaborators/ODell.html",
-    "title": "",
+    "title": "Chris O’Dell",
     "section": "",
-    "text": "title: “Chris O’Dell”\nstarted: “2020”\nimage: /img/people/odell.jpg\nsubtitle: “Collaborator”\ndescription: “Colorado State University, Fort Collins, CO, USA”\nsortby: “1”\n#bibliography: ../../publications/sanghavi2024_doi.bib\nabout:\nid: hero-heading\ntemplate: solana\nimage-shape: round\nlinks:\nChris O’Dell is a Senior Research Scientist at the Cooperative Institute for Research in the Atmosphere, Colorado State University. His research focuses on improving retrievals of greenhouse gases from satellite instruments."
+    "text": "Chris O’Dell is a Senior Research Scientist at the Cooperative Institute for Research in the Atmosphere, Colorado State University. His research focuses on improving retrievals of greenhouse gases from satellite instruments."
   },
   {
     "objectID": "people/Collaborators/ODell.html#education",
     "href": "people/Collaborators/ODell.html#education",
-    "title": "",
+    "title": "Chris O’Dell",
     "section": "Education",
     "text": "Education\n\nB.S. in Physics | University of Dayton | 1995\nPhD in Physics | University of Wisconsin-Madison | 2002"
   },
   {
     "objectID": "people/Collaborators/ODell.html#professional-experience",
     "href": "people/Collaborators/ODell.html#professional-experience",
-    "title": "",
+    "title": "Chris O’Dell",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2015 – present: Senior Research Scientist, CIRA, Colorado State University\n2012 – 2015: Assistant Professor of Atmospheric Science, Colorado State University\n023 – present: Research Scientist, Colorado State University"
   },
