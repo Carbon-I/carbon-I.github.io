@@ -4,7 +4,7 @@ started: "2020"
 image: /img/people/sujong.jpg
 subtitle: "International Collaborator"
 description: "Seoul National University, South Korea"
-sortby: "1"
+sortby: "?"
 #bibliography: ../../publications/sanghavi2024_doi.bib
 
 about:
@@ -35,4 +35,4 @@ Sujong Jeong is a professor of climate science at the Seoul National University.
 
 - [2018 – present:]{.fw-bold} 	Professor, Seoul National University
 - [2023 – present:]{.fw-bold} 	Principal Investigator, [Korea Carbon Project](https://www.korea-carbon-project.org), South Korea
-- [023 – present:]{.fw-bold} 	Director, Climate Tech Center, Seoul National University
+- [2023 – present:]{.fw-bold} 	Director, Climate Tech Center, Seoul National University
