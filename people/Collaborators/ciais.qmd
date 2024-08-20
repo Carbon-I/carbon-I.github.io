@@ -1,7 +1,7 @@
 ---
 title: "Philippe Ciais"
 started: "2018"
-image: /img/people/ciais.jpeg
+image: /img/people/ciais.png
 subtitle: "International Collaborator"
 description: "LSCE, France"
 sortby: "?"
