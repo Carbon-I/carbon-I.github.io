@@ -15,7 +15,11 @@ Here, we run a multiple-scattering solution for Carbon-I and EMIT spectral lines
 #| label: fig-carbonI
 #| fig-cap: "A Carbon-I forward model run"
 
+# Include packages:
 using vSmartMOM, InstrumentOperator, CarbonI, ImageFiltering, Interpolations, Plots
+
+# Use PlotlyJS:
+plotly()
 
 # Define wavelength grid for forward model:
 Δwl = 0.005
