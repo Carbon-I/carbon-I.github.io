@@ -26,7 +26,9 @@ jobs:
         uses: julia-actions/setup-julia@v1
       
       - name: IJulia
-        run: julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots")'
+        run: |
+          julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots")'
+          julia -e 'using Pkg; Pkg.add("https://github.com/Carbon-I/CarbonI")'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

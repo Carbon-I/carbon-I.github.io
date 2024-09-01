@@ -1,0 +1,127 @@
+# =================================================================
+# Top-Level Radiative Transfer Parameters
+# =================================================================
+radiative_transfer: 
+  # Spectral bands (list of ν_start:ν_step:ν_end, in cm⁻¹)
+  spec_bands: 
+    - (1e7/2391):0.01:(1e7/2029)
+  # Bidirectional Reflectance Distribution Function (BRDF) per band
+  surface: 
+    - LambertianSurfaceScalar(0.05)
+  # Quadrature-scheme for stream calculations
+  quadrature_type:    GaussQuadHemisphere()
+  # Polarization type (Stokes_I, Stokes_IQ, Stokes_IQU, Stokes_IQUV)
+  polarization_type:  Stokes_I()
+  # Maximum m (number of Fourier moments to loop over)
+  max_m:              2
+  # Exclusion angle for forward peak in fitting procedure (degrees)
+  Δ_angle:            2.0
+  # Trunction length for legendre terms
+  l_trunc:            12
+  # Depolarization factor
+  depol:              0.03
+  # Floating point type for calculations (Float32, Float64)
+  float_type:         Float64
+  # Architecture (default_architecture, GPU(), CPU())
+  architecture:       Architectures.GPU() #default_architecture
+  
+# =================================================================
+# Simulation Geometry
+# =================================================================
+geometry: 
+  # Solar zenith angle (degrees)
+  sza:                20.0
+  # Viewing zenith angles (degrees)
+  vza:                [0.0]
+  # Viewing azimuth angles (degrees)
+  vaz:                [0.0]
+  # Observation altitude (Pa)
+  obs_alt:            1000.0
+
+# =================================================================
+# Atmospheric Profile
+# =================================================================
+atmospheric_profile: 
+  # Temperature Profile (TOA to BOA, in K)
+  # Full-levels, specified at layer centers
+  T: [231.62, 244.33, 251.34, 258.09, 264.25, 269.15, 
+      272.59, 274.07, 273.30, 269.65, 264.27, 258.11, 
+      251.52, 245.22, 239.20, 234.05, 229.71, 225.70, 
+      222.70, 220.62, 219.32, 217.93, 216.98, 217.10, 
+      218.35, 223.33, 234.19, 249.34, 264.12, 277.20, 
+      280.77, 282.60, 284.40, 285.80]
+  # Pressure Profile (TOA to BOA at each boundary, in hPa)
+  # Half-levels, specified at layer boundaries
+  p: [  0.14,   0.22,   0.30,   0.39,   0.53,   0.71,   
+        0.96,   1.28,   1.70,   2.27,   3.03,   4.03,  
+        5.44,   7.26,   9.67,  12.90,  17.23,  23.30,  
+       31.00,  42.07,  56.09,  74.78,  99.69, 131.00,
+      176.85, 236.64, 314.58, 418.87, 557.76, 735.00, 
+      800.12, 849.00, 912.00, 980.00, 1005.0]
+  # Reduce profile to n layers
+  profile_reduction: -1
+
+# ================================a=================================
+# Absorption-Related Parameters (Optional)
+# =================================================================
+absorption:
+  # List of molecules per spectral band
+  molecules:
+  - [H2O,CO2,CH4, N2O, CO, CO2_13, C2H6, HDO]
+  LUTfiles:
+  - ["data/h2o_model_tccon.jld2", "data/co2_model.jld2","data/ch4_model.jld2","data/n2o_model.jld2","data/co_model.jld2","data/co2_model_iso2.jld2","data/c2h6_model.jld2","data/hdo_model.jld2"]
+  #  - [H2O,CO2,CH4, N2O, CO]  # Molecules in Band #1 (using LUT later)
+  # LookUpTable files (Interpolation Model saved as JLD2!)
+  
+  # VMR profiles can either be real-valued numbers, 
+  # or an array of nodal points from TOA to BOA, interpolated in pressure space
+  vmr: 
+    H2O:  [  5e-6,   5e-6,   5e-6,   5e-6,   5e-61,   5e-6,   
+        5e-6,   5e-6,   5e-6,   5e-6,  5e-6,   5e-6,  
+        5e-6,   5e-6,   5e-6,  5e-6,  5e-6,  5e-6,  
+       5e-6,  5e-6,  5e-6,  5e-6,  5e-6, 5e-6,
+      5e-6, 5e-6, 0.001, 0.0025, 0.005, 0.007, 
+      0.01, 0.015, 0.02, 0.03]
+    #H2O: [1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0e-61, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 1.0000000000000002e-6, 0.0002, 0.0005, 0.001, 0.0014000000000000002, 0.002, 0.003, 0.004, 0.006]
+    CO2:  400e-6
+    CH4:  2e-6
+    N2O:  0.32e-6
+    CO:   0.1e-6
+    CO2_13: 0.0004
+    C2H6: 1.0e-9
+    HDO: [  5e-6,   5e-6,   5e-6,   5e-6,   5e-61,   5e-6,   
+        5e-6,   5e-6,   5e-6,   5e-6,  5e-6,   5e-6,  
+        5e-6,   5e-6,   5e-6,  5e-6,  5e-6,  5e-6,  
+       5e-6,  5e-6,  5e-6,  5e-6,  5e-6, 5e-6,
+      5e-6, 5e-6, 0.001, 0.0025, 0.005, 0.007, 
+      0.01, 0.015, 0.02, 0.03]
+  # Broadening function (Doppler/Lorentz/Voigt)
+  broadening:         Voigt()
+  # Complex error function for Voigt calculations
+  CEF:                HumlicekWeidemann32SDErrorFunction()
+  # Wing cutoff (cm⁻¹)
+  wing_cutoff:        10
+
+# =================================================================
+# Scattering-Related Parameters (Optional)
+# =================================================================
+scattering:
+  # List of scattering aerosols and their properties
+  aerosols:       
+    - τ_ref:          0.1           # Reference τ (at λ_ref)
+      μ:              0.15           # effective radius (µm)
+      σ:              1.6           # geometric standard deviation (µm)
+      nᵣ:             1.384         # Real part of refractive index1.384E+00 -1.260E-03
+      nᵢ:             1.26e-3       # Imag part of refractive index  
+      p₀:             950.0         # Pressure peak (hPa)
+      σp:             100.0          # Pressure peak width (hPa)
+  # Maximum aerosol particle radius for quadrature points/weights (µm)
+  r_max:          50.0
+  # Number of quadrature points for aerosol radius
+  nquad_radius:   1000
+  # Reference wavelength (µm)
+  λ_ref:          0.550 
+  # Reference refractive index (at λ_ref)
+  # n_ref:          1.432 - 1e-8im
+  # Decomposition method (NAI2 or PCW)
+  decomp_type:        NAI2()

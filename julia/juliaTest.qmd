@@ -7,21 +7,54 @@ format:
     code-fold: true
 ---
 
-### Parametric Plots
+### A Carbon-I forward model radiative transfer run
 
-Plot function pair (x(u), y(u)). 
-See @fig-parametric for an example.
+Here, we run a multiple-scattering solution for Carbon-I and EMIT spectral lineshapes. See @fig-carbonI for an example.
 
 ```{julia}
-#| label: fig-parametric
-#| fig-cap: "Parametric Plots"
+#| label: fig-carbonI
+#| fig-cap: "A Carbon-I forward model run"
 
-using Plots
+using vSmartMOM, InstrumentOperator, CarbonI, ImageFiltering, Interpolations, Plots
 
-plot(sin, 
-     x->sin(2x), 
-     0, 
-     2π, 
-     leg=false, 
-     fill=(0,:lavender))
+# Define wavelength grid for forward model:
+Δwl = 0.005
+wl = 2035:Δwl:2385
+
+# Define an instrument:
+cM_CarbonI, wl_carbonI = CarbonI.create_carbonI_conv_matrix(wl)
+cM_EMIT, wl_emit    = CarbonI.create_emit_conv_matrix(wl)
+
+# Load parameters and create model
+parameters = parameters_from_yaml("julia/carbon-i.yaml")
+model = model_from_parameters(parameters);
+
+# Edit parameters here:
+# Albedo of 0.05
+model.params.brdf[1] = vSmartMOM.CoreRT.LambertianSurfaceScalar{Float64}(0.05)
+ref = sum(model.τ_aer[1][1,:]);
+# AOD of 0.1
+model.τ_aer[1][1,:] .*= 0.1/ref
+
+# Run the model
+a = rt_run(model)
+
+# Obtain wavenumber grid
+ν = parameters.spec_bands[1];
+gridi = LinRange(ν[1], ν[end], length(ν))
+
+# Get reflected radiance:
+R = a[1][1,1,:];
+
+# Interpolate to the grid:
+rad_inter = CubicSplineInterpolation(gridi, R);
+R_wl = rad_inter(1e7./wl);
+
+# Convolve with the instrument lineshape:
+R_conv_carbonI = cM_CarbonI * R_wl
+R_conv_emit =    cM_EMIT * R_wl
+
+plot(wl, R_wl, label="HighRes", alpha=0.2)
+plot!(wl_carbonI, R_conv_carbonI, label="Carbon-I")
+plot!(wl_emit, R_conv_emit, label="EMIT")
 ```
