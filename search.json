@@ -109,7 +109,7 @@
     "href": "julia/juliaTest.html",
     "title": "Plots Demo",
     "section": "",
-    "text": "Parametric Plots\nPlot function pair (x(u), y(u)). See ?@fig-parametric for an example.\n#| label: fig-parametric\n#| fig-cap: \"Parametric Plots\"\n\nusing Plots\n\nplot(sin, \n     x-&gt;sin(2x), \n     0, \n     2π, \n     leg=false, \n     fill=(0,:lavender))"
+    "text": "Parametric Plots\nPlot function pair (x(u), y(u)). See Figure 1 for an example.\n\n\nCode\nusing Plots\n\nplot(sin, \n     x-&gt;sin(2x), \n     0, \n     2π, \n     leg=false, \n     fill=(0,:lavender))\n\n\n\n\n\n\n\n  \n    \n  \n\n\n\n  \n    \n  \n\n\n\n  \n    \n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Parametric Plots"
   },
   {
     "objectID": "ch4_story.html",
