@@ -30,7 +30,7 @@ cM_CarbonI, wl_carbonI = CarbonI.create_carbonI_conv_matrix(wl)
 cM_EMIT, wl_emit    = CarbonI.create_emit_conv_matrix(wl)
 
 # Load parameters and create model
-parameters = parameters_from_yaml(joinpath(@__DIR__,"julia","carbon-i.yaml"))
+parameters = parameters_from_yaml(joinpath(@__DIR__,"carbon-i.yaml"))
 model = model_from_parameters(parameters);
 
 # Edit parameters here:
