@@ -27,7 +27,7 @@ jobs:
       
       - name: IJulia
         run: |
-          julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots"); Pkg.add("PlotlyJS")'
+          julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots"); Pkg.add("PlotlyJS"); Pkg.add("Interpolations")'
           julia -e 'using Pkg; Pkg.add(url="https://github.com/Carbon-I/CarbonI")'
           julia -e 'import Pkg; Pkg.add("vSmartMOM")'
 

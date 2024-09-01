@@ -16,7 +16,7 @@ Here, we run a multiple-scattering solution for Carbon-I and EMIT spectral lines
 #| fig-cap: "A Carbon-I forward model run"
 
 # Include packages:
-using vSmartMOM, InstrumentOperator, CarbonI, ImageFiltering, Interpolations, Plots
+using  CarbonI, vSmartMOM, Interpolations, Plots
 
 # Use PlotlyJS:
 plotly()
