@@ -29,7 +29,7 @@ jobs:
         run: |
           julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots"); Pkg.add("PlotlyJS"); Pkg.add("Interpolations")'
           julia -e 'using Pkg; Pkg.add(url="https://github.com/Carbon-I/CarbonI")'
-          julia -e 'import Pkg; Pkg.add("vSmartMOM"); Pkg.add("PlotlyBase")'
+          julia -e 'import Pkg; Pkg.add("vSmartMOM"); Pkg.add("PlotlyBase");  Pkg.add("PlotlyKaleido")'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
