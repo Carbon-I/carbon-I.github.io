@@ -20,11 +20,8 @@ jobs:
       
       - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
           pip install jupyter
-          
+
       - name: Julia
         uses: julia-actions/setup-julia@v1
 
