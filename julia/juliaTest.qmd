@@ -19,7 +19,7 @@ Here, we run a multiple-scattering solution for Carbon-I and EMIT spectral lines
 using  CarbonI, vSmartMOM, Interpolations, Plots
 
 # Use PlotlyJS:
-plotly()
+# plotly()
 
 # Define wavelength grid for forward model:
 Δwl = 0.005
