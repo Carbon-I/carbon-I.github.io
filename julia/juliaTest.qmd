@@ -42,8 +42,10 @@ ref = sum(model.τ_aer[1][1,:]);
 # AOD of 0.1
 model.τ_aer[1][1,:] .*= 0.1/ref
 
-# Run the model
-a = rt_run(model)
+# Run the model (and suppress output)
+redirect_stdout(open("devnull", "w")) do
+  a = rt_run(model);
+end
 
 # Obtain wavenumber grid
 ν = parameters.spec_bands[1];
