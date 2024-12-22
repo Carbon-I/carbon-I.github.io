@@ -27,10 +27,10 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 
 <center>![](/img/carbonI_anim.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width="400"}</center>
 
+### More info below
+
 ::: cr-section
 {{< spacer 10svh >}}
-
-... Scroll to see more 
 
 In global mode, Carbon-I provides monthly land coverage at an unprecedented spatial resolution of <400m. This enables global flux inversions while also allowing us to detect point sources (including the infamous unknown or know unknowns). Sampling the tropics is of particular importance as those regions are the *achilles heel* of current satellites. @cr-global
 
@@ -46,7 +46,7 @@ Zooming in, it allows us to see even finer details and how a 300m resolution wil
 
 In target mode, Carbon-I collects higher-resolution (<50m) measurements over specific areas of interest. This approach is particularly useful for fine-scale analyses of emission hotspots, local sources, or dynamically changing ecosystems. By focusing on tighter grids, the mission can detect small-scale spatial variations and improve flux estimates in critical regions, complementing the broader but coarser observations from global mode. [@cr-target]
 
-Here, we zoom into the Los Angeles Area ... [@cr-target]{pan-to="60%,15%" scale-by="3"}
+Here, we zoom into the Los Angeles Area ... [@cr-target]{pan-to="50%,90%" scale-by="3"}
 
 More to follow
 :::
