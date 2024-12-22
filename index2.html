@@ -212,9 +212,9 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-background-color-overlay: transparent;
+          --cr-narrative-text-color-overlay: black;
 --cr-section-background-color: transparent;
---cr-narrative-text-color-overlay: black;
+--cr-narrative-background-color-overlay: transparent;
 --cr-narrative-background-color-sidebar: transparent;
         }
       </style>
@@ -272,20 +272,20 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-global">
 <div class="narrative">
-<p>The Global Mode is used to do …</p>
+<p>In global mode, Carbon-I provides monthly land coverage at an unprecedented spatial resolution of &lt;400m. This enables global flux inversions while also allowing us to detect point sources (including the infamous unknown or know unknowns). Sampling the tropics is of particular importance as those regions are the <em>achilles heel</em> of current satellites.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-global" data-pan-to="50%,-10%" data-scale-by="3">
+<div class="trigger new-trigger" data-pan-to="50%,-10%" data-focus-on="cr-global" data-scale-by="3">
 <div class="narrative">
 <p>Zooming in, it allows us to see even finer details and how a 300m resolution will allow us to observe the fine-structure of clouds.</p>
 </div>
 </div>
 <div class="trigger new-trigger" data-focus-on="cr-target">
 <div class="narrative">
-<p>The target mode allows an in-depth analysis of regions of interest, sampling an area of 100x100km with a spatial sampling finer than 50m</p>
+<p>In target mode, Carbon-I collects higher-resolution (&lt;50m) measurements over specific areas of interest. This approach is particularly useful for fine-scale analyses of emission hotspots, local sources, or dynamically changing ecosystems. By focusing on tighter grids, the mission can detect small-scale spatial variations and improve flux estimates in critical regions, complementing the broader but coarser observations from global mode.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-target" data-pan-to="60%,-15%" data-scale-by="3">
+<div class="trigger new-trigger" data-pan-to="60%,-15%" data-focus-on="cr-target" data-scale-by="3">
 <div class="narrative">
 <p>Here, we zoom into the Los Angeles Area …</p>
 </div>
@@ -813,7 +813,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>::: cr-section</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>{{&lt; spacer 10svh &gt;}}</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>The Global Mode is used to do ... @cr-global</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>In global mode, Carbon-I provides monthly land coverage at an unprecedented spatial resolution of &lt;400m. This enables global flux inversions while also allowing us to detect point sources (including the infamous unknown or know unknowns). Sampling the tropics is of particular importance as those regions are the *achilles heel* of current satellites. @cr-global</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>::: {#cr-global}</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="al">![](/img/Amazon_global_draft.png)</span></span>
@@ -825,7 +825,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="al">![](/img/LA_target_mode_draft.png)</span></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>The target mode allows an in-depth analysis of regions of interest, sampling an area of 100x100km with a spatial sampling finer than 50m <span class="co">[</span><span class="ot">@cr-target</span><span class="co">]</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>In target mode, Carbon-I collects higher-resolution (&lt;50m) measurements over specific areas of interest. This approach is particularly useful for fine-scale analyses of emission hotspots, local sources, or dynamically changing ecosystems. By focusing on tighter grids, the mission can detect small-scale spatial variations and improve flux estimates in critical regions, complementing the broader but coarser observations from global mode. <span class="co">[</span><span class="ot">@cr-target</span><span class="co">]</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>Here, we zoom into the Los Angeles Area ... <span class="co">[</span><span class="ot">@cr-target</span><span class="co">]</span>{pan-to="60%,-15%" scale-by="3"}</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
