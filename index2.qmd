@@ -25,35 +25,24 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 
 <center>![](/img/carbonI_anim.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width="400"}</center>
 
-## Global Mode
-
-An especially effective device for enhancing the explanatory power of time-series displays is to add spatial dimensions to the design of the graphic, 
-
 ::: cr-section
 {{< spacer 10svh >}}
 
-The Global Mode .... @cr-global
+The Global Mode is used to do ... @cr-global
 
 ::: {#cr-global}
 ![](/img/Amazon_global_draft.png)
 :::
 
-Beginning at left on the Polish-Russian border near the Niemen River, the thick tan flow-line shows the size of the Grand Army (422,000) as it invaded Russia in June 1812. [@cr-global]
-
-The width of this band indicates the size of the army at each place on the map.
-
-In September, the army reached Moscow, which was by then sacked and deserted, with 100,000 men.[@cr-global]{pan-to="70%,-10%" scale-by="2.1"}
-
-The path of Napoleon's retreat from Moscow is depicted by the darker, lower band, which is linked to a temperature scale and dates at the bottom of the chart. It was a bitterly cold winter, and many froze on the march out of Russia. @cr-map
-
-As the graphic shows, the crossing of the Berezina River was a disaster, and the army finally struggled back into Poland with only 10,000 men remaining. @cr-map
+Zooming in, it allows us to see even finer details and how a 300m resolution will allow us to observe the fine-structure of clouds.[@cr-global]{pan-to="50%,-10%" scale-by="3"}
 
 ::: {#cr-target}
 ![](/img/LA_target_mode_draft.png)
 :::
 
-The target mode .... [@cr-target]
-and temperature on various dates during the retreat from Moscow.
+The target mode allows an in-depth analysis of regions of interest, sampling an area of 100x100km with a spatial sampling finer than 50m [@cr-target]
 
-It may well be the best statistical graphic ever drawn.
+Here, we zoom into the Los Angeles Area ... [@cr-target]{pan-to="50%,-10%" scale-by="3"}
+
+More to follow
 :::
