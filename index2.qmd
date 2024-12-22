@@ -30,6 +30,8 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 ::: cr-section
 {{< spacer 10svh >}}
 
+... Scroll to see more 
+
 In global mode, Carbon-I provides monthly land coverage at an unprecedented spatial resolution of <400m. This enables global flux inversions while also allowing us to detect point sources (including the infamous unknown or know unknowns). Sampling the tropics is of particular importance as those regions are the *achilles heel* of current satellites. @cr-global
 
 ::: {#cr-global}
