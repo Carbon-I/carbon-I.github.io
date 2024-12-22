@@ -10,4 +10,10 @@ body::before {
     opacity: 0.1; /* Adjust transparency as needed */
     z-index: -1; /* Ensures the image stays in the background */
   }
+
+/* Make the main content container 80% wide */
+.main-container {
+  max-width: 80% !important; /* or width: 80%; */
+  margin: 0 auto;            /* centers the content */
+}
   
