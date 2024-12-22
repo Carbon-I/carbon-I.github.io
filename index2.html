@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Edward Tufte">
+<meta name="description" content="Revisiting a classic of data visualization">
 
-<title>Interactive Vector Visualization</title>
+<title>The Visual Display of Quantitative Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -39,7 +75,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7e2be3c27abc2e3b96d30120f86afc9e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1fef114d79f68e629d511edc72bee85f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -78,15 +117,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
-<style>html{ scroll-behavior: smooth; }</style>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="true">
 
 
-<link rel="stylesheet" href="styles/custom.css">
-<meta property="og:title" content="Interactive Vector Visualization">
-<meta property="og:description" content="">
-<meta name="twitter:title" content="Interactive Vector Visualization">
-<meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="styles/cr-tufte.css">
+<meta property="og:title" content="The Visual Display of Quantitative Information">
+<meta property="og:description" content="Revisiting a classic of data visualization">
+<meta property="og:image" content="https://carbon-i.github.io//img/mindard-map.png">
+<meta name="twitter:title" content="The Visual Display of Quantitative Information">
+<meta name="twitter:description" content="Revisiting a classic of data visualization">
+<meta name="twitter:image" content="https://carbon-i.github.io//img/mindard-map.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -159,21 +202,41 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-narrative-background-color-sidebar: transparent;
+--cr-narrative-text-color-overlay: black;
+--cr-narrative-background-color-overlay: transparent;
+--cr-section-background-color: transparent;
+--cr-narrative-font-family: et-book, Palatino, “Palatino Linotype”, “Palatino LT STD”, “Book Antiqua”, Georgia, serif;
+        }
+      </style>
+    
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Interactive Vector Visualization</h1>
+<div class="quarto-title-block"><div><h1 class="title">The Visual Display of Quantitative Information</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
+<div>
+  <div class="description">
+    Revisiting a classic of data visualization
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Edward Tufte </p>
+          </div>
+  </div>
     
   
     
@@ -184,25 +247,111 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </header>
 
 
-<p>import { slider } from “<span class="citation" data-cites="jashkenas/inputs">@jashkenas/inputs</span>” import { svg } from “d3”</p>
-<p>viewof length1Slider = slider({ min: 50, max: 150, step: 1, value: 100, title: “Length of the first vector” })</p>
-<p>length1 = length1Slider</p>
-<p>const length2 = 100; let length3 = 100;</p>
-<p>const angle1 = Math.PI / 4; const angle2 = -Math.PI / 4; const endpointX = 300; const endpointY = 300;</p>
-<p>function updateVectors(length1) { const width = 600; const height = 400;</p>
-<p>const svgElement = svg.create(‘svg’).attr(‘width’, width).attr(‘height’, height).style(“border”, “1px solid black”);</p>
-<p>const x1 = length1 * Math.cos(angle1); const y1 = length1 * Math.sin(angle1);</p>
-<p>const x2 = length2 * Math.cos(angle2); const y2 = length2 * Math.sin(angle2);</p>
-<p>const x3 = endpointX - (x1 + x2); const y3 = endpointY - (y1 + y2); length3 = Math.sqrt(x3 * x3 + y3 * y3);</p>
-<p>svgElement.append(“line”) .attr(“x1”, 0) .attr(“y1”, height) .attr(“x2”, x1) .attr(“y2”, height - y1) .attr(“stroke”, “black”) .attr(“stroke-width”, 2);</p>
-<p>svgElement.append(“line”) .attr(“x1”, x1) .attr(“y1”, height - y1) .attr(“x2”, x1 + x2) .attr(“y2”, height - y1 - y2) .attr(“stroke”, “red”) .attr(“stroke-width”, 2);</p>
-<p>svgElement.append(“line”) .attr(“x1”, x1 + x2) .attr(“y1”, height - y1 - y2) .attr(“x2”, endpointX) .attr(“y2”, endpointY) .attr(“stroke”, “blue”) .attr(“stroke-width”, 2);</p>
-<p>return svgElement.node(); }</p>
-<p>html<code>${updateVectors(length1)}</code></p>
+<div class="epigraph">
+<blockquote class="blockquote">
+<p><a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> by Edward Tufte is a seminal text in the field of data visualization. On page 40, the text walks the reader through the complexity of a graphic by Charles Minard<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that depicts Napoleon’s disastrous military campaign in Russia. An excerpt from that chapter is printed below, with permission<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+</blockquote>
+</div>
+<section id="narrative-graphics-of-space-and-time" class="level2">
+<h2 class="anchored" data-anchor-id="narrative-graphics-of-space-and-time">Narrative Graphics of Space and Time</h2>
+<p>An especially effective device for enhancing the explanatory power of time-series displays is to add spatial dimensions to the design of the graphic, so that the data are moving over space (in two or three dimensions) as well as over time. Three excellent space-time-story graphics illustrate here how multivariate complexity can be subtly integrated into graphical architecture, integrated so gently and unobtrusively that viewers are hardly aware that they are looking into a world of four or five dimensions. Occasionally graphics are belligerently multivariate, advertising the technique rather than the data. But not these three.</p>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger">
+<div class="narrative">
+<div class="cr-spacer" style="padding-block: 5.0svh;">
+
+</div>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-map">
+<div class="narrative">
+<p>The first is the classic of Charles Joseph Minard (1781-1870), the French engineer, which shows the terrible fate of Napoleon’s army in Russia. Described by E. J. Marey as seeming to defy the pen of the historian by its brutal eloquence, 12 this combination of data map and time-series, drawn in 1869, portrays a sequence of devastating losses suffered in Napoleon’s Russian campaign of 1812.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-map">
+<div class="narrative">
+<p>Beginning at left on the Polish-Russian border near the Niemen River, the thick tan flow-line shows the size of the Grand Army (422,000) as it invaded Russia in June 1812.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>The width of this band indicates the size of the army at each place on the map.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-map">
+<div class="narrative">
+<p>In September, the army reached Moscow, which was by then sacked and deserted, with 100,000 men.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-map">
+<div class="narrative">
+<p>The path of Napoleon’s retreat from Moscow is depicted by the darker, lower band, which is linked to a temperature scale and dates at the bottom of the chart. It was a bitterly cold winter, and many froze on the march out of Russia.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-map">
+<div class="narrative">
+<p>As the graphic shows, the crossing of the Berezina River was a disaster, and the army finally struggled back into Poland with only 10,000 men remaining.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Also shown are the movements of auxiliary troops, as they sought to protect the rear and the flank of the advancing army.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-map">
+<div class="narrative">
+<p>Minard’s graphic tells a rich, coherent story with its multivariate data, far more enlightening than just a single number bouncing along over time. Six variables are plotted:</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>the size of the army,</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>its location on a two-dimensional surface,</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>direction of the army’s movement,</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>and temperature on various dates during the retreat from Moscow.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>It may well be the best statistical graphic ever drawn.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-map" class="sticky">
+<p><img src="./img/minard-large.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
 
 
+<!-- -->
 
-</main> <!-- /main -->
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Charles Joseph Minard, <em>Tableaux Graphiques et Cartes Figuratives de M. Minard</em>, 1845-1869, a portfolio of his work held by the Bibliothèque de l’École Nationale des Ponts et Chaussées, Paris, as reproduced in Edward R. Tufte, <em>The Visual Display of Quantitative Information</em> (Cheshire, Connecticut © 1983, 2001), p.&nbsp;176.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>©Tufte, Edward, <em>The Visual Display of Quantitative Information</em>, 2nd ed., 2001, Graphics Press, Cheshire Connecticut, 40.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -290,6 +439,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -619,7 +819,72 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "The Visual Display of Quantitative Information"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Edward Tufte</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  closeread-html:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    css: styles/cr-tufte.css</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    remove-header-space: true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    image: /img/mindard-map.png</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    description: Revisiting a classic of data visualization</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    mainfont: 'et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif'</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    cr-style:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">      narrative-background-color-overlay: transparent</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">      narrative-background-color-sidebar: transparent</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">      section-background-color: transparent</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">      narrative-text-color-overlay: black</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">      narrative-font-family: 'et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif'</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>::: epigraph</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="co">[</span><span class="ot">The Visual Display of Quantitative Information</span><span class="co">](https://www.edwardtufte.com/tufte/books_vdqi)</span><span class="at"> by Edward Tufte is a seminal text in the field of data visualization. On page 40, the text walks the reader through the complexity of a graphic by Charles Minard</span><span class="ot">[^1]</span><span class="at"> that depicts Napoleon's disastrous military campaign in Russia. An excerpt from that chapter is printed below, with permission</span><span class="ot">[^2]</span><span class="at">.</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="at">:::</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Charles Joseph Minard, *Tableaux Graphiques et Cartes Figuratives de M. Minard*, 1845-1869, a portfolio of his work held by the Bibliothèque de l’École Nationale des Ponts et Chaussées, Paris, as reproduced in Edward R. Tufte, *The Visual Display of Quantitative Information* (Cheshire, Connecticut © 1983, 2001), p. 176.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ot">[^2]: </span>©Tufte, Edward, *The Visual Display of Quantitative Information*, 2nd ed., 2001, Graphics Press, Cheshire Connecticut, 40.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Narrative Graphics of Space and Time</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>An especially effective device for enhancing the explanatory power of time-series displays is to add spatial dimensions to the design of the graphic, so that the data are moving over space (in two or three dimensions) as well as over time. Three excellent space-time-story graphics illustrate here how multivariate complexity can be subtly integrated into graphical architecture, integrated so gently and unobtrusively that viewers are hardly aware that they are looking into a world of four or five dimensions. Occasionally graphics are belligerently multivariate, advertising the technique rather than the data. But not these three.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>::: cr-section</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>{{&lt; spacer 10svh &gt;}}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>The first is the classic of Charles Joseph Minard (1781-1870), the French engineer, which shows the terrible fate of Napoleon's army in Russia. Described by E. J. Marey as seeming to defy the pen of the historian by its brutal eloquence, 12 this combination of data map and time-series, drawn in 1869, portrays a sequence of devastating losses suffered in Napoleon's Russian campaign of 1812. @cr-map</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>::: {#cr-map}</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="al">![](/img/minard-large.png)</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Beginning at left on the Polish-Russian border near the Niemen River, the thick tan flow-line shows the size of the Grand Army (422,000) as it invaded Russia in June 1812. @cr-map</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>The width of this band indicates the size of the army at each place on the map.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>In September, the army reached Moscow, which was by then sacked and deserted, with 100,000 men. @cr-map</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>The path of Napoleon's retreat from Moscow is depicted by the darker, lower band, which is linked to a temperature scale and dates at the bottom of the chart. It was a bitterly cold winter, and many froze on the march out of Russia. @cr-map</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>As the graphic shows, the crossing of the Berezina River was a disaster, and the army finally struggled back into Poland with only 10,000 men remaining. @cr-map</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Also shown are the movements of auxiliary troops, as they sought to protect the rear and the flank of the advancing army.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>Minard's graphic tells a rich, coherent story with its multivariate data, far more enlightening than just a single number bouncing along over time. Six variables are plotted: @cr-map</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>the size of the army,</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>its location on a two-dimensional surface,</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>direction of the army's movement,</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>and temperature on various dates during the retreat from Moscow.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>It may well be the best statistical graphic ever drawn.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -656,5 +921,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
