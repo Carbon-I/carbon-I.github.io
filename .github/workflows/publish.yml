@@ -13,23 +13,23 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'  # Change to your preferred Python version
+      #- name: Set up Python
+      #  uses: actions/setup-python@v2
+      #  with:
+      #    python-version: '3.8'  # Change to your preferred Python version
       
-      - name: Install dependencies
-        run: |
-          pip install jupyter
+      #- name: Install dependencies
+      #  run: |
+      #    pip install jupyter
 
-      - name: Julia
-        uses: julia-actions/setup-julia@v1
+      #- name: Julia
+      #  uses: julia-actions/setup-julia@v1
       
-      - name: IJulia
-        run: |
-          julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots"); Pkg.add("PlotlyJS"); Pkg.add("Interpolations")'
-          julia -e 'using Pkg; Pkg.add(url="https://github.com/Carbon-I/CarbonI")'
-          julia -e 'import Pkg; Pkg.add("vSmartMOM"); Pkg.add("PlotlyBase");  Pkg.add("PlotlyKaleido")'
+      #- name: IJulia
+      #  run: |
+      #    julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots"); Pkg.add("PlotlyJS"); Pkg.add("Interpolations")'
+      #    julia -e 'using Pkg; Pkg.add(url="https://github.com/Carbon-I/CarbonI")'
+      #    julia -e 'import Pkg; Pkg.add("vSmartMOM"); Pkg.add("PlotlyBase");  Pkg.add("PlotlyKaleido")'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -40,6 +40,7 @@ jobs:
           quarto install extension quarto-ext/fontawesome --no-prompt
           quarto install extension schochastics/academicons --no-prompt
           quarto install extension quarto-ext/lightbox --no-prompt
+          quarto install extension qmd-lab/closeread --no-prompt
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
