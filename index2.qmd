@@ -17,6 +17,15 @@ format:
       narrative-font-family: 'et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif'
 ---
 
+![](/img/Logo-Black.png){fig-alt="" fig-align="left" width=80%} 
+
+A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.   
+
+## The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases
+<center>
+![](/img/carbonI_anim.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width=400}
+</center>
+
 ::: epigraph
 > [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) by Edward Tufte is a seminal text in the field of data visualization. On page 40, the text walks the reader through the complexity of a graphic by Charles Minard[^1] that depicts Napoleon's disastrous military campaign in Russia. An excerpt from that chapter is printed below, with permission[^2].
 :::
