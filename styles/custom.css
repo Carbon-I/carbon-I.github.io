@@ -43,7 +43,7 @@
 .grid-item img {
     width: 100%;
     height: auto;
-    max-width: 90%; /* Adjust as needed */
+    max-width: 1500px; /* Adjust as needed */
     max-height: 200px;
     object-fit: cover; /* Ensures the image covers the area */
   }
@@ -88,7 +88,7 @@
   }
   
   .top-story {
-    max-width: 80%;
+    max-width: 1500px;
     margin: 0 auto;
     margin-bottom: 1em; 
     box-sizing: border-box;
@@ -135,7 +135,7 @@
   }
   
   .header-block {
-    max-width: 80%;
+    max-width: 1500px;
     margin: 0 auto;
     padding-top: 1em;
     padding-bottom: 1.8em; 

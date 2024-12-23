@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="JPL">
 
-<title>Clayton Elder</title>
+<title>Bootstrap 5 Scrollspy in Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../img/ci_icon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3613611a9fe6629f571cb747a2573979.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/ci_icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3613611a9fe6629f571cb747a2573979.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,14 +81,12 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../styles/custom.css">
-<meta property="og:title" content="Clayton Elder">
-<meta property="og:description" content="JPL">
-<meta property="og:image" content="https://carbon-i.github.io//img/people/elder.jpg">
-<meta name="twitter:title" content="Clayton Elder">
-<meta name="twitter:description" content="JPL">
-<meta name="twitter:image" content="https://carbon-i.github.io//img/people/elder.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../styles/custom.css">
+<meta property="og:title" content="Bootstrap 5 Scrollspy in Quarto">
+<meta property="og:description" content="">
+<meta name="twitter:title" content="Bootstrap 5 Scrollspy in Quarto">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -98,8 +96,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../img/Logo-Black2.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/Logo-Black2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -109,19 +107,19 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../team.html"> 
+    <a class="nav-link" href="../team.html"> 
 <span class="menu-text">Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../science.html"> 
+    <a class="nav-link" href="../science.html"> 
 <span class="menu-text">Science</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -130,17 +128,17 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-visual-stories">    
         <li>
-    <a class="dropdown-item" href="../../ch4_story.html">
+    <a class="dropdown-item" href="../ch4_story.html">
  <span class="dropdown-text">CH4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../clouds.html">
+    <a class="dropdown-item" href="../clouds.html">
  <span class="dropdown-text">Clouds</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../news.html"> 
+    <a class="nav-link" href="../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
 </ul>
@@ -161,60 +159,56 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#professional-experience" id="toc-professional-experience" class="nav-link" data-scroll-target="#professional-experience">Professional Experience</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<div class="quarto-about-solana column-page-left">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Clayton Elder</h1>
-<p class="subtitle lead">Collaborator</p>
+<h1 class="title">Bootstrap 5 Scrollspy in Quarto</h1>
 </div>
-<div>
-  <div class="description">
-    JPL
-  </div>
-</div>
-<div class="quarto-title-meta column-page-left">
-  </div>
-</header> <div class="about-links">
-  <a href="https://scholar.google.com/citations?user=yF91FwgAAAAJ&amp;hl=en&amp;oi=ao" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content column-page-left" id="quarto-document-content">
 
-<p>Clayton Elder merged the scales of in-situ observations with high resolution remote sensing datasets to constrain complex ecological processes in the Arctic</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<ul>
-<li><span class="fw-bold">PhD in …</span> | … | ??? - ???</li>
-</ul>
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>````markdown ::: {#myNav .nav flex-column style=“position: fixed; top: 0; background-color: #f5f5f5; padding: 1rem; width: 200px; height: 100vh; overflow-y: auto;”} 1. <a href="#section1" class="nav-link">Section 1</a> 2. <a href="#section2" class="nav-link">Section 2</a> 3. <a href="#section3" class="nav-link">Section 3</a> :::</p>
+<div id="scrollContainer" style="margin-left:220px; height: 100vh; overflow-y: auto;" data-bs-spy="scroll" data-bs-target="#myNav" data-bs-offset="0" tabindex="0">
+<section id="section-1" class="level1">
+<h1>Section 1</h1>
+<div id="section1">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.</p>
+</div>
 </section>
-<section id="professional-experience" class="level2">
-<h2 data-anchor-id="professional-experience">Professional Experience</h2>
-<ul>
-<li><span class="fw-bold">2018-present:</span> Whatever, wherre</li>
-</ul>
-
-
-</section>
-</main></div>
-    </div>
-    <img src="/img/people/elder.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
-  </div>
+<section id="section-2" class="level1">
+<h1>Section 2</h1>
+<div id="section2">
+<p>Vestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.</p>
 </div>
- <!-- /main -->
+</section>
+<section id="section-3" class="level1">
+<h1>Section 3</h1>
+<div id="section3">
+<p>Etiam at risus et justo dignissim congue.</p>
+</div>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -235,6 +229,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -629,7 +630,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://www.caltech.edu/"><img src="../../img/Caltech_Logo.png" alt="Caltech" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://carnegiescience.edu/"><img src="../../img/Carnegie.svg" alt="Carnegie" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://eps.harvard.edu/"><img src="../../img/img_acmg_logo_seas.png" alt="Harvard" height="20"></a></p>
+<p><a href="https://www.caltech.edu/"><img src="../img/Caltech_Logo.png" alt="Caltech" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://carnegiescience.edu/"><img src="../img/Carnegie.svg" alt="Carnegie" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://eps.harvard.edu/"><img src="../img/img_acmg_logo_seas.png" alt="Harvard" height="20"></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -661,5 +662,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
