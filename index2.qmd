@@ -45,7 +45,7 @@ Zooming in, it allows us to see even finer details and how a 300m resolution wil
 
 In target mode, Carbon-I collects higher-resolution (<50m) measurements over specific areas of interest. This approach is particularly useful for fine-scale analyses of emission hotspots, local sources, or dynamically changing ecosystems. By focusing on tighter grids, the mission can detect small-scale spatial variations and improve flux estimates in critical regions, complementing the broader but coarser observations from global mode. [@cr-target]
 
-Here, we zoom into the Los Angeles Area ... [@cr-target]{pan-to="50%,1%" scale-by="2.6"}
+Here, we zoom into the Los Angeles Area ... [@cr-target]{pan-to="-55%,10%" scale-by="2.6"}
 
 More to follow
 :::
