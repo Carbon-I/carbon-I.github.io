@@ -445,7 +445,7 @@
     "href": "test/testBS.html",
     "title": "Bootstrap 5 Scrollspy in Quarto",
     "section": "",
-    "text": "````markdown ::: {#myNav .nav flex-column style=“position: fixed; top: 0; background-color: #f5f5f5; padding: 1rem; width: 200px; height: 100vh; overflow-y: auto;”} 1. Section 1 2. Section 2 3. Section 3 :::\n\n\nSection 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue."
+    "text": "Section 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n\n\nSection 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n\n\nSection 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n:::"
   },
   {
     "objectID": "test/tester.html",
