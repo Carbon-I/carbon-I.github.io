@@ -1,0 +1,31 @@
+---
+title: "Bootstrap 5 Scrollspy in Quarto"
+format: html
+---
+
+````markdown
+::: {#myNav .nav flex-column style="position: fixed; top: 0; background-color: #f5f5f5; padding: 1rem; width: 200px; height: 100vh; overflow-y: auto;"}
+1. [Section 1](#section1){.nav-link}
+2. [Section 2](#section2){.nav-link}
+3. [Section 3](#section3){.nav-link}
+:::
+
+<div id="scrollContainer" style="margin-left:220px; height: 100vh; overflow-y: auto;"
+     data-bs-spy="scroll" data-bs-target="#myNav" data-bs-offset="0" tabindex="0">
+
+# Section 1
+::: {#section1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+:::
+
+# Section 2
+::: {#section2}
+Vestibulum ut tortor venenatis, eleifend tortor in, consequat nisl. 
+:::
+
+# Section 3
+::: {#section3}
+Etiam at risus et justo dignissim congue. 
+:::
+
+</div>

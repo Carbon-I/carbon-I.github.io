@@ -69,7 +69,7 @@ format:
     smooth-scroll: true
     grid:
       sidebar-width: 0px
-      body-width: 80%
+      body-width: 1500px
       margin-width: 150px
 
 editor: visual
