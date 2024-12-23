@@ -25,44 +25,17 @@ Etiam at risus et justo dignissim congue.
 
 </div>
 
-<div id="scrollContainer" style="margin-left:220px; height: 100vh; overflow-y: auto;"
-     data-bs-spy="scroll" data-bs-target="#myNav" data-bs-offset="0" tabindex="0">
-
-# Section 1
-::: {#section1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-:::
-
-# Section 2
-::: {#section2}
-Vestibulum ut tortor venenatis, eleifend tortor in, consequat nisl. 
-:::
-
-# Section 3
-::: {#section3}
-Etiam at risus et justo dignissim congue. 
-:::
-
-</div>
-
-<div id="scrollContainer" style="margin-left:220px; height: 100vh; overflow-y: auto;"
-     data-bs-spy="scroll" data-bs-target="#myNav" data-bs-offset="0" tabindex="0">
-
-# Section 1
-::: {#section1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-:::
-
-# Section 2
-::: {#section2}
-Vestibulum ut tortor venenatis, eleifend tortor in, consequat nisl. 
-:::
-
-# Section 3
-::: {#section3}
-Etiam at risus et justo dignissim congue. 
-:::
-
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <h4 id="scrollspyHeading1">First heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading2">Second heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading3">Third heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading4">Fourth heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading5">Fifth heading</h4>
+  <p>...</p>
 </div>
 :::
 
