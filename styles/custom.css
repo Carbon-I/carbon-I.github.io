@@ -88,7 +88,7 @@
   }
   
   .top-story {
-    max-width: 1000px;
+    max-width: 80%;
     margin: 0 auto;
     margin-bottom: 1em; 
     box-sizing: border-box;
@@ -135,7 +135,7 @@
   }
   
   .header-block {
-    max-width: 1000px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 1em;
     padding-bottom: 1.8em; 
