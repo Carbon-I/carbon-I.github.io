@@ -445,7 +445,7 @@
     "href": "test/testBS.html",
     "title": "Bootstrap 5 Scrollspy in Quarto",
     "section": "",
-    "text": "Section 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n\n\nSection 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n\n\nSection 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n:::"
+    "text": "Section 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.\n\n\n\nSection 2\n\nVestibulum ut tortor venenatis, eleifend tortor in, consequat nisl.\n\n\n\nSection 3\n\nEtiam at risus et justo dignissim congue.\n\n\n\n\n\nFirst heading\n\n\n…\n\n\nSecond heading\n\n\n…\n\n\nThird heading\n\n\n…\n\n\nFourth heading\n\n\n…\n\n\nFifth heading\n\n\n…\n\n\n:::"
   },
   {
     "objectID": "test/tester.html",
