@@ -1,6 +1,4 @@
 ---
-title: "Carbon-In"
-author: Christian Frankenberg
 title: "Carbon-I"
 format: 
   closeread-html:
