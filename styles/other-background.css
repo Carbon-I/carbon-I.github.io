@@ -5,9 +5,9 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     background: url('../img/CI_cover.jpeg') center center / cover no-repeat; /* Adjust path */
-    opacity: 0.1; /* Adjust transparency as needed */
+    opacity: 0.01; /* Adjust transparency as needed */
     z-index: -1; /* Ensures the image stays in the background */
   }
 
