@@ -1,6 +1,7 @@
 ---
-title: "The Visual Display of Quantitative Information"
-author: Edward Tufte
+title: "Carbon-In"
+author: Christian Frankenberg
+title: "Carbon-I"
 format: 
   closeread-html:
     css: styles/other-background.css 
@@ -25,7 +26,7 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 
 ## The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases
 
-<center>![](/img/carbonI_anim.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width="400"}</center>
+<center>![](/img/CarbonI-anim_whiteBG_small.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width="400"}</center>
 
 
 ::: cr-section
