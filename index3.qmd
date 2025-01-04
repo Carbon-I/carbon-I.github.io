@@ -1,0 +1,181 @@
+---
+comments: false
+toc: false
+sidebar: false
+page-layout: full
+title: "Carbon-I"
+format:
+  html:
+    css: styles/index-background.css
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+---
+
+::: {#hero-banner .column-screen}
+
+:::: {.grid .column-page}
+
+::::: {.headline .g-col-lg-6 .g-col-12 .g-col-md-12}
+
+
+:::::: 
+::::::: h1
+Data science with Python {{< fa brands python >}}
+:::::::
+::::::
+
+::::::: h2
+[Lino Galiana](https://github.com/linogaliana/)
+:::::::
+
+
+
+
+
+```{=html}
+<div style="text-align: right;">
+<a class="github-button" href="https://github.com/linogaliana/python-datascientist" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this website on Github">Star this website on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script>
+</div>
+```
+
+:::::: 
+
+Course website [*Python for Data Science*](https://www.ensae.fr/courses/1425-python-pour-le-data-scientist)
+<a href="https://github.com/linogaliana/python-datascientist" class="github"><i class="fab fa-python"></i></a>, an introduction to `Python` for the second year of the engineering curriculum at [`ENSAE`](https://www.ensae.fr/) (Master 1).
+
+<br>
+
+All content of this group is freely available here or on [`Github`](https://github.com/linogaliana/python-datascientist)
+<a href="https://github.com/linogaliana/python-datascientist" class="github"><i class="fab fa-github"></i></a> and can be tested in the form of `Jupyter` notebooks.
+
+::::::
+
+<br>
+
+<details>
+<summary>
+
+
+:::::: 
+Example with the introduction to `Pandas`
+::::::
+
+</summary>
+```{ojs}
+//| echo: false
+html`${printBadges({fpath: "content/manipulation/02_pandas_intro.qmd"})}`
+```
+
+</details>
+
+:::::: 
+<details>
+<summary>
+
+On the agenda:
+
+</summary>
+
+Overall, this course offers a comprehensive content that can satisfy both beginners in data science and those looking for more advanced material:
+<br>
+
+1. **Data Manipulation**: standard data manipulation (`Pandas`), geographic data (`Geopandas`), data retrieval (web scraping, APIs)...
+1. **Data Visualization**: classic visualizations (`Matplotlib`, `Seaborn`), cartography, reactive visualizations (`Plotly`, `Folium`)
+1. **Modeling**: machine learning (`Scikit`), econometrics
+1. **Text Data Processing** (NLP): introduction to tokenization with `NLTK` and `SpaCy`, modeling...
+1. **Introduction to Modern Data Science**: cloud computing, `ElasticSearch`, continuous integration...
+
+All content on this site relies on open data, whether it is French data (mainly from the central platform [`data.gouv`](https://www.data.gouv.fr) or the Insee website) or American data. The program is presented linearly at the top of this page (👆️) or in a disordered manner below (👇️).
+
+A good complement to the website content is the course given with Romain Avouac in the final year at ENSAE, which focuses more on the production of data science projects: [https://ensae-reproductibilite.github.io/](https://ensae-reproductibilite.github.io/website/)
+
+</details>
+
+::::::
+
+
+
+:::::
+
+::::: {.g-col-lg-6 .g-col-12 .g-col-md-12}
+![](/img/CarbonI-anim_whiteBG_small.gif)
+:::::
+
+::::
+
+:::
+
+![](/img/Logo-Black.png){fig-alt="" fig-align="left" width="80%"}
+
+A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.
+
+## The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases
+
+<center>![](/img/CarbonI-anim_whiteBG_small.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width="400"}</center>
+
+### *Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments*
+
+## Carbon-I Will:
+
+-   
+
+    #### Collect 1000 times more data in the tropics by observing between clouds
+
+-   
+
+    ## \#### Differentiate the sources and composition of emissions at the city block level anywhere
+
+## Objectives
+
+1.  
+
+    #### Identify, characterize and quantify hotspots of CH<sub>4</sub> and CO<sub>2</sub> emissions across the globe
+
+2.  
+
+    #### Quantify global CH<sub>4</sub> and CO<sub>2</sub>, and CO monthly fluxes at unprecedented 12-100km resolution
+
+3.  
+
+    #### Attribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes
+
+------------------------------------------------------------------------
+
+## Mission Overview
+
+-   
+
+    #### Global mode: \<400m sampling of land and coastal oceans monthly
+
+-   
+
+    #### Target mode: \<50m sampling of key regions (95kmx95km; over 2 million acres)
+
+-   
+
+    ## \#### Absorption spectroscopy to measure CH<sub>4</sub>, CO<sub>2</sub>, CO and relevant chemical tracers
+
+<!-- JavaScript added at the end -->
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY;
+    let images = document.querySelectorAll('.grid-item img');
+    images.forEach(img => {
+      // Adjust the calculation as needed for desired effect
+      let imgPos = img.getBoundingClientRect().top + window.scrollY;
+      if (imgPos < (scrollPos + window.innerHeight)) {
+        img.style.transform = "scale(1.1)";
+      } else {
+        img.style.transform = "scale(1)";
+      }
+    });
+  });
+});
+</script>
+```

@@ -1,5 +1,7 @@
 ---
 comments: false
+toc: false
+sidebar: false
 page-layout: full
 title: "Carbon-I"
 format:
