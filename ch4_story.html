@@ -221,8 +221,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <h2 data-anchor-id="ch4-data-from-noaa">CH<sub>4</sub> data from NOAA</h2>
 <p>Ground based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly <a href="https://gml.noaa.gov/ccgg/trends_ch4/">CH<sub>4</sub> concentration data</a>, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="27" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 26;"><span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>fileUrl <span class="op">=</span> <span class="st">'https://corsproxy.io/?'</span> <span class="op">+</span> <span class="pp">encodeURIComponent</span>(<span class="st">'https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv'</span>)<span class="op">;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">//fileUrl = `/data/subset_data.csv`;</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="26" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>fileUrl <span class="op">=</span> <span class="st">'https://corsproxy.io/?'</span> <span class="op">+</span> <span class="pp">encodeURIComponent</span>(<span class="st">'https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv'</span>)<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">//fileUrl = `/data/subset_data.csv`;</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -230,7 +230,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="32" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 31;"><span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>csvText <span class="op">=</span> d3<span class="op">.</span><span class="fu">text</span>(fileUrl)</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="31" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 30;"><span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>csvText <span class="op">=</span> d3<span class="op">.</span><span class="fu">text</span>(fileUrl)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="declaration">
 
@@ -238,10 +238,10 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="36" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 35;"><span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>processedData <span class="op">=</span> {</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lines <span class="op">=</span> csvText<span class="op">.</span><span class="fu">split</span>(<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>)<span class="op">.</span><span class="fu">filter</span>(line <span class="kw">=&gt;</span> line<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>line<span class="op">.</span><span class="fu">startsWith</span>(<span class="st">'#'</span>))<span class="op">;</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d3<span class="op">.</span><span class="fu">csvParse</span>(lines<span class="op">.</span><span class="fu">join</span>(<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>)<span class="op">,</span>d3<span class="op">.</span><span class="at">autoType</span>)<span class="op">;</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="35" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 34;"><span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>processedData <span class="op">=</span> {</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lines <span class="op">=</span> csvText<span class="op">.</span><span class="fu">split</span>(<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>)<span class="op">.</span><span class="fu">filter</span>(line <span class="kw">=&gt;</span> line<span class="op">.</span><span class="fu">trim</span>()<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>line<span class="op">.</span><span class="fu">startsWith</span>(<span class="st">'#'</span>))<span class="op">;</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d3<span class="op">.</span><span class="fu">csvParse</span>(lines<span class="op">.</span><span class="fu">join</span>(<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>)<span class="op">,</span>d3<span class="op">.</span><span class="at">autoType</span>)<span class="op">;</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -249,10 +249,10 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="43" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 42;"><span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>processedData2 <span class="op">=</span> processedData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> ({</span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>  <span class="op">...</span>d<span class="op">,</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">year</span><span class="sc">}</span><span class="vs">-</span><span class="sc">${</span>d<span class="op">.</span><span class="at">month</span><span class="sc">}</span><span class="vs">-01`</span>) <span class="co">// Parsing year and month into a Date</span></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>}))<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="42" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 41;"><span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>processedData2 <span class="op">=</span> processedData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> ({</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>  <span class="op">...</span>d<span class="op">,</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">year</span><span class="sc">}</span><span class="vs">-</span><span class="sc">${</span>d<span class="op">.</span><span class="at">month</span><span class="sc">}</span><span class="vs">-01`</span>) <span class="co">// Parsing year and month into a Date</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>}))<span class="op">;</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="declaration">
 
@@ -260,8 +260,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="51" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 50;"><span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="dv">1980</span><span class="op">,</span> <span class="dv">0</span>)</span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>end   <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="dv">2024</span><span class="op">,</span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="50" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 49;"><span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="dv">1980</span><span class="op">,</span> <span class="dv">0</span>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>end   <span class="op">=</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="dv">2024</span><span class="op">,</span><span class="dv">0</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-5-1" data-nodetype="declaration">
@@ -278,13 +278,13 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="55" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 54;"><span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>viewof slider <span class="op">=</span> <span class="fu">rangeSlider</span>({</span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">count</span>(start<span class="op">,</span> end)<span class="op">,</span></span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">formatDate</span>(d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> d))<span class="op">,</span></span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">'Pick a date range'</span><span class="op">,</span></span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="54" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 53;"><span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>viewof slider <span class="op">=</span> <span class="fu">rangeSlider</span>({</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">count</span>(start<span class="op">,</span> end)<span class="op">,</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">formatDate</span>(d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> d))<span class="op">,</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">'Pick a date range'</span><span class="op">,</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="declaration">
 
@@ -292,8 +292,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="66" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 65;"><span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>startDate <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">0</span>])</span>
-<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>stopDate  <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="65" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 64;"><span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>startDate <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">0</span>])</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>stopDate  <span class="op">=</span> d3<span class="op">.</span><span class="at">timeDay</span><span class="op">.</span><span class="fu">offset</span>(start<span class="op">,</span> slider[<span class="dv">1</span>])</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-7-1" data-nodetype="declaration">
@@ -310,9 +310,9 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="70" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 69;"><span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> processedData2<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(s2) {</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&gt;=</span> startDate <span class="op">&amp;&amp;</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&lt;=</span> stopDate<span class="op">;</span></span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="69" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 68;"><span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> processedData2<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(s2) {</span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&gt;=</span> startDate <span class="op">&amp;&amp;</span> s2<span class="op">.</span><span class="at">Date</span> <span class="op">&lt;=</span> stopDate<span class="op">;</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
@@ -320,7 +320,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="76" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 75;"><span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rangeSlider <span class="im">as</span> rangeSlider } <span class="im">from</span> <span class="st">'@mootari/range-slider'</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="75" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 74;"><span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rangeSlider <span class="im">as</span> rangeSlider } <span class="im">from</span> <span class="st">'@mootari/range-slider'</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="declaration">
 
@@ -328,7 +328,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="80" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 79;"><span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>formatDate <span class="op">=</span> d3<span class="op">.</span><span class="fu">timeFormat</span>(<span class="st">"%Y-%m-%d"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="79" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 78;"><span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>formatDate <span class="op">=</span> d3<span class="op">.</span><span class="fu">timeFormat</span>(<span class="st">"%Y-%m-%d"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-10" data-nodetype="declaration">
 
@@ -336,8 +336,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="86" data-source-offset="-39"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 85;"><span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>yMin <span class="op">=</span> d3<span class="op">.</span><span class="fu">min</span>(filtered<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">average</span>)<span class="op">;</span> <span class="co">// Get the minimum value of the 'average' field</span></span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>yMax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(filtered<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">average</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="85" data-source-offset="-39"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 84;"><span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a>yMin <span class="op">=</span> d3<span class="op">.</span><span class="fu">min</span>(filtered<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">average</span>)<span class="op">;</span> <span class="co">// Get the minimum value of the 'average' field</span></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>yMax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(filtered<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">average</span>)<span class="op">;</span></span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-11-1" data-nodetype="declaration">
@@ -615,75 +615,75 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is going on with methane?</span></span>
 <span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO&lt;sub&gt;2&lt;/sub&gt;) and methane (CH&lt;sub&gt;4&lt;/sub&gt;). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use <span class="co">[</span><span class="ot">@turner2019interpreting; @saunois2017variability</span><span class="co">]</span>.</span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks <span class="co">[</span><span class="ot">@Zhang_2023</span><span class="co">]</span> and anthropogenic sources <span class="co">[</span><span class="ot">@Jackson_2020</span><span class="co">]</span>. </span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## CH&lt;sub&gt;4&lt;/sub&gt; data from NOAA</span></span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>Ground based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from  NOAA's Monthly <span class="co">[</span><span class="ot">CH&lt;sub&gt;4&lt;/sub&gt; concentration data</span><span class="co">](https://gml.noaa.gov/ccgg/trends_ch4/)</span>, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.</span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="in">fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');</span></span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="in">//fileUrl = `/data/subset_data.csv`;</span></span>
-<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="in">csvText = d3.text(fileUrl)</span></span>
-<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="in">processedData = {</span></span>
-<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="in">  const lines = csvText.split('\n').filter(line =&gt; line.trim().length &gt; 0 &amp;&amp; !line.startsWith('#'));</span></span>
-<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a><span class="in">  return d3.csvParse(lines.join('\n'),d3.autoType);</span></span>
-<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a><span class="in">processedData2 = processedData.map(d =&gt; ({</span></span>
-<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="in">  ...d,</span></span>
-<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="in">  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date</span></span>
-<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a><span class="in">}));</span></span>
-<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a><span class="in">start = new Date(1980, 0)</span></span>
-<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a><span class="in">end   = new Date(2024,0)</span></span>
-<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a><span class="in">viewof slider = rangeSlider({</span></span>
-<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a><span class="in">  min: 0,</span></span>
-<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a><span class="in">  max: d3.timeDay.count(start, end),</span></span>
-<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a><span class="in">  step: 1,</span></span>
-<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a><span class="in">  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),</span></span>
-<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a><span class="in">  title: 'Pick a date range',</span></span>
-<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a><span class="in">startDate = d3.timeDay.offset(start, slider[0])</span></span>
-<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a><span class="in">stopDate  = d3.timeDay.offset(start, slider[1]) </span></span>
-<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = processedData2.filter(function(s2) {</span></span>
-<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="in">  return s2.Date &gt;= startDate &amp;&amp; s2.Date &lt;= stopDate;</span></span>
-<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a><span class="in">import { rangeSlider as rangeSlider } from '@mootari/range-slider'</span></span>
-<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a><span class="in">formatDate = d3.timeFormat("%Y-%m-%d")</span></span>
-<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a><span class="in">// Assuming 'filtered' is your dataset</span></span>
-<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a><span class="in">yMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field</span></span>
-<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a><span class="in">yMax = d3.max(filtered, d =&gt; d.average);</span></span>
-<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO&lt;sub&gt;2&lt;/sub&gt;) and methane (CH&lt;sub&gt;4&lt;/sub&gt;). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use <span class="co">[</span><span class="ot">@turner2019interpreting; @saunois2017variability</span><span class="co">]</span>. The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks <span class="co">[</span><span class="ot">@Zhang_2023</span><span class="co">]</span> and anthropogenic sources <span class="co">[</span><span class="ot">@Jackson_2020</span><span class="co">]</span>.</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## CH&lt;sub&gt;4&lt;/sub&gt; data from NOAA</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>Ground based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA's Monthly <span class="co">[</span><span class="ot">CH&lt;sub&gt;4&lt;/sub&gt; concentration data</span><span class="co">](https://gml.noaa.gov/ccgg/trends_ch4/)</span>, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="in">fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="in">//fileUrl = `/data/subset_data.csv`;</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a><span class="in">csvText = d3.text(fileUrl)</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="in">processedData = {</span></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="in">  const lines = csvText.split('\n').filter(line =&gt; line.trim().length &gt; 0 &amp;&amp; !line.startsWith('#'));</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="in">  return d3.csvParse(lines.join('\n'),d3.autoType);</span></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a><span class="in">processedData2 = processedData.map(d =&gt; ({</span></span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a><span class="in">  ...d,</span></span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="in">  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="in">}));</span></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="in">start = new Date(1980, 0)</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a><span class="in">end   = new Date(2024,0)</span></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a><span class="in">viewof slider = rangeSlider({</span></span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a><span class="in">  min: 0,</span></span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a><span class="in">  max: d3.timeDay.count(start, end),</span></span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a><span class="in">  step: 1,</span></span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a><span class="in">  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),</span></span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a><span class="in">  title: 'Pick a date range',</span></span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a><span class="in">startDate = d3.timeDay.offset(start, slider[0])</span></span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a><span class="in">stopDate  = d3.timeDay.offset(start, slider[1]) </span></span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = processedData2.filter(function(s2) {</span></span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="in">  return s2.Date &gt;= startDate &amp;&amp; s2.Date &lt;= stopDate;</span></span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a><span class="in">import { rangeSlider as rangeSlider } from '@mootari/range-slider'</span></span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a><span class="in">formatDate = d3.timeFormat("%Y-%m-%d")</span></span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a><span class="in">// Assuming 'filtered' is your dataset</span></span>
+<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a><span class="in">yMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field</span></span>
+<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a><span class="in">yMax = d3.max(filtered, d =&gt; d.average);</span></span>
+<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
 <span id="cb16-114"><a href="#cb16-114" aria-hidden="true" tabindex="-1"></a><span class="in">stagnationDate = new Date("2005-01-01") </span></span>
 <span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a><span class="in">increaseDate   = new Date("2010-01-01") </span></span>
@@ -764,9 +764,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb16-196"><a href="#cb16-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
 <span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a><span class="in">import {Plot} from "@mkfreeman/plot-tooltip"</span></span>
 <span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a></span>
 </code></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

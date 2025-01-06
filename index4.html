@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Banner Example</title>
+<title>Full-Width Banner Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,8 +82,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="styles/custom.css">
-<meta property="og:title" content="Banner Example">
-<meta name="twitter:title" content="Banner Example">
+<meta property="og:title" content="Full-Width Banner Example">
+<meta name="twitter:title" content="Full-Width Banner Example">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -165,7 +165,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Banner Example</h1>
+<h1 class="title">Full-Width Banner Example</h1>
 </div>
 
 
@@ -182,42 +182,41 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </header>
 
 
-<div id="styles" class="cell">
 <style>
-.banner-container {
-  /* Make this container take a specific height so the background is visible. */
-  width: 100%;
-  height: 400px;        /* Adjust as desired */
-  position: relative;   /* So the child elements can position absolutely */
+  /* Remove default body margin/padding to ensure full-bleed width */
+  body, .main-container {
+    margin: 0;
+    padding: 0;
+  }
 
-  /* Fixed background image to create a “banner” effect */
-  background: url('../img/CI_cover.jpeg') no-repeat;
-  background-size: cover;
-  background-position: center; 
-  background-attachment: fixed;  
-}
+  /* The banner container covers full width and a specific height */
+  .banner-container {
+    width: 100%;
+    height: 80%;           /* Adjust as desired */
+    position: relative;      /* so child elements (text) can be absolutely placed */
 
-.banner-text {
-  /* Position this text absolutely within the .banner-container */
-  position: absolute;
+    /* The fixed background: center, cover, and no-repeat */
+    background: url('../img/CI_cover.jpeg') no-repeat center center fixed;
+    background-size: cover;
+  }
 
-  /* Tune these values until the text is exactly over the black region of the image */
-  left: 40px; 
-  bottom: 40px;
-
-  color: white;         /* visible on a black background */
-  font-size: 1.5rem;    /* style as you like */
-  margin: 0;
-}
+  /* The text that goes on the dark portion of the image */
+  .banner-text {
+    position: absolute;
+    /* Position the text at bottom-left corner or wherever the dark region is */
+    left: 40px;
+    bottom: 40px;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  }
 </style>
-</div>
-<div id="banner" class="cell">
+
 <div class="banner-container">
-<div class="banner-text">
-<pre><code>&lt;h1&gt;Carbon-I&lt;/h1&gt;
-&lt;p&gt;Subtitle or descriptive text goes here.&lt;/p&gt;</code></pre>
-</div>
-</div>
+  <div class="banner-text">
+    <h1>Title Over Dark Region</h1>
+    <p>A short tagline goes here.</p>
+  </div>
 </div>
 
 
