@@ -1,0 +1,45 @@
+---
+title: "Banner Example"
+format: html
+---
+
+::: {#styles .cell}
+```{=html}
+<style>
+.banner-container {
+  /* Make this container take a specific height so the background is visible. */
+  width: 100%;
+  height: 400px;        /* Adjust as desired */
+  position: relative;   /* So the child elements can position absolutely */
+
+  /* Fixed background image to create a “banner” effect */
+  background: url('../img/CI_cover.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed;  
+}
+
+.banner-text {
+  /* Position this text absolutely within the .banner-container */
+  position: absolute;
+
+  /* Tune these values until the text is exactly over the black region of the image */
+  left: 40px; 
+  bottom: 40px;
+
+  color: white;         /* visible on a black background */
+  font-size: 1.5rem;    /* style as you like */
+  margin: 0;
+}
+</style>
+:::
+
+::: {#banner .cell}
+```{=html}
+<div class="banner-container">
+  <div class="banner-text">
+    <h1>Carbon-I</h1>
+    <p>Subtitle or descriptive text goes here.</p>
+  </div>
+</div>
+:::
