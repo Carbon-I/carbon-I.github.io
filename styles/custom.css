@@ -1,4 +1,10 @@
-
+.banner-text {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* ...other styling... */
+}
 
 /* Style for navbar links on hover */
 .navbar a:hover {

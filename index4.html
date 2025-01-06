@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
-<meta name="description" content="Sharing news and blogs!">
 
-<title>News from Carbon-I</title>
+<title>Banner Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./img/ci_icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-list'] = new List('listing-blog-list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PE6RLP594L"></script>
 
 <script type="text/javascript">
@@ -113,44 +80,11 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles/custom.css">
-<meta property="og:title" content="News from Carbon-I">
-<meta property="og:description" content="Sharing news and blogs!">
-<meta property="og:image" content="https://carbon-i.github.io//img/BlogBanner2.jpeg">
-<meta name="twitter:title" content="News from Carbon-I">
-<meta name="twitter:description" content="Sharing news and blogs!">
-<meta name="twitter:image" content="https://carbon-i.github.io//img/BlogBanner2.jpeg">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="Banner Example">
+<meta name="twitter:title" content="Banner Example">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -202,7 +136,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./news.html" aria-current="page"> 
+    <a class="nav-link" href="./news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
 </ul>
@@ -223,25 +157,20 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RWFydGglMjBTeXN0ZW0lMjBFeHBsb3Jlcg==">Earth System Explorer <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R3JlZW5ob3VzZSUyMEdhc2Vz">Greenhouse Gases <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UmVtb3RlJTIwU2Vuc2luZw==">Remote Sensing <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U2F0ZWxsaXRlJTIwbWlzc2lvbg==">Satellite mission <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3BlY3Ryb3Njb3B5">Spectroscopy <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">News from Carbon-I</h1>
-</div>
-
-<div>
-  <div class="description">
-    Sharing news and blogs!
-  </div>
+<h1 class="title">Banner Example</h1>
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+
+<div class="quarto-title-meta column-page">
 
     
   
@@ -253,141 +182,43 @@ window.Quarto = {
 </header>
 
 
-<p><img src="./img/BlogBanner2.jpg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray"></p>
-<div id="listing-blog-list" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R3JlZW5ob3VzZSUyMEdhc2VzJTJDRWFydGglMjBTeXN0ZW0lMjBFeHBsb3JlciUyQ1NhdGVsbGl0ZSUyMG1pc3Npb24lMkNSZW1vdGUlMjBTZW5zaW5n" data-listing-date-sort="1719878400000" data-listing-file-modified-sort="1736181672450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="281">
-<div class="thumbnail">
-<p><a href="./News/latimes.html" class="no-external"></a></p><a href="./News/latimes.html" class="no-external">
-<p><img loading="lazy" src="https://ca-times.brightspotcdn.com/dims4/default/c1d48a3/2147483647/strip/true/crop/4951x3300+0+1/resize/2000x1333!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2f%2Fbd%2Ff281ce604373a2bc3f0498a76d96%2Favirris-jpl-004.jpg" class="thumbnail-image"></p>
-</a><p><a href="./News/latimes.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/latimes.html" class="no-external">LA Times article</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./News/latimes.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R3JlZW5ob3VzZSUyMEdhc2Vz'); return false;">
-Greenhouse Gases
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RWFydGglMjBTeXN0ZW0lMjBFeHBsb3Jlcg=='); return false;">
-Earth System Explorer
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">
-Satellite mission
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">
-Remote Sensing
-</div>
-</div>
-<div class="listing-description">
-<a href="./News/latimes.html" class="no-external">AAAS media fellow Noah Haggerty reports on our journey </a>
-</div>
-</div>
-<div class="metadata">
-<a href="./News/latimes.html" class="no-external">
-<div class="listing-date">
-July 2, 2024
-</div>
-<div class="listing-author">
-Christian Frankenberg
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R3JlZW5ob3VzZSUyMEdhc2VzJTJDRWFydGglMjBTeXN0ZW0lMjBFeHBsb3JlciUyQ1NhdGVsbGl0ZSUyMG1pc3Npb24lMkNSZW1vdGUlMjBTZW5zaW5n" data-listing-date-sort="1715040000000" data-listing-file-modified-sort="1736181672450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
-<div class="thumbnail">
-<p><a href="./News/Selected.html" class="no-external"></a></p><a href="./News/Selected.html" class="no-external">
-<p><img loading="lazy" src="https://www.nasa.gov/wp-content/uploads/2024/05/globe.jpg" class="thumbnail-image"></p>
-</a><p><a href="./News/Selected.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/Selected.html" class="no-external">Carbon-I has been selected for Phase A</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./News/Selected.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R3JlZW5ob3VzZSUyMEdhc2Vz'); return false;">
-Greenhouse Gases
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RWFydGglMjBTeXN0ZW0lMjBFeHBsb3Jlcg=='); return false;">
-Earth System Explorer
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">
-Satellite mission
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">
-Remote Sensing
-</div>
-</div>
-<div class="listing-description">
-<a href="./News/Selected.html" class="no-external">NASA announced the selection of four ESE Explorer mission concepts</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./News/Selected.html" class="no-external">
-<div class="listing-date">
-May 7, 2024
-</div>
-<div class="listing-author">
-Christian Frankenberg
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R3JlZW5ob3VzZSUyMEdhc2VzJTJDU3BlY3Ryb3Njb3B5JTJDU2F0ZWxsaXRlJTIwbWlzc2lvbiUyQ1JlbW90ZSUyMFNlbnNpbmc=" data-listing-date-sort="1709683200000" data-listing-file-modified-sort="1736181672450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
-<div class="thumbnail">
-<p><a href="./News/Carbon-I.html" class="no-external"></a></p><a href="./News/Carbon-I.html" class="no-external">
-<p><img loading="lazy" src="https://carbon-i.github.io/img/Logo-Black2.png" class="thumbnail-image"></p>
-</a><p><a href="./News/Carbon-I.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/Carbon-I.html" class="no-external">Carbon-I proposal to NASA’s ESE call</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./News/Carbon-I.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R3JlZW5ob3VzZSUyMEdhc2Vz'); return false;">
-Greenhouse Gases
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U3BlY3Ryb3Njb3B5'); return false;">
-Spectroscopy
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">
-Satellite mission
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">
-Remote Sensing
-</div>
-</div>
-<div class="listing-description">
-<a href="./News/Carbon-I.html" class="no-external">Our journey for a satellite mission proposal to tackle greenhouse gases</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./News/Carbon-I.html" class="no-external">
-<div class="listing-date">
-March 6, 2024
-</div>
-<div class="listing-author">
-Christian Frankenberg
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<div id="styles" class="cell">
+<style>
+.banner-container {
+  /* Make this container take a specific height so the background is visible. */
+  width: 100%;
+  height: 400px;        /* Adjust as desired */
+  position: relative;   /* So the child elements can position absolutely */
 
+  /* Fixed background image to create a “banner” effect */
+  background: url('../img/CI_cover.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed;  
+}
+
+.banner-text {
+  /* Position this text absolutely within the .banner-container */
+  position: absolute;
+
+  /* Tune these values until the text is exactly over the black region of the image */
+  left: 40px; 
+  bottom: 40px;
+
+  color: white;         /* visible on a black background */
+  font-size: 1.5rem;    /* style as you like */
+  margin: 0;
+}
+</style>
+</div>
+<div id="banner" class="cell">
+<div class="banner-container">
+<div class="banner-text">
+<pre><code>&lt;h1&gt;Carbon-I&lt;/h1&gt;
+&lt;p&gt;Subtitle or descriptive text goes here.&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
 
 
 
