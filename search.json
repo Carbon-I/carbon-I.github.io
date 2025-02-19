@@ -56,74 +56,74 @@
     "text": "A Carbon-I website…\nWhy create a website for something that isn’t even funded yet? Honestly, Quarto makes this a lot more fun and provides an ideal system for scientists to run their own website, and describe science in fun interactive ways. Carbon-I is still very rudimentary but creating some interactive graphics with ObservableJS has been fun, even though I dislike java script syntax. So it has been absolutely worth it and we learned a lot along the way…"
   },
   {
-    "objectID": "testMap.html",
-    "href": "testMap.html",
-    "title": "",
+    "objectID": "News/Selected.html",
+    "href": "News/Selected.html",
+    "title": "Carbon-I has been selected for Phase A",
     "section": "",
-    "text": "Code\n\n\n\n\n\nviewof projName = Inputs.radio(\n  new Map([\n    [\"Orthographic\", \"ortho\"],\n    [\"Equirectangular\", \"equirectangular\"],\n    [\"Hill\", \"hill\"],\n    [\"Equal-Earth\", \"equalearth\"],\n    [\"AzEqualArea\", \"azequalarea\"]\n  ]),\n  {\n    label: \"Choose projection\",\n    value: \"hill\"\n  }\n)\n\n\n\n\n\n\n\nd3 = require(\"d3@7\", \"d3-geo-projection@4\", \"d3-inertia@0.4\")\n\n\n\n\n\n\n\nnetcdf = import(\"https://cdn.skypack.dev/netcdfjs@2.0.2?min\").then((d) =&gt; d.NetCDFReader)\n\n\n\n\n\n\n\nreader = new netcdf(await fetch(\"https://raw.githubusercontent.com/cfranken/s2_data/main/files/\" + source.src).then(function(response) {\n    return response.arrayBuffer();\n  }))\n\n\n\n\n\n\n\nsources = [\n  {src: \"S2_200_2000_median.nc\", variable: \"cloud_free_fraction02\", label: \"Median Ratio\"},\n]\n\n\n\n\n\n\n\nsource = sources[dataSource]\n\n\n\n\n\n\n\nisize = reader.header.dimensions[0].size\njsize = reader.header.dimensions[1].size\nzsize = reader.header.dimensions[2].size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nisize\n\n\n\n\n\n\n\njsize\n\n\n\n\n\n\n\nzsize\n\n\n\n\n\n\n\ntopojson     = require('topojson')\n\n\n\n\n\n\n\nvalues = {\n  var values = new Float32Array(reader.getDataVariable(source.variable));\n  return values;\n}\n\n\n\n\n\n\n\npolygons = contours(cylinder(topdown(values))).map(invert).map(function(p) {\n  return p.type == \"Polygon\" ? simplify(p, 0.01) : p;\n})\n\n\n\n\n\n\n\nfunction simplify(polygon, s) {\n    var topology = topojson.topology({polygon: polygon});\n    topology = topojson.simplify(topojson.presimplify(topology), s);\n    topology = topojson.filter(topology, r =&gt; topology.arcs[r[0]].length &gt; 2);\n    var p = topojson.feature(topology, topology.objects.polygon);\n    p.value = polygon.value;\n    return p;\n  }\n\n\n\n\n\n\n\nfunction invert(d) {\n    var shared = {};\n    var p = {\n      type: \"Polygon\",\n      coordinates: d3.merge(d.coordinates.map(function(polygon) {\n        return polygon.map(function(ring) {\n          return ring.map(function(point) {\n            return [point[0] / (isize + 1) * 360 - 180, 90 - point[1] / jsize * 180];\n          }).reverse();\n        });\n      }))\n    };\n\n    // Add contact points with the antimeridian.\n    var epsilon = 1e-5;\n    p.coordinates = p.coordinates\n    .map(function(ring) {\n      ring.pop();\n      var r = [];\n      for (var i = 0, l = ring.length; i &lt; l; i++) {\n        var p = ring[i];\n        if (p[0] === 180 && ring[(i+l-1)%l][0] &lt; 180)\n            r.push([p[0], p[1] + epsilon]);\n        if (p[0] === -180 && ring[(i+l-1)%l][0] &gt; -180)\n            r.push([p[0], p[1] - epsilon]);\n        r.push(p);\n        if (p[0] === 180 && ring[(i+1)%l][0] &lt; 180)\n            r.push([p[0], p[1] - epsilon]);\n        if (p[0] === -180 && ring[(i+1)%l][0] &gt; -180)\n            r.push([p[0], p[1] + epsilon]);\n      }\n      r.push(r[0]);\n      return r;\n    });\n\n    // Record the y-intersections with the antimeridian.\n    p.coordinates.forEach(function(ring) {\n      ring.forEach(function(p) {\n        if (p[0] === -180 || p[0] === 180) {\n          shared[p[1]] |= p[0] === -180 ? 1 : 2;\n        }\n      });\n    });\n\n    // Offset any unshared antimeridian points to prevent their stitching.\n    p.coordinates.forEach(function(ring) {\n      ring.forEach(function(p) {\n        if ((p[0] === -180 || p[0] === 180) && shared[p[1]] !== 3) {\n          p[0] = p[0] === -180 ? -179.9995 : 179.9995;\n        }\n      });\n    });\n\n    p = d3.geoStitch(p);\n\n    // After stitching remove the shared points -- they are off\n    // see https://github.com/d3/d3-contour/issues/25\n    p.coordinates = p.coordinates\n    .map(function(ring) {\n      ring.pop();\n      ring = ring\n      .map(function(p) {\n        var p0 = (p[0] + 180) * (isize + 1) / isize - 180;\n        return [p0, p[1]];\n      });\n      ring = ring.filter(function(p) {\n        return Math.abs(p[0]) &lt; 179.9999;\n      });\n      ring.push(ring[0]);\n      return ring;\n    })\n    .filter(function(ring) {\n      return ring.length &gt; 0;\n    });\n\n    // If the MultiPolygon is empty, treat it as the Sphere.\n    return p.coordinates.length\n        ? {type: \"Polygon\", coordinates: p.coordinates, value: d.value}\n        : {type: \"Sphere\", value: d.value};\n    \n  }\n\n\n\n\n\n\n\nfunction topdown(values) {\n  var v = new Float32Array(values);\n  for (var j = 0; j &lt; jsize; j++) {\n    for (var i = 0; i &lt; isize; i++) {\n      v[ (jsize-1-j) * isize + i ] = values[ j * isize + i ];\n    }\n  }\n  return v;\n}\n\n\n\n\n\n\n\n// torus: copy left column to the right\nfunction cylinder(values) {\n  var v = new Float32Array(jsize * (isize+1));\n  for (var j = 0; j &lt; jsize; j++) {\n    for (var i = 0; i &lt; isize + 1; i++) {\n      v[ j * (isize+1) + i ] = values[ j * isize + i%isize ];\n     }\n }\n return v;\n}\n\n\n\n\n\n\n\ncontours = d3.contours()\n      .smooth(true)\n      .size([isize + 1, jsize])\n\n\n\n\n\n\n\npolygons"
+    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "News/Selected.html#nasas-ese-concept-study-selection",
+    "href": "News/Selected.html#nasas-ese-concept-study-selection",
+    "title": "Carbon-I has been selected for Phase A",
+    "section": "",
+    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
+  },
+  {
+    "objectID": "index3.html",
+    "href": "index3.html",
     "title": "Carbon-I",
     "section": "",
-    "text": "A Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
+    "text": "Data science with Python \n\n\n\nLino Galiana\n\n\nStar this website on Github\nCourse website Python for Data Science , an introduction to Python for the second year of the engineering curriculum at ENSAE (Master 1).\nAll content of this group is freely available here or on Github  and can be tested in the form of Jupyter notebooks.\n::::::\n::::::\n:::::\n::::\n:::\nA Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
   },
   {
-    "objectID": "index.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
-    "href": "index.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
+    "objectID": "index3.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
+    "href": "index3.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
     "title": "Carbon-I",
     "section": "The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases",
     "text": "The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases\n\n\n\n\nGreenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments"
   },
   {
-    "objectID": "index.html#carbon-i-will",
-    "href": "index.html#carbon-i-will",
+    "objectID": "index3.html#carbon-i-will",
+    "href": "index3.html#carbon-i-will",
     "title": "Carbon-I",
     "section": "Carbon-I Will:",
-    "text": "Carbon-I Will:\n\nCollect 1000 times more data in the tropics by observing between clouds\nDifferentiate the sources and composition of emissions at the city block level anywhere"
+    "text": "Carbon-I Will:\n\nCollect 1000 times more data in the tropics by observing between clouds\n#### Differentiate the sources and composition of emissions at the city block level anywhere"
   },
   {
-    "objectID": "index.html#objectives",
-    "href": "index.html#objectives",
+    "objectID": "index3.html#objectives",
+    "href": "index3.html#objectives",
     "title": "Carbon-I",
     "section": "Objectives",
     "text": "Objectives\n\nIdentify, characterize and quantify hotspots of CH4 and CO2 emissions across the globe\nQuantify global CH4 and CO2, and CO monthly fluxes at unprecedented 12-100km resolution\nAttribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes"
   },
   {
-    "objectID": "index.html#mission-overview",
-    "href": "index.html#mission-overview",
+    "objectID": "index3.html#mission-overview",
+    "href": "index3.html#mission-overview",
     "title": "Carbon-I",
     "section": "Mission Overview",
-    "text": "Mission Overview\n\nGlobal mode: &lt;400m sampling of land and coastal oceans monthly\nTarget mode: &lt;50m sampling of key regions (95kmx95km; over 2 million acres)\nAbsorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers"
+    "text": "Mission Overview\n\nGlobal mode: &lt;400m sampling of land and coastal oceans monthly\nTarget mode: &lt;50m sampling of key regions (95kmx95km; over 2 million acres)\n#### Absorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers"
   },
   {
-    "objectID": "webinar.html",
-    "href": "webinar.html",
+    "objectID": "ch4_story.html",
+    "href": "ch4_story.html",
     "title": "",
     "section": "",
-    "text": "Explore the Carbon-I mission, designed to improve our understanding of Earth’s carbon dynamics. This webinar series offers a unique opportunity to learn about the mission’s objectives, technology, and expected impact on climate science."
+    "text": "Code"
   },
   {
-    "objectID": "webinar.html#join-the-carbon-i-mission-webinar-series-explore-the-future-of-greenhouse-gas-observations",
-    "href": "webinar.html#join-the-carbon-i-mission-webinar-series-explore-the-future-of-greenhouse-gas-observations",
+    "objectID": "ch4_story.html#what-is-going-on-with-methane",
+    "href": "ch4_story.html#what-is-going-on-with-methane",
     "title": "",
-    "section": "",
-    "text": "Explore the Carbon-I mission, designed to improve our understanding of Earth’s carbon dynamics. This webinar series offers a unique opportunity to learn about the mission’s objectives, technology, and expected impact on climate science."
+    "section": "What is going on with methane?",
+    "text": "What is going on with methane?\nHuman activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO2) and methane (CH4). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use (Turner, Frankenberg, and Kort 2019; Saunois et al. 2017). The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks (Zhang et al. 2023) and anthropogenic sources (Jackson et al. 2020)."
   },
   {
-    "objectID": "webinar.html#who-should-attend",
-    "href": "webinar.html#who-should-attend",
+    "objectID": "ch4_story.html#ch4-data-from-noaa",
+    "href": "ch4_story.html#ch4-data-from-noaa",
     "title": "",
-    "section": "Who should attend?",
-    "text": "Who should attend?\nThis webinar series is designed for scientists, researchers, policymakers, and anyone interested in learning about the Carbon-I mission. We value your input—help us shape future webinars by sharing your interests through this [brief survey.] (https://docs.google.com/forms/d/e/1FAIpQLSfpWZJYNxlwxFoj0Nd0GRf-Y1_CcZwRnlp3GKMW5JtzicmJxw/viewform?pli=1)"
-  },
-  {
-    "objectID": "webinar.html#upcoming-webinars",
-    "href": "webinar.html#upcoming-webinars",
-    "title": "",
-    "section": "Upcoming webinars",
-    "text": "Upcoming webinars\n\nMarch 6, 2025 | 9-10 AM PST\nCarbon-I: A NASA Earth System Explorer Mission concept for Greenhouse Gas Observations\nJoin Christian Frankenberg and Anna Michalak as they provide an in-depth overview of Carbon Investigation (Carbon-I), a NASA Earth System Explorer Mission concept focused on greenhouse gas observations. They will discuss the mission’s scientific objectives, technical approach, and its significance for carbon cycle science and the NASA Decadal Survey.\nThis webinar is intended for a broad audience, with a particular focus on those interested in greenhouse gas observations and carbon dynamics.\n[Register here] (https://events.gcc.teams.microsoft.com/event/ce0ebe70-ef73-4bd8-a683-1f633a39bfd1@545921e0-10ef-4398-8713-9832ac563dad)\n\nAdditional webinars are planned—stay tuned for more details!"
+    "section": "CH4 data from NOAA",
+    "text": "CH4 data from NOAA\nGround based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly CH4 concentration data, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.\n\nfileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\ncsvText = d3.text(fileUrl)\n\n\n\n\n\n\n\nprocessedData = {\n  const lines = csvText.split('\\n').filter(line =&gt; line.trim().length &gt; 0 && !line.startsWith('#'));\n  return d3.csvParse(lines.join('\\n'),d3.autoType);\n}\n\n\n\n\n\n\n\nprocessedData2 = processedData.map(d =&gt; ({\n  ...d,\n  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date\n}));\n\n\n\n\n\n\n\nstart = new Date(1980, 0)\nend   = new Date(2024,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = processedData2.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nyMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field\nyMax = d3.max(filtered, d =&gt; d.average);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstagnationDate = new Date(\"2005-01-01\") \nincreaseDate   = new Date(\"2010-01-01\") \naccelerationDate = new Date(\"2015-01-01\") \ntopMargin= 1750\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction adjustTextPosition(plotDomain, fixedDate, defaultPosition) {\n  if (fixedDate &lt; plotDomain[0] || fixedDate &gt; plotDomain[1]) {\n    // Adjust the position to be within the domain\n    // For example, set it to the start or end of the domain\n    return plotDomain[0]; // or plotDomain[1]\n  }\n  return defaultPosition;\n}\n\n\n\n\n\n\n\nPlot.plot({\n    width,\n  y: {\n    grid: true,\n    label: \"CH₄ (ppb)\",\n    domain: [yMin, yMax] // Set the y-axis domain\n  },\n  x: {\n    grid: true,\n    label: \"time\",\n    domain: [d3.min(filtered, d =&gt; d.Date), d3.max(filtered, d =&gt; d.Date)] // Set the y-axis domain\n  },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marks: [\n    Plot.rectY([{}], { \n      x1: new Date(\"2000-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2007-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"blue\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2007-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2015-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"yellow\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2015-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2024-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"red\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.line(filtered, { \n      x: \"Date\", \n      y: \"average\",\n      title: (d) =&gt;\n        `${formatDate(d.Date)} \\n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \\n makes a new line\n    }),\n    Plot.lineY(filtered, Plot.windowY({k: 12, reduce: \"mean\"}, {x: \"Date\", y: \"average\", stroke: \"red\"})),\n    Plot.text([{}], {\n      x: stagnationDate,\n      y: 1820,\n      textAnchor: \"middle\",\n      dy: \"-0.5em\", // Adjust vertical position\n      fontWeight: \"bold\",\n      text: \"Stagnation Period\"\n    })\n  ]\n})\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
   },
   {
     "objectID": "people/Collaborators/ciais.html",
@@ -480,7 +480,7 @@
     "href": "news.html",
     "title": "News from Carbon-I",
     "section": "",
-    "text": "LA Times article\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nAAAS media fellow Noah Haggerty reports on our journey \n\n\n\n\n\nJuly 2, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I has been selected for Phase A\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nNASA announced the selection of four ESE Explorer mission concepts\n\n\n\n\n\nMay 7, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I proposal to NASA’s ESE call\n\n\n\n\n\n\nGreenhouse Gases\n\n\nSpectroscopy\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nOur journey for a satellite mission proposal to tackle greenhouse gases\n\n\n\n\n\nMarch 6, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
+    "text": "Join the Carbon-I mission webinar series: Explore the future of greenhouse gas observations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLA Times article\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nAAAS media fellow Noah Haggerty reports on our journey \n\n\n\n\n\nJuly 2, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I has been selected for Phase A\n\n\n\n\n\n\nGreenhouse Gases\n\n\nEarth System Explorer\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nNASA announced the selection of four ESE Explorer mission concepts\n\n\n\n\n\nMay 7, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\n\n\n\n\n\n\nCarbon-I proposal to NASA’s ESE call\n\n\n\n\n\n\nGreenhouse Gases\n\n\nSpectroscopy\n\n\nSatellite mission\n\n\nRemote Sensing\n\n\n\nOur journey for a satellite mission proposal to tackle greenhouse gases\n\n\n\n\n\nMarch 6, 2024\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications.html",
@@ -847,74 +847,74 @@
     "text": "Professional Experience\n\n2018-present: Whatever, wherre"
   },
   {
-    "objectID": "ch4_story.html",
-    "href": "ch4_story.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
-  },
-  {
-    "objectID": "ch4_story.html#what-is-going-on-with-methane",
-    "href": "ch4_story.html#what-is-going-on-with-methane",
-    "title": "",
-    "section": "What is going on with methane?",
-    "text": "What is going on with methane?\nHuman activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO2) and methane (CH4). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use (Turner, Frankenberg, and Kort 2019; Saunois et al. 2017). The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks (Zhang et al. 2023) and anthropogenic sources (Jackson et al. 2020)."
-  },
-  {
-    "objectID": "ch4_story.html#ch4-data-from-noaa",
-    "href": "ch4_story.html#ch4-data-from-noaa",
-    "title": "",
-    "section": "CH4 data from NOAA",
-    "text": "CH4 data from NOAA\nGround based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA’s Monthly CH4 concentration data, globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.\n\nfileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');\n//fileUrl = `/data/subset_data.csv`;\n\n\n\n\n\n\n\ncsvText = d3.text(fileUrl)\n\n\n\n\n\n\n\nprocessedData = {\n  const lines = csvText.split('\\n').filter(line =&gt; line.trim().length &gt; 0 && !line.startsWith('#'));\n  return d3.csvParse(lines.join('\\n'),d3.autoType);\n}\n\n\n\n\n\n\n\nprocessedData2 = processedData.map(d =&gt; ({\n  ...d,\n  Date: new Date(`${d.year}-${d.month}-01`) // Parsing year and month into a Date\n}));\n\n\n\n\n\n\n\nstart = new Date(1980, 0)\nend   = new Date(2024,0)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nviewof slider = rangeSlider({\n  min: 0,\n  max: d3.timeDay.count(start, end),\n  step: 1,\n  format: d =&gt; formatDate(d3.timeDay.offset(start, d)),\n  title: 'Pick a date range',\n})\n\n\n\n\n\n\n\nstartDate = d3.timeDay.offset(start, slider[0])\nstopDate  = d3.timeDay.offset(start, slider[1])\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = processedData2.filter(function(s2) {\n  return s2.Date &gt;= startDate && s2.Date &lt;= stopDate;\n})\n\n\n\n\n\n\n\nimport { rangeSlider as rangeSlider } from '@mootari/range-slider'\n\n\n\n\n\n\n\nformatDate = d3.timeFormat(\"%Y-%m-%d\")\n\n\n\n\n\n\n\nyMin = d3.min(filtered, d =&gt; d.average); // Get the minimum value of the 'average' field\nyMax = d3.max(filtered, d =&gt; d.average);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstagnationDate = new Date(\"2005-01-01\") \nincreaseDate   = new Date(\"2010-01-01\") \naccelerationDate = new Date(\"2015-01-01\") \ntopMargin= 1750\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction adjustTextPosition(plotDomain, fixedDate, defaultPosition) {\n  if (fixedDate &lt; plotDomain[0] || fixedDate &gt; plotDomain[1]) {\n    // Adjust the position to be within the domain\n    // For example, set it to the start or end of the domain\n    return plotDomain[0]; // or plotDomain[1]\n  }\n  return defaultPosition;\n}\n\n\n\n\n\n\n\nPlot.plot({\n    width,\n  y: {\n    grid: true,\n    label: \"CH₄ (ppb)\",\n    domain: [yMin, yMax] // Set the y-axis domain\n  },\n  x: {\n    grid: true,\n    label: \"time\",\n    domain: [d3.min(filtered, d =&gt; d.Date), d3.max(filtered, d =&gt; d.Date)] // Set the y-axis domain\n  },\n  color: { legend: true },\n  style: { fontSize: \"12px\",},\n  marks: [\n    Plot.rectY([{}], { \n      x1: new Date(\"2000-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2007-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"blue\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2007-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2015-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"yellow\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.rectY([{}], { \n      x1: new Date(\"2015-01-01\"), // lower x bound of your overlay\n      x2: new Date(\"2024-01-01\"), // upper x bound of your overlay\n      y1: yMin,\n      y2: yMax,\n      fill: \"red\", // color of the overlay\n      fillOpacity: 0.1\n    }),\n    Plot.line(filtered, { \n      x: \"Date\", \n      y: \"average\",\n      title: (d) =&gt;\n        `${formatDate(d.Date)} \\n CH₄: ${d.average} +/- ${d.average_unc} ppb`, // \\n makes a new line\n    }),\n    Plot.lineY(filtered, Plot.windowY({k: 12, reduce: \"mean\"}, {x: \"Date\", y: \"average\", stroke: \"red\"})),\n    Plot.text([{}], {\n      x: stagnationDate,\n      y: 1820,\n      textAnchor: \"middle\",\n      dy: \"-0.5em\", // Adjust vertical position\n      fontWeight: \"bold\",\n      text: \"Stagnation Period\"\n    })\n  ]\n})\n\n\n\n\n\n\n\nimport {Plot} from \"@mkfreeman/plot-tooltip\""
-  },
-  {
-    "objectID": "index3.html",
-    "href": "index3.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Carbon-I",
     "section": "",
-    "text": "Data science with Python \n\n\n\nLino Galiana\n\n\nStar this website on Github\nCourse website Python for Data Science , an introduction to Python for the second year of the engineering curriculum at ENSAE (Master 1).\nAll content of this group is freely available here or on Github  and can be tested in the form of Jupyter notebooks.\n::::::\n::::::\n:::::\n::::\n:::\nA Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
+    "text": "A Phase A concept study selected by NASA in the Earth System Explorer mission proposal call."
   },
   {
-    "objectID": "index3.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
-    "href": "index3.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
+    "objectID": "index.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
+    "href": "index.html#the-carbon-investigation-for-high-resolution-mapping-of-obscured-greenhouse-gases",
     "title": "Carbon-I",
     "section": "The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases",
     "text": "The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases\n\n\n\n\nGreenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments"
   },
   {
-    "objectID": "index3.html#carbon-i-will",
-    "href": "index3.html#carbon-i-will",
+    "objectID": "index.html#carbon-i-will",
+    "href": "index.html#carbon-i-will",
     "title": "Carbon-I",
     "section": "Carbon-I Will:",
-    "text": "Carbon-I Will:\n\nCollect 1000 times more data in the tropics by observing between clouds\n#### Differentiate the sources and composition of emissions at the city block level anywhere"
+    "text": "Carbon-I Will:\n\nCollect 1000 times more data in the tropics by observing between clouds\nDifferentiate the sources and composition of emissions at the city block level anywhere"
   },
   {
-    "objectID": "index3.html#objectives",
-    "href": "index3.html#objectives",
+    "objectID": "index.html#objectives",
+    "href": "index.html#objectives",
     "title": "Carbon-I",
     "section": "Objectives",
     "text": "Objectives\n\nIdentify, characterize and quantify hotspots of CH4 and CO2 emissions across the globe\nQuantify global CH4 and CO2, and CO monthly fluxes at unprecedented 12-100km resolution\nAttribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes"
   },
   {
-    "objectID": "index3.html#mission-overview",
-    "href": "index3.html#mission-overview",
+    "objectID": "index.html#mission-overview",
+    "href": "index.html#mission-overview",
     "title": "Carbon-I",
     "section": "Mission Overview",
-    "text": "Mission Overview\n\nGlobal mode: &lt;400m sampling of land and coastal oceans monthly\nTarget mode: &lt;50m sampling of key regions (95kmx95km; over 2 million acres)\n#### Absorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers"
+    "text": "Mission Overview\n\nGlobal mode: &lt;400m sampling of land and coastal oceans monthly\nTarget mode: &lt;50m sampling of key regions (95kmx95km; over 2 million acres)\nAbsorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers"
   },
   {
-    "objectID": "News/Selected.html",
-    "href": "News/Selected.html",
-    "title": "Carbon-I has been selected for Phase A",
+    "objectID": "testMap.html",
+    "href": "testMap.html",
+    "title": "",
     "section": "",
-    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
+    "text": "Code\n\n\n\n\n\nviewof projName = Inputs.radio(\n  new Map([\n    [\"Orthographic\", \"ortho\"],\n    [\"Equirectangular\", \"equirectangular\"],\n    [\"Hill\", \"hill\"],\n    [\"Equal-Earth\", \"equalearth\"],\n    [\"AzEqualArea\", \"azequalarea\"]\n  ]),\n  {\n    label: \"Choose projection\",\n    value: \"hill\"\n  }\n)\n\n\n\n\n\n\n\nd3 = require(\"d3@7\", \"d3-geo-projection@4\", \"d3-inertia@0.4\")\n\n\n\n\n\n\n\nnetcdf = import(\"https://cdn.skypack.dev/netcdfjs@2.0.2?min\").then((d) =&gt; d.NetCDFReader)\n\n\n\n\n\n\n\nreader = new netcdf(await fetch(\"https://raw.githubusercontent.com/cfranken/s2_data/main/files/\" + source.src).then(function(response) {\n    return response.arrayBuffer();\n  }))\n\n\n\n\n\n\n\nsources = [\n  {src: \"S2_200_2000_median.nc\", variable: \"cloud_free_fraction02\", label: \"Median Ratio\"},\n]\n\n\n\n\n\n\n\nsource = sources[dataSource]\n\n\n\n\n\n\n\nisize = reader.header.dimensions[0].size\njsize = reader.header.dimensions[1].size\nzsize = reader.header.dimensions[2].size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nisize\n\n\n\n\n\n\n\njsize\n\n\n\n\n\n\n\nzsize\n\n\n\n\n\n\n\ntopojson     = require('topojson')\n\n\n\n\n\n\n\nvalues = {\n  var values = new Float32Array(reader.getDataVariable(source.variable));\n  return values;\n}\n\n\n\n\n\n\n\npolygons = contours(cylinder(topdown(values))).map(invert).map(function(p) {\n  return p.type == \"Polygon\" ? simplify(p, 0.01) : p;\n})\n\n\n\n\n\n\n\nfunction simplify(polygon, s) {\n    var topology = topojson.topology({polygon: polygon});\n    topology = topojson.simplify(topojson.presimplify(topology), s);\n    topology = topojson.filter(topology, r =&gt; topology.arcs[r[0]].length &gt; 2);\n    var p = topojson.feature(topology, topology.objects.polygon);\n    p.value = polygon.value;\n    return p;\n  }\n\n\n\n\n\n\n\nfunction invert(d) {\n    var shared = {};\n    var p = {\n      type: \"Polygon\",\n      coordinates: d3.merge(d.coordinates.map(function(polygon) {\n        return polygon.map(function(ring) {\n          return ring.map(function(point) {\n            return [point[0] / (isize + 1) * 360 - 180, 90 - point[1] / jsize * 180];\n          }).reverse();\n        });\n      }))\n    };\n\n    // Add contact points with the antimeridian.\n    var epsilon = 1e-5;\n    p.coordinates = p.coordinates\n    .map(function(ring) {\n      ring.pop();\n      var r = [];\n      for (var i = 0, l = ring.length; i &lt; l; i++) {\n        var p = ring[i];\n        if (p[0] === 180 && ring[(i+l-1)%l][0] &lt; 180)\n            r.push([p[0], p[1] + epsilon]);\n        if (p[0] === -180 && ring[(i+l-1)%l][0] &gt; -180)\n            r.push([p[0], p[1] - epsilon]);\n        r.push(p);\n        if (p[0] === 180 && ring[(i+1)%l][0] &lt; 180)\n            r.push([p[0], p[1] - epsilon]);\n        if (p[0] === -180 && ring[(i+1)%l][0] &gt; -180)\n            r.push([p[0], p[1] + epsilon]);\n      }\n      r.push(r[0]);\n      return r;\n    });\n\n    // Record the y-intersections with the antimeridian.\n    p.coordinates.forEach(function(ring) {\n      ring.forEach(function(p) {\n        if (p[0] === -180 || p[0] === 180) {\n          shared[p[1]] |= p[0] === -180 ? 1 : 2;\n        }\n      });\n    });\n\n    // Offset any unshared antimeridian points to prevent their stitching.\n    p.coordinates.forEach(function(ring) {\n      ring.forEach(function(p) {\n        if ((p[0] === -180 || p[0] === 180) && shared[p[1]] !== 3) {\n          p[0] = p[0] === -180 ? -179.9995 : 179.9995;\n        }\n      });\n    });\n\n    p = d3.geoStitch(p);\n\n    // After stitching remove the shared points -- they are off\n    // see https://github.com/d3/d3-contour/issues/25\n    p.coordinates = p.coordinates\n    .map(function(ring) {\n      ring.pop();\n      ring = ring\n      .map(function(p) {\n        var p0 = (p[0] + 180) * (isize + 1) / isize - 180;\n        return [p0, p[1]];\n      });\n      ring = ring.filter(function(p) {\n        return Math.abs(p[0]) &lt; 179.9999;\n      });\n      ring.push(ring[0]);\n      return ring;\n    })\n    .filter(function(ring) {\n      return ring.length &gt; 0;\n    });\n\n    // If the MultiPolygon is empty, treat it as the Sphere.\n    return p.coordinates.length\n        ? {type: \"Polygon\", coordinates: p.coordinates, value: d.value}\n        : {type: \"Sphere\", value: d.value};\n    \n  }\n\n\n\n\n\n\n\nfunction topdown(values) {\n  var v = new Float32Array(values);\n  for (var j = 0; j &lt; jsize; j++) {\n    for (var i = 0; i &lt; isize; i++) {\n      v[ (jsize-1-j) * isize + i ] = values[ j * isize + i ];\n    }\n  }\n  return v;\n}\n\n\n\n\n\n\n\n// torus: copy left column to the right\nfunction cylinder(values) {\n  var v = new Float32Array(jsize * (isize+1));\n  for (var j = 0; j &lt; jsize; j++) {\n    for (var i = 0; i &lt; isize + 1; i++) {\n      v[ j * (isize+1) + i ] = values[ j * isize + i%isize ];\n     }\n }\n return v;\n}\n\n\n\n\n\n\n\ncontours = d3.contours()\n      .smooth(true)\n      .size([isize + 1, jsize])\n\n\n\n\n\n\n\npolygons"
   },
   {
-    "objectID": "News/Selected.html#nasas-ese-concept-study-selection",
-    "href": "News/Selected.html#nasas-ese-concept-study-selection",
-    "title": "Carbon-I has been selected for Phase A",
+    "objectID": "News/webinar.html",
+    "href": "News/webinar.html",
+    "title": "",
     "section": "",
-    "text": "We received more than welcome News! Our mission concept has been chosen by NASA to advance into a Phase A concept study as part of the Earth System Explorer call. Congratulations also to the STRIVE, EDGE, and ODYSEA concepts. An intense year will be ahead of us to work on the Concept Study Report for Carbon-I, together with JPL as managing organization, Lockheed Martin as spacecraft provider and many scientists across various institutions."
+    "text": "Explore the Carbon-I mission, designed to improve our understanding of Earth’s carbon dynamics. This webinar series offers a unique opportunity to learn about the mission’s objectives, technology, and expected impact on climate science."
+  },
+  {
+    "objectID": "News/webinar.html#join-the-carbon-i-mission-webinar-series-explore-the-future-of-greenhouse-gas-observations",
+    "href": "News/webinar.html#join-the-carbon-i-mission-webinar-series-explore-the-future-of-greenhouse-gas-observations",
+    "title": "",
+    "section": "",
+    "text": "Explore the Carbon-I mission, designed to improve our understanding of Earth’s carbon dynamics. This webinar series offers a unique opportunity to learn about the mission’s objectives, technology, and expected impact on climate science."
+  },
+  {
+    "objectID": "News/webinar.html#who-should-attend",
+    "href": "News/webinar.html#who-should-attend",
+    "title": "",
+    "section": "Who should attend?",
+    "text": "Who should attend?\nThis webinar series is designed for scientists, researchers, policymakers, and anyone interested in learning about the Carbon-I mission. We value your input—help us shape future webinars by sharing your interests through this [brief survey.] (https://docs.google.com/forms/d/e/1FAIpQLSfpWZJYNxlwxFoj0Nd0GRf-Y1_CcZwRnlp3GKMW5JtzicmJxw/viewform?pli=1)"
+  },
+  {
+    "objectID": "News/webinar.html#upcoming-webinars",
+    "href": "News/webinar.html#upcoming-webinars",
+    "title": "",
+    "section": "Upcoming webinars",
+    "text": "Upcoming webinars\n\nMarch 6, 2025 | 9-10 AM PST\nCarbon-I: A NASA Earth System Explorer Mission concept for Greenhouse Gas Observations\nJoin Christian Frankenberg and Anna Michalak as they provide an in-depth overview of Carbon Investigation (Carbon-I), a NASA Earth System Explorer Mission concept focused on greenhouse gas observations. They will discuss the mission’s scientific objectives, technical approach, and its significance for carbon cycle science and the NASA Decadal Survey.\nThis webinar is intended for a broad audience, with a particular focus on those interested in greenhouse gas observations and carbon dynamics.\n[Register here] (https://events.gcc.teams.microsoft.com/event/ce0ebe70-ef73-4bd8-a683-1f633a39bfd1@545921e0-10ef-4398-8713-9832ac563dad)\n\nAdditional webinars are planned—stay tuned for more details!"
   },
   {
     "objectID": "News/latimes.html",
