@@ -1,9 +1,9 @@
 ---
 title: "Carbon-I Webinar"
 description: "Join the Carbon-I mission webinar series: Explore the future of greenhouse gas observations"
-author: "Christian Frankenberg"
-date: "03/06/2024"
-image: "https://carbon-i.github.io/img/Logo-Black2.png"
+author: "Carbon-I Team"
+date: "02/19/2025"
+image: "https://carbon-i.github.io/img/CarbonI-anim_whiteBG_small.gif"
 categories:
   - Satellite Remote Sensing
   - Spectroscopy
@@ -19,20 +19,14 @@ This webinar series is designed for scientists, researchers, policymakers, and a
 
 ## Upcoming webinars
 
----
-
-March 6, 2025 | 9-10 AM PST
+**March 6, 2025 | 9-10 AM PST**
 
 Carbon-I: A NASA Earth System Explorer Mission concept for Greenhouse Gas Observations
 
 Join Christian Frankenberg and Anna Michalak as they provide an in-depth overview of Carbon Investigation (Carbon-I), a NASA Earth System Explorer Mission concept focused on greenhouse gas observations. They will discuss the mission's scientific objectives, technical approach, and its significance for carbon cycle science and the NASA Decadal Survey. 
 
-This webinar is intended for a broad audience, with a particular focus on those interested in greenhouse gas observations and carbon dynamics.
+This webinar is intended for a broad audience, with a particular focus on those interested in greenhouse gas observations and carbon dynamics. 
 
 [Register here](https://events.gcc.teams.microsoft.com/event/ce0ebe70-ef73-4bd8-a683-1f633a39bfd1@545921e0-10ef-4398-8713-9832ac563dad)
 
----
-
-Additional webinars are planned—stay tuned for more details!
-
----
+Additional in-depth webinars are planned—stay tuned for more details!
