@@ -24,7 +24,8 @@ Human activities have significantly altered the Earth’s carbon cycle and energ
 Ground based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA's Monthly [CH<sub>4</sub> concentration data](https://gml.noaa.gov/ccgg/trends_ch4/), globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.
 
 ```{ojs}
-fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');
+//fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');
+fileUrl = 'https://corsproxy.io/?url=https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv'
 //fileUrl = `/data/subset_data.csv`;
 ```
 
