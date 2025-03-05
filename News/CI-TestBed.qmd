@@ -3,21 +3,24 @@ title: "Carbon-I Testbed for the NASA's ESE call"
 description: "Our journey for a satellite mission to track trace gases at 30-300m resolution"
 author: "Sharmila Padmanabhan"
 date: "03/03/2025"
-image: "https://carbon-i.github.io/img/Logo-Black2.png"
+image: "https://carbon-i.github.io/img/citb_r2d2.jpg"
 categories:
-  - Greenhouse Gases
+  - Hardware prototype
   - Spectroscopy
   - Satellite mission
-  - Remote Sensing
+  - Trace Gases
 ---
 
 ## Carbon-I Testbed (CITB)
-![](img/citb_r2d2.jpg)
 
-The Carbon-I Test Bed (CITB) is a cutting-edge optomechanical imaging spectrometer developed at JPL/Caltech. It serves as a proof of concept for high-resolution atmospheric gas detection, particularly for CH₄, CO₂ and CO emissions. The spectrometer was developed on an aggressive schedule (October to February), leveraging additive manufacturing (3D printing) for key structural components. 
+![](https://carbon-i.github.io/img/citb_r2d2.jpg)
 
-## Key Features & Innovations 
-1. Optical System: Includes a Dyson lens, a silicon-on-insulator slit, and a CHROMA-D 3072 x 512 pixel detector, offering 0.7 nm/pixel spectral resolution over 2040–2380 nm. 2.Largest JPL Grating: A blazed concave grating (145mm OD) made of N-BK7 substrate, the largest ever used in a JPL instrument. 3. 3D Printed Structure: Components like the spectrometer housing, grating mount, and strut fittings were manufactured from Al 6061 and Ti 6Al 4V, making it the largest metal 3D printed part at JPL. 4.Thermal Flexures: A sophisticated system of flexures and compliant components accommodates thermal mismatches, ensuring stability in space-like conditions. 
+The Carbon-I Test Bed (CITB) is a cutting-edge optomechanical imaging spectrometer developed at JPL/Caltech. It serves as a proof of concept for high-resolution atmospheric gas detection, particularly for CH₄, CO₂ and CO emissions. The spectrometer was developed on an aggressive schedule (October to February), leveraging additive manufacturing (3D printing) for key structural components.
 
-## Development & Status 
-1. Record Build Time: The team designed, built, and tested the spectrometer in under a month, achieving first measurements by January 30th, despite holidays and wildfires. 2. Current Status: The instrument is currently under vacuum and cooling to operational temperatures (240K for the spectrometer, 155K for the detector). Integration with PBIP (Polarization Beam Interference Platform) is underway for response function testing. This rapid development was possible due to the team’s deep expertise and the use of heritage designs and spare hardware. The CITB represents a breakthrough in fast, precise, and scalable spectrometer development, setting new standards for future missions. For a first example of a methane gas cell measured in warm conditions (not aligned) from our CITB instrument, please check out [TestBed methane spectrum](https://github.com/Carbon-I/CarbonI/blob/main/src/notebooks/TestBed.ipynb). More to follow in the near future...
+## Key Features & Innovations
+
+1.  Optical System: Includes a Dyson lens, a silicon-on-insulator slit, and a CHROMA-D 3072 x 512 pixel detector, offering 0.7 nm/pixel spectral resolution over 2040–2380 nm. 2.Largest JPL Grating: A blazed concave grating (145mm OD) made of N-BK7 substrate, the largest ever used in a JPL instrument. 3. 3D Printed Structure: Components like the spectrometer housing, grating mount, and strut fittings were manufactured from Al 6061 and Ti 6Al 4V, making it the largest metal 3D printed part at JPL. 4.Thermal Flexures: A sophisticated system of flexures and compliant components accommodates thermal mismatches, ensuring stability in space-like conditions.
+
+## Development & Status
+
+1.  Record Build Time: The team designed, built, and tested the spectrometer in under a month, achieving first measurements by January 30th, despite holidays and wildfires. 2. Current Status: The instrument is currently under vacuum and cooling to operational temperatures (240K for the spectrometer, 155K for the detector). Integration with PBIP (Polarization Beam Interference Platform) is underway for response function testing. This rapid development was possible due to the team’s deep expertise and the use of heritage designs and spare hardware. The CITB represents a breakthrough in fast, precise, and scalable spectrometer development, setting new standards for future missions. For a first example of a methane gas cell measured in warm conditions (not aligned) from our CITB instrument, please check out [TestBed methane spectrum](https://github.com/Carbon-I/CarbonI/blob/main/src/notebooks/TestBed.ipynb). More to follow in the near future...
