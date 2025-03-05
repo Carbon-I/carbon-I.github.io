@@ -32,9 +32,9 @@ categories:
 
 ## Development & Current Status
 - **Record Build Time**  
-  Final alignment and first light were reached in under a month, a pace enabled by heritage designs, in-house spare hardware, and deep technical expertise.
+  Initial alignment (warm) and first light were reached in under a month, a pace enabled by heritage designs, in-house spare hardware, and deep technical expertise.
 
 - **Present Work**  
-  The CITB is under vacuum, cooling to **240 K** (spectrometer) and **155 K** (detector). Integration with PBIP (Polarization Beam Interference Platform) is ongoing to refine the instrument’s response function.
+  The CITB is under vacuum, cooling to **240 K** (spectrometer) and **155 K** (detector). Integration with the PBIP (Penta Beam Injection Platform) is ongoing to refine the instrument’s response function.
 
-This **fast, precise, and scalable** spectrometer validates the feasibility of Dyson-based imaging spectrometers at high spectral resolution. For example results—including a CH₄ gas-cell spectrum measured under warm, pre-aligned conditions—see [this notebook](https://github.com/Carbon-I/CarbonI/blob/main/src/notebooks/TestBed.ipynb). Additional tests are planned, underscoring the CITB’s role as a **cornerstone** for next-generation space-based greenhouse gas monitoring.
+This **fast, precise, and scalable** spectrometer validates the feasibility of Dyson-based imaging spectrometers at high spectral resolution. For example results—including a CH₄ gas-cell spectrum measured under warm conditions with initial alignment—see [this notebook](https://github.com/Carbon-I/CarbonI/blob/main/src/notebooks/TestBed.ipynb). Additional tests are planned, underscoring the CITB’s role as a **cornerstone** for next-generation space-based greenhouse gas monitoring and as a risk reduction exercise towards the space-borne version.
