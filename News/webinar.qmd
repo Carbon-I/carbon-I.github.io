@@ -11,21 +11,24 @@ categories:
   - Webinar
 ---
 
+![](https://carbon-i.github.io/img/Logo-Black2.png)
 ## Join the Carbon-I mission webinar series: Explore the future of greenhouse gas observations
+
 Explore the Carbon-I mission, designed to improve our understanding of Earth's carbon dynamics. This webinar series offers a unique opportunity to learn about the mission's objectives, technology, and expected impact on climate science.
 
 ## Who should attend?
+
 This webinar series is designed for scientists, researchers, policymakers, and anyone interested in learning about the Carbon-I mission. We value your input—help us shape future webinars by sharing your interests through this [brief survey.](https://docs.google.com/forms/d/e/1FAIpQLSfpWZJYNxlwxFoj0Nd0GRf-Y1_CcZwRnlp3GKMW5JtzicmJxw/viewform?pli=1)
 
 ## Upcoming webinars
 
-**March 13, 2025 | 9-10 AM PST**
+**March 13, 2025 \| 9-10 AM PST**
 
 Carbon-I: A NASA Earth System Explorer Mission concept for Greenhouse Gas Observations
 
-Join Christian Frankenberg and Anna Michalak as they provide an in-depth overview of Carbon Investigation (Carbon-I), a NASA Earth System Explorer Mission concept focused on greenhouse gas observations. They will discuss the mission's scientific objectives, technical approach, and its significance for carbon cycle science and the NASA Decadal Survey. 
+Join Christian Frankenberg and Anna Michalak as they provide an in-depth overview of Carbon Investigation (Carbon-I), a NASA Earth System Explorer Mission concept focused on greenhouse gas observations. They will discuss the mission's scientific objectives, technical approach, and its significance for carbon cycle science and the NASA Decadal Survey.
 
-This webinar is intended for a broad audience, with a particular focus on those interested in greenhouse gas observations and carbon dynamics. 
+This webinar is intended for a broad audience, with a particular focus on those interested in greenhouse gas observations and carbon dynamics.
 
 [Register here](https://events.gcc.teams.microsoft.com/event/ce0ebe70-ef73-4bd8-a683-1f633a39bfd1@545921e0-10ef-4398-8713-9832ac563dad)
 
