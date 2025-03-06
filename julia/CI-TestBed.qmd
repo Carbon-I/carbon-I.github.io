@@ -18,23 +18,25 @@ categories:
 **The Carbon-I Test Bed (CITB)** is a high-resolution optomechanical imaging spectrometer built at JPL/Caltech as a rapid prototype and proof of concept for advanced atmospheric gas detection of **CH₄, CO₂, and CO**. Despite an aggressive development timeline—October to February—the team achieved first measurements by January 30, leveraging **additive manufacturing** for critical structural components.
 
 ## Key Features
-1. **Optical System**  
-   A Dyson lens, silicon-on-insulator slit, and a 3072×512 CHROMA-D detector work together to deliver **0.7 nm/pixel** sampling in the **2040–2380 nm** spectral range.
 
-2. **Largest JPL Grating**  
-   A **145 mm diameter** concave, blazed grating made of N-BK7 is the largest ever used at JPL, enabling precise dispersion over the entire SWIR band.
+1.  **Optical System**\
+    A Dyson lens, silicon-on-insulator slit, and a 3072×512 CHROMA-D detector work together to deliver **0.7 nm/pixel** sampling in the **2040–2380 nm** spectral range.
 
-3. **3D Printed Structure**  
-   The spectrometer housing, grating mount, and strut fittings—printed from **Al 6061** and **Ti 6Al‑4V**—represent the largest metal 3D-printed parts at JPL, ensuring rapid iteration and reduced fabrication time.
+2.  **Largest JPL Grating**\
+    A **145 mm diameter** concave, blazed grating made of N-BK7 is the largest ever used at JPL, enabling precise dispersion over the entire SWIR band.
 
-4. **Thermal Flexures**  
-   Compliant flexures accommodate thermal mismatches under vacuum and cooling conditions, maintaining alignment for operational temperatures as low as **240 K** for the spectrometer and **155 K** for the detector.
+3.  **3D Printed Structure**\
+    The spectrometer housing, grating mount, and strut fittings—printed from **Al 6061** and **Ti 6Al‑4V**—represent the largest metal 3D-printed parts at JPL, ensuring rapid iteration and reduced fabrication time.
+
+4.  **Thermal Flexures**\
+    Compliant flexures accommodate thermal mismatches under vacuum and cooling conditions, maintaining alignment for operational temperatures as low as **240 K** for the spectrometer and **155 K** for the detector.
 
 ## Development & Current Status
-- **Record Build Time**  
-  Initial alignment (warm) and first light were reached in under a month, a pace enabled by heritage designs, in-house spare hardware, and deep technical expertise.
 
-- **Present Work**  
-  The CITB is under vacuum, cooling to **240 K** (spectrometer) and **155 K** (detector). Integration with the PBIP (Penta Beam Injection Platform) is ongoing to refine the instrument’s response function.
+-   **Record Build Time**\
+    Initial alignment (warm) and first light were reached in under a month, a pace enabled by heritage designs, in-house spare hardware, and deep technical expertise.
+
+-   **Present Work**\
+    The CITB is under vacuum, cooling to **240 K** (spectrometer) and **155 K** (detector). Integration with the PBIP (Penta Beam Injection Platform) is ongoing to refine the instrument’s response function.
 
 This **fast, precise, and scalable** spectrometer validates the feasibility of Dyson-based imaging spectrometers at high spectral resolution. For example results—including a CH₄ gas-cell spectrum measured under warm conditions with initial alignment—see [this notebook](https://github.com/Carbon-I/CarbonI/blob/main/src/notebooks/TestBed.ipynb). Additional tests are planned, underscoring the CITB’s role as a **cornerstone** for next-generation space-based greenhouse gas monitoring and as a risk reduction exercise towards the space-borne version.
