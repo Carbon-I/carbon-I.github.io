@@ -25,19 +25,19 @@ about:
       href: https://orcid.org/0000-0003-1100-7550
 ---
 
-David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California.  His work advances the theory and practice of imaging spectroscopy for remote sensing.  David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso].  He is currently the Instrument Scientist for NASA's EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration.  In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit].  David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT.
+David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing. David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso]. He is currently the Instrument Scientist for NASA's EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration. In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit]. David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT.
 
 ## Education
 
-- [PhD in Robotics]{.fw-bold} | Carnegie Mellon University, Pittsburgh, USA | 2003-2008
-- [MSc in Informatics]{.fw-bold} | University of Edinburgh, Scotland, UK  | 2001-2002  
+-   [PhD in Robotics]{.fw-bold} \| Carnegie Mellon University, Pittsburgh, USA \| 2003-2008
+-   [MSc in Informatics]{.fw-bold} \| University of Edinburgh, Scotland, UK \| 2001-2002
 
 ## Professional Experience
 
-- [2023-present:]{.fw-bold} Deputy Project Scientist, SBG-VSWIR Imaging Spectrometer Mission
-- [2020-present:]{.fw-bold} Adjunct Professor, Arizona State University
-- [2019-present:]{.fw-bold} Instrument Scientist, HVM3 on Lunar Trailblazer
-- [2018-present:]{.fw-bold} Instrument Scientist, EMIT Imaging Spectrometer Mission
-- [2016-present:]{.fw-bold} Investigation Scientist, AVIRIS Airborne Imaging Spectrometer
-- [2016-present:]{.fw-bold} Technical Group Lead, Imaging Spectroscopy Group at Jet Propulsion Laboratory
-- [2008-present:]{.fw-bold} Research Technologist, Jet Propulsion Laboratory\\
+-   [2023-present:]{.fw-bold} Deputy Project Scientist, SBG-VSWIR Imaging Spectrometer Mission
+-   [2020-present:]{.fw-bold} Adjunct Professor, Arizona State University
+-   [2019-present:]{.fw-bold} Instrument Scientist, HVM3 on Lunar Trailblazer
+-   [2018-present:]{.fw-bold} Instrument Scientist, EMIT Imaging Spectrometer Mission
+-   [2016-present:]{.fw-bold} Investigation Scientist, AVIRIS Airborne Imaging Spectrometer
+-   [2016-present:]{.fw-bold} Technical Group Lead, Imaging Spectroscopy Group at Jet Propulsion Laboratory
+-   [2008-present:]{.fw-bold} Research Technologist, Jet Propulsion Laboratory\\

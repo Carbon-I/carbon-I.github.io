@@ -4,7 +4,7 @@ started: "2020"
 image: /img/people/suniti.jpg
 subtitle: "Radiative transfer modeler"
 description: "JPL/Caltech"
-sortby: "3"
+sortby: "4"
 bibliography: ../../publications/sanghavi2024_doi.bib
 
 about:
