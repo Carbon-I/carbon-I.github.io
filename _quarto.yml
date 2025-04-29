@@ -10,9 +10,8 @@ website:
   google-analytics: "G-PE6RLP594L"
   favicon: img/ci_icon.png
   navbar:
-    logo: "/img/Logo-Black2.png"
-    background: transparent
-    left:
+    logo: "/img/Logo-White2.png"
+    right:
       - href: index.qmd
         text: Home
       - href: team.qmd
@@ -29,15 +28,25 @@ website:
             text: Clouds
       - href: news.qmd
         text: News
-    right:
       - icon: github
         href: https://github.com/Carbon-I/
         aria-label: GitHub
   page-footer:
+    border: false
     left: |
-      [![](/img/Caltech_Logo.png){fig-alt="Caltech" height=20px}](https://www.caltech.edu/) &nbsp;&nbsp;&nbsp;&nbsp;
-      [![](/img/Carnegie.svg){fig-alt="Carnegie" height=20px}](https://carnegiescience.edu/) &nbsp;&nbsp;&nbsp;&nbsp;
-      [![](/img/img_acmg_logo_seas.png){fig-alt="Harvard" height=20px}](https://eps.harvard.edu/)
+      ![](/img/caltech_logo_white.png) <br>
+      Lead Institution
+    center: |
+      ![](/img/jpl_logo.png) <br>
+      <p>Instrument and <br>
+      Mission Management</p> 
+      <div style="border: 0; border-top: 1px solid white; width: 100%; margin: 1rem auto;"></div>
+      <short style="font-size: .80rem"> © 2025 California Institute of Technology. All Rights Reserved.</short>
+    right: |
+      ![](/img/lockheed_logo.png)<br>
+      Spacecraft and <br>
+      Mission Operations
+
     #center:
     #  - text: "About"
     #    href: about.qmd
@@ -48,28 +57,28 @@ website:
     #  - text: "Trademark"
     #    href: trademark.qmd
 
-    right:
-      - text: "{{< ai google-scholar >}} Google Scholar"
-        href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
-      - icon: twitter
-        href: https://twitter.com/chr_fronge
-        aria-label: PI Twitter
-      - icon: github
-        href: https://github.com/RemoteSensingTools/
-        aria-label: Quarto GitHub
+    # right:
+    #   - text: "{{< ai google-scholar >}} Google Scholar"
+    #     href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
+    #   - icon: twitter
+    #     href: https://twitter.com/chr_fronge
+    #     aria-label: PI Twitter
+    #   - icon: github
+    #     href: https://github.com/RemoteSensingTools/
+    #     aria-label: Quarto GitHub
 
 format:
   html:
+    include-after-body: includes/custom-footer-banner.html
+    mainfont: "Helvetica"
     theme:
-      - cosmo
+      - cosmos
       - styles/custom.scss
     toc: true
     css: styles/custom.css
-    page-layout: full
+    page-layout: custom
     smooth-scroll: true
     grid:
       sidebar-width: 0px
       body-width: 1500px
       margin-width: 150px
-
-editor: visual

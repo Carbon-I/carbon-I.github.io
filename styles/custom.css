@@ -1,164 +1,431 @@
+h1{
+  font-size: 2.5rem; 
+}
+
+h2{
+  font-size: 2rem; 
+}
+
+p{
+  font-size: 1.125rem; 
+}
+
+ol{
+  font-size: 1.125rem; 
+}
+
+ul{
+  font-size: 1.125rem; 
+}
+
 .banner-text {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  /* ...other styling... */
 }
 
-/* Style for navbar links on hover */
-.navbar a:hover {
-  animation-duration: 600ms;
-  animation-name: line-expand;
-  border-bottom: 1px solid #000; /* Adjust color and thickness to your preference */
+/* Navbar */
+.navbar {
+  background-color: black; 
 }
 
-/* Style for active navbar link */
-.navbar a.active {
-  color: #000;
-  border-bottom: 2px solid #FF6C0C; /* Adjust color and thickness to your preference */
+.navbar-logo {
+  width: 190px; 
+  padding-left: 20px; 
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  color: #FF6C0C;
-}
-
-.navbar-list li:hover .dropdown {
-  display: block;
+.navbar a{
   color: white;
-  text-decoration: none;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar .nav-link.active{
+  border-bottom: 2px solid lightblue; /*Underline if active */
+}
+
+.navbar a:hover, .dropdown-toggle.show{
+  color: lightblue !important; 
+}
+
+/* Ensure hover doesn't turn white */
+.dropdown-menu .dropdown-item {
+  background-color: black !important;
+  color: white;
+}
+
+.lb-caption {
+  position: absolute;
+  left: -250px; /* Adjust based on your layout and description length */
+  width: 200px; /* Adjust as necessary */
+  text-align: left;
+}
+
+.content-container {
+  padding-left: -1em;
+  padding-right: 0em;
+}
+
+.top-story {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-bottom: 1em; 
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.top-story img {
+  height: 100%;
+  object-fit: cover;
 }
 
 
-.navbar a:hover, .navbar a:active {
+.top-story-text {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0;
+}
+
+.top-story-text h2 {
+  margin-top: 1.5rem;
+}
+
+.top-story-img p {
+  margin-bottom: 0;
+}
+
+.header-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header-banner .header-image {
+  position: absolute;
+  display: none;
+  height: auto;
+}
+
+.header-text p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.header-block {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1.8em; 
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+.caltech-background {
+  background-color: #ff6d0c6a;
+}
+
+/* Footer */
+.footer-banner {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+
+.footer-banner img{
+  margin: 0 auto;      /* centers the image */
+  padding: 0;
+  width: 200px;
+}
+
+.footer-banner p{
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.footer{
+  background-color: #2A4DA0;
+}
+.nav-footer{
+  padding-bottom: 4rem;
+  color: white;
+  background-color: #2A4DA0;
+  text-align: center;
+  height: auto; 
+  max-width: 1440px; /* Make it container size */
+  margin: 0 auto; 
+}
+
+.nav-footer-left p,
+.nav-footer-center p,
+.nav-footer-right p{
+  text-align: center;
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+}
+
+.nav-footer-left img, .nav-footer-center img, .nav-footer-right img{
+  height: 50px; 
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.page-layout-custom {
+  margin: 0 auto;  /* centers the page layout. might not be needed if using containers */
+}
+
+
+/* Hero Section, applies to all heroes */
+.hero {
+  position: relative;
+}
+
+.hero::before{
+  content: "";
+  background: 
+  linear-gradient( /* gradient starting from bottom */
+    to top, 
+    rgba(0, 0, 0, 0.9) 0%,   /* darkest at the very bottom */
+    rgba(0, 0, 0, 0.4) 30%,  /* soft blend upward */
+    rgba(0, 0, 0, 0) 60%     /* fully transparent above */
+  );
+  z-index: 2;
+  position: absolute;
+  inset: 0; /* fills entire space of the hero */
+}
+
+.hero > * { /* ensures hero content is above gradient */
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1{
+  font-size: 3rem;
+}
+
+/* Big Hero */
+.hero-home{
+  background: url('../img/CI_cover.jpeg') center center / cover no-repeat;
+  height: 70vh; 
+}
+
+/* Small Hero */
+.hero-team{
+  background: url('../img/CI_team.png') center center / cover no-repeat;
+  height: 40vh; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+}
+
+.hero-about{
+  background: url('../img/CI_team.png') center center / cover no-repeat;
+  height: 40vh; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+}
+
+/* Homepage */
+.section-reveal{ 
+  opacity: 0;
+  transform: translateY(120px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* a y transition when scrolling */
+}
+
+.section-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission-image-frame{
+  width: 100%;           
+  max-width: 400px;    
+  border-radius: 50%; /* circular frame */
+  aspect-ratio: 1 / 1; /* retain Aspect Ratio */
+  display: block;
+  margin: 0 auto;
+
+}
+
+/* Team Page */
+
+/* target images in grid items */
+#listing-science-team .g-col-1 img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;    
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+#listing-coll-team .g-col-1 img {
+  height: 180px !important;
+  width: 180px;    
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.quarto-listing .g-col-1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card{
+  border: none !important;
+  box-shadow: none  !important;
+  background: transparent  !important;
+  
+}
+
+.card-title {
+  font-weight: 700;
+  padding-bottom: 0.25rem;
+  font-size: 1.2rem !important;
+}
+
+.card-subtitle,
+.card-text {
+  font-size: 0.95rem !important;
+  color: #333;
+  white-space: normal;
+  text-align: center !important;
+}
+
+
+/* About Page */
+
+.team-header h2{
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: none !important;
+  margin-bottom: 4rem;
+}
+
+.team-header a{
+  text-decoration: none !important;
+}
+
+.team-header h2 strong:first-child {
+  color: #1A3482; /* TEAM */
+}
+
+.team-header h2 strong:last-child {
+  color: #7BADE2; /* Name */
+}
+
+#title-block-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #C8C7C7;
+  padding-bottom: 6rem;
+}
+
+.quarto-title {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  gap: 0.5rem;
+}
+
+.about-entity .title{
+  font-size: 2.25rem; 
+}
+
+.about-entity .subtitle{
+  font-size: 1.4rem; 
+}
+
+.about-links{
+  gap: 1.25rem !important; /* space between icons */
+}
+
+.about-link{
+  display: inline-flex;
+  align-items: center; 
+  gap: 0.5rem !important; /* space between icon and text */
+  padding: 0.3rem 1rem !important; /* padding around icon and text */
+  border: 3px solid black !important;
+  border-radius: 999px !important; 
   color: black !important;
+  transition: all 0.3s ease;
+  transform: translate(0, 0); 
 }
 
-  .lb-caption {
-    position: absolute;
-    left: -250px; /* Adjust based on your layout and description length */
-    width: 200px; /* Adjust as necessary */
-    text-align: left;
-  }
+.about-link:hover{
+  background-color: #EEF4F6;
+  color: #2A4DA0 !important;
+  border: 3.3px solid #2A4DA0 !important;
+  transform: translate(0.5px, -1px); /* slight animation up and to the right */
+}
 
-  
-  .shadow-effect {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adjust as needed */
-  }
-/* Fixed size for image previews */
-.grid-item img {
-    width: 100%;
-    height: auto;
-    max-width: 1500px; /* Adjust as needed */
-    max-height: 200px;
-    object-fit: cover; /* Ensures the image covers the area */
-  }
-  
-  /* Zoom effect on hover */
-  .grid-item img:hover {
-    transform: scale(1.1); /* Adjust zoom level as needed */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* Adjust the spacing between images */
-  }
-  
-  .grid-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc; /* Optional border */
-  }
-  
-  .footer {
-    background-color: #FF6C0C; /* Replace with your desired color */
-    opacity: 0.8;
-    /* Other styling properties for the footer */
-  }
+/* for standard icons */
+.about-link i {
+  font-size: 1.25rem; /* standard icons use font-size, not height + width */
+  line-height: 1;
+}
 
-  .navbar {
-    background-color: whitesmoke; /* Replace with your desired color */
-    /* Other styling properties as needed */
-  }
+/* for Iconify icons */
+.about-link iconify-icon {
+  width: 1.25rem;
+  margin-right: 0.5rem; /* space between icon and text */
+}
 
-  .navbar-logo {
-    width: 190px; /* Adjust the height as needed */
-    
-  }
-  
-  .content-container {
-    padding-left: -1em;
-    padding-right: 0em;
-  }
-  
-  .top-story {
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-bottom: 1em; 
-    box-sizing: border-box;
-    height: auto;
-    display: flex;
-    align-items: center;
-  }
-  
-  .top-story img {
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  
-  .top-story-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 0;
-  }
-  
-  .top-story-text h2 {
-    margin-top: 1.5rem;
-  }
-  
-  .top-story-img p {
-    margin-bottom: 0;
-  }
-  
-  .header-banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .header-banner .header-image {
-    position: absolute;
-    display: none;
-    height: auto;
-  }
-  
-  .header-text p {
-    text-align: center;
-    margin-bottom: 0;
-  }
-  
-  .header-block {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-top: 1em;
-    padding-bottom: 1.8em; 
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-  }
+/* for text next to icons */
+.about-link-text{
+  font-size: 1.25rem;
+}
 
-  .caltech-background {
-    background-color: #ff6d0c6a;
-  }
+.about-contents{
+  padding-top: 3rem;
+}
 
-  .fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
+.about-contents #education{
+  margin-top: 6rem !important; /* space between sections */
+}
+.about-contents #professional-experience{
+  margin-top: 6rem !important; /* space between sections */
+  margin-bottom: 6rem !important; 
+}
   
-  .fade-in.show {
-    opacity: 1;
-  }
-  
+.about-contents a{ /* about content links are blue */
+  color: #0645ad !important;               
+  text-decoration: underline !important;   
+}
+
+#references a{ /* references links are orange */
+  color: #FF6C0C !important;
+}
+
+#references .csl-entry{
+  margin-bottom: 1rem !important; /* space between references */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
