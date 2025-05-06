@@ -15,8 +15,9 @@ format:
 
 :::: {.hero .hero-home .d-flex .align-items-end .justify-content-start .text-white .text-start}
 ::: {.container .mb-5}
-# [**CARBON-I**]{style="font-size:3rem;"}
-[**The Carbon Investigation for High-Resolution Mapping of Obscured Greenhouse Gases**]{style="font-size:1.25rem;"}
+![](/img/Logo-White2.png){.img-fluid style="max-width:35rem;"} 
+
+[**The Carbon Investigation for High-Resolution Mapping of Obscured Greenhouse Gases**]{.ps-2 style="font-size:1.25rem;"}
 :::
 ::::
 

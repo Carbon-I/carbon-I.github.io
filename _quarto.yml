@@ -10,7 +10,7 @@ website:
   google-analytics: "G-PE6RLP594L"
   favicon: img/ci_icon.png
   navbar:
-    logo: "/img/Logo-White.png"
+    logo: "/img/Logo-White2.png"
     right:
       - href: index.qmd
         text: Home
