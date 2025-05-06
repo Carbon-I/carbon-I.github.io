@@ -17,14 +17,13 @@ format:
 ::: {.container .mb-5}
 ![](/img/Logo-White2.png){.img-fluid style="max-width:35rem;"} 
 
-[**The Carbon Investigation for High-Resolution Mapping of Obscured Greenhouse Gases**]{.ps-2 style="font-size:1.25rem;"}
+[**Closing tropical data gaps to resolve global carbon-budget uncertainties**]{.ps-2 style="font-size:1.25rem;"}
 :::
 ::::
 
 ::: {.container .text-start .mx-auto .my-5 .w-50}
 A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call. <br> <br> <br>
 
-**Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments.**
 :::
 
 
@@ -33,9 +32,12 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 ::: {.g-col-6 .justify-content-center}
 # **Carbon-I Will:**
 
--   Collect 1000 times more data in the tropics by observing between clouds
+-   provide global, monthly coverage for a complete carbon-cycle view
 
--   Differentiate the sources and composition of emissions at the city block level anywhere
+-   separate point sources from regional fluxes using fine spatial resolution plus multi-species data
+
+-   deliver actionable information to decision-makers and industry.
+
 :::
 
 ::: {.g-col-6 .align-items-end} 
@@ -47,11 +49,12 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 ::: {.g-col-6 .order-md-2 }
 # **Objectives:**
 
-1. Identify, characterize and quantify hotspots of CH4 and CO2 emissions across the globe
+1. Identify, characterize and quantify hotspots of CH<sub>4</sub> and CO<sub>2</sub> emissions across the globe
 
-2. Quantify global CH4 and CO2, and CO monthly fluxes at unprecedented 12-100km resolution
+2. Identify, characterize, and quantify hotspots of CH<sub>4</sub>, CO<sub>2</sub>, and CO emissions across the globe
 
-3. Attribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes
+3. Attribute and quantify the processes driving natural and anthropogenic fluxes
+
 :::
 
 ::: {.g-col-6 .order-md-1 .justify-content-center}
@@ -64,11 +67,17 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 ::: {.g-col-6 .justify-content-center}
 # **Mission Overview:**
 
--   Global mode: <400m sampling of land and coastal oceans monthly
+Carbon-I is the first to pair land-imaging spatial detail with high-resolution atmospheric spectra, providing unique insights into the atmosphere and land surface.
 
--   Target mode: <50m sampling of key regions (95kmx95km; over 2 million acres)
+-  Measures CH<sub>4</sub>, CO<sub>2</sub>, CO plus tracers via SWIR absorption spectroscopy.
 
--   Absorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers
+-  Maps land and coastal oceans monthly at < 400m, peering between clouds.
+
+-  Zooms to 100 × 100 km targets at < 50m for regions with highest uncertainties.
+
+-  More than just gases: Surface-mapping unlocks novel mineral and vegetation data, delivering new insights for the public, private, and non-profit sectors.
+
+
 :::
 
 ::: {.g-col-6 .align-items-end}
