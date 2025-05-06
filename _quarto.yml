@@ -10,7 +10,7 @@ website:
   google-analytics: "G-PE6RLP594L"
   favicon: img/ci_icon.png
   navbar:
-    logo: "/img/Logo-White2.png"
+    logo: "/img/Logo-White.png"
     right:
       - href: index.qmd
         text: Home
@@ -72,7 +72,7 @@ format:
     include-after-body: includes/custom-footer-banner.html
     mainfont: "Helvetica"
     theme:
-      - cosmos
+      - default
       - styles/custom.scss
     toc: true
     css: styles/custom.css

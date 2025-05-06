@@ -14,7 +14,7 @@ format:
 ---
 
 :::: {.hero .hero-home .d-flex .align-items-end .justify-content-start .text-white .text-start}
-::: {.container .mb-3}
+::: {.container .mb-5}
 # [**CARBON-I**]{style="font-size:3rem;"}
 [**The Carbon Investigation for High-Resolution Mapping of Obscured Greenhouse Gases**]{style="font-size:1.25rem;"}
 :::
@@ -27,10 +27,9 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 :::
 
 
-:::::: {.wrapper style="background-color: #EEF4F6;"}
-::::: {.container .border-bottom .py-5} 
-::::{.grid .section-reveal}
-::: {.g-col-6}
+::::: {.wrapper style="background-color: #EEF4F6;"}
+::::{.container .grid .mission .border-bottom .py-5}
+::: {.g-col-6 .justify-content-center}
 # **Carbon-I Will:**
 
 -   Collect 1000 times more data in the tropics by observing between clouds
@@ -38,34 +37,31 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 -   Differentiate the sources and composition of emissions at the city block level anywhere
 :::
 
-::: {.g-col-6 .text-center} 
+::: {.g-col-6 .align-items-end} 
 ![](img/Mission_1.png){.img-fluid .mission-image-frame}
 :::
 ::::
-:::::
 
-::::: {.container .border-bottom .py-5}
-::::{.grid .section-reveal}
-::: {.g-col-6 .order-md-2}
-# **Objectives**
+::::{.grid .mission .container .border-bottom .py-5}
+::: {.g-col-6 .order-md-2 }
+# **Objectives:**
 
-1.  Identify hotspots of CH4 and CO2
+1. Identify, characterize and quantify hotspots of CH4 and CO2 emissions across the globe
 
-2.  Quantify fluxes monthly…
+2. Quantify global CH4 and CO2, and CO monthly fluxes at unprecedented 12-100km resolution
 
-3.  Attribute anthropogenic sources
+3. Attribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes
 :::
 
-::: {.g-col-6 .order-md-1 .text-center}
+::: {.g-col-6 .order-md-1 .justify-content-center}
 ![](img/Mission_2.png){.img-fluid .mission-image-frame} 
 :::
 ::::
-:::::
 
-::::: {.container .border-bottom .py-5} 
-::::{.grid .section-reveal}
-::: {.g-col-6}
-# **Mission Overview**
+
+::::{.grid .mission .container .py-5}
+::: {.g-col-6 .justify-content-center}
+# **Mission Overview:**
 
 -   Global mode: <400m sampling of land and coastal oceans monthly
 
@@ -74,35 +70,42 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 -   Absorption spectroscopy to measure CH4, CO2, CO and relevant chemical tracers
 :::
 
-::: {.g-col-6 .text-center}
+::: {.g-col-6 .align-items-end}
 ![](img/mission_3.png){.img-fluid .mission-image-frame}
 :::
 ::::
-:::::
 
-::::::
+:::::
 
 <!-- Transition for section content-->
 
 ```{=html}
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    },
-    {
-      threshold: 0.2 // when 0.2 of the content appears in viewport, fire callback
-    }
-  );
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  {
+    threshold: 0.2 // when 0.2 of the content appears in viewport, fire callback
+  }
+);
 
-  document.querySelectorAll('.section-reveal').forEach(el => { 
-    observer.observe(el);
-  });
+document.querySelectorAll('.mission').forEach(el => { 
+  observer.observe(el);
+});
+
+const nav = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    nav.classList.add('compact');
+  } else {
+    nav.classList.remove('compact');
+  }
 });
 </script>
 ```
