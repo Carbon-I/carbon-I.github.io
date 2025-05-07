@@ -14,7 +14,7 @@ about:
   image-shape: round
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://https://scholar.google.com/citations?user=NDg0XsIAAAAJ&hl=en
+      href: https://scholar.google.com/citations?user=NDg0XsIAAAAJ
     - icon: mortarboard
       text: ResearchID
       href: https://www.webofscience.com/wos/author/record/KBA-4622-2024
