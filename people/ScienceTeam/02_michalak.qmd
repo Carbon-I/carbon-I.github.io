@@ -22,6 +22,20 @@ nocite: |
   @*
 ---
 
+:::: {.hero .hero-about}
+::: {.container}
+# **OUR TEAM**
+:::
+::::
+
+::::: {.container} 
+
+:::: {.team-header}
+## [**Science Team** | **Anna Michalak**](../../team.qmd#science-team)
+
+:::: {#hero-heading}
+::: {.about-contents .px-5} 
+
 Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality.
 
 ## Education
@@ -36,3 +50,44 @@ Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie 
 - [2011-present:]{.fw-bold} 	Professor (2016 - ) and Associate Professor (2011-2016), Stanford 
 - [2004-2011:]{.fw-bold} 	Associate Professor (2010-2011) and Assistant Professor (2004-2010), University of Michigan 
 - [2003- 2004:]{.fw-bold}	NOAA Climate & Global Change (C&GC) Fellow, NOAA\\
+
+:::
+::::
+:::::
+
+:::::{.wrapper style="background-color:#F9F5F1"}
+:::{.container .px-5}
+## References {.border-0}
+
+::: {#refs .pb-5 .pt-2}
+:::
+::::
+:::::
+
+```{=html}
+<script>
+const titleBlock = document.querySelector(".quarto-title-block");
+const image = document.querySelector(".about-image");
+
+const title = document.querySelector('.quarto-title');
+const logos = document.querySelector('.about-links');
+
+//place images into titleBlock area
+if (titleBlock && image) {
+  titleBlock.insertBefore(image, titleBlock.firstChild);
+}
+
+//place logos into title area
+if (title && logos) {
+  title.appendChild(logos);
+}
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    nav.classList.add('compact');
+  } else {
+    nav.classList.remove('compact');
+  }
+});
+</script>
+```
