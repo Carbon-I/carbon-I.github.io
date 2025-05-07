@@ -41,7 +41,7 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 :::
 
 ::: {.g-col-6 .align-items-end} 
-![](img/Mission_1.png){.img-fluid .mission-image-frame}
+![](img/CarbonI-anim_whiteBG_small.gif){.img-fluid .mission-image-frame}
 :::
 ::::
 
@@ -49,16 +49,17 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 ::: {.g-col-6 .order-md-2 }
 # **Objectives:**
 
-1. Identify, characterize and quantify hotspots of CH<sub>4</sub> and CO<sub>2</sub> emissions across the globe
 
-2. Identify, characterize, and quantify hotspots of CH<sub>4</sub>, CO<sub>2</sub>, and CO emissions across the globe
+1. Identify, characterize, and quantify hotspots of CH<sub>4</sub>, CO<sub>2</sub>, and CO emissions across the globe
+
+2. Quantify global CH<sub>4</sub>, CO<sub>2</sub>, and CO monthly fluxes at unprecedented 12–100 km resolution
 
 3. Attribute and quantify the processes driving natural and anthropogenic fluxes
 
 :::
 
 ::: {.g-col-6 .order-md-1 .justify-content-center}
-![](img/Mission_2.png){.img-fluid .mission-image-frame} 
+![](img/tCH4_CI-18383.png){.img-fluid .mission-image-frame} 
 :::
 ::::
 
@@ -81,7 +82,7 @@ Carbon-I is the first to pair land-imaging spatial detail with high-resolution a
 :::
 
 ::: {.g-col-6 .align-items-end}
-![](img/mission_3.png){.img-fluid .mission-image-frame}
+![](img/Target.jpg){.img-fluid .mission-image-frame}
 :::
 ::::
 

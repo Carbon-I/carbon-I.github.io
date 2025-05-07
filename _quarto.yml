@@ -70,7 +70,7 @@ website:
 format:
   html:
     include-after-body: includes/custom-footer-banner.html
-    mainfont: "Helvetica"
+    mainfont: "Roboto"
     theme:
       - default
       - styles/custom.scss
