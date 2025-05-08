@@ -1,6 +1,8 @@
 ---
 comments: false
 page-layout: full
+toc: false
+sidebar: false
 format:
   html:
     css: styles/other-background.css  
@@ -9,9 +11,8 @@ format:
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-    lightbox: auto
 ---
-![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=60%}<br>
+![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=30%}<br>
 
 Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources. We will address specific weaknesses of the current program of record.
 
@@ -24,13 +25,13 @@ Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales a
 
 ::: grid
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### Clouds in the humid tropics are the primary reason for low data yields in current GHG missions
+### Clouds in the humid tropics are the primary reason for low data yields in the Program of Record
 With its fine spatial sampling, Carbon-I can peek through cloud gaps,
 dramatically increasing data availability in regions with the largest carbon
-fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaler than 1km, dramatically reducing the data yield of current greenhouse gas missions. Read more about clouds in the tropics in our [GRL paper](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108791). 
+fluxes and greatest uncertainties. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaller than 1km, dramatically reducing the data yield of current greenhouse gas missions. Read more about clouds in the tropics in our [GRL paper](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108791). 
 :::
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/Fig1_zoom.png)
+![](/img/CI-022_Fills-data-holes_2025-04-12.png)
 :::
 :::
 
@@ -47,13 +48,13 @@ fluxes, greatest uncertainties and climate feedback. Frequent shallow cumulus cl
 
 ::: grid
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/Fig3_yields.png)
+![](/img/CI-024_poorly_obs_by_POR_2025-04-10.png)
 :::
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
 ### Clouds in the humid tropics are the primary reason for low data yields in current GHG missions
 With its fine spatial sampling, Carbon-I can peek through cloud gaps,
 dramatically increasing data availability in regions with the largest carbon
-fluxes, greatest uncertainties and climate feedback  
+fluxes and greatest uncertainties. 
 :::
 
 :::
@@ -80,7 +81,7 @@ wrong. Carbon-I will use the global and target modes in concert to
 identify and focus on local verified sources driving global fluxes.
 :::
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/Fig4_methane.png)
+![](/img/CI-025_global_maps_2025-04-13.png)
 :::
 :::
 
@@ -97,7 +98,7 @@ identify and focus on local verified sources driving global fluxes.
 
 ::: grid
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/Fig5_plumes.png)
+![](/img/CI-027_Four_Regions_2025-04-14.png)
 :::
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
 ### High spatial resolution enables plume mapping, allowing direct attribution
@@ -112,6 +113,37 @@ on the right) enables applications and field campaigns (bottom left).
 :::
 :::
 
+---
 
+## Global and Target Modes tackle fluxes at various spatial scales
+
+::: {.content-container}
+::: {.top-story .caltech-background}
+
+
+::: grid
+::: {.g-col-12 .g-col-lg-8 .top-story-img}
+![](/img/CI-003_element-1c_Global_Data_Disk_2025-04-13.png)
+:::
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
+### Global Mode
+BlaBla
+:::
+
+:::
+
+
+::: grid
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
+### Target Mode
+BlaBla
+:::
+::: {.g-col-12 .g-col-lg-8 .top-story-img}
+![](/img/CI-003_element-3c_Target_Data_Disk_2025-04-13.png)
+:::
+:::
+
+:::
+:::
 
 
