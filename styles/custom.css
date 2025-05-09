@@ -121,11 +121,13 @@ ul{
 }
 
 /* Hero Section, applies to all heroes */
-.hero {
+
+.hero-gradient > * { /* ensures hero content is above gradient */
   position: relative;
+  z-index: 3;
 }
 
-.hero::before{
+.hero-gradient::before{
   content: "";
   background: 
   linear-gradient( /* gradient starting from bottom */
@@ -139,13 +141,18 @@ ul{
   inset: 0; /* fills entire space of the hero */
 }
 
-.hero > * { /* ensures hero content is above gradient */
-  position: relative;
-  z-index: 3;
-}
-
 .hero h1{
   font-size: 3rem;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  padding: 1rem;
 }
 
 /* Big Hero */
@@ -158,30 +165,24 @@ ul{
 .hero-team{
   background: url('../img/CI_team.png') center center / cover no-repeat;
   height: 40vh; 
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  color: white;
-  text-align: left;
-  padding: 1rem;
+
 }
 
 .hero-about{
   background: url('../img/CI_team.png') center center / cover no-repeat;
   height: 40vh; 
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  color: white;
-  text-align: left;
-  padding: 1rem;
+}
+
+.hero-science{
+  background: url('../img/science_banner2.png') center center / cover no-repeat;
+  height: 40vh; 
+  width: 100%;
 }
 
 /* Homepage */
 .mission{ 
   opacity: 0;
   transform: translateY(120px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* a y transition when scrolling */
 }
 
 .mission .g-col-6{ 
@@ -194,6 +195,10 @@ ul{
   transform: translateY(0);
 }
 
+.mission.animate{
+  transition: all 1.2s ease-out;
+}
+
 .mission-image-frame{
   width: 100%;           
   max-width: 450px;    
@@ -202,8 +207,37 @@ ul{
 
 }
 
-/* Team Page */
+/* Science Page */
 
+.science .g-col-6{ 
+  display: flex; 
+  flex-direction: column;
+}
+
+.science{ 
+  opacity: 0;
+  transform: translateX(-120px);
+}
+
+.science:nth-of-type(2n) {
+  transform: translateX(120px); 
+}
+
+.science.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.science.animate{
+  transition: all 1.2s ease-out;
+}
+
+.science-image-frame{
+  width: 100%; 
+  max-width: 30rem;   
+  padding: 2rem;
+  background-color: #F9FAEF;       
+}
 
 /* About Page */
 

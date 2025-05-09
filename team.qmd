@@ -27,7 +27,7 @@ listing:
   
 ---
 
-:::: {.hero .hero-team}
+:::: {.hero .hero-gradient .hero-team}
 ::: {.container}
 # **OUR TEAM**
 :::

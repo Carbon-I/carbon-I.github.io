@@ -1,6 +1,6 @@
 ---
 comments: false
-page-layout: full
+page-layout: custom
 toc: false
 sidebar: false
 format:
@@ -12,138 +12,101 @@ format:
     smooth-scroll: true
     fig-responsive: true
 ---
-![](/img/Logo-Black.png){fig-alt="A drawing of an elephant." fig-align="left" width=30%}<br>
 
-Carbon-I will quantify greenhouse gas (GHG) fluxes from point to global scales and deliver actionable data on emission sources. We will address specific weaknesses of the current program of record.
-
-
-## Clouds pose a major problem for observing the tropics
-
-::: {.content-container}
-::: {.top-story .caltech-background}
-
-
-::: grid
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### Clouds in the humid tropics are the primary reason for low data yields in the Program of Record
-With its fine spatial sampling, Carbon-I can peek through cloud gaps,
-dramatically increasing data availability in regions with the largest carbon
-fluxes and greatest uncertainties. Frequent shallow cumulus clouds in the tropics have cloud gaps that are smaller than 1km, dramatically reducing the data yield of current greenhouse gas missions. Read more about clouds in the tropics in our [GRL paper](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108791). 
+:::: {.hero .hero-science}
+::: {.container}
+# **SCIENCE**
 :::
-::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/CI-022_Fills-data-holes_2025-04-12.png)
-:::
+::::
+
+::::: {.wrapper}
+::::{.container .science .grid  .border-bottom .py-5}
+::: {.g-col-6 .justify-content-center}
+### **Clouds in the humid tropics are the primary reason for low data yields in current GHG missions**
+
+With its fine spatial sampling, Carbon-I can peek through cloud gaps,  dramatically increasing data availability in regions with the largest  carbon fluxes, greatest uncertainties and climate feedback. Frequent  shallow cumulus clouds in the tropics have cloud gaps that are smaler  than 1km, dramatically reducing the data yield of current greenhouse gas missions. Read more about clouds in the tropics in our [GRL paper](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108791).
 :::
 
+::: {.g-col-6 .align-items-end} 
+![](img/Fig1_zoom.png){.img-fluid .science-image-frame}
 :::
-:::
+::::
 
+::::{.grid .science .container .border-bottom .py-5}
+::: {.g-col-6 .order-md-2 .justify-content-center}
+### **Clouds in the humid tropics are the primary reason for low data yields in current GHG missions**
 
----
-
-
-::: {.content-container}
-::: {.top-story .caltech-background}
-
-
-::: grid
-::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/CI-024_poorly_obs_by_POR_2025-04-10.png)
-:::
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### Clouds in the humid tropics are the primary reason for low data yields in current GHG missions
-With its fine spatial sampling, Carbon-I can peek through cloud gaps,
-dramatically increasing data availability in regions with the largest carbon
-fluxes and greatest uncertainties. 
-:::
+With its fine spatial sampling, Carbon-I can peek through cloud gaps,  dramatically increasing data availability in regions with the largest  carbon fluxes, greatest uncertainties and climate feedback
 
 :::
 
+::: {.g-col-6 .order-md-1}
+![](img/Fig3_yields.png){.img-fluid .science-image-frame} 
 :::
-:::
+::::
 
 
----
+::::{.grid .science .container .border-bottom .py-5}
+::: {.g-col-6 .justify-content-center}
+### **CH4 emissions are heterogenous across the globe and highest in the tropics.**
 
-## The humid tropics are crucial for understanding global carbon cycles
-
-::: {.content-container}
-::: {.top-story .caltech-background}
-
-
-::: grid
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### CH<sub>4</sub> emissions are heterogenous across the globe and highest in the tropics.
-Bottom-up methane emissions distributions show key regions, which
-dominate global emissions (red colors=50%ile of total emissions).
-However, hypothesized sources in the inventory may be entirely
-wrong. Carbon-I will use the global and target modes in concert to
-identify and focus on local verified sources driving global fluxes.
-:::
-::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/CI-025_global_maps_2025-04-13.png)
-:::
-:::
-
-:::
-:::
-
----
-
-## High spatial resolution overcomes the data yield problem in the tropics and allows flux attribution
-
-::: {.content-container}
-::: {.top-story .caltech-background}
-
-
-::: grid
-::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/CI-027_Four_Regions_2025-04-14.png)
-:::
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### High spatial resolution enables plume mapping, allowing direct attribution
-Carbon-I will investigate hotspots and flux heterogeneity
-globally and use the target mode as a magnifying glass. The detection of
-localized plumes across various source types (airborne on the left, EMIT
-on the right) enables applications and field campaigns (bottom left). 
-:::
+Bottom-up methane emissions distributions show key regions, which  dominate global emissions (red colors=50%ile of total emissions).  However, hypothesized sources in the inventory may be entirely wrong. Carbon-I will use the global and target modes in concert to identify and focus on local verified sources driving global fluxes.
 
 :::
 
+::: {.g-col-6 .align-items-end}
+![](img/Fig4_methane.png){.img-fluid science-image-frame}
 :::
-:::
+::::
 
----
+::::{.grid .science .container .border-bottom .py-5}
+::: {.g-col-6 .order-md-2 .justify-content-center}
+### **High spatial resolution enables plume mapping, allowing direct attribution**
 
-## Global and Target Modes tackle fluxes at various spatial scales
-
-::: {.content-container}
-::: {.top-story .caltech-background}
-
-
-::: grid
-::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/CI-003_element-1c_Global_Data_Disk_2025-04-13.png)
-:::
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### Global Mode
-BlaBla
-:::
+Carbon-I will investigate hotspots and flux heterogeneity globally and  use the target mode as a magnifying glass. The detection of localized  plumes across various source types (airborne on the left, EMIT on the  right) enables applications and field campaigns (bottom left).
 
 :::
 
+::: {.g-col-6 .order-md-1}
+![](img/Fig5_plumes.png){.img-fluid .science-image-frame} 
+:::
+::::
 
-::: grid
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
-### Target Mode
-BlaBla
-:::
-::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](/img/CI-003_element-3c_Target_Data_Disk_2025-04-13.png)
-:::
-:::
+:::::
 
-:::
-:::
+<!-- Transition for section content-->
 
+```{=html}
+<script>
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
+          entry.target.classList.add('animate', 'show');
+        } else {
+          entry.target.classList.add('show');      // no animation
+        }
+      }
+    });
+  },
+  { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
+);
+
+document.querySelectorAll('.science').forEach(el => { 
+  observer.observe(el)
+});
+
+const nav = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    nav.classList.add('compact');
+  } else {
+    nav.classList.remove('compact');
+  }
+});
+
+</script>
+```

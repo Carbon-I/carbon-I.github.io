@@ -86,6 +86,8 @@ if (title && logos) {
   title.appendChild(logos);
 }
 
+const nav = document.querySelector('.navbar');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
     nav.classList.add('compact');
@@ -93,5 +95,6 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('compact');
   }
 });
+
 </script>
 ```

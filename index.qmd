@@ -13,7 +13,7 @@ format:
     fig-responsive: true
 ---
 
-:::: {.hero .hero-home .d-flex .align-items-end .justify-content-start .text-white .text-start}
+:::: {.hero .hero-gradient .hero-home}
 ::: {.container .mb-5}
 ![](/img/Logo-White2.png){.img-fluid style="max-width:35rem;"} 
 
@@ -22,10 +22,8 @@ format:
 ::::
 
 ::: {.container .text-start .mx-auto .my-5 .w-50}
-A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call. <br> <br> <br>
-
+A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.
 :::
-
 
 ::::: {.wrapper style="background-color: #EEF4F6;"}
 ::::{.container .grid .mission .border-bottom .py-5}
@@ -96,17 +94,19 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show');
+        if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
+          entry.target.classList.add('animate', 'show');
+        } else {
+          entry.target.classList.add('show');      // no animation
+        }
       }
     });
   },
-  {
-    threshold: 0.2 // when 0.2 of the content appears in viewport, fire callback
-  }
+  { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
 );
 
 document.querySelectorAll('.mission').forEach(el => { 
-  observer.observe(el);
+  observer.observe(el)
 });
 
 const nav = document.querySelector('.navbar');
