@@ -37,6 +37,8 @@ $spacers: (
   3: $spacer,
   4: $spacer * 2,
   5: $spacer * 4,
+  6: $spacer * 6,
+  7: $spacer * 8,
 );
 
 $utilities: (
@@ -66,8 +68,8 @@ $container-max-widths: (
 $font-family-base: Helvetica !default;
 $primary:       $black !default;
 
-$body-font-size-base:   1.125rem; 
-$h1-font-size:          2.25rem !important;   
+$font-size-base:        1.125rem;
+$h1-font-size:          2.25rem;   
 $h2-font-size:          2rem;     
 $navbar-dark-color:     #fff;
 $navbar-dark-hover-color: #7cc7ff;   // light-blue hover
@@ -311,19 +313,21 @@ body {
       #professional-experience { margin-top: 6rem; }
 
       #professional-experience { margin-bottom: 6rem; }
-
-      /* default link colour inside about text */
-      a {
-        color: #0645ad;
-        text-decoration: underline;
-      }
     }
   }
 
   /* ---------- References block -------------------------- */
-  #references {
+  #refs {
     a            { color: $brand-orange; }
     .csl-entry   { margin-bottom: 1rem; }
   }
+
+  /* default link colour and decoration*/
+  a {
+    color: #0645ad;
+    text-decoration: underline;
+  }
 }
+
+
 

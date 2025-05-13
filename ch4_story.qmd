@@ -1,6 +1,6 @@
 ---
 comments: false
-page-layout: full
+page-layout: custom
 bibliography: publications/cfranken2024_doi.bib
 format:
   html:
@@ -13,15 +13,31 @@ format:
     echo: false
     keep-hidden: true
     code-tools: true
+csl: styles/agu.csl
 ---
 
-## What is going on with methane?
 
-Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use [@turner2019interpreting; @saunois2017variability]. The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks [@Zhang_2023] and anthropogenic sources [@Jackson_2020].
+:::: {.hero .hero-gradient .hero-ch4}
+::: {.container}
+# **CH4**
+:::
+::::
 
-## CH<sub>4</sub> data from NOAA
+
+:::: {.container}
+::: {.about .px-7 .py-5 style="border-bottom: 1px solid #C8C7C7;"} 
+# What is going on with methane?
+
+Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use [@turner2019interpreting; @saunois2017variability]. The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks [@Zhang_2023] and anthropogenic sources [@Jackson_2020]. 
+<div style = "padding-bottom:5rem;"></div> 
+
+
+# CH<sub>4</sub> data from NOAA
 
 Ground based in-situ data provide the most accurate information on the recent rise in global methane. Here you can observe the global rise, stagnation and recent acceleration of the global methane abundances, obtained directly from NOAA's Monthly [CH<sub>4</sub> concentration data](https://gml.noaa.gov/ccgg/trends_ch4/), globally averaged per month (black) and a 12 months running mean. Stagnation, renewed increase and acceleration periods are indicated in blue, yellow, and red, respectively.
+
+::: 
+::: {.plots .px-7 .py-5}
 
 ```{ojs}
 //fileUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_mm_gl.csv');
@@ -166,4 +182,31 @@ Plot.plot({
 
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
+```
+
+:::
+::::
+
+::::: {.wrapper style="background-color:#EEF4F6"}
+:::: {.container .px-7}
+# References {.pt-4}
+
+::: {#refs .pb-5 .pt-2}
+:::
+::::
+:::::
+
+```{=html}
+<script>
+const nav = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    nav.classList.add('compact');
+  } else {
+    nav.classList.remove('compact');
+  }
+});
+
+</script>
 ```

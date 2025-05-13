@@ -27,6 +27,8 @@ about:
       href: https://rsfralab.github.io/
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0546-5857 
+csl: ../../styles/agu.csl
+
 ---
 
 
@@ -37,7 +39,7 @@ about:
 ::::
 
 :::: {#hero-heading}
-::: {.about-contents .px-5} 
+::: {.about-contents .px-6} 
 <!-- .about-contents contains only the paragraph content below, not the title or image -->
 Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle. He is the Carbon-I Principal Investigator and responsible for the quality and direction of the investigation. 
 
@@ -60,8 +62,8 @@ Dr. Frankenberg has two decades of experience in remote sensing of atmospheric t
 :::::
 
 :::::{.wrapper style="background-color:#F9F5F1"}
-:::{.container .px-5}
-## References {.border-0}
+::::{.container .px-7}
+# References {.pt-2}
 
 ::: {#refs .pb-5 .pt-2}
 :::

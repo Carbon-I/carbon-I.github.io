@@ -1,22 +1,4 @@
-h1{
-  font-size: 2.5rem; 
-}
 
-h2{
-  font-size: 2rem; 
-}
-
-p{
-  font-size: 1.125rem; 
-}
-
-ol{
-  font-size: 1.125rem; 
-}
-
-ul{
-  font-size: 1.125rem; 
-}
 
 .banner-text {
   position: absolute;
@@ -142,7 +124,7 @@ ul{
 }
 
 .hero h1{
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 .hero {
@@ -164,18 +146,30 @@ ul{
 /* Small Hero */
 .hero-team{
   background: url('../img/CI_team.png') center center / cover no-repeat;
-  height: 40vh; 
+  height: 45vh; 
 
 }
 
 .hero-about{
   background: url('../img/CI_team.png') center center / cover no-repeat;
-  height: 40vh; 
+  height: 45vh; 
 }
 
 .hero-science{
-  background: url('../img/science_banner2.png') center center / cover no-repeat;
-  height: 40vh; 
+  background: url('../img/CI_science.png') center center / cover no-repeat;
+  height: 45vh; 
+  width: 100%;
+}
+
+.hero-publications{
+  background: url('../img/CI_publications.png') center center / cover no-repeat;
+  height: 45vh; 
+  width: 100%;
+}
+
+.hero-ch4{
+  background: url('../img/CI_ch4.png') center center / cover no-repeat;
+  height: 45vh; 
   width: 100%;
 }
 
@@ -270,6 +264,13 @@ ul{
   padding-bottom: 6rem;
 }
 
+.about h1 {
+  padding-bottom: 2rem;      /* top & bottom gap = 1.5 rem */
+}
+
+.plots{
+  padding-top: 4.6rem;
+}
 
 
 
