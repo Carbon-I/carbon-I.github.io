@@ -1,29 +1,48 @@
 ---
 comments: false
-page-layout: full
+page-layout: custom
 format:
   html:
-    css: styles/other-background.css  
     margin-top: 0em
     margin-bottom: 0em
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-    toc: true
+    toc: false
     echo: false
     keep-hidden: true
     code-tools: true
 ---
 
-## The impact of cloud on GHG remote sensing is strongly dependent on the footprint size. 
+
+:::: {.hero .hero-gradient .hero-clouds}
+::: {.container}
+# **Clouds**
+:::
+::::
+
+
+::::: {.container}
+:::: {.about .px-7 .py-5 style="border-bottom: 1px solid #C8C7C7;"} 
+# The impact of cloud on GHG remote sensing is strongly dependent on the footprint size. 
 
 In **Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing**, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions [GRL paper](https://doi.org/10.1029/2024GL108791). 
 
 Here, we provide a simple interactive example for cloud statistics from our data in the manuscript under review. You can choose different locations on the map and see the cloud-free likelihood statistics for a 200 or 2000m footprint and an according time-series. Note that the coverage is not fully global due to the computation demand of computing these likelihoods from 10m Sentinel-2 data.
 
 
+:::: 
+:::: {.plots .px-4 .py-5}
+::: {.globe-section}
+
 ```{ojs}
 //| panel: input
+
+html`
+  <p class="mb-4">
+    Empty paragraph for now
+  </p>
+`
 viewof point = {
   const width = 600.0
   const height = width / 2;
@@ -35,7 +54,7 @@ viewof point = {
   context.beginPath(), path(graticule), context.strokeStyle = "#ccc", context.stroke();
   context.beginPath(), path(land), context.fill();
   context.beginPath(), path(sphere), context.strokeStyle = "#000", context.stroke();
-  context.lineWidth = 2, context.strokeStyle = "#f00";
+  context.lineWidth = 2, context.strokeStyle = "#f00";    
   const image = context.getImageData(0, 0, context.canvas.width, context.canvas.height);
 
   function render(coordinates) {
@@ -63,20 +82,29 @@ viewof point = {
   render([-55, 0]);
   return context.canvas;
 }
+
+html`
+  <p class="mt-3 mb-4">
+    <strong>You picked:</strong> Latitude ${Math.round(point[1])}, Longitude ${Math.round(point[0])}
+  </p>
+`
+
+html`<label class="form-label">Pick a Date Range</label>`
+viewof slider = rangeSlider({
+  min: 0,
+  max: d3.timeDay.count(start, end),
+  step: 1,
+  format: d => formatDate(d3.timeDay.offset(start, d)),
+})
+
+html`<label class="form-label mt-3">Number of bins</label>`
+viewof thresh = Inputs.range(
+  [5, 50], 
+  {value: 17, step: 2}
+)
+
 ```
-
-
-
-```{ojs}
-fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
-//fileUrl = `/data/subset_data.csv`;
-```
-
-```{ojs}
-`You picked: Latitude: ${Math.round(point[1])}, Longitude: ${Math.round(point[0])}`
-```
-
-
+:::
 
 ```{ojs}
 start = new Date(2018, 0)
@@ -84,27 +112,13 @@ end   = new Date(2022,0)
 ```
 
 ```{ojs}
-viewof slider = rangeSlider({
-  min: 0,
-  max: d3.timeDay.count(start, end),
-  step: 1,
-  format: d => formatDate(d3.timeDay.offset(start, d)),
-  title: 'Pick a date range',
-})
-```
-
-```{ojs}
 formatDate = d3.timeFormat("%Y-%m-%d")
 ```
 
 ```{ojs}
-//| panel: input
-viewof thresh = Inputs.range(
-  [5, 50], 
-  {value: 17, step: 2, label: "Number of bins"}
-)
+fileUrl = `https://raw.githubusercontent.com/cfranken/s2_data/main/files/S2_${Math.round(point[1])}.0_${Math.round(point[0])}.0.csv`;
+//fileUrl = `/data/subset_data.csv`;
 ```
-
 
 
 ```{ojs}
@@ -138,13 +152,34 @@ function customTickFormat(d) {
 
 Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1  to 100%)
 
+<!-- For creating legend      -->              
+::::: {.d-flex .gap-4 .my-2}
+
+:::: {.d-flex .align-items-center .gap-2}
+::: {style="width: 1.5rem; height: 1.5rem; background-color: #FFB2A4;"}
+:::
+2000m
+::::
+
+:::: {.d-flex .align-items-center .gap-2 .ps-4}
+::: {style="width: 1.5rem; height: 1.5rem; background-color: #A2C0D8;"}
+:::
+200m
+::::
+
+:::::
+
 ```{ojs}
-Plot.plot({
-width,
-  x: { type: "log",base:10,
-transform: d => Math.max(.01, 100*d)}, 
+plot1 = Plot.plot({
+  width,
+  x: { 
+    type: "log", 
+    base:10, 
+    transform: d => Math.max(.01, 100*d)
+  }, 
   y: {grid: true},
-  style: { fontSize: "12px",},
+  style: { 
+    fontSize: "12px"},
   color: {legend: true},
   marks: [
     Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", fill: "steelblue", fillOpacity: 0.5,thresholds: binBoundaries1, tip: "xy" })),
@@ -152,17 +187,19 @@ transform: d => Math.max(.01, 100*d)},
     Plot.ruleY([0])
   ]
 })
+
 ```
 
 Below is the corresponding time-series in the same colors (You can hover over the data to get exact values at each time-step). You can find that there are extended times in the humid tropics, where larger pixels hamper data collection, specifically in the wet season. Try out regions in the Amazon or Indonesia, for example. Outside the humid tropics, the differences are far less severe, as large-scale cloud cover without gaps can persist, and so do larger areas without clouds. Thus, in many areas, footprints larger than 2km can be perfectly fine (e.g. with TROPOMI). 
 
 However, if you want to improve understanding in the humid tropics, fine spatial resolution is key!
+
 ```{ojs}
-Plot.plot({
+plot2 = Plot.plot({
   width,  
   y: { grid: true, label: "Likelihood of cloud free pixel",domain:[0,1.099] },
   color: { legend: true },
-  style: { fontSize: "12px",},
+  style: { fontSize: "12px" },
   marginBottom: 37,
   marks: [
     Plot.axisX({ ticks: d3.utcMonth.every(3) }),
@@ -189,6 +226,7 @@ Plot.plot({
     Plot.ruleY([0])
   ]
 })
+
 ```
 
 :::
@@ -239,3 +277,21 @@ import { rangeSlider as rangeSlider } from '@mootari/range-slider'
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
 ```
+::::
+:::::
+
+```{=html}
+<script>
+const nav = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    nav.classList.add('compact');
+  } else {
+    nav.classList.remove('compact');
+  }
+});
+
+</script>
+```
+

@@ -173,6 +173,12 @@
   width: 100%;
 }
 
+.hero-clouds{
+  background: url('../img/CI_clouds.png') center center / cover no-repeat;
+  height: 45vh; 
+  width: 100%;
+}
+
 /* Homepage */
 .mission{ 
   opacity: 0;

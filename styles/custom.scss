@@ -316,6 +316,47 @@ body {
     }
   }
 
+  /* ---------- Clouds Story block -------------------------- */
+  .plots{
+    
+    .globe-section{ 
+      padding-bottom: 3rem;
+
+      .panel-input{
+        background: #EEF4F6 !important;
+        padding: 2rem 3rem !important;
+      }
+
+      canvas{
+        background-color: white;
+      }
+
+      p,
+      label,
+      input[type="number"]{
+        font-size: 1.5rem;
+      }
+
+      input[type="number"]{
+        width: 6.5rem;
+        text-align: center; 
+      }
+    }
+
+    .tab-content{
+      background-color: #EEF4F6;
+
+      p{
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      svg{
+        background-color: white !important; //override ojs
+      }
+    }
+  }
+
   /* ---------- References block -------------------------- */
   #refs {
     a            { color: $brand-orange; }
