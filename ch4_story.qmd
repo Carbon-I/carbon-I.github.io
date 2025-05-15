@@ -187,11 +187,3 @@ import {Plot} from "@mkfreeman/plot-tooltip"
 :::
 ::::
 
-::::: {.wrapper style="background-color:#EEF4F6"}
-:::: {.container .px-7}
-# References {.pt-4}
-
-::: {#refs .pb-5 .pt-2}
-:::
-::::
-:::::

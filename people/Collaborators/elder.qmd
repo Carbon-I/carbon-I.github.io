@@ -1,7 +1,7 @@
 ---
 title: "Clayton Elder"
 started: "2018"
-image: /img/people/elder.jpg
+image: ../../img/people/elder.jpg
 subtitle: "Collaborator <br> JPL"
 sortby: "?"
 about:
@@ -20,7 +20,7 @@ nocite: |
 ::::: {.container} 
 
 ::: {.listing-header}
-## [**Collaborators** | **Bethany Ehlmann**](../../team.qmd#collab-team)
+## [**Collaborators** | **Clayton Elder**](../../team.qmd#collab-team)
 ::::
 
 :::: {#about-heading}
