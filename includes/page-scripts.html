@@ -1,0 +1,64 @@
+
+<!-- Navbar Scale Animation-->
+<script>
+    const nav = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('compact');
+      } else {
+        nav.classList.remove('compact');
+      }
+    });
+</script>
+
+<!-- For About Page Layout-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleBlock = document.querySelector(".quarto-title-block");
+    const image = document.querySelector(".about-image");
+
+    const title = document.querySelector('.quarto-title');
+    const logos = document.querySelector('.about-links');
+
+    //place images into titleBlock area
+    if (titleBlock && image) {
+    titleBlock.insertBefore(image, titleBlock.firstChild);
+    }
+
+    //place logos into title area
+    if (title && logos) {
+    title.appendChild(logos);
+    }
+  });
+</script>
+
+<!-- Only add references if there is a bibliography-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refs = document.getElementById("refs");
+      if (!refs) return;
+    
+      document.querySelectorAll('#quarto-appendix').forEach(el => el.remove());
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "references-wrapper";
+    
+      const container = document.createElement("div");
+      container.className = "container about-references";
+    
+      const heading = document.createElement("h1");
+      heading.textContent = "References";
+    
+      container.appendChild(heading);
+      container.appendChild(refs);
+      wrapper.appendChild(container);
+    
+      const footerBanner = document.querySelector(".footer-banner");
+      if (footerBanner && footerBanner.parentNode) {
+        footerBanner.parentNode.insertBefore(wrapper, footerBanner);
+      } else {
+        document.body.appendChild(wrapper);
+      }
+    });
+</script>

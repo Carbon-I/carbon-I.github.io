@@ -1,21 +1,31 @@
 ---
 title: "Paul Palmer"
+toc: false
 started: "2018"
-image: /img/people/palmer.jpeg
-subtitle: "International Collaborator"
-description: "University Edinburgh, UK"
+image: ../../img/people/palmer.jpeg
+subtitle: "International Collaborator <br> University Edinburgh, UK"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - icon: mortarboard
       text: Website
       href: https://sites.google.com/view/palmer-group/home
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Paul Palmer**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Paul Palmer studies the atmosphere on Earth and other planets using data, models, and theory. 
 
@@ -30,3 +40,6 @@ Paul Palmer studies the atmosphere on Earth and other planets using data, models
 - [1995-2006:]{.fw-bold} University Research Fellow, University of Leeds, 2005-2006
 - [1999-2005:]{.fw-bold} Postdoctoral Researcher/Research Associate, Harvard University, 1999-2005
 
+:::
+::::
+:::::

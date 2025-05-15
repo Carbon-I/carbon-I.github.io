@@ -1,164 +1,206 @@
-.banner-text {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  /* ...other styling... */
-}
 
-/* Style for navbar links on hover */
-.navbar a:hover {
-  animation-duration: 600ms;
-  animation-name: line-expand;
-  border-bottom: 1px solid #000; /* Adjust color and thickness to your preference */
-}
-
-/* Style for active navbar link */
-.navbar a.active {
-  color: #000;
-  border-bottom: 2px solid #FF6C0C; /* Adjust color and thickness to your preference */
-}
-
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  color: #FF6C0C;
-}
-
-.navbar-list li:hover .dropdown {
-  display: block;
+/* Footer */
+.footer-banner {
+  display: flex;
+  flex-direction: column;      
+  align-items: center;   
+  justify-content: space-evenly;
+  background-color: #222;
   color: white;
+  padding-bottom: 1rem;
+}
+
+.footer-banner img{
+  margin: 0.25rem auto; 
+  width: 200px;
+}
+
+.footer-banner p{
+  margin: 0.25rem auto;  
+}
+
+/* Hero Section, applies to all heroes */
+
+.hero-gradient > * { /* ensures hero content is above gradient */
+  position: relative;
+  z-index: 3;
+}
+
+.hero-gradient::before{
+  content: "";
+  background: 
+  linear-gradient( /* gradient starting from bottom */
+    to top, 
+    rgba(0, 0, 0, 0.95) 0%,   /* darkest at the very bottom */
+    rgba(0, 0, 0, 0.4) 40%,  /* soft blend upward */
+    rgba(0, 0, 0, 0) 60%     /* fully transparent above */
+  );
+  z-index: 2;
+  position: absolute;
+  inset: 0; /* fills entire space of the hero */
+}
+
+.hero h1{
+  font-size: 3.2rem;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  height: 86vh; 
+  width: 100%;
+
+}
+
+.hero-small{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  width: 100%;
+  height: 45vh; 
+}
+
+/* Big Hero */
+.hero-home{
+  background: url('../img/CI_cover.jpeg') center center / cover no-repeat;
+}
+
+/* Small Hero */
+.hero-team{
+  background: url('../img/CI_team.png') center center / cover no-repeat;
+}
+
+.hero-about{
+  background: url('../img/CI_team.png') center center / cover no-repeat;
+}
+
+.hero-science{
+  background: url('../img/CI_science.png') center center / cover no-repeat;
+}
+
+.hero-publications{
+  background: url('../img/CI_publications.png') center center / cover no-repeat;
+}
+
+.hero-ch4{
+  background: url('../img/CI_ch4.png') center center / cover no-repeat;
+}
+
+.hero-clouds{
+  background: url('../img/CI_clouds.png') center center / cover no-repeat;
+}
+
+.hero-news{
+  background: url('../img/CI_news.png') center center / cover no-repeat;
+}
+
+/* Homepage */
+.mission{ 
+  opacity: 0;
+  transform: translateY(120px);
+}
+
+.mission .g-col-6{ 
+  display: flex; 
+  flex-direction: column;
+}
+
+.mission.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission.animate{
+  transition: all 1.2s ease-out;
+}
+
+.mission-image-frame{
+  width: 100%;           
+  max-width: 450px;    
+  border-radius: 50%; /* circular frame */
+  aspect-ratio: 1 / 1; /* retain Aspect Ratio */
+
+}
+
+/* Science Page */
+
+.science .g-col-6{ 
+  display: flex; 
+  flex-direction: column;
+}
+
+.science{ 
+  opacity: 0;
+  transform: translateX(-120px);
+}
+
+.science:nth-of-type(2n) {
+  transform: translateX(120px); 
+}
+
+.science.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.science.animate{
+  transition: all 1.2s ease-out;
+}
+
+.science-image-frame{
+  width: 100%; 
+  max-width: 30rem;   
+  padding: 2rem;
+  background-color: #F9FAEF;       
+}
+
+/* About Page */
+
+.listing-header h2{
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: none;
+  margin-bottom: 1.5rem;
+}
+
+.listing-header a{
   text-decoration: none;
 }
 
-
-.navbar a:hover, .navbar a:active {
-  color: black !important;
+.listing-header h2 strong:first-child {
+  color: #1A3482; /* TEAM */
+  font-size: 1.3rem;
 }
 
-  .lb-caption {
-    position: absolute;
-    left: -250px; /* Adjust based on your layout and description length */
-    width: 200px; /* Adjust as necessary */
-    text-align: left;
-  }
+.listing-header h2 strong:last-child {
+  color: #7BADE2; /* Name */
+  font-size: 1.3rem;
+}
 
-  
-  .shadow-effect {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adjust as needed */
-  }
-/* Fixed size for image previews */
-.grid-item img {
-    width: 100%;
-    height: auto;
-    max-width: 1500px; /* Adjust as needed */
-    max-height: 200px;
-    object-fit: cover; /* Ensures the image covers the area */
-  }
-  
-  /* Zoom effect on hover */
-  .grid-item img:hover {
-    transform: scale(1.1); /* Adjust zoom level as needed */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* Adjust the spacing between images */
-  }
-  
-  .grid-item img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc; /* Optional border */
-  }
-  
-  .footer {
-    background-color: #FF6C0C; /* Replace with your desired color */
-    opacity: 0.8;
-    /* Other styling properties for the footer */
-  }
+.plots{
+  padding-top: 4.6rem;
+}
 
-  .navbar {
-    background-color: whitesmoke; /* Replace with your desired color */
-    /* Other styling properties as needed */
-  }
 
-  .navbar-logo {
-    width: 190px; /* Adjust the height as needed */
-    
-  }
-  
-  .content-container {
-    padding-left: -1em;
-    padding-right: 0em;
-  }
-  
-  .top-story {
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-bottom: 1em; 
-    box-sizing: border-box;
-    height: auto;
-    display: flex;
-    align-items: center;
-  }
-  
-  .top-story img {
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  
-  .top-story-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 0;
-  }
-  
-  .top-story-text h2 {
-    margin-top: 1.5rem;
-  }
-  
-  .top-story-img p {
-    margin-bottom: 0;
-  }
-  
-  .header-banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .header-banner .header-image {
-    position: absolute;
-    display: none;
-    height: auto;
-  }
-  
-  .header-text p {
-    text-align: center;
-    margin-bottom: 0;
-  }
-  
-  .header-block {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-top: 1em;
-    padding-bottom: 1.8em; 
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-  }
 
-  .caltech-background {
-    background-color: #ff6d0c6a;
-  }
 
-  .fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .fade-in.show {
-    opacity: 1;
-  }
-  
+
+
+
+
+
+
+
+

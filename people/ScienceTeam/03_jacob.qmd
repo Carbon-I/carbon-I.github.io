@@ -1,12 +1,12 @@
 ---
 title: "Daniel Jacob"
+toc: false
 started: "2015"
-image: /img/people/jacob.jpeg
-subtitle: "Flux Inversion Lead"
-description: "Harvard"
+image: ../../img/people/jacob.jpeg
+subtitle: "Flux Inversion Lead <br> Harvard"
 sortby: "3"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -19,9 +19,19 @@ about:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6373-3100 
 bibliography: ../../publications/jacob.bib
+csl: ../../styles/agu.csl
 nocite: |
   @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Daniel Jacob**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Daniel Jacob is the Vasco McCoy Family Professor of Atmospheric Chemistry and Environmental Engineering at Harvard and works on interpretation of satellite observations of atmospheric composition.
 
@@ -35,4 +45,8 @@ Daniel Jacob is the Vasco McCoy Family Professor of Atmospheric Chemistry and En
 - [1994-present:]{.fw-bold} Professor, 	Harvard
 - [1992-1994:]{.fw-bold} 	Associate Professor, 	Harvard 
 - [1987-1992:]{.fw-bold} 	Assistant Professor, 	Harvard 
-- [1985- 1987:]{.fw-bold}	Postdoctoral Fellow, Harvard\\
+- [1985- 1987:]{.fw-bold}	Postdoctoral Fellow, Harvard
+
+:::
+::::
+:::::

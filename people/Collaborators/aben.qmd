@@ -1,14 +1,12 @@
 ---
 title: "Ilse Aben"
+toc: false
 started: "2018"
-image: /img/people/aben.jpg
-subtitle: "International Collaborator"
-description: "SRON, Netherlands"
+image: ../../img/people/aben.jpg
+subtitle: "International Collaborator <br> SRON, Netherlands"
 sortby: "?"
-bibliography: ../../publications/carbonI.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -16,7 +14,20 @@ about:
       href: https://scholar.google.com/citations?user=yBuk28EAAAAJ&hl=nl 
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0003-2198-0768
+bibliography: ../../publications/carbonI.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Ilse Aben**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Dr. Ilse Aben is the Dutch co-Principal Investigator and co-initiator of the TROPOMI instrument on ESA’s Sentinel-5 Precursor mission. Her research focuses on methane, and CO emissions, with high relevance to Carbon-I related science questions and technical approachs [@pandey2019satellite;@van2021vast;@sadavarte2021;@maasakkers2022using;@irakulis2022satellites;@pandey2023daily;@schuit2023automated;@naus2023assessing]
 
@@ -33,3 +44,7 @@ Dr. Ilse Aben is the Dutch co-Principal Investigator and co-initiator of the TRO
 - [1992-1994]{.fw-bold}Postdoc at Institute of Mass Spectrometry, University Amsterdam, The Netherlands
 - [2021-present]{.fw-bold} Endowed Professor Earth Sciences Vrije Universiteit, Amsterdam, The Netherlands
 - [2001-2021]{.fw-bold} Endowed Professor Physics Department Vrije Universiteit, Amsterdam, The Netherlands
+
+:::
+::::
+:::::

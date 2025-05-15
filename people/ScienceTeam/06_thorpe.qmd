@@ -1,13 +1,12 @@
 ---
 title: "Andrew Thorpe"
+toc: false
 started: "2015"
-image: /img/people/thorpe.jpg
-subtitle: "Project Scientist"
-description: "JPL"
+image: ../../img/people/thorpe.jpg
+subtitle: "Project Scientist <br> JPL"
 sortby: "5"
-bibliography: ../../publications/cfranken2024_doi.bib
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -21,7 +20,20 @@ about:
       href: https://www.webofscience.com/wos/author/record/408887
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0546-5857 
+bibliography: ../../publications/cfranken2024_doi.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Andrew Thorpe**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Andrew Thorpe is a technologist in the JPL imaging spectroscopy group with a decade of experience working with imaging spectrometer data. He has developed quantitative gas retrievals for AVIRIS, AVIRIS-NG, and EMIT using differential optical absorption spectroscopy, methods to estimate emission rates, and contributed to projects aimed at visualizing methane results and reducing data latency. Andrew is currently an EMIT Science Team member leading the EMIT greenhouse gas mapping application, and the Deputy Instrument Scientist for Carbon Plume Mapper.
 
@@ -33,4 +45,8 @@ Andrew Thorpe is a technologist in the JPL imaging spectroscopy group with a dec
 ## Professional Experience
 
 Andrew Thorpe has extensive experience in high-resolution methane mapping, ranging from retrieval algorithms [@thorpe2014retrieval;@thorpe2017airborne;@THORPE2021112681] and the first ever controlled release experiment involving aircraft and spectroscopic mapping [@thorpe2016mapping] to data analysis and sectorial up-scaling of methane fluxes [@thorpe2023attribution;@cusworth_pnas;@thorpe2020methane;@duren2019california].
+
+:::
+::::
+:::::
 

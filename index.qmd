@@ -2,69 +2,113 @@
 comments: false
 toc: false
 sidebar: false
-page-layout: full
-title: "Carbon-I"
+page-layout: custom
 format:
   html:
-    css: styles/other-background.css
+    css: styles/index-background.css
     margin-top: 0em
     margin-bottom: 0em
     minimal: true
     smooth-scroll: true
     fig-responsive: true
-
----
- 
-
-
-![](/img/Logo-Black.png){fig-alt="" fig-align="left" width=80%} 
-
-A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.   
-
-## The Carbon Investigation for High-resolution Mapping of Obscured Greenhouse Gases
-<center>![](/img/CarbonI-anim_whiteBG_small.gif){fig-alt="Carbon-I global mode observations" fig-align="center" width="400"}</center>
-
-
-### *Greenhouse gas studies from space are limited by scarce data in the cloudy tropics and by spatial resolution of current instruments*
-
-## Carbon-I Will:
-
-- #### Collect 1000 times more data in the tropics by observing between clouds
-- #### Differentiate the sources and composition of emissions at the city block level anywhere
 ---
 
-## Objectives
+:::: {.hero .hero-gradient .hero-home}
+::: {.container .mb-5}
+![](/img/Logo-White2.png){.img-fluid style="max-width:35rem;"} 
 
-1. #### Identify, characterize and quantify hotspots of CH<sub>4</sub> and CO<sub>2</sub> emissions across the globe
-2. #### Quantify global CH<sub>4</sub> and CO<sub>2</sub>, and CO monthly fluxes at unprecedented 12-100km resolution 
-3. #### Attribute and quantify the processes driving natural and anthropogenic greenhouse gas fluxes
+[**Closing tropical data gaps to resolve global carbon-budget uncertainties**]{.ps-2 style="font-size:1.25rem;"}
+:::
+::::
 
---- 
+::: {.container .text-start .mx-auto .my-5 .w-50}
+A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.
+:::
 
-## Mission Overview
+::::: {.wrapper style="background-color: #EEF4F6;"}
+::::{.container .grid .mission .border-bottom .py-5}
+::: {.g-col-6 .justify-content-center}
+# **Carbon-I Will:**
 
-- #### Global mode: <400m sampling of land and coastal oceans monthly
-- #### Target mode: <50m sampling of key regions (95kmx95km; over 2 million acres)
-- #### Absorption spectroscopy to measure CH<sub>4</sub>, CO<sub>2</sub>, CO and relevant chemical tracers
----
+-   provide global, monthly coverage for a complete carbon-cycle view
+
+-   separate point sources from regional fluxes using fine spatial resolution plus multi-species data
+
+-   deliver actionable information to decision-makers and industry.
+
+:::
+
+::: {.g-col-6 .align-items-end} 
+![](img/CarbonI-anim_whiteBG_small.gif){.img-fluid .mission-image-frame}
+:::
+::::
+
+::::{.grid .mission .container .border-bottom .py-5}
+::: {.g-col-6 .order-md-2 }
+# **Objectives:**
 
 
+1. Identify, characterize, and quantify hotspots of CH<sub>4</sub>, CO<sub>2</sub>, and CO emissions across the globe
 
-<!-- JavaScript added at the end -->
+2. Quantify global CH<sub>4</sub>, CO<sub>2</sub>, and CO monthly fluxes at unprecedented 12–100 km resolution
+
+3. Attribute and quantify the processes driving natural and anthropogenic fluxes
+
+:::
+
+::: {.g-col-6 .order-md-1 .justify-content-center}
+![](img/tCH4_CI-18383.png){.img-fluid .mission-image-frame} 
+:::
+::::
+
+
+::::{.grid .mission .container .py-5}
+::: {.g-col-6 .justify-content-center}
+# **Mission Overview:**
+
+Carbon-I is the first to pair land-imaging spatial detail with high-resolution atmospheric spectra, providing unique insights into the atmosphere and land surface.
+
+-  Measures CH<sub>4</sub>, CO<sub>2</sub>, CO plus tracers via SWIR absorption spectroscopy.
+
+-  Maps land and coastal oceans monthly at < 400m, peering between clouds.
+
+-  Zooms to 100 × 100 km targets at < 50m for regions with highest uncertainties.
+
+-  More than just gases: Surface-mapping unlocks novel mineral and vegetation data, delivering new insights for the public, private, and non-profit sectors.
+
+
+:::
+
+::: {.g-col-6 .align-items-end}
+![](img/Target.jpg){.img-fluid .mission-image-frame}
+:::
+::::
+
+:::::
+
+<!-- Transition for section content-->
+
+```{=html}
 <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  window.addEventListener('scroll', () => {
-    let scrollPos = window.scrollY;
-    let images = document.querySelectorAll('.grid-item img');
-    images.forEach(img => {
-      // Adjust the calculation as needed for desired effect
-      let imgPos = img.getBoundingClientRect().top + window.scrollY;
-      if (imgPos < (scrollPos + window.innerHeight)) {
-        img.style.transform = "scale(1.1)";
-      } else {
-        img.style.transform = "scale(1)";
-      }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
+            entry.target.classList.add('animate', 'show');
+          } else {
+            entry.target.classList.add('show');      // no animation
+          }
+        }
+      });
+    },
+    { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
+  );
+
+  document.querySelectorAll('.mission').forEach(el => { 
+    observer.observe(el)
   });
 });
 </script>
+```

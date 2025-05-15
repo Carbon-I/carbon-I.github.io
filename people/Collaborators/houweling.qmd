@@ -1,20 +1,32 @@
 ---
 title: "Sander Houweling"
+toc: false
 started: "2018"
-image: /img/people/houweling.webp
-subtitle: "International Collaborator"
-description: "U. Amsterdam, Netherlands"
+image: ../../img/people/houweling.webp
+subtitle: "International Collaborator <br> U. Amsterdam, Netherlands"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6189-1009
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Sander Houweling**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Sander Houweling is a Professor at VU in Amsterdam and investigates greenhouse gases in the atmosphere and the processes determining their abundance. 
 
@@ -26,3 +38,7 @@ Sander Houweling is a Professor at VU in Amsterdam and investigates greenhouse g
 ## Professional Experience
 
 - [2018-present:]{.fw-bold} Whatever, wherre
+
+:::
+::::
+:::::

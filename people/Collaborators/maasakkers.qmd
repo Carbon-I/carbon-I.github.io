@@ -1,11 +1,9 @@
 ---
 title: "Joannes D. (Bram) Maasakkers"
-image: /img/people/JDMaasakkers_Crop.jpg
-subtitle: "International Collaborator"
-description: "SRON, The Netherlands"
-
+image: ../../img/people/JDMaasakkers_Crop.jpg
+subtitle: "International Collaborator <br> SRON, The Netherlands"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -22,7 +20,19 @@ about:
       href: https://jdmaasakkers.github.io/
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0001-8118-0311 
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Joannes D. (Bram) Maasakkers**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Joannes D. (Bram) Maasakkers is a Senior Scientist at SRON Netherlands Institute for Space Research. His work focuses on better understanding anthropogenic methane and carbon monoxide emissions using observations of atmospheric concentrations from satellites.
 
@@ -36,4 +46,8 @@ Joannes D. (Bram) Maasakkers is a Senior Scientist at SRON Netherlands Institute
 
 - [2024-present:]{.fw-bold} Senior Scientist at SRON Netherlands Institute for Space Research, The Netherlands 
 - [2021-2024:]{.fw-bold} Scientist at SRON Netherlands Institute for Space Research, The Netherlands 
-- [2018-2020:]{.fw-bold} Postdoc at SRON Netherlands Institute for Space Research, The Netherlands\\
+- [2018-2020:]{.fw-bold} Postdoc at SRON Netherlands Institute for Space Research, The Netherlands
+
+:::
+::::
+:::::

@@ -1,12 +1,12 @@
 ---
 title: "Yi Yin"
+toc: false
 started: "2015"
-image: /img/people/yin.jpeg
-subtitle: "Flux Inversions"
-description: "New York University"
+image: ../../img/people/yin.jpeg
+subtitle: "Flux Inversions <br> New York University"
 sortby: "4"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -21,9 +21,20 @@ about:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/my-orcid?orcid=0000-0003-4750-4997
 bibliography: ../../publications/yin.bib
+csl: ../../styles/agu.csl
 nocite: |
   @*
 ---
+
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Yi Yin**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 Yi Yin is an Associate Professor of Environmental Studies at New York University and works on the global carbon cycle and impacts of climate extremes.
 
 ## Education
@@ -36,4 +47,8 @@ Yi Yin is an Associate Professor of Environmental Studies at New York University
 - [2023-present:]{.fw-bold}     Associate Professor,    New York University
 - [2017-2023:]{.fw-bold}    Research Scientist,     California Institute of Technology 
 - [2016-2017:]{.fw-bold}    NASA NPP Postdoc,   Jet PL 
-- [2013-2016:]{.fw-bold}    Postdoc, LSCE, France\\
+- [2013-2016:]{.fw-bold}    Postdoc, LSCE, France
+
+:::
+::::
+:::::

@@ -1,14 +1,12 @@
 ---
 title: "Bethany Ehlmann"
+toc: false
 started: "2018"
-image: /img/people/ehlmann.jpg
-subtitle: "Collaborator"
-description: "Caltech"
+image: ../../img/people/ehlmann.jpg
+subtitle: "Collaborator <br> Caltech"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -17,7 +15,20 @@ about:
     - icon: mortarboard
       text: Website
       href: https://www.ehlmann.caltech.edu/people/ehlmann.html
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Bethany Ehlmann**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Bethany Ehlmann is a professor of planetary science at Caltech. She is also Director of Caltech’s Keck Institute for Space Studies. Her research focuses on the mineralogy and chemistry of planetary surfaces, remote sensing techniques and instruments, astrobiology, and science policy and outreach. 
 
@@ -30,3 +41,7 @@ Bethany Ehlmann is a professor of planetary science at Caltech. She is also Dire
 
 - [2018-present:]{.fw-bold} Whatever, wherre
 
+
+:::
+::::
+:::::

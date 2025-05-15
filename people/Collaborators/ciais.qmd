@@ -1,20 +1,31 @@
 ---
 title: "Philippe Ciais"
+toc: false
 started: "2018"
-image: /img/people/ciais.png
-subtitle: "International Collaborator"
-description: "LSCE, France"
+image: ../../img/people/ciais.png
+subtitle: "International Collaborator <br> LSCE, France"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.fr/citations?user=PJhqfAoAAAAJ&hl=fr 
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Philippe Ciais**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Philippe Ciais is a researcher of the Laboratoire des Sciences du Climat et de l'Environnement (LSCE), the climate change research unit of the Institut Pierre Simon Laplace (IPSL). He is a physicist working on the global carbon cycle of planet Earth, climate change, ecology and geosciences.
 
@@ -25,4 +36,8 @@ Philippe Ciais is a researcher of the Laboratoire des Sciences du Climat et de l
 
 ## Professional Experience
 
-- [2018-present:]{.fw-bold} Whatever, wherre
+- [2018-present:]{.fw-bold} Whatever, where
+
+:::
+::::
+:::::

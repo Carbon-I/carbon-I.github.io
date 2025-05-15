@@ -1,21 +1,31 @@
 ---
 title: "Chris Elvidge"
+toc: false
 started: "2018"
-image: /img/people/elvidge.jpeg
-subtitle: "Collaborator"
-description: "CO Sch. of Mines"
+image: ../../img/people/elvidge.jpeg
+subtitle: "Collaborator <br> CO Sch. of Mines"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=8GuX3bwAAAAJ&hl=en&oi=ao
-
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Chris Elvidge**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Chris Elvidge is the director of the Earth Observation Group at Colorado School of Mines
 
@@ -27,3 +37,7 @@ Chris Elvidge is the director of the Earth Observation Group at Colorado School 
 ## Professional Experience
 
 - [2018-present:]{.fw-bold} Whatever, wherre
+
+:::
+::::
+:::::

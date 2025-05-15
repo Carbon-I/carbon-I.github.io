@@ -1,14 +1,11 @@
 ---
 title: "Frank Hase"
 started: "2018"
-image: /img/people/hase.jpeg
-subtitle: "Collaborator"
-description: "KIT, Germany"
+image: ../../img/people/hase.jpeg
+subtitle: "Collaborator <br> KIT, Germany"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -18,11 +15,20 @@ about:
     - icon: mortarboard
       text: Group Website
       href: https://www.imk-asf.kit.edu/english/201.php
-
-
-      
-
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Frank Hase**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Frank Hase is the head of the groundbased remote sensing group of IMK-ASF, KIT, and leads the [COCCON](https://www.imk-asf.kit.edu/english/COCCON.php) network, which is based on a new type of portable FTIR spectrometer for the measurement of the main greenhouse gases was developed by the KIT in cooperation with Bruker Optics (Ettlingen, Germany). 
 
@@ -39,3 +45,7 @@ Frank Hase is the head of the groundbased remote sensing group of IMK-ASF, KIT, 
 - [2002-2021]{.fw-bold} Staff scientist in groundbased remote sensing group of IMK-ASF, KIT,
 - [2002]{.fw-bold} Visiting Scientist at NCAR 2002
 - [2000-2002]{.fw-bold} Postdoc in groundbased remote sensing group of IMK-ASF, KIT
+
+:::
+::::
+:::::

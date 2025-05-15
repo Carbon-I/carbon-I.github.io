@@ -1,8 +1,4 @@
 ---
-title: "News from Carbon-I"
-author: ""
-description: "Sharing news and blogs!"
-image: "/img/BlogBanner2.jpeg"
 listing:
   contents: News
   id: blog-list
@@ -10,17 +6,23 @@ listing:
   type: default
   categories: true
   feed: true
-
-page-layout: full
-toc-title: Year
-toc-location: right
+page-layout: custom
 date-format: "MMMM D, YYYY"
 code-tools: false
 comments: false
 freeze: false
+toc: false
 ---
-<img src="/img/BlogBanner2.jpg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
 
+
+:::: {.hero-small .hero-gradient .hero-news}
+::: {.container}
+# **NEWS**
+:::
+::::
+
+:::: {.container}
 
 ::: {#blog-list}
 :::
+::::

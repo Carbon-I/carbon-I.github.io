@@ -1,26 +1,36 @@
 ---
 title: "Anna Michalak"
+toc: false
 started: "2015"
-image: /img/people/michalak.jpg
-subtitle: "Deputy Principal Investigator -- Science"
-description: "Carnegie Institution for Science / Stanford"
+image: ../../img/people/michalak.jpg
+subtitle: "Deputy Principal Investigator <br> Carnegie Institution for Science / Stanford"
 sortby: "2"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://https://scholar.google.com/citations?user=NDg0XsIAAAAJ&hl=en
+      href: https://scholar.google.com/citations?user=NDg0XsIAAAAJ
     - icon: mortarboard
       text: ResearchID
       href: https://www.webofscience.com/wos/author/record/KBA-4622-2024
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6152-7979
 bibliography: ../../publications/michalak.bib
+csl: ../../styles/agu.csl
 nocite: |
   @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Anna Michalak**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality.
 
@@ -36,3 +46,7 @@ Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie 
 - [2011-present:]{.fw-bold} 	Professor (2016 - ) and Associate Professor (2011-2016), Stanford 
 - [2004-2011:]{.fw-bold} 	Associate Professor (2010-2011) and Assistant Professor (2004-2010), University of Michigan 
 - [2003- 2004:]{.fw-bold}	NOAA Climate & Global Change (C&GC) Fellow, NOAA\\
+
+:::
+::::
+:::::

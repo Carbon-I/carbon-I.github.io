@@ -4,6 +4,10 @@ description: "Our journey for a satellite mission to track trace gases at 30-300
 author: "Sharmila Padmanabhan"
 date: "03/03/2025"
 image: "/img/citb_r2d2.jpg"
+toc: false
+about:
+  id: about-heading
+  template: marquee
 categories:
   - Hardware prototype
   - Spectroscopy
@@ -11,9 +15,15 @@ categories:
   - Trace Gases
 ---
 
-## The Carbon-I Testbed (CITB)
+:::: {.container}
+::: {.listing-header}
+## [**NEWS** | **Carbon-I Testbed for the NASA's ESE call**](../news.qmd#blog-list)
+:::
+::: {#about-heading}
+:::
 
-![](/img/citb_r2d2.jpg)
+::: {.article-contents}
+# The Carbon-I Testbed (CITB)
 
 **The Carbon-I Test Bed (CITB)** is a high-resolution optomechanical imaging spectrometer built at JPL/Caltech as a rapid prototype and proof of concept for advanced atmospheric gas detection of **CH₄, CO₂, and CO**. Despite an aggressive development timeline—October to February—the team achieved first measurements by January 30, leveraging **additive manufacturing** for critical structural components.
 
@@ -40,3 +50,7 @@ categories:
     The CITB is under vacuum, cooling to **240 K** (spectrometer) and **155 K** (detector). Integration with the PBIP (Penta Beam Injection Platform) is ongoing to refine the instrument’s response function.
 
 This **fast, precise, and scalable** spectrometer validates the feasibility of Dyson-based imaging spectrometers at high spectral resolution. For example results—including a CH₄ gas-cell spectrum measured under warm conditions with initial alignment—see [this notebook](https://github.com/Carbon-I/CarbonI/blob/main/src/notebooks/TestBed.ipynb). Additional tests are planned, underscoring the CITB’s role as a **cornerstone** for next-generation space-based greenhouse gas monitoring and as a risk reduction exercise towards the space-borne version.
+
+:::
+
+::::

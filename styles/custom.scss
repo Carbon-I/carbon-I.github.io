@@ -3,33 +3,560 @@
     @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
   }
   
-  /*-- scss:defaults --*/
-  $white:    #fff !default;
-    $gray-100: #f8f9fa !default;
-    $gray-200: #ecf0f1 !default;
-    $gray-300: #dee2e6 !default;
-    $gray-400: #ced4da !default;
-    $gray-500: #b4bcc2 !default;
-    $gray-600: #95a5a6 !default;
-    $gray-700: #7b8a8b !default;
-    $gray-800: #343a40 !default;
-    $gray-900: #212529 !default;
-    $black:    #000 !default;
+/*-- scss:defaults --*/
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #ecf0f1 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #b4bcc2 !default;
+$gray-600: #95a5a6 !default;
+$gray-700: #7b8a8b !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
 
-    $blue:    #2c3e50 !default;
-    $indigo:  #6610f2 !default;
-    $purple:  #6f42c1 !default;
-    $pink:    #e83e8c !default;
-    $red:     #e74c3c !default;
-    $orange:  #fd7e14 !default;
-    $caltech: #FF6C0C !default;
-    $yellow:  #f39c12 !default;
-    $green:   #18bc9c !default;
-    $teal:    #20c997 !default;
-    $cyan:    #3498db !default;
-  $h2-font-size:          1.6rem !default;
-  $headings-font-weight:  500 !default;
-  $primary:       $caltech !default;
+$blue:    #2c3e50 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #e74c3c !default;
+$orange:  #fd7e14 !default;
+$caltech: #FF6C0C !default;
+$yellow:  #f39c12 !default;
+$green:   #18bc9c !default;
+$teal:    #20c997 !default;
+$cyan:    #3498db !default;
 
-  /*-- scss:rules --*/
+/*-- scss:custom --*/
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 1,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+);
+
+$utilities: (
+  "width": (
+    property: width,
+    class: w,
+    responsive: true,
+    values: (
+      25: 25%,
+      45: 45%, 
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  )
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1024px,
+  xxl: 1320px
+);
+
+$font-family-base: Helvetica !default;
+$primary:       $black !default;
+
+$font-size-base:        1.125rem;
+$h1-font-size:          2.25rem;   
+$h2-font-size:          2rem;     
+
+/* brand colors used in site */
+$brand-indigo: #2A4DA0;
+$brand-orange: #FF6C0C;
+
+
+/*-- scss:overrides --*/
+body {
+
+  /* Navbar */
+
+  /*removes default Bootstrap navbar transition*/
+  .headroom-target,
+  header.headroom {
+    transition: none !important;
+    will-change: auto !important;
+  }
+  header.headroom--pinned,
+  header.headroom--unpinned {
+    transform: none !important;
+  }
+
+  .navbar {
+    height: 15vh;      
+    margin-bottom: -2px; // remove gap between navbar and body that happens on some pages  
+    transition: height 0.5s ease;  
+    background-color: black;    
+
+    .navbar-container{
+      height: 100%;
+    }
+
+    .navbar-brand-container {
+      overflow: hidden;
+      height: 100%;        // match .navbar height
+      max-width: 337px;
+
+
+      .navbar-brand {
+        height: 100%;     
+        width: 100%;
+        display: flex;       
+        align-items: center; 
+      }
+
+      .navbar-logo {
+        max-height: none;  // removes bootstrap 24px constraint
+        height: auto;         // scale with parent
+        max-width: 100%;
+        padding-left: 2rem;
+        transition: all 0.5s ease;
+      }
+      
+    }
+
+    &.compact {
+      height: 7vh;
+
+      .navbar-logo {
+        padding: 4rem;
+      }
+    }
+
+
+    a {
+      color: white;
+      font-weight: bold;
+      font-size: 1.15rem;
+
+      &:hover {
+        color: lightblue;
+      }
+    }
+
+    .nav-link {
+      &.active {
+        border-bottom: 2px solid lightblue; // underline if active
+      }
+    }
+
+    .dropdown-toggle.show {
+      color: lightblue;
+    }
+
+    .dropdown-menu .dropdown-item {
+      background-color: black;
+      color: white;
+      &:hover {
+        color: lightblue;
+      }
+    }
+  }
+ 
+  /* --- Footer -------------------------------------------- */
+  .footer {
+    background-color: #2A4DA0;
+  }
   
+  .nav-footer {
+    padding-bottom: 2rem;
+    color: white;
+    background-color: #2A4DA0;
+    text-align: center;
+    height: auto;
+    max-width: 100%; // make it container size
+    margin: 0 auto;
+  
+    // target left, center, right paragraphs inside nav-footer
+    &-left p,
+    &-center p,
+    &-right p {
+      text-align: center;
+      font-size: 1.125rem;
+      margin-bottom: 30px;
+    }
+  
+    // target images inside nav-footer areas
+    &-left img,
+    &-center img,
+    &-right img {
+      height: 50px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  }
+  
+  .page-layout-custom {
+    margin: 0 auto; // centers the page layout
+  }
+
+  /* Science Team thumbnails */
+  #listing-science-team{
+    .grid{
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    img {
+      width: auto !important; // need to override bootstrap
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+    }
+  }
+
+  /* Collaborator Team thumbnails */
+  #listing-collab-team{
+    
+    .grid{
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    img{
+      width: auto !important; // need to override bootstrap
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+    }
+  }
+
+
+  /* center content inside listing cards */
+  .quarto-listing {
+    .g-col-1 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* --- Cards ---------------------------------------------- */
+  .card{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+
+    .card-body{
+
+      .listing-title { font-weight: 700; font-size: 1.2rem; }
+      .listing-subtitle,
+      .listing-description { font-size: .95rem; color: #333; text-align: center;}
+      
+    }
+  }
+
+  /* --- About page --------------------------------------- */
+  .quarto-about-solana .about-entity{
+
+    .quarto-title {
+      display: flex;
+      flex-direction: column;
+      padding-left: 4rem;
+      gap: 0.5rem;
+
+      .subtitle{
+        font-size: 1.625rem;
+      }
+    }
+
+    .about-links {      
+      column-gap: 1.25rem !important; // need to ovverride bootstrap media queries
+      row-gap: 0.75rem !important;
+      align-items: flex-start;
+
+      .about-link {
+        display: flex;
+        padding: 0.375rem 1.25rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        align-self: stretch;
+        border: 2px solid #000;
+        border-radius: 1.875rem;
+        color: #5B5B5B;
+        transition: all .3s ease;
+        transform: translate(0, 0);
+  
+        .about-link-text { 
+          color: #5B5B5B;
+          font-size: 1.25rem; 
+        }
+    
+        &:hover {
+          background-color: #EEF4F6;
+          border-color: $brand-indigo;
+          color: $brand-indigo;
+          transform: translate(.5px, -1px);
+
+          .about-link-text { 
+            color: $brand-indigo;
+          }
+        }
+    
+        /* standard <i> icons */
+        i           { font-size: 1.25rem; line-height: 1; }
+    
+        /* iconify icons */
+        iconify-icon { width: 1.25rem; margin-right: .5rem; }
+      }
+    }
+
+    #title-block-header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #C8C7C7;
+      padding-bottom: 6rem;
+    }
+    
+    .about h1 {
+      padding-bottom: 2rem;      /* top & bottom gap = 1.5 rem */
+    }
+
+    .about-section {
+      padding: 5.5rem 8rem 0rem;
+
+      #education,
+      #professional-experience { margin-top: 6rem; }
+
+      #professional-experience { margin-bottom: 6rem; }
+    }
+  }
+
+  /* ---------- About Page References -------------------------- */
+  .references-wrapper{
+    background-color:#F9F5F1;
+
+    .about-references{
+      padding: 0rem 8rem;
+      
+      h1{
+        padding-top: 1rem;
+      }
+
+      #refs{
+        padding-bottom: 4rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  /* ---------- Clouds Story block -------------------------- */
+  .plots{
+    
+    .globe-section{ 
+      padding-bottom: 3rem;
+
+      .panel-input{
+        background: #EEF4F6 !important;
+        padding: 2rem 3rem !important;
+      }
+
+      canvas{
+        background-color: white;
+        align-self: center;
+      }
+
+      p,
+      label,
+      input[type="number"]{
+        font-size: 1.5rem;
+      }
+
+      input[type="number"]{
+        width: 6.5rem;
+        text-align: center; 
+      }
+    }
+
+    .tab-content{
+      background-color: #EEF4F6;
+
+      p{
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      svg{
+        background-color: white !important; //override ojs
+      }
+    }
+  }
+
+  #listing-blog-list {
+
+    .quarto-post{
+      padding-top: 3.125rem;
+      padding-bottom: 3.125rem;
+      margin-bottom: 0;
+      gap: 2.5rem;
+
+      .thumbnail{
+        display: flex;
+        justify-content: center;
+        > p:first-child {
+          display: none !important; //remove weird paragraph that appears ontop of the image due to bootstrap
+        }
+        
+        img{
+          margin-top: 0;
+          max-width: 22rem;
+          max-height: 14.5rem;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+
+    .listing-date{
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+
+    .listing-author{
+      font-size: 1.125rem;
+    }
+  
+    .listing-title a{
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+  
+    .listing-subtitle {
+      margin: 0 0 0.75rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .listing-categories{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-bottom: 1.25rem;
+      
+      .listing-category {
+        display: flex;
+        padding: 0.375rem 1.25rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        text-transform: none;
+        font-size: 1.125rem;
+        border-radius: 1.875rem;
+        border: 2px solid black;
+        color: #5B5B5B;
+        transition: all .2s ease;
+        transform: translate(0, 0);
+        
+        &:hover {
+          background-color: #EEF4F6;
+          border-color: $brand-indigo;
+          color: $brand-indigo;
+          transform: translate(.5px, -1px);
+        }
+      }
+    }
+  
+    .listing-description a{
+      font-size: 1.125rem;
+    }
+  }
+
+  /* ---------- News Article block -------------------------- */
+  .quarto-about-marquee {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 8rem 3rem 8rem !important;
+    
+      #title-block-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;      
+        margin-bottom: 0rem;
+        
+        img {
+          order: 99;  // force image to bottom
+          display: block;
+          margin: 0 auto;
+          width: auto  !important;
+          height: auto;
+          max-width: 100%;
+          max-height: 50rem;
+        }
+
+        .quarto-categories{
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+
+          .quarto-category{
+            display: flex;
+            color: #5B5B5B;
+            padding: 0.375rem 1.25rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            font-size: 1.125rem;
+            text-transform: none;
+            border-radius: 1.875rem;
+            border: 2px solid black;
+            opacity: 1;
+            transition: all .2s ease;
+            transform: translate(0, 0);
+            
+            &:hover {
+              background-color: #EEF4F6;
+              border-color: $brand-indigo;
+              color: $brand-indigo;
+              transform: translate(.5px, -1px);
+            }    
+          }
+        }
+
+        .quarto-title-meta{
+          grid-column-gap: 2.5rem !important; 
+          padding-bottom: 2rem;
+
+          .quarto-title-meta-heading{
+            font-size: 1.125rem;
+            font-weight: 700;
+            opacity: 1;
+          }
+
+          .quarto-title-meta-contents{
+            font-size: 1.125rem;
+          }
+        }
+      }
+      
+  }
+
+  .article-contents{
+    padding: 0rem 7rem 9rem 7rem;
+  }
+
+  /* ---------- References block -------------------------- */
+  #refs {
+    a            { color: $brand-orange; }
+    .csl-entry   { margin-bottom: 1rem; }
+  }
+
+  /* default link colour and decoration*/
+  a {
+    color: #0645ad;
+    text-decoration: underline;
+  }
+}
+
+
+

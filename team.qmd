@@ -1,12 +1,11 @@
 ---
-pagetitle: "ScienceTeam | Carbon-I"
-toc: true
+toc: false
 lightbox:
   match: auto
   effect: fade
 format:
   html:
-    css: styles/other-background.css
+    css: styles/custom.css
 listing:
   - id: science-team
     contents: "people/ScienceTeam/*.qmd"
@@ -14,35 +13,40 @@ listing:
     image-height: 250px
     grid-columns: 4
     fields: [image, title, subtitle, description]
-    grid-item-align: left
+    grid-item-align: center
     sort: sortby
-  - id: coll-team
+  - id: collab-team
     contents: "people/Collaborators/*.qmd"
     type: grid
-    image-height: 150px
-    grid-columns: 6
-    fields: [image, title, description]
-    grid-item-align: left
+    image-height: 180px
+    grid-columns: 5
+    fields: [image, title, subtitle]
+    grid-item-align: center
     sort: sortby
  
   
 ---
 
+:::: {.hero-small .hero-gradient .hero-team}
+::: {.container}
+# **OUR TEAM**
+:::
+::::
 
-
-## Science Team
-
-::: {.callout-note}
+:::{.container .text-start .mx-auto .my-5 .w-45}
 The Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.
 :::
 
 
+::::{.container}
 :::{#science-team}
 :::
+::::
 
-## Collaborators
-
-:::{#coll-team}
+::::: {.wrapper .py-4 style="background-color: #F8F7F0;"}
+:::: {.container}
+# Collaborators {.pb-5}
+::: {#collab-team}
 :::
-
-
+::::
+:::::

@@ -1,14 +1,14 @@
 ---
 title: "Chris O'Dell"
+toc: false
 started: "2020"
-image: /img/people/odell.jpg
-subtitle: "Collaborator"
-description: "Colorado State University, Fort Collins, CO, USA"
+image: ../../img/people/odell.jpg
+subtitle: "Collaborator <br> Colorado State University, Fort Collins, CO, USA"
 sortby: "?"
 #bibliography: ../../publications/sanghavi2024_doi.bib
 
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -19,7 +19,19 @@ about:
       href: https://scholar.google.com/citations?user=GxCn_64AAAAJ&hl=en
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0271-8433
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Chris O'Dell**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Chris O'Dell is a Senior Research Scientist at the Cooperative Institute for Research in the Atmosphere, Colorado State University.  His research focuses on improving retrievals of greenhouse gases from satellite instruments.
 
@@ -38,3 +50,6 @@ Chris O'Dell is a Senior Research Scientist at the Cooperative Institute for Res
 - [2012 – 2015:]{.fw-bold} 	Assistant Professor of Atmospheric Science, Colorado State University
 - [023 – present:]{.fw-bold} 	Research Scientist, Colorado State University
 
+:::
+::::
+:::::

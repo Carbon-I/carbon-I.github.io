@@ -4,6 +4,10 @@ description: "AAAS media fellow Noah Haggerty reports on our journey "
 author: "Christian Frankenberg"
 date: "07/02/2024"
 image: "https://ca-times.brightspotcdn.com/dims4/default/c1d48a3/2147483647/strip/true/crop/4951x3300+0+1/resize/2000x1333!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2f%2Fbd%2Ff281ce604373a2bc3f0498a76d96%2Favirris-jpl-004.jpg"
+toc: false
+about:
+  id: about-heading
+  template: marquee
 categories:
   - Greenhouse Gases
   - Earth System Explorer
@@ -11,7 +15,14 @@ categories:
   - Remote Sensing
 ---
 
+:::: {.container}
+::: {.listing-header}
+## [**NEWS** | **LA Times article**](../news.qmd#blog-list)
+:::
+::: {#about-heading}
+:::
 
+::: {.article-contents}
 ## LA Times article on Carbon-I efforts
 
 AAAS media fellow [Noah Haggerty](https://www.aaas.org/programs/mass-media-fellowship/noah-haggerty) just published a nice article on our efforts to tackle greenhouse gases from airborne and satellite platforms, paving the way for the Carbon-I mission concept. The article can be found [here](https://www.latimes.com/environment/story/2024-07-02/nasa-jpl-hopes-to-boost-this-satellites-vision). It nicely outlines our path from the [Four Corners campaign](https://www.pnas.org/doi/full/10.1073/pnas.1605617113) to more routine observations of methane plumes. We have come a long way and have to go further still. Maybe we should follow up with a post here about the history of methane observations from space...  
@@ -27,3 +38,7 @@ This two-step process for selecting missions is new for NASA’s Earth science p
 In the meantime, the Carbon-I team is focused on showing NASA that it has the technical know-how to execute the project on time and under budget.
 
 “I think all four of the missions in the current phase are absolutely worthwhile scientific missions,” said Michalak, “and 50% odds are not bad odds for a satellite mission.”
+:::
+
+::::
+

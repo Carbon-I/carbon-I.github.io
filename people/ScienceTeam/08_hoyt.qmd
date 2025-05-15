@@ -1,12 +1,12 @@
 ---
 title: "Alison Hoyt"
+toc: false
 started: "2015"
-image: /img/people/hoyt.jpeg
-subtitle: "Flux validation lead"
-description: "Stanford"
+image: ../../img/people/hoyt.jpeg
+subtitle: "Flux validation lead <br> Stanford"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -15,6 +15,15 @@ about:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-2810-1722 
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Alison Hoyt**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Alison Hoyt is an Assistant Professor of Earth System Science at Stanford.  She studies tropical soil carbon and greenhouse gas emissions and their response to climate and land use change, with a particular focus on the carbon cycle of tropical wetlands and peatlands. Her research group takes field measurement of CO<sub>2</sub> and CH<sub>4</sub> emissions from these ecosystems, as well as other biogeochemical, isotopic, and hydrological measurements, and synthesizes them with a combination of modeling and remote sensing to understand ecosystem processes and changes resulting from climate and land use change. She has conducted fieldwork across the tropics, including in Southeast Asia, Africa, and South America.
 
@@ -30,3 +39,8 @@ Alison Hoyt is an Assistant Professor of Earth System Science at Stanford.  She 
 ## Professional Experience
 
 - [2016-present:]{.fw-bold} Assistant Professor, 	Stanford
+
+:::
+::::
+:::::
+

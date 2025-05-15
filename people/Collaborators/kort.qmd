@@ -1,14 +1,14 @@
 ---
 title: "Eric Kort"
+toc: false
 started: "2020"
-image: /img/people/kort.jpeg
-subtitle: "CH4 and N2O expert"
-description: "University of Michigan"
+image: ../../img/people/kort.jpeg
+subtitle: "CH4 and N2O expert <br> University of Michigan"
 sortby: "1"
 #bibliography: ../../publications/sanghavi2024_doi.bib
 
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -16,9 +16,22 @@ about:
       href: https://scholar.google.com/citations?user=hN5ryzgAAAAJ&hl=en&oi=ao
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0003-4940-7541
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
 
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Eric Kort**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
+
 Eric Kort is ... 
+
 ## Education
 
 - [PhD in BLA]{.fw-bold} | University of XYZ | 2004 - 2008
@@ -28,3 +41,7 @@ Eric Kort is ...
 
 - [2015-present:]{.fw-bold} 	BLA
 - [2014-2015:]{.fw-bold} 	BLABLA
+
+:::
+::::
+:::::

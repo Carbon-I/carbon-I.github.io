@@ -1,12 +1,12 @@
 ---
 title: "Alex Turner"
+toc: false
 started: "2021"
-image: /img/people/turner.jpeg
-subtitle: "Atmospheric Chemistry & Carbon Cycle feedbacks"
-description: "University of Washington"
+image: ../../img/people/turner.jpeg
+subtitle: "Atmospheric Chemistry & Carbon Cycle feedbacks <br> University of Washington"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -21,9 +21,20 @@ about:
       text: Website
       href: https://alexjturner.github.io/index.html
 bibliography: ../../publications/turner.bib
+csl: ../../styles/agu.csl
 nocite: |
   @*
 ---
+
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Alex Turner**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 Alex Turner is an Assistant Professor of Atmospheric Sciences at the University of Washington where he works on atmospheric chemistry and the carbon cycle.
 
 ## Education
@@ -35,3 +46,7 @@ Alex Turner is an Assistant Professor of Atmospheric Sciences at the University 
 
 - [2021 - present:]{.fw-bold} Assistant Professor,  University of Washington 
 - [2017 - 2020:]{.fw-bold}   Miller Postdoctoral Fellow, University of California at Berkeley
+
+:::
+::::
+:::::
