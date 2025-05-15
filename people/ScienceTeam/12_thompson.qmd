@@ -1,12 +1,12 @@
 ---
 title: "David Thompson"
+toc: false
 started: "2015"
-image: /img/people/thompson.jpg
-subtitle: "Calibration Lead"
-description: "JPL"
+image: ../../img/people/thompson.jpg
+subtitle: "Calibration Lead <br> JPL"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -25,7 +25,17 @@ about:
       href: https://orcid.org/0000-0003-1100-7550
 ---
 
-David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing. David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso]. He is currently the Instrument Scientist for NASA's EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration. In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit]. David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT.
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **David Thompson**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
+
+David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laboratory in Pasadena, California. His work advances the theory and practice of imaging spectroscopy for remote sensing. David achieved the first detection of a facility-scale methane superemitter from orbit [@thompson2016aliso]. He is currently the Instrument Scientist for NASA's EMIT imaging spectrometer mission, responsible for performance assessment, radiometric calibration, and spectral calibration. In this role, he also spearheaded a demonstration of the first active on-orbit FPA alignment, achieving positional adjustments with sub-micron precision [@thompson2024emit]. David pioneered the use of optimal estimation algorithms for atmosphere/surface estimation by broadband visible-shortwave imaging spectrometers [@thompson2018optimal], a technique which is now considered state of the art, and is used operationally by EMIT. [@htdfdf]
 
 ## Education
 
@@ -40,4 +50,8 @@ David R. Thompson is a Senior Research Scientist at the Jet Propulsion Laborator
 -   [2018-present:]{.fw-bold} Instrument Scientist, EMIT Imaging Spectrometer Mission
 -   [2016-present:]{.fw-bold} Investigation Scientist, AVIRIS Airborne Imaging Spectrometer
 -   [2016-present:]{.fw-bold} Technical Group Lead, Imaging Spectroscopy Group at Jet Propulsion Laboratory
--   [2008-present:]{.fw-bold} Research Technologist, Jet Propulsion Laboratory\\
+-   [2008-present:]{.fw-bold} Research Technologist, Jet Propulsion Laboratory
+
+:::
+::::
+:::::

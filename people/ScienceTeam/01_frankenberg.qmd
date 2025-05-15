@@ -5,9 +5,8 @@ started: "2015"
 image: ../../img/people/frankenberg.png
 subtitle: Principal Investigator <br> Caltech/JPL
 sortby: "1"
-bibliography: ../../publications/cfranken2024_doi.bib
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -27,19 +26,21 @@ about:
       href: https://rsfralab.github.io/
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0546-5857 
+bibliography: ../../publications/cfranken2024_doi.bib
 csl: ../../styles/agu.csl
-
+nocite: |
+  @*
 ---
 
 
 ::::: {.container} 
 
-:::: {.team-header}
+::: {.listing-header}
 ## [**Science Team** | **Christian Frankenberg**](../../team.qmd#science-team)
 ::::
 
-:::: {#hero-heading}
-::: {.about-contents .px-6} 
+:::: {#about-heading}
+::: {.about-section} 
 <!-- .about-contents contains only the paragraph content below, not the title or image -->
 Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle. He is the Carbon-I Principal Investigator and responsible for the quality and direction of the investigation. 
 
@@ -47,56 +48,16 @@ Dr. Frankenberg has two decades of experience in remote sensing of atmospheric t
 
 ## Education
 
-- PhD in Environmental Physics | University of Heidelberg, Germany | 2002 -  2005
-- Diploma in Geoecology | University of Bayreuth, Germany  | 1996-2002  
+- [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
+- [Diploma in Geoecology]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
 
 ## Professional Experience
 
-- 2018-present: Professor, 	Caltech 
-- 2015-2018: Associate Professor, 	Caltech 
-- 2010-present: Scientist, 	Earth Atmospheric Science, JPL 
-- 2006- 2009:	VENI Postdoc at SRON-Netherlands Institute of Space Research
+- [2018-present:]{.fw-bold} Professor, 	Caltech 
+- [2015-2018:]{.fw-bold} Associate Professor, 	Caltech 
+- [2010-present:]{.fw-bold} Scientist, 	Earth Atmospheric Science, JPL 
+- [2006- 2009:]{.fw-bold}	VENI Postdoc at SRON-Netherlands Institute of Space Research
 
 :::
 ::::
 :::::
-
-:::::{.wrapper style="background-color:#F9F5F1"}
-::::{.container .px-7}
-# References {.pt-2}
-
-::: {#refs .pb-5 .pt-2}
-:::
-::::
-:::::
-
-```{=html}
-<script>
-const titleBlock = document.querySelector(".quarto-title-block");
-const image = document.querySelector(".about-image");
-
-const title = document.querySelector('.quarto-title');
-const logos = document.querySelector('.about-links');
-
-//place images into titleBlock area
-if (titleBlock && image) {
-  titleBlock.insertBefore(image, titleBlock.firstChild);
-}
-
-//place logos into title area
-if (title && logos) {
-  title.appendChild(logos);
-}
-
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-
-</script>
-```

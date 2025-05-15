@@ -1,12 +1,12 @@
 ---
 title: "Ermias Kebreab"
+toc: false
 started: "2015"
-image: /img/people/kebreab.png
-subtitle: "Agriculture Applications"
-description: "UC Davis"
+image: ../../img/people/kebreab.png
+subtitle: "Agriculture Applications <br> UC Davis"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -18,6 +18,16 @@ about:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-0833-1352
 ---
+
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Ermias Kebreab**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Ermias Kebreab is Professor of Sustainable Agriculture at University of California, Davis and works on reducing enteric methane emissions.
 
@@ -31,4 +41,8 @@ Ermias Kebreab is Professor of Sustainable Agriculture at University of Californ
 - [2009-present:]{.fw-bold} Professor, 	UC Davis 
 - [2007-2009:]{.fw-bold} 	Associate Professor/Canada Research Chair, University of Manitoba, Canada 
 - [2003-2006:]{.fw-bold} 	Adjustn Professor, University of Guelph, Canada 
-- [1998- 2002:]{.fw-bold}	Post Doctoral Fellow, University of Reading, UK\\
+- [1998- 2002:]{.fw-bold}	Post Doctoral Fellow, University of Reading, UK
+
+:::
+::::
+:::::

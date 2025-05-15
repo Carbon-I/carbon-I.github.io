@@ -1,12 +1,12 @@
 ---
 title: "Robert Green"
+toc: false
 started: "2015"
-image: /img/people/green.jpg
-subtitle: "Calibration support"
-description: "JPL"
+image: ../../img/people/green.jpg
+subtitle: "Calibration support <br> JPL"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -25,6 +25,15 @@ about:
       href: https://orcid.org/0000-0002-0546-5857 
 ---
 
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Robert Green**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
+
 Rob Green is a Senior Scientist at JPL. He is the Principal Investigator of the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) that originated to use of imaging spectroscopy for carbon dioxide and methane point source mapping. Principal Investigator of the competed Earth Ventures the Earth Surface Mineral Dust Source Investigation (EMIT) space imaging spectrometer that along with the Prime Mission objectives has demonstrated carbon dioxide and methane point source mapping from the ISS across six continents. Instrument Scientist or Co-I in five other space imaging spectrometers (CPM, MISE, M3, Hyperion, CRISM).
 
 
@@ -40,3 +49,7 @@ Rob Green is a Senior Scientist at JPL. He is the Principal Investigator of the 
 ## Professional Experience
 
 - [20xx-present:]{.fw-bold} Scientist, JPL
+
+:::
+::::
+:::::

@@ -1,14 +1,12 @@
 ---
 title: "Suniti Sanghavi"
+toc: false
 started: "2020"
-image: /img/people/suniti.jpg
-subtitle: "Radiative transfer modeler"
-description: "JPL/Caltech"
+image: ../../img/people/suniti.jpg
+subtitle: "Radiative transfer modeler <br> JPL/Caltech"
 sortby: "4"
-bibliography: ../../publications/sanghavi2024_doi.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -18,7 +16,20 @@ about:
       href: https://scholar.google.com/citations?user=fKACl6kAAAAJ&hl=en
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0003-0754-9154
+bibliography: ../../publications/sanghavi2024_doi.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Suniti Sanghavi**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Suniti Sanghavi is a remote sensing scientist at the Jet Propulsion Laboratory with a focus on radiative transfer modeling and inversion algorithm development.
 
@@ -34,4 +45,8 @@ Dr. Sanghavi recognized the need for fast and accurate radiative transfer modeli
 -   [2015-present:]{.fw-bold} Data scientist, 298K, JPL
 -   [2014-2015:]{.fw-bold} CSU Postdoc, JPL
 -   [2010-2013:]{.fw-bold} Caltech Postdoc, JPL
--   [2008-2009:]{.fw-bold} Postdoc at SRON-Netherlands Institute of Space Research\\
+-   [2008-2009:]{.fw-bold} Postdoc at SRON-Netherlands Institute of Space Research
+
+:::
+::::
+:::::

@@ -90,33 +90,25 @@ Carbon-I is the first to pair land-imaging spatial detail with high-resolution a
 
 ```{=html}
 <script>
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
-          entry.target.classList.add('animate', 'show');
-        } else {
-          entry.target.classList.add('show');      // no animation
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
+            entry.target.classList.add('animate', 'show');
+          } else {
+            entry.target.classList.add('show');      // no animation
+          }
         }
-      }
-    });
-  },
-  { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
-);
+      });
+    },
+    { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
+  );
 
-document.querySelectorAll('.mission').forEach(el => { 
-  observer.observe(el)
-});
-
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
+  document.querySelectorAll('.mission').forEach(el => { 
+    observer.observe(el)
+  });
 });
 </script>
 ```

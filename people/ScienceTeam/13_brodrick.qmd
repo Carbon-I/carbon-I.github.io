@@ -1,12 +1,12 @@
 ---
 title: "Philip Brodrick"
+toc: false
 started: "2015"
-image: /img/people/brodrick.jpeg
-subtitle: "Science Data System lead"
-description: "JPL"
+image: ../../img/people/brodrick.jpeg
+subtitle: "Science Data System lead <br> JPL"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -22,6 +22,15 @@ about:
       href: https://orcid.org/0000-0001-9497-7661 
 ---
 
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Philip Brodrick**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
+
 Philip G. Brodrick is a Data Scientist at the Jet Propulsion Laboratory in Pasadena, CA, working on the science and application of imaging spectroscopy.
 
 ## Education
@@ -35,3 +44,7 @@ Philip G. Brodrick is a Data Scientist at the Jet Propulsion Laboratory in Pasad
 - [2023-present:]{.fw-bold} Project Algorithm Scientist, SBG-VSWIR Imaging Spectrometer Mission
 - [2022-present:]{.fw-bold} Project Algorithm Scientist, EMIT Imaging Spectrometer Mission
 - [2019-present:]{.fw-bold} Data Scientist, Jet Propulsion Laboratory
+
+:::
+::::
+:::::

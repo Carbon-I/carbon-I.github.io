@@ -1,14 +1,12 @@
 ---
 title: "Andre Butz"
+toc: false
 started: "2018"
-image: /img/people/abutz.jpg
-subtitle: "Science team member"
-description: "Heidelberg University, Germany"
+image: ../../img/people/abutz.jpg
+subtitle: "Science team member <br> Heidelberg University, Germany"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -19,7 +17,20 @@ about:
       href: https://scholar.google.com/citations?hl=de&user=syIQ3FwAAAAJ 
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0003-0593-1608
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Andre Butz**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Andre Butz is Professor of Atmospheric Physics at the Institute of Environmental Physics at Heidelberg University, Germany. He is a member of the Carbon-I Science Team.
 
@@ -36,4 +47,9 @@ Dr. Butz’ research centers on understanding the variability and trends in the 
 - [2018-present:]{.fw-bold} Professor, 	Institute of Environmental Physics, Heidelberg University, Germany
 - [2016-2018:]{.fw-bold} 	Head of department, German Aerospace Center (DLR e.V); Professor, Meteorological Institute, University of Munich (LMU), Germany
 - [2011-2016:]{.fw-bold} 	Group leader (Emmy-Noether fellow of DFG), Karlsruhe Institute of Technology (KIT), Germany
-- [2007-2011:]{.fw-bold}	Postdoctoral research at SRON-Netherlands Institute of Space Research, The Netherlands\\
+- [2007-2011:]{.fw-bold}	Postdoctoral research at SRON-Netherlands Institute of Space Research, The Netherlands
+
+
+:::
+::::
+:::::

@@ -5,11 +5,8 @@ started: "2015"
 image: ../../img/people/michalak.jpg
 subtitle: "Deputy Principal Investigator <br> Carnegie Institution for Science / Stanford"
 sortby: "2"
-bibliography: ../../publications/michalak.bib
-nocite: |
-  @*
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -20,18 +17,21 @@ about:
       href: https://www.webofscience.com/wos/author/record/KBA-4622-2024
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6152-7979
+bibliography: ../../publications/michalak.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
-
 
 ::::: {.container} 
 
-:::: {.team-header}
+::: {.listing-header}
 ## [**Science Team** | **Anna Michalak**](../../team.qmd#science-team)
 ::::
 
-:::: {#hero-heading}
-::: {.about-contents .px-5} 
-<!-- .about-contents contains only the paragraph content below, not the title or image -->
+:::: {#about-heading}
+::: {.about-section} 
+
 Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie Institution for Science and Professor (by courtesy) of Earth System Science at Stanford. She works on characterizing the global carbon cycle and on climate impacts on coastal and inland water quality.
 
 ## Education
@@ -50,42 +50,3 @@ Anna Michalak is the Director of the Climate and Resilience Hub at the Carnegie 
 :::
 ::::
 :::::
-
-:::::{.wrapper style="background-color:#F9F5F1"}
-:::{.container .px-5}
-## References {.border-0}
-
-::: {#refs .pb-5 .pt-2}
-:::
-::::
-:::::
-
-```{=html}
-<script>
-const titleBlock = document.querySelector(".quarto-title-block");
-const image = document.querySelector(".about-image");
-
-const title = document.querySelector('.quarto-title');
-const logos = document.querySelector('.about-links');
-
-//place images into titleBlock area
-if (titleBlock && image) {
-  titleBlock.insertBefore(image, titleBlock.firstChild);
-}
-
-//place logos into title area
-if (title && logos) {
-  title.appendChild(logos);
-}
-
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-</script>
-```

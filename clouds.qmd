@@ -15,7 +15,7 @@ format:
 ---
 
 
-:::: {.hero .hero-gradient .hero-clouds}
+:::: {.hero-small .hero-gradient .hero-clouds}
 ::: {.container}
 # **Clouds**
 :::
@@ -69,9 +69,12 @@ viewof point = {
     context.canvas.onmousemove(event);
   };
 
-  context.canvas.onmousemove = ({layerX, layerY}) => {
+  context.canvas.onmousemove = (event) => {
     if (!mousedown) return;
-    render(projection.invert([layerX, layerY]));
+    const rect = context.canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    render(projection.invert([x, y]));
     context.canvas.dispatchEvent(new CustomEvent("input"));
   };
 
@@ -279,19 +282,4 @@ import {Plot} from "@mkfreeman/plot-tooltip"
 ```
 ::::
 :::::
-
-```{=html}
-<script>
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-
-</script>
-```
 

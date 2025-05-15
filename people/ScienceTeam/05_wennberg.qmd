@@ -1,12 +1,12 @@
 ---
 title: "Paul Wennberg"
+toc: false
 started: "2015"
-image: /img/people/wennberg.jpg
-subtitle: "Validation Lead"
-description: "Caltech"
+image: ../../img/people/wennberg.jpg
+subtitle: "Validation Lead <br> Caltech"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -24,7 +24,15 @@ about:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-6126-3854
 ---
-  
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Paul Wennberg**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 Paul Wennberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on atmospheric chemistry and the global carbon cycle.
 
 ## Education
@@ -39,9 +47,12 @@ Paul Wennberg is Professor of Environmental Sciences & Engineering (ESE) at Calt
 - [2014 – 2023]{.fw-bold} 	Director, The Linde Center for Global Environmental Science, Caltech
 - [2012 –	2023]{.fw-bold} 	Executive Officer for Environmental Science and Engineering
 - [2008 – 2011]{.fw-bold} 	Director, The Linde Center for Global Environmental Science, Caltech 
-- [2005	Visiting Professor, Department of Chemistry, University of Otago, New Zealand
+- [2005	Visiting Professor]{.fw-bold}, Department of Chemistry, University of Otago, New Zealand
 - [2005 – 2006]{.fw-bold} 	Secretary of the Atmospheric Sciences Section, American Geophysical Union
 - [2004 –]{.fw-bold} 	R. Stanton Avery Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
 - [2001 – 2004]{.fw-bold} 	Professor of Atmospheric Chemistry and Environmental Science and Engineering, California Institute of Technology
 - [1998 – 2001]{.fw-bold} 	Associate Professor of Atmospheric Chemistry and Environmental Engineering Science, California Institute of Technology
 
+:::
+::::
+:::::

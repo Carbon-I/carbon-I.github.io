@@ -15,19 +15,19 @@ listing:
     fields: [image, title, subtitle, description]
     grid-item-align: center
     sort: sortby
-  - id: coll-team
+  - id: collab-team
     contents: "people/Collaborators/*.qmd"
     type: grid
     image-height: 180px
     grid-columns: 5
-    fields: [image, title, description]
+    fields: [image, title, subtitle]
     grid-item-align: center
     sort: sortby
  
   
 ---
 
-:::: {.hero .hero-gradient .hero-team}
+:::: {.hero-small .hero-gradient .hero-team}
 ::: {.container}
 # **OUR TEAM**
 :::
@@ -46,22 +46,7 @@ The Carbon-I team includes experts in the global carbon cycle, remote sensing, f
 ::::: {.wrapper .py-4 style="background-color: #F8F7F0;"}
 :::: {.container}
 # Collaborators {.pb-5}
-::: {#coll-team}
+::: {#collab-team}
 :::
 ::::
 :::::
-
-
-```{=html}
-<script>
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-</script>
-```

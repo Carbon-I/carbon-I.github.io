@@ -13,7 +13,7 @@ format:
     fig-responsive: true
 ---
 
-:::: {.hero .hero-science}
+:::: {.hero-small .hero-science}
 ::: {.container}
 # **SCIENCE**
 :::
@@ -79,34 +79,25 @@ Carbon-I will investigate hotspots and flux heterogeneity globally and  use the 
 ```{=html}
 <script>
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
-          entry.target.classList.add('animate', 'show');
-        } else {
-          entry.target.classList.add('show');      // no animation
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.boundingClientRect.top > 0 && entry.boundingClientRect.bottom > window.innerHeight) {
+            entry.target.classList.add('animate', 'show');
+          } else {
+            entry.target.classList.add('show');      // no animation
+          }
         }
-      }
-    });
-  },
-  { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
-);
+      });
+    },
+    { threshold: 0.2 } // when 0.2 of the content appears in viewport, fire callback
+  );
 
-document.querySelectorAll('.science').forEach(el => { 
-  observer.observe(el)
+  document.querySelectorAll('.science').forEach(el => { 
+    observer.observe(el)
+  });
 });
-
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-
 </script>
 ```

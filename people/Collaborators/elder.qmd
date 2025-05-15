@@ -2,20 +2,29 @@
 title: "Clayton Elder"
 started: "2018"
 image: /img/people/elder.jpg
-subtitle: "Collaborator"
-description: "JPL"
+subtitle: "Collaborator <br> JPL"
 sortby: "?"
-bibliography: ../../publications/abutz.bib
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=yF91FwgAAAAJ&hl=en&oi=ao
-
+bibliography: ../../publications/abutz.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Bethany Ehlmann**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Clayton Elder merged the scales of in-situ observations with high resolution remote sensing datasets to constrain complex ecological processes in the Arctic
 
@@ -27,3 +36,8 @@ Clayton Elder merged the scales of in-situ observations with high resolution rem
 ## Professional Experience
 
 - [2018-present:]{.fw-bold} Whatever, wherre
+
+
+:::
+::::
+:::::

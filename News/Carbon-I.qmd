@@ -4,6 +4,10 @@ description: "Our journey for a satellite mission proposal to tackle greenhouse 
 author: "Christian Frankenberg"
 date: "03/06/2024"
 image: "https://carbon-i.github.io/img/Logo-Black2.png"
+toc: false
+about:
+  id: about-heading
+  template: marquee
 categories:
   - Greenhouse Gases
   - Spectroscopy
@@ -12,13 +16,20 @@ categories:
 ---
 
 
+:::: {.container}
+::: {.listing-header}
+## [**NEWS** | **Carbon-I proposal to NASA's ESE call**](../news.qmd#blog-list)
+:::
+::: {#about-heading}
+:::
+
+::: {.article-contents}
+# The Carbon-I Testbed (CITB)
 ## NASA's ESE call
 
 NASA's [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/) call solicits Principal Investigator (PI)-led space science investigations as recommended by The National Academies of Sciences, Engineering, and Medicine 2017 Decadal Survey for Earth Science and Applications from Space. Greenhouse gases were specifically mentioned a high priority. Thus, we put a proposal into the ring again, following years of work on high-spatial resolution greenhouse gas mapping, a journey that started with initial AVIRIS-NG measurements, the first ever controlled release experiments using aircrafts, large-scale mapping of the anomalous CH<sub>4</sub> enhancements in the Four-Corners region, and now with the success of EMIT.
 
 ## Carbon-I
-![](https://carbon-i.github.io/img/Logo-Black2.png)
-
 [Carbon-I](https://carbon-i.github.io/) is our response to NASA's ESE call, it can be considered a merger of the philosophies behind the original OCO mission and the high resolution mapping approaches that are now followed by EMIT, GHGSat, CarbonMapper, MethaneSat and others. We are eagerly awaiting a decision from NASA in April and are ready to hit the ground running. What could Carbon-I bring to the table? The combination of high spatial resolution and high enough spectral resolution for trace gas mapping solves two problems: 
 
 I) We will obtain enough data in the tropics, which has been a major problem for OCO-2, TROPOMI and other missions, mostly because shallow cumulus clouds have cloud gaps that are much smaller than the footprint size of current greenhouse gas sensors. This leads to periods of **data drought** in the humid tropics [Pre-print paper](https://essopenarchive.org/users/528524/articles/717473-data-drought-in-the-humid-tropics-how-to-overcome-the-cloud-barrier-in-greenhouse-gas-remote-sensing):
@@ -29,4 +40,7 @@ We have a great team and are doing something **different** with Carbon-I. The gr
 
 ## A Carbon-I website...
 Why create a website for something that isn't even funded yet? Honestly, Quarto makes this a lot more fun and provides an ideal system for scientists to run their own website, and describe science in fun interactive ways. [Carbon-I](https://carbon-i.github.io/) is still very rudimentary but creating some interactive graphics with ObservableJS has been fun, even though I **dislike** java script syntax. So it has been absolutely worth it and we learned a lot along the way...  
+
+:::
+::::
 

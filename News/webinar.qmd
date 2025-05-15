@@ -4,12 +4,25 @@ description: "Join the Carbon-I mission webinar series: Explore the future of gr
 author: "Carbon-I Team"
 date: "02/19/2025"
 image: "https://carbon-i.github.io/img/CarbonI-anim_whiteBG_small.gif"
+toc: false
+about:
+  id: about-heading
+  template: marquee
 categories:
   - Satellite Remote Sensing
   - Spectroscopy
   - High resolution mapping of carbon gases
   - Webinar
 ---
+
+:::: {.container}
+::: {.listing-header}
+## [**NEWS** | **Carbon-I Webinar**](../news.qmd#blog-list)
+:::
+::: {#about-heading}
+:::
+
+::: {.article-contents}
 
 ![](https://carbon-i.github.io/img/Logo-Black2.png)
 
@@ -42,3 +55,7 @@ This webinar is intended for a broad audience, with a particular focus on those 
 [Register here](https://events.gcc.teams.microsoft.com/event/ce0ebe70-ef73-4bd8-a683-1f633a39bfd1@545921e0-10ef-4398-8713-9832ac563dad)
 
 Additional in-depth webinars are planned—stay tuned for more details!
+
+:::
+
+::::

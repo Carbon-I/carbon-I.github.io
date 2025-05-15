@@ -15,7 +15,7 @@ bibliography: publications/cfranken2024_doi.bib
 csl: styles/agu.csl
 ---
 
-:::: {.hero .hero-gradient .hero-publications}
+:::: {.hero-small .hero-gradient .hero-publications}
 ::: {.container}
 # **PUBLICATIONS**
 :::
@@ -32,27 +32,3 @@ Carbon-I leverages the advances made by previous dedicated satellite missions su
 
 :::
 ::::
-
-::::: {.wrapper style="background-color:#F9FAEF"}
-:::: {.container .px-7}
-# References {.pt-4}
-
-::: {#refs .pb-5 .pt-2}
-:::
-::::
-:::::
-
-```{=html}
-<script>
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-
-</script>
-```

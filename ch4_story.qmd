@@ -17,7 +17,7 @@ csl: styles/agu.csl
 ---
 
 
-:::: {.hero .hero-gradient .hero-ch4}
+:::: {.hero-small .hero-gradient .hero-ch4}
 ::: {.container}
 # **CH<sub>4</sub>**
 :::
@@ -195,18 +195,3 @@ import {Plot} from "@mkfreeman/plot-tooltip"
 :::
 ::::
 :::::
-
-```{=html}
-<script>
-const nav = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('compact');
-  } else {
-    nav.classList.remove('compact');
-  }
-});
-
-</script>
-```

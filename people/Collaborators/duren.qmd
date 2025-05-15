@@ -1,22 +1,31 @@
 ---
 title: "Riley Duren"
+toc: false
 started: "2018"
-image: /img/people/duren.png
-subtitle: "Collaborator"
-description: "Carbon Mapper"
+image: ../../img/people/duren.png
+subtitle: "Collaborator <br> Carbon Mapper"
 sortby: "?"
-
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=I6eIZpQAAAAJ&hl=en 
 bibliography: ../../publications/duren.bib
+csl: ../../styles/agu.csl
 nocite: |
   @*
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Collaborators** | **Riley Duren**](../../team.qmd#collab-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Riley Duren is Chief Executive Officer of [Carbon Mapper](https://carbonmapper.org/), a non-profit organization focused on delivering precise and transparent methane and carbon dioxide data to guide emissions mitigation action. Since 2010 he has led research efforts to develop and test multi-scale monitoring systems that support quantification and mitigation of greenhouse gas emissions including serving as principal investigator for multiple projects funded by NASA, NIST and California agencies. 
 
@@ -37,3 +46,6 @@ Riley Duren is Chief Executive Officer of [Carbon Mapper](https://carbonmapper.o
 - [1996 – 2000]{.fw-bold} Metrology System Engineer, Shuttle Radar Topography Mission, JPL
 - [1988 – 1995]{.fw-bold} Payload Integration Engineer, NASA Kennedy Space Center
 
+:::
+::::
+:::::

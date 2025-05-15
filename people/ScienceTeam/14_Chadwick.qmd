@@ -1,12 +1,11 @@
 ---
 title: "K. Dana Chadwick"
 started: "2015"
-image: /img/people/chadwick.jpg
-subtitle: "Applications Lead"
-description: "JPL"
+image: ../../img/people/chadwick.jpg
+subtitle: "Applications Lead <br> JPL"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
@@ -21,6 +20,15 @@ about:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-5633-4865 
 ---
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **K. Dana Chadwick**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Dana Chadwick is a Scientist at JPL and Mission Applications Lead, for the Earth Surface Mineral Dust Source Investigation (EMIT).
 
@@ -38,3 +46,7 @@ California Berkeley, 2008
 ## Professional Experience
 
 - [2018-present:]{.fw-bold} Scientist, JPL
+
+:::
+::::
+:::::

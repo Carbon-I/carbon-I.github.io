@@ -69,7 +69,9 @@ website:
 
 format:
   html:
-    include-after-body: includes/custom-footer-banner.html
+    include-after-body: 
+      - includes/custom-footer-banner.html
+      - includes/page-scripts.html
     mainfont: "Roboto"
     theme:
       - default

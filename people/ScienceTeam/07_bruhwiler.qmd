@@ -1,21 +1,32 @@
 ---
 title: "Lori Bruhwiler"
+toc: false
 started: "2015"
-image: /img/people/Lori.jpg
-subtitle: "NOAA cross-validation, flux inversions"
-description: "NOAA"
+image: ../../img/people/Lori.jpg
+subtitle: "NOAA cross-validation, flux inversions <br> NOAA"
 sortby: "5"
 about:
-  id: hero-heading
+  id: about-heading
   template: solana
   image-shape: round
   links:
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-3554-9250 
 bibliography: ../../publications/bruhwiler.bib
+csl: ../../styles/agu.csl
 nocite: |
   @*
 ---
+
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Lori Bruhwiler**](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
 
 Lori Bruhwiler is the principal investigator of the NOAA CarbonTracker-CH<sub>4</sub> modeling system. She has extensive experience using atmospheric models and in situ network observations to constrain the atmospheric methane budget. Her most recent work examines the use of methane isotopic data to improve our ability to partition the global methane budget among microbial and fossil fuel contributions.
 
@@ -24,4 +35,8 @@ Lori Bruhwiler is the principal investigator of the NOAA CarbonTracker-CH<sub>4<
 - [PhD in Astrophysical, Planetary and Atmospheric Science]{.fw-bold} | University of Colorado, Boulder | 1992
 - [M.S., Astrophysical, Planetary and Atmospheric Science]{.fw-bold} | University of Colorado, Boulder  | 1988
 - [B.S., Physics, Mathematics]{.fw-bold} |  University of Texas, Austin | 1985
+
+:::
+::::
+:::::
 
