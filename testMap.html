@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,9 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-20783d3a45f30aadfada544b1493de16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bd8f7b51100e43c44759055892d297d3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -127,7 +125,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/Logo-Black2.png" alt="" class="navbar-logo">
+    <img src="./img/Logo-White2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -135,7 +133,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
@@ -156,7 +154,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visual-stories" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Visual Stories</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-visual-stories">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-visual-stories">    
         <li>
     <a class="dropdown-item" href="./ch4_story.html">
  <span class="dropdown-text">CH4</span></a>
@@ -171,8 +169,6 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <a class="nav-link" href="./news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Carbon-I/"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -501,6 +497,74 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 
 
 </main> <!-- /main -->
+<div class="footer-banner">
+    <img src="./img/Logo-White2.png">
+    <p>Closing tropical data gaps to resolve global carbon-budget uncertainties</p>
+</div>
+
+<!-- Navbar Scale Animation-->
+<script>
+    const nav = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('compact');
+      } else {
+        nav.classList.remove('compact');
+      }
+    });
+</script>
+
+<!-- For About Page Layout-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleBlock = document.querySelector(".quarto-title-block");
+    const image = document.querySelector(".about-image");
+
+    const title = document.querySelector('.quarto-title');
+    const logos = document.querySelector('.about-links');
+
+    //place images into titleBlock area
+    if (titleBlock && image) {
+    titleBlock.insertBefore(image, titleBlock.firstChild);
+    }
+
+    //place logos into title area
+    if (title && logos) {
+    title.appendChild(logos);
+    }
+  });
+</script>
+
+<!-- Only add references if there is a bibliography-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refs = document.getElementById("refs");
+      if (!refs) return;
+    
+      document.querySelectorAll('#quarto-appendix').forEach(el => el.remove());
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "references-wrapper";
+    
+      const container = document.createElement("div");
+      container.className = "container about-references";
+    
+      const heading = document.createElement("h1");
+      heading.textContent = "References";
+    
+      container.appendChild(heading);
+      container.appendChild(refs);
+      wrapper.appendChild(container);
+    
+      const footerBanner = document.querySelector(".footer-banner");
+      if (footerBanner && footerBanner.parentNode) {
+        footerBanner.parentNode.insertBefore(wrapper, footerBanner);
+      } else {
+        document.body.appendChild(wrapper);
+      }
+    });
+</script>
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwcm9qTmFtZSA9IElucHV0cy5yYWRpbyhcbiAgbmV3IE1hcChbXG4gICAgW1wiT3J0aG9ncmFwaGljXCIsIFwib3J0aG9cIl0sXG4gICAgW1wiRXF1aXJlY3Rhbmd1bGFyXCIsIFwiZXF1aXJlY3Rhbmd1bGFyXCJdLFxuICAgIFtcIkhpbGxcIiwgXCJoaWxsXCJdLFxuICAgIFtcIkVxdWFsLUVhcnRoXCIsIFwiZXF1YWxlYXJ0aFwiXSxcbiAgICBbXCJBekVxdWFsQXJlYVwiLCBcImF6ZXF1YWxhcmVhXCJdXG4gIF0pLFxuICB7XG4gICAgbGFiZWw6IFwiQ2hvb3NlIHByb2plY3Rpb25cIixcbiAgICB2YWx1ZTogXCJoaWxsXCJcbiAgfVxuKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZDMgPSByZXF1aXJlKFwiZDNAN1wiLCBcImQzLWdlby1wcm9qZWN0aW9uQDRcIiwgXCJkMy1pbmVydGlhQDAuNFwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoibmV0Y2RmID0gaW1wb3J0KFwiaHR0cHM6Ly9jZG4uc2t5cGFjay5kZXYvbmV0Y2RmanNAMi4wLjI/bWluXCIpLnRoZW4oKGQpID0+IGQuTmV0Q0RGUmVhZGVyKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicmVhZGVyID0gbmV3IG5ldGNkZihhd2FpdCBmZXRjaChcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9jZnJhbmtlbi9zMl9kYXRhL21haW4vZmlsZXMvXCIgKyBzb3VyY2Uuc3JjKS50aGVuKGZ1bmN0aW9uKHJlc3BvbnNlKSB7XG4gICAgcmV0dXJuIHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG4gIH0pKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoic291cmNlcyA9IFtcbiAge3NyYzogXCJTMl8yMDBfMjAwMF9tZWRpYW4ubmNcIiwgdmFyaWFibGU6IFwiY2xvdWRfZnJlZV9mcmFjdGlvbjAyXCIsIGxhYmVsOiBcIk1lZGlhbiBSYXRpb1wifSxcbl1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InNvdXJjZSA9IHNvdXJjZXNbZGF0YVNvdXJjZV1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImlzaXplID0gcmVhZGVyLmhlYWRlci5kaW1lbnNpb25zWzBdLnNpemVcbmpzaXplID0gcmVhZGVyLmhlYWRlci5kaW1lbnNpb25zWzFdLnNpemVcbnpzaXplID0gcmVhZGVyLmhlYWRlci5kaW1lbnNpb25zWzJdLnNpemVcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImlzaXplXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJqc2l6ZVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InpzaXplXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9wb2pzb24gICAgID0gcmVxdWlyZSgndG9wb2pzb24nKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZhbHVlcyA9IHtcbiAgdmFyIHZhbHVlcyA9IG5ldyBGbG9hdDMyQXJyYXkocmVhZGVyLmdldERhdGFWYXJpYWJsZShzb3VyY2UudmFyaWFibGUpKTtcbiAgcmV0dXJuIHZhbHVlcztcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwb2x5Z29ucyA9IGNvbnRvdXJzKGN5bGluZGVyKHRvcGRvd24odmFsdWVzKSkpLm1hcChpbnZlcnQpLm1hcChmdW5jdGlvbihwKSB7XG4gIHJldHVybiBwLnR5cGUgPT0gXCJQb2x5Z29uXCIgPyBzaW1wbGlmeShwLCAwLjAxKSA6IHA7XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZ1bmN0aW9uIHNpbXBsaWZ5KHBvbHlnb24sIHMpIHtcbiAgICB2YXIgdG9wb2xvZ3kgPSB0b3BvanNvbi50b3BvbG9neSh7cG9seWdvbjogcG9seWdvbn0pO1xuICAgIHRvcG9sb2d5ID0gdG9wb2pzb24uc2ltcGxpZnkodG9wb2pzb24ucHJlc2ltcGxpZnkodG9wb2xvZ3kpLCBzKTtcbiAgICB0b3BvbG9neSA9IHRvcG9qc29uLmZpbHRlcih0b3BvbG9neSwgciA9PiB0b3BvbG9neS5hcmNzW3JbMF1dLmxlbmd0aCA+IDIpO1xuICAgIHZhciBwID0gdG9wb2pzb24uZmVhdHVyZSh0b3BvbG9neSwgdG9wb2xvZ3kub2JqZWN0cy5wb2x5Z29uKTtcbiAgICBwLnZhbHVlID0gcG9seWdvbi52YWx1ZTtcbiAgICByZXR1cm4gcDtcbiAgfVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZ1bmN0aW9uIGludmVydChkKSB7XG4gICAgdmFyIHNoYXJlZCA9IHt9O1xuICAgIHZhciBwID0ge1xuICAgICAgdHlwZTogXCJQb2x5Z29uXCIsXG4gICAgICBjb29yZGluYXRlczogZDMubWVyZ2UoZC5jb29yZGluYXRlcy5tYXAoZnVuY3Rpb24ocG9seWdvbikge1xuICAgICAgICByZXR1cm4gcG9seWdvbi5tYXAoZnVuY3Rpb24ocmluZykge1xuICAgICAgICAgIHJldHVybiByaW5nLm1hcChmdW5jdGlvbihwb2ludCkge1xuICAgICAgICAgICAgcmV0dXJuIFtwb2ludFswXSAvIChpc2l6ZSArIDEpICogMzYwIC0gMTgwLCA5MCAtIHBvaW50WzFdIC8ganNpemUgKiAxODBdO1xuICAgICAgICAgIH0pLnJldmVyc2UoKTtcbiAgICAgICAgfSk7XG4gICAgICB9KSlcbiAgICB9O1xuXG4gICAgLy8gQWRkIGNvbnRhY3QgcG9pbnRzIHdpdGggdGhlIGFudGltZXJpZGlhbi5cbiAgICB2YXIgZXBzaWxvbiA9IDFlLTU7XG4gICAgcC5jb29yZGluYXRlcyA9IHAuY29vcmRpbmF0ZXNcbiAgICAubWFwKGZ1bmN0aW9uKHJpbmcpIHtcbiAgICAgIHJpbmcucG9wKCk7XG4gICAgICB2YXIgciA9IFtdO1xuICAgICAgZm9yICh2YXIgaSA9IDAsIGwgPSByaW5nLmxlbmd0aDsgaSA8IGw7IGkrKykge1xuICAgICAgICB2YXIgcCA9IHJpbmdbaV07XG4gICAgICAgIGlmIChwWzBdID09PSAxODAgJiYgcmluZ1soaStsLTEpJWxdWzBdIDwgMTgwKVxuICAgICAgICBcdHIucHVzaChbcFswXSwgcFsxXSArIGVwc2lsb25dKTtcbiAgICAgICAgaWYgKHBbMF0gPT09IC0xODAgJiYgcmluZ1soaStsLTEpJWxdWzBdID4gLTE4MClcbiAgICAgICAgXHRyLnB1c2goW3BbMF0sIHBbMV0gLSBlcHNpbG9uXSk7XG4gICAgICAgIHIucHVzaChwKTtcbiAgICAgICAgaWYgKHBbMF0gPT09IDE4MCAmJiByaW5nWyhpKzEpJWxdWzBdIDwgMTgwKVxuICAgICAgICBcdHIucHVzaChbcFswXSwgcFsxXSAtIGVwc2lsb25dKTtcbiAgICAgICAgaWYgKHBbMF0gPT09IC0xODAgJiYgcmluZ1soaSsxKSVsXVswXSA+IC0xODApXG4gICAgICAgIFx0ci5wdXNoKFtwWzBdLCBwWzFdICsgZXBzaWxvbl0pO1xuICAgICAgfVxuICAgICAgci5wdXNoKHJbMF0pO1xuICAgICAgcmV0dXJuIHI7XG4gICAgfSk7XG5cbiAgICAvLyBSZWNvcmQgdGhlIHktaW50ZXJzZWN0aW9ucyB3aXRoIHRoZSBhbnRpbWVyaWRpYW4uXG4gICAgcC5jb29yZGluYXRlcy5mb3JFYWNoKGZ1bmN0aW9uKHJpbmcpIHtcbiAgICAgIHJpbmcuZm9yRWFjaChmdW5jdGlvbihwKSB7XG4gICAgICAgIGlmIChwWzBdID09PSAtMTgwIHx8IHBbMF0gPT09IDE4MCkge1xuICAgICAgICAgIHNoYXJlZFtwWzFdXSB8PSBwWzBdID09PSAtMTgwID8gMSA6IDI7XG4gICAgICAgIH1cbiAgICAgIH0pO1xuICAgIH0pO1xuXG4gICAgLy8gT2Zmc2V0IGFueSB1bnNoYXJlZCBhbnRpbWVyaWRpYW4gcG9pbnRzIHRvIHByZXZlbnQgdGhlaXIgc3RpdGNoaW5nLlxuICAgIHAuY29vcmRpbmF0ZXMuZm9yRWFjaChmdW5jdGlvbihyaW5nKSB7XG4gICAgICByaW5nLmZvckVhY2goZnVuY3Rpb24ocCkge1xuICAgICAgICBpZiAoKHBbMF0gPT09IC0xODAgfHwgcFswXSA9PT0gMTgwKSAmJiBzaGFyZWRbcFsxXV0gIT09IDMpIHtcbiAgICAgICAgICBwWzBdID0gcFswXSA9PT0gLTE4MCA/IC0xNzkuOTk5NSA6IDE3OS45OTk1O1xuICAgICAgICB9XG4gICAgICB9KTtcbiAgICB9KTtcblxuICAgIHAgPSBkMy5nZW9TdGl0Y2gocCk7XG5cbiAgICAvLyBBZnRlciBzdGl0Y2hpbmcgcmVtb3ZlIHRoZSBzaGFyZWQgcG9pbnRzIC0tIHRoZXkgYXJlIG9mZlxuICAgIC8vIHNlZSBodHRwczovL2dpdGh1Yi5jb20vZDMvZDMtY29udG91ci9pc3N1ZXMvMjVcbiAgICBwLmNvb3JkaW5hdGVzID0gcC5jb29yZGluYXRlc1xuICAgIC5tYXAoZnVuY3Rpb24ocmluZykge1xuICAgICAgcmluZy5wb3AoKTtcbiAgICAgIHJpbmcgPSByaW5nXG4gICAgICAubWFwKGZ1bmN0aW9uKHApIHtcbiAgICAgIFx0dmFyIHAwID0gKHBbMF0gKyAxODApICogKGlzaXplICsgMSkgLyBpc2l6ZSAtIDE4MDtcbiAgICAgICAgcmV0dXJuIFtwMCwgcFsxXV07XG4gICAgICB9KTtcbiAgICAgIHJpbmcgPSByaW5nLmZpbHRlcihmdW5jdGlvbihwKSB7XG4gICAgICAgIHJldHVybiBNYXRoLmFicyhwWzBdKSA8IDE3OS45OTk5O1xuICAgICAgfSk7XG4gICAgICByaW5nLnB1c2gocmluZ1swXSk7XG4gICAgICByZXR1cm4gcmluZztcbiAgICB9KVxuICAgIC5maWx0ZXIoZnVuY3Rpb24ocmluZykge1xuICAgICAgcmV0dXJuIHJpbmcubGVuZ3RoID4gMDtcbiAgICB9KTtcblxuICAgIC8vIElmIHRoZSBNdWx0aVBvbHlnb24gaXMgZW1wdHksIHRyZWF0IGl0IGFzIHRoZSBTcGhlcmUuXG4gICAgcmV0dXJuIHAuY29vcmRpbmF0ZXMubGVuZ3RoXG4gICAgICAgID8ge3R5cGU6IFwiUG9seWdvblwiLCBjb29yZGluYXRlczogcC5jb29yZGluYXRlcywgdmFsdWU6IGQudmFsdWV9XG4gICAgICAgIDoge3R5cGU6IFwiU3BoZXJlXCIsIHZhbHVlOiBkLnZhbHVlfTtcbiAgICBcbiAgfVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZ1bmN0aW9uIHRvcGRvd24odmFsdWVzKSB7XG4gIHZhciB2ID0gbmV3IEZsb2F0MzJBcnJheSh2YWx1ZXMpO1xuICBmb3IgKHZhciBqID0gMDsgaiA8IGpzaXplOyBqKyspIHtcbiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGlzaXplOyBpKyspIHtcbiAgICAgIHZbIChqc2l6ZS0xLWopICogaXNpemUgKyBpIF0gPSB2YWx1ZXNbIGogKiBpc2l6ZSArIGkgXTtcbiAgICB9XG4gIH1cbiAgcmV0dXJuIHY7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gdG9ydXM6IGNvcHkgbGVmdCBjb2x1bW4gdG8gdGhlIHJpZ2h0XG5mdW5jdGlvbiBjeWxpbmRlcih2YWx1ZXMpIHtcbiAgdmFyIHYgPSBuZXcgRmxvYXQzMkFycmF5KGpzaXplICogKGlzaXplKzEpKTtcbiAgZm9yICh2YXIgaiA9IDA7IGogPCBqc2l6ZTsgaisrKSB7XG4gICAgZm9yICh2YXIgaSA9IDA7IGkgPCBpc2l6ZSArIDE7IGkrKykge1xuICAgICAgdlsgaiAqIChpc2l6ZSsxKSArIGkgXSA9IHZhbHVlc1sgaiAqIGlzaXplICsgaSVpc2l6ZSBdO1xuICAgICB9XG4gfVxuIHJldHVybiB2O1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNvbnRvdXJzID0gZDMuY29udG91cnMoKVxuICAgICAgLnNtb290aCh0cnVlKVxuICAgICAgLnNpemUoW2lzaXplICsgMSwganNpemVdKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InBvbHlnb25zXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3Byb2pOYW1lJykifV19
 </script>
@@ -818,32 +882,21 @@ window._ojs.runtime.interpretFromScriptTags();
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://www.caltech.edu/"><img src="./img/Caltech_Logo.png" alt="Caltech" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://carnegiescience.edu/"><img src="./img/Carnegie.svg" alt="Carnegie" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://eps.harvard.edu/"><img src="./img/img_acmg_logo_seas.png" alt="Harvard" height="20"></a></p>
+<p><img src="./img/caltech_logo_white.png" class="img-fluid"> <br> Lead Institution</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<img src="./img/jpl_logo.png" class="img-fluid"> <br>
+<p>
+Instrument and <br> Mission Management
+</p>
+<div style="border: 0; border-top: 1px solid white; width: 100%; margin: 1rem auto;">
+
+</div>
+<p><short style="font-size: .80rem"> © 2025 California Institute of Technology. All Rights Reserved.</short></p>
+</div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
-<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</p>
-</a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/chr_fronge">
-      <i class="bi bi-twitter" role="img" aria-label="PI Twitter">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/RemoteSensingTools/">
-      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
+<p><img src="./img/lockheed_logo.png" class="img-fluid"><br> Spacecraft and <br> Mission Operations</p>
+</div>
   </div>
 </footer>
 

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ScienceTeam | Carbon-I</title>
+<title>team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,12 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-537b9e219e2fc0bc7205759f2b1ebf27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-36c656ad77d7aeff66f1bae01649f62e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,20 +101,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-coll-team .list');
+    const listingTargetEl = window.document.querySelector('#listing-collab-team .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-coll-team'] = new List('listing-coll-team', options);
+    window['quarto-listings']['listing-collab-team'] = new List('listing-collab-team', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -171,19 +169,9 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles/custom.css">
-<link rel="stylesheet" href="styles/other-background.css">
-<meta property="og:title" content="ScienceTeam | Carbon-I">
-<meta property="og:image" content="https://carbon-i.github.io/img/people/frankenberg.png">
-<meta property="og:image:height" content="476">
-<meta property="og:image:width" content="467">
-<meta name="twitter:title" content="ScienceTeam | Carbon-I">
-<meta name="twitter:image" content="https://carbon-i.github.io/img/people/frankenberg.png">
-<meta name="twitter:image-height" content="476">
-<meta name="twitter:image-width" content="467">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -191,7 +179,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/Logo-Black2.png" alt="" class="navbar-logo">
+    <img src="./img/Logo-White2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -199,7 +187,7 @@ window.Quarto = {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
@@ -220,7 +208,7 @@ window.Quarto = {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visual-stories" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Visual Stories</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-visual-stories">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-visual-stories">    
         <li>
     <a class="dropdown-item" href="./ch4_story.html">
  <span class="dropdown-text">CH4</span></a>
@@ -235,8 +223,6 @@ window.Quarto = {
     <a class="nav-link" href="./news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Carbon-I/"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -250,45 +236,28 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#science-team" id="toc-science-team" class="nav-link active" data-scroll-target="#science-team">Science Team</a></li>
-  <li><a href="#collaborators" id="toc-collaborators" class="nav-link" data-scroll-target="#collaborators">Collaborators</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="science-team" class="level2">
-<h2 class="anchored" data-anchor-id="science-team">Science Team</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="hero-small hero-gradient hero-team">
+<section id="our-team" class="level1 container">
+<h1><strong>OUR TEAM</strong></h1>
+</section>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="container text-start mx-auto my-5 w-45">
 <p>The Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.</p>
 </div>
-</div>
+<div class="container">
 <div id="listing-science-team" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="2" data-listing-word-count-sort="246">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
 <a href="./people/ScienceTeam/01_frankenberg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/frankenberg.png" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -297,17 +266,17 @@ Note
 Christian Frankenberg
 </h5>
 <div class="card-subtitle listing-subtitle">
-Principal Investigator
+Principal Investigator <br> Caltech/JPL
 </div>
 <div class="card-text listing-description delink">
-<p>Caltech/JPL</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="125">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
 <a href="./people/ScienceTeam/02_michalak.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/michalak.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -316,17 +285,17 @@ Principal Investigator
 Anna Michalak
 </h5>
 <div class="card-subtitle listing-subtitle">
-Deputy Principal Investigator – Science
+Deputy Principal Investigator <br> Carnegie Institution for Science / Stanford
 </div>
 <div class="card-text listing-description delink">
-<p>Carnegie Institution for Science / Stanford</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="72">
 <a href="./people/ScienceTeam/03_jacob.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/jacob.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -335,17 +304,17 @@ Deputy Principal Investigator – Science
 Daniel Jacob
 </h5>
 <div class="card-subtitle listing-subtitle">
-Flux Inversion Lead
+Flux Inversion Lead <br> Harvard
 </div>
 <div class="card-text listing-description delink">
-<p>Harvard</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
 <a href="./people/ScienceTeam/04_Yin.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/yin.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -354,17 +323,17 @@ Flux Inversion Lead
 Yi Yin
 </h5>
 <div class="card-subtitle listing-subtitle">
-Flux Inversions
+Flux Inversions <br> New York University
 </div>
 <div class="card-text listing-description delink">
-<p>New York University</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="2" data-listing-word-count-sort="238">
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
 <a href="./people/ScienceTeam/sanghavi.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/suniti.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -373,17 +342,17 @@ Flux Inversions
 Suniti Sanghavi
 </h5>
 <div class="card-subtitle listing-subtitle">
-Radiative transfer modeler
+Radiative transfer modeler <br> JPL/Caltech
 </div>
 <div class="card-text listing-description delink">
-<p>JPL/Caltech</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
 <a href="./people/ScienceTeam/05_turner.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/turner.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -392,17 +361,17 @@ Radiative transfer modeler
 Alex Turner
 </h5>
 <div class="card-subtitle listing-subtitle">
-Atmospheric Chemistry &amp; Carbon Cycle feedbacks
+Atmospheric Chemistry &amp; Carbon Cycle feedbacks <br> University of Washington
 </div>
 <div class="card-text listing-description delink">
-<p>University of Washington</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
 <a href="./people/ScienceTeam/05_wennberg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/wennberg.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -411,17 +380,17 @@ Atmospheric Chemistry &amp; Carbon Cycle feedbacks
 Paul Wennberg
 </h5>
 <div class="card-subtitle listing-subtitle">
-Validation Lead
+Validation Lead <br> Caltech
 </div>
 <div class="card-text listing-description delink">
-<p>Caltech</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="137">
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
 <a href="./people/ScienceTeam/06_thorpe.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/thorpe.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -430,17 +399,17 @@ Validation Lead
 Andrew Thorpe
 </h5>
 <div class="card-subtitle listing-subtitle">
-Project Scientist
+Project Scientist <br> JPL
 </div>
 <div class="card-text listing-description delink">
-<p>JPL</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="96">
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
 <a href="./people/ScienceTeam/07_bruhwiler.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/Lori.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -449,17 +418,17 @@ Project Scientist
 Lori Bruhwiler
 </h5>
 <div class="card-subtitle listing-subtitle">
-NOAA cross-validation, flux inversions
+NOAA cross-validation, flux inversions <br> NOAA
 </div>
 <div class="card-text listing-description delink">
-<p>NOAA</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
+<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="184">
 <a href="./people/ScienceTeam/08_hoyt.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/hoyt.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -468,17 +437,17 @@ NOAA cross-validation, flux inversions
 Alison Hoyt
 </h5>
 <div class="card-subtitle listing-subtitle">
-Flux validation lead
+Flux validation lead <br> Stanford
 </div>
 <div class="card-text listing-description delink">
-<p>Stanford</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="80">
+<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
 <a href="./people/ScienceTeam/09_kebreab.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/kebreab.png" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -487,17 +456,17 @@ Flux validation lead
 Ermias Kebreab
 </h5>
 <div class="card-subtitle listing-subtitle">
-Agriculture Applications
+Agriculture Applications <br> UC Davis
 </div>
 <div class="card-text listing-description delink">
-<p>UC Davis</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
+<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
 <a href="./people/ScienceTeam/11_green.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/green.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -506,17 +475,17 @@ Agriculture Applications
 Robert Green
 </h5>
 <div class="card-subtitle listing-subtitle">
-Calibration support
+Calibration support <br> JPL
 </div>
 <div class="card-text listing-description delink">
-<p>JPL</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="2" data-listing-word-count-sort="212">
+<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="2" data-listing-word-count-sort="220">
 <a href="./people/ScienceTeam/12_thompson.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/thompson.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -525,17 +494,17 @@ Calibration support
 David Thompson
 </h5>
 <div class="card-subtitle listing-subtitle">
-Calibration Lead
+Calibration Lead <br> JPL
 </div>
 <div class="card-text listing-description delink">
-<p>JPL</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="95">
+<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
 <a href="./people/ScienceTeam/13_brodrick.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/brodrick.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -544,17 +513,17 @@ Calibration Lead
 Philip Brodrick
 </h5>
 <div class="card-subtitle listing-subtitle">
-Science Data System lead
+Science Data System lead <br> JPL
 </div>
 <div class="card-text listing-description delink">
-<p>JPL</p>
+
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="14" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="86">
+<div class="g-col-1" data-index="14" data-listing-file-modified-sort="1747347825385" data-listing-reading-time-sort="1" data-listing-word-count-sort="93">
 <a href="./people/ScienceTeam/14_Chadwick.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
 <img loading="lazy" src="./img/people/chadwick.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
@@ -563,10 +532,10 @@ Science Data System lead
 K. Dana Chadwick
 </h5>
 <div class="card-subtitle listing-subtitle">
-Applications Lead
+Applications Lead <br> JPL
 </div>
 <div class="card-text listing-description delink">
-<p>JPL</p>
+
 </div>
 </div>
 </div></a>
@@ -574,279 +543,280 @@ Applications Lead
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-</section>
-<section id="collaborators" class="level2">
-<h2 class="anchored" data-anchor-id="collaborators">Collaborators</h2>
-<div id="listing-coll-team" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-6">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
+</div>
+<div class="wrapper py-4" style="background-color: #F8F7F0;">
+<section id="collaborators" class="level1 pb-5 container">
+<h1 class="pb-5">Collaborators</h1>
+<div id="listing-collab-team" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-5">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <a href="./people/Collaborators/hboesch.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/hboesch_photo.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/hboesch_photo.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="collaborators">
 Hartmut Boesch
 </h5>
-<div class="card-text listing-description delink">
-<p>University of Bremen</p>
+<div class="card-subtitle listing-subtitle">
+Science Team <br> University of Bremen
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
 <a href="./people/Collaborators/kort.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/kort.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/kort.jpeg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Eric Kort
 </h5>
-<div class="card-text listing-description delink">
-<p>University of Michigan</p>
+<div class="card-subtitle listing-subtitle">
+CH4 and N2O expert <br> University of Michigan
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="93">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
 <a href="./people/Collaborators/Jeong.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/sujong.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/sujong.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Sujong Jeong
 </h5>
-<div class="card-text listing-description delink">
-<p>Seoul National University, South Korea</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> Seoul National University, South Korea
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="88">
 <a href="./people/Collaborators/ODell.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/odell.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/odell.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Chris O’Dell
 </h5>
-<div class="card-text listing-description delink">
-<p>Colorado State University, Fort Collins, CO, USA</p>
+<div class="card-subtitle listing-subtitle">
+Collaborator <br> Colorado State University, Fort Collins, CO, USA
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="116">
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="123">
 <a href="./people/Collaborators/aben.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/aben.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/aben.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Ilse Aben
 </h5>
-<div class="card-text listing-description delink">
-<p>SRON, Netherlands</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> SRON, Netherlands
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="2" data-listing-word-count-sort="241">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="2" data-listing-word-count-sort="248">
 <a href="./people/Collaborators/abutz.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/abutz.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/abutz.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Andre Butz
 </h5>
-<div class="card-text listing-description delink">
-<p>Heidelberg University, Germany</p>
+<div class="card-subtitle listing-subtitle">
+Science team member <br> Heidelberg University, Germany
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <a href="./people/Collaborators/ciais.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/ciais.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/ciais.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Philippe Ciais
 </h5>
-<div class="card-text listing-description delink">
-<p>LSCE, France</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> LSCE, France
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
 <a href="./people/Collaborators/duren.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/duren.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/duren.png" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Riley Duren
 </h5>
-<div class="card-text listing-description delink">
-<p>Carbon Mapper</p>
+<div class="card-subtitle listing-subtitle">
+Collaborator <br> Carbon Mapper
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
 <a href="./people/Collaborators/ehlmann.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/ehlmann.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/ehlmann.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Bethany Ehlmann
 </h5>
-<div class="card-text listing-description delink">
-<p>Caltech</p>
+<div class="card-subtitle listing-subtitle">
+Collaborator <br> Caltech
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
+<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <a href="./people/Collaborators/elder.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/elder.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/elder.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Clayton Elder
 </h5>
-<div class="card-text listing-description delink">
-<p>JPL</p>
+<div class="card-subtitle listing-subtitle">
+Collaborator <br> JPL
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="37">
 <a href="./people/Collaborators/elvidge.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/elvidge.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/elvidge.jpeg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Chris Elvidge
 </h5>
-<div class="card-text listing-description delink">
-<p>CO Sch. of Mines</p>
+<div class="card-subtitle listing-subtitle">
+Collaborator <br> CO Sch. of Mines
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
+<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
 <a href="./people/Collaborators/hase.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/hase.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/hase.jpeg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Frank Hase
 </h5>
-<div class="card-text listing-description delink">
-<p>KIT, Germany</p>
+<div class="card-subtitle listing-subtitle">
+Collaborator <br> KIT, Germany
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
+<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
 <a href="./people/Collaborators/houweling.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/houweling.webp" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/houweling.webp" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Sander Houweling
 </h5>
-<div class="card-text listing-description delink">
-<p>U. Amsterdam, Netherlands</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> U. Amsterdam, Netherlands
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
+<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <a href="./people/Collaborators/palmer.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/palmer.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/palmer.jpeg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Paul Palmer
 </h5>
-<div class="card-text listing-description delink">
-<p>University Edinburgh, UK</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> University Edinburgh, UK
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="14" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="g-col-1" data-index="14" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
 <a href="./people/Collaborators/roiger.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/roiger.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/roiger.jpeg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Anke Roiger
 </h5>
-<div class="card-text listing-description delink">
-<p>DLR, Germany</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> DLR, Germany
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="15" data-listing-file-modified-sort="1746573743034" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
+<div class="g-col-1" data-index="15" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="137">
 <a href="./people/Collaborators/wunch.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/debra_cropped.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/debra_cropped.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Debra Wunch
 </h5>
-<div class="card-text listing-description delink">
-<p>University of Toronto</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> University of Toronto
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="16" data-listing-file-modified-sort="1746573743033" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
+<div class="g-col-1" data-index="16" data-listing-file-modified-sort="1747347825384" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
 <a href="./people/Collaborators/maasakkers.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-center">
 <p class="card-img-top">
-<img loading="lazy" src="./img/people/JDMaasakkers_Crop.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/people/JDMaasakkers_Crop.jpg" class="thumbnail-image card-img" style="height: 180px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Joannes D. (Bram) Maasakkers
 </h5>
-<div class="card-text listing-description delink">
-<p>SRON, The Netherlands</p>
+<div class="card-subtitle listing-subtitle">
+International Collaborator <br> SRON, The Netherlands
 </div>
 </div>
 </div></a>
@@ -854,12 +824,81 @@ Joannes D. (Bram) Maasakkers
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-
-
-
 </section>
+</div>
 
-</main> <!-- /main -->
+
+
+
+
+<div class="footer-banner">
+    <img src="./img/Logo-White2.png">
+    <p>Closing tropical data gaps to resolve global carbon-budget uncertainties</p>
+</div>
+
+<!-- Navbar Scale Animation-->
+<script>
+    const nav = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('compact');
+      } else {
+        nav.classList.remove('compact');
+      }
+    });
+</script>
+
+<!-- For About Page Layout-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleBlock = document.querySelector(".quarto-title-block");
+    const image = document.querySelector(".about-image");
+
+    const title = document.querySelector('.quarto-title');
+    const logos = document.querySelector('.about-links');
+
+    //place images into titleBlock area
+    if (titleBlock && image) {
+    titleBlock.insertBefore(image, titleBlock.firstChild);
+    }
+
+    //place logos into title area
+    if (title && logos) {
+    title.appendChild(logos);
+    }
+  });
+</script>
+
+<!-- Only add references if there is a bibliography-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refs = document.getElementById("refs");
+      if (!refs) return;
+    
+      document.querySelectorAll('#quarto-appendix').forEach(el => el.remove());
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "references-wrapper";
+    
+      const container = document.createElement("div");
+      container.className = "container about-references";
+    
+      const heading = document.createElement("h1");
+      heading.textContent = "References";
+    
+      container.appendChild(heading);
+      container.appendChild(refs);
+      wrapper.appendChild(container);
+    
+      const footerBanner = document.querySelector(".footer-banner");
+      if (footerBanner && footerBanner.parentNode) {
+        footerBanner.parentNode.insertBefore(wrapper, footerBanner);
+      } else {
+        document.body.appendChild(wrapper);
+      }
+    });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1263,32 +1302,21 @@ Joannes D. (Bram) Maasakkers
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://www.caltech.edu/"><img src="./img/Caltech_Logo.png" alt="Caltech" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://carnegiescience.edu/"><img src="./img/Carnegie.svg" alt="Carnegie" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://eps.harvard.edu/"><img src="./img/img_acmg_logo_seas.png" alt="Harvard" height="20"></a></p>
+<p><img src="./img/caltech_logo_white.png" class="img-fluid"> <br> Lead Institution</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<img src="./img/jpl_logo.png" class="img-fluid"> <br>
+<p>
+Instrument and <br> Mission Management
+</p>
+<div style="border: 0; border-top: 1px solid white; width: 100%; margin: 1rem auto;">
+
+</div>
+<p><short style="font-size: .80rem"> © 2025 California Institute of Technology. All Rights Reserved.</short></p>
+</div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
-<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</p>
-</a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/chr_fronge">
-      <i class="bi bi-twitter" role="img" aria-label="PI Twitter">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/RemoteSensingTools/">
-      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
+<p><img src="./img/lockheed_logo.png" class="img-fluid"><br> Spacecraft and <br> Mission Operations</p>
+</div>
   </div>
 </footer>
 

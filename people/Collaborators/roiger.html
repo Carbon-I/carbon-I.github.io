@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="DLR, Germany">
 
 <title>Anke Roiger</title>
 <style>
@@ -21,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -37,10 +56,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-537b9e219e2fc0bc7205759f2b1ebf27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-36c656ad77d7aeff66f1bae01649f62e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -81,18 +100,47 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles/custom.css">
 <meta property="og:title" content="Anke Roiger">
-<meta property="og:description" content="DLR, Germany">
-<meta property="og:image" content="https://carbon-i.github.io//img/people/roiger.jpeg">
+<meta property="og:description" content="International Collaborator  DLR, Germany">
+<meta property="og:image" content="https://carbon-i.github.io/img/people/roiger.jpeg">
 <meta name="twitter:title" content="Anke Roiger">
-<meta name="twitter:description" content="DLR, Germany">
-<meta name="twitter:image" content="https://carbon-i.github.io//img/people/roiger.jpeg">
+<meta name="twitter:description" content="International Collaborator  DLR, Germany">
+<meta name="twitter:image" content="https://carbon-i.github.io/img/people/roiger.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -100,7 +148,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../img/Logo-Black2.png" alt="" class="navbar-logo">
+    <img src="../../img/Logo-White2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -108,7 +156,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
@@ -129,7 +177,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visual-stories" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Visual Stories</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-visual-stories">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-visual-stories">    
         <li>
     <a class="dropdown-item" href="../../ch4_story.html">
  <span class="dropdown-text">CH4</span></a>
@@ -144,8 +192,6 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <a class="nav-link" href="../../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Carbon-I/"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -159,41 +205,35 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#professional-experience" id="toc-professional-experience" class="nav-link" data-scroll-target="#professional-experience">Professional Experience</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<div class="quarto-about-solana column-page-left">
+
+
+
+
+<div class="container">
+<section id="collaborators-anke-roiger" class="level2 listing-header">
+<h2 data-anchor-id="collaborators-anke-roiger"><a href="../../team.html#collab-team"><strong>Collaborators</strong> | <strong>Anke Roiger</strong></a></h2>
+</section>
+<div class="quarto-about-solana column-body">
   <div class="about-entity">
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Anke Roiger</h1>
-<p class="subtitle lead">International Collaborator</p>
+<p class="subtitle lead">International Collaborator <br> DLR, Germany</p>
 </div>
-<div>
-  <div class="description">
-    DLR, Germany
-  </div>
-</div>
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
   </div>
 </header> <div class="about-links">
   <a href="https://scholar.google.com/citations?user=9Rc7kecAAAAJ&amp;hl=en&amp;oi=ao" class="about-link" rel="" target="">
      <span class="about-link-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</span>
   </a>
 </div>
-      <div class="about-contents"><main class="content column-page-left" id="quarto-document-content">
-
+      <div class="about-contents"><div id="about-heading">
+<div class="about-section">
 <p>Anke Roiger is Department Head at the DLR, Institute of Atmospheric Physics, Munich</p>
 <section id="education" class="level2">
 <h2 data-anchor-id="education">Education</h2>
@@ -206,16 +246,90 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <ul>
 <li><span class="fw-bold">2018-present:</span> Whatever, wherre</li>
 </ul>
-
-
 </section>
-</main></div>
+</div>
+</div></div>
     </div>
-    <img src="/img/people/roiger.jpeg" class="about-image
+    <img src="../../img/people/roiger.jpeg" class="about-image
   round " style="height: 15em; width: 15em;">
   </div>
 </div>
- <!-- /main -->
+
+</div>
+
+
+
+
+
+
+<div class="footer-banner">
+    <img src="../../img/Logo-White2.png">
+    <p>Closing tropical data gaps to resolve global carbon-budget uncertainties</p>
+</div>
+
+<!-- Navbar Scale Animation-->
+<script>
+    const nav = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('compact');
+      } else {
+        nav.classList.remove('compact');
+      }
+    });
+</script>
+
+<!-- For About Page Layout-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleBlock = document.querySelector(".quarto-title-block");
+    const image = document.querySelector(".about-image");
+
+    const title = document.querySelector('.quarto-title');
+    const logos = document.querySelector('.about-links');
+
+    //place images into titleBlock area
+    if (titleBlock && image) {
+    titleBlock.insertBefore(image, titleBlock.firstChild);
+    }
+
+    //place logos into title area
+    if (title && logos) {
+    title.appendChild(logos);
+    }
+  });
+</script>
+
+<!-- Only add references if there is a bibliography-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refs = document.getElementById("refs");
+      if (!refs) return;
+    
+      document.querySelectorAll('#quarto-appendix').forEach(el => el.remove());
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "references-wrapper";
+    
+      const container = document.createElement("div");
+      container.className = "container about-references";
+    
+      const heading = document.createElement("h1");
+      heading.textContent = "References";
+    
+      container.appendChild(heading);
+      container.appendChild(refs);
+      wrapper.appendChild(container);
+    
+      const footerBanner = document.querySelector(".footer-banner");
+      if (footerBanner && footerBanner.parentNode) {
+        footerBanner.parentNode.insertBefore(wrapper, footerBanner);
+      } else {
+        document.body.appendChild(wrapper);
+      }
+    });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {
@@ -608,36 +722,65 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     }
   });
   </script>
-</div> <!-- /content -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-butz_observational_2007" class="csl-entry" role="listitem">
+Butz, A., Bösch, H., Camy-Peyret, C., Dorf, M., Engel, A., Payan, S., &amp; Pfeilsticker, K. (2007). Observational constraints on the kinetics of the <span>ClO</span>-<span>BrO</span> and <span>ClO</span>-<span>ClO</span> ozone loss cycles in the <span>Arctic</span> winter stratosphere. <em>Geophys. Res. Lett.</em>, <em>34</em>(5). <a href="https://doi.org/10.1029/2006GL028718">https://doi.org/10.1029/2006GL028718</a>
+</div>
+<div id="ref-butz_constraints_2009" class="csl-entry" role="listitem">
+Butz, A., Bösch, H., Camy-Peyret, C., Chipperfield, M. P., Dorf, M., Kreycy, S., et al. (2009). Constraints on inorganic gaseous iodine in the tropical upper troposphere and stratosphere inferred from balloon-borne solar occultation observations. <em>Atmos. Chem. Phys.</em>, <em>9</em>(18), 7229–7242. <a href="https://doi.org/10.5194/acp-9-7229-2009">https://doi.org/10.5194/acp-9-7229-2009</a>
+</div>
+<div id="ref-butz_toward_2011" class="csl-entry" role="listitem">
+Butz, A., Guerlet, S., Hasekamp, O., Schepers, D., Galli, A., Aben, I., et al. (2011). Toward accurate <span>CO</span><span class="math inline">\(_{\textrm{2}}\)</span> and <span>CH</span><span class="math inline">\(_{\textrm{4}}\)</span> observations from <span>GOSAT</span>. <em>Geophys. Res. Lett.</em>, <em>38</em>(14), n/a–n/a. <a href="https://doi.org/10.1029/2011GL047888">https://doi.org/10.1029/2011GL047888</a>
+</div>
+<div id="ref-butz_versatile_2022" class="csl-entry" role="listitem">
+Butz, André, Hanft, V., Kleinschek, R., Frey, M. M., Müller, A., Knapp, M., et al. (2022). Versatile and <span>Targeted</span> <span>Validation</span> of <span>Space</span>-<span>Borne</span> <span>XCO</span><span class="math inline">\(_{\textrm{2}}\)</span>, <span>XCH</span><span class="math inline">\(_{\textrm{4}}\)</span> and <span>XCO</span> <span>Observations</span> by <span>Mobile</span> <span>Ground</span>-<span>Based</span> <span>Direct</span>-<span>Sun</span> <span>Spectrometers</span>. <em>Front. Remote Sens.</em>, <em>2</em>, 775805. <a href="https://doi.org/10.3389/frsen.2021.775805">https://doi.org/10.3389/frsen.2021.775805</a>
+</div>
+<div id="ref-hu_toward_2018" class="csl-entry" role="listitem">
+Hu, H., Landgraf, J., Detmers, R., Borsdorff, T., Aan de Brugh, J., Aben, I., et al. (2018). Toward <span>Global</span> <span>Mapping</span> of <span>Methane</span> <span>With</span> <span>TROPOMI</span>: <span>First</span> <span>Results</span> and <span>Intersatellite</span> <span>Comparison</span> to <span>GOSAT</span>. <em>Geophys. Res. Lett.</em>, <em>45</em>(8), 3682–3689. <a href="https://doi.org/10.1002/2018GL077259">https://doi.org/10.1002/2018GL077259</a>
+</div>
+<div id="ref-jungmann_zooming-for_2022" class="csl-entry" role="listitem">
+Jungmann, M., Vardag, S. N., Kutzner, F., Keppler, F., Schmidt, M., Aeschbach, N., et al. (2022). Zooming-in for climate action—hyperlocal greenhouse gas data for mitigation action? <em>Clim. Action</em>, <em>1</em>(1), 8. <a href="https://doi.org/10.1007/s44168-022-00007-4">https://doi.org/10.1007/s44168-022-00007-4</a>
+</div>
+<div id="ref-knapp_spectrometric_2023" class="csl-entry" role="listitem">
+Knapp, M., Scheidweiler, L., Külheim, F., Kleinschek, R., Necki, J., Jagoda, P., &amp; Butz, A. (2023). Spectrometric imaging of sub-hourly methane emission dynamics from coal mine ventilation. <em>Environmental Research Letters</em>, <em>18</em>(4), 044030. <a href="https://doi.org/10.1088/1748-9326/acc346">https://doi.org/10.1088/1748-9326/acc346</a>
+</div>
+<div id="ref-low_portable_2023" class="csl-entry" role="listitem">
+Löw, B. A., Kleinschek, R., Enders, V., Sander, S. P., Pongetti, T. J., Schmitt, T. D., et al. (2023). A portable reflected-sunlight spectrometer for <span>CO</span><span class="math inline">\(_{\textrm{2}}\)</span> and <span>CH</span><span class="math inline">\(_{\textrm{4}}\)</span>. <em>Atmos. Meas. Tech.</em>, <em>16</em>(21), 5125–5144. <a href="https://doi.org/10.5194/amt-16-5125-2023">https://doi.org/10.5194/amt-16-5125-2023</a>
+</div>
+<div id="ref-metz_soil_2023" class="csl-entry" role="listitem">
+Metz, E.-M., Vardag, S. N., Basu, S., Jung, M., Ahrens, B., El-Madany, T., et al. (2023). Soil respiration-driven <span>CO</span><span class="math inline">\(_{\textrm{2}}\)</span> pulses dominate <span>Australia</span>’s flux variability. <em>Science</em>, <em>379</em>(6639), 1332–1335. <a href="https://doi.org/10.1126/science.add7833">https://doi.org/10.1126/science.add7833</a>
+</div>
+<div id="ref-palmer_role_2022" class="csl-entry" role="listitem">
+Palmer, P. I., Woodwark, A. J. P., Finch, D. P., Taylor, T. E., Butz, A., Tamminen, J., et al. (2022). Role of space station instruments for improving tropical carbon flux estimates using atmospheric data. <em>Npj Microgravity</em>, <em>8</em>(1), 51. <a href="https://doi.org/10.1038/s41526-022-00231-6">https://doi.org/10.1038/s41526-022-00231-6</a>
+</div>
+<div id="ref-schmitt_open-path_2023" class="csl-entry" role="listitem">
+Schmitt, T. D., Kuhn, J., Kleinschek, R., Löw, B. A., Schmitt, S., Cranton, W., et al. (2023). An open-path observatory for greenhouse gases based on near-infrared <span>Fourier</span> transform spectroscopy. <em>Atmos. Meas. Tech.</em>, <em>16</em>(24), 6097–6110. <a href="https://doi.org/10.5194/amt-16-6097-2023">https://doi.org/10.5194/amt-16-6097-2023</a>
+</div>
+<div id="ref-strandgren_towards_2020" class="csl-entry" role="listitem">
+Strandgren, J., Krutz, D., Wilzewski, J., Paproth, C., Sebastian, I., Gurney, K. R., et al. (2020). Towards spaceborne monitoring of localized <span>CO</span><span class="math inline">\(_{\textrm{2}}\)</span> emissions: An instrument concept and first performance assessment. <em>Atmos. Meas. Tech.</em>, <em>13</em>(6), 2887–2904. <a href="https://doi.org/10.5194/amt-13-2887-2020">https://doi.org/10.5194/amt-13-2887-2020</a>
+</div>
+<div id="ref-voss_novel_2024" class="csl-entry" role="listitem">
+Voss, K., Holzbeck, P., Pfeilsticker, K., Kleinschek, R., Wetzel, G., Fuentes Andrade, B., et al. (2024). A novel, balloon-borne UV/visible spectrometer for direct sun measurements of stratospheric bromine. <em>EGUsphere</em>, <em>2024</em>, 1–33.
+</div>
+</div></section></div></div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://www.caltech.edu/"><img src="../../img/Caltech_Logo.png" alt="Caltech" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://carnegiescience.edu/"><img src="../../img/Carnegie.svg" alt="Carnegie" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://eps.harvard.edu/"><img src="../../img/img_acmg_logo_seas.png" alt="Harvard" height="20"></a></p>
+<p><img src="../../img/caltech_logo_white.png" class="img-fluid"> <br> Lead Institution</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<img src="../../img/jpl_logo.png" class="img-fluid"> <br>
+<p>
+Instrument and <br> Mission Management
+</p>
+<div style="border: 0; border-top: 1px solid white; width: 100%; margin: 1rem auto;">
+
+</div>
+<p><short style="font-size: .80rem"> © 2025 California Institute of Technology. All Rights Reserved.</short></p>
+</div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
-<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</p>
-</a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/chr_fronge">
-      <i class="bi bi-twitter" role="img" aria-label="PI Twitter">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/RemoteSensingTools/">
-      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
+<p><img src="../../img/lockheed_logo.png" class="img-fluid"><br> Spacecraft and <br> Mission Operations</p>
+</div>
   </div>
 </footer>
 

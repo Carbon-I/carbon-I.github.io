@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="JPL">
 
 <title>Andrew Thorpe</title>
 <style>
@@ -57,10 +56,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-537b9e219e2fc0bc7205759f2b1ebf27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-36c656ad77d7aeff66f1bae01649f62e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
@@ -102,18 +101,47 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles/custom.css">
 <meta property="og:title" content="Andrew Thorpe">
-<meta property="og:description" content="JPL">
-<meta property="og:image" content="https://carbon-i.github.io//img/people/thorpe.jpg">
+<meta property="og:description" content="Project Scientist  JPL">
+<meta property="og:image" content="https://carbon-i.github.io/img/people/thorpe.jpg">
 <meta name="twitter:title" content="Andrew Thorpe">
-<meta name="twitter:description" content="JPL">
-<meta name="twitter:image" content="https://carbon-i.github.io//img/people/thorpe.jpg">
+<meta name="twitter:description" content="Project Scientist  JPL">
+<meta name="twitter:image" content="https://carbon-i.github.io/img/people/thorpe.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -121,7 +149,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../img/Logo-Black2.png" alt="" class="navbar-logo">
+    <img src="../../img/Logo-White2.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -129,7 +157,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
@@ -150,7 +178,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visual-stories" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Visual Stories</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-visual-stories">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-visual-stories">    
         <li>
     <a class="dropdown-item" href="../../ch4_story.html">
  <span class="dropdown-text">CH4</span></a>
@@ -165,8 +193,6 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     <a class="nav-link" href="../../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Carbon-I/"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -180,33 +206,27 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#professional-experience" id="toc-professional-experience" class="nav-link" data-scroll-target="#professional-experience">Professional Experience</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<div class="quarto-about-solana column-page-left">
+
+
+
+
+<div class="container">
+<section id="science-team-andrew-thorpe" class="level2 listing-header">
+<h2 data-anchor-id="science-team-andrew-thorpe"><a href="../../team.html#science-team"><strong>Science Team</strong> | <strong>Andrew Thorpe</strong></a></h2>
+</section>
+<div class="quarto-about-solana column-body">
   <div class="about-entity">
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Andrew Thorpe</h1>
-<p class="subtitle lead">Project Scientist</p>
+<p class="subtitle lead">Project Scientist <br> JPL</p>
 </div>
-<div>
-  <div class="description">
-    JPL
-  </div>
-</div>
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
   </div>
 </header> <div class="about-links">
   <a href="https://twitter.com/chr_fronge" class="about-link" rel="" target="">
@@ -224,8 +244,8 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
      <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa6-brands:orcid" aria-label="Icon orcid from fa6-brands Iconify.design set." title="Icon orcid from fa6-brands Iconify.design set."></iconify-icon> OrcidID</span>
   </a>
 </div>
-      <div class="about-contents"><main class="content column-page-left" id="quarto-document-content">
-
+      <div class="about-contents"><div id="about-heading">
+<div class="about-section">
 <p>Andrew Thorpe is a technologist in the JPL imaging spectroscopy group with a decade of experience working with imaging spectrometer data. He has developed quantitative gas retrievals for AVIRIS, AVIRIS-NG, and EMIT using differential optical absorption spectroscopy, methods to estimate emission rates, and contributed to projects aimed at visualizing methane results and reducing data latency. Andrew is currently an EMIT Science Team member leading the EMIT greenhouse gas mapping application, and the Deputy Instrument Scientist for Carbon Plume Mapper.</p>
 <section id="education" class="level2">
 <h2 data-anchor-id="education">Education</h2>
@@ -236,43 +256,91 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </section>
 <section id="professional-experience" class="level2">
 <h2 data-anchor-id="professional-experience">Professional Experience</h2>
-<p>Andrew Thorpe has extensive experience in high-resolution methane mapping, ranging from retrieval algorithms <span class="citation" data-cites="thorpe2014retrieval thorpe2017airborne THORPE2021112681">(<a href="#ref-thorpe2014retrieval" role="doc-biblioref">A. Thorpe, Frankenberg, and Roberts 2014</a>; <a href="#ref-thorpe2017airborne" role="doc-biblioref">Andrew K. Thorpe et al. 2017</a>; <a href="#ref-THORPE2021112681" role="doc-biblioref">Andrew K. Thorpe et al. 2021</a>)</span> and the first ever controlled release experiment involving aircraft and spectroscopic mapping <span class="citation" data-cites="thorpe2016mapping">(<a href="#ref-thorpe2016mapping" role="doc-biblioref">Andrew K. Thorpe et al. 2016</a>)</span> to data analysis and sectorial up-scaling of methane fluxes <span class="citation" data-cites="thorpe2023attribution cusworth_pnas thorpe2020methane duren2019california">(<a href="#ref-thorpe2023attribution" role="doc-biblioref">Andrew K. Thorpe et al. 2023</a>, <a href="#ref-thorpe2020methane" role="doc-biblioref">2020</a>; <a href="#ref-cusworth_pnas" role="doc-biblioref">Cusworth et al. 2022</a>; <a href="#ref-duren2019california" role="doc-biblioref">Duren et al. 2019</a>)</span>.</p>
-
-
-
+<p>Andrew Thorpe has extensive experience in high-resolution methane mapping, ranging from retrieval algorithms <span class="citation" data-cites="thorpe2014retrieval thorpe2017airborne THORPE2021112681">(<a href="#ref-thorpe2014retrieval" role="doc-biblioref">A. Thorpe et al., 2014</a>; <a href="#ref-thorpe2017airborne" role="doc-biblioref">Andrew K. Thorpe et al., 2017</a>; <a href="#ref-THORPE2021112681" role="doc-biblioref">Andrew K. Thorpe et al., 2021</a>)</span> and the first ever controlled release experiment involving aircraft and spectroscopic mapping <span class="citation" data-cites="thorpe2016mapping">(<a href="#ref-thorpe2016mapping" role="doc-biblioref">Andrew K. Thorpe, Frankenberg, Aubrey, et al., 2016</a>)</span> to data analysis and sectorial up-scaling of methane fluxes <span class="citation" data-cites="thorpe2023attribution cusworth_pnas thorpe2020methane duren2019california">(<a href="#ref-cusworth_pnas" role="doc-biblioref">Daniel H. Cusworth et al., 2022</a>; <a href="#ref-duren2019california" role="doc-biblioref">Duren et al., 2019</a>; <a href="#ref-thorpe2020methane" role="doc-biblioref">Andrew K. Thorpe et al., 2020</a>; <a href="#ref-thorpe2023attribution" role="doc-biblioref">Andrew K. Thorpe, Green, et al., 2023</a>)</span>.</p>
 </section>
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-cusworth_pnas" class="csl-entry" role="listitem">
-Cusworth, Daniel H., Andrew K. Thorpe, Alana K. Ayasse, David Stepp, Joseph Heckler, Gregory P. Asner, Charles E. Miller, et al. 2022. <span>“Strong Methane Point Sources Contribute a Disproportionate Fraction of Total Emissions Across Multiple Basins in the United States.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (38): e2202338119. <a href="https://doi.org/10.1073/pnas.2202338119">https://doi.org/10.1073/pnas.2202338119</a>.
 </div>
-<div id="ref-duren2019california" class="csl-entry" role="listitem">
-Duren, Riley M, Andrew K Thorpe, Kelsey T Foster, Talha Rafiq, Francesca M Hopkins, Vineet Yadav, Brian D Bue, et al. 2019. <span>“California’s Methane Super-Emitters.”</span> <em>Nature</em> 575 (7781): 180–84. <a href="https://doi.org/10.21203/rs.3.rs-952096/v1">https://doi.org/10.21203/rs.3.rs-952096/v1</a>.
-</div>
-<div id="ref-thorpe2014retrieval" class="csl-entry" role="listitem">
-Thorpe, AK, C Frankenberg, and DA Roberts. 2014. <span>“Retrieval Techniques for Airborne Imaging of Methane Concentrations Using High Spatial and Moderate Spectral Resolution: Application to AVIRIS.”</span> <em>Atmospheric Measurement Techniques</em> 7 (2): 491–506. <a href="https://doi.org/10.5194/amt-7-491-2014">https://doi.org/10.5194/amt-7-491-2014</a>.
-</div>
-<div id="ref-thorpe2020methane" class="csl-entry" role="listitem">
-Thorpe, Andrew K, Riley M Duren, Stephen Conley, Kuldeep R Prasad, Brian D Bue, Vineet Yadav, Kelsey T Foster, et al. 2020. <span>“Methane Emissions from Underground Gas Storage in California.”</span> <em>Environmental Research Letters</em> 15 (4): 045005. <a href="https://doi.org/10.1088/1748-9326/ab751d">https://doi.org/10.1088/1748-9326/ab751d</a>.
-</div>
-<div id="ref-thorpe2016mapping" class="csl-entry" role="listitem">
-Thorpe, Andrew K, Christian Frankenberg, AD Aubrey, DA Roberts, AA Nottrott, TA Rahn, JA Sauer, et al. 2016. <span>“Mapping Methane Concentrations from a Controlled Release Experiment Using the Next Generation Airborne Visible/Infrared Imaging Spectrometer (AVIRIS-NG).”</span> <em>Remote Sensing of Environment</em> 179: 104–15. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>.
-</div>
-<div id="ref-thorpe2017airborne" class="csl-entry" role="listitem">
-Thorpe, Andrew K, Christian Frankenberg, David R Thompson, Riley M Duren, Andrew D Aubrey, Brian D Bue, Robert O Green, et al. 2017. <span>“Airborne DOAS Retrievals of Methane, Carbon Dioxide, and Water Vapor Concentrations at High Spatial Resolution: Application to AVIRIS-NG.”</span> <em>Atmospheric Measurement Techniques</em> 10 (10): 3833–50. <a href="https://doi.org/10.5194/amt-10-3833-2017">https://doi.org/10.5194/amt-10-3833-2017</a>.
-</div>
-<div id="ref-thorpe2023attribution" class="csl-entry" role="listitem">
-Thorpe, Andrew K, Robert O Green, David R Thompson, Philip G Brodrick, John W Chapman, Clayton D Elder, Itziar Irakulis-Loitxate, et al. 2023. <span>“Attribution of Individual Methane and Carbon Dioxide Emission Sources Using EMIT Observations from Space.”</span> <em>Science Advances</em> 9 (46): eadh2391. <a href="https://doi.org/10.1126/sciadv.adh2391">https://doi.org/10.1126/sciadv.adh2391</a>.
-</div>
-<div id="ref-THORPE2021112681" class="csl-entry" role="listitem">
-Thorpe, Andrew K., Christopher O’Handley, George D. Emmitt, Philip L. DeCola, Francesca M. Hopkins, Vineet Yadav, Abhinav Guha, et al. 2021. <span>“Improved Methane Emission Estimates Using AVIRIS-NG and an Airborne Doppler Wind Lidar.”</span> <em>Remote Sensing of Environment</em> 266: 112681. https://doi.org/<a href="https://doi.org/10.1016/j.rse.2021.112681">https://doi.org/10.1016/j.rse.2021.112681</a>.
-</div>
-</div></section></div></main></div>
+</div></div>
     </div>
-    <img src="/img/people/thorpe.jpg" class="about-image
+    <img src="../../img/people/thorpe.jpg" class="about-image
   round " style="height: 15em; width: 15em;">
   </div>
 </div>
- <!-- /main -->
+
+</div>
+
+
+
+
+
+
+<div class="footer-banner">
+    <img src="../../img/Logo-White2.png">
+    <p>Closing tropical data gaps to resolve global carbon-budget uncertainties</p>
+</div>
+
+<!-- Navbar Scale Animation-->
+<script>
+    const nav = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('compact');
+      } else {
+        nav.classList.remove('compact');
+      }
+    });
+</script>
+
+<!-- For About Page Layout-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleBlock = document.querySelector(".quarto-title-block");
+    const image = document.querySelector(".about-image");
+
+    const title = document.querySelector('.quarto-title');
+    const logos = document.querySelector('.about-links');
+
+    //place images into titleBlock area
+    if (titleBlock && image) {
+    titleBlock.insertBefore(image, titleBlock.firstChild);
+    }
+
+    //place logos into title area
+    if (title && logos) {
+    title.appendChild(logos);
+    }
+  });
+</script>
+
+<!-- Only add references if there is a bibliography-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refs = document.getElementById("refs");
+      if (!refs) return;
+    
+      document.querySelectorAll('#quarto-appendix').forEach(el => el.remove());
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "references-wrapper";
+    
+      const container = document.createElement("div");
+      container.className = "container about-references";
+    
+      const heading = document.createElement("h1");
+      heading.textContent = "References";
+    
+      container.appendChild(heading);
+      container.appendChild(refs);
+      wrapper.appendChild(container);
+    
+      const footerBanner = document.querySelector(".footer-banner");
+      if (footerBanner && footerBanner.parentNode) {
+        footerBanner.parentNode.insertBefore(wrapper, footerBanner);
+      } else {
+        document.body.appendChild(wrapper);
+      }
+    });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {
@@ -665,36 +733,812 @@ Thorpe, Andrew K., Christopher O’Handley, George D. Emmitt, Philip L. DeCola, 
     }
   });
   </script>
-</div> <!-- /content -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-alexe2014inverse" class="csl-entry" role="listitem">
+Alexe, M., Bergamaschi, P., Segers, A., Detmers, R., Butz, A., Hasekamp, O., et al. (2014). Inverse modeling of CH4 emissions for 2010–2011 using different satellite retrieval products from GOSAT and SCIAMACHY. <em>Atmos. Chem. Phys. Discuss</em>, <em>14</em>, 11493–11539. <a href="https://doi.org/10.5194/acp-15-113-2015">https://doi.org/10.5194/acp-15-113-2015</a>
+</div>
+<div id="ref-alexe2015inverse" class="csl-entry" role="listitem">
+Alexe, Mihai, Bergamaschi, P., Segers, A., Detmers, R., Butz, A., Hasekamp, O., et al. (2015). Inverse modelling of CH 4 emissions for 2010–2011 using different satellite retrieval products from GOSAT and SCIAMACHY. <em>Atmospheric Chemistry and Physics</em>, <em>15</em>(1), 113–133. <a href="https://doi.org/10.5194/acp-15-113-2015">https://doi.org/10.5194/acp-15-113-2015</a>
+</div>
+<div id="ref-aubrey2015crosscutting" class="csl-entry" role="listitem">
+Aubrey, A., Frankenberg, C., Green, R., Eastwood, M., Thompson, D., &amp; Thorpe, A. (2015). Crosscutting airborne remote sensing technologies for oil and gas and earth science applications. In <em>Offshore technology conference</em> (pp. OTC–25984). OTC. <a href="https://doi.org/10.4043/25984-ms">https://doi.org/10.4043/25984-ms</a>
+</div>
+<div id="ref-ayasse2018evaluating" class="csl-entry" role="listitem">
+Ayasse, A. K., Thorpe, A. K., Roberts, D. A., Funk, C. C., Dennison, P. E., Frankenberg, C., et al. (2018). Evaluating the effects of surface properties on methane retrievals using a synthetic airborne visible/infrared imaging spectrometer next generation (AVIRIS-NG) image. <em>Remote Sensing of Environment</em>, <em>215</em>, 386–397. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>
+</div>
+<div id="ref-bacour2019differences" class="csl-entry" role="listitem">
+Bacour, Cedric, Maignan, F., Peylin, P., Macbean, N., Bastrikov, V., Joiner, J., et al. (2019). Differences between OCO-2 and GOME-2 SIF products from a model-data fusion perspective. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>124</em>(10), 3143–3157. <a href="https://doi.org/10.1029/2018jg004938">https://doi.org/10.1029/2018jg004938</a>
+</div>
+<div id="ref-bacour2019improving" class="csl-entry" role="listitem">
+Bacour, Cédric, Maignan, F., MacBean, N., Porcar-Castell, A., Flexas, J., Frankenberg, C., et al. (2019). Improving estimates of gross primary productivity by assimilating solar-induced fluorescence satellite retrievals in a terrestrial biosphere model using a process-based SIF model. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>124</em>(11), 3281–3306. <a href="https://doi.org/10.1029/2019jg005040">https://doi.org/10.1029/2019jg005040</a>
+</div>
+<div id="ref-basu2014seasonal" class="csl-entry" role="listitem">
+Basu, S., Krol, M., Butz, A., Clerbaux, C., Sawa, Y., Machida, T., et al. (2014). The seasonal variation of the CO2 flux over tropical asia estimated from GOSAT, CONTRAIL, and IASI. <em>Geophysical Research Letters</em>, <em>41</em>(5), 1809–1815. <a href="https://doi.org/10.1002/2013gl059105">https://doi.org/10.1002/2013gl059105</a>
+</div>
+<div id="ref-beck2012methane" class="csl-entry" role="listitem">
+Beck, V., Chen, H., Gerbig, C., Bergamaschi, P., Bruhwiler, L., Houweling, S., et al. (2012). Methane airborne measurements and comparison to global models during BARCA. <em>Journal of Geophysical Research: Atmospheres</em>, <em>117</em>(D15). <a href="https://doi.org/10.1029/2011jd017345">https://doi.org/10.1029/2011jd017345</a>
+</div>
+<div id="ref-bergamaschi2007composition" class="csl-entry" role="listitem">
+Bergamaschi, P., Frankenberg, C., Meirink, J., Krol, M., Dentener, F., Wagner, T., et al. (2007). Composition and chemistry-D02304-satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: 2. Evaluation based on inverse model simulations (DOI 10.1029/2006JD007268). <em>Journal of Geophysical Research-Part D-Atmospheres</em>, <em>112</em>(2). <a href="https://doi.org/10.1029/2006jd007268">https://doi.org/10.1029/2006jd007268</a>
+</div>
+<div id="ref-bergamaschi2007satellite" class="csl-entry" role="listitem">
+Bergamaschi, Peter, Frankenberg, C., Meirink, J. F., Krol, M., Dentener, F., Wagner, T., et al. (2007). Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: 2. Evaluation based on inverse model simulations. <em>Journal of Geophysical Research: Atmospheres</em>, <em>112</em>(D2). <a href="https://doi.org/10.1029/2006jd007268">https://doi.org/10.1029/2006jd007268</a>
+</div>
+<div id="ref-bergamaschi2009inverse" class="csl-entry" role="listitem">
+Bergamaschi, Peter, Frankenberg, C., Meirink, J. F., Krol, M., Villani, M. G., Houweling, S., et al. (2009). Inverse modeling of global and regional CH4 emissions using SCIAMACHY satellite retrievals. <em>Journal of Geophysical Research: Atmospheres</em>, <em>114</em>(D22). <a href="https://doi.org/10.1029/2009jd012287">https://doi.org/10.1029/2009jd012287</a>
+</div>
+<div id="ref-bergamaschi2013atmospheric" class="csl-entry" role="listitem">
+Bergamaschi, Peter, Houweling, S., Segers, A., Krol, M., Frankenberg, C., Scheepmaker, R., et al. (2013). Atmospheric CH4 in the first decade of the 21st century: Inverse modeling analysis using SCIAMACHY satellite retrievals and NOAA surface measurements. <em>Journal of Geophysical Research: Atmospheres</em>, <em>118</em>(13), 7350–7369. <a href="https://doi.org/10.1002/jgrd.50480">https://doi.org/10.1002/jgrd.50480</a>
+</div>
+<div id="ref-bloom2010large" class="csl-entry" role="listitem">
+Bloom, A. A., Palmer, P. I., Fraser, A., Reay, D. S., &amp; Frankenberg, C. (2010). Large-scale controls of methanogenesis inferred from methane and gravity spaceborne data. <em>Science</em>, <em>327</em>(5963), 322–325. <a href="https://doi.org/10.1126/science.1175176">https://doi.org/10.1126/science.1175176</a>
+</div>
+<div id="ref-bloom2015remote" class="csl-entry" role="listitem">
+Bloom, A. A., Worden, J., Jiang, Z., Worden, H., Kurosu, T., Frankenberg, C., &amp; Schimel, D. (2015). Remote-sensing constraints on south america fire traits by bayesian fusion of atmospheric and surface data. <em>Geophysical Research Letters</em>, <em>42</em>(4), 1268–1274. <a href="https://doi.org/10.1002/2014gl062584">https://doi.org/10.1002/2014gl062584</a>
+</div>
+<div id="ref-borchardt2020detection" class="csl-entry" role="listitem">
+Borchardt, J., Gerilowski, K., Krautwurst, S., Bovensmann, H., Thorpe, A. K., Thompson, D. R., et al. (2020). Detection and quantification of CH 4 plumes using the WFM-DOAS retrieval on AVIRIS-NG hyperspectral data. <em>Atmospheric Measurement Techniques Discussions</em>, <em>2020</em>, 1–34. <a href="https://doi.org/10.5194/amt-14-1267-2021">https://doi.org/10.5194/amt-14-1267-2021</a>
+</div>
+<div id="ref-borchardt2021detection" class="csl-entry" role="listitem">
+Borchardt, J., Gerilowski, K., Krautwurst, S., Bovensmann, H., Thorpe, A. K., Thompson, D. R., et al. (2021). Detection and quantification of CH 4 plumes using the WFM-DOAS retrieval on AVIRIS-NG hyperspectral data. <em>Atmospheric Measurement Techniques</em>, <em>14</em>(2), 1267–1291. <a href="https://doi.org/10.5194/amt-14-1267-2021">https://doi.org/10.5194/amt-14-1267-2021</a>
+</div>
+<div id="ref-bousquet2011source" class="csl-entry" role="listitem">
+Bousquet, P., Ringeval, B., Pison, I., Dlugokencky, E., Brunke, E.-G., Carouge, C., et al. (2011). Source attribution of the changes in atmospheric methane for 2006–2008. <em>Atmospheric Chemistry and Physics</em>, <em>11</em>(8), 3689–3700. <a href="https://doi.org/10.5194/acp-11-3689-2011">https://doi.org/10.5194/acp-11-3689-2011</a>
+</div>
+<div id="ref-bovensmann2011sciamachy" class="csl-entry" role="listitem">
+Bovensmann, H., Aben, I., Van Roozendael, M., Kühl, S., Gottwald, M., Von Savigny, C., et al. (2011). SCIAMACHY’s view of the changing earth’s environment. <em>SCIAMACHY-Exploring the Changing Earth’s Atmosphere</em>, 175–216. <a href="https://doi.org/10.1007/978-90-481-9896-2_10">https://doi.org/10.1007/978-90-481-9896-2_10</a>
+</div>
+<div id="ref-braghiere2021accounting" class="csl-entry" role="listitem">
+Braghiere, R. K., Wang, Y., Doughty, R., Sousa, D., Magney, T., Widlowski, J.-L., et al. (2021). Accounting for canopy structure improves hyperspectral radiative transfer and sun-induced chlorophyll fluorescence representations in a new generation earth system model. <em>Remote Sensing of Environment</em>, <em>261</em>, 112497. <a href="https://doi.org/10.1016/j.rse.2021.112497">https://doi.org/10.1016/j.rse.2021.112497</a>
+</div>
+<div id="ref-braghiere2023tipping" class="csl-entry" role="listitem">
+Braghiere, R. K., Fisher, J. B., Miner, K. R., Miller, C. E., Worden, J. R., Schimel, D. S., &amp; Frankenberg, C. (2023). Tipping point in north american arctic-boreal carbon sink persists in new generation earth system models despite reduced uncertainty. <em>Environmental Research Letters</em>, <em>18</em>(2), 025008. <a href="https://doi.org/10.1088/1748-9326/acb226">https://doi.org/10.1088/1748-9326/acb226</a>
+</div>
+<div id="ref-buchwitz2015comparison" class="csl-entry" role="listitem">
+Buchwitz, M., Reuter, M., Schneising, O., Boesch, H., Guerlet, S., Dils, B., et al. (2015). Comparison and quality assessment of near-surface-sensitive satellite-derived CO2 and CH4 global data sets. <em>Remote Sens. Environ</em>, <em>162</em>(1), 344–362. <a href="https://doi.org/10.5194/dach2022-71">https://doi.org/10.5194/dach2022-71</a>
+</div>
+<div id="ref-buchwitz2017global" class="csl-entry" role="listitem">
+Buchwitz, M., Reuter, M., Schneising, O., Hewson, W., Detmers, R. G., Boesch, H., et al. (2017). Global satellite observations of column-averaged carbon dioxide and methane: The GHG-CCI XCO2 and XCH4 CRDP3 data set. <em>Remote Sensing of Environment</em>, <em>203</em>, 276–295. <a href="https://doi.org/10.1016/j.rse.2016.12.027">https://doi.org/10.1016/j.rse.2016.12.027</a>
+</div>
+<div id="ref-buchwitz2017satellite" class="csl-entry" role="listitem">
+Buchwitz, M., Schneising, O., Reuter, M., Heymann, J., Krautwurst, S., Bovensmann, H., et al. (2017). Satellite-derived methane hotspot emission estimates using a fast data-driven method. <em>Atmospheric Chemistry and Physics</em>, <em>17</em>(9), 5751–5774. <a href="https://doi.org/10.5194/acp-2016-755-rc2">https://doi.org/10.5194/acp-2016-755-rc2</a>
+</div>
+<div id="ref-butz2009retrievals" class="csl-entry" role="listitem">
+Butz, André, Hasekamp, O. P., Frankenberg, C., &amp; Aben, I. (2009). Retrievals of atmospheric CO 2 from simulated space-borne measurements of backscattered near-infrared sunlight: Accounting for aerosol effects. <em>Applied Optics</em>, <em>48</em>(18), 3322–3336. <a href="https://doi.org/10.1364/ao.48.003322">https://doi.org/10.1364/ao.48.003322</a>
+</div>
+<div id="ref-butz2010ch4" class="csl-entry" role="listitem">
+Butz, A., Hasekamp, O., Frankenberg, C., Vidot, J., &amp; Aben, I. (2010). CH4 retrievals from space-based solar backscatter measurements: Performance evaluation against simulated aerosol and cirrus loaded scenes. <em>Journal of Geophysical Research: Atmospheres</em>, <em>115</em>(D24). <a href="https://doi.org/10.1029/2010jd014514">https://doi.org/10.1029/2010jd014514</a>
+</div>
+<div id="ref-butz2011toward" class="csl-entry" role="listitem">
+Butz, André, Guerlet, S., Hasekamp, O., Schepers, D., Galli, A., Aben, I., et al. (2011). Toward accurate CO2 and CH4 observations from GOSAT. <em>Geophysical Research Letters</em>, <em>38</em>(14). <a href="https://doi.org/10.5194/egusphere-egu2020-3576">https://doi.org/10.5194/egusphere-egu2020-3576</a>
+</div>
+<div id="ref-butzin2014variations" class="csl-entry" role="listitem">
+Butzin, M., Werner, M., Masson-Delmotte, V., Risi, C., Frankenberg, C., Gribanov, K., et al. (2014). Variations of oxygen-18 in west siberian precipitation during the last 50 years. <em>Atmospheric Chemistry and Physics</em>, <em>14</em>(11), 5853–5869. <a href="https://doi.org/10.5194/acp-14-5853-2014">https://doi.org/10.5194/acp-14-5853-2014</a>
+</div>
+<div id="ref-chang2020systematic" class="csl-entry" role="listitem">
+Chang, C. Y., Guanter, L., Frankenberg, C., Köhler, P., Gu, L., Magney, T. S., et al. (2020). Systematic assessment of retrieval methods for canopy far-red solar-induced chlorophyll fluorescence using high-frequency automated field spectroscopy. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>125</em>(7), e2019JG005533. <a href="https://doi.org/10.1029/2019jg005533">https://doi.org/10.1029/2019jg005533</a>
+</div>
+<div id="ref-chen2021moisture" class="csl-entry" role="listitem">
+Chen, A., Mao, J., Ricciuto, D., Xiao, J., Frankenberg, C., Li, X., et al. (2021). Moisture availability mediates the relationship between terrestrial gross primary production and solar-induced chlorophyll fluorescence: Insights from global-scale variations. <em>Global Change Biology</em>, <em>27</em>(6), 1144–1156. <a href="https://doi.org/10.1111/gcb.15373">https://doi.org/10.1111/gcb.15373</a>
+</div>
+<div id="ref-cheng2020decomposing" class="csl-entry" role="listitem">
+Cheng, R., Magney, T. S., Dutta, D., Bowling, D. R., Logan, B. A., Burns, S. P., et al. (2020). Decomposing reflectance spectra to track gross primary production in a subalpine evergreen forest. <em>Biogeosciences</em>, <em>17</em>(18), 4523–4544. <a href="https://doi.org/10.5194/bg-2020-41-rc2">https://doi.org/10.5194/bg-2020-41-rc2</a>
+</div>
+<div id="ref-cheng2022evaluating" class="csl-entry" role="listitem">
+Cheng, R., Magney, T. S., Orcutt, E. L., Pierrat, Z., Köhler, P., Bowling, D. R., et al. (2022). Evaluating photosynthetic activity across arctic-boreal land cover types using solar-induced fluorescence. <em>Environmental Research Letters</em>, <em>17</em>(11), 115009. <a href="https://doi.org/10.1088/1748-9326/ac9dae">https://doi.org/10.1088/1748-9326/ac9dae</a>
+</div>
+<div id="ref-cheng2022impact" class="csl-entry" role="listitem">
+Cheng, R., Köhler, P., &amp; Frankenberg, C. (2022). Impact of radiation variations on temporal upscaling of instantaneous solar-induced chlorophyll fluorescence. <em>Agricultural and Forest Meteorology</em>, <em>327</em>, 109197. <a href="https://doi.org/10.1016/j.agrformet.2022.109197">https://doi.org/10.1016/j.agrformet.2022.109197</a>
+</div>
+<div id="ref-cole2023precision" class="csl-entry" role="listitem">
+Cole, R. K., Fredrick, C., Nguyen, N. H., Frankenberg, C., &amp; Diddams, S. A. (2023). Precision atmospheric wind measurements with a frequency comb calibrated laser heterodyne radiometer. In <em>Optics and photonics for sensing the environment</em> (pp. ETu5E–5). Optica Publishing Group. <a href="https://doi.org/10.1364/es.2023.etu5e.5">https://doi.org/10.1364/es.2023.etu5e.5</a>
+</div>
+<div id="ref-connor2016quantification" class="csl-entry" role="listitem">
+Connor, B., Bösch, H., McDuffie, J., Taylor, T., Fu, D., Frankenberg, C., et al. (2016). Quantification of uncertainties in OCO-2 measurements of XCO 2: Simulations and linear error analysis. <em>Atmospheric Measurement Techniques</em>, <em>9</em>(10), 5227–5238. <a href="https://doi.org/10.5194/amt-9-5227-2016">https://doi.org/10.5194/amt-9-5227-2016</a>
+</div>
+<div id="ref-cressot2013consistency" class="csl-entry" role="listitem">
+Cressot, C., Chevallier, F., Bousquet, P., Crevoisier, C., Dlugokencky, E., Fortems-Cheiney, A., et al. (2013). On the consistency between global and regional methane emissions inferred from SCIAMACHY, TANSO-FTS, IASI and surface measurements. <em>Atmos. Chem. Phys. Discuss</em>, <em>13</em>, 8023–8064. <a href="https://doi.org/10.5194/acp-14-577-2014">https://doi.org/10.5194/acp-14-577-2014</a>
+</div>
+<div id="ref-crisp2011acos" class="csl-entry" role="listitem">
+Crisp, D., Fischer, B., O’C, D., Frankenberg, C., Basilio, R., Boesch, H., et al. (2011). The ACOS XCO 2 retrieval algorithm, part II. Global XCO 2 data characterization. <em>Atmos Meas Tech Discus</em>, <em>4</em>, 1–59. <a href="https://doi.org/10.1016/j.atmosenv.2023.119933">https://doi.org/10.1016/j.atmosenv.2023.119933</a>
+</div>
+<div id="ref-crisp2017orbit" class="csl-entry" role="listitem">
+Crisp, D., Pollock, H. R., Rosenberg, R., Chapsky, L., Lee, R. A., Oyafuso, F. A., et al. (2017). The on-orbit performance of the orbiting carbon observatory-2 (OCO-2) instrument and its radiometrically calibrated products. <em>Atmospheric Measurement Techniques</em>, <em>10</em>(1), 59–81. <a href="https://doi.org/10.5194/amt-2016-281-rc1">https://doi.org/10.5194/amt-2016-281-rc1</a>
+</div>
+<div id="ref-cusworth2019potential" class="csl-entry" role="listitem">
+Cusworth, Daniel H., Jacob, D. J., Varon, D. J., Chan Miller, C., Liu, X., Chance, K., et al. (2019). Potential of next-generation imaging spectrometers to detect and quantify methane point sources from space. <em>Atmospheric Measurement Techniques</em>, <em>12</em>(10), 5655–5668. <a href="https://doi.org/10.5194/amt-2019-202-rc2">https://doi.org/10.5194/amt-2019-202-rc2</a>
+</div>
+<div id="ref-cusworth2021multisatellite" class="csl-entry" role="listitem">
+Cusworth, Daniel H., Duren, R. M., Thorpe, A. K., Pandey, S., Maasakkers, J. D., Aben, I., et al. (2021). Multisatellite imaging of a gas well blowout enables quantification of total methane emissions. <em>Geophysical Research Letters</em>, <em>48</em>(2), e2020GL090864. <a href="https://doi.org/10.1029/2020gl090864">https://doi.org/10.1029/2020gl090864</a>
+</div>
+<div id="ref-cusworth2021quantifying" class="csl-entry" role="listitem">
+Cusworth, Daniel H., Duren, R. M., Thorpe, A. K., Eastwood, M. L., Green, R. O., Dennison, P. E., et al. (2021). Quantifying global power plant carbon dioxide emissions with imaging spectroscopy. <em>AGU Advances</em>, <em>2</em>(2), e2020AV000350. <a href="https://doi.org/10.1029/2020av000350">https://doi.org/10.1029/2020av000350</a>
+</div>
+<div id="ref-cusworth_pnas" class="csl-entry" role="listitem">
+Cusworth, Daniel H., Thorpe, A. K., Ayasse, A. K., Stepp, D., Heckler, J., Asner, G. P., et al. (2022). Strong methane point sources contribute a disproportionate fraction of total emissions across multiple basins in the united states. <em>Proceedings of the National Academy of Sciences</em>, <em>119</em>(38), e2202338119. <a href="https://doi.org/10.1073/pnas.2202338119">https://doi.org/10.1073/pnas.2202338119</a>
+</div>
+<div id="ref-dechant2022nirvp" class="csl-entry" role="listitem">
+Dechant, B., Ryu, Y., Badgley, G., Köhler, P., Rascher, U., Migliavacca, M., et al. (2022). NIRVP: A robust structural proxy for sun-induced chlorophyll fluorescence and photosynthesis across scales. <em>Remote Sensing of Environment</em>, <em>268</em>, 112763. <a href="https://doi.org/10.31223/x5zs35">https://doi.org/10.31223/x5zs35</a>
+</div>
+<div id="ref-dils2006comparisons" class="csl-entry" role="listitem">
+Dils, Bart, De Mazière, M., Müller, J., Blumenstock, T., Buchwitz, M., De Beek, R., et al. (2006). Comparisons between SCIAMACHY and ground-based FTIR data for total columns of CO, CH 4, CO 2 and n 2 o. <em>Atmospheric Chemistry and Physics</em>, <em>6</em>(7), 1953–1976. <a href="https://doi.org/10.5194/acp-6-1953-2006">https://doi.org/10.5194/acp-6-1953-2006</a>
+</div>
+<div id="ref-dils2014comparative" class="csl-entry" role="listitem">
+Dils, B., Buchwitz, M., Reuter, M., Schneising, O., Boesch, H., Parker, R., et al. (2014a). Comparative validation of GHG-CCI SCIAMACHY/ENVISAT and TANSO-FTS/GOSAT CO2 and CH4 retrieval algorithm products with measurements from the TCCON, atmos. <em>Meas. Tech</em>, <em>7</em>(6), 1723–1744. <a href="https://doi.org/10.5194/amt-7-1723-2014">https://doi.org/10.5194/amt-7-1723-2014</a>
+</div>
+<div id="ref-dils2014greenhouse" class="csl-entry" role="listitem">
+Dils, B., Buchwitz, M., Reuter, M., Schneising, O., Boesch, H., Parker, R., et al. (2014b). The greenhouse gas climate change initiative (GHG-CCI): Comparative validation of GHG-CCI SCIAMACHY/ENVISAT and TANSO-FTS/GOSAT CO 2 and CH 4 retrieval algorithm products with measurements from the TCCON. <em>Atmospheric Measurement Techniques</em>, <em>7</em>(6), 1723–1744. <a href="https://doi.org/10.5194/amt-7-1723-2014">https://doi.org/10.5194/amt-7-1723-2014</a>
+</div>
+<div id="ref-doughty2019tropomi" class="csl-entry" role="listitem">
+Doughty, R., Köhler, P., Frankenberg, C., Magney, T. S., Xiao, X., Qin, Y., et al. (2019). TROPOMI reveals dry-season increase of solar-induced chlorophyll fluorescence in the amazon forest. <em>Proceedings of the National Academy of Sciences</em>, <em>116</em>(44), 22393–22398. <a href="https://doi.org/10.1073/pnas.1908157116">https://doi.org/10.1073/pnas.1908157116</a>
+</div>
+<div id="ref-doughty2021global" class="csl-entry" role="listitem">
+Doughty, R., Kurosu, T., Parazoo, N., Köhler, P., Wang, Y., Sun, Y., &amp; Frankenberg, C. (2021). Global GOSAT, OCO-2 and OCO-3 solar induced chlorophyll fluorescence datasets. <em>Earth System Science Data Discussions</em>, <em>2021</em>, 1–28. <a href="https://doi.org/10.5194/essd-2021-237-supplement">https://doi.org/10.5194/essd-2021-237-supplement</a>
+</div>
+<div id="ref-duren2019california" class="csl-entry" role="listitem">
+Duren, R. M., Thorpe, A. K., Foster, K. T., Rafiq, T., Hopkins, F. M., Yadav, V., et al. (2019). California’s methane super-emitters. <em>Nature</em>, <em>575</em>(7781), 180–184. <a href="https://doi.org/10.21203/rs.3.rs-952096/v1">https://doi.org/10.21203/rs.3.rs-952096/v1</a>
+</div>
+<div id="ref-dutta2019optimal" class="csl-entry" role="listitem">
+Dutta, D., Schimel, D. S., Sun, Y., Van Der Tol, C., &amp; Frankenberg, C. (2019). Optimal inverse estimation of ecosystem parameters from observations of carbon and energy fluxes. <em>Biogeosciences</em>, <em>16</em>(1), 77–103. <a href="https://doi.org/10.5194/bg-16-77-2019">https://doi.org/10.5194/bg-16-77-2019</a>
+</div>
+<div id="ref-duveiller2020spatially" class="csl-entry" role="listitem">
+Duveiller, G., Filipponi, F., Walther, S., Köhler, P., Frankenberg, C., Guanter, L., &amp; Cescatti, A. (2020). A spatially downscaled sun-induced fluorescence global product for enhanced monitoring of vegetation productivity. <em>Earth System Science Data</em>, <em>12</em>(2), 1101–1116. <a href="https://doi.org/10.5194/essd-12-1101-2020">https://doi.org/10.5194/essd-12-1101-2020</a>
+</div>
+<div id="ref-ehret2017merlin" class="csl-entry" role="listitem">
+Ehret, G., Bousquet, P., Pierangelo, C., Alpers, M., Millet, B., Abshire, J. B., et al. (2017). MERLIN: A french-german space lidar mission dedicated to atmospheric methane. <em>Remote Sensing</em>, <em>9</em>(10), 1052. <a href="https://doi.org/10.3390/rs9101052">https://doi.org/10.3390/rs9101052</a>
+</div>
+<div id="ref-eldering2017orbiting" class="csl-entry" role="listitem">
+Eldering, A., Wennberg, P., Crisp, D., Schimel, D., Gunson, M., Chatterjee, A., et al. (2017). The orbiting carbon observatory-2 early science investigations of regional carbon dioxide fluxes. <em>Science</em>, <em>358</em>(6360), eaam5745. <a href="https://doi.org/10.1126/science.aam5745">https://doi.org/10.1126/science.aam5745</a>
+</div>
+<div id="ref-fisher2013african" class="csl-entry" role="listitem">
+Fisher, J. B., Sikka, M., Sitch, S., Ciais, P., Poulter, B., Galbraith, D., et al. (2013). African tropical rainforest net carbon dioxide fluxes in the twentieth century. <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em>, <em>368</em>(1625), 20120376. <a href="https://doi.org/10.1098/rstb.2012.0376">https://doi.org/10.1098/rstb.2012.0376</a>
+</div>
+<div id="ref-foote2020fast" class="csl-entry" role="listitem">
+Foote, M. D., Dennison, P. E., Thorpe, A. K., Thompson, D. R., Jongaramrungruang, S., Frankenberg, C., &amp; Joshi, S. C. (2020). Fast and accurate retrieval of methane concentration from imaging spectrometer data using sparsity prior. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, <em>58</em>(9), 6480–6492. <a href="https://doi.org/10.1109/tgrs.2020.2976888">https://doi.org/10.1109/tgrs.2020.2976888</a>
+</div>
+<div id="ref-frankenberg2005retrieval" class="csl-entry" role="listitem">
+Frankenberg, Christian. (2005). <em>Retrieval of methane and carbon monoxide using near infrared spectra recorded by SCIAMACHY onboard ENVISAT: Algorithm development and data analysis</em> (PhD thesis). <a href="https://doi.org/10.5194/acp-5-9-2005">https://doi.org/10.5194/acp-5-9-2005</a>
+</div>
+<div id="ref-frankenberg2005assessing" class="csl-entry" role="listitem">
+Frankenberg, C., Meirink, J., Weele, M. van, Platt, U., &amp; Wagner, T. (2005). Assessing methane emissions from global space-borne observations. <em>Science</em>, <em>308</em>(5724), 1010–1014. <a href="https://doi.org/10.1126/science.1106644">https://doi.org/10.1126/science.1106644</a>
+</div>
+<div id="ref-frankenberg2005iterative" class="csl-entry" role="listitem">
+Frankenberg, Christian, Platt, U., &amp; Wagner, T. (2005). Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT. <em>Atmospheric Chemistry and Physics</em>, <em>5</em>(1), 9–22. <a href="https://doi.org/10.5194/acp-5-9-2005">https://doi.org/10.5194/acp-5-9-2005</a>
+</div>
+<div id="ref-frankenberg2006satellite" class="csl-entry" role="listitem">
+Frankenberg, C., Meirink, J., Bergamaschi, P., Goede, A., Heimann, M., Körner, S., et al. (2006). Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: Analysis of the years 2003 and 2004. <em>Journal of Geophysical Research</em>, <em>111</em>(D7), D07303. <a href="https://doi.org/10.1029/2005jd006235">https://doi.org/10.1029/2005jd006235</a>
+</div>
+<div id="ref-frankenberg2008methane" class="csl-entry" role="listitem">
+Frankenberg, Christian, Warneke, T., Butz, A., Aben, I., Hase, F., Spietz, P., &amp; Brown, L. (2008a). Methane spectroscopy in the near infrared and its implication on atmospheric retrievals. <em>Atmospheric Chemistry and Physics Discussions</em>, <em>8</em>(3), 10021–10055. <a href="https://doi.org/10.5194/acp-8-5061-2008">https://doi.org/10.5194/acp-8-5061-2008</a>
+</div>
+<div id="ref-frankenberg2008pressure" class="csl-entry" role="listitem">
+Frankenberg, Christian, Warneke, T., Butz, A., Aben, I., Hase, F., Spietz, P., &amp; Brown, L. R. (2008b). Pressure broadening in the 2<span class="math inline">\(\nu\)</span> 3 band of methane and its implication on atmospheric retrievals. <em>Atmospheric Chemistry and Physics</em>, <em>8</em>(17), 5061–5075. <a href="https://doi.org/10.5194/acp-8-5061-2008">https://doi.org/10.5194/acp-8-5061-2008</a>
+</div>
+<div id="ref-frankenberg2008tropical" class="csl-entry" role="listitem">
+Frankenberg, Christian, Bergamaschi, P., Butz, A., Houweling, S., Meirink, J. F., Notholt, J., et al. (2008). Tropical methane emissions: A revised view from SCIAMACHY onboard ENVISAT. <em>Geophysical Research Letters</em>, <em>35</em>(15). <a href="https://doi.org/10.1029/2008gl034300">https://doi.org/10.1029/2008gl034300</a>
+</div>
+<div id="ref-frankenberg2009dynamic" class="csl-entry" role="listitem">
+Frankenberg, Christian, Yoshimura, K., Warneke, T., Aben, I., Butz, A., Deutscher, N., et al. (2009). Dynamic processes governing lower-tropospheric HDO/H2O ratios as observed from space and ground. <em>Science</em>, <em>325</em>(5946), 1374–1377. <a href="https://doi.org/10.1126/science.1173791">https://doi.org/10.1126/science.1173791</a>
+</div>
+<div id="ref-frankenberg2011disentangling" class="csl-entry" role="listitem">
+Frankenberg, C., Butz, A., &amp; Toon, G. (2011). Disentangling chlorophyll fluorescence from atmospheric scattering effects in O2 a-band spectra of reflected sun-light. <em>Geophysical Research Letters</em>, <em>38</em>(3). <a href="https://doi.org/10.1029/2010gl045896">https://doi.org/10.1029/2010gl045896</a>
+</div>
+<div id="ref-frankenberg2011global" class="csl-entry" role="listitem">
+Frankenberg, Christian, Aben, I., Bergamaschi, P., Dlugokencky, E., Van Hees, R., Houweling, S., et al. (2011). Global column-averaged methane mixing ratios from 2003 to 2009 as derived from SCIAMACHY: Trends and variability. <em>Journal of Geophysical Research: Atmospheres</em>, <em>116</em>(D4). <a href="https://doi.org/10.1029/2010jd014849">https://doi.org/10.1029/2010jd014849</a>
+</div>
+<div id="ref-frankenberg2011new" class="csl-entry" role="listitem">
+Frankenberg, Christian, Fisher, J. B., Worden, J., Badgley, G., Saatchi, S. S., Lee, J.-E., et al. (2011). New global observations of the terrestrial carbon cycle from GOSAT: Patterns of plant fluorescence with gross primary productivity. <em>Geophysical Research Letters</em>, <em>38</em>(17). <a href="https://doi.org/10.1029/2011gl048738">https://doi.org/10.1029/2011gl048738</a>
+</div>
+<div id="ref-frankenberg2012aerosol" class="csl-entry" role="listitem">
+Frankenberg, C., Hasekamp, O., O’Dell, C., Sanghavi, S., Butz, A., &amp; Worden, J. (2012). Aerosol information content analysis of multi-angle high spectral resolution measurements and its benefit for high accuracy greenhouse gas retrievals. <em>Atmospheric Measurement Techniques</em>, <em>5</em>(7), 1809–1821. <a href="https://doi.org/10.5194/amt-5-1809-2012">https://doi.org/10.5194/amt-5-1809-2012</a>
+</div>
+<div id="ref-frankenberg2012chlorophyll" class="csl-entry" role="listitem">
+Frankenberg, C., O’Dell, C., Guanter, L., &amp; McDuffie, J. (2012a). Chlorophyll fluorescence remote sensing from space in scattering atmospheres: Implications for its retrieval and interferences with atmospheric CO2 retrievals. <a href="https://doi.org/10.5194/amt-5-2081-2012">https://doi.org/10.5194/amt-5-2081-2012</a>
+</div>
+<div id="ref-frankenberg2012remote" class="csl-entry" role="listitem">
+Frankenberg, C., O’Dell, C., Guanter, L., &amp; McDuffie, J. (2012b). Remote sensing of near-infrared chlorophyll fluorescence from space in scattering atmospheres: Implications for its retrieval and interferences with atmospheric CO2 retrievals. <em>Meas. Tech</em>, <em>5</em>, 2081–2094. <a href="https://doi.org/10.5194/amt-5-2081-2012">https://doi.org/10.5194/amt-5-2081-2012</a>
+</div>
+<div id="ref-frankenberg2013remote" class="csl-entry" role="listitem">
+Frankenberg, Christian, Berry, J., Guanter, L., &amp; Joiner, J. (2013). Remote sensing of terrestrial chlorophyll fluorescence from space. <em>SPIE Newsroom</em>, Art–No. <a href="https://doi.org/10.1117/2.1201302.004725">https://doi.org/10.1117/2.1201302.004725</a>
+</div>
+<div id="ref-frankenberg2013water" class="csl-entry" role="listitem">
+Frankenberg, C., Wunch, D., Toon, G., Risi, C., Scheepmaker, R., Lee, J., et al. (2013). Water vapor isotopologue retrievals from high-resolution GOSAT shortwave infrared spectra. <a href="https://doi.org/10.5194/amt-6-263-2013">https://doi.org/10.5194/amt-6-263-2013</a>
+</div>
+<div id="ref-frankenberg2014orbiting" class="csl-entry" role="listitem">
+Frankenberg, Christian, O’Dell, C., Berry, J., Guanter, L., Joiner, J., Köhler, P., et al. (2014). Prospects for chlorophyll fluorescence remote sensing from the orbiting carbon observatory-2. <em>Remote Sensing of Environment</em>, <em>147</em>, 1–12. <a href="https://doi.org/10.1016/j.rse.2014.02.007">https://doi.org/10.1016/j.rse.2014.02.007</a>
+</div>
+<div id="ref-frankenberg2015orbiting" class="csl-entry" role="listitem">
+Frankenberg, C., Pollock, R., Lee, R., Rosenberg, R., Blavier, J.-F., Crisp, D., et al. (2015). The orbiting carbon observatory (OCO-2): Spectrometer performance evaluation using pre-launch direct sun measurements. <em>Atmospheric Measurement Techniques</em>, <em>8</em>(1), 301–313. <a href="https://doi.org/10.5194/amt-8-301-2015">https://doi.org/10.5194/amt-8-301-2015</a>
+</div>
+<div id="ref-frankenberg2016airborne" class="csl-entry" role="listitem">
+Frankenberg, Christian, Thorpe, A. K., Thompson, D. R., Hulley, G., Kort, E. A., Vance, N., et al. (2016). Airborne methane remote measurements reveal heavy-tail flux distribution in four corners region. <em>Proceedings of the National Academy of Sciences</em>, <em>113</em>(35), 9734–9739. <a href="https://doi.org/10.1073/pnas.1605617113">https://doi.org/10.1073/pnas.1605617113</a>
+</div>
+<div id="ref-frankenberg2016remote" class="csl-entry" role="listitem">
+Frankenberg, Christian, Drewry, D., Geier, S., Verma, M., Lawson, P., Stutz, J., &amp; Grossmann, K. (2016). Remote sensing of solar induced chlorophyll fluorescence from satellites, airplanes and ground-based stations. In <em>2016 IEEE international geoscience and remote sensing symposium (IGARSS)</em> (pp. 1707–1710). IEEE. <a href="https://doi.org/10.1109/igarss.2016.7729436">https://doi.org/10.1109/igarss.2016.7729436</a>
+</div>
+<div id="ref-frankenberg2016using" class="csl-entry" role="listitem">
+Frankenberg, Christian, Kulawik, S. S., Wofsy, S. C., Chevallier, F., Daube, B., Kort, E. A., et al. (2016). Using airborne HIAPER pole-to-pole observations (HIPPO) to evaluate model and remote sensing estimates of atmospheric carbon dioxide. <em>Atmospheric Chemistry and Physics</em>, <em>16</em>(12), 7867–7878. <a href="https://doi.org/10.5194/acp-2015-961-rc2">https://doi.org/10.5194/acp-2015-961-rc2</a>
+</div>
+<div id="ref-frankenberg2018chlorophyll" class="csl-entry" role="listitem">
+Frankenberg, Christian, Köhler, P., Magney, T. S., Geier, S., Lawson, P., Schwochert, M., et al. (2018). The chlorophyll fluorescence imaging spectrometer (CFIS), mapping far red fluorescence from aircraft. <em>Remote Sensing of Environment</em>, <em>217</em>, 523–536. <a href="https://doi.org/10.1016/j.rse.2018.08.032">https://doi.org/10.1016/j.rse.2018.08.032</a>
+</div>
+<div id="ref-frankenberg2021comment" class="csl-entry" role="listitem">
+Frankenberg, Christian, Yin, Y., Byrne, B., He, L., &amp; Gentine, P. (2021). Comment on <span>“recent global decline of CO2 fertilization effects on vegetation photosynthesis.”</span> <em>Science</em>, <em>373</em>(6562), eabg2947. <a href="https://doi.org/10.31223/x5k89v">https://doi.org/10.31223/x5k89v</a>
+</div>
+<div id="ref-gensheimer2022convolutional" class="csl-entry" role="listitem">
+Gensheimer, J., Turner, A. J., Köhler, P., Frankenberg, C., &amp; Chen, J. (2022). A convolutional neural network for spatial downscaling of satellite-based solar-induced chlorophyll fluorescence (SIFnet). <em>Biogeosciences</em>, <em>19</em>(6), 1777–1793. <a href="https://doi.org/10.5194/bg-2021-348-supplement">https://doi.org/10.5194/bg-2021-348-supplement</a>
+</div>
+<div id="ref-gerlein2023algae" class="csl-entry" role="listitem">
+Gerlein-Safdi, C., Köhler, P., Wang, S., Flanner, M., Keppel-Aleks, G., &amp; Frankenberg, C. (2023). Algae blooms on the greenland ice sheet detected through solar-induced fluorescence. <em>IEEE Transactions on Geoscience and Remote Sensing</em>. <a href="https://doi.org/10.1109/tgrs.2023.3305194/mm1">https://doi.org/10.1109/tgrs.2023.3305194/mm1</a>
+</div>
+<div id="ref-grossmann2018photospec" class="csl-entry" role="listitem">
+Grossmann, K., Frankenberg, C., Magney, T. S., Hurlock, S. C., Seibt, U., &amp; Stutz, J. (2018). PhotoSpec: A new instrument to measure spatially distributed red and far-red solar-induced chlorophyll fluorescence. <em>Remote Sensing of Environment</em>, <em>216</em>, 311–327. <a href="https://doi.org/10.1016/j.rse.2018.07.002">https://doi.org/10.1016/j.rse.2018.07.002</a>
+</div>
+<div id="ref-gryazin2014added" class="csl-entry" role="listitem">
+Gryazin, V., Risi, C., Jouzel, J., Kurita, N., Worden, J., Frankenberg, C., et al. (2014a). The added value of water isotopic measurements for understanding model biases in simulating the water cycle over western siberia. <em>Atmospheric Chemistry &amp; Physics</em>, <em>14</em>(4). <a href="https://doi.org/10.5194/acp-14-9807-2014">https://doi.org/10.5194/acp-14-9807-2014</a>
+</div>
+<div id="ref-gryazin2014extent" class="csl-entry" role="listitem">
+Gryazin, V., Risi, C., Jouzel, J., Kurita, N., Worden, J., Frankenberg, C., et al. (2014b). To what extent could water isotopic measurements help us understand model biases in the water cycle over western siberia. <em>Atmospheric Chemistry and Physics</em>, <em>14</em>(18), 9807–9830. <a href="https://doi.org/10.5194/acp-14-9807-2014">https://doi.org/10.5194/acp-14-9807-2014</a>
+</div>
+<div id="ref-guanter2012retrieval" class="csl-entry" role="listitem">
+Guanter, L., Frankenberg, C., Dudhia, A., Lewis, P. E., Gómez-Dans, J., Kuze, A., et al. (2012). Retrieval and global assessment of terrestrial chlorophyll fluorescence from GOSAT space measurements. <em>Remote Sensing of Environment</em>, <em>121</em>, 236–251. <a href="https://doi.org/10.1016/j.rse.2012.02.006">https://doi.org/10.1016/j.rse.2012.02.006</a>
+</div>
+<div id="ref-guanter2013using" class="csl-entry" role="listitem">
+Guanter, L., Rossini, M., Colombo, R., Meroni, M., Frankenberg, C., Lee, J.-E., &amp; Joiner, J. (2013). Using field spectroscopy to assess the potential of statistical approaches for the retrieval of sun-induced chlorophyll fluorescence from ground and space. <em>Remote Sensing of Environment</em>, <em>133</em>, 52–61. <a href="https://doi.org/10.1016/j.rse.2013.01.017">https://doi.org/10.1016/j.rse.2013.01.017</a>
+</div>
+<div id="ref-guanter2014global" class="csl-entry" role="listitem">
+Guanter, L., Zhang, Y., Jung, M., Joiner, J., Voigt, M., Berry, J. A., et al. (2014a). Global and time-resolved monitoring of crop photosynthesis with chlorophyll fluorescence. <em>Proceedings of the National Academy of Sciences</em>, <em>111</em>(14), E1327–E1333. <a href="https://doi.org/10.1007/978-1-4020-3218-9_21">https://doi.org/10.1007/978-1-4020-3218-9_21</a>
+</div>
+<div id="ref-guanter2014reply" class="csl-entry" role="listitem">
+Guanter, L., Zhang, Y., Jung, M., Joiner, J., Voigt, M., Berry, J. A., et al. (2014b). Reply to magnani et al.: Linking large-scale chlorophyll fluorescence observations with cropland gross primary production. <em>Proceedings of the National Academy of Sciences</em>, <em>111</em>(25), E2511–E2511. <a href="https://doi.org/10.1073/pnas.1406996111">https://doi.org/10.1073/pnas.1406996111</a>
+</div>
+<div id="ref-guanter2015potential" class="csl-entry" role="listitem">
+Guanter, L., Aben, I., Tol, P., Krijger, J., Hollstein, A., Köhler, P., et al. (2015). Potential of the TROPOspheric monitoring instrument (TROPOMI) onboard the sentinel-5 precursor for the monitoring of terrestrial chlorophyll fluorescence. <em>Atmospheric Measurement Techniques</em>, <em>8</em>(3), 1337–1352. <a href="https://doi.org/10.5194/amt-8-1337-2015">https://doi.org/10.5194/amt-8-1337-2015</a>
+</div>
+<div id="ref-guanter2021troposif" class="csl-entry" role="listitem">
+Guanter, L., Bacour, C., Schneider, A., Aben, I., Kempen, T. A. van, Maignan, F., et al. (2021). The TROPOSIF global sun-induced fluorescence dataset from the sentinel-5P TROPOMI mission. <em>Earth System Science Data</em>, <em>13</em>(11), 5423–5440. <a href="https://doi.org/10.5194/essd-13-5423-2021">https://doi.org/10.5194/essd-13-5423-2021</a>
+</div>
+<div id="ref-hayashida2013methane" class="csl-entry" role="listitem">
+Hayashida, S., Ono, A., Yoshizaki, S., Frankenberg, C., Takeuchi, W., &amp; Yan, X. (2013). Methane concentrations over monsoon asia as observed by SCIAMACHY: Signals of methane emission from rice cultivation. <em>Remote Sensing of Environment</em>, <em>139</em>, 246–256. <a href="https://doi.org/10.1016/j.rse.2013.08.008">https://doi.org/10.1016/j.rse.2013.08.008</a>
+</div>
+<div id="ref-he2019atmospheric" class="csl-entry" role="listitem">
+He, L., Zeng, Z.-C., Pongetti, T. J., Wong, C., Liang, J., Gurney, K. R., et al. (2019). Atmospheric methane emissions correlate with natural gas consumption from residential and commercial sectors in los angeles. <em>Geophysical Research Letters</em>, <em>46</em>(14), 8563–8571. <a href="https://doi.org/10.1029/2019gl083400">https://doi.org/10.1029/2019gl083400</a>
+</div>
+<div id="ref-he2020ground" class="csl-entry" role="listitem">
+He, L., Magney, T., Dutta, D., Yin, Y., Köhler, P., Grossmann, K., et al. (2020). From the ground to space: Using solar-induced chlorophyll fluorescence to estimate crop productivity. <em>Geophysical Research Letters</em>, <em>47</em>(7), e2020GL087474. <a href="https://doi.org/10.1029/2020gl087474">https://doi.org/10.1029/2020gl087474</a>
+</div>
+<div id="ref-he2020tracking" class="csl-entry" role="listitem">
+He, L., Wood, J. D., Sun, Y., Magney, T., Dutta, D., Köhler, P., et al. (2020). Tracking seasonal and interannual variability in photosynthetic downregulation in response to water stress at a temperate deciduous forest. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>125</em>(8), e2018JG005002. <a href="https://doi.org/10.1029/2018jg005002">https://doi.org/10.1029/2018jg005002</a>
+</div>
+<div id="ref-he2022marked" class="csl-entry" role="listitem">
+He, L., Wei, J., Wang, Y., Shang, Q., Liu, J., Yin, Y., et al. (2022). Marked impacts of pollution mitigation on crop yields in china. <em>Earth’s Future</em>, <em>10</em>(11), e2022EF002936. <a href="https://doi.org/10.1029/2022ef002936">https://doi.org/10.1029/2022ef002936</a>
+</div>
+<div id="ref-he2022remote" class="csl-entry" role="listitem">
+He, L., Byrne, B., Yin, Y., Liu, J., &amp; Frankenberg, C. (2022). Remote-sensing derived trends in gross primary production explain increases in the CO2 seasonal cycle amplitude. <em>Global Biogeochemical Cycles</em>, <em>36</em>(9), e2021GB007220. <a href="https://doi.org/10.1029/2021gb007220">https://doi.org/10.1029/2021gb007220</a>
+</div>
+<div id="ref-he2023weekly" class="csl-entry" role="listitem">
+He, L., Rosa, L., Lobell, D. B., Wang, Y., Yin, Y., Doughty, R., et al. (2023). The weekly cycle of photosynthesis in europe reveals the negative impact of particulate pollution on ecosystem productivity. <em>Proceedings of the National Academy of Sciences</em>, <em>120</em>(49), e2306507120. <a href="https://doi.org/10.1073/pnas.2306507120">https://doi.org/10.1073/pnas.2306507120</a>
+</div>
+<div id="ref-he2015impact" class="csl-entry" role="listitem">
+He, Y., Risi, C., Gao, J., Masson-Delmotte, V., Yao, T., Lai, C.-T., et al. (2015). Impact of atmospheric convection on south tibet summer precipitation isotopologue composition using a combination of in situ measurements, satellite data, and atmospheric general circulation modeling. <em>Journal of Geophysical Research: Atmospheres</em>, <em>120</em>(9), 3852–3871. <a href="https://doi.org/10.1002/2014jd022180">https://doi.org/10.1002/2014jd022180</a>
+</div>
+<div id="ref-holtzman2023constraining" class="csl-entry" role="listitem">
+Holtzman, N., Wang, Y., Wood, J. D., Frankenberg, C., &amp; Konings, A. G. (2023). Constraining plant hydraulics with microwave radiometry in a land surface model: Impacts of temporal resolution. <em>Water Resources Research</em>, <em>59</em>(11), e2023WR035481. <a href="https://doi.org/10.22541/essoar.168652288.81621833/v1">https://doi.org/10.22541/essoar.168652288.81621833/v1</a>
+</div>
+<div id="ref-houweling2006atmospheric" class="csl-entry" role="listitem">
+Houweling, Sea, Röckmann, T., Aben, I., Keppler, F., Krol, M., Meirink, J., et al. (2006). Atmospheric constraints on global emissions of methane from plants. <em>Geophysical Research Letters</em>, <em>33</em>(15). <a href="https://doi.org/10.1029/2006gl026162">https://doi.org/10.1029/2006gl026162</a>
+</div>
+<div id="ref-houweling2014multi" class="csl-entry" role="listitem">
+Houweling, Sander, Krol, M., Bergamaschi, P., Frankenberg, C., Dlugokencky, E., Morino, I., et al. (2014). A multi-year methane inversion using SCIAMACHY, accounting for systematic errors using TCCON measurements. <em>Atmospheric Chemistry and Physics</em>, <em>14</em>(8), 3991–4012. <a href="https://doi.org/10.5194/acp-14-3991-2014">https://doi.org/10.5194/acp-14-3991-2014</a>
+</div>
+<div id="ref-hulley2016high" class="csl-entry" role="listitem">
+Hulley, G. C., Duren, R. M., Hopkins, F. M., Hook, S. J., Vance, N., Guillevic, P., et al. (2016). High spatial resolution imaging of methane and other trace gases with the airborne hyperspectral thermal emission spectrometer (HyTES). <em>Atmospheric Measurement Techniques</em>, <em>9</em>(5), 2393–2408. <a href="https://doi.org/10.5194/amt-9-2393-2016">https://doi.org/10.5194/amt-9-2393-2016</a>
+</div>
+<div id="ref-humphrey2022continuous" class="csl-entry" role="listitem">
+Humphrey, V., &amp; Frankenberg, C. (2022). Continuous ground monitoring of vegetation optical depth and water content with GPS signals. <em>Biogeosciences Discussions</em>, <em>2022</em>, 1–44. <a href="https://doi.org/10.5194/bg-2022-84-supplement">https://doi.org/10.5194/bg-2022-84-supplement</a>
+</div>
+<div id="ref-humphrey2023continuous" class="csl-entry" role="listitem">
+Humphrey, V., &amp; Frankenberg, C. (2023). Continuous ground monitoring of vegetation optical depth and water content with GPS signals. <em>Biogeosciences</em>, <em>20</em>(9), 1789–1811. <a href="https://doi.org/10.5194/bg-2022-84-supplement">https://doi.org/10.5194/bg-2022-84-supplement</a>
+</div>
+<div id="ref-humphrey2021soil" class="csl-entry" role="listitem">
+Humphrey, V., Berg, A., Ciais, P., Gentine, P., Jung, M., Reichstein, M., et al. (2021). Soil moisture–atmosphere feedback dominates land carbon uptake variability. <em>Nature</em>, <em>592</em>(7852), 65–69. <a href="https://doi.org/10.1038/s41586-021-03325-5">https://doi.org/10.1038/s41586-021-03325-5</a>
+</div>
+<div id="ref-irakulis2021satellite" class="csl-entry" role="listitem">
+Irakulis-Loitxate, I., Guanter, L., Liu, Y.-N., Varon, D. J., Maasakkers, J. D., Zhang, Y., et al. (2021). Satellite-based survey of extreme methane emissions in the permian basin. <em>Science Advances</em>, <em>7</em>(27), eabf4507. <a href="https://doi.org/10.31223/x5k661">https://doi.org/10.31223/x5k661</a>
+</div>
+<div id="ref-islam2021methane" class="csl-entry" role="listitem">
+Islam, S. N., Jackson, P. L., Sweeney, C., McKain, K., Frankenberg, C., Aben, I., et al. (2021). Methane growth rate estimation and its causes in western canada using satellite observations. <em>Journal of Geophysical Research: Atmospheres</em>, <em>126</em>(21), e2020JD033948. <a href="https://doi.org/10.1029/2020jd033948">https://doi.org/10.1029/2020jd033948</a>
+</div>
+<div id="ref-Jackson_2020" class="csl-entry" role="listitem">
+Jackson, R. B., Saunois, M., Bousquet, P., Canadell, J. G., Poulter, B., Stavert, A. R., et al. (2020). Increasing anthropogenic methane emissions arise equally from agricultural and fossil fuel sources. <em>Environmental Research Letters</em>, <em>15</em>(7), 071002. <a href="https://doi.org/10.1088/1748-9326/ab9ed2">https://doi.org/10.1088/1748-9326/ab9ed2</a>
+</div>
+<div id="ref-jacob2016satellite" class="csl-entry" role="listitem">
+Jacob, D. J., Turner, A. J., Maasakkers, J. D., Sheng, J., Sun, K., Liu, X., et al. (2016). Satellite observations of atmospheric methane and their value for quantifying methane emissions. <em>Atmospheric Chemistry and Physics</em>, <em>16</em>(22), 14371–14396. <a href="https://doi.org/10.5194/acp-16-14371-2016">https://doi.org/10.5194/acp-16-14371-2016</a>
+</div>
+<div id="ref-jacob2022quantifying" class="csl-entry" role="listitem">
+Jacob, D. J., Varon, D. J., Cusworth, D. H., Dennison, P. E., Frankenberg, C., Gautam, R., et al. (2022). Quantifying methane emissions from the global scale down to point sources using satellite observations of atmospheric methane. <em>Atmospheric Chemistry and Physics</em>, <em>22</em>(14), 9617–9646. <a href="https://doi.org/10.5194/acp-22-9617-2022">https://doi.org/10.5194/acp-22-9617-2022</a>
+</div>
+<div id="ref-jeong2017application" class="csl-entry" role="listitem">
+Jeong, S.-J., Schimel, D., Frankenberg, C., Drewry, D. T., Fisher, J. B., Verma, M., et al. (2017). Application of satellite solar-induced chlorophyll fluorescence to understanding large-scale variations in vegetation phenology and function over northern high latitude forests. <em>Remote Sensing of Environment</em>, <em>190</em>, 178–187. <a href="https://doi.org/10.1016/j.rse.2016.11.021">https://doi.org/10.1016/j.rse.2016.11.021</a>
+</div>
+<div id="ref-jeyaram2022vsmartmom" class="csl-entry" role="listitem">
+Jeyaram, R., Sanghavi, S., &amp; Frankenberg, C. (2022). vSmartMOM. Jl: An open-source julia package for atmospheric radiative transfer and remote sensing tools. <em>Journal of Open Source Software</em>, <em>7</em>(80), 4575. <a href="https://doi.org/10.21105/joss.04575">https://doi.org/10.21105/joss.04575</a>
+</div>
+<div id="ref-joiner2013global" class="csl-entry" role="listitem">
+Joiner, J., Guanter, L., Lindstrot, R., Voigt, M., Vasilkov, A., Middleton, E., et al. (2013). Global monitoring of terrestrial chlorophyll fluorescence from moderate spectral resolution near-infrared satellite measurements: Methodology, simulations, and application to GOME-2. <em>Atmospheric Measurement Techniques Discussions</em>, <em>6</em>(2), 3883–3930. <a href="https://doi.org/10.5194/amt-6-2803-2013">https://doi.org/10.5194/amt-6-2803-2013</a>
+</div>
+<div id="ref-joiner2020systematic" class="csl-entry" role="listitem">
+Joiner, Joanna, Yoshida, Y., Köehler, P., Campbell, P., Frankenberg, C., Tol, C. van der, et al. (2020). Systematic orbital geometry-dependent variations in satellite solar-induced fluorescence (SIF) retrievals. <em>Remote Sensing</em>, <em>12</em>(15), 2346. <a href="https://doi.org/10.3390/rs12152346">https://doi.org/10.3390/rs12152346</a>
+</div>
+<div id="ref-jongaramrungruang2019towards" class="csl-entry" role="listitem">
+Jongaramrungruang, S., Frankenberg, C., Matheou, G., Thorpe, A. K., Thompson, D. R., Kuai, L., &amp; Duren, R. M. (2019). Towards accurate methane point-source quantification from high-resolution 2-d plume imagery. <em>Atmospheric Measurement Techniques</em>, <em>12</em>(12), 6667–6681. <a href="https://doi.org/10.5194/amt-12-6667-2019">https://doi.org/10.5194/amt-12-6667-2019</a>
+</div>
+<div id="ref-jongaramrungruang2021remote" class="csl-entry" role="listitem">
+Jongaramrungruang, S., Matheou, G., Thorpe, A. K., Zeng, Z.-C., &amp; Frankenberg, C. (2021). Remote sensing of methane plumes: Instrument tradeoff analysis for detecting and quantifying local sources at global scale. <em>Atmospheric Measurement Techniques</em>, <em>14</em>(12), 7999–8017. <a href="https://doi.org/10.5194/amt-14-7999-2021">https://doi.org/10.5194/amt-14-7999-2021</a>
+</div>
+<div id="ref-jongaramrungruang2022methanet" class="csl-entry" role="listitem">
+Jongaramrungruang, S., Thorpe, A. K., Matheou, G., &amp; Frankenberg, C. (2022). MethaNet–an AI-driven approach to quantifying methane point-source emission from high-resolution 2-d plume imagery. <em>Remote Sensing of Environment</em>, <em>269</em>, 112809. <a href="https://doi.org/10.1016/j.rse.2021.112809">https://doi.org/10.1016/j.rse.2021.112809</a>
+</div>
+<div id="ref-keppler2009methane" class="csl-entry" role="listitem">
+Keppler, F., Boros, M., Frankenberg, C., Lelieveld, J., McLeod, A., Pirttilä, A. M., et al. (2009). Methane formation in aerobic environments. <em>Environmental Chemistry</em>, <em>6</em>(6), 459–465. <a href="https://doi.org/10.1071/en09137">https://doi.org/10.1071/en09137</a>
+</div>
+<div id="ref-key2012geostationary" class="csl-entry" role="listitem">
+Key, R., Sander, S., Eldering, A., Miller, C., Frankenberg, C., Natraj, V., et al. (2012). The geostationary carbon process mapper. In <em>2012 IEEE aerospace conference</em> (pp. 1–16). IEEE. <a href="https://doi.org/10.1109/aero.2012.6187029">https://doi.org/10.1109/aero.2012.6187029</a>
+</div>
+<div id="ref-khokhar2005satellite" class="csl-entry" role="listitem">
+Khokhar, M. F., Frankenberg, C., Hollwedel, J., Beirle, S., Kühl, S., Grzegorski, M., et al. (2005). Satellite remote sensing of atmospheric SO_2: Volcanic eruptions and anthropogenic emissions. <a href="https://doi.org/10.37099/mtu.dc.etd-restricted/35">https://doi.org/10.37099/mtu.dc.etd-restricted/35</a>
+</div>
+<div id="ref-kimm2021physiological" class="csl-entry" role="listitem">
+Kimm, H., Guan, K., Jiang, C., Miao, G., Wu, G., Suyker, A. E., et al. (2021). A physiological signal derived from sun-induced chlorophyll fluorescence quantifies crop physiological response to environmental stresses in the US corn belt. <em>Environmental Research Letters</em>, <em>16</em>(12), 124051. <a href="https://doi.org/10.1088/1748-9326/ac3b16">https://doi.org/10.1088/1748-9326/ac3b16</a>
+</div>
+<div id="ref-koffi2015investigating" class="csl-entry" role="listitem">
+Koffi, E., Rayner, P., Norton, A., Frankenberg, C., &amp; Scholze, M. (2015). Investigating the usefulness of satellite-derived fluorescence data in inferring gross primary productivity within the carbon cycle data assimilation system. <em>Biogeosciences</em>, <em>12</em>(13), 4067–4084. <a href="https://doi.org/10.5194/bg-12-4067-2015">https://doi.org/10.5194/bg-12-4067-2015</a>
+</div>
+<div id="ref-kohler2015simplified" class="csl-entry" role="listitem">
+Köhler, P., Guanter, L., &amp; Frankenberg, C. (2015). Simplified physically based retrieval of sun-induced chlorophyll fluorescence from GOSAT data. <em>IEEE Geoscience and Remote Sensing Letters</em>, <em>12</em>(7), 1446–1450. <a href="https://doi.org/10.1109/lgrs.2015.2407051">https://doi.org/10.1109/lgrs.2015.2407051</a>
+</div>
+<div id="ref-kohler2018global" class="csl-entry" role="listitem">
+Köhler, P., Frankenberg, C., Magney, T. S., Guanter, L., Joiner, J., &amp; Landgraf, J. (2018). Global retrievals of solar-induced chlorophyll fluorescence with TROPOMI: First results and intersensor comparison to OCO-2. <em>Geophysical Research Letters</em>, <em>45</em>(19), 10–456. <a href="https://doi.org/10.1029/2018gl079031">https://doi.org/10.1029/2018gl079031</a>
+</div>
+<div id="ref-kohler2020global" class="csl-entry" role="listitem">
+Köhler, P., Behrenfeld, M. J., Landgraf, J., Joiner, J., Magney, T. S., &amp; Frankenberg, C. (2020). Global retrievals of solar-induced chlorophyll fluorescence at red wavelengths with TROPOMI. <em>Geophysical Research Letters</em>, <em>47</em>(15), e2020GL087541. <a href="https://doi.org/10.1029/2020gl087541">https://doi.org/10.1029/2020gl087541</a>
+</div>
+<div id="ref-kohler2021mineral" class="csl-entry" role="listitem">
+Köhler, P., Fischer, W. W., Rossman, G. R., Grotzinger, J. P., Doughty, R., Wang, Y., et al. (2021). Mineral luminescence observed from space. <em>Geophysical Research Letters</em>, <em>48</em>(19), e2021GL095227. <a href="https://doi.org/10.1029/2021gl095227">https://doi.org/10.1029/2021gl095227</a>
+</div>
+<div id="ref-konings2021detecting" class="csl-entry" role="listitem">
+Konings, A. G., Saatchi, S. S., Frankenberg, C., Keller, M., Leshyk, V., Anderegg, W. R., et al. (2021). Detecting forest response to droughts with global observations of vegetation water content. <em>Global Change Biology</em>, <em>27</em>(23), 6005–6024. <a href="https://doi.org/10.1111/gcb.15872">https://doi.org/10.1111/gcb.15872</a>
+</div>
+<div id="ref-kort2012space" class="csl-entry" role="listitem">
+Kort, E. A., Frankenberg, C., Miller, C. E., &amp; Oda, T. (2012). Space-based observations of megacity carbon dioxide. <em>Geophysical Research Letters</em>, <em>39</em>(17), L17806. <a href="https://doi.org/10.1029/2012gl052738">https://doi.org/10.1029/2012gl052738</a>
+</div>
+<div id="ref-kort2014four" class="csl-entry" role="listitem">
+Kort, E. A., Frankenberg, C., Costigan, K. R., Lindenmaier, R., Dubey, M. K., &amp; Wunch, D. (2014). Four corners: The largest US methane anomaly viewed from space. <em>Geophysical Research Letters</em>, <em>41</em>(19), 6898–6903. <a href="https://doi.org/10.1002/2014gl061503">https://doi.org/10.1002/2014gl061503</a>
+</div>
+<div id="ref-kuai2013profiling" class="csl-entry" role="listitem">
+Kuai, L., Worden, J., Kulawik, S., Bowman, K., Lee, M., Biraud, S. C., et al. (2013). Profiling tropospheric CO2 using aura TES and TCCON instruments. <em>Atmospheric Measurement Techniques</em>, <em>6</em>, 63–79. <a href="https://doi.org/10.5194/amt-6-63-2013">https://doi.org/10.5194/amt-6-63-2013</a>
+</div>
+<div id="ref-kuhl2004stratospheric" class="csl-entry" role="listitem">
+Kühl, S., Wilms-Grabe, W., Beirle, S., Frankenberg, C., Grzegorski, M., Hollwedel, J., et al. (2004). Stratospheric chlorine activation in the arctic winters 1995/96–2001/02 derived from GOME OClO measurements. <em>Advances in Space Research</em>, <em>34</em>(4), 798–803. <a href="https://doi.org/10.1016/s0273-1177(04)00472-7">https://doi.org/10.1016/s0273-1177(04)00472-7</a>
+</div>
+<div id="ref-kuhl2006comparison" class="csl-entry" role="listitem">
+Kühl, Sven, Wilms-Grabe, W., Frankenberg, C., Grzegorski, M., Platt, U., &amp; Wagner, T. (2006). Comparison of OClO nadir measurements from SCIAMACHY and GOME. <em>Advances in Space Research</em>, <em>37</em>(12), 2247–2253. <a href="https://doi.org/10.1016/j.asr.2005.06.061">https://doi.org/10.1016/j.asr.2005.06.061</a>
+</div>
+<div id="ref-kulawik2016consistent" class="csl-entry" role="listitem">
+Kulawik, S., Wunch, D., O’Dell, C., Frankenberg, C., Reuter, M., Oda, T., et al. (2016). Consistent evaluation of ACOS-GOSAT, BESD-SCIAMACHY, CarbonTracker, and MACC through comparisons to TCCON. <em>Atmospheric Measurement Techniques</em>, <em>9</em>(2), 683–709. <a href="https://doi.org/10.5194/amt-9-683-2016">https://doi.org/10.5194/amt-9-683-2016</a>
+</div>
+<div id="ref-kunik2023satellite" class="csl-entry" role="listitem">
+Kunik, L., Bowling, D. R., Raczka, B., Frankenberg, C., Köhler, P., Cheng, R., et al. (2023). Satellite-based solar-induced fluorescence tracks seasonal and elevational patterns of photosynthesis in california’s sierra nevada mountains. <em>Environmental Research Letters</em>, <em>19</em>(1), 014008. <a href="https://doi.org/10.1088/1748-9326/ad07b4">https://doi.org/10.1088/1748-9326/ad07b4</a>
+</div>
+<div id="ref-lee2015isotopic" class="csl-entry" role="listitem">
+Lee, J., Worden, J., Noone, D., Chae, J. H., &amp; Frankenberg, C. (2015). Isotopic changes due to convective moistening of the lower troposphere associated with variations in the ENSO and IOD from 2005 to 2006. <em>Tellus B: Chemical and Physical Meteorology</em>, <em>67</em>(1), 26177. <a href="https://doi.org/10.3402/tellusb.v67.26177">https://doi.org/10.3402/tellusb.v67.26177</a>
+</div>
+<div id="ref-lee2012asian" class="csl-entry" role="listitem">
+Lee, J.-E., Risi, C., Fung, I., Worden, J., Scheepmaker, R. A., Lintner, B., &amp; Frankenberg, C. (2012). Asian monsoon hydrometeorology from TES and SCIAMACHY water vapor isotope measurements and LMDZ simulations: Implications for speleothem climate record interpretation. <em>Journal of Geophysical Research: Atmospheres</em>, <em>117</em>(D15). <a href="https://doi.org/10.1029/2011jd017133">https://doi.org/10.1029/2011jd017133</a>
+</div>
+<div id="ref-lee2013forest" class="csl-entry" role="listitem">
+Lee, J.-E., Frankenberg, C., Tol, C. van der, Berry, J. A., Guanter, L., Boyce, C. K., et al. (2013). Forest productivity and water stress in amazonia: Observations from GOSAT chlorophyll fluorescence. <em>Proceedings of the Royal Society B: Biological Sciences</em>, <em>280</em>(1761), 20130171. <a href="https://doi.org/10.1098/rspb.2013.0171">https://doi.org/10.1098/rspb.2013.0171</a>
+</div>
+<div id="ref-lee2015simulations" class="csl-entry" role="listitem">
+Lee, J.-E., Berry, J. A., Tol, C. van der, Yang, X., Guanter, L., Damm, A., et al. (2015). Simulations of chlorophyll fluorescence incorporated into the c ommunity l and m odel version 4. <em>Global Change Biology</em>, <em>21</em>(9), 3469–3477. <a href="https://doi.org/10.1111/gcb.12948">https://doi.org/10.1111/gcb.12948</a>
+</div>
+<div id="ref-lee2017preflight" class="csl-entry" role="listitem">
+Lee, R. A., O’Dell, C. W., Wunch, D., Roehl, C. M., Osterman, G. B., Blavier, J.-F., et al. (2017). Preflight spectral calibration of the orbiting carbon observatory 2. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, <em>55</em>(5), 2499–2508. <a href="https://doi.org/10.1109/tgrs.2011.2107745">https://doi.org/10.1109/tgrs.2011.2107745</a>
+</div>
+<div id="ref-li2022representation" class="csl-entry" role="listitem">
+Li, R., Lombardozzi, D., Shi, M., Frankenberg, C., Parazoo, N. C., Köhler, P., et al. (2022). Representation of leaf-to-canopy radiative transfer processes improves simulation of far-red solar-induced chlorophyll fluorescence in the community land model version 5. <em>Journal of Advances in Modeling Earth Systems</em>, <em>14</em>(3), e2021MS002747. <a href="https://doi.org/10.1029/2021ms002747">https://doi.org/10.1029/2021ms002747</a>
+</div>
+<div id="ref-li2023widespread" class="csl-entry" role="listitem">
+Li, W., Pacheco-Labrador, J., Migliavacca, M., Miralles, D., Hoek van Dijke, A., Reichstein, M., et al. (2023). Widespread and complex drought effects on vegetation physiology inferred from space. <em>Nature Communications</em>, <em>14</em>(1), 4640. <a href="https://doi.org/10.1038/s41467-023-40226-9">https://doi.org/10.1038/s41467-023-40226-9</a>
+</div>
+<div id="ref-li2020synergistic" class="csl-entry" role="listitem">
+Li, X., Xiao, J., Kimball, J. S., Reichle, R. H., Scott, R. L., Litvak, M. E., et al. (2020). Synergistic use of SMAP and OCO-2 data in assessing the responses of ecosystem productivity to the 2018 US drought. <em>Remote Sensing of Environment</em>, <em>251</em>, 112062. <a href="https://doi.org/10.1016/j.rse.2020.112062">https://doi.org/10.1016/j.rse.2020.112062</a>
+</div>
+<div id="ref-lin2019evaluation" class="csl-entry" role="listitem">
+Lin, C., Gentine, P., Frankenberg, C., Zhou, S., Kennedy, D., &amp; Li, X. (2019). Evaluation and mechanism exploration of the diurnal hysteresis of ecosystem fluxes. <em>Agricultural and Forest Meteorology</em>, <em>278</em>, 107642. <a href="https://doi.org/10.1016/j.agrformet.2019.107642">https://doi.org/10.1016/j.agrformet.2019.107642</a>
+</div>
+<div id="ref-liu2008relationship" class="csl-entry" role="listitem">
+Liu, C., De Vries, M. P., Beirle, S., Hoor, P., Marbach, T., Frankenberg, C., et al. (2008). Relationship between ATSR fire counts and CO vertical column densities retrieved from SCIAMACHY onboard ENVISAT. In <em>Remote sensing of fire: Science and application</em> (Vol. 7089, pp. 121–130). SPIE. <a href="https://doi.org/10.1117/12.793283">https://doi.org/10.1117/12.793283</a>
+</div>
+<div id="ref-liu2011application" class="csl-entry" role="listitem">
+Liu, C., Beirle, S., Butler, T., Liu, J., Hoor, P., Jöckel, P., et al. (2011). Application of SCIAMACHY and MOPITT CO total column measurements to evaluate model results over biomass burning regions and eastern china. <em>Atmospheric Chemistry and Physics</em>, <em>11</em>(12), 6083–6114. <a href="https://doi.org/10.5194/acp-11-6083-2011">https://doi.org/10.5194/acp-11-6083-2011</a>
+</div>
+<div id="ref-liu2014profile" class="csl-entry" role="listitem">
+Liu, Cheng, Beirle, S., Butler, T., Hoor, P., Frankenberg, C., Jöckel, P., et al. (2014). Profile information on CO from SCIAMACHY observations using cloud slicing and comparison with model simulations. <em>Atmospheric Chemistry and Physics</em>, <em>14</em>(3), 1717–1732. <a href="https://doi.org/10.5194/acp-14-1717-2014">https://doi.org/10.5194/acp-14-1717-2014</a>
+</div>
+<div id="ref-liu2017contrasting" class="csl-entry" role="listitem">
+Liu, J., Bowman, K. W., Schimel, D. S., Parazoo, N. C., Jiang, Z., Lee, M., et al. (2017). Contrasting carbon cycle responses of the tropical continents to the 2015–2016 el ni<span>ñ</span>o. <em>Science</em>, <em>358</em>(6360), eaam5690. <a href="https://doi.org/10.1126/science.aar5432">https://doi.org/10.1126/science.aar5432</a>
+</div>
+<div id="ref-liu2020observational" class="csl-entry" role="listitem">
+Liu, J., Wennberg, P. O., Parazoo, N. C., Yin, Y., &amp; Frankenberg, C. (2020). Observational constraints on the response of high-latitude northern forests to warming. <em>AGU Advances</em>, <em>1</em>(4), e2020AV000228. <a href="https://doi.org/10.1029/2020av000228">https://doi.org/10.1029/2020av000228</a>
+</div>
+<div id="ref-luis2023first" class="csl-entry" role="listitem">
+Luis, K., Köhler, P., Frankenberg, C., &amp; Gierach, M. (2023). First light demonstration of red solar induced fluorescence for harmful algal bloom monitoring. <em>Geophysical Research Letters</em>, <em>50</em>(13), e2022GL101715. <a href="https://doi.org/10.1029/2022gl101715">https://doi.org/10.1029/2022gl101715</a>
+</div>
+<div id="ref-ma2021satellite" class="csl-entry" role="listitem">
+Ma, S., Worden, J. R., Bloom, A. A., Zhang, Y., Poulter, B., Cusworth, D. H., et al. (2021). Satellite constraints on the latitudinal distribution and temperature sensitivity of wetland methane emissions. <em>Agu Advances</em>, <em>2</em>(3), e2021AV000408. <a href="https://doi.org/10.1029/2021av000408">https://doi.org/10.1029/2021av000408</a>
+</div>
+<div id="ref-magney2017connecting" class="csl-entry" role="listitem">
+Magney, T. S., Frankenberg, C., Fisher, J. B., Sun, Y., North, G. B., Davis, T. S., et al. (2017). Connecting active to passive fluorescence with photosynthesis: A method for evaluating remote sensing measurements of chl fluorescence. <em>New Phytologist</em>, <em>215</em>(4), 1594–1608. <a href="https://doi.org/10.1111/nph.14662">https://doi.org/10.1111/nph.14662</a>
+</div>
+<div id="ref-magney2019disentangling" class="csl-entry" role="listitem">
+Magney, T. S., Frankenberg, C., Köhler, P., North, G., Davis, T. S., Dold, C., et al. (2019). Disentangling changes in the spectral shape of chlorophyll fluorescence: Implications for remote sensing of photosynthesis. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>124</em>(6), 1491–1507. <a href="https://doi.org/10.1029/2019jg005029">https://doi.org/10.1029/2019jg005029</a>
+</div>
+<div id="ref-magney2019mechanistic" class="csl-entry" role="listitem">
+Magney, T. S., Bowling, D. R., Logan, B. A., Grossmann, K., Stutz, J., Blanken, P. D., et al. (2019). Mechanistic evidence for tracking the seasonality of photosynthesis with solar-induced fluorescence. <em>Proceedings of the National Academy of Sciences</em>, <em>116</em>(24), 11640–11645. <a href="https://doi.org/10.1073/pnas.1900278116">https://doi.org/10.1073/pnas.1900278116</a>
+</div>
+<div id="ref-maguire2021spatial" class="csl-entry" role="listitem">
+Maguire, A. J., Eitel, J. U., Magney, T. S., Frankenberg, C., Köhler, P., Orcutt, E. L., et al. (2021). Spatial covariation between solar-induced fluorescence and vegetation indices from arctic-boreal landscapes. <em>Environmental Research Letters</em>, <em>16</em>(9), 095002. <a href="https://doi.org/10.1088/1748-9326/ac188a">https://doi.org/10.1088/1748-9326/ac188a</a>
+</div>
+<div id="ref-mandrake2013semi" class="csl-entry" role="listitem">
+Mandrake, L., Frankenberg, C., O’Dell, C., Osterman, G., Wennberg, P., &amp; Wunch, D. (2013). Semi-autonomous sounding selection for OCO-2. <em>Atmospheric Measurement Techniques</em>, <em>6</em>(10), 2851–2864. <a href="https://doi.org/10.5194/amt-6-2851-2013">https://doi.org/10.5194/amt-6-2851-2013</a>
+</div>
+<div id="ref-massart2014assimilation" class="csl-entry" role="listitem">
+Massart, S., Agusti-Panareda, A., Aben, I., Butz, A., Chevallier, F., Crevoisier, C., et al. (2014). Assimilation of atmospheric methane products into the MACC-II system: From SCIAMACHY to TANSO and IASI. <em>Atmospheric Chemistry and Physics</em>, <em>14</em>(12), 6139–6158. <a href="https://doi.org/10.5194/acp-14-6139-2014">https://doi.org/10.5194/acp-14-6139-2014</a>
+</div>
+<div id="ref-meirink2007four" class="csl-entry" role="listitem">
+Meirink, J. F., Bergamaschi, P., Frankenberg, C., Dlugokencky, E. J., Gatti, L. V., Houweling, S., et al. (2007). Four-dimensional variational data assimilation for inverse modelling of atmospheric methane emissions: 2. Analysis of SCIAMACHY observations. <em>Geophys. Res</em>. <a href="https://doi.org/10.1029/2007jd009740">https://doi.org/10.1029/2007jd009740</a>
+</div>
+<div id="ref-meirink2008four" class="csl-entry" role="listitem">
+Meirink, J. F., Bergamaschi, P., Frankenberg, C., d’Amelio, M. T., Dlugokencky, E. J., Gatti, L. V., et al. (2008). Four-dimensional variational data assimilation for inverse modeling of atmospheric methane emissions: Analysis of SCIAMACHY observations. <em>Journal of Geophysical Research: Atmospheres</em>, <em>113</em>(D17). <a href="https://doi.org/10.1029/2007jd009740">https://doi.org/10.1029/2007jd009740</a>
+</div>
+<div id="ref-miao2020varying" class="csl-entry" role="listitem">
+Miao, G., Guan, K., Suyker, A. E., Yang, X., Arkebauer, T. J., Walter-Shea, E. A., et al. (2020). Varying contributions of drivers to the relationship between canopy photosynthesis and far-red sun-induced fluorescence for two maize sites at different temporal scales. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>125</em>(2), e2019JG005051. <a href="https://doi.org/10.1029/2019jg005051">https://doi.org/10.1029/2019jg005051</a>
+</div>
+<div id="ref-miller2016capturing" class="csl-entry" role="listitem">
+Miller, C. E., Frankenberg, C., Kuhnert, A. C., Spiers, G. D., Eldering, A., Rud, M., et al. (2016). Capturing complete spatial context in satellite observations of greenhouse gases. In <em>Imaging spectrometry XXI</em> (Vol. 9976, pp. 31–43). SPIE. <a href="https://doi.org/10.1117/12.2238766.5178875848001">https://doi.org/10.1117/12.2238766.5178875848001</a>
+</div>
+<div id="ref-mohammed2019remote" class="csl-entry" role="listitem">
+Mohammed, G. H., Colombo, R., Middleton, E. M., Rascher, U., Tol, C. van der, Nedbal, L., et al. (2019). Remote sensing of solar-induced chlorophyll fluorescence (SIF) in vegetation: 50 years of progress. <em>Remote Sensing of Environment</em>, <em>231</em>, 111177. <a href="https://doi.org/10.23880/oajar-16000291">https://doi.org/10.23880/oajar-16000291</a>
+</div>
+<div id="ref-monteil2013comparison" class="csl-entry" role="listitem">
+Monteil, G., Houweling, S., Butz, A., Guerlet, S., Schepers, D., Hasekamp, O., et al. (2013). Comparison of CH4 inversions based on 15 months of GOSAT and SCIAMACHY observations. <em>Journal of Geophysical Research: Atmospheres</em>, <em>118</em>(20), 11–807. <a href="https://doi.org/10.1002/2013jd019760">https://doi.org/10.1002/2013jd019760</a>
+</div>
+<div id="ref-nguyen2020effects" class="csl-entry" role="listitem">
+Nguyen, N. H., Turner, A. J., Yin, Y., Prather, M. J., &amp; Frankenberg, C. (2020). Effects of chemical feedbacks on decadal methane emissions estimates. <em>Geophysical Research Letters</em>, <em>47</em>(3), e2019GL085706. <a href="https://doi.org/10.1029/2019gl085706">https://doi.org/10.1029/2019gl085706</a>
+</div>
+<div id="ref-o2012acos" class="csl-entry" role="listitem">
+O’Dell, C., Connor, B., Bösch, H., O’Brien, D., Frankenberg, C., Castano, R., et al. (2012). The ACOS CO 2 retrieval algorithm–part 1: Description and validation against synthetic observations. <em>Atmospheric Measurement Techniques</em>, <em>5</em>(1), 99–121. <a href="https://doi.org/10.5194/amt-5-99-2012">https://doi.org/10.5194/amt-5-99-2012</a>
+</div>
+<div id="ref-oshchepkov2013effects" class="csl-entry" role="listitem">
+Oshchepkov, S., Bril, A., Yokota, T., Wennberg, P. O., Deutscher, N. M., Wunch, D., et al. (2013). Effects of atmospheric light scattering on spectroscopic observations of greenhouse gases from space. Part 2: Algorithm intercomparison in the GOSAT data processing for CO2 retrievals over TCCON sites. <em>Journal of Geophysical Research: Atmospheres</em>, <em>118</em>(3), 1493–1512. <a href="https://doi.org/10.1002/jgrd.50146">https://doi.org/10.1002/jgrd.50146</a>
+</div>
+<div id="ref-parazoo2013interpreting" class="csl-entry" role="listitem">
+Parazoo, N. C., Bowman, K., Frankenberg, C., Lee, J.-E., Fisher, J. B., Worden, J., et al. (2013). Interpreting seasonal changes in the carbon balance of southern amazonia using measurements of XCO2 and chlorophyll fluorescence from GOSAT. <em>Geophysical Research Letters</em>, <em>40</em>(11), 2829–2833. <a href="https://doi.org/10.1002/grl.50452">https://doi.org/10.1002/grl.50452</a>
+</div>
+<div id="ref-parazoo2014terrestrial" class="csl-entry" role="listitem">
+Parazoo, N. C., Bowman, K., Fisher, J. B., Frankenberg, C., Jones, D. B., Cescatti, A., et al. (2014). Terrestrial gross primary production inferred from satellite fluorescence and vegetation models. <em>Global Change Biology</em>, <em>20</em>(10), 3103–3121. <a href="https://doi.org/10.3410/f.718444931.793499712">https://doi.org/10.3410/f.718444931.793499712</a>
+</div>
+<div id="ref-parazoo2015influence" class="csl-entry" role="listitem">
+Parazoo, N. C., Barnes, E., Worden, J., Harper, A. B., Bowman, K. B., Frankenberg, C., et al. (2015). Influence of ENSO and the NAO on terrestrial carbon uptake in the texas-northern mexico region. <em>Global Biogeochemical Cycles</em>, <em>29</em>(8), 1247–1265. <a href="https://doi.org/10.1002/2015gb005125">https://doi.org/10.1002/2015gb005125</a>
+</div>
+<div id="ref-parazoo2019towards" class="csl-entry" role="listitem">
+Parazoo, N. C., Frankenberg, C., Köhler, P., Joiner, J., Yoshida, Y., Magney, T., et al. (2019). Towards a harmonized long-term spaceborne record of far-red solar-induced fluorescence. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>124</em>(8), 2518–2539. <a href="https://doi.org/10.1029/2019jg005289">https://doi.org/10.1029/2019jg005289</a>
+</div>
+<div id="ref-parazoo2020wide" class="csl-entry" role="listitem">
+Parazoo, N. C., Magney, T., Norton, A., Raczka, B., Bacour, C., Maignan, F., et al. (2020). Wide discrepancies in the magnitude and direction of modeled solar-induced chlorophyll fluorescence in response to light conditions. <em>Biogeosciences</em>, <em>17</em>(13), 3733–3755. <a href="https://doi.org/10.5194/bg-17-3733-2020">https://doi.org/10.5194/bg-17-3733-2020</a>
+</div>
+<div id="ref-peng2020assessing" class="csl-entry" role="listitem">
+Peng, B., Guan, K., Zhou, W., Jiang, C., Frankenberg, C., Sun, Y., et al. (2020). Assessing the benefit of satellite-based solar-induced chlorophyll fluorescence in crop yield prediction. <em>International Journal of Applied Earth Observation and Geoinformation</em>, <em>90</em>, 102126. <a href="https://doi.org/10.1016/j.jag.2020.102126">https://doi.org/10.1016/j.jag.2020.102126</a>
+</div>
+<div id="ref-petersen2010first" class="csl-entry" role="listitem">
+Petersen, A., Warneke, T., Frankenberg, C., Bergamaschi, P., Gerbig, C., Notholt, J., et al. (2010). First ground-based FTIR observations of methane in the inner tropics over several years. <em>Atmospheric Chemistry and Physics</em>, <em>10</em>(15), 7231–7239. <a href="https://doi.org/10.5194/acp-10-7231-2010">https://doi.org/10.5194/acp-10-7231-2010</a>
+</div>
+<div id="ref-pierrat2022diurnal" class="csl-entry" role="listitem">
+Pierrat, Z., Magney, T., Parazoo, N. C., Grossmann, K., Bowling, D. R., Seibt, U., et al. (2022). Diurnal and seasonal dynamics of solar-induced chlorophyll fluorescence, vegetation indices, and gross primary productivity in the boreal forest. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>127</em>(2), e2021JG006588. <a href="https://doi.org/10.1029/2021jg006588">https://doi.org/10.1029/2021jg006588</a>
+</div>
+<div id="ref-pierrat2022forests" class="csl-entry" role="listitem">
+Pierrat, Z. A., Bortnik, J., Johnson, B., Barr, A., Magney, T., Bowling, D. R., et al. (2022). Forests for forests: Combining vegetation indices with solar-induced chlorophyll fluorescence in random forest models improves gross primary productivity prediction in the boreal forest. <em>Environmental Research Letters</em>, <em>17</em>(12), 125006. <a href="https://doi.org/10.1088/1748-9326/aca5a0">https://doi.org/10.1088/1748-9326/aca5a0</a>
+</div>
+<div id="ref-pinage2022forest" class="csl-entry" role="listitem">
+Pinagé, E. R., Bell, D. M., Longo, M., Gao, S., Keller, M., Silva, C. A., et al. (2022). Forest structure and solar-induced fluorescence across intact and degraded forests in the amazon. <em>Remote Sensing of Environment</em>, <em>274</em>, 112998. <a href="https://doi.org/10.1016/j.rse.2022.112998">https://doi.org/10.1016/j.rse.2022.112998</a>
+</div>
+<div id="ref-porcar2014linking" class="csl-entry" role="listitem">
+Porcar-Castell, A., Tyystjärvi, E., Atherton, J., Van der Tol, C., Flexas, J., Pfündel, E. E., et al. (2014). Linking chlorophyll a fluorescence to photosynthesis for remote sensing applications: Mechanisms and challenges. <em>Journal of Experimental Botany</em>, <em>65</em>(15), 4065–4095. <a href="https://doi.org/10.1093/jxb/eru191">https://doi.org/10.1093/jxb/eru191</a>
+</div>
+<div id="ref-risi2010understanding" class="csl-entry" role="listitem">
+Risi, C., Bony, S., Vimeux, F., Frankenberg, C., Noone, D., &amp; Worden, J. (2010). Understanding the sahelian water budget through the isotopic composition of water vapor and precipitation. <em>Journal of Geophysical Research: Atmospheres</em>, <em>115</em>(D24). <a href="https://doi.org/10.1029/2010jd014690">https://doi.org/10.1029/2010jd014690</a>
+</div>
+<div id="ref-risi2012process" class="csl-entry" role="listitem">
+Risi, C., Noone, D., Worden, J., Frankenberg, C., Stiller, G., Kiefer, M., et al. (2012). Process-evaluation of tropospheric humidity simulated by general circulation models using water vapor isotopologues: 1. Comparison between models and observations. <em>Journal of Geophysical Research: Atmospheres</em>, <em>117</em>(D5). <a href="https://doi.org/10.1029/2011jd016621">https://doi.org/10.1029/2011jd016621</a>
+</div>
+<div id="ref-risi2013role" class="csl-entry" role="listitem">
+Risi, C., Noone, D., Frankenberg, C., &amp; Worden, J. (2013). Role of continental recycling in intraseasonal variations of continental moisture as deduced from model simulations and water vapor isotopic measurements. <em>Water Resources Research</em>, <em>49</em>(7), 4136–4156. <a href="https://doi.org/10.1002/wrcr.20312">https://doi.org/10.1002/wrcr.20312</a>
+</div>
+<div id="ref-sanghavi2023raman" class="csl-entry" role="listitem">
+Sanghavi, S., &amp; Frankenberg, C. (2023). Raman scattering in the earth’s atmosphere, part II: Radiative transfer modeling for remote sensing applications. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>311</em>, 108791. <a href="https://doi.org/10.1016/j.jqsrt.2023.108791">https://doi.org/10.1016/j.jqsrt.2023.108791</a>
+</div>
+<div id="ref-sanghavi2020aerosols" class="csl-entry" role="listitem">
+Sanghavi, S., Nelson, R., Frankenberg, C., &amp; Gunson, M. (2020). Aerosols in OCO-2/GOSAT retrievals of XCO2: An information content and error analysis. <em>Remote Sensing of Environment</em>, <em>251</em>, 112053. <a href="https://doi.org/10.1016/j.rse.2020.112053">https://doi.org/10.1016/j.rse.2020.112053</a>
+</div>
+<div id="ref-saunois2016global" class="csl-entry" role="listitem">
+Saunois, M., Bousquet, P., Poulter, B., Peregon, A., Ciais, P., Canadell, J. G., et al. (2016). The global methane budget: 2000–2012. <em>Earth System Science Data Discussions</em>, <em>2016</em>, 1–79. <a href="https://doi.org/10.5194/essd-2016-25-rc2">https://doi.org/10.5194/essd-2016-25-rc2</a>
+</div>
+<div id="ref-saunois2017variability" class="csl-entry" role="listitem">
+Saunois, M., Bousquet, P., Poulter, B., Peregon, A., Ciais, P., Canadell, J. G., et al. (2017). Variability and quasi-decadal changes in the methane budget over the period 2000–2012. <em>Atmospheric Chemistry and Physics</em>, <em>17</em>(18), 11135–11161. <a href="https://doi.org/10.5194/essd-2016-25-rc2">https://doi.org/10.5194/essd-2016-25-rc2</a>
+</div>
+<div id="ref-saunois2019global" class="csl-entry" role="listitem">
+Saunois, M., Stavert, A. R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R. B., et al. (2019). The global methane budget 2000–2017. <em>Earth System Science Data Discussions</em>, <em>2019</em>, 1–136. <a href="https://doi.org/10.5194/essd-2016-25-rc2">https://doi.org/10.5194/essd-2016-25-rc2</a>
+</div>
+<div id="ref-scheepmaker2012improved" class="csl-entry" role="listitem">
+Scheepmaker, R., Frankenberg, C., Galli, A., Butz, A., Schrijver, H., Deutscher, N., et al. (2012). Improved water vapour spectroscopy in the 4174-4300 cm-1 region and its impact on SCIAMACHY HDO/h 2 o measurements. <em>Atmospheric Measurement Techniques Discussions</em>, <em>5</em>(6), 8539–8578. <a href="https://doi.org/10.5194/amt-6-879-2013">https://doi.org/10.5194/amt-6-879-2013</a>
+</div>
+<div id="ref-scheepmaker2013improved" class="csl-entry" role="listitem">
+Scheepmaker, R., Frankenberg, C., Galli, A., Butz, A., Schrijver, H., Deutscher, N., et al. (2013). Improved water vapour spectroscopy in the 4174–4300 cm- 1 region and its impact on SCIAMACHY HDO/h 2 o measurements. <em>Atmospheric Measurement Techniques</em>, <em>6</em>(4), 879–894. <a href="https://doi.org/10.5194/amt-6-879-2013">https://doi.org/10.5194/amt-6-879-2013</a>
+</div>
+<div id="ref-scheepmaker2015validation" class="csl-entry" role="listitem">
+Scheepmaker, R., Frankenberg, C., Deutscher, N. M., Schneider, M., Barthlott, S., Blumenstock, T., et al. (2015). Validation of sciamachy HDO/h 2 o measurements using the TCCON and NDACC-MUSICA networks. <em>Atmospheric Measurement Techniques</em>, <em>8</em>(4), 1799–1818. <a href="https://doi.org/10.5194/amt-8-1799-2015">https://doi.org/10.5194/amt-8-1799-2015</a>
+</div>
+<div id="ref-scheepmaker2016hdo" class="csl-entry" role="listitem">
+Scheepmaker, R. A., Hu, H., Borsdorff, T., Frankenberg, C., Risi, C., Hasekamp, O., et al. (2016). HDO and h 2 o total column retrievals from TROPOMI shortwave infrared measurements. <em>Atmospheric Measurement Techniques</em>, <em>9</em>(8), 3921–3937. <a href="https://doi.org/10.5194/amt-9-4955-2016">https://doi.org/10.5194/amt-9-4955-2016</a>
+</div>
+<div id="ref-schepers2012methane" class="csl-entry" role="listitem">
+Schepers, D., Guerlet, S., Butz, A., Landgraf, J., Frankenberg, C., Hasekamp, O., et al. (2012). Methane retrievals from greenhouse gases observing satellite (GOSAT) shortwave infrared measurements: Performance comparison of proxy and physics retrieval algorithms. <em>Journal of Geophysical Research</em>, <em>117</em>(D10), D10307. <a href="https://doi.org/10.1029/2012jd017549">https://doi.org/10.1029/2012jd017549</a>
+</div>
+<div id="ref-schimel2015observing" class="csl-entry" role="listitem">
+Schimel, D., Pavlick, R., Fisher, J. B., Asner, G. P., Saatchi, S., Townsend, P., et al. (2015). Observing terrestrial ecosystems and the carbon cycle from space. <em>Global Change Biology</em>, <em>21</em>(5), 1762–1776. <a href="https://doi.org/10.1111/gcb.12822">https://doi.org/10.1111/gcb.12822</a>
+</div>
+<div id="ref-schimmelmann2018natural" class="csl-entry" role="listitem">
+Schimmelmann, A., Ensminger, S. A., Drobniak, A., Mastalerz, M., Etiope, G., Jacobi, R. D., &amp; Frankenberg, C. (2018). Natural geological seepage of hydrocarbon gas in the appalachian basin and midwest USA in relation to shale tectonic fracturing and past industrial hydrocarbon production. <em>Science of the Total Environment</em>, <em>644</em>, 982–993. <a href="https://doi.org/10.1016/j.scitotenv.2018.06.374">https://doi.org/10.1016/j.scitotenv.2018.06.374</a>
+</div>
+<div id="ref-seyednasrollah2021seasonal" class="csl-entry" role="listitem">
+Seyednasrollah, B., Bowling, D. R., Cheng, R., Logan, B. A., Magney, T. S., Frankenberg, C., et al. (2021). Seasonal variation in the canopy color of temperate evergreen conifer forests. <em>New Phytologist</em>, <em>229</em>(5), 2586–2600. <a href="https://doi.org/10.1111/nph.17046">https://doi.org/10.1111/nph.17046</a>
+</div>
+<div id="ref-spahni2011constraining" class="csl-entry" role="listitem">
+Spahni, R., Wania, R., Neef, L., Van Weele, M., Pison, I., Bousquet, P., et al. (2011). Constraining global methane emissions and uptake by ecosystems. <em>Biogeosciences</em>, <em>8</em>(6), 1643–1665. <a href="https://doi.org/10.5194/bg-8-1643-2011">https://doi.org/10.5194/bg-8-1643-2011</a>
+</div>
+<div id="ref-sun2017characterization" class="csl-entry" role="listitem">
+Sun, K., Liu, X., Nowlan, C. R., Cai, Z., Chance, K., Frankenberg, C., et al. (2017). Characterization of the OCO-2 instrument line shape functions using on-orbit solar measurements. <em>Atmospheric Measurement Techniques</em>, <em>10</em>(3), 939–953. <a href="https://doi.org/10.5194/amt-2016-335-rc2">https://doi.org/10.5194/amt-2016-335-rc2</a>
+</div>
+<div id="ref-sun2015drought" class="csl-entry" role="listitem">
+Sun, Y., Fu, R., Dickinson, R., Joiner, J., Frankenberg, C., Gu, L., et al. (2015a). Drought onset mechanisms revealed by satellite solar-induced chlorophyll fluorescence: Insights from two contrasting extreme events. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>120</em>(11), 2427–2440. <a href="https://doi.org/10.1002/2015jg003150">https://doi.org/10.1002/2015jg003150</a>
+</div>
+<div id="ref-sun2015satellite" class="csl-entry" role="listitem">
+Sun, Y., Fu, R., Dickinson, R. E., Joiner, J., Frankenberg, C., Gu, L., et al. (2015b). Satellite solar-induced chlorophyll fluorescence reveals drought onset mechanisms: Insights from two contrasting extreme events. In <em>AGU fall meeting abstracts</em> (Vol. 2015, pp. B43H–0647). <a href="https://doi.org/10.1002/2015jg003150">https://doi.org/10.1002/2015jg003150</a>
+</div>
+<div id="ref-sun2017oco" class="csl-entry" role="listitem">
+Sun, Y., Frankenberg, C., Wood, J. D., Schimel, D., Jung, M., Guanter, L., et al. (2017). OCO-2 advances photosynthesis observation from space via solar-induced chlorophyll fluorescence. <em>Science</em>, <em>358</em>(6360), eaam5747. <a href="https://doi.org/10.5194/essd-2021-237-supplement">https://doi.org/10.5194/essd-2021-237-supplement</a>
+</div>
+<div id="ref-sun2018overview" class="csl-entry" role="listitem">
+Sun, Y., Frankenberg, C., Jung, M., Joiner, J., Guanter, L., Köhler, P., &amp; Magney, T. (2018). Overview of solar-induced chlorophyll fluorescence (SIF) from the orbiting carbon observatory-2: Retrieval, cross-mission comparison, and global monitoring for GPP. <em>Remote Sensing of Environment</em>, <em>209</em>, 808–823. <a href="https://doi.org/10.1016/j.rse.2018.02.016">https://doi.org/10.1016/j.rse.2018.02.016</a>
+</div>
+<div id="ref-sussmann2008satellite" class="csl-entry" role="listitem">
+Sussmann, R., Foster, F., Borsdorff, T., De Mazière, M., Dils, B., Vigouroux, C., et al. (2008). Satellite validation of column-averaged methane on global scale: Ground-based data from 15 FTIR stations versus last generation ENVISAT/SCIAMACHY retrievals. In <em>IGAC 10th international conference</em>. <a href="https://doi.org/10.5194/acp-5-1497-2005">https://doi.org/10.5194/acp-5-1497-2005</a>
+</div>
+<div id="ref-tadic2014comparison" class="csl-entry" role="listitem">
+Tadić, J. M., Loewenstein, M., Frankenberg, C., Butz, A., Roby, M., Iraci, L. T., et al. (2014). A comparison of in situ aircraft measurements of carbon dioxide and methane to GOSAT data measured over railroad valley playa, nevada, USA. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, <em>52</em>(12), 7764–7774. <a href="https://doi.org/10.5194/amtd-5-5641-2012">https://doi.org/10.5194/amtd-5-5641-2012</a>
+</div>
+<div id="ref-tan2016inverse" class="csl-entry" role="listitem">
+Tan, Z., Zhuang, Q., Henze, D. K., Frankenberg, C., Dlugokencky, E., Sweeney, C., et al. (2016). Inverse modeling of pan-arctic methane emissions at high spatial resolution: What can we learn from assimilating satellite retrievals and using different process-based wetland and lake biogeochemical models? <em>Atmospheric Chemistry and Physics</em>, <em>16</em>(19), 12649–12666. <a href="https://doi.org/10.5194/acp-16-12649-2016">https://doi.org/10.5194/acp-16-12649-2016</a>
+</div>
+<div id="ref-tanaka2016two" class="csl-entry" role="listitem">
+Tanaka, T., Yates, E., Iraci, L. T., Johnson, M. S., Gore, W., Tadić, J. M., et al. (2016). Two-year comparison of airborne measurements of CO 2 and CH 4 with GOSAT at railroad valley, nevada. <em>IEEE Transactions on Geoscience and Remote Sensing</em>, <em>54</em>(8), 4367–4375. <a href="https://doi.org/10.1109/tgrs.2016.2539973">https://doi.org/10.1109/tgrs.2016.2539973</a>
+</div>
+<div id="ref-taylor2016orbiting" class="csl-entry" role="listitem">
+Taylor, T. E., O’Dell, C. W., Frankenberg, C., Partain, P. T., Cronk, H. Q., Savtchenko, A., et al. (2016). Orbiting carbon observatory-2 (OCO-2) cloud screening algorithms: Validation against collocated MODIS and CALIOP data. <em>Atmospheric Measurement Techniques</em>, <em>9</em>(3), 973–989. <a href="https://doi.org/10.5194/amt-9-973-2016">https://doi.org/10.5194/amt-9-973-2016</a>
+</div>
+<div id="ref-taylor2020oco" class="csl-entry" role="listitem">
+Taylor, T. E., Eldering, A., Merrelli, A., Kiel, M., Somkuti, P., Cheng, C., et al. (2020). OCO-3 early mission operations and initial (vEarly) XCO2 and SIF retrievals. <em>Remote Sensing of Environment</em>, <em>251</em>, 112032. <a href="https://doi.org/10.1016/j.rse.2020.112032">https://doi.org/10.1016/j.rse.2020.112032</a>
+</div>
+<div id="ref-thompson2015real" class="csl-entry" role="listitem">
+Thompson, D., Leifer, I., Bovensmann, H., Eastwood, M., Fladeland, M., Frankenberg, C., et al. (2015). Real-time remote detection and measurement for airborne imaging spectroscopy: A case study with methane. <em>Atmospheric Measurement Techniques</em>, <em>8</em>(10), 4383–4397. <a href="https://doi.org/10.5194/amt-8-4383-2015">https://doi.org/10.5194/amt-8-4383-2015</a>
+</div>
+<div id="ref-thompson2016space" class="csl-entry" role="listitem">
+Thompson, D., Thorpe, A., Frankenberg, C., Green, R., Duren, R., Guanter, L., et al. (2016). Space-based remote imaging spectroscopy of the aliso canyon CH4 superemitter. <em>Geophysical Research Letters</em>, <em>43</em>(12), 6571–6578. <a href="https://doi.org/10.1002/2016gl069079">https://doi.org/10.1002/2016gl069079</a>
+</div>
+<div id="ref-thompson2016aliso" class="csl-entry" role="listitem">
+Thompson, D. R., Thorpe, A. K., Frankenberg, C., Green, R. O., Duren, R. M., Aubrey, A. D., et al. (2016). The aliso canyon super-emitter: Initial results of observations by AVIRIS-c and the hyperion spacecraft, with implications for global spectroscopic CH 4 monitoring. In <em>AGU fall meeting abstracts</em> (Vol. 2016, pp. GC52A–04). <a href="https://doi.org/10.5642/aliso.19951402.05">https://doi.org/10.5642/aliso.19951402.05</a>
+</div>
+<div id="ref-thompson2018optimal" class="csl-entry" role="listitem">
+Thompson, D. R., Natraj, V., Green, R. O., Helmlinger, M. C., Gao, B.-C., &amp; Eastwood, M. L. (2018). Optimal estimation for imaging spectrometer atmospheric correction. <em>Remote Sensing of Environment</em>, <em>216</em>, 355–373.
+</div>
+<div id="ref-thompson2019unified" class="csl-entry" role="listitem">
+Thompson, D. R., Cawse-Nicholson, K., Erickson, Z., Fichot, C. G., Frankenberg, C., Gao, B.-C., et al. (2019). A unified approach to estimate land and water reflectances with uncertainties for coastal imaging spectroscopy. <em>Remote Sensing of Environment</em>, <em>231</em>, 111198. <a href="https://doi.org/10.1016/j.rse.2019.05.017">https://doi.org/10.1016/j.rse.2019.05.017</a>
+</div>
+<div id="ref-thompson2024emit" class="csl-entry" role="listitem">
+Thompson, D. R., Green, R. O., Bradley, C., Brodrick, P. G., Mahowald, N., Dor, E. B., et al. (2024). On-orbit calibration and performance of the EMIT imaging spectrometer. <em>Remote Sensing of Environment</em>, <em>303</em>, 113986.
+</div>
+<div id="ref-thorpe2014retrieval" class="csl-entry" role="listitem">
+Thorpe, A., Frankenberg, C., &amp; Roberts, D. (2014). Retrieval techniques for airborne imaging of methane concentrations using high spatial and moderate spectral resolution: Application to AVIRIS. <em>Atmospheric Measurement Techniques</em>, <em>7</em>(2), 491–506. <a href="https://doi.org/10.5194/amt-7-491-2014">https://doi.org/10.5194/amt-7-491-2014</a>
+</div>
+<div id="ref-thorpe2016mapping" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Frankenberg, C., Aubrey, A., Roberts, D., Nottrott, A., Rahn, T., et al. (2016). Mapping methane concentrations from a controlled release experiment using the next generation airborne visible/infrared imaging spectrometer (AVIRIS-NG). <em>Remote Sensing of Environment</em>, <em>179</em>, 104–115. <a href="https://doi.org/10.1016/j.rse.2018.06.018">https://doi.org/10.1016/j.rse.2018.06.018</a>
+</div>
+<div id="ref-thorpe2016airborne" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Frankenberg, C., Green, R. O., Thompson, D. R., Aubrey, A. D., Mouroulis, P., et al. (2016). The airborne methane plume spectrometer (AMPS): Quantitative imaging of methane plumes in real time. In <em>2016 IEEE aerospace conference</em> (pp. 1–14). IEEE. <a href="https://doi.org/10.1109/aero.2016.7500756">https://doi.org/10.1109/aero.2016.7500756</a>
+</div>
+<div id="ref-thorpe2017airborne" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Frankenberg, C., Thompson, D. R., Duren, R. M., Aubrey, A. D., Bue, B. D., et al. (2017). Airborne DOAS retrievals of methane, carbon dioxide, and water vapor concentrations at high spatial resolution: Application to AVIRIS-NG. <em>Atmospheric Measurement Techniques</em>, <em>10</em>(10), 3833–3850. <a href="https://doi.org/10.5194/amt-10-3833-2017">https://doi.org/10.5194/amt-10-3833-2017</a>
+</div>
+<div id="ref-thorpe2020methane" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Duren, R. M., Conley, S., Prasad, K. R., Bue, B. D., Yadav, V., et al. (2020). Methane emissions from underground gas storage in california. <em>Environmental Research Letters</em>, <em>15</em>(4), 045005. <a href="https://doi.org/10.1088/1748-9326/ab751d">https://doi.org/10.1088/1748-9326/ab751d</a>
+</div>
+<div id="ref-THORPE2021112681" class="csl-entry" role="listitem">
+Thorpe, Andrew K., O’Handley, C., Emmitt, G. D., DeCola, P. L., Hopkins, F. M., Yadav, V., et al. (2021). Improved methane emission estimates using AVIRIS-NG and an airborne doppler wind lidar. <em>Remote Sensing of Environment</em>, <em>266</em>, 112681. https://doi.org/<a href="https://doi.org/10.1016/j.rse.2021.112681">https://doi.org/10.1016/j.rse.2021.112681</a>
+</div>
+<div id="ref-thorpe2022special" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Dennison, P. E., Guanter, L., Frankenberg, C., &amp; Aben, I. (2022). Special issue on remote sensing of greenhouse gas emissions. <em>Remote Sensing of Environment</em>. Elsevier. <a href="https://doi.org/10.1016/j.rse.2022.113069">https://doi.org/10.1016/j.rse.2022.113069</a>
+</div>
+<div id="ref-thorpe2023attribution" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Green, R. O., Thompson, D. R., Brodrick, P. G., Chapman, J. W., Elder, C. D., et al. (2023). Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space. <em>Science Advances</em>, <em>9</em>(46), eadh2391. <a href="https://doi.org/10.1126/sciadv.adh2391">https://doi.org/10.1126/sciadv.adh2391</a>
+</div>
+<div id="ref-thorpe2023methane" class="csl-entry" role="listitem">
+Thorpe, Andrew K., Kort, E. A., Cusworth, D., Ayasse, A., Bue, B. D., Yadav, V., et al. (2023). Methane emissions decline from reduced oil, natural gas, and refinery production during COVID-19. <em>Environmental Research Communications</em>, <em>5</em>(2), 021006. <a href="https://doi.org/10.1088/2515-7620/acb5e5">https://doi.org/10.1088/2515-7620/acb5e5</a>
+</div>
+<div id="ref-tran20102nu3" class="csl-entry" role="listitem">
+Tran, H., Hartmann, J.-M., Toon, G., Brown, L., Frankenberg, C., Warneke, T., et al. (2010). The 2<span class="math inline">\(\nu\)</span>3 band of CH4 revisited with line mixing: Consequences for spectroscopy and atmospheric retrievals at 1.67 <span class="math inline">\(\mu\)</span>m. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>111</em>(10), 1344–1356. <a href="https://doi.org/10.1016/j.jqsrt.2010.02.015">https://doi.org/10.1016/j.jqsrt.2010.02.015</a>
+</div>
+<div id="ref-turner2017ambiguity" class="csl-entry" role="listitem">
+Turner, A. J., Frankenberg, C., Wennberg, P. O., &amp; Jacob, D. J. (2017). Ambiguity in the causes for decadal trends in atmospheric methane and hydroxyl. PNAS. April. <a href="https://doi.org/10.1073/pnas.1616020114">https://doi.org/10.1073/pnas.1616020114</a>
+</div>
+<div id="ref-turner2019interpreting" class="csl-entry" role="listitem">
+Turner, A. J., Frankenberg, C., &amp; Kort, E. A. (2019). Interpreting contemporary trends in atmospheric methane. <em>Proceedings of the National Academy of Sciences</em>, <em>116</em>(8), 2805–2813. <a href="https://doi.org/10.1073/pnas.1814297116">https://doi.org/10.1073/pnas.1814297116</a>
+</div>
+<div id="ref-turner2020double" class="csl-entry" role="listitem">
+Turner, A. J., Köhler, P., Magney, T. S., Frankenberg, C., Fung, I., &amp; Cohen, R. C. (2020). A double peak in the seasonality of california’s photosynthesis as observed from space. <em>Biogeosciences</em>, <em>17</em>(2), 405–422. <a href="https://doi.org/10.5194/bg-2019-387-supplement">https://doi.org/10.5194/bg-2019-387-supplement</a>
+</div>
+<div id="ref-turner2020observed" class="csl-entry" role="listitem">
+Turner, A. J., Kim, J., Fitzmaurice, H., Newman, C., Worthington, K., Chan, K., et al. (2020). Observed impacts of COVID-19 on urban CO 2 emissions. <em>Geophysical Research Letters</em>, <em>47</em>(22), e2020GL090037. <a href="https://doi.org/10.1002/essoar.10504138.1">https://doi.org/10.1002/essoar.10504138.1</a>
+</div>
+<div id="ref-turner2021extreme" class="csl-entry" role="listitem">
+Turner, A. J., Köhler, P., Magney, T. S., Frankenberg, C., Fung, I., &amp; Cohen, R. C. (2021). Extreme events driving year-to-year differences in gross primary productivity across the US. <em>Biogeosciences</em>, <em>18</em>(24), 6579–6588. <a href="https://doi.org/10.5194/bg-18-6579-2021">https://doi.org/10.5194/bg-18-6579-2021</a>
+</div>
+<div id="ref-valkenborg2023drought" class="csl-entry" role="listitem">
+Valkenborg, B., De Lannoy, G. J., Gruber, A., Miralles, D. G., Köhler, P., Frankenberg, C., et al. (2023). Drought and waterlogging stress regimes in northern peatlands detected through satellite retrieved solar-induced chlorophyll fluorescence. <em>Geophysical Research Letters</em>, <em>50</em>(19), e2023GL105205. <a href="https://doi.org/10.1029/2023gl105205">https://doi.org/10.1029/2023gl105205</a>
+</div>
+<div id="ref-verma2017effect" class="csl-entry" role="listitem">
+Verma, M., Schimel, D., Evans, B., Frankenberg, C., Beringer, J., Drewry, D. T., et al. (2017). Effect of environmental conditions on the relationship between solar-induced fluorescence and gross primary productivity at an OzFlux grassland site. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>122</em>(3), 716–733. <a href="https://doi.org/10.1002/2016jg003580">https://doi.org/10.1002/2016jg003580</a>
+</div>
+<div id="ref-wagner2008monitoring" class="csl-entry" role="listitem">
+Wagner, T., Beirle, S., Deutschmann, T., Eigemeier, E., Frankenberg, C., Grzegorski, M., et al. (2008). Monitoring of atmospheric trace gases, clouds, aerosols and surface properties from UV/vis/NIR satellite instruments. <em>Journal of Optics A: Pure and Applied Optics</em>, <em>10</em>(10), 104019. <a href="https://doi.org/10.1088/1464-4258/10/10/104019">https://doi.org/10.1088/1464-4258/10/10/104019</a>
+</div>
+<div id="ref-wang2020satellite" class="csl-entry" role="listitem">
+Wang, C., Guan, K., Peng, B., Chen, M., Jiang, C., Zeng, Y., et al. (2020). Satellite footprint data from OCO-2 and TROPOMI reveal significant spatio-temporal and inter-vegetation type variabilities of solar-induced fluorescence yield in the US midwest. <em>Remote Sensing of Environment</em>, <em>241</em>, 111728. <a href="https://doi.org/10.1016/j.rse.2020.111728">https://doi.org/10.1016/j.rse.2020.111728</a>
+</div>
+<div id="ref-wang2022satellite" class="csl-entry" role="listitem">
+Wang, X., Biederman, J. A., Knowles, J. F., Scott, R. L., Turner, A. J., Dannenberg, M. P., et al. (2022). Satellite solar-induced chlorophyll fluorescence and near-infrared reflectance capture complementary aspects of dryland vegetation productivity dynamics. <em>Remote Sensing of Environment</em>, <em>270</em>, 112858. <a href="https://doi.org/10.1016/j.rse.2021.112858">https://doi.org/10.1016/j.rse.2021.112858</a>
+</div>
+<div id="ref-wang2022common" class="csl-entry" role="listitem">
+Wang, Yujie, &amp; Frankenberg, C. (2022a). Common ambiguities in plant hydraulics. <em>Biogeosciences</em>, <em>19</em>(19), 4705–4714. <a href="https://doi.org/10.5194/bg-19-4705-2022">https://doi.org/10.5194/bg-19-4705-2022</a>
+</div>
+<div id="ref-wang2022impact" class="csl-entry" role="listitem">
+Wang, Yujie, &amp; Frankenberg, C. (2022b). On the impact of canopy model complexity on simulated carbon, water, and solar-induced chlorophyll fluorescence fluxes. <em>Biogeosciences</em>, <em>19</em>(1), 29–45. <a href="https://doi.org/10.5194/bg-19-29-2022">https://doi.org/10.5194/bg-19-29-2022</a>
+</div>
+<div id="ref-wang2021optimization" class="csl-entry" role="listitem">
+Wang, Yujie, Anderegg, W. R., Venturas, M. D., Trugman, A. T., Yu, K., &amp; Frankenberg, C. (2021). Optimization theory explains nighttime stomatal responses. <em>New Phytologist</em>, <em>230</em>(4), 1550–1561. <a href="https://doi.org/10.1111/nph.17267">https://doi.org/10.1111/nph.17267</a>
+</div>
+<div id="ref-wang2022griddingmachine" class="csl-entry" role="listitem">
+Wang, Yujie, Köhler, P., Braghiere, R. K., Longo, M., Doughty, R., Bloom, A. A., &amp; Frankenberg, C. (2022). GriddingMachine, a database and software for earth system modeling at global and regional scales. <em>Scientific Data</em>, <em>9</em>(1), 258. <a href="https://doi.org/10.1038/s41597-022-01346-x">https://doi.org/10.1038/s41597-022-01346-x</a>
+</div>
+<div id="ref-wang2023elucidating" class="csl-entry" role="listitem">
+Wang, Yuan, Liu, J., Wennberg, P. O., He, L., Bonal, D., Köhler, P., et al. (2023). Elucidating climatic drivers of photosynthesis by tropical forests. <em>Global Change Biology</em>, <em>29</em>(17), 4811–4825. <a href="https://doi.org/10.1111/gcb.16837">https://doi.org/10.1111/gcb.16837</a>
+</div>
+<div id="ref-wang2023modeling" class="csl-entry" role="listitem">
+Wang, Y., Braghiere, R., Longo, M., Norton, A., Köhler, P., Doughty, R., et al. (2023). Modeling global vegetation gross primary productivity, transpiration and hyperspectral canopy radiative transfer simultaneously using a next generation land surface model—CliMA land. <em>Journal of Advances in Modeling Earth Systems</em>, <em>15</em>(3), e2021MS002964. <a href="https://doi.org/10.1029/2021ms002964">https://doi.org/10.1029/2021ms002964</a>
+</div>
+<div id="ref-wecht2014mapping" class="csl-entry" role="listitem">
+Wecht, K. J., Jacob, D. J., Frankenberg, C., Jiang, Z., &amp; Blake, D. R. (2014). Mapping of north american methane emissions with high spatial resolution by inversion of SCIAMACHY satellite data. <em>Journal of Geophysical Research: Atmospheres</em>, <em>119</em>(12), 7741–7756. <a href="https://doi.org/10.1002/2014jd021551">https://doi.org/10.1002/2014jd021551</a>
+</div>
+<div id="ref-whelan2020scientific" class="csl-entry" role="listitem">
+Whelan, M. E., Anderegg, L. D., Badgley, G., Campbell, J. E., Commane, R., Frankenberg, C., et al. (2020). Scientific communities striving for a common cause: Innovations in carbon cycle science. <em>Bulletin of the American Meteorological Society</em>, <em>101</em>(9), E1537–E1543. <a href="https://doi.org/10.1175/bams-d-19-0306.1">https://doi.org/10.1175/bams-d-19-0306.1</a>
+</div>
+<div id="ref-wood2017multiscale" class="csl-entry" role="listitem">
+Wood, J. D., Griffis, T. J., Baker, J. M., Frankenberg, C., Verma, M., &amp; Yuen, K. (2017). Multiscale analyses of solar-induced florescence and gross primary production. <em>Geophysical Research Letters</em>, <em>44</em>(1), 533–541. <a href="https://doi.org/10.1002/2016gl070775">https://doi.org/10.1002/2016gl070775</a>
+</div>
+<div id="ref-wood2023ecosystem" class="csl-entry" role="listitem">
+Wood, J. D., Gu, L., Hanson, P. J., Frankenberg, C., &amp; Sack, L. (2023). The ecosystem wilting point defines drought response and recovery of a quercus-carya forest. <em>Global Change Biology</em>, <em>29</em>(7), 2015–2029. <a href="https://doi.org/10.3410/f.742480493.793597504">https://doi.org/10.3410/f.742480493.793597504</a>
+</div>
+<div id="ref-worden2013decadal" class="csl-entry" role="listitem">
+Worden, H., Deeter, M., Frankenberg, C., George, M., Nichitiu, F., Worden, J., et al. (2013). Decadal record of satellite carbon monoxide observations. <em>Atmos. Chem. Phys</em>, <em>13</em>, 837–850. <a href="https://doi.org/10.5194/acp-13-837-2013">https://doi.org/10.5194/acp-13-837-2013</a>
+</div>
+<div id="ref-worden2012profiles" class="csl-entry" role="listitem">
+Worden, J., Kulawik, S., Frankenberg, C., Payne, V., Bowman, K., Cady-Peirara, K., et al. (2012). Profiles of CH 4, HDO, h 2 o, and n 2 o with improved lower tropospheric vertical resolution from aura TES radiances. <em>Atmospheric Measurement Techniques</em>, <em>5</em>(2), 397–411. <a href="https://doi.org/10.5194/amt-5-397-2012">https://doi.org/10.5194/amt-5-397-2012</a>
+</div>
+<div id="ref-worden2013ch" class="csl-entry" role="listitem">
+Worden, J., Wecht, K., Frankenberg, C., Alvarado, M., Bowman, K., Kort, E., et al. (2013). CH 4 and CO distributions over tropical fires during october 2006 as observed by the aura TES satellite instrument and modeled by GEOS-chem. <em>Atmospheric Chemistry and Physics</em>, <em>13</em>(7), 3679–3692. <a href="https://doi.org/10.5194/acp-13-3679-2013">https://doi.org/10.5194/acp-13-3679-2013</a>
+</div>
+<div id="ref-worden2013nino" class="csl-entry" role="listitem">
+Worden, John, Jiang, Z., Jones, D. B., Alvarado, M., Bowman, K., Frankenberg, C., et al. (2013). El ni<span>ñ</span>o, the 2006 indonesian peat fires, and the distribution of atmospheric methane. <em>Geophysical Research Letters</em>, <em>40</em>(18), 4938–4943. <a href="https://doi.org/10.1002/grl.50937">https://doi.org/10.1002/grl.50937</a>
+</div>
+<div id="ref-worden2015quantifying" class="csl-entry" role="listitem">
+Worden, JR, Turner, A., Bloom, A., Kulawik, S., Liu, J., Lee, M., et al. (2015). Quantifying lower tropospheric methane concentrations using GOSAT near-IR and TES thermal IR measurements. <em>Atmospheric Measurement Techniques</em>, <em>8</em>(8), 3433–3445. <a href="https://doi.org/10.5194/amt-8-3433-2015">https://doi.org/10.5194/amt-8-3433-2015</a>
+</div>
+<div id="ref-worden2017evaluation" class="csl-entry" role="listitem">
+Worden, J. R., Doran, G., Kulawik, S., Eldering, A., Crisp, D., Frankenberg, C., et al. (2017). Evaluation and attribution of OCO-2 XCO 2 uncertainties. <em>Atmospheric Measurement Techniques</em>, <em>10</em>(7), 2759–2771. <a href="https://doi.org/10.5194/amt-2016-175-rc1">https://doi.org/10.5194/amt-2016-175-rc1</a>
+</div>
+<div id="ref-wu2022attributing" class="csl-entry" role="listitem">
+Wu, G., Guan, K., Jiang, C., Kimm, H., Miao, G., Bernacchi, C. J., et al. (2022). Attributing differences of solar-induced chlorophyll fluorescence (SIF)-gross primary production (GPP) relationships between two C4 crops: Corn and miscanthus. <em>Agricultural and Forest Meteorology</em>, <em>323</em>, 109046. <a href="https://doi.org/10.1016/j.agrformet.2022.109046">https://doi.org/10.1016/j.agrformet.2022.109046</a>
+</div>
+<div id="ref-wu2022difference" class="csl-entry" role="listitem">
+Wu, G., Jiang, C., Kimm, H., Wang, S., Bernacchi, C., Moore, C. E., et al. (2022). Difference in seasonal peak timing of soybean far-red SIF and GPP explained by canopy structure and chlorophyll content. <em>Remote Sensing of Environment</em>, <em>279</em>, 113104. <a href="https://doi.org/10.1016/j.rse.2022.113104">https://doi.org/10.1016/j.rse.2022.113104</a>
+</div>
+<div id="ref-wunch2011method" class="csl-entry" role="listitem">
+Wunch, D., Wennberg, P., Toon, G., Connor, B., Fisher, B., Osterman, G., et al. (2011). A method for evaluating bias in global measurements of CO 2 total columns from space. <em>Atmospheric Chemistry and Physics</em>, <em>11</em>(23), 12317–12337. <a href="https://doi.org/10.5194/acp-11-12317-2011">https://doi.org/10.5194/acp-11-12317-2011</a>
+</div>
+<div id="ref-xia2015joint" class="csl-entry" role="listitem">
+Xia, J., Niu, S., Ciais, P., Janssens, I. A., Chen, J., Ammann, C., et al. (2015). Joint control of terrestrial gross primary productivity by plant phenology and physiology. <em>Proceedings of the National Academy of Sciences</em>, <em>112</em>(9), 2788–2793. <a href="https://doi.org/10.1016/b978-012505290-0/50005-3">https://doi.org/10.1016/b978-012505290-0/50005-3</a>
+</div>
+<div id="ref-xu2015satellite" class="csl-entry" role="listitem">
+Xu, L., Saatchi, S. S., Yang, Y., Myneni, R. B., Frankenberg, C., Chowdhury, D., &amp; Bi, J. (2015). Satellite observation of tropical forest seasonality: Spatial patterns of carbon exchange in amazonia. <em>Environmental Research Letters</em>, <em>10</em>(8), 084005. <a href="https://doi.org/10.1088/1748-9326/10/8/084005">https://doi.org/10.1088/1748-9326/10/8/084005</a>
+</div>
+<div id="ref-yang2022tropomi" class="csl-entry" role="listitem">
+Yang, J., Xiao, X., Doughty, R., Zhao, M., Zhang, Y., Köhler, P., et al. (2022). TROPOMI SIF reveals large uncertainty in estimating the end of plant growing season from vegetation indices data in the tibetan plateau. <em>Remote Sensing of Environment</em>, <em>280</em>, 113209. <a href="https://doi.org/10.1016/j.rse.2022.113209">https://doi.org/10.1016/j.rse.2022.113209</a>
+</div>
+<div id="ref-yang2022gross" class="csl-entry" role="listitem">
+Yang, J. C., Magney, T. S., Albert, L. P., Richardson, A. D., Frankenberg, C., Stutz, J., et al. (2022). Gross primary production (GPP) and red solar induced fluorescence (SIF) respond differently to light and seasonal environmental conditions in a subalpine conifer forest. <em>Agricultural and Forest Meteorology</em>, <em>317</em>, 108904. <a href="https://doi.org/10.1016/j.agrformet.2022.108904">https://doi.org/10.1016/j.agrformet.2022.108904</a>
+</div>
+<div id="ref-yin2020accelerating" class="csl-entry" role="listitem">
+Yin, Y., Chevallier, F., Ciais, P., Bousquet, P., Saunois, M., Zheng, B., et al. (2020). Accelerating methane growth rate from 2010 to 2017: Leading contributions from the tropics and east asia. <em>Atmospheric Chemistry &amp; Physics Discussions</em>. <a href="https://doi.org/10.5194/acp-21-12631-2021">https://doi.org/10.5194/acp-21-12631-2021</a>
+</div>
+<div id="ref-yin2020cropland" class="csl-entry" role="listitem">
+Yin, Y., Byrne, B., Liu, J., Wennberg, P. O., Davis, K. J., Magney, T., et al. (2020). Cropland carbon uptake delayed and reduced by 2019 midwest floods. <em>AGU Advances</em>, <em>1</em>(1), e2019AV000140. <a href="https://doi.org/10.5194/egusphere-egu2020-12141">https://doi.org/10.5194/egusphere-egu2020-12141</a>
+</div>
+<div id="ref-yin2020fire" class="csl-entry" role="listitem">
+Yin, Y., Bloom, A. A., Worden, J., Saatchi, S., Yang, Y., Williams, M., et al. (2020). Fire decline in dry tropical ecosystems enhances decadal land carbon sink. <em>Nature Communications</em>, <em>11</em>(1), 1900. <a href="https://doi.org/10.1038/s41467-020-15852-2">https://doi.org/10.1038/s41467-020-15852-2</a>
+</div>
+<div id="ref-yin2021accelerating" class="csl-entry" role="listitem">
+Yin, Y., Chevallier, F., Ciais, P., Bousquet, P., Saunois, M., Zheng, B., et al. (2021). Accelerating methane growth rate from 2010 to 2017: Leading contributions from the tropics and east asia. <em>Atmospheric Chemistry and Physics</em>, <em>21</em>(16), 12631–12647. <a href="https://doi.org/10.5194/acp-21-12631-2021">https://doi.org/10.5194/acp-21-12631-2021</a>
+</div>
+<div id="ref-yin2023unequal" class="csl-entry" role="listitem">
+Yin, Y., He, L., Wennberg, P. O., &amp; Frankenberg, C. (2023). Unequal exposure to heatwaves in los angeles: Impact of uneven green spaces. <em>Science Advances</em>, <em>9</em>(17), eade8501. <a href="https://doi.org/10.1126/sciadv.ade8501">https://doi.org/10.1126/sciadv.ade8501</a>
+</div>
+<div id="ref-yoshimura2011comparison" class="csl-entry" role="listitem">
+Yoshimura, K., Frankenberg, C., Lee, J., Kanamitsu, M., Worden, J., Röckmann, T., &amp; Yoshimura, K. (2011). Comparison of an isotopic AGCM with new quasi global satellite measurements of water vapor isotopologues. <em>J. Geophys. Res.</em>, <em>116</em>. <a href="https://doi.org/10.1029/2011jd016035">https://doi.org/10.1029/2011jd016035</a>
+</div>
+<div id="ref-zeng2022optical" class="csl-entry" role="listitem">
+Zeng, Y., Hao, D., Huete, A., Dechant, B., Berry, J., Chen, J. M., et al. (2022). Optical vegetation indices for monitoring terrestrial ecosystems globally. <em>Nature Reviews Earth &amp; Environment</em>, <em>3</em>(7), 477–493. <a href="https://doi.org/10.1038/s43017-022-00298-5">https://doi.org/10.1038/s43017-022-00298-5</a>
+</div>
+<div id="ref-zeng2023structural" class="csl-entry" role="listitem">
+Zeng, Y., Hao, D., Park, T., Zhu, P., Huete, A., Myneni, R., et al. (2023). Structural complexity biases vegetation greenness measures. <em>Nature Ecology &amp; Evolution</em>, <em>7</em>(11), 1790–1798. <a href="https://doi.org/10.1038/s41559-023-02187-6">https://doi.org/10.1038/s41559-023-02187-6</a>
+</div>
+<div id="ref-zhang2020potential" class="csl-entry" role="listitem">
+Zhang, Zhaoying, Zhang, Y., Zhang, Y., Gobron, N., Frankenberg, C., Wang, S., &amp; Li, Z. (2020). The potential of satellite FPAR product for GPP estimation: An indirect evaluation using solar-induced chlorophyll fluorescence. <em>Remote Sensing of Environment</em>, <em>240</em>, 111686. <a href="https://doi.org/10.1016/j.rse.2020.111686">https://doi.org/10.1016/j.rse.2020.111686</a>
+</div>
+<div id="ref-Zhang_2023" class="csl-entry" role="listitem">
+Zhang, Zhen, Poulter, B., Feldman, A. F., Ying, Q., Ciais, P., Peng, S., &amp; Li, X. (2023). Recent intensification of wetland methane feedback. <em>Nature Climate Change</em>, <em>13</em>(5), 430–433. <a href="https://doi.org/10.1038/s41558-023-01629-0">https://doi.org/10.1038/s41558-023-01629-0</a>
+</div>
+<div id="ref-zuromski2018solar" class="csl-entry" role="listitem">
+Zuromski, L. M., Bowling, D. R., Köhler, P., Frankenberg, C., Goulden, M. L., Blanken, P. D., &amp; Lin, J. C. (2018). Solar-induced fluorescence detects interannual variation in gross primary production of coniferous forests in the western united states. <em>Geophysical Research Letters</em>, <em>45</em>(14), 7184–7193. <a href="https://doi.org/10.1029/2018gl077906">https://doi.org/10.1029/2018gl077906</a>
+</div>
+</div></section></div></div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://www.caltech.edu/"><img src="../../img/Caltech_Logo.png" alt="Caltech" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://carnegiescience.edu/"><img src="../../img/Carnegie.svg" alt="Carnegie" height="20"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://eps.harvard.edu/"><img src="../../img/img_acmg_logo_seas.png" alt="Harvard" height="20"></a></p>
+<p><img src="../../img/caltech_logo_white.png" class="img-fluid"> <br> Lead Institution</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<img src="../../img/jpl_logo.png" class="img-fluid"> <br>
+<p>
+Instrument and <br> Mission Management
+</p>
+<div style="border: 0; border-top: 1px solid white; width: 100%; margin: 1rem auto;">
+
+</div>
+<p><short style="font-size: .80rem"> © 2025 California Institute of Technology. All Rights Reserved.</short></p>
+</div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
-<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</p>
-</a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/chr_fronge">
-      <i class="bi bi-twitter" role="img" aria-label="PI Twitter">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/RemoteSensingTools/">
-      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
+<p><img src="../../img/lockheed_logo.png" class="img-fluid"><br> Spacecraft and <br> Mission Operations</p>
+</div>
   </div>
 </footer>
 
