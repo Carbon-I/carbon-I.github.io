@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Joannes D. (Bram) Maasakkers</title>
+<title>Suniti Sanghavi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,14 +101,43 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles/custom.css">
-<meta property="og:title" content="Joannes D. (Bram) Maasakkers">
-<meta property="og:description" content="International Collaborator  SRON, The Netherlands">
-<meta property="og:image" content="https://carbon-i.github.io/img/people/JDMaasakkers_Crop.jpg">
-<meta name="twitter:title" content="Joannes D. (Bram) Maasakkers">
-<meta name="twitter:description" content="International Collaborator  SRON, The Netherlands">
-<meta name="twitter:image" content="https://carbon-i.github.io/img/people/JDMaasakkers_Crop.jpg">
+<meta property="og:title" content="Suniti Sanghavi">
+<meta property="og:description" content="Radiative transfer modeler  JPL/Caltech">
+<meta property="og:image" content="https://carbon-i.github.io/img/people/suniti.jpg">
+<meta name="twitter:title" content="Suniti Sanghavi">
+<meta name="twitter:description" content="Radiative transfer modeler  JPL/Caltech">
+<meta name="twitter:image" content="https://carbon-i.github.io/img/people/suniti.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -166,67 +215,61 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 
 
 <div class="container">
-<section id="collaborators-joannes-d.-bram-maasakkers" class="level2 listing-header">
-<h2 data-anchor-id="collaborators-joannes-d.-bram-maasakkers"><a href="../../team.html#collab-team"><strong>Collaborators</strong> | <strong>Joannes D. (Bram) Maasakkers</strong></a></h2>
+<section id="science-team-suniti-sanghavi" class="level2 listing-header">
+<h2 data-anchor-id="science-team-suniti-sanghavi"><a href="../../team.html#science-team"><strong>Science Team</strong> | <strong>Suniti Sanghavi</strong></a></h2>
 </section>
 <div class="quarto-about-solana column-body">
   <div class="about-entity">
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Joannes D. (Bram) Maasakkers</h1>
-<p class="subtitle lead">International Collaborator <br> SRON, The Netherlands</p>
+<h1 class="title">Suniti Sanghavi</h1>
+<p class="subtitle lead">Radiative transfer modeler <br> JPL/Caltech</p>
 </div>
 <div class="quarto-title-meta">
   </div>
 </header> <div class="about-links">
-  <a href="https://twitter.com/jdmaasakkers" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">twitter</span>
+  <a href="https://github.com/RemoteSensingTools/vSmartMOM.jl" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text"></span>
   </a>
-  <a href="https://scholar.google.com/citations?user=0rLePx8AAAAJ" class="about-link" rel="" target="">
+  <a href="https://scholar.google.com/citations?user=fKACl6kAAAAJ&amp;hl=en" class="about-link" rel="" target="">
      <span class="about-link-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</span>
   </a>
-  <a href="https://www.linkedin.com/in/jdmaasakkers/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinedIn</span>
-  </a>
-  <a href="https://jdmaasakkers.github.io/" class="about-link" rel="" target="">
-    <i class="bi bi-mortarboard"></i>
-     <span class="about-link-text">Website</span>
-  </a>
-  <a href="https://orcid.org/0000-0001-8118-0311" class="about-link" rel="" target="">
+  <a href="https://orcid.org/0000-0003-0754-9154" class="about-link" rel="" target="">
      <span class="about-link-text"><iconify-icon role="img" inline="" icon="fa6-brands:orcid" aria-label="Icon orcid from fa6-brands Iconify.design set." title="Icon orcid from fa6-brands Iconify.design set."></iconify-icon> OrcidID</span>
   </a>
 </div>
       <div class="about-contents"><div id="about-heading">
 <div class="about-section">
-<p>Joannes D. (Bram) Maasakkers is a Senior Scientist at SRON Netherlands Institute for Space Research. His work focuses on better understanding anthropogenic methane and carbon monoxide emissions using observations of atmospheric concentrations from satellites.</p>
+<p>Suniti Sanghavi is a remote sensing scientist at the Jet Propulsion Laboratory with a focus on radiative transfer modeling and inversion algorithm development.</p>
+<p>Dr.&nbsp;Sanghavi recognized the need for fast and accurate radiative transfer modeling while carrying out the first Optimal Estimation based inversion of aerosol properties using SCIAMACHY data <span class="citation" data-cites="sanghavi2010bichromatic sanghavi2012retrieval">(<a href="#ref-sanghavi2010bichromatic" role="doc-biblioref">Suniti Sanghavi et al., 2010</a>; <a href="#ref-sanghavi2012retrieval" role="doc-biblioref">S. Sanghavi et al., 2012</a>)</span>. She later expanded her approach to MISR <span class="citation" data-cites="diner2012optimization">(<a href="#ref-diner2012optimization" role="doc-biblioref">Diner et al., 2012</a>)</span>, leading to state-of-the-art refinements in aerosol electromagnetic scattering simulations <span class="citation" data-cites="sanghavi2014revisiting sanghavi2015adaptation">(<a href="#ref-sanghavi2014revisiting" role="doc-biblioref">Suniti Sanghavi, 2014</a>; <a href="#ref-sanghavi2015adaptation" role="doc-biblioref">Suniti Sanghavi &amp; Stephens, 2015</a>)</span> and forward modeling <span class="citation" data-cites="sanghavi2013using sanghavi2013linearization sanghavi2014vsmartmom">(<a href="#ref-sanghavi2014vsmartmom" role="doc-biblioref">Suniti Sanghavi et al., 2014</a>; <a href="#ref-sanghavi2013linearization" role="doc-biblioref">S. V. Sanghavi et al., 2013</a>; <a href="#ref-sanghavi2013using" role="doc-biblioref">Suniti Sanghavi &amp; Natraj, 2013</a>)</span>. The resulting framework was used to carry out sensitivity studies and information content analyses of the influence of aerosol and cloud properties on OCO/GOSAT measurements <span class="citation" data-cites="sanghavi2015sensitivity sanghavi2020aerosols">(<a href="#ref-sanghavi2015sensitivity" role="doc-biblioref">S. Sanghavi et al., 2015</a>; <a href="#ref-sanghavi2020aerosols" role="doc-biblioref">Suniti Sanghavi et al., 2020</a>)</span>. The vSmartMOM modeling framework has also been applied to study the cloudy atmospheres of exoplanets and brown dwarfs <span class="citation" data-cites="sanghavi2018photopolarimetric sanghavi2019spectropolarimetric sanghavi2021cloudy">(<a href="#ref-sanghavi2021cloudy" role="doc-biblioref">Suniti Sanghavi et al., 2021</a>; <a href="#ref-sanghavi2018photopolarimetric" role="doc-biblioref">Suniti Sanghavi &amp; Shporer, 2018</a>; <a href="#ref-sanghavi2019spectropolarimetric" role="doc-biblioref">Suniti Sanghavi &amp; West, 2019</a>)</span>. Following the GPU adaptation of vSmartMOM <span class="citation" data-cites="jeyaram2022vsmartmom">(<a href="#ref-jeyaram2022vsmartmom" role="doc-biblioref">Jeyaram et al., 2022</a>)</span>, Dr.&nbsp;Sanghavi’s work led to the development of a GPU accelerated inelastic scattering model <span class="citation" data-cites="sanghavi2022raman sanghavi2023raman">(<a href="#ref-sanghavi2022raman" role="doc-biblioref">Suniti Sanghavi, 2022</a>; <a href="#ref-sanghavi2023raman" role="doc-biblioref">Suniti Sanghavi &amp; Frankenberg, 2023</a>)</span> that allows the correction of hyperspectral retrievals for biases caused by Raman scattering. Similar corrections due to the hyperspectral effects of canopy radiative transfer are being developed jointly with Dr.&nbsp;Frankenberg.</p>
 <section id="education" class="level2">
 <h2 data-anchor-id="education">Education</h2>
 <ul>
-<li><span class="fw-bold">PhD in Environmental Science and Engineering</span> | Harvard University, US | 2013 - 2018</li>
-<li><span class="fw-bold">M.Sc. in Environmental Science and Engineering</span> | Harvard University, US | 2013 - 2015</li>
-<li><span class="fw-bold">B.Sc. and M.Sc. in Applied Physics</span> | Eindhoven University of Technology, The Netherlands | 2008 - 2013</li>
+<li><span class="fw-bold">PhD in Environmental Physics</span> | University of Heidelberg, Germany | 2004 - 2008</li>
+<li><span class="fw-bold">Diploma in Physics</span> | University of Heidelberg, Germany | 1999 - 2003</li>
 </ul>
 </section>
 <section id="professional-experience" class="level2">
 <h2 data-anchor-id="professional-experience">Professional Experience</h2>
 <ul>
-<li><span class="fw-bold">2024-present:</span> Senior Scientist at SRON Netherlands Institute for Space Research, The Netherlands</li>
-<li><span class="fw-bold">2021-2024:</span> Scientist at SRON Netherlands Institute for Space Research, The Netherlands</li>
-<li><span class="fw-bold">2018-2020:</span> Postdoc at SRON Netherlands Institute for Space Research, The Netherlands</li>
+<li><span class="fw-bold">2015-present:</span> Data scientist, 298K, JPL</li>
+<li><span class="fw-bold">2014-2015:</span> CSU Postdoc, JPL</li>
+<li><span class="fw-bold">2010-2013:</span> Caltech Postdoc, JPL</li>
+<li><span class="fw-bold">2008-2009:</span> Postdoc at SRON-Netherlands Institute of Space Research</li>
 </ul>
 </section>
 </div>
 </div></div>
     </div>
-    <img src="../../img/people/JDMaasakkers_Crop.jpg" class="about-image
+    <img src="../../img/people/suniti.jpg" class="about-image
   round " style="height: 15em; width: 15em;">
   </div>
 </div>
 
 </div>
+
 
 
 
@@ -692,7 +735,56 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
     }
   });
   </script>
-</div> <!-- /content -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-diner2012optimization" class="csl-entry" role="listitem">
+Diner, D. J., Hodos, R. A., Davis, A. B., Garay, M. J., Martonchik, J. V., Sanghavi, S. V., et al. (2012). An optimization approach for aerosol retrievals using simulated <span>MISR</span> radiances. <em>Atmospheric Research</em>, <em>116</em>, 1–14.
+</div>
+<div id="ref-jeyaram2022vsmartmom" class="csl-entry" role="listitem">
+Jeyaram, R., Sanghavi, S., &amp; Frankenberg, C. (2022). vSmartMOM. Jl: An open-source julia package for atmospheric radiative transfer and remote sensing tools. <em>Journal of Open Source Software</em>, <em>7</em>(80), 4575.
+</div>
+<div id="ref-sanghavi2014revisiting" class="csl-entry" role="listitem">
+Sanghavi, Suniti. (2014). Revisiting the fourier expansion of mie scattering matrices in generalized spherical functions. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>136</em>, 16–27.
+</div>
+<div id="ref-sanghavi2022raman" class="csl-entry" role="listitem">
+Sanghavi, Suniti. (2022). Raman scattering in the earth’s atmosphere, part i: Optical properties. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>291</em>, 108328. https://doi.org/<a href="https://doi.org/10.1016/j.jqsrt.2022.108328">https://doi.org/10.1016/j.jqsrt.2022.108328</a>
+</div>
+<div id="ref-sanghavi2023raman" class="csl-entry" role="listitem">
+Sanghavi, Suniti, &amp; Frankenberg, C. (2023). <span class="nocase">Raman scattering in the Earth’s atmosphere, Part II: Radiative transfer modeling for remote sensing applications</span>. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>311</em>, 108791.
+</div>
+<div id="ref-sanghavi2013using" class="csl-entry" role="listitem">
+Sanghavi, Suniti, &amp; Natraj, V. (2013). Using analytic derivatives to assess the impact of phase function fourier decomposition technique on the accuracy of a radiative transfer model. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>119</em>, 137–149.
+</div>
+<div id="ref-sanghavi2018photopolarimetric" class="csl-entry" role="listitem">
+Sanghavi, Suniti, &amp; Shporer, A. (2018). Photopolarimetric characteristics of brown dwarfs. I. Uniform cloud decks. <em>The Astrophysical Journal</em>, <em>866</em>(1), 28.
+</div>
+<div id="ref-sanghavi2015adaptation" class="csl-entry" role="listitem">
+Sanghavi, Suniti, &amp; Stephens, G. (2015). Adaptation of the delta-m and <span class="math inline">\(\delta\)</span>-fit truncation methods to vector radiative transfer: Effect of truncation on radiative transfer accuracy. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>159</em>, 53–68.
+</div>
+<div id="ref-sanghavi2019spectropolarimetric" class="csl-entry" role="listitem">
+Sanghavi, Suniti, &amp; West, R. (2019). Spectropolarimetric characteristics of brown dwarfs. II. Uniform clouds. <em>The Astrophysical Journal</em>, <em>877</em>(2), 134.
+</div>
+<div id="ref-sanghavi2010bichromatic" class="csl-entry" role="listitem">
+Sanghavi, Suniti, Platt, U., &amp; Landgraf, J. (2010). Bichromatic method for identification of clear-sky scenarios over ground pixel viewed from space. <em>Applied Optics</em>, <em>49</em>(17), 3282–3290.
+</div>
+<div id="ref-sanghavi2012retrieval" class="csl-entry" role="listitem">
+Sanghavi, S., Martonchik, J., Landgraf, J., &amp; Platt, U. (2012). Retrieval of the optical depth and vertical distribution of particulate scatterers in the atmosphere using <span>O</span><span class="math inline">\(_2\)</span> <span>A</span>-and <span>B</span>-band <span>SCIAMACHY</span> observations over <span>K</span>anpur: A case study. <em>Atmospheric Measurement Techniques</em>, <em>5</em>(5), 1099–1119.
+</div>
+<div id="ref-sanghavi2014vsmartmom" class="csl-entry" role="listitem">
+Sanghavi, Suniti, Davis, A. B., &amp; Eldering, A. (2014). V<span>S</span>mart<span>MOM</span>: A vector matrix operator method-based radiative transfer model linearized with respect to aerosol properties. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>133</em>, 412–433.
+</div>
+<div id="ref-sanghavi2015sensitivity" class="csl-entry" role="listitem">
+Sanghavi, S., Lebsock, M., &amp; Stephens, G. (2015). Sensitivity analysis of polarimetric o 2 a-band spectra for potential cloud retrievals using OCO-2/GOSAT measurements. <em>Atmospheric Measurement Techniques</em>, <em>8</em>(9), 3601–3616.
+</div>
+<div id="ref-sanghavi2020aerosols" class="csl-entry" role="listitem">
+Sanghavi, Suniti, Nelson, R., Frankenberg, C., &amp; Gunson, M. (2020). Aerosols in OCO-2/GOSAT retrievals of XCO2: An information content and error analysis. <em>Remote Sensing of Environment</em>, <em>251</em>, 112053.
+</div>
+<div id="ref-sanghavi2021cloudy" class="csl-entry" role="listitem">
+Sanghavi, Suniti, West, R., &amp; Jiang, J. (2021). Cloudy atmospheres on directly imaged exoplanets: The need for accurate particulate representation in photopolarimetric simulations. <em>The Astrophysical Journal</em>, <em>907</em>(1), 30.
+</div>
+<div id="ref-sanghavi2013linearization" class="csl-entry" role="listitem">
+Sanghavi, S. V., Martonchik, J. V., Davis, A. B., &amp; Diner, D. J. (2013). Linearization of a scalar matrix operator method radiative transfer model with respect to aerosol and surface properties. <em>Journal of Quantitative Spectroscopy and Radiative Transfer</em>, <em>116</em>, 1–16.
+</div>
+</div></section></div></div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
