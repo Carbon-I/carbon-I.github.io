@@ -1,0 +1,41 @@
+---
+title: "Bianca Baier"
+toc: false
+started: "2016"
+image: ../../img/people/baier_sitephoto.jpg
+subtitle: "NOAA AirCore Program  <br> NOAA"
+sortby: "5"
+about:
+  id: about-heading
+  template: solana
+  image-shape: round
+  links:
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0003-0379-9180
+bibliography: ../../publications/baier.bib
+csl: ../../styles/agu.csl
+nocite: |
+  @*
+---
+
+
+::::: {.container} 
+
+::: {.listing-header}
+## [**Science Team** | **Bianca Baier **](../../team.qmd#science-team)
+::::
+
+:::: {#about-heading}
+::: {.about-section} 
+
+Bianca Baier is a physical scientist at the NOAA Global Monitoring Laboratory in Boulder, Colorado and PI of the NOAA AirCore Program. Her research interests include developing and deploying new in situ technologies, methods and platforms for observing greenhouse gases from the surface to the stratosphere. Her most recent work has focused on the development of a return glider technology for expanding AirCore near-total-column sampling in data poor, climate-critical areas such as the tropics. 
+
+## Education
+
+- [PhD, Atmospheric Science]{.fw-bold} | The Pennsylvania State University | 2016
+- [M.S., Atmospheric Science]{.fw-bold} | The Pennsylvania State University | 2013
+- [B.S., Meteorology; B.S., Mathematics]{.fw-bold} |  The Pennsylvania State University | 2011
+
+:::
+::::
+:::::
