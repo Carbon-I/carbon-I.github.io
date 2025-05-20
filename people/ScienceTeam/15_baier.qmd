@@ -2,7 +2,7 @@
 title: "Bianca Baier"
 toc: false
 started: "2016"
-image: ../../img/people/baier_sitephoto.jpg
+image: ../../img/people/bianca_baier_sitephoto.jpg
 subtitle: "NOAA AirCore Program  <br> NOAA"
 sortby: "5"
 about:
