@@ -126,7 +126,6 @@
   width: 100%;           
   max-width: 450px;    
   border-radius: 50%; /* circular frame */
-  aspect-ratio: 1 / 1; /* retain Aspect Ratio */
 
 }
 
@@ -138,6 +137,7 @@
 }
 
 .science{ 
+  gap: 2rem;
   opacity: 0;
   transform: translateX(-120px);
 }
@@ -157,7 +157,7 @@
 
 .science-image-frame{
   width: 100%; 
-  max-width: 30rem;   
+  max-width: 35rem;   
   padding: 2rem;
   background-color: #F9FAEF;       
 }
