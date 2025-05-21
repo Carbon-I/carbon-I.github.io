@@ -55,7 +55,7 @@ Bottom-up methane emissions distributions show key regions, which  dominate glob
 :::
 
 ::: {.g-col-6 .align-items-end}
-![](img/Fig4_methane.png){.img-fluid science-image-frame}
+![](img/Fig4_methane.png){.img-fluid .science-image-frame}
 :::
 ::::
 

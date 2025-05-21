@@ -38,7 +38,7 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 
 :::
 
-::: {.g-col-6 .align-items-end} 
+::: {.g-col-6 .align-items-end .justify-content-center} 
 ![](img/CarbonI-anim_whiteBG_small.gif){.img-fluid .mission-image-frame}
 :::
 ::::
@@ -79,8 +79,8 @@ Carbon-I is the first to pair land-imaging spatial detail with high-resolution a
 
 :::
 
-::: {.g-col-6 .align-items-end}
-![](img/Target.jpg){.img-fluid .mission-image-frame}
+::: {.g-col-6 .align-items-end .justify-content-center}
+![](img/Target.jpg){.img-fluid .mission-image-frame style="border-radius: 0"}
 :::
 ::::
 
