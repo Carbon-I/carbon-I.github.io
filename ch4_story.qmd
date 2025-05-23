@@ -123,19 +123,27 @@ function adjustTextPosition(plotDomain, fixedDate, defaultPosition) {
 
 ```{ojs}
 Plot.plot({
-    width,
+  width,                    
+  height: 800,   
+  marginTop: 50,   
+  marginLeft: 90,
+  marginBottom: 60,               
   y: {
     grid: true,
     label: "CH₄ (ppb)",
+    labelAnchor: "center",
+    labelPadding: 8,          // add padding to separate it from the ticks
     domain: [yMin, yMax] // Set the y-axis domain
   },
   x: {
     grid: true,
-    label: "time",
+    label: "Time",
+    labelAnchor: "center",
+    labelPadding: 8,          // add padding to separate it from the ticks
     domain: [d3.min(filtered, d => d.Date), d3.max(filtered, d => d.Date)] // Set the y-axis domain
   },
   color: { legend: true },
-  style: { fontSize: "12px",},
+  style: { fontSize: "18px",},
   marks: [
     Plot.rectY([{}], { 
       x1: new Date("2000-01-01"), // lower x bound of your overlay

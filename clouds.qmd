@@ -32,7 +32,7 @@ Here, we provide a simple interactive example for cloud statistics from our data
 
 
 :::: 
-:::: {.plots .px-4 .py-5}
+:::: {.plots .py-5}
 ::: {.globe-section}
 
 ```{ojs}
@@ -156,15 +156,15 @@ function customTickFormat(d) {
 Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 2000m footprints (red) on a logarithmic scale (from 0.1  to 100%)
 
 <!-- For creating legend      -->              
-::::: {.d-flex .gap-4 .my-2}
+::::: {.d-flex .my-1}
 
-:::: {.d-flex .align-items-center .gap-2}
+:::: {.d-flex .align-items-center .gap-1}
 ::: {style="width: 1.5rem; height: 1.5rem; background-color: #FFB2A4;"}
 :::
 2000m
 ::::
 
-:::: {.d-flex .align-items-center .gap-2 .ps-4}
+:::: {.d-flex .align-items-center .gap-1 .ps-4}
 ::: {style="width: 1.5rem; height: 1.5rem; background-color: #A2C0D8;"}
 :::
 200m
@@ -175,14 +175,22 @@ Below is a histogram of the cloud-free fractions for 200m footprints (blue) and 
 ```{ojs}
 plot1 = Plot.plot({
   width,
+  height: 800, 
+  marginLeft: 55,   
+  marginTop: 40,   
+  marginBottom: 50,
   x: { 
     type: "log", 
     base:10, 
+    tickPadding: 15,
     transform: d => Math.max(.01, 100*d)
   }, 
-  y: {grid: true},
+  y: {
+    grid: true,
+    tickPadding: 10
+  },
   style: { 
-    fontSize: "12px"},
+    fontSize: "16px"},
   color: {legend: true},
   marks: [
     Plot.rectY(filtered, Plot.binX({y: "count"}, {x: "cf_200", fill: "steelblue", fillOpacity: 0.5,thresholds: binBoundaries1, tip: "xy" })),
@@ -200,10 +208,18 @@ However, if you want to improve understanding in the humid tropics, fine spatial
 ```{ojs}
 plot2 = Plot.plot({
   width,  
-  y: { grid: true, label: "Likelihood of cloud free pixel",domain:[0,1.099] },
+  height: 800,    
+  marginLeft: 70,   
+  marginTop: 40,   
+  marginBottom: 50,
+  y: { 
+    grid: true, 
+    label: "Likelihood of cloud free pixel",
+    domain:[0,1.099], 
+    tickPadding: 10,
+    },
   color: { legend: true },
-  style: { fontSize: "12px" },
-  marginBottom: 37,
+  style: { fontSize: "16px" },
   marks: [
     Plot.axisX({ ticks: d3.utcMonth.every(3) }),
     Plot.lineY(filtered, { 
