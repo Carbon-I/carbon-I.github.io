@@ -39,8 +39,8 @@ Here, we provide a simple interactive example for cloud statistics from our data
 //| panel: input
 
 html`
-  <p class="mb-4">
-    Empty paragraph for now
+  <p class="mb-2">
+    Pick a location on land to see cloud statistics
   </p>
 `
 viewof point = {
