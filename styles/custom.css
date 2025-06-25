@@ -70,7 +70,7 @@
 
 /* Big Hero */
 .hero-home{
-  background: url('../img/CI_cover.jpeg') center center / cover no-repeat;
+  background: url('../img/CI-cover.jpg') center center / cover no-repeat;
 }
 
 /* Small Hero */
@@ -82,6 +82,12 @@
   background: url('../img/CI_team.png') center center / cover no-repeat;
 }
 
+.bottom-right {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  text-align: right;
+}
 .hero-science{
   background: url('../img/CI_science.png') center center / cover no-repeat;
 }
@@ -157,9 +163,9 @@
 
 .science-image-frame{
   width: 100%; 
-  max-width: 35rem;   
+  max-width: 40rem;   
   padding: 2rem;
-  background-color: #F9FAEF;       
+  background-color: #ffffff;       
 }
 
 /* About Page */
