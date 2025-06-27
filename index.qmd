@@ -48,8 +48,8 @@ for high-priority areas
 :::
 ::::
 
-::::{.grid .mission .container .border-bottom .py-5}
-::: {.g-col-8 .order-md-2 }
+::::{.grid .mission .container .border-bottom .py-2}
+::: {.g-col-8 .col-md-8 .order-2 .col-xs-8}
 # **Science Objectives:**
 
 
@@ -61,7 +61,7 @@ for high-priority areas
 
 :::
 
-::: {.g-col-4 .order-md-1}
+::: {.g-col-4 .col-md-4 .order-1 .col-xs-4}
 ![](img/tCH4_CI-18383.png){.img-fluid .mission-image-frame} 
 :::
 ::::

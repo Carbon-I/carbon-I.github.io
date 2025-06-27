@@ -34,17 +34,15 @@ website:
   page-footer:
     border: false
     left: |
-      ![](/img/caltech_logo_white.png) <br>
+      ![](/img/Caltech_Logo.png) <br>
       Lead Institution
     center: |
       ![](/img/jpl_logo.png) <br>
-      <p>Instrument and <br>
+      <p>Instrument and 
       Mission Management</p> 
-      <div style="border: 0; border-top: 1px solid white; width: 100%; margin: 1rem auto;"></div>
-      <short style="font-size: .80rem"> © 2025 California Institute of Technology. All Rights Reserved.</short>
     right: |
       ![](/img/lockheed_logo.png)<br>
-      Spacecraft and <br>
+      Spacecraft and 
       Mission Operations
 
     #center:
@@ -70,7 +68,6 @@ website:
 format:
   html:
     include-after-body: 
-      - includes/custom-footer-banner.html
       - includes/page-scripts.html
     mainfont: "Roboto"
     theme:
