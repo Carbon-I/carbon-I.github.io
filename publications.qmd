@@ -31,9 +31,10 @@ Over the past two decades, remarkable advances have transformed our ability to m
 Building on this concept, the first controlled methane release experiment for satellite-style retrieval validation was conducted at the RMOTC facility in Wyoming [@thorpe2016mapping], sponsored by industry and carried out by a team involving several current Carbon-I members. These campaigns demonstrated that kilometer- to meter-scale imaging could resolve individual emission events, sparking a series of retrieval algorithm developments, flight campaigns, and satellite data applications. The first large scale field campaign targeted the Four Corners area in the United States, where a larger methane plume was previously detected from SCIAMACHY [@kort2014four]. Using both AVIRIS-NG as well as HyTES (thermal IR), the team could, for the first time, show the heavy-tailed behavior of methane emissions across larger scales by observing hundreds of methane plumes [@frankenberg2016airborne]. Many more flight campaigns followed [@duren2019california, @cusworth2021quantifying, @cusworth_pnas], led by JPL and eventually leading to the formation of CarbonMapper.
 
 From SCIAMACHY’s early days [@frankenberg2005assessing] to the precision retrievals of GOSAT and OCO-2, each mission taught critical lessons, as nicely summarized in [@jacob2016satellite] and [@jacob2022quantifying]. These include:  
-- a) sub-nanometer spectral resolution is not always essential for plume or regional flux retrievals [@thorpe2014retrieval; @jongaramrungruang2021remote; @cusworth2019potential];  
-- b) retrieval reliability in the humid tropics is significantly limited at coarse resolutions [@frankenberg2024data];  
-- c) only high spatial resolution enables attribution, ground-truthing, and improved cloud avoidance in challenging regions [@frankenberg2024data].
+
+1. sub-nanometer spectral resolution is not always essential for plume or regional flux retrievals [@thorpe2014retrieval; @jongaramrungruang2021remote; @cusworth2019potential];  
+2. retrieval reliability in the humid tropics is significantly limited at coarse resolutions [@frankenberg2024data];  
+3. only high spatial resolution enables attribution, ground-truthing, and improved cloud avoidance in challenging regions [@frankenberg2024data].
 
 Carbon-I unites these lessons with modern algorithmic and instrumental advances. Our team has published extensively on GHG remote sensing, plume detection, and inversion modeling. The following bibliography highlights key publications from Carbon-I team members that underpin our current science and technical approach. This list is evolving and will be expanded as additional studies are released.
 

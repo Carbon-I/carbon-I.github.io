@@ -70,7 +70,7 @@
 
 /* Big Hero */
 .hero-home{
-  background: url('../img/CI-cover2.jpg') center center / cover no-repeat;
+  background: url('../img/Ci-cover-ws.jpg') center center / cover no-repeat;
 }
 
 /* Small Hero */
@@ -131,7 +131,7 @@
 .mission-image-frame{
   width: 100%;           
   max-width: 450px;    
-  border-radius: 50%; /* circular frame */
+  border-radius: 70%; /* circular frame */
 
 }
 

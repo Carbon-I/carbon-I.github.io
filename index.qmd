@@ -27,30 +27,30 @@ A Phase A concept study selected by NASA in the [Earth System Explorer](https://
 
 ::::: {.wrapper style="background-color: #EEF4F6;"}
 ::::{.container .grid .mission .border-bottom .py-5}
-::: {.g-col-6 .justify-content-center}
+::: {.g-col-8 .col-md-6}
 # **Carbon-I will:**
 
--   address multiple Decadal Survey objectives by quantifying carbon fluxes, detecting hotspots globally, and closing critical data gaps
+-   Address multiple Decadal Survey objectives by quantifying carbon fluxes, detecting hotspots globally, and closing critical data gaps
 
--   feature a high heritage shortwave infrared imaging spectrometer (2.04-2.37&thinsp;µm)
+-   Feature a high heritage shortwave infrared imaging spectrometer (2.04-2.37&thinsp;µm)
 
--   be the first instrument to combine land imaging spatial detail with
+-   Be the first instrument to combine land imaging spatial detail with
 high resolution atmospheric spectroscopy
 
--  feature a ~100&thinsp;km swath to deliver monthly global land
+-  Feature a ~100&thinsp;km swath to deliver monthly global land
 coverage at ≤400&thinsp;m with ~10 times finer sampling
 for high-priority areas
 
 :::
 
-::: {.g-col-6 .align-items-end .justify-content-center} 
+::: {.g-col-4} 
 ![](img/CarbonI-anim_whiteBG_small.gif){.img-fluid .mission-image-frame}
 :::
 ::::
 
 ::::{.grid .mission .container .border-bottom .py-5}
-::: {.g-col-6 .order-md-2 }
-# **Objectives:**
+::: {.g-col-8 .order-md-2 }
+# **Science Objectives:**
 
 
 1. Identify, characterize, and quantify hotspots of CH<sub>4</sub>, CO<sub>2</sub>, and CO emissions globally
@@ -61,36 +61,36 @@ for high-priority areas
 
 :::
 
-::: {.g-col-6 .order-md-1 .justify-content-center}
+::: {.g-col-4 .order-md-1}
 ![](img/tCH4_CI-18383.png){.img-fluid .mission-image-frame} 
 :::
 ::::
 
 
-::::{.grid .mission .container .py-5}
-::: {.g-col-6 .justify-content-center}
+::::{.grid .mission .container .border-bottom .py-5}
+::: {.g-col-8 .justify-content-center}
 # **Mission Overview:**
 
 Carbon-I is the first to pair land-imaging spatial detail with high-resolution atmospheric spectra, providing unique insights into the atmosphere and land surface.
 
 -  Measures CH<sub>4</sub>, CO<sub>2</sub>, CO plus tracers via SWIR absorption spectroscopy.
 
--  Maps land and coastal oceans monthly at < 400m, peering between clouds.
+-  Maps land and coastal oceans monthly at <&thinsp;400&thinsp;m, peering between clouds.
 
--  Zooms to 100 × 100 km targets at < 50m for regions with highest uncertainties.
+-  Zooms to 100 × 100&thinsp;km targets at <&thinsp;50&thinsp;m for regions with highest uncertainties.
 
 -  More than just gases: Surface-mapping unlocks novel mineral and vegetation data, delivering new insights for the public, private, and non-profit sectors.
 
 
 :::
 
-::: {.g-col-6 .align-items-end .justify-content-center}
+::: {.g-col-4 .align-items-end .justify-content-center}
 ![](img/Target.jpg){.img-fluid .mission-image-frame style="border-radius: 0"}
 :::
 ::::
 
 ::::{.grid .mission .container .border-bottom .py-5}
-::: {.g-col-6 .order-md-2 }
+::: {.g-col-8 .order-md-2 }
 # **Applications and Science Enhancements:**
 
 
@@ -105,7 +105,7 @@ management and agriculture
 
 :::
 
-::: {.g-col-6 .order-md-1 .justify-content-center}
+::: {.g-col-4 .order-md-1 .justify-content-center}
 ![](img/CI-Applications.jpg){.img-fluid .mission-image-frame} 
 :::
 ::::
