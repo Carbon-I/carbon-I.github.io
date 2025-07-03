@@ -22,7 +22,7 @@ format:
 ::::
 
 ::::: {.wrapper style="background-color: #DE6438;"}
-::: {.container .border-bottom }
+::: {.container .py-1  }
 An [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) Phase A concept study to measure trace gases, minerals, and vegetation properties globally.
 :::
 :::::
