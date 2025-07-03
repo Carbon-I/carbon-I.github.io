@@ -27,8 +27,13 @@ An [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) P
 :::
 :::::
 
+
+
+
+
 ::::: {.wrapper style="background-color: #EEF4F6;"}
 ::::{.container .grid .mission .border-bottom .py-5 }
+
 ::: {.g-col-8 .col-md-6}
 # **Carbon-I will:**
 
@@ -51,7 +56,7 @@ for high-priority areas
 ::::
 :::::
 
-::::: {.wrapper style="background-color:rgb(210, 225, 230);"}
+::::: {.wrapper style="background-color:rgb(255, 255, 255);"}
 ::::{.grid .mission .container .border-bottom .py-2}
 ::: {.g-col-8 .col-md-8 .order-2 .col-xs-8}
 # **Science Objectives:**
@@ -95,7 +100,7 @@ Carbon-I is the first to pair land-imaging spatial detail with high-resolution a
 ::::
 :::::
 
-::::: {.wrapper style="background-color:rgb(210, 225, 230);"}
+::::: {.wrapper style="background-color:rgb(255, 255, 255);"}
 ::::{.grid .mission .container .border-bottom .py-5}
 ::: {.g-col-8 .order-md-2 }
 # **Applications and Science Enhancements:**
