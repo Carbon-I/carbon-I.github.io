@@ -21,12 +21,14 @@ format:
 :::
 ::::
 
-::: {.container .text-start .mx-auto .my-5 .w-50}
-A Phase A concept study selected by NASA in the [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) mission proposal call.
+::::: {.wrapper style="background-color: #DE6438;"}
+::: {.container .border-bottom }
+An [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) Phase A concept study to measure trace gases, minerals, and vegetation properties globally.
 :::
+:::::
 
 ::::: {.wrapper style="background-color: #EEF4F6;"}
-::::{.container .grid .mission .border-bottom .py-5}
+::::{.container .grid .mission .border-bottom .py-5 }
 ::: {.g-col-8 .col-md-6}
 # **Carbon-I will:**
 
@@ -47,7 +49,9 @@ for high-priority areas
 ![](img/CarbonI-anim_whiteBG_small.gif){.img-fluid .mission-image-frame}
 :::
 ::::
+:::::
 
+::::: {.wrapper style="background-color:rgb(210, 225, 230);"}
 ::::{.grid .mission .container .border-bottom .py-2}
 ::: {.g-col-8 .col-md-8 .order-2 .col-xs-8}
 # **Science Objectives:**
@@ -65,8 +69,9 @@ for high-priority areas
 ![](img/tCH4_CI-18383.png){.img-fluid .mission-image-frame} 
 :::
 ::::
+:::::
 
-
+::::: {.wrapper style="background-color: #EEF4F6;"}
 ::::{.grid .mission .container .border-bottom .py-5}
 ::: {.g-col-8 .justify-content-center}
 # **Mission Overview:**
@@ -88,7 +93,9 @@ Carbon-I is the first to pair land-imaging spatial detail with high-resolution a
 ![](img/Target.jpg){.img-fluid .mission-image-frame style="border-radius: 0"}
 :::
 ::::
+:::::
 
+::::: {.wrapper style="background-color:rgb(210, 225, 230);"}
 ::::{.grid .mission .container .border-bottom .py-5}
 ::: {.g-col-8 .order-md-2 }
 # **Applications and Science Enhancements:**
@@ -109,8 +116,8 @@ management and agriculture
 ![](img/CI-Applications.jpg){.img-fluid .mission-image-frame} 
 :::
 ::::
-
 :::::
+
 
 <!-- Transition for section content-->
 
