@@ -1,0 +1,28 @@
+/*-- scss:functions --*/
+
+/*-- scss:defaults --*/
+body{
+  @media (max-width: 992px) {
+    .navbar {
+
+      #quarto-search{
+        margin-left: 0rem;
+      }
+
+      .navbar-brand-container {
+        padding-left: 5rem;
+        height: 100%;
+        
+        .navbar-logo {
+          padding-left: 0;                 
+          max-height: 50px;              
+        }
+      }
+      &.compact {
+        .navbar-logo {
+          padding: 0rem;
+        }
+      }
+    }
+  }
+}

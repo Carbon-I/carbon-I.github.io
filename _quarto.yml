@@ -71,10 +71,14 @@ format:
       - includes/page-scripts.html
     mainfont: "Roboto"
     theme:
-      - default
+      - styles/media-queries.scss
       - styles/custom.scss
+
     toc: true
-    css: styles/custom.css
+    css: 
+      - styles/custom.css
+
+
     page-layout: custom
     smooth-scroll: true
     grid:

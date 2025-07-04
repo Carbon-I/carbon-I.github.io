@@ -101,7 +101,7 @@ Carbon-I is the first to pair land-imaging spatial detail with high-resolution a
 :::::
 
 ::::: {.wrapper style="background-color:rgb(255, 255, 255);"}
-::::{.grid .mission .container .border-bottom .py-5}
+::::{.grid .mission .container .py-5}
 ::: {.g-col-8 .order-md-2 }
 # **Applications and Science Enhancements:**
 
