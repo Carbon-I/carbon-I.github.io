@@ -38,6 +38,14 @@ body{
     .mission-image-frame{
       width: 80%;  
     }
+
+    .references-wrapper{
+      background-color:#F9F5F1;
+
+      .about-references{
+        padding: 0rem;
+      }
+    }
   }
 
   @media (max-width: 576px) {
