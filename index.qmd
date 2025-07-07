@@ -14,26 +14,21 @@ format:
 ---
 
 :::: {.hero .hero-gradient .hero-home}
-::: {.container .mb-5 .bottom-right}
-![](/img/Logo-White2.png){.img-fluid style="max-width:35rem;"} 
+::: {.container .mb-5 .pe-md-5 .bottom-right}
+![](/img/Logo-White2.png){.img-fluid style="width:100%; max-width:35rem;"}
 
 [**Closing tropical data gaps to resolve global carbon-budget uncertainties**]{.ps-2 style="font-size:1.25rem;"}
 :::
 ::::
 
 ::::: {.wrapper style="background-color: #DE6438;"}
-::: {.container .py-1  }
+::: {.container .text-center .py-1 }
 An [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) Phase A concept study to measure trace gases, minerals, and vegetation properties globally.
 :::
 :::::
 
-
-
-
-
-::::: {.wrapper style="background-color: #EEF4F6;"}
-::::{.container .grid .mission .border-bottom .py-5 }
-
+::::: {.wrapper  style="background-color: #EEF4F6;"}
+::::{.grid .mission .container .border-bottom .py-5}
 ::: {.g-col-8 .col-md-6}
 # **Carbon-I will:**
 
@@ -57,8 +52,8 @@ for high-priority areas
 :::::
 
 ::::: {.wrapper style="background-color:rgb(255, 255, 255);"}
-::::{.grid .mission .container .border-bottom .py-2}
-::: {.g-col-8 .col-md-8 .order-2 .col-xs-8}
+::::{.grid .mission .container .border-bottom .py-5}
+::: {.g-col-8 .col-md-8 .order-md-2 .col-xs-8}
 # **Science Objectives:**
 
 
@@ -70,7 +65,7 @@ for high-priority areas
 
 :::
 
-::: {.g-col-4 .col-md-4 .order-1 .col-xs-4}
+::: {.g-col-4 .order-md-1 .justify-content-center}
 ![](img/tCH4_CI-18383.png){.img-fluid .mission-image-frame} 
 :::
 ::::

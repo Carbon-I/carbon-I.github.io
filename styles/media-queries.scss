@@ -25,4 +25,22 @@ body{
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .mission{ 
+      flex-direction: column; 
+      text-align: center;
+    }
+    .mission-image-frame{
+      width: 80%;  
+    }
+  }
+
+  @media (max-width: 576px){
+    .navbar {
+      .navbar-brand-container {
+        padding-left: 0;
+      }
+    }
+  }
 }
