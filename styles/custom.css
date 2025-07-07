@@ -80,12 +80,13 @@
   background: url('../img/CI_team.png') center center / cover no-repeat;
 }
 
-.bottom-right {
+.hero-content {
   position: absolute;
   bottom: 2rem;
-  right: 2rem;
+  right: 0.5rem;
   text-align: right;
 }
+
 .hero-science{
   background: url('../img/CI_science.png') center center / cover no-repeat;
 }

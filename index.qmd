@@ -14,7 +14,7 @@ format:
 ---
 
 :::: {.hero .hero-gradient .hero-home}
-::: {.container .mb-5 .pe-md-5 .bottom-right}
+::: {.container .mb-5 .pe-md-5 .hero-content}
 ![](/img/Logo-White2.png){.img-fluid style="width:100%; max-width:35rem;"}
 
 [**Closing tropical data gaps to resolve global carbon-budget uncertainties**]{.ps-2 style="font-size:1.25rem;"}

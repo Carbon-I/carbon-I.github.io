@@ -5,14 +5,18 @@ body{
   @media (max-width: 992px) {
     .navbar {
 
+      .navbar-toggler {
+        left: .75rem;
+      }
+
       #quarto-search{
-        margin-left: 0rem;
+        justify-self: end;
       }
 
       .navbar-brand-container {
-        padding-left: 5rem;
-        height: 100%;
-        
+        max-width: calc(100% - 5.5rem);  
+        min-width: 0;                      
+
         .navbar-logo {
           padding-left: 0;                 
           max-height: 50px;              
@@ -36,11 +40,11 @@ body{
     }
   }
 
-  @media (max-width: 576px){
-    .navbar {
-      .navbar-brand-container {
-        padding-left: 0;
-      }
+  @media (max-width: 576px) {
+    .hero-content{
+      top: 30%;
+      text-align: center;
     }
   }
+
 }
