@@ -132,7 +132,7 @@
 
 .mission-image-frame{
   width: 100%;           
-  max-width: 450px;    
+  max-width: 28rem;    
   border-radius: 70%; /* circular frame */
 
 }
@@ -165,7 +165,7 @@
 
 .science-image-frame{
   width: 100%; 
-  max-width: 40rem;   
+  max-width: 35rem;   
   padding: 2rem;
   background-color: #ffffff;
          

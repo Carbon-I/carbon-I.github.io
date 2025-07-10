@@ -33,7 +33,7 @@ listing:
 :::
 ::::
 
-:::{.container .text-start .mx-auto .my-5 .w-45}
+:::{.container .text-start .mx-auto .my-5 .w-md-45}
 The Carbon-I team includes experts in the global carbon cycle, remote sensing, flux measurements, flux inversions, applications, agriculture, and high performance computing.
 :::
 

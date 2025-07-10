@@ -2,8 +2,46 @@
 
 /*-- scss:defaults --*/
 body{
+
+  @media (max-width: 1200px) {
+    #listing-blog-list{ 
+      .quarto-post{
+        display: flex;                     
+        flex-direction: column;
+        align-items: center;                
+        gap: 0.5rem;
+        text-align: center;                 
+        padding: 2.5rem 0;
+      }
+
+      .thumbnail{
+        order: 4;
+        align-self: center;                    
+        max-width: 22rem;
+      }
+
+      .metadata{
+        order: 2;                           
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .body{
+        align-items: center;
+
+        .listing-categories{
+          justify-content: center;
+        }
+      }
+    }
+  }
+
   @media (max-width: 992px) {
     .navbar {
+
+      .navbar-collapse {
+        transition: height .4s ease;     // longer than default transition
+      }
 
       .navbar-toggler {
         left: .75rem;
@@ -28,9 +66,59 @@ body{
         }
       }
     }
+    .listing-header{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .quarto-about-marquee {
+      padding: 1.5rem 0rem 3rem 0rem !important;
+
+      #title-block-header{
+        .quarto-categories{
+          justify-content: center;
+          gap: 0.75rem;
+        }
+      }
+    }
+    .article-contents{
+      padding: 0rem 0rem 9rem 0rem;
+    }
+    .quarto-about-solana .about-entity{
+      .about-section {
+        padding: 5.5rem 0rem 0rem;
+
+        text-align: left; 
+      }
+    }
+
+    .references-wrapper{
+      background-color:#F9F5F1;
+      text-align: center;
+
+      #refs{
+        margin: 0 0.5rem;
+      }
+
+      .about-references{
+        padding: 0rem;
+        text-align: left;
+      }
+    }
   }
 
   @media (max-width: 768px) {
+
+    .hero-small{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      height: 25vh; 
+
+      h1{
+        font-size: 2.7rem;
+      }
+    }
+
     .mission{ 
       flex-direction: column; 
       text-align: center;
@@ -38,12 +126,21 @@ body{
     .mission-image-frame{
       width: 80%;  
     }
+    .science{
+      display: flex;
+      flex-direction: column; 
+      text-align: center;
+    }
 
-    .references-wrapper{
-      background-color:#F9F5F1;
+    .quarto-about-solana .about-entity{
+    
+      #title-block-header{
+        display: flex;
+        flex-direction: column;
 
-      .about-references{
-        padding: 0rem;
+        .quarto-title{
+          padding: 0;
+        }
       }
     }
   }

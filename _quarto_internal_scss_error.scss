@@ -1110,8 +1110,6 @@ $primary:       $black !default;
 $font-size-base:        1.125rem;
 $h1-font-size:          2.25rem;   
 $h2-font-size:          2rem;     
-$navbar-dark-color:     #fff;
-$navbar-dark-hover-color: #7cc7ff;   // light-blue hover
 
 /* brand colors used in site */
 $brand-indigo: #2A4DA0;
@@ -1135,12 +1133,20 @@ body {
   }
 
   .navbar {
-    height: 15vh;                  
+    height: 15vh;      
+    margin-bottom: -2px; // remove gap between navbar and body that happens on some pages  
     transition: height 0.5s ease;  
     background-color: black;    
 
     .navbar-container{
       height: 100%;
+
+    }
+
+    .navbar-collapse {
+\\
+      height: 100%;
+      background: #000;               /* solid black panel              */
     }
 
     .navbar-brand-container {
@@ -1161,13 +1167,13 @@ body {
         height: auto;         // scale with parent
         max-width: 100%;
         padding-left: 2rem;
-        transition: all 0.5s ease-out;
+        transition: all 0.5s ease;
       }
       
     }
 
     &.compact {
-      height: 7vh;
+      height: 6vh;
 
       .navbar-logo {
         padding: 4rem;
@@ -1210,12 +1216,12 @@ body {
   }
   
   .nav-footer {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     color: white;
     background-color: #000000;
     text-align: center;
     height: auto;
-    max-width: 1440px; // make it container size
+    max-width: 100%; // make it container size
     margin: 0 auto;
   
     // target left, center, right paragraphs inside nav-footer
@@ -1402,6 +1408,7 @@ body {
 
       canvas{
         background-color: white;
+        align-self: center;
       }
 
       p,
@@ -1433,19 +1440,38 @@ body {
   #listing-blog-list {
 
     .quarto-post{
-      padding-top: 3.125rem;
-      padding-bottom: 3.125rem;
-      margin-bottom: 0;
-      gap: 2.5rem;
+      display: grid;                   
+      grid-template-columns: 8rem 1fr 22rem;   
+      grid-auto-flow: column;  
+      padding: 1.5rem 0;
+      margin-bottom: 0rem;
 
-      .thumbnail{
+      column-gap: 2.5rem;                
+      align-items: stretch;              
+      width: 100%;                       
+      box-sizing: border-box;
+
+      .metadata{
+        grid-column: 1;                    
+      }
+
+      .body{
+        grid-column: 2;                    
+      }
+
+      .thumbnail {      
+        grid-column: 3;                  
+        display: flex;                   
+        justify-content: center;
         > p:first-child {
-          display: none !important;
+          display: none !important; //remove weird paragraph that appears ontop of the image due to bootstrap
         }
-        
+
         img{
           margin-top: 0;
           max-width: 22rem;
+          max-height: 22rem;
+          width: auto;
           height: auto;
         }
       }
@@ -1509,26 +1535,23 @@ body {
   .quarto-about-marquee {
     display: flex;
     flex-direction: column;
-    padding: 0rem 7rem;
+    padding: 1.5rem 8rem 3rem 8rem !important;
     
       #title-block-header{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;      
+        margin-bottom: 0rem;
         
         img {
           order: 99;  // force image to bottom
           display: block;
-          width: 100%;    
-          height: auto;   
           margin: 0 auto;
-          padding-top: 2rem;
-          max-height: max-content; //override bootstrap
-        }
-
-        .article-contents{
-          padding: 0rem 7rem;;
+          width: auto  !important;
+          height: auto;
+          max-width: 100%;
+          max-height: 50rem;
         }
 
         .quarto-categories{
@@ -1562,6 +1585,7 @@ body {
 
         .quarto-title-meta{
           grid-column-gap: 2.5rem !important; 
+          padding-bottom: 2rem;
 
           .quarto-title-meta-heading{
             font-size: 1.125rem;
@@ -1575,6 +1599,10 @@ body {
         }
       }
       
+  }
+
+  .article-contents{
+    padding: 0rem 7rem 9rem 7rem;
   }
 
   /* ---------- References block -------------------------- */
@@ -1593,6 +1621,156 @@ body {
 
 
 
+body{
+
+  @media (max-width: 1200px) {
+    #listing-blog-list{ 
+      .quarto-post{
+        display: flex;                     
+        flex-direction: column;
+        align-items: center;                
+        gap: 0.5rem;
+        text-align: center;                 
+        padding: 2.5rem 0;
+      }
+
+      /* make the thumbnail the hero at the top */
+      .thumbnail{
+        order: 4;
+        align-self: center;                    
+        max-width: 22rem;
+      }
+
+      /* centre meta text or leave it left-aligned, your call */
+      .metadata{
+        order: 2;                           
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .body{
+        align-items: center;
+
+        .listing-categories{
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .navbar {
+
+      .navbar-toggler {
+        left: .75rem;
+      }
+
+      #quarto-search{
+        justify-self: end;
+      }
+
+      .navbar-brand-container {
+        max-width: calc(100% - 5.5rem);  
+        min-width: 0;                      
+
+        .navbar-logo {
+          padding-left: 0;                 
+          max-height: 50px;              
+        }
+      }
+      &.compact {
+        .navbar-logo {
+          padding: 0rem;
+        }
+      }
+    }
+    .listing-header{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .quarto-about-marquee {
+      padding: 1.5rem 0rem 3rem 0rem !important;
+
+      #title-block-header{
+        .quarto-categories{
+          justify-content: center;
+          gap: 0.75rem;
+        }
+      }
+    }
+    .article-contents{
+      padding: 0rem 0rem 9rem 0rem;
+    }
+    .quarto-about-solana .about-entity{
+      .about-section {
+        padding: 5.5rem 0rem 0rem;
+
+        text-align: left; 
+      }
+    }
+
+    .references-wrapper{
+      background-color:#F9F5F1;
+      text-align: center;
+
+      #refs{
+        margin: 0 0.5rem;
+      }
+
+      .about-references{
+        padding: 0rem;
+        text-align: left;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .hero-small{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      height: 25vh; 
+
+      h1{
+        font-size: 2.7rem;
+      }
+    }
+
+    .mission{ 
+      flex-direction: column; 
+      text-align: center;
+    }
+    .mission-image-frame{
+      width: 80%;  
+    }
+    .science{
+      display: flex;
+      flex-direction: column; 
+      text-align: center;
+    }
+
+    .quarto-about-solana .about-entity{
+    
+      #title-block-header{
+        display: flex;
+        flex-direction: column;
+
+        .quarto-title{
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-content{
+      top: 30%;
+      text-align: center;
+    }
+  }
+
+}
 
 // Heading font size customization
 $h1-font-size: 2rem !default;

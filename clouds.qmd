@@ -23,7 +23,7 @@ format:
 
 
 ::::: {.container}
-:::: {.about .px-7 .py-5 style="border-bottom: 1px solid #C8C7C7;"} 
+:::: {.about .px-md-6 .py-5 style="border-bottom: 1px solid #C8C7C7;"} 
 # The impact of cloud on GHG remote sensing is strongly dependent on the footprint size. 
 
 In **Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing**, we took a deep dive on the impact of clouds on data coverrage and revisit times, with a focus on the humid tropics, where we see the lowest data yields in all current greenhouse gas missions [GRL paper](https://doi.org/10.1029/2024GL108791). 

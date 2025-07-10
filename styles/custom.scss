@@ -83,12 +83,6 @@ body {
 
   /* Navbar */
 
-  /*removes default Bootstrap navbar transition*/
-  .headroom-target,
-  header.headroom {
-    transition: none !important;
-    will-change: auto !important;
-  }
   header.headroom--pinned,
   header.headroom--unpinned {
     transform: none !important;
@@ -99,9 +93,10 @@ body {
     margin-bottom: -2px; // remove gap between navbar and body that happens on some pages  
     transition: height 0.5s ease;  
     background-color: black;    
+    padding: 0.4rem 1.2rem;
 
-    .navbar-container{
-      height: 100%;
+    .navbar-nav {
+      background: #000;          
     }
 
     .navbar-brand-container {
@@ -128,13 +123,12 @@ body {
     }
 
     &.compact {
-      height: 6vh;
+      height: 8vh;
 
       .navbar-logo {
         padding: 4rem;
       }
     }
-
 
     a {
       color: white;
@@ -142,25 +136,30 @@ body {
       font-size: 1.15rem;
 
       &:hover {
-        color: lightblue;
+        color: $brand-orange;
       }
     }
 
     .nav-link {
       &.active {
-        border-bottom: 2px solid lightblue; // underline if active
+        border-bottom: 2px solid $brand-orange; // underline if active
       }
     }
 
     .dropdown-toggle.show {
-      color: lightblue;
+      color: $brand-orange;
     }
 
     .dropdown-menu .dropdown-item {
       background-color: black;
       color: white;
       &:hover {
-        color: lightblue;
+        color: $brand-orange;
+      }
+    }
+    #quarto-search svg{
+      &:hover {
+        color: $brand-orange !important;
       }
     }
   }
@@ -395,22 +394,37 @@ body {
   #listing-blog-list {
 
     .quarto-post{
-      padding-top: 3.125rem;
-      padding-bottom: 3.125rem;
-      margin-bottom: 0;
-      gap: 2.5rem;
+      display: grid;                   
+      grid-template-columns: 8rem 1fr 22rem;   
+      grid-auto-flow: column;  
+      padding: 1.5rem 0;
+      margin-bottom: 0rem;
 
-      .thumbnail{
-        display: flex;
+      column-gap: 2.5rem;                
+      align-items: stretch;              
+      width: 100%;                       
+      box-sizing: border-box;
+
+      .metadata{
+        grid-column: 1;                    
+      }
+
+      .body{
+        grid-column: 2;                    
+      }
+
+      .thumbnail {      
+        grid-column: 3;                  
+        display: flex;                   
         justify-content: center;
         > p:first-child {
           display: none !important; //remove weird paragraph that appears ontop of the image due to bootstrap
         }
-        
+
         img{
           margin-top: 0;
           max-width: 22rem;
-          max-height: 14.5rem;
+          max-height: 22rem;
           width: auto;
           height: auto;
         }

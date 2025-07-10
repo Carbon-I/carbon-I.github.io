@@ -20,7 +20,7 @@ format:
 ::::
 
 ::::: {.wrapper}
-::::{.container .science .grid  .border-bottom .py-5}
+::::{.container .science .grid  .border-bottom .py-2}
 ::: {.g-col-6 .justify-content-center}
 ### **Clouds in the humid tropics are the primary reason for low data yields in current satellite missions**
 
@@ -32,7 +32,7 @@ With its fine spatial sampling, Carbon-I can peek through cloud gaps,  dramatica
 :::
 ::::
 
-::::{.grid .science .container .border-bottom .py-5}
+::::{.grid .science .container .border-bottom .py-2}
 ::: {.g-col-6 .order-md-2 .justify-content-center}
 ### **We know the least about the place that matters most—carbon flux uncertainties in the humid tropics are still the highest on Earth.**
 
@@ -50,7 +50,7 @@ With its fine spatial sampling, Carbon-I can peek through cloud gaps,  dramatica
 ::::
 
 
-::::{.grid .science .container .border-bottom .py-5}
+::::{.grid .science .container .border-bottom .py-2}
 ::: {.g-col-6 .justify-content-center}
 ### **CH<sub>4</sub> emissions are heterogenous across the globe.**
 
@@ -63,7 +63,7 @@ Bottom-up methane emissions distributions show key regions, which dominate globa
 :::
 ::::
 
-::::{.grid .science .container .border-bottom .py-5}
+::::{.grid .science .container .border-bottom .py-2}
 ::: {.g-col-6 .order-md-2 .justify-content-center}
 ### **High spatial resolution enables plume mapping, allowing direct attribution**
 
@@ -76,7 +76,7 @@ Carbon-I will investigate hotspots and flux heterogeneity globally and  use the 
 :::
 ::::
 
-::::{.grid .science .container .border-bottom .py-5}
+::::{.grid .science .container .border-bottom .py-2}
 ::: {.g-col-6 .justify-content-center}
 ### **Carbon-I can see *through* small aerosols.**
 

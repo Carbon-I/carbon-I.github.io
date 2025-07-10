@@ -27,7 +27,7 @@ An [Earth System Explorer](https://explorers.larc.nasa.gov/2023ESE/index.html) P
 :::
 :::::
 
-::::: {.wrapper  style="background-color: #EEF4F6;"}
+::::: {.wrapper style="background-color: #EEF4F6;"}
 ::::{.grid .mission .container .border-bottom .py-5}
 ::: {.g-col-8 .col-md-6}
 # **Carbon-I will:**
