@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/news.html",
+    "items": [
+      "/News/CI-TestBed.html",
+      "/News/webinar.html",
+      "/News/latimes.html",
+      "/News/Selected.html",
+      "/News/Carbon-I.html"
+    ]
+  },
+  {
     "listing": "/team.html",
     "items": [
       "/people/ScienceTeam/01_frankenberg.html",
@@ -35,16 +45,6 @@
       "/people/Collaborators/roiger.html",
       "/people/Collaborators/wunch.html",
       "/people/Collaborators/maasakkers.html"
-    ]
-  },
-  {
-    "listing": "/news.html",
-    "items": [
-      "/News/CI-TestBed.html",
-      "/News/webinar.html",
-      "/News/latimes.html",
-      "/News/Selected.html",
-      "/News/Carbon-I.html"
     ]
   }
 ]
