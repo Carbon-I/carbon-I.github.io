@@ -23,7 +23,7 @@ csl: styles/agu.csl
 
 
 :::: {.container}
-::: {.about .px-md-7 .py-5} 
+::: {.about .px-2 .px-md-7 .py-5} 
 # Science History and CARBON-I Related Publications
 
 Over the past two decades, remarkable advances have transformed our ability to measure greenhouse gases (GHGs) from space. Carbon-I builds on this legacy—particularly in the emerging field of point-source detection and fine-scale flux quantification. The history of point source detections  began with pioneering work by Dar Roberts and colleagues [@roberts2010mapping] using AVIRIS to identify methane plumes from geological seeps, establishing that imaging spectroscopy could detect trace gas enhancements in complex backgrounds. 

@@ -100,7 +100,7 @@ body{
       }
 
       .about-references{
-        padding: 0rem;
+        padding: 1rem 2rem;
         text-align: left;
       }
     }
@@ -121,15 +121,23 @@ body{
 
     .mission{ 
       flex-direction: column; 
-      text-align: center;
+      text-align: left;
+      padding: 0rem 2rem;
+
+      .g-col-4{
+        text-align: center;
+      }
+
     }
     .mission-image-frame{
       width: 80%;  
+      align-self: center;
     }
     .science{
       display: flex;
       flex-direction: column; 
-      text-align: center;
+      text-align: left;
+      padding: 0rem 2rem;
     }
 
     .quarto-about-solana .about-entity{
@@ -146,9 +154,19 @@ body{
   }
 
   @media (max-width: 576px) {
+
     .hero-content{
       top: 30%;
       text-align: center;
+    }
+
+    .quarto-about-solana .about-contents{
+      padding: 0rem 2rem !important; //override bootstrap;
+    }
+
+    .article-contents{
+      padding-left: 2rem;
+      padding-right: 2rem ;
     }
   }
 
