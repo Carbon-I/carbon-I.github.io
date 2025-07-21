@@ -38,7 +38,7 @@ Plot = import("https://esm.run/@observablehq/plot")
 ```
 
 ```{ojs}
-rawData =  FileAttachment("data/rfl_lowpass_shaped.csv").csv({typed: true});
+rawData =  FileAttachment("data/rfl_lowpass_shaped2.csv").csv({typed: true});
 ```
 
 ```{ojs}
@@ -148,6 +148,8 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
   }
 
   const colorRange = samples.map(s => categoryLookup.get(s).color);
+  const tickStart = Math.ceil(wlMin / 30) * 30;
+  const tickEnd = Math.floor(wlMax / 30) * 30;
 
   return Plot.plot({
     width,
@@ -161,7 +163,8 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
       label: "Wavelength (nm)",
       grid: true,
       tickPadding: 10,
-      tickFormat: d => d.toFixed(2) 
+      ticks: d3.range(tickStart, tickEnd + 1, 30),
+      tickFormat: d => d.toFixed(2),
     },
     y: {
       label: "Reflectance",
@@ -175,7 +178,7 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
       range:  colorRange 
     },
 
-    style: { fontSize: "16px" },
+    style: { fontSize: "18px" },
 
     marks: [
       Plot.line(adjustedData, {
@@ -201,7 +204,7 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
         py: "reflectance",      
         frameAnchor: "top-left",     
         fontVariant: "tabular-nums",  
-        fontSize: 14,
+        fontSize: 16,
         text: d => `${d.sample}   λ ${d.wavelength} nm    ${d.reflectance.toFixed(4)}`
       })),
 
