@@ -1,0 +1,223 @@
+---
+comments: false
+page-layout: custom
+format:
+  html:
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    toc: false
+    echo: false
+    keep-hidden: true
+    code-tools: true
+---
+
+
+:::: {.hero-small .hero-gradient .hero-clouds}
+::: {.container}
+# **Spectra**
+:::
+::::
+
+
+:::: {.container}
+::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} 
+
+# About
+
+::: 
+::: {.plots .py-3}
+
+
+```{ojs}
+import { rangeSlider as rangeSlider } from '@mootari/range-slider'
+Plot = import("https://esm.run/@observablehq/plot")
+
+```
+
+```{ojs}
+rawData =  FileAttachment("data/rfl_lowpass_shaped.csv").csv({typed: true});
+```
+
+```{ojs}
+wlMin = d3.extent(rawData, d => d.wavelength)[0];
+wlMax = d3.extent(rawData, d => d.wavelength)[1];
+
+fmt = d3.format(".2f");
+
+viewof slider = rangeSlider({
+  min: wlMin,
+  max: wlMax,
+  step: 0.7,
+  format: d => `${fmt(d)} nm`,
+  title: 'Select a range',
+})
+```
+
+```{ojs}
+categoryLookup = new Map([
+  ["Bentonite", {category: "Minerals", color: "#e41a1c"}], 
+  ["Buddingtonite", {category: "Minerals", color: "#377eb8"}], 
+  ["Hectorite", {category: "Minerals", color: "#4daf4a"}],  
+  ["Kaolinite", {category: "Minerals", color: "#984ea3"}], 
+  ["Magnesite", {category: "Minerals", color: "#ff7f00"}], 
+  ["Montmorillonite", {category: "Minerals", color: "#d4aa00"}], 
+  ["Saponite", {category: "Minerals", color: "#a65628"}], 
+  ["Sepiolite", {category: "Minerals", color: "#e377c2"}], 
+  ["Vermiculite", {category: "Minerals", color: "#7f7f7f"}],  
+
+  ["Brown Pine Needles", {category: "Vegetation", color: "#8dd3c7"}],
+  ["CerCis_spec", {category: "Vegetation", color: "#cabf45"}],  
+  ["CorSel_NPV_spec", {category: "Vegetation", color: "#bebada"}],
+  ["CorSel_spec",{category: "Vegetation", color: "#fb8072"}],
+  ["Dried Green Needles",{category: "Vegetation", color: "#80b1d3"}],
+  ["EucGlo_NPV_spec",  {category: "Vegetation", color: "#fdb462"}],
+  ["EucGlo_spec", {category: "Vegetation", color: "#b3de69"}],
+  ["Fresh Pine Needles",{category: "Vegetation", color: "#dba0c9"}],
+  ["HetArb_NPV_spec", {category: "Vegetation", color: "#a0a0a0"}], 
+  ["HetArb_spec", {category: "Vegetation", color: "#bc80bd"}],
+  ["Oak leaf, new growth", {category: "Vegetation", color: "#3a8040"}],  
+  ["Oak leaf, one year old", {category: "Vegetation", color: "#ffdd57"}],
+  ["Oak leaf, scenesced", {category: "Vegetation", color: "#1b9e77"}],
+  ["Pine Bark", {category: "Vegetation", color: "#d95f02"}],
+  ["maple", {category: "Vegetation", color: "#7570b3"}],
+  ["sycamore bark", {category: "Vegetation", color: "#e7298a"}],
+
+  ["HDPE_bottle",  {category: "Plastics", color: "#1f78b4"}], 
+  ["HDPE_film", {category: "Plastics", color: "#33a02c"}], 
+  ["PVC", {category: "Plastics", color: "#6a3d9a"}],
+  ["polysterene", {category: "Plastics", color: "#b15928"}]   
+]);
+```
+
+```{ojs}
+samples = d3.sort(d3.group(rawData, d => d.sample).keys());
+
+categorizedData = rawData.map(d => {
+  const info = categoryLookup.get(d.sample)
+  return {
+    ...d,
+    category : info.category,  
+    color : info.color               
+  };
+});
+
+categories = Array.from(new Set(categorizedData.map(d => d.category))).sort();
+```
+
+```{ojs}
+viewof categorySel = Inputs.checkbox(categories, {label: "Categories", value: ["Plastics"]});
+viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Averaging Window"})
+viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: "Resolution (nm)"})
+```
+
+```{ojs}
+{
+  const minWL = slider[0];
+  const maxWL = slider[1];
+
+  // turn into a set to filter data quicker
+  const categorySet = new Set(categorySel);
+
+  // filter out data based on user inputs from earlier
+  const filteredData = categorizedData.filter(d => d.wavelength >= minWL && d.wavelength <= maxWL && categorySet.has(d.category));
+
+  const rowsBySample = d3.group(filteredData, d => d.sample);  // Map<sample, rows[]>
+
+  const adjustedData = [];
+  const resolutionSize = Math.max(1, Math.round(resolutionSel / 0.7)); 
+
+  for (const [, rows] of rowsBySample) {
+    rows.sort((a, b) => d3.ascending(a.wavelength, b.wavelength));
+
+    var adjusted = rows.map(r => r.reflectance);
+
+    if (windowSel > 1){
+      adjusted = d3.blur(rows.map(r => r.reflectance), windowSel);    
+    }
+
+    for (let i = 0; i < adjusted.length; i += resolutionSize) { // plot every nth point
+      adjustedData.push({
+        wavelength: rows[i].wavelength,    
+        reflectance: adjusted[i],            
+        sample: rows[i].sample
+      });
+    }
+  }
+
+  const colorRange = samples.map(s => categoryLookup.get(s).color);
+
+  return Plot.plot({
+    width,
+    height: 900,
+    marginRight: 100,
+    marginLeft: 55,   
+    marginTop: 40,   
+    marginBottom: 50,
+
+    x: {
+      label: "Wavelength (nm)",
+      grid: true,
+      tickPadding: 10,
+      tickFormat: d => d.toFixed(2) 
+    },
+    y: {
+      label: "Reflectance",
+      grid: true,
+      tickPadding: 10
+    },
+
+    color: {
+      legend: true,
+      domain: samples,  
+      range:  colorRange 
+    },
+
+    style: { fontSize: "16px" },
+
+    marks: [
+      Plot.line(adjustedData, {
+        x: "wavelength",
+        y: "reflectance", 
+        stroke: "sample",
+        title: "sample",
+        strokeWidth: 4
+      }),
+
+      Plot.dot(adjustedData, Plot.pointerX({
+        x: "wavelength",      
+        y: "reflectance",    
+        fill: "sample",
+        stroke: "white",
+        marker: "circle",
+        strokeWidth: 2.5,
+        r: 5
+      })),
+
+      Plot.text(adjustedData, Plot.pointerX({
+        px:  "wavelength",  
+        py: "reflectance",      
+        frameAnchor: "top-left",     
+        fontVariant: "tabular-nums",  
+        fontSize: 14,
+        text: d => `${d.sample}   λ ${d.wavelength} nm    ${d.reflectance.toFixed(4)}`
+      })),
+
+      Plot.text(adjustedData, Plot.selectLast({
+        x: "wavelength",
+        y: "reflectance",
+        z: "sample",
+        text: "sample",
+        textAnchor: "start",
+        fontSize: 16,
+        dx: 3
+      }))
+    ]
+  });
+}
+```
+:::
+::::
+

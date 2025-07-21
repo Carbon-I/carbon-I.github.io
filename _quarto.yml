@@ -26,6 +26,8 @@ website:
             href:  ch4_story.qmd
           - href: clouds.qmd
             text: Clouds
+          - href: spectra.qmd
+            text: Spectra
       - href: news.qmd
         text: News
       - icon: github
