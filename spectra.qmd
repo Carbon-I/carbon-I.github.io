@@ -28,13 +28,11 @@ format:
 # About
 
 ::: 
-::: {.plots .py-3}
+::: {.plots .px-md-4 .py-3}
 
 
 ```{ojs}
 import { rangeSlider as rangeSlider } from '@mootari/range-slider'
-Plot = import("https://esm.run/@observablehq/plot")
-
 ```
 
 ```{ojs}
@@ -42,18 +40,19 @@ rawData =  FileAttachment("data/rfl_lowpass_shaped2.csv").csv({typed: true});
 ```
 
 ```{ojs}
-wlMin = d3.extent(rawData, d => d.wavelength)[0];
-wlMax = d3.extent(rawData, d => d.wavelength)[1];
 
 fmt = d3.format(".2f");
 
 viewof slider = rangeSlider({
-  min: wlMin,
-  max: wlMax,
+  min: d3.extent(rawData, d => d.wavelength)[0],
+  max: d3.extent(rawData, d => d.wavelength)[1],
   step: 0.7,
   format: d => `${fmt(d)} nm`,
   title: 'Select a range',
 })
+
+minWL = slider[0];
+maxWL = slider[1];
 ```
 
 ```{ojs}
@@ -104,25 +103,43 @@ categorizedData = rawData.map(d => {
   };
 });
 
+// wrapping data in set removes duplicates
 categories = Array.from(new Set(categorizedData.map(d => d.category))).sort();
+
+sampleOptions = samples.filter(
+  s => categorySel.includes(categoryLookup.get(s).category)
+);
 ```
 
 ```{ojs}
-viewof categorySel = Inputs.checkbox(categories, {label: "Categories", value: ["Plastics"]});
-viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Averaging Window"})
+viewof categorySel = Inputs.checkbox(categories, {
+  label: "Categories", 
+  value: ["Plastics"]}
+);
+
+viewof sampleSel = Inputs.checkbox(sampleOptions, {
+  label: "Samples", 
+  value: sampleOptions 
+});
+
+viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Spectral Averaging Window"})
 viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: "Resolution (nm)"})
 ```
 
 ```{ojs}
+filteredData = categorizedData.filter(
+  d => d.wavelength >= minWL && 
+  d.wavelength <= maxWL && 
+  categorySel.includes(d.category) &&
+  sampleSel.includes(d.sample)
+);
+```
+
+```{ojs}
 {
-  const minWL = slider[0];
-  const maxWL = slider[1];
-
-  // turn into a set to filter data quicker
-  const categorySet = new Set(categorySel);
-
-  // filter out data based on user inputs from earlier
-  const filteredData = categorizedData.filter(d => d.wavelength >= minWL && d.wavelength <= maxWL && categorySet.has(d.category));
+  if (filteredData.length < 1) {
+    return html`<div style="color:#666;">No active selections to plot.</div>`;
+  }
 
   const rowsBySample = d3.group(filteredData, d => d.sample);  // Map<sample, rows[]>
 
@@ -147,14 +164,21 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
     }
   }
 
-  const colorRange = samples.map(s => categoryLookup.get(s).color);
-  const tickStart = Math.ceil(wlMin / 30) * 30;
-  const tickEnd = Math.floor(wlMax / 30) * 30;
+  const activeSamples = Array.from(new Set(filteredData.map(d => d.sample)));
+  const activeColors  = activeSamples.map(s => categoryLookup.get(s).color);
+
+  const tickStart = Math.ceil(minWL / 30) * 30;
+  const tickEnd = Math.floor(maxWL / 30) * 30;
+
+  const plotWidth = Math.min(width, 1500);   
+  const fontPx = Math.max(10, Math.round(plotWidth / 70)); //scale fontSize with plotWidth, minimum 16px
+
+  const rotate = plotWidth < 650 ? -45 : 0;  // if container under 600px, rotate x tick text
 
   return Plot.plot({
-    width,
-    height: 900,
-    marginRight: 100,
+    width: plotWidth,
+    height: Math.round(plotWidth * (13/20)), // achieve more square graph
+    marginRight: 150,
     marginLeft: 55,   
     marginTop: 40,   
     marginBottom: 50,
@@ -163,6 +187,7 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
       label: "Wavelength (nm)",
       grid: true,
       tickPadding: 10,
+      tickRotate: rotate,      
       ticks: d3.range(tickStart, tickEnd + 1, 30),
       tickFormat: d => d.toFixed(2),
     },
@@ -174,11 +199,15 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
 
     color: {
       legend: true,
-      domain: samples,  
-      range:  colorRange 
+      domain: activeSamples,  
+      range:  activeColors 
     },
 
-    style: { fontSize: "18px" },
+    style: { 
+      fontSize: `${fontPx}px`, 
+      "--plot-font-size": `${fontPx}px` 
+    },
+
 
     marks: [
       Plot.line(adjustedData, {
@@ -204,7 +233,7 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
         py: "reflectance",      
         frameAnchor: "top-left",     
         fontVariant: "tabular-nums",  
-        fontSize: 16,
+        fontSize: fontPx * 0.8,
         text: d => `${d.sample}   λ ${d.wavelength} nm    ${d.reflectance.toFixed(4)}`
       })),
 
@@ -214,7 +243,7 @@ viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: 
         z: "sample",
         text: "sample",
         textAnchor: "start",
-        fontSize: 16,
+        fontSize: fontPx * 0.8,
         dx: 3
       }))
     ]
