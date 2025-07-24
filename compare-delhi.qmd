@@ -1,0 +1,19 @@
+---
+title: "JuxtaposeJS before/after slider in Quarto"
+format:
+  html:
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+---
+
+```{=html}
+<!-- Simple markup-only Juxtapose slider -->
+<div class="juxtapose" data-startingposition="50%" data-showlabels="true"
+     data-mode="horizontal" data-animate="true" style="max-width:900px;">
+  <img src="img/delhi_swir2200_same_extent.jpg" data-label="RGB" />
+  <img src="img/delhi-rgb_same_extent.jpg"  data-label="2200 nm" />
+</div>
+```
