@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>news</title>
+<title>JuxtaposeJS before/after slider in Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./img/ci_icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -70,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-list'] = new List('listing-blog-list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PE6RLP594L"></script>
 
 <script type="text/javascript">
@@ -109,41 +78,18 @@ gtag('js', new Date());
 gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles/custom.css">
+<meta property="og:title" content="JuxtaposeJS before/after slider in Quarto">
+<meta name="twitter:title" content="JuxtaposeJS before/after slider in Quarto">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -196,7 +142,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./news.html" aria-current="page"> 
+    <a class="nav-link" href="./news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item compact">
@@ -217,202 +163,30 @@ window.Quarto = {
 <!-- margin-sidebar -->
 <!-- main -->
 
-
-
-
-<div class="hero-small hero-gradient hero-news">
-<section id="news" class="level1 container">
-<h1><strong>NEWS</strong></h1>
-</section>
-</div>
-<div class="container">
-<div id="listing-blog-list" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="SGFyZHdhcmUlMjBwcm90b3R5cGUlMkNTcGVjdHJvc2NvcHklMkNTYXRlbGxpdGUlMjBtaXNzaW9uJTJDVHJhY2UlMjBHYXNlcw==" data-listing-date-sort="1740960000000" data-listing-file-modified-sort="1753398873824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="317">
-<div class="thumbnail"><a href="./News/CI-TestBed.html" class="no-external">
-
-<img loading="lazy" src="./img/citb_r2d2.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/CI-TestBed.html" class="no-external">Carbon-I Testbed for the NASA’s ESE call</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGFyZHdhcmUlMjBwcm90b3R5cGU='); return false;">Hardware prototype</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3BlY3Ryb3Njb3B5'); return false;">Spectroscopy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">Satellite mission</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHJhY2UlMjBHYXNlcw=='); return false;">Trace Gases</div>
-
-</div>
-<div class="delink listing-description"><a href="./News/CI-TestBed.html" class="no-external">
-<p>Our journey for a satellite mission to track trace gases at 30-300m resolution</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./News/CI-TestBed.html" class="no-external">
-<div class="listing-date">
-March 3, 2025
-</div>
-<div class="listing-author">
-Sharmila Padmanabhan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="U2F0ZWxsaXRlJTIwUmVtb3RlJTIwU2Vuc2luZyUyQ1NwZWN0cm9zY29weSUyQ0hpZ2glMjByZXNvbHV0aW9uJTIwbWFwcGluZyUyMG9mJTIwY2FyYm9uJTIwZ2FzZXMlMkNXZWJpbmFy" data-listing-date-sort="1739923200000" data-listing-file-modified-sort="1753398873825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="215">
-<div class="thumbnail"><a href="./News/webinar.html" class="no-external">
-
-<img loading="lazy" src="https://carbon-i.github.io/img/CarbonI-anim_whiteBG_small.gif" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/webinar.html" class="no-external">Carbon-I Webinar</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwUmVtb3RlJTIwU2Vuc2luZw=='); return false;">Satellite Remote Sensing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3BlY3Ryb3Njb3B5'); return false;">Spectroscopy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGlnaCUyMHJlc29sdXRpb24lMjBtYXBwaW5nJTIwb2YlMjBjYXJib24lMjBnYXNlcw=='); return false;">High resolution mapping of carbon gases</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2ViaW5hcg=='); return false;">Webinar</div>
-
-</div>
-<div class="delink listing-description"><a href="./News/webinar.html" class="no-external">
-<p>Join the Carbon-I mission webinar series: Explore the future of greenhouse gas observations</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./News/webinar.html" class="no-external">
-<div class="listing-date">
-February 19, 2025
-</div>
-<div class="listing-author">
-Carbon-I Team
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R3JlZW5ob3VzZSUyMEdhc2VzJTJDRWFydGglMjBTeXN0ZW0lMjBFeHBsb3JlciUyQ1NhdGVsbGl0ZSUyMG1pc3Npb24lMkNSZW1vdGUlMjBTZW5zaW5n" data-listing-date-sort="1719878400000" data-listing-file-modified-sort="1753398873824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
-<div class="thumbnail"><a href="./News/latimes.html" class="no-external">
-
-<img loading="lazy" src="https://ca-times.brightspotcdn.com/dims4/default/c1d48a3/2147483647/strip/true/crop/4951x3300+0+1/resize/2000x1333!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2f%2Fbd%2Ff281ce604373a2bc3f0498a76d96%2Favirris-jpl-004.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/latimes.html" class="no-external">LA Times article</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R3JlZW5ob3VzZSUyMEdhc2Vz'); return false;">Greenhouse Gases</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWFydGglMjBTeXN0ZW0lMjBFeHBsb3Jlcg=='); return false;">Earth System Explorer</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">Satellite mission</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">Remote Sensing</div>
-
-</div>
-<div class="delink listing-description"><a href="./News/latimes.html" class="no-external">
-<p>AAAS media fellow Noah Haggerty reports on our journey</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./News/latimes.html" class="no-external">
-<div class="listing-date">
-July 2, 2024
-</div>
-<div class="listing-author">
-Christian Frankenberg
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="R3JlZW5ob3VzZSUyMEdhc2VzJTJDRWFydGglMjBTeXN0ZW0lMjBFeHBsb3JlciUyQ1NhdGVsbGl0ZSUyMG1pc3Npb24lMkNSZW1vdGUlMjBTZW5zaW5n" data-listing-date-sort="1715040000000" data-listing-file-modified-sort="1753398873824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
-<div class="thumbnail"><a href="./News/Selected.html" class="no-external">
-
-<img loading="lazy" src="https://www.nasa.gov/wp-content/uploads/2024/05/globe.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/Selected.html" class="no-external">Carbon-I has been selected for Phase A</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R3JlZW5ob3VzZSUyMEdhc2Vz'); return false;">Greenhouse Gases</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWFydGglMjBTeXN0ZW0lMjBFeHBsb3Jlcg=='); return false;">Earth System Explorer</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">Satellite mission</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">Remote Sensing</div>
-
-</div>
-<div class="delink listing-description"><a href="./News/Selected.html" class="no-external">
-<p>NASA announced the selection of four ESE Explorer mission concepts</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./News/Selected.html" class="no-external">
-<div class="listing-date">
-May 7, 2024
-</div>
-<div class="listing-author">
-Christian Frankenberg
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="R3JlZW5ob3VzZSUyMEdhc2VzJTJDU3BlY3Ryb3Njb3B5JTJDU2F0ZWxsaXRlJTIwbWlzc2lvbiUyQ1JlbW90ZSUyMFNlbnNpbmc=" data-listing-date-sort="1709683200000" data-listing-file-modified-sort="1753398873824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
-<div class="thumbnail"><a href="./News/Carbon-I.html" class="no-external">
-
-<img loading="lazy" src="https://carbon-i.github.io/img/Logo-Black2.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./News/Carbon-I.html" class="no-external">Carbon-I proposal to NASA’s ESE call</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R3JlZW5ob3VzZSUyMEdhc2Vz'); return false;">Greenhouse Gases</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3BlY3Ryb3Njb3B5'); return false;">Spectroscopy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2F0ZWxsaXRlJTIwbWlzc2lvbg=='); return false;">Satellite mission</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVtb3RlJTIwU2Vuc2luZw=='); return false;">Remote Sensing</div>
-
-</div>
-<div class="delink listing-description"><a href="./News/Carbon-I.html" class="no-external">
-<p>Our journey for a satellite mission proposal to tackle greenhouse gases</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./News/Carbon-I.html" class="no-external">
-<div class="listing-date">
-March 6, 2024
-</div>
-<div class="listing-author">
-Christian Frankenberg
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">JuxtaposeJS before/after slider in Quarto</h1>
 </div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Simple markup-only Juxtapose slider -->
+<div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-mode="horizontal" data-animate="true" style="max-width:900px;">
+  <img src="img/delhi_swir2200_same_extent.jpg" data-label="RGB">
+  <img src="img/delhi-rgb_same_extent.jpg" data-label="2200 nm">
+</div>
 
 
 
