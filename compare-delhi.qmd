@@ -1,19 +1,26 @@
 ---
-title: "JuxtaposeJS before/after slider in Quarto"
+title: "New Delhi air pollution in visible and NIR view"
+
+comments: false
+toc: false
+sidebar: false
+page-layout: custom
 format:
   html:
+    css: styles/index-background.css
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
     include-in-header:
       text: |
         <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+    
 ---
 
 ```{=html}
-<!-- Simple markup-only Juxtapose slider -->
-<div class="juxtapose" data-startingposition="50%" data-showlabels="true"
-     data-mode="horizontal" data-animate="true" style="max-width:900px;">
-  <img src="img/delhi_swir2200_same_extent.jpg" data-label="RGB" />
-  <img src="img/delhi-rgb_same_extent.jpg"  data-label="2200 nm" />
-</div>
+<iframe frameborder="0" class="juxtapose" width="100%" height="2054" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4e906ee6-68e4-11f0-bb24-0936e1cb08fb"></iframe>
 ```
