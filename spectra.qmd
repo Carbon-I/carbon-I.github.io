@@ -14,7 +14,6 @@ format:
     code-tools: true
 ---
 
-
 :::: {.hero-small .hero-gradient .hero-clouds}
 ::: {.container}
 # **Spectra**
@@ -22,15 +21,13 @@ format:
 ::::
 
 
-:::: {.container}
-::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} 
+::::: {.container}
+:::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} 
 
 # About
 
-::: 
-::: {.plots .px-md-4 .py-3}
-
-
+:::: 
+:::: {.plots .px-md-4 .py-3}
 ```{ojs}
 import { rangeSlider as rangeSlider } from '@mootari/range-slider'
 ```
@@ -54,6 +51,7 @@ viewof slider = rangeSlider({
 minWL = slider[0];
 maxWL = slider[1];
 ```
+
 
 ```{ojs}
 categoryLookup = new Map([
@@ -105,27 +103,44 @@ categorizedData = rawData.map(d => {
 
 // wrapping data in set removes duplicates
 categories = Array.from(new Set(categorizedData.map(d => d.category))).sort();
-
-sampleOptions = samples.filter(
-  s => categorySel.includes(categoryLookup.get(s).category)
-);
 ```
-
+::: {.grid .py-1 }
+::: {.g-col-6}
 ```{ojs}
 viewof categorySel = Inputs.checkbox(categories, {
   label: "Categories", 
   value: ["Plastics"]}
 );
-
+sampleOptions = samples.filter(
+  s => categorySel.includes(categoryLookup.get(s).category)
+);
+```
+:::
+::: {.g-col-6}
+```{ojs}
 viewof sampleSel = Inputs.checkbox(sampleOptions, {
-  label: "Samples", 
   value: sampleOptions 
 });
-
-viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Spectral Averaging Window"})
+viewof samplePanel = categorySel.length
+  ? html`<details class="sample-drop" open>
+           <summary style="color:#000;">Samples</summary>
+           ${viewof sampleSel}
+         </details>`
+  : html``;
+samplePanel
+```
+:::
+::: {.g-col-6}
+```{ojs}
 viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: "Resolution (nm)"})
 ```
-
+:::
+::: {.g-col-6}
+```{ojs}
+viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Spectral Averaging Window"})
+```
+:::
+:::
 ```{ojs}
 filteredData = categorizedData.filter(
   d => d.wavelength >= minWL && 
@@ -170,7 +185,8 @@ filteredData = categorizedData.filter(
   const tickStart = Math.ceil(minWL / 30) * 30;
   const tickEnd = Math.floor(maxWL / 30) * 30;
 
-  const plotWidth = Math.min(width, 1500);   
+  const plotWidth = Math.min(width, 1500);  
+  const maxY = d3.max(adjustedData, d=>d.reflectance) * 1.03; 
   const fontPx = Math.max(10, Math.round(plotWidth / 70)); //scale fontSize with plotWidth, minimum 16px
 
   const rotate = plotWidth < 650 ? -45 : 0;  // if container under 600px, rotate x tick text
@@ -194,13 +210,17 @@ filteredData = categorizedData.filter(
     y: {
       label: "Reflectance",
       grid: true,
-      tickPadding: 10
+      tickPadding: 10,
+      domain: [0, maxY]
     },
 
     color: {
       legend: true,
-      domain: activeSamples,  
-      range:  activeColors 
+      inset: {
+        anchor: "top-right",
+        inset: 10,
+        padding: 5
+      }
     },
 
     style: { 
@@ -250,6 +270,6 @@ filteredData = categorizedData.filter(
   });
 }
 ```
-:::
 ::::
+:::::
 
