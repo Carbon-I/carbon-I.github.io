@@ -95,15 +95,18 @@ body {
     background-color: black;    
     padding: 0.4rem 1.2rem;
 
+    .navbar-container{
+      height: 100%; 
+    }
+
     .navbar-nav {
       background: #000;          
     }
 
     .navbar-brand-container {
       overflow: hidden;
-      height: 100%;        // match .navbar height
+      height: 100%;
       max-width: 337px;
-
 
       .navbar-brand {
         height: 100%;     
@@ -114,7 +117,7 @@ body {
 
       .navbar-logo {
         max-height: none;  // removes bootstrap 24px constraint
-        height: auto;         // scale with parent
+        height: auto;      // scale with parent
         max-width: 100%;
         padding-left: 2rem;
         transition: all 0.5s ease;
@@ -141,6 +144,7 @@ body {
     }
 
     .nav-link {
+
       &.active {
         border-bottom: 2px solid $brand-orange; // underline if active
       }
@@ -150,16 +154,21 @@ body {
       color: $brand-orange;
     }
 
-    .dropdown-menu .dropdown-item {
-      background-color: black;
-      color: white;
-      &:hover {
-        color: $brand-orange;
+    .dropdown-menu{ 
+    
+      .dropdown-item {
+        background-color: black;
+        color: white;
+        &:hover {
+          color: $brand-orange;
+        }
       }
     }
-    #quarto-search svg{
-      &:hover {
-        color: $brand-orange !important;
+    #quarto-search{ 
+      svg{
+        &:hover {
+          color: $brand-orange !important;
+        }
       }
     }
   }
