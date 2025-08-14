@@ -33,7 +33,7 @@ import { rangeSlider as rangeSlider } from '@mootari/range-slider'
 ```
 
 ```{ojs}
-rawData =  FileAttachment("data/rfl_lowpass_shaped2.csv").csv({typed: true});
+rawData =  FileAttachment("data/rfl_lowpass_shaped_v2.csv").csv({typed: true});
 ```
 
 ```{ojs}
@@ -55,37 +55,21 @@ maxWL = slider[1];
 
 ```{ojs}
 categoryLookup = new Map([
-  ["Bentonite", {category: "Minerals", color: "#e41a1c"}], 
-  ["Buddingtonite", {category: "Minerals", color: "#377eb8"}], 
   ["Hectorite", {category: "Minerals", color: "#4daf4a"}],  
-  ["Kaolinite", {category: "Minerals", color: "#984ea3"}], 
   ["Magnesite", {category: "Minerals", color: "#ff7f00"}], 
-  ["Montmorillonite", {category: "Minerals", color: "#d4aa00"}], 
   ["Saponite", {category: "Minerals", color: "#a65628"}], 
   ["Sepiolite", {category: "Minerals", color: "#e377c2"}], 
   ["Vermiculite", {category: "Minerals", color: "#7f7f7f"}],  
 
-  ["Brown Pine Needles", {category: "Vegetation", color: "#8dd3c7"}],
-  ["CerCis_spec", {category: "Vegetation", color: "#cabf45"}],  
-  ["CorSel_NPV_spec", {category: "Vegetation", color: "#bebada"}],
-  ["CorSel_spec",{category: "Vegetation", color: "#fb8072"}],
-  ["Dried Green Needles",{category: "Vegetation", color: "#80b1d3"}],
-  ["EucGlo_NPV_spec",  {category: "Vegetation", color: "#fdb462"}],
-  ["EucGlo_spec", {category: "Vegetation", color: "#b3de69"}],
-  ["Fresh Pine Needles",{category: "Vegetation", color: "#dba0c9"}],
-  ["HetArb_NPV_spec", {category: "Vegetation", color: "#a0a0a0"}], 
-  ["HetArb_spec", {category: "Vegetation", color: "#bc80bd"}],
   ["Oak leaf, new growth", {category: "Vegetation", color: "#3a8040"}],  
   ["Oak leaf, one year old", {category: "Vegetation", color: "#ffdd57"}],
   ["Oak leaf, scenesced", {category: "Vegetation", color: "#1b9e77"}],
-  ["Pine Bark", {category: "Vegetation", color: "#d95f02"}],
-  ["maple", {category: "Vegetation", color: "#7570b3"}],
-  ["sycamore bark", {category: "Vegetation", color: "#e7298a"}],
+  ["Maple Leaf", {category: "Vegetation", color: "#7570b3"}],
 
-  ["HDPE_bottle",  {category: "Plastics", color: "#1f78b4"}], 
-  ["HDPE_film", {category: "Plastics", color: "#33a02c"}], 
+  ["HDPE bottle",  {category: "Plastics", color: "#1f78b4"}], 
+  ["HDPE film", {category: "Plastics", color: "#33a02c"}], 
   ["PVC", {category: "Plastics", color: "#6a3d9a"}],
-  ["polysterene", {category: "Plastics", color: "#b15928"}]   
+  ["Polysterene", {category: "Plastics", color: "#b15928"}]   
 ]);
 ```
 
@@ -102,7 +86,7 @@ categorizedData = rawData.map(d => {
 });
 
 // wrapping data in set removes duplicates
-categories = Array.from(new Set(categorizedData.map(d => d.category))).sort();
+categories = Array.from(new Set(categorizedData.map(d => d.category)));
 ```
 ::: {.grid .py-1 }
 ::: {.g-col-6}
@@ -111,8 +95,8 @@ viewof categorySel = Inputs.checkbox(categories, {
   label: "Categories", 
   value: ["Plastics"]}
 );
-sampleOptions = samples.filter(
-  s => categorySel.includes(categoryLookup.get(s).category)
+sampleOptions = Array.from(categoryLookup.keys()).filter(
+  s => samples.includes(s) && categorySel.includes(categoryLookup.get(s).category)
 );
 ```
 :::
@@ -127,7 +111,6 @@ viewof samplePanel = categorySel.length
            ${viewof sampleSel}
          </details>`
   : html``;
-samplePanel
 ```
 :::
 ::: {.g-col-6}
@@ -217,7 +200,7 @@ filteredData = categorizedData.filter(
     color: {
       legend: true,
       inset: {
-        anchor: "top-right",
+        anchor: "top-right", 
         inset: 10,
         padding: 5
       }
@@ -225,7 +208,7 @@ filteredData = categorizedData.filter(
 
     style: { 
       fontSize: `${fontPx}px`, 
-      "--plot-font-size": `${fontPx}px` 
+      "--plot-font-size": `${fontPx}px` // so that the font size applies to the plot
     },
 
 
@@ -263,7 +246,7 @@ filteredData = categorizedData.filter(
         z: "sample",
         text: "sample",
         textAnchor: "start",
-        fontSize: fontPx * 0.8,
+        fontSize: fontPx * 0.7,
         dx: 3
       }))
     ]
