@@ -99,6 +99,7 @@ categorizedData = rawData.map(d => {
 // wrapping data in set removes duplicates
 categories = Array.from(new Set(categorizedData.map(d => d.category)));
 ```
+
 ::: {.g-col-6}
 ```{ojs}
 viewof categorySel = Inputs.checkbox(categories, {
@@ -218,7 +219,13 @@ filteredData = categorizedData.filter(
     },
     color: {
       legend: true,
-      inset: { anchor: "top-right", inset: 10, padding: 5 }
+      domain: activeSamples,
+      range: activeSamples.map(s => categoryLookup.get(s).color),
+      inset: { 
+        anchor: "top-right", 
+        inset: 10, 
+        padding: 5 
+      }
     },
     style: { 
       fontSize: `${fontPx}px`, 
