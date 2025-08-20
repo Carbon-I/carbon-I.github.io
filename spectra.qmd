@@ -16,15 +16,16 @@ format:
 
 :::: {.hero-small .hero-gradient .hero-clouds}
 ::: {.container}
-# **Spectra**
+# **Surface Spectra**
 :::
 ::::
 
 
 ::::: {.container}
 :::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} 
+# While the core mission science focuses on observations of atmospheric composition, the mission will also observe surface properties at unmatched spectral resolutions.  
 
-# About
+Carbon-I mission is designed as a wide-swath mapping mission, collecting shortwave infrared imaging spectroscopy data. This will provide new insights into a wide range of areas including critical mineral distributions, vegetation stress, and pollution. Carbon-I’s higher spectral resolution in the shortwave infrared compared to existing missions (e.g., EMIT) allows clearer discrimination of minerals such as lithium-bearing hectorite from similar materials, offering significant value for scientific analysis and potential resource exploration. The Carbon-I team has taken surface reflectance measurements with the Carbon-I Demonstration Unit in the laboratory - check them out below with this tool which allows you to compare these highly resolved spectral data with coarser spectral resolutions to see the power of Carbon-I's surface spectra.
 
 :::: 
 :::: {.plots .px-md-4 .py-3}
@@ -36,6 +37,8 @@ import { rangeSlider as rangeSlider } from '@mootari/range-slider'
 rawData =  FileAttachment("data/rfl_lowpass_shaped_v2.csv").csv({typed: true});
 ```
 
+::: {.grid .py-1 }
+::: {.g-col-6}
 ```{ojs}
 
 fmt = d3.format(".2f");
@@ -51,7 +54,15 @@ viewof slider = rangeSlider({
 minWL = slider[0];
 maxWL = slider[1];
 ```
-
+:::
+::: {.g-col-4}
+```{ojs}
+viewof normalize = Inputs.toggle({
+  label: "Normalize 0–1 (per sample)",
+  value: false
+})
+```
+:::
 
 ```{ojs}
 categoryLookup = new Map([
@@ -88,7 +99,6 @@ categorizedData = rawData.map(d => {
 // wrapping data in set removes duplicates
 categories = Array.from(new Set(categorizedData.map(d => d.category)));
 ```
-::: {.grid .py-1 }
 ::: {.g-col-6}
 ```{ojs}
 viewof categorySel = Inputs.checkbox(categories, {
@@ -140,43 +150,53 @@ filteredData = categorizedData.filter(
   }
 
   const rowsBySample = d3.group(filteredData, d => d.sample);  // Map<sample, rows[]>
-
   const adjustedData = [];
   const resolutionSize = Math.max(1, Math.round(resolutionSel / 0.7)); 
 
-  for (const [, rows] of rowsBySample) {
-    rows.sort((a, b) => d3.ascending(a.wavelength, b.wavelength));
-
-    var adjusted = rows.map(r => r.reflectance);
+  for (const [sample, rows] of rowsBySample) {
+    let adjusted = rows.map(r => r.reflectance);
 
     if (windowSel > 1){
-      adjusted = d3.blur(rows.map(r => r.reflectance), windowSel);    
+      adjusted = d3.blur(adjusted, windowSel);
+    } 
+
+    let ymin, ymax, denom;
+    if (normalize) {
+      ymin = d3.min(adjusted);
+      ymax = d3.max(adjusted);
+      denom = ymax - ymin; 
     }
 
-    for (let i = 0; i < adjusted.length; i += resolutionSize) { // plot every nth point
+    for (let i = 0; i < adjusted.length; i += resolutionSize) {
+      let y = adjusted[i];
+      if (normalize){
+        y = denom > 0 ? (adjusted[i] - ymin) / denom : 0 //avoid divide by 0
+      }
+      
       adjustedData.push({
-        wavelength: rows[i].wavelength,    
-        reflectance: adjusted[i],            
-        sample: rows[i].sample
+        wavelength: rows[i].wavelength,
+        reflectance: y,
+        sample
       });
     }
   }
 
   const activeSamples = Array.from(new Set(filteredData.map(d => d.sample)));
-  const activeColors  = activeSamples.map(s => categoryLookup.get(s).color);
+  const plotWidth = Math.min(width, 1500);
+  const fontPx = Math.max(10, Math.round(plotWidth / 70));
+  const rotate = plotWidth < 650 ? -45 : 0;
 
   const tickStart = Math.ceil(minWL / 30) * 30;
   const tickEnd = Math.floor(maxWL / 30) * 30;
 
-  const plotWidth = Math.min(width, 1500);  
-  const maxY = d3.max(adjustedData, d=>d.reflectance) * 1.03; 
-  const fontPx = Math.max(10, Math.round(plotWidth / 70)); //scale fontSize with plotWidth, minimum 16px
+  const yLabel = normalize ? "Normalized reflectance" : "Reflectance";
+  const maxY = normalize ? 1.03 : d3.max(adjustedData, d => d.reflectance) * 1.03;
 
-  const rotate = plotWidth < 650 ? -45 : 0;  // if container under 600px, rotate x tick text
+  const fmtVal = normalize ? d3.format(".3f") : d3.format(".4f");
 
   return Plot.plot({
     width: plotWidth,
-    height: Math.round(plotWidth * (13/20)), // achieve more square graph
+    height: Math.round(plotWidth * (13/20)),
     marginRight: 150,
     marginLeft: 55,   
     marginTop: 40,   
@@ -186,60 +206,50 @@ filteredData = categorizedData.filter(
       label: "Wavelength (nm)",
       grid: true,
       tickPadding: 10,
-      tickRotate: rotate,      
+      tickRotate: rotate,
       ticks: d3.range(tickStart, tickEnd + 1, 30),
       tickFormat: d => d.toFixed(2),
     },
     y: {
-      label: "Reflectance",
+      label: yLabel,
       grid: true,
       tickPadding: 10,
       domain: [0, maxY]
     },
-
     color: {
       legend: true,
-      inset: {
-        anchor: "top-right", 
-        inset: 10,
-        padding: 5
-      }
+      inset: { anchor: "top-right", inset: 10, padding: 5 }
     },
-
     style: { 
       fontSize: `${fontPx}px`, 
-      "--plot-font-size": `${fontPx}px` // so that the font size applies to the plot
+      "--plot-font-size": `${fontPx}px` 
     },
-
 
     marks: [
       Plot.line(adjustedData, {
         x: "wavelength",
-        y: "reflectance", 
+        y: "reflectance",
         stroke: "sample",
         title: "sample",
         strokeWidth: 4
       }),
-
       Plot.dot(adjustedData, Plot.pointerX({
-        x: "wavelength",      
-        y: "reflectance",    
+        x: "wavelength",
+        y: "reflectance",
         fill: "sample",
         stroke: "white",
         marker: "circle",
         strokeWidth: 2.5,
         r: 5
       })),
-
       Plot.text(adjustedData, Plot.pointerX({
-        px:  "wavelength",  
-        py: "reflectance",      
-        frameAnchor: "top-left",     
-        fontVariant: "tabular-nums",  
+        px: "wavelength",
+        py: "reflectance",
+        frameAnchor: "top-left",
+        fontVariant: "tabular-nums",
         fontSize: fontPx * 0.8,
-        text: d => `${d.sample}   λ ${d.wavelength} nm    ${d.reflectance.toFixed(4)}`
+        text: d => `${d.sample}   λ ${fmt(d.wavelength)} nm    ${fmtVal(d.reflectance)}`
       })),
-
       Plot.text(adjustedData, Plot.selectLast({
         x: "wavelength",
         y: "reflectance",
@@ -252,6 +262,7 @@ filteredData = categorizedData.filter(
     ]
   });
 }
+
 ```
 ::::
 :::::
