@@ -1121,12 +1121,6 @@ body {
 
   /* Navbar */
 
-  /*removes default Bootstrap navbar transition*/
-  .headroom-target,
-  header.headroom {
-    transition: none !important;
-    will-change: auto !important;
-  }
   header.headroom--pinned,
   header.headroom--unpinned {
     transform: none !important;
@@ -1137,16 +1131,10 @@ body {
     margin-bottom: -2px; // remove gap between navbar and body that happens on some pages  
     transition: height 0.5s ease;  
     background-color: black;    
+    padding: 0.4rem 1.2rem;
 
-    .navbar-container{
-      height: 100%;
-
-    }
-
-    .navbar-collapse {
-\\
-      height: 100%;
-      background: #000;               /* solid black panel              */
+    .navbar-nav {
+      background: #000;          
     }
 
     .navbar-brand-container {
@@ -1173,13 +1161,12 @@ body {
     }
 
     &.compact {
-      height: 6vh;
+      height: 8vh;
 
       .navbar-logo {
         padding: 4rem;
       }
     }
-
 
     a {
       color: white;
@@ -1187,25 +1174,30 @@ body {
       font-size: 1.15rem;
 
       &:hover {
-        color: lightblue;
+        color: $brand-orange;
       }
     }
 
     .nav-link {
       &.active {
-        border-bottom: 2px solid lightblue; // underline if active
+        border-bottom: 2px solid $brand-orange; // underline if active
       }
     }
 
     .dropdown-toggle.show {
-      color: lightblue;
+      color: $brand-orange;
     }
 
     .dropdown-menu .dropdown-item {
       background-color: black;
       color: white;
       &:hover {
-        color: lightblue;
+        color: $brand-orange;
+      }
+    }
+    #quarto-search svg{
+      &:hover {
+        color: $brand-orange !important;
       }
     }
   }
@@ -1246,6 +1238,7 @@ body {
   .page-layout-custom {
     margin: 0 auto; // centers the page layout
   }
+
 
   /* Science Team thumbnails */
   #listing-science-team{
@@ -1634,14 +1627,12 @@ body{
         padding: 2.5rem 0;
       }
 
-      /* make the thumbnail the hero at the top */
       .thumbnail{
         order: 4;
         align-self: center;                    
         max-width: 22rem;
       }
 
-      /* centre meta text or leave it left-aligned, your call */
       .metadata{
         order: 2;                           
         text-align: center;
@@ -1660,6 +1651,10 @@ body{
 
   @media (max-width: 992px) {
     .navbar {
+
+      .navbar-collapse {
+        transition: height .4s ease;     // longer than default transition
+      }
 
       .navbar-toggler {
         left: .75rem;
@@ -1718,7 +1713,7 @@ body{
       }
 
       .about-references{
-        padding: 0rem;
+        padding: 1rem 2rem;
         text-align: left;
       }
     }
@@ -1739,15 +1734,23 @@ body{
 
     .mission{ 
       flex-direction: column; 
-      text-align: center;
+      text-align: left;
+      padding: 0rem 2rem;
+
+      .g-col-4{
+        text-align: center;
+      }
+
     }
     .mission-image-frame{
       width: 80%;  
+      align-self: center;
     }
     .science{
       display: flex;
       flex-direction: column; 
-      text-align: center;
+      text-align: left;
+      padding: 0rem 2rem;
     }
 
     .quarto-about-solana .about-entity{
@@ -1764,9 +1767,18 @@ body{
   }
 
   @media (max-width: 576px) {
+
     .hero-content{
       top: 30%;
       text-align: center;
+    }
+
+    .quarto-about-solana .about-contents{
+      padding: 0rem 2rem !important; //override bootstrap;
+    }
+
+    .article-contents{
+      padding: 0rem 2rem;;
     }
   }
 

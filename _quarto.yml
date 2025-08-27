@@ -22,12 +22,12 @@ website:
         text: Publications
       - text: Visual Stories
         menu:
-          - text: CH4 
-            href:  ch4_story.qmd
+          - href: ch4_story.qmd
+            text: CH4 
           - href: clouds.qmd
             text: Clouds
           - href: spectra.qmd
-            text: Spectra
+            text: Surface Spectra
       - href: news.qmd
         text: News
       - icon: github

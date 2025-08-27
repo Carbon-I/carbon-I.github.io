@@ -14,31 +14,31 @@ format:
     code-tools: true
 ---
 
-
 :::: {.hero-small .hero-gradient .hero-clouds}
 ::: {.container}
-# **Spectra**
+# **Surface Spectra**
 :::
 ::::
 
 
-:::: {.container}
-::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} 
+::::: {.container}
+:::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} 
+# While the core mission science focuses on observations of atmospheric composition, the mission will also observe surface properties at unmatched spectral resolutions.  
 
-# About
+Carbon-I mission is designed as a wide-swath mapping mission, collecting shortwave infrared imaging spectroscopy data. This will provide new insights into a wide range of areas including critical mineral distributions, vegetation stress, and pollution. Carbon-I’s higher spectral resolution in the shortwave infrared compared to existing missions (e.g., EMIT) allows clearer discrimination of minerals such as lithium-bearing hectorite from similar materials, offering significant value for scientific analysis and potential resource exploration. The Carbon-I team has taken surface reflectance measurements with the Carbon-I Demonstration Unit in the laboratory - check them out below with this tool which allows you to compare these highly resolved spectral data with coarser spectral resolutions to see the power of Carbon-I's surface spectra.
 
-::: 
-::: {.plots .px-md-4 .py-3}
-
-
+:::: 
+:::: {.plots .px-md-4 .py-3}
 ```{ojs}
 import { rangeSlider as rangeSlider } from '@mootari/range-slider'
 ```
 
 ```{ojs}
-rawData =  FileAttachment("data/rfl_lowpass_shaped2.csv").csv({typed: true});
+rawData =  FileAttachment("data/rfl_lowpass_shaped_v2.csv").csv({typed: true});
 ```
 
+::: {.grid .py-1 }
+::: {.g-col-6}
 ```{ojs}
 
 fmt = d3.format(".2f");
@@ -54,40 +54,33 @@ viewof slider = rangeSlider({
 minWL = slider[0];
 maxWL = slider[1];
 ```
+:::
+::: {.g-col-4}
+```{ojs}
+viewof normalize = Inputs.toggle({
+  label: "Normalize 0–1 (per sample)",
+  value: false
+})
+```
+:::
 
 ```{ojs}
 categoryLookup = new Map([
-  ["Bentonite", {category: "Minerals", color: "#e41a1c"}], 
-  ["Buddingtonite", {category: "Minerals", color: "#377eb8"}], 
   ["Hectorite", {category: "Minerals", color: "#4daf4a"}],  
-  ["Kaolinite", {category: "Minerals", color: "#984ea3"}], 
   ["Magnesite", {category: "Minerals", color: "#ff7f00"}], 
-  ["Montmorillonite", {category: "Minerals", color: "#d4aa00"}], 
   ["Saponite", {category: "Minerals", color: "#a65628"}], 
   ["Sepiolite", {category: "Minerals", color: "#e377c2"}], 
   ["Vermiculite", {category: "Minerals", color: "#7f7f7f"}],  
 
-  ["Brown Pine Needles", {category: "Vegetation", color: "#8dd3c7"}],
-  ["CerCis_spec", {category: "Vegetation", color: "#cabf45"}],  
-  ["CorSel_NPV_spec", {category: "Vegetation", color: "#bebada"}],
-  ["CorSel_spec",{category: "Vegetation", color: "#fb8072"}],
-  ["Dried Green Needles",{category: "Vegetation", color: "#80b1d3"}],
-  ["EucGlo_NPV_spec",  {category: "Vegetation", color: "#fdb462"}],
-  ["EucGlo_spec", {category: "Vegetation", color: "#b3de69"}],
-  ["Fresh Pine Needles",{category: "Vegetation", color: "#dba0c9"}],
-  ["HetArb_NPV_spec", {category: "Vegetation", color: "#a0a0a0"}], 
-  ["HetArb_spec", {category: "Vegetation", color: "#bc80bd"}],
   ["Oak leaf, new growth", {category: "Vegetation", color: "#3a8040"}],  
   ["Oak leaf, one year old", {category: "Vegetation", color: "#ffdd57"}],
   ["Oak leaf, scenesced", {category: "Vegetation", color: "#1b9e77"}],
-  ["Pine Bark", {category: "Vegetation", color: "#d95f02"}],
-  ["maple", {category: "Vegetation", color: "#7570b3"}],
-  ["sycamore bark", {category: "Vegetation", color: "#e7298a"}],
+  ["Maple Leaf", {category: "Vegetation", color: "#7570b3"}],
 
-  ["HDPE_bottle",  {category: "Plastics", color: "#1f78b4"}], 
-  ["HDPE_film", {category: "Plastics", color: "#33a02c"}], 
+  ["HDPE bottle",  {category: "Plastics", color: "#1f78b4"}], 
+  ["HDPE film", {category: "Plastics", color: "#33a02c"}], 
   ["PVC", {category: "Plastics", color: "#6a3d9a"}],
-  ["polysterene", {category: "Plastics", color: "#b15928"}]   
+  ["Polysterene", {category: "Plastics", color: "#b15928"}]   
 ]);
 ```
 
@@ -104,28 +97,44 @@ categorizedData = rawData.map(d => {
 });
 
 // wrapping data in set removes duplicates
-categories = Array.from(new Set(categorizedData.map(d => d.category))).sort();
-
-sampleOptions = samples.filter(
-  s => categorySel.includes(categoryLookup.get(s).category)
-);
+categories = Array.from(new Set(categorizedData.map(d => d.category)));
 ```
 
+::: {.g-col-6}
 ```{ojs}
 viewof categorySel = Inputs.checkbox(categories, {
   label: "Categories", 
   value: ["Plastics"]}
 );
-
+sampleOptions = Array.from(categoryLookup.keys()).filter(
+  s => samples.includes(s) && categorySel.includes(categoryLookup.get(s).category)
+);
+```
+:::
+::: {.g-col-6}
+```{ojs}
 viewof sampleSel = Inputs.checkbox(sampleOptions, {
-  label: "Samples", 
   value: sampleOptions 
 });
-
-viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Spectral Averaging Window"})
+viewof samplePanel = categorySel.length
+  ? html`<details class="sample-drop" open>
+           <summary style="color:#000;">Samples</summary>
+           ${viewof sampleSel}
+         </details>`
+  : html``;
+```
+:::
+::: {.g-col-6}
+```{ojs}
 viewof resolutionSel = Inputs.range([0.7, 15.4], {step: 0.7, value: 0.7, label: "Resolution (nm)"})
 ```
-
+:::
+::: {.g-col-6}
+```{ojs}
+viewof windowSel = Inputs.range([1, 15], {step: 1, value: 1, label: "Spectral Averaging Window"})
+```
+:::
+:::
 ```{ojs}
 filteredData = categorizedData.filter(
   d => d.wavelength >= minWL && 
@@ -142,42 +151,53 @@ filteredData = categorizedData.filter(
   }
 
   const rowsBySample = d3.group(filteredData, d => d.sample);  // Map<sample, rows[]>
-
   const adjustedData = [];
   const resolutionSize = Math.max(1, Math.round(resolutionSel / 0.7)); 
 
-  for (const [, rows] of rowsBySample) {
-    rows.sort((a, b) => d3.ascending(a.wavelength, b.wavelength));
-
-    var adjusted = rows.map(r => r.reflectance);
+  for (const [sample, rows] of rowsBySample) {
+    let adjusted = rows.map(r => r.reflectance);
 
     if (windowSel > 1){
-      adjusted = d3.blur(rows.map(r => r.reflectance), windowSel);    
+      adjusted = d3.blur(adjusted, windowSel);
+    } 
+
+    let ymin, ymax, denom;
+    if (normalize) {
+      ymin = d3.min(adjusted);
+      ymax = d3.max(adjusted);
+      denom = ymax - ymin; 
     }
 
-    for (let i = 0; i < adjusted.length; i += resolutionSize) { // plot every nth point
+    for (let i = 0; i < adjusted.length; i += resolutionSize) {
+      let y = adjusted[i];
+      if (normalize){
+        y = denom > 0 ? (adjusted[i] - ymin) / denom : 0 //avoid divide by 0
+      }
+      
       adjustedData.push({
-        wavelength: rows[i].wavelength,    
-        reflectance: adjusted[i],            
-        sample: rows[i].sample
+        wavelength: rows[i].wavelength,
+        reflectance: y,
+        sample
       });
     }
   }
 
   const activeSamples = Array.from(new Set(filteredData.map(d => d.sample)));
-  const activeColors  = activeSamples.map(s => categoryLookup.get(s).color);
+  const plotWidth = Math.min(width, 1500);
+  const fontPx = Math.max(10, Math.round(plotWidth / 70));
+  const rotate = plotWidth < 650 ? -45 : 0;
 
   const tickStart = Math.ceil(minWL / 30) * 30;
   const tickEnd = Math.floor(maxWL / 30) * 30;
 
-  const plotWidth = Math.min(width, 1500);   
-  const fontPx = Math.max(10, Math.round(plotWidth / 70)); //scale fontSize with plotWidth, minimum 16px
+  const yLabel = normalize ? "Normalized reflectance" : "Reflectance";
+  const maxY = normalize ? 1.03 : d3.max(adjustedData, d => d.reflectance) * 1.03;
 
-  const rotate = plotWidth < 650 ? -45 : 0;  // if container under 600px, rotate x tick text
+  const fmtVal = normalize ? d3.format(".3f") : d3.format(".4f");
 
   return Plot.plot({
     width: plotWidth,
-    height: Math.round(plotWidth * (13/20)), // achieve more square graph
+    height: Math.round(plotWidth * (13/20)),
     marginRight: 150,
     marginLeft: 55,   
     marginTop: 40,   
@@ -187,69 +207,70 @@ filteredData = categorizedData.filter(
       label: "Wavelength (nm)",
       grid: true,
       tickPadding: 10,
-      tickRotate: rotate,      
+      tickRotate: rotate,
       ticks: d3.range(tickStart, tickEnd + 1, 30),
       tickFormat: d => d.toFixed(2),
     },
     y: {
-      label: "Reflectance",
+      label: yLabel,
       grid: true,
-      tickPadding: 10
+      tickPadding: 10,
+      domain: [0, maxY]
     },
-
     color: {
       legend: true,
-      domain: activeSamples,  
-      range:  activeColors 
+      domain: activeSamples,
+      range: activeSamples.map(s => categoryLookup.get(s).color),
+      inset: { 
+        anchor: "top-right", 
+        inset: 10, 
+        padding: 5 
+      }
     },
-
     style: { 
       fontSize: `${fontPx}px`, 
       "--plot-font-size": `${fontPx}px` 
     },
 
-
     marks: [
       Plot.line(adjustedData, {
         x: "wavelength",
-        y: "reflectance", 
+        y: "reflectance",
         stroke: "sample",
         title: "sample",
         strokeWidth: 4
       }),
-
       Plot.dot(adjustedData, Plot.pointerX({
-        x: "wavelength",      
-        y: "reflectance",    
+        x: "wavelength",
+        y: "reflectance",
         fill: "sample",
         stroke: "white",
         marker: "circle",
         strokeWidth: 2.5,
         r: 5
       })),
-
       Plot.text(adjustedData, Plot.pointerX({
-        px:  "wavelength",  
-        py: "reflectance",      
-        frameAnchor: "top-left",     
-        fontVariant: "tabular-nums",  
+        px: "wavelength",
+        py: "reflectance",
+        frameAnchor: "top-left",
+        fontVariant: "tabular-nums",
         fontSize: fontPx * 0.8,
-        text: d => `${d.sample}   λ ${d.wavelength} nm    ${d.reflectance.toFixed(4)}`
+        text: d => `${d.sample}   λ ${fmt(d.wavelength)} nm    ${fmtVal(d.reflectance)}`
       })),
-
       Plot.text(adjustedData, Plot.selectLast({
         x: "wavelength",
         y: "reflectance",
         z: "sample",
         text: "sample",
         textAnchor: "start",
-        fontSize: fontPx * 0.8,
+        fontSize: fontPx * 0.7,
         dx: 3
       }))
     ]
   });
 }
+
 ```
-:::
 ::::
+:::::
 
