@@ -1,5 +1,5 @@
 ---
-title: "New Delhi air pollution in visible and NIR view"
+title: "Camp Fire (California 2018) in visible and NIR view"
 
 comments: false
 toc: false
@@ -22,5 +22,5 @@ format:
 ---
 
 ```{=html}
-<iframe frameborder="0" class="juxtapose" width="100%" height="null" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=cf1e1344-8381-11f0-bb24-0936e1cb08fb"></iframe>
+<iframe frameborder="0" class="juxtapose" width="100%" height="3711" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b6f92bc-8383-11f0-bb24-0936e1cb08fb"></iframe>
 ```
