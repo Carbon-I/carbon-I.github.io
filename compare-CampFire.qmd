@@ -1,0 +1,26 @@
+---
+title: "New Delhi air pollution in visible and NIR view"
+
+comments: false
+toc: false
+sidebar: false
+page-layout: custom
+format:
+  html:
+    css: styles/index-background.css
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+    
+---
+
+```{=html}
+<iframe frameborder="0" class="juxtapose" width="100%" height="null" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=cf1e1344-8381-11f0-bb24-0936e1cb08fb"></iframe>
+```
