@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>spectra2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./img/ci_icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8cdbf6c2cde4df945ea58e7a030e125e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PE6RLP594L"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/Logo-White2.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./team.html"> 
+<span class="menu-text">Team</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./science.html"> 
+<span class="menu-text">Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visual-stories" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Visual Stories</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-visual-stories">    
+        <li>
+    <a class="dropdown-item" href="./ch4_story.html">
+ <span class="dropdown-text">CH4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./clouds.html">
+ <span class="dropdown-text">Clouds</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./spectra.html">
+ <span class="dropdown-text">Surface Spectra</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Carbon-I/"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- main -->
+
+
+
+
+<div class="hero-small hero-gradient hero-clouds">
+<section id="surface-spectra" class="level1 container">
+<h1><strong>Surface Spectra</strong></h1>
+</section>
+</div>
+<div class="container">
+<section id="while-the-core-mission-science-focuses-on-observations-of-atmospheric-composition-the-mission-will-also-observe-surface-properties-at-unmatched-spectral-resolutions." class="level1 about px-md-7 py-3" style="border-bottom: 1px solid #C8C7C7;">
+<h1>While the core mission science focuses on observations of atmospheric composition, the mission will also observe surface properties at unmatched spectral resolutions.</h1>
+<p>Carbon-I mission is designed as a wide-swath mapping mission, collecting shortwave infrared imaging spectroscopy data. This will provide new insights into a wide range of areas including critical mineral distributions, vegetation stress, and pollution. Carbon-I’s higher spectral resolution in the shortwave infrared compared to existing missions (e.g., EMIT) allows clearer discrimination of minerals such as lithium-bearing hectorite from similar materials, offering significant value for scientific analysis and potential resource exploration. The Carbon-I team has taken surface reflectance measurements with the Carbon-I Demonstration Unit in the laboratory - check them out below with this tool which allows you to compare these highly resolved spectral data with coarser spectral resolutions to see the power of Carbon-I’s surface spectra.</p>
+</section>
+</div>
+<div class="spectra-plots">
+<div class="grid py-3">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="35" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 34;"><span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rangeSlider <span class="im">as</span> rangeSlider } <span class="im">from</span> <span class="st">'@mootari/range-slider'</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="39" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 38;"><span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>rawData <span class="op">=</span>  <span class="fu">FileAttachment</span>(<span class="st">"data/rfl_lowpass_shaped_v2.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="g-col-12 samples-filter">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="45" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 44;"><span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>viewof categorySel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(categories<span class="op">,</span> {</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Sample Categories"</span><span class="op">,</span> </span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> [<span class="st">"Minerals"</span>]}</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>sampleOptions <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(categoryLookup<span class="op">.</span><span class="fu">keys</span>())<span class="op">.</span><span class="fu">filter</span>(</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  s <span class="kw">=&gt;</span> samples<span class="op">.</span><span class="fu">includes</span>(s) <span class="op">&amp;&amp;</span> categorySel<span class="op">.</span><span class="fu">includes</span>(categoryLookup<span class="op">.</span><span class="fu">get</span>(s)<span class="op">.</span><span class="at">category</span>)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="55" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 54;"><span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>viewof sampleSel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(sampleOptions<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> sampleOptions })<span class="op">;</span></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>viewof samplePanel <span class="op">=</span> categorySel<span class="op">.</span><span class="at">length</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;details class="sample-drop" open&gt;</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="vs">           &lt;summary style="color:#000;"&gt;Samples&lt;/summary&gt;</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="vs">           </span><span class="sc">${</span>viewof sampleSel<span class="sc">}</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="vs">         &lt;/details&gt;`</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> <span class="fu">html</span><span class="vs">``</span><span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-3 px-5 controls">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="68" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 67;"><span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>fmt <span class="op">=</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".2f"</span>)<span class="op">;</span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>viewof slider <span class="op">=</span> <span class="fu">rangeSlider</span>({</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">extent</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)[<span class="dv">0</span>]<span class="op">,</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">extent</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)[<span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span><span class="fu">fmt</span>(d)<span class="sc">}</span><span class="vs"> nm`</span><span class="op">,</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">'Select a range'</span><span class="op">,</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>minWL <span class="op">=</span> slider[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>maxWL <span class="op">=</span> slider[<span class="dv">1</span>]<span class="op">;</span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>xMin <span class="op">=</span> d3<span class="op">.</span><span class="fu">min</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)<span class="op">;</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>xMax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)<span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="85" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 84;"><span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>viewof normalize <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">toggle</span>({</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Normalize 0-1 (per sample)"</span><span class="op">,</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="92" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 91;"><span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>viewof resolutionSel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.7</span><span class="op">,</span> <span class="fl">15.4</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Resolution (nm)"</span>})</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="96" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 95;"><span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>viewof windowSel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Spectral Averaging Window"</span>})</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="100" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>categoryLookup <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>([</span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Hectorite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#4daf4a"</span>}]<span class="op">,</span>  </span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Magnesite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#ff7f00"</span>}]<span class="op">,</span> </span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Saponite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#a65628"</span>}]<span class="op">,</span> </span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Sepiolite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#e377c2"</span>}]<span class="op">,</span> </span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Vermiculite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#7f7f7f"</span>}]<span class="op">,</span>  </span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Oak leaf, new growth"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#3a8040"</span>}]<span class="op">,</span>  </span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Oak leaf, one year old"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#ffdd57"</span>}]<span class="op">,</span></span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Oak leaf, scenesced"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#1b9e77"</span>}]<span class="op">,</span></span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Maple Leaf"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#7570b3"</span>}]<span class="op">,</span></span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"HDPE bottle"</span><span class="op">,</span>  {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#1f78b4"</span>}]<span class="op">,</span> </span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"HDPE film"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#33a02c"</span>}]<span class="op">,</span> </span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"PVC"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#6a3d9a"</span>}]<span class="op">,</span></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Polysterene"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#b15928"</span>}]   </span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a>])<span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="121" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 120;"><span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> d3<span class="op">.</span><span class="fu">sort</span>(d3<span class="op">.</span><span class="fu">group</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">sample</span>)<span class="op">.</span><span class="fu">keys</span>())<span class="op">;</span></span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>categorizedData <span class="op">=</span> rawData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> info <span class="op">=</span> categoryLookup<span class="op">.</span><span class="fu">get</span>(d<span class="op">.</span><span class="at">sample</span>)</span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {</span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span>d<span class="op">,</span></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>    <span class="dt">category</span> <span class="op">:</span> info<span class="op">.</span><span class="at">category</span><span class="op">,</span>  </span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span> <span class="op">:</span> info<span class="op">.</span><span class="at">color</span>               </span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(categorizedData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">category</span>)))<span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-10-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-10-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-10-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="135" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 134;"><span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>filteredData <span class="op">=</span> categorizedData<span class="op">.</span><span class="fu">filter</span>(</span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a>  d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span> <span class="op">&gt;=</span> minWL <span class="op">&amp;&amp;</span> </span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">wavelength</span> <span class="op">&lt;=</span> maxWL <span class="op">&amp;&amp;</span> </span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>  categorySel<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">category</span>) <span class="op">&amp;&amp;</span></span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a>  sampleSel<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">sample</span>)</span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-11" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="145" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 144;"><span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a>plotWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(width<span class="op">,</span> <span class="dv">1800</span>)<span class="op">;</span></span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a>uiPx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">14</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(plotWidth <span class="op">/</span> <span class="dv">55</span>))<span class="op">;</span></span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a>labelWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">160</span><span class="op">,</span> uiPx <span class="op">*</span> <span class="dv">8</span>))<span class="op">;</span>  </span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a>inputWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">200</span><span class="op">,</span> uiPx <span class="op">*</span> <span class="dv">10</span>))<span class="op">;</span></span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;style&gt;</span></span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a><span class="vs">  .spectra-plots { --label-fs: </span><span class="sc">${</span>uiPx <span class="op">*</span> <span class="fl">0.8</span><span class="sc">}</span><span class="vs">px; }</span></span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a><span class="vs">  .spectra-plots form[class^="oi-"]{</span></span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a><span class="vs">    --label-width: </span><span class="sc">${</span>labelWidth<span class="sc">}</span><span class="vs">px !important;</span></span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a><span class="vs">    --input-width: </span><span class="sc">${</span>inputWidth<span class="sc">}</span><span class="vs">px !important;</span></span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/style&gt;`</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-12-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-9">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="161" data-source-offset="0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 160;"><span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (filteredData<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">1</span>) {</span>
+<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div style="color:#666;"&gt;No active selections to plot.&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rowsBySample <span class="op">=</span> d3<span class="op">.</span><span class="fu">group</span>(filteredData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">sample</span>)<span class="op">;</span>  <span class="co">// Map&lt;sample, rows[]&gt;</span></span>
+<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> adjustedData <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> resolutionSize <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">1</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(resolutionSel <span class="op">/</span> <span class="fl">0.7</span>))<span class="op">;</span> </span>
+<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> [sample<span class="op">,</span> rows] <span class="kw">of</span> rowsBySample) {</span>
+<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> adjusted <span class="op">=</span> rows<span class="op">.</span><span class="fu">map</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">reflectance</span>)<span class="op">;</span></span>
+<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (windowSel <span class="op">&gt;</span> <span class="dv">1</span>){</span>
+<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a>      adjusted <span class="op">=</span> d3<span class="op">.</span><span class="fu">blur</span>(adjusted<span class="op">,</span> windowSel)<span class="op">;</span></span>
+<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a>    } </span>
+<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> ymin<span class="op">,</span> ymax<span class="op">,</span> denom<span class="op">;</span></span>
+<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (normalize) {</span>
+<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a>      ymin <span class="op">=</span> d3<span class="op">.</span><span class="fu">min</span>(adjusted)<span class="op">;</span></span>
+<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a>      ymax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(adjusted)<span class="op">;</span></span>
+<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a>      denom <span class="op">=</span> ymax <span class="op">-</span> ymin<span class="op">;</span> </span>
+<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> adjusted<span class="op">.</span><span class="at">length</span><span class="op">;</span> i <span class="op">+=</span> resolutionSize) {</span>
+<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> y <span class="op">=</span> adjusted[i]<span class="op">;</span></span>
+<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (normalize){</span>
+<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> denom <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> (adjusted[i] <span class="op">-</span> ymin) <span class="op">/</span> denom <span class="op">:</span> <span class="dv">0</span> <span class="co">//avoid divide by 0</span></span>
+<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a>      adjustedData<span class="op">.</span><span class="fu">push</span>({</span>
+<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a>        <span class="dt">wavelength</span><span class="op">:</span> rows[i]<span class="op">.</span><span class="at">wavelength</span><span class="op">,</span></span>
+<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reflectance</span><span class="op">:</span> y<span class="op">,</span></span>
+<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a>        sample</span>
+<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> activeSamples <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(filteredData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">sample</span>)))<span class="op">;</span></span>
+<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fontPx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">10</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(plotWidth <span class="op">/</span> <span class="dv">55</span>))<span class="op">;</span></span>
+<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rotate <span class="op">=</span> plotWidth <span class="op">&lt;</span> <span class="dv">650</span> <span class="op">?</span> <span class="op">-</span><span class="dv">45</span> <span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xTickStart <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(minWL <span class="op">/</span> <span class="dv">20</span>) <span class="op">*</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xTickEnd <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(maxWL <span class="op">/</span> <span class="dv">20</span>) <span class="op">*</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yLabel <span class="op">=</span> normalize <span class="op">?</span> <span class="st">"Normalized reflectance"</span> <span class="op">:</span> <span class="st">"Reflectance"</span><span class="op">;</span></span>
+<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xLabel <span class="op">=</span> <span class="st">"Wavelength (nm)"</span></span>
+<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yStep <span class="op">=</span> <span class="fl">0.05</span><span class="op">;</span></span>
+<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> maxY <span class="op">=</span> normalize <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(adjustedData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">reflectance</span>)<span class="op">;</span></span>
+<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yMaxTick <span class="op">=</span> normalize <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(maxY<span class="op">/</span>yStep) <span class="op">*</span> yStep<span class="op">;</span></span>
+<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fmtVal <span class="op">=</span> normalize <span class="op">?</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3f"</span>) <span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".4f"</span>)<span class="op">;</span></span>
+<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> p <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> plotWidth<span class="op">,</span></span>
+<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(plotWidth <span class="op">*</span> (<span class="dv">11</span><span class="op">/</span><span class="dv">20</span>))<span class="op">,</span></span>
+<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">275</span><span class="op">,</span></span>
+<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">75</span><span class="op">,</span>   </span>
+<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span>   </span>
+<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> xLabel<span class="op">,</span></span>
+<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickPadding</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickRotate</span><span class="op">:</span> rotate<span class="op">,</span></span>
+<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> [minWL<span class="op">,</span> maxWL]<span class="op">,</span>                                         </span>
+<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">range</span>(xTickStart<span class="op">,</span> xTickEnd <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">30</span>)<span class="op">,</span></span>
+<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickFormat</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"d"</span>)                                    </span>
+<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> yLabel<span class="op">,</span></span>
+<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a>      <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickFormat</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">,</span></span>
+<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ticks</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a>      <span class="dt">nice</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickPadding</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> maxY <span class="op">+</span> <span class="fl">0.02</span>]</span>
+<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb13-240"><a href="#cb13-240" aria-hidden="true" tabindex="-1"></a>      <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> activeSamples<span class="op">,</span></span>
+<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a>      <span class="dt">range</span><span class="op">:</span> activeSamples<span class="op">.</span><span class="fu">map</span>(s <span class="kw">=&gt;</span> categoryLookup<span class="op">.</span><span class="fu">get</span>(s)<span class="op">.</span><span class="at">color</span>)<span class="op">,</span></span>
+<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a>      <span class="dt">inset</span><span class="op">:</span> { </span>
+<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a>        <span class="dt">anchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> </span>
+<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a>        <span class="dt">inset</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> </span>
+<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a>        <span class="dt">padding</span><span class="op">:</span> <span class="dv">5</span> </span>
+<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> { </span>
+<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>fontPx<span class="sc">}</span><span class="vs">px`</span><span class="op">,</span> </span>
+<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a>      <span class="st">"--plot-font-size"</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>fontPx<span class="sc">}</span><span class="vs">px`</span> </span>
+<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb13-255"><a href="#cb13-255" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">line</span>(adjustedData<span class="op">,</span> {</span>
+<span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a>        <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a>      })<span class="op">,</span></span>
+<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">dot</span>(adjustedData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({</span>
+<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fill</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span></span>
+<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a>        <span class="dt">marker</span><span class="op">:</span> <span class="st">"circle"</span><span class="op">,</span></span>
+<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a>        <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span></span>
+<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a>        <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a>      }))<span class="op">,</span></span>
+<span id="cb13-271"><a href="#cb13-271" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">text</span>(adjustedData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({</span>
+<span id="cb13-272"><a href="#cb13-272" aria-hidden="true" tabindex="-1"></a>        <span class="dt">px</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb13-273"><a href="#cb13-273" aria-hidden="true" tabindex="-1"></a>        <span class="dt">py</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb13-274"><a href="#cb13-274" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dx</span><span class="op">:</span> width <span class="op">*</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb13-275"><a href="#cb13-275" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">20</span><span class="op">,</span></span>
+<span id="cb13-276"><a href="#cb13-276" aria-hidden="true" tabindex="-1"></a>        <span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-left"</span><span class="op">,</span></span>
+<span id="cb13-277"><a href="#cb13-277" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontVariant</span><span class="op">:</span> <span class="st">"tabular-nums"</span><span class="op">,</span></span>
+<span id="cb13-278"><a href="#cb13-278" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> fontPx <span class="op">*</span> <span class="fl">0.8</span><span class="op">,</span></span>
+<span id="cb13-279"><a href="#cb13-279" aria-hidden="true" tabindex="-1"></a>        <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">sample</span><span class="sc">}</span><span class="vs">   λ </span><span class="sc">${</span><span class="fu">fmt</span>(d<span class="op">.</span><span class="at">wavelength</span>)<span class="sc">}</span><span class="vs"> nm    </span><span class="sc">${</span><span class="fu">fmtVal</span>(d<span class="op">.</span><span class="at">reflectance</span>)<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb13-280"><a href="#cb13-280" aria-hidden="true" tabindex="-1"></a>      }))<span class="op">,</span></span>
+<span id="cb13-281"><a href="#cb13-281" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">text</span>(adjustedData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">selectLast</span>({</span>
+<span id="cb13-282"><a href="#cb13-282" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb13-283"><a href="#cb13-283" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb13-284"><a href="#cb13-284" aria-hidden="true" tabindex="-1"></a>        <span class="dt">z</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb13-285"><a href="#cb13-285" aria-hidden="true" tabindex="-1"></a>        <span class="dt">text</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb13-286"><a href="#cb13-286" aria-hidden="true" tabindex="-1"></a>        <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb13-287"><a href="#cb13-287" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> fontPx <span class="op">*</span> <span class="fl">0.9</span><span class="op">,</span></span>
+<span id="cb13-288"><a href="#cb13-288" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dx</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span></span>
+<span id="cb13-289"><a href="#cb13-289" aria-hidden="true" tabindex="-1"></a>        <span class="dt">clip</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb13-290"><a href="#cb13-290" aria-hidden="true" tabindex="-1"></a>      }))</span>
+<span id="cb13-291"><a href="#cb13-291" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb13-292"><a href="#cb13-292" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb13-293"><a href="#cb13-293" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> swatches <span class="op">=</span> p<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'div[class*="-swatches-wrap"], div[class*="-swatches"], .plot-swatches'</span>)<span class="op">;</span></span>
+<span id="cb13-294"><a href="#cb13-294" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (swatches) {</span>
+<span id="cb13-295"><a href="#cb13-295" aria-hidden="true" tabindex="-1"></a>    swatches<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span>fontPx <span class="op">*</span> <span class="fl">0.6</span><span class="sc">}</span><span class="vs">px`</span><span class="op">;</span>   </span>
+<span id="cb13-296"><a href="#cb13-296" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-297"><a href="#cb13-297" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> p<span class="op">;</span></span>
+<span id="cb13-298"><a href="#cb13-298" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-13" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+<div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">comments:</span><span class="co"> false</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> custom</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">    margin-top: 0em</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">    margin-bottom: 0em</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">    minimal: true</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">    smooth-scroll: true</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-responsive: true</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: false</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">    echo: false</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">    keep-hidden: true</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>:::: {.hero-small .hero-gradient .hero-clouds}</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Surface Spectra**</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>::::: {.container}</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>:::: {.about .px-md-7 .py-3 style="border-bottom: 1px solid #C8C7C7;"} </span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># While the core mission science focuses on observations of atmospheric composition, the mission will also observe surface properties at unmatched spectral resolutions.  </span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>Carbon-I mission is designed as a wide-swath mapping mission, collecting shortwave infrared imaging spectroscopy data. This will provide new insights into a wide range of areas including critical mineral distributions, vegetation stress, and pollution. Carbon-I’s higher spectral resolution in the shortwave infrared compared to existing missions (e.g., EMIT) allows clearer discrimination of minerals such as lithium-bearing hectorite from similar materials, offering significant value for scientific analysis and potential resource exploration. The Carbon-I team has taken surface reflectance measurements with the Carbon-I Demonstration Unit in the laboratory - check them out below with this tool which allows you to compare these highly resolved spectral data with coarser spectral resolutions to see the power of Carbon-I's surface spectra.</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>::::: {.spectra-plots}</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>::: {.grid .py-3}</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rangeSlider <span class="im">as</span> rangeSlider } <span class="im">from</span> <span class="st">'@mootari/range-slider'</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>rawData <span class="op">=</span>  <span class="fu">FileAttachment</span>(<span class="st">"data/rfl_lowpass_shaped_v2.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({<span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">;</span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>::: {.g-col-12 .samples-filter}</span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>viewof categorySel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(categories<span class="op">,</span> {</span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Sample Categories"</span><span class="op">,</span> </span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> [<span class="st">"Minerals"</span>]}</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>sampleOptions <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(categoryLookup<span class="op">.</span><span class="fu">keys</span>())<span class="op">.</span><span class="fu">filter</span>(</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>  s <span class="kw">=&gt;</span> samples<span class="op">.</span><span class="fu">includes</span>(s) <span class="op">&amp;&amp;</span> categorySel<span class="op">.</span><span class="fu">includes</span>(categoryLookup<span class="op">.</span><span class="fu">get</span>(s)<span class="op">.</span><span class="at">category</span>)</span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>viewof sampleSel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(sampleOptions<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> sampleOptions })<span class="op">;</span></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>viewof samplePanel <span class="op">=</span> categorySel<span class="op">.</span><span class="at">length</span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;details class="sample-drop" open&gt;</span></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="vs">           &lt;summary style="color:#000;"&gt;Samples&lt;/summary&gt;</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a><span class="vs">           </span><span class="sc">${</span>viewof sampleSel<span class="sc">}</span></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="vs">         &lt;/details&gt;`</span></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> <span class="fu">html</span><span class="vs">``</span><span class="op">;</span></span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>::: {.g-col-3 .px-5 .controls}</span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>fmt <span class="op">=</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".2f"</span>)<span class="op">;</span></span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>viewof slider <span class="op">=</span> <span class="fu">rangeSlider</span>({</span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">extent</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)[<span class="dv">0</span>]<span class="op">,</span></span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">extent</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)[<span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span><span class="fu">fmt</span>(d)<span class="sc">}</span><span class="vs"> nm`</span><span class="op">,</span></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">'Select a range'</span><span class="op">,</span></span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a>minWL <span class="op">=</span> slider[<span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>maxWL <span class="op">=</span> slider[<span class="dv">1</span>]<span class="op">;</span></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a>xMin <span class="op">=</span> d3<span class="op">.</span><span class="fu">min</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)<span class="op">;</span></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>xMax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span>)<span class="op">;</span></span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>viewof normalize <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">toggle</span>({</span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Normalize 0-1 (per sample)"</span><span class="op">,</span></span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>viewof resolutionSel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.7</span><span class="op">,</span> <span class="fl">15.4</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Resolution (nm)"</span>})</span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>viewof windowSel <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Spectral Averaging Window"</span>})</span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>categoryLookup <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>([</span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Hectorite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#4daf4a"</span>}]<span class="op">,</span>  </span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Magnesite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#ff7f00"</span>}]<span class="op">,</span> </span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Saponite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#a65628"</span>}]<span class="op">,</span> </span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Sepiolite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#e377c2"</span>}]<span class="op">,</span> </span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Vermiculite"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Minerals"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#7f7f7f"</span>}]<span class="op">,</span>  </span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Oak leaf, new growth"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#3a8040"</span>}]<span class="op">,</span>  </span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Oak leaf, one year old"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#ffdd57"</span>}]<span class="op">,</span></span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Oak leaf, scenesced"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#1b9e77"</span>}]<span class="op">,</span></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Maple Leaf"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Vegetation"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#7570b3"</span>}]<span class="op">,</span></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"HDPE bottle"</span><span class="op">,</span>  {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#1f78b4"</span>}]<span class="op">,</span> </span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"HDPE film"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#33a02c"</span>}]<span class="op">,</span> </span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"PVC"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#6a3d9a"</span>}]<span class="op">,</span></span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Polysterene"</span><span class="op">,</span> {<span class="dt">category</span><span class="op">:</span> <span class="st">"Plastics"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#b15928"</span>}]   </span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a>])<span class="op">;</span></span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a>samples <span class="op">=</span> d3<span class="op">.</span><span class="fu">sort</span>(d3<span class="op">.</span><span class="fu">group</span>(rawData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">sample</span>)<span class="op">.</span><span class="fu">keys</span>())<span class="op">;</span></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>categorizedData <span class="op">=</span> rawData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> info <span class="op">=</span> categoryLookup<span class="op">.</span><span class="fu">get</span>(d<span class="op">.</span><span class="at">sample</span>)</span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {</span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span>d<span class="op">,</span></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a>    <span class="dt">category</span> <span class="op">:</span> info<span class="op">.</span><span class="at">category</span><span class="op">,</span>  </span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span> <span class="op">:</span> info<span class="op">.</span><span class="at">color</span>               </span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(categorizedData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">category</span>)))<span class="op">;</span></span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>filteredData <span class="op">=</span> categorizedData<span class="op">.</span><span class="fu">filter</span>(</span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>  d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">wavelength</span> <span class="op">&gt;=</span> minWL <span class="op">&amp;&amp;</span> </span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a>  d<span class="op">.</span><span class="at">wavelength</span> <span class="op">&lt;=</span> maxWL <span class="op">&amp;&amp;</span> </span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a>  categorySel<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">category</span>) <span class="op">&amp;&amp;</span></span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a>  sampleSel<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">sample</span>)</span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a>plotWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(width<span class="op">,</span> <span class="dv">1800</span>)<span class="op">;</span></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a>uiPx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">14</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(plotWidth <span class="op">/</span> <span class="dv">55</span>))<span class="op">;</span></span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>labelWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">160</span><span class="op">,</span> uiPx <span class="op">*</span> <span class="dv">8</span>))<span class="op">;</span>  </span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a>inputWidth <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">200</span><span class="op">,</span> uiPx <span class="op">*</span> <span class="dv">10</span>))<span class="op">;</span></span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;style&gt;</span></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a><span class="vs">  .spectra-plots { --label-fs: </span><span class="sc">${</span>uiPx <span class="op">*</span> <span class="fl">0.8</span><span class="sc">}</span><span class="vs">px; }</span></span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a><span class="vs">  .spectra-plots form[class^="oi-"]{</span></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="vs">    --label-width: </span><span class="sc">${</span>labelWidth<span class="sc">}</span><span class="vs">px !important;</span></span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a><span class="vs">    --input-width: </span><span class="sc">${</span>inputWidth<span class="sc">}</span><span class="vs">px !important;</span></span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/style&gt;`</span></span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a>::: {.g-col-9}</span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (filteredData<span class="op">.</span><span class="at">length</span> <span class="op">&lt;</span> <span class="dv">1</span>) {</span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div style="color:#666;"&gt;No active selections to plot.&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rowsBySample <span class="op">=</span> d3<span class="op">.</span><span class="fu">group</span>(filteredData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">sample</span>)<span class="op">;</span>  <span class="co">// Map&lt;sample, rows[]&gt;</span></span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> adjustedData <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> resolutionSize <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">1</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(resolutionSel <span class="op">/</span> <span class="fl">0.7</span>))<span class="op">;</span> </span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> [sample<span class="op">,</span> rows] <span class="kw">of</span> rowsBySample) {</span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> adjusted <span class="op">=</span> rows<span class="op">.</span><span class="fu">map</span>(r <span class="kw">=&gt;</span> r<span class="op">.</span><span class="at">reflectance</span>)<span class="op">;</span></span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (windowSel <span class="op">&gt;</span> <span class="dv">1</span>){</span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>      adjusted <span class="op">=</span> d3<span class="op">.</span><span class="fu">blur</span>(adjusted<span class="op">,</span> windowSel)<span class="op">;</span></span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>    } </span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> ymin<span class="op">,</span> ymax<span class="op">,</span> denom<span class="op">;</span></span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (normalize) {</span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>      ymin <span class="op">=</span> d3<span class="op">.</span><span class="fu">min</span>(adjusted)<span class="op">;</span></span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a>      ymax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(adjusted)<span class="op">;</span></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a>      denom <span class="op">=</span> ymax <span class="op">-</span> ymin<span class="op">;</span> </span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> adjusted<span class="op">.</span><span class="at">length</span><span class="op">;</span> i <span class="op">+=</span> resolutionSize) {</span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> y <span class="op">=</span> adjusted[i]<span class="op">;</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (normalize){</span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> denom <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> (adjusted[i] <span class="op">-</span> ymin) <span class="op">/</span> denom <span class="op">:</span> <span class="dv">0</span> <span class="co">//avoid divide by 0</span></span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a>      adjustedData<span class="op">.</span><span class="fu">push</span>({</span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>        <span class="dt">wavelength</span><span class="op">:</span> rows[i]<span class="op">.</span><span class="at">wavelength</span><span class="op">,</span></span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reflectance</span><span class="op">:</span> y<span class="op">,</span></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>        sample</span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> activeSamples <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(filteredData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">sample</span>)))<span class="op">;</span></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fontPx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">10</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(plotWidth <span class="op">/</span> <span class="dv">55</span>))<span class="op">;</span></span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rotate <span class="op">=</span> plotWidth <span class="op">&lt;</span> <span class="dv">650</span> <span class="op">?</span> <span class="op">-</span><span class="dv">45</span> <span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xTickStart <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(minWL <span class="op">/</span> <span class="dv">20</span>) <span class="op">*</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xTickEnd <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(maxWL <span class="op">/</span> <span class="dv">20</span>) <span class="op">*</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yLabel <span class="op">=</span> normalize <span class="op">?</span> <span class="st">"Normalized reflectance"</span> <span class="op">:</span> <span class="st">"Reflectance"</span><span class="op">;</span></span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xLabel <span class="op">=</span> <span class="st">"Wavelength (nm)"</span></span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yStep <span class="op">=</span> <span class="fl">0.05</span><span class="op">;</span></span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> maxY <span class="op">=</span> normalize <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">max</span>(adjustedData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">reflectance</span>)<span class="op">;</span></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> yMaxTick <span class="op">=</span> normalize <span class="op">?</span> <span class="dv">1</span> <span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(maxY<span class="op">/</span>yStep) <span class="op">*</span> yStep<span class="op">;</span></span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> fmtVal <span class="op">=</span> normalize <span class="op">?</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3f"</span>) <span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".4f"</span>)<span class="op">;</span></span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> p <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> plotWidth<span class="op">,</span></span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(plotWidth <span class="op">*</span> (<span class="dv">11</span><span class="op">/</span><span class="dv">20</span>))<span class="op">,</span></span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">275</span><span class="op">,</span></span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">75</span><span class="op">,</span>   </span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span>   </span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> xLabel<span class="op">,</span></span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickPadding</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickRotate</span><span class="op">:</span> rotate<span class="op">,</span></span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> [minWL<span class="op">,</span> maxWL]<span class="op">,</span>                                         </span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">range</span>(xTickStart<span class="op">,</span> xTickEnd <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">30</span>)<span class="op">,</span></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickFormat</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"d"</span>)                                    </span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> yLabel<span class="op">,</span></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a>      <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickFormat</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">,</span></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ticks</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a>      <span class="dt">nice</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickPadding</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> maxY <span class="op">+</span> <span class="fl">0.02</span>]</span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a>      <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> activeSamples<span class="op">,</span></span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a>      <span class="dt">range</span><span class="op">:</span> activeSamples<span class="op">.</span><span class="fu">map</span>(s <span class="kw">=&gt;</span> categoryLookup<span class="op">.</span><span class="fu">get</span>(s)<span class="op">.</span><span class="at">color</span>)<span class="op">,</span></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>      <span class="dt">inset</span><span class="op">:</span> { </span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a>        <span class="dt">anchor</span><span class="op">:</span> <span class="st">"top-right"</span><span class="op">,</span> </span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a>        <span class="dt">inset</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> </span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a>        <span class="dt">padding</span><span class="op">:</span> <span class="dv">5</span> </span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> { </span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>fontPx<span class="sc">}</span><span class="vs">px`</span><span class="op">,</span> </span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>      <span class="st">"--plot-font-size"</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>fontPx<span class="sc">}</span><span class="vs">px`</span> </span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">line</span>(adjustedData<span class="op">,</span> {</span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a>        <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>      })<span class="op">,</span></span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">dot</span>(adjustedData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({</span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fill</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a>        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a>        <span class="dt">marker</span><span class="op">:</span> <span class="st">"circle"</span><span class="op">,</span></span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a>        <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>        <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a>      }))<span class="op">,</span></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">text</span>(adjustedData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({</span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a>        <span class="dt">px</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a>        <span class="dt">py</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dx</span><span class="op">:</span> width <span class="op">*</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dy</span><span class="op">:</span> <span class="op">-</span><span class="dv">20</span><span class="op">,</span></span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a>        <span class="dt">frameAnchor</span><span class="op">:</span> <span class="st">"top-left"</span><span class="op">,</span></span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontVariant</span><span class="op">:</span> <span class="st">"tabular-nums"</span><span class="op">,</span></span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> fontPx <span class="op">*</span> <span class="fl">0.8</span><span class="op">,</span></span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>        <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">sample</span><span class="sc">}</span><span class="vs">   λ </span><span class="sc">${</span><span class="fu">fmt</span>(d<span class="op">.</span><span class="at">wavelength</span>)<span class="sc">}</span><span class="vs"> nm    </span><span class="sc">${</span><span class="fu">fmtVal</span>(d<span class="op">.</span><span class="at">reflectance</span>)<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a>      }))<span class="op">,</span></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">text</span>(adjustedData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">selectLast</span>({</span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"wavelength"</span><span class="op">,</span></span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"reflectance"</span><span class="op">,</span></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a>        <span class="dt">z</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a>        <span class="dt">text</span><span class="op">:</span> <span class="st">"sample"</span><span class="op">,</span></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>        <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> fontPx <span class="op">*</span> <span class="fl">0.9</span><span class="op">,</span></span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dx</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a>        <span class="dt">clip</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a>      }))</span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> swatches <span class="op">=</span> p<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'div[class*="-swatches-wrap"], div[class*="-swatches"], .plot-swatches'</span>)<span class="op">;</span></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (swatches) {</span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a>    swatches<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span>fontPx <span class="op">*</span> <span class="fl">0.6</span><span class="sc">}</span><span class="vs">px`</span><span class="op">;</span>   </span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> p<span class="op">;</span></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a>:::::</span>
+</code></pre></div>
+</div></div></div></div></div>
+
+
+
+<!-- Navbar Scale Animation-->
+<script>
+    const nav = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('compact');
+      } else {
+        nav.classList.remove('compact');
+      }
+    });
+</script>
+
+<!-- For About Page Layout-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleBlock = document.querySelector(".quarto-title-block");
+    const image = document.querySelector(".about-image");
+
+    const title = document.querySelector('.quarto-title');
+    const logos = document.querySelector('.about-links');
+
+    //place images into titleBlock area
+    if (titleBlock && image) {
+    titleBlock.insertBefore(image, titleBlock.firstChild);
+    }
+
+    //place logos into title area
+    if (title && logos) {
+    title.appendChild(logos);
+    }
+  });
+</script>
+
+<!-- Only add references if there is a bibliography-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refs = document.getElementById("refs");
+      if (!refs) return;
+    
+      document.querySelectorAll('#quarto-appendix').forEach(el => el.remove());
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "references-wrapper";
+    
+      const container = document.createElement("div");
+      container.className = "container about-references";
+    
+      const heading = document.createElement("h1");
+      heading.textContent = "References";
+    
+      container.appendChild(heading);
+      container.appendChild(refs);
+      wrapper.appendChild(container);
+    
+      const footerBanner = document.querySelector(".footer");
+      if (footerBanner && footerBanner.parentNode) {
+        footerBanner.parentNode.insertBefore(wrapper, footerBanner);
+      } else {
+        document.body.appendChild(wrapper);
+      }
+    });
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7IHJhbmdlU2xpZGVyIGFzIHJhbmdlU2xpZGVyIH0gZnJvbSAnQG1vb3RhcmkvcmFuZ2Utc2xpZGVyJ1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicmF3RGF0YSA9ICBGaWxlQXR0YWNobWVudChcImRhdGEvcmZsX2xvd3Bhc3Nfc2hhcGVkX3YyLmNzdlwiKS5jc3Yoe3R5cGVkOiB0cnVlfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgY2F0ZWdvcnlTZWwgPSBJbnB1dHMuY2hlY2tib3goY2F0ZWdvcmllcywge1xuICBsYWJlbDogXCJTYW1wbGUgQ2F0ZWdvcmllc1wiLCBcbiAgdmFsdWU6IFtcIk1pbmVyYWxzXCJdfVxuKTtcbnNhbXBsZU9wdGlvbnMgPSBBcnJheS5mcm9tKGNhdGVnb3J5TG9va3VwLmtleXMoKSkuZmlsdGVyKFxuICBzID0+IHNhbXBsZXMuaW5jbHVkZXMocykgJiYgY2F0ZWdvcnlTZWwuaW5jbHVkZXMoY2F0ZWdvcnlMb29rdXAuZ2V0KHMpLmNhdGVnb3J5KVxuKTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBzYW1wbGVTZWwgPSBJbnB1dHMuY2hlY2tib3goc2FtcGxlT3B0aW9ucywgeyB2YWx1ZTogc2FtcGxlT3B0aW9ucyB9KTtcbnZpZXdvZiBzYW1wbGVQYW5lbCA9IGNhdGVnb3J5U2VsLmxlbmd0aFxuICA/IGh0bWxgPGRldGFpbHMgY2xhc3M9XCJzYW1wbGUtZHJvcFwiIG9wZW4+XG4gICAgICAgICAgIDxzdW1tYXJ5IHN0eWxlPVwiY29sb3I6IzAwMDtcIj5TYW1wbGVzPC9zdW1tYXJ5PlxuICAgICAgICAgICAke3ZpZXdvZiBzYW1wbGVTZWx9XG4gICAgICAgICA8L2RldGFpbHM+YFxuICA6IGh0bWxgYDtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZtdCA9IGQzLmZvcm1hdChcIi4yZlwiKTtcblxudmlld29mIHNsaWRlciA9IHJhbmdlU2xpZGVyKHtcbiAgbWluOiBkMy5leHRlbnQocmF3RGF0YSwgZCA9PiBkLndhdmVsZW5ndGgpWzBdLFxuICBtYXg6IGQzLmV4dGVudChyYXdEYXRhLCBkID0+IGQud2F2ZWxlbmd0aClbMV0sXG4gIHN0ZXA6IDAuNyxcbiAgZm9ybWF0OiBkID0+IGAke2ZtdChkKX0gbm1gLFxuICB0aXRsZTogJ1NlbGVjdCBhIHJhbmdlJyxcbn0pXG5cbm1pbldMID0gc2xpZGVyWzBdO1xubWF4V0wgPSBzbGlkZXJbMV07XG5cbnhNaW4gPSBkMy5taW4ocmF3RGF0YSwgZCA9PiBkLndhdmVsZW5ndGgpO1xueE1heCA9IGQzLm1heChyYXdEYXRhLCBkID0+IGQud2F2ZWxlbmd0aCk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygbm9ybWFsaXplID0gSW5wdXRzLnRvZ2dsZSh7XG4gIGxhYmVsOiBcIk5vcm1hbGl6ZSAwLTEgKHBlciBzYW1wbGUpXCIsXG4gIHZhbHVlOiBmYWxzZVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiByZXNvbHV0aW9uU2VsID0gSW5wdXRzLnJhbmdlKFswLjcsIDE1LjRdLCB7c3RlcDogMC43LCB2YWx1ZTogMC43LCBsYWJlbDogXCJSZXNvbHV0aW9uIChubSlcIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2Ygd2luZG93U2VsID0gSW5wdXRzLnJhbmdlKFsxLCAxNV0sIHtzdGVwOiAxLCB2YWx1ZTogMSwgbGFiZWw6IFwiU3BlY3RyYWwgQXZlcmFnaW5nIFdpbmRvd1wifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNhdGVnb3J5TG9va3VwID0gbmV3IE1hcChbXG4gIFtcIkhlY3Rvcml0ZVwiLCB7Y2F0ZWdvcnk6IFwiTWluZXJhbHNcIiwgY29sb3I6IFwiIzRkYWY0YVwifV0sICBcbiAgW1wiTWFnbmVzaXRlXCIsIHtjYXRlZ29yeTogXCJNaW5lcmFsc1wiLCBjb2xvcjogXCIjZmY3ZjAwXCJ9XSwgXG4gIFtcIlNhcG9uaXRlXCIsIHtjYXRlZ29yeTogXCJNaW5lcmFsc1wiLCBjb2xvcjogXCIjYTY1NjI4XCJ9XSwgXG4gIFtcIlNlcGlvbGl0ZVwiLCB7Y2F0ZWdvcnk6IFwiTWluZXJhbHNcIiwgY29sb3I6IFwiI2UzNzdjMlwifV0sIFxuICBbXCJWZXJtaWN1bGl0ZVwiLCB7Y2F0ZWdvcnk6IFwiTWluZXJhbHNcIiwgY29sb3I6IFwiIzdmN2Y3ZlwifV0sICBcblxuICBbXCJPYWsgbGVhZiwgbmV3IGdyb3d0aFwiLCB7Y2F0ZWdvcnk6IFwiVmVnZXRhdGlvblwiLCBjb2xvcjogXCIjM2E4MDQwXCJ9XSwgIFxuICBbXCJPYWsgbGVhZiwgb25lIHllYXIgb2xkXCIsIHtjYXRlZ29yeTogXCJWZWdldGF0aW9uXCIsIGNvbG9yOiBcIiNmZmRkNTdcIn1dLFxuICBbXCJPYWsgbGVhZiwgc2NlbmVzY2VkXCIsIHtjYXRlZ29yeTogXCJWZWdldGF0aW9uXCIsIGNvbG9yOiBcIiMxYjllNzdcIn1dLFxuICBbXCJNYXBsZSBMZWFmXCIsIHtjYXRlZ29yeTogXCJWZWdldGF0aW9uXCIsIGNvbG9yOiBcIiM3NTcwYjNcIn1dLFxuXG4gIFtcIkhEUEUgYm90dGxlXCIsICB7Y2F0ZWdvcnk6IFwiUGxhc3RpY3NcIiwgY29sb3I6IFwiIzFmNzhiNFwifV0sIFxuICBbXCJIRFBFIGZpbG1cIiwge2NhdGVnb3J5OiBcIlBsYXN0aWNzXCIsIGNvbG9yOiBcIiMzM2EwMmNcIn1dLCBcbiAgW1wiUFZDXCIsIHtjYXRlZ29yeTogXCJQbGFzdGljc1wiLCBjb2xvcjogXCIjNmEzZDlhXCJ9XSxcbiAgW1wiUG9seXN0ZXJlbmVcIiwge2NhdGVnb3J5OiBcIlBsYXN0aWNzXCIsIGNvbG9yOiBcIiNiMTU5MjhcIn1dICAgXG5dKTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzYW1wbGVzID0gZDMuc29ydChkMy5ncm91cChyYXdEYXRhLCBkID0+IGQuc2FtcGxlKS5rZXlzKCkpO1xuXG5jYXRlZ29yaXplZERhdGEgPSByYXdEYXRhLm1hcChkID0+IHtcbiAgY29uc3QgaW5mbyA9IGNhdGVnb3J5TG9va3VwLmdldChkLnNhbXBsZSlcbiAgcmV0dXJuIHtcbiAgICAuLi5kLFxuICAgIGNhdGVnb3J5IDogaW5mby5jYXRlZ29yeSwgIFxuICAgIGNvbG9yIDogaW5mby5jb2xvciAgICAgICAgICAgICAgIFxuICB9O1xufSk7XG5cbmNhdGVnb3JpZXMgPSBBcnJheS5mcm9tKG5ldyBTZXQoY2F0ZWdvcml6ZWREYXRhLm1hcChkID0+IGQuY2F0ZWdvcnkpKSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZmlsdGVyZWREYXRhID0gY2F0ZWdvcml6ZWREYXRhLmZpbHRlcihcbiAgZCA9PiBkLndhdmVsZW5ndGggPj0gbWluV0wgJiYgXG4gIGQud2F2ZWxlbmd0aCA8PSBtYXhXTCAmJiBcbiAgY2F0ZWdvcnlTZWwuaW5jbHVkZXMoZC5jYXRlZ29yeSkgJiZcbiAgc2FtcGxlU2VsLmluY2x1ZGVzKGQuc2FtcGxlKVxuKTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwbG90V2lkdGggPSBNYXRoLm1pbih3aWR0aCwgMTgwMCk7XG51aVB4ID0gTWF0aC5tYXgoMTQsIE1hdGgucm91bmQocGxvdFdpZHRoIC8gNTUpKTtcbmxhYmVsV2lkdGggPSBNYXRoLnJvdW5kKE1hdGgubWF4KDE2MCwgdWlQeCAqIDgpKTsgIFxuaW5wdXRXaWR0aCA9IE1hdGgucm91bmQoTWF0aC5tYXgoMjAwLCB1aVB4ICogMTApKTtcblxuaHRtbGA8c3R5bGU+XG4gIC5zcGVjdHJhLXBsb3RzIHsgLS1sYWJlbC1mczogJHt1aVB4ICogMC44fXB4OyB9XG4gIC5zcGVjdHJhLXBsb3RzIGZvcm1bY2xhc3NePVwib2ktXCJde1xuICAgIC0tbGFiZWwtd2lkdGg6ICR7bGFiZWxXaWR0aH1weCAhaW1wb3J0YW50O1xuICAgIC0taW5wdXQtd2lkdGg6ICR7aW5wdXRXaWR0aH1weCAhaW1wb3J0YW50O1xuICB9XG48L3N0eWxlPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGlmIChmaWx0ZXJlZERhdGEubGVuZ3RoIDwgMSkge1xuICAgIHJldHVybiBodG1sYDxkaXYgc3R5bGU9XCJjb2xvcjojNjY2O1wiPk5vIGFjdGl2ZSBzZWxlY3Rpb25zIHRvIHBsb3QuPC9kaXY+YDtcbiAgfVxuXG4gIGNvbnN0IHJvd3NCeVNhbXBsZSA9IGQzLmdyb3VwKGZpbHRlcmVkRGF0YSwgZCA9PiBkLnNhbXBsZSk7ICAvLyBNYXA8c2FtcGxlLCByb3dzW10+XG4gIGNvbnN0IGFkanVzdGVkRGF0YSA9IFtdO1xuICBjb25zdCByZXNvbHV0aW9uU2l6ZSA9IE1hdGgubWF4KDEsIE1hdGgucm91bmQocmVzb2x1dGlvblNlbCAvIDAuNykpOyBcblxuICBmb3IgKGNvbnN0IFtzYW1wbGUsIHJvd3NdIG9mIHJvd3NCeVNhbXBsZSkge1xuICAgIGxldCBhZGp1c3RlZCA9IHJvd3MubWFwKHIgPT4gci5yZWZsZWN0YW5jZSk7XG5cbiAgICBpZiAod2luZG93U2VsID4gMSl7XG4gICAgICBhZGp1c3RlZCA9IGQzLmJsdXIoYWRqdXN0ZWQsIHdpbmRvd1NlbCk7XG4gICAgfSBcblxuICAgIGxldCB5bWluLCB5bWF4LCBkZW5vbTtcbiAgICBpZiAobm9ybWFsaXplKSB7XG4gICAgICB5bWluID0gZDMubWluKGFkanVzdGVkKTtcbiAgICAgIHltYXggPSBkMy5tYXgoYWRqdXN0ZWQpO1xuICAgICAgZGVub20gPSB5bWF4IC0geW1pbjsgXG4gICAgfVxuXG4gICAgZm9yIChsZXQgaSA9IDA7IGkgPCBhZGp1c3RlZC5sZW5ndGg7IGkgKz0gcmVzb2x1dGlvblNpemUpIHtcbiAgICAgIGxldCB5ID0gYWRqdXN0ZWRbaV07XG4gICAgICBpZiAobm9ybWFsaXplKXtcbiAgICAgICAgeSA9IGRlbm9tID4gMCA/IChhZGp1c3RlZFtpXSAtIHltaW4pIC8gZGVub20gOiAwIC8vYXZvaWQgZGl2aWRlIGJ5IDBcbiAgICAgIH1cbiAgICAgIFxuICAgICAgYWRqdXN0ZWREYXRhLnB1c2goe1xuICAgICAgICB3YXZlbGVuZ3RoOiByb3dzW2ldLndhdmVsZW5ndGgsXG4gICAgICAgIHJlZmxlY3RhbmNlOiB5LFxuICAgICAgICBzYW1wbGVcbiAgICAgIH0pO1xuICAgIH1cbiAgfVxuXG4gIGNvbnN0IGFjdGl2ZVNhbXBsZXMgPSBBcnJheS5mcm9tKG5ldyBTZXQoZmlsdGVyZWREYXRhLm1hcChkID0+IGQuc2FtcGxlKSkpO1xuICBjb25zdCBmb250UHggPSBNYXRoLm1heCgxMCwgTWF0aC5yb3VuZChwbG90V2lkdGggLyA1NSkpO1xuICBjb25zdCByb3RhdGUgPSBwbG90V2lkdGggPCA2NTAgPyAtNDUgOiAwO1xuXG4gIGNvbnN0IHhUaWNrU3RhcnQgPSBNYXRoLmNlaWwobWluV0wgLyAyMCkgKiAyMDtcbiAgY29uc3QgeFRpY2tFbmQgPSBNYXRoLmZsb29yKG1heFdMIC8gMjApICogMjA7XG5cbiAgY29uc3QgeUxhYmVsID0gbm9ybWFsaXplID8gXCJOb3JtYWxpemVkIHJlZmxlY3RhbmNlXCIgOiBcIlJlZmxlY3RhbmNlXCI7XG4gIGNvbnN0IHhMYWJlbCA9IFwiV2F2ZWxlbmd0aCAobm0pXCJcblxuICBjb25zdCB5U3RlcCA9IDAuMDU7XG4gIGNvbnN0IG1heFkgPSBub3JtYWxpemUgPyAxIDogZDMubWF4KGFkanVzdGVkRGF0YSwgZCA9PiBkLnJlZmxlY3RhbmNlKTtcbiAgY29uc3QgeU1heFRpY2sgPSBub3JtYWxpemUgPyAxIDogTWF0aC5jZWlsKG1heFkveVN0ZXApICogeVN0ZXA7XG5cbiAgY29uc3QgZm10VmFsID0gbm9ybWFsaXplID8gZDMuZm9ybWF0KFwiLjNmXCIpIDogZDMuZm9ybWF0KFwiLjRmXCIpO1xuXG4gIGNvbnN0IHAgPSBQbG90LnBsb3Qoe1xuICAgIHdpZHRoOiBwbG90V2lkdGgsXG4gICAgaGVpZ2h0OiBNYXRoLnJvdW5kKHBsb3RXaWR0aCAqICgxMS8yMCkpLFxuICAgIG1hcmdpblJpZ2h0OiAyNzUsXG4gICAgbWFyZ2luTGVmdDogNzUsICAgXG4gICAgbWFyZ2luVG9wOiA0NSwgICBcbiAgICBtYXJnaW5Cb3R0b206IDQwLFxuXG4gICAgeDoge1xuICAgICAgbGFiZWw6IHhMYWJlbCxcbiAgICAgIHRpY2tQYWRkaW5nOiAxMCxcbiAgICAgIHRpY2tSb3RhdGU6IHJvdGF0ZSxcbiAgICAgIGRvbWFpbjogW21pbldMLCBtYXhXTF0sICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgIHRpY2tzOiBkMy5yYW5nZSh4VGlja1N0YXJ0LCB4VGlja0VuZCArIDEsIDMwKSxcbiAgICAgIHRpY2tGb3JtYXQ6IGQzLmZvcm1hdChcImRcIikgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICB9LFxuICAgIHk6IHtcbiAgICAgIGxhYmVsOiB5TGFiZWwsXG4gICAgICBncmlkOiB0cnVlLFxuICAgICAgdGlja0Zvcm1hdDogZCA9PiBkLnRvRml4ZWQoMiksXG4gICAgICB0aWNrczogMjAsXG4gICAgICBuaWNlOiBmYWxzZSxcbiAgICAgIHRpY2tQYWRkaW5nOiAxMCxcbiAgICAgIGRvbWFpbjogWzAsIG1heFkgKyAwLjAyXVxuICAgIH0sXG4gICAgY29sb3I6IHtcbiAgICAgIGxlZ2VuZDogdHJ1ZSxcbiAgICAgIGRvbWFpbjogYWN0aXZlU2FtcGxlcyxcbiAgICAgIHJhbmdlOiBhY3RpdmVTYW1wbGVzLm1hcChzID0+IGNhdGVnb3J5TG9va3VwLmdldChzKS5jb2xvciksXG4gICAgICBpbnNldDogeyBcbiAgICAgICAgYW5jaG9yOiBcInRvcC1yaWdodFwiLCBcbiAgICAgICAgaW5zZXQ6IDEwLCBcbiAgICAgICAgcGFkZGluZzogNSBcbiAgICAgIH1cbiAgICB9LFxuICAgIHN0eWxlOiB7IFxuICAgICAgZm9udFNpemU6IGAke2ZvbnRQeH1weGAsIFxuICAgICAgXCItLXBsb3QtZm9udC1zaXplXCI6IGAke2ZvbnRQeH1weGAgXG4gICAgfSxcblxuICAgIG1hcmtzOiBbXG4gICAgICBQbG90LmxpbmUoYWRqdXN0ZWREYXRhLCB7XG4gICAgICAgIHg6IFwid2F2ZWxlbmd0aFwiLFxuICAgICAgICB5OiBcInJlZmxlY3RhbmNlXCIsXG4gICAgICAgIHN0cm9rZTogXCJzYW1wbGVcIixcbiAgICAgICAgdGl0bGU6IFwic2FtcGxlXCIsXG4gICAgICAgIHN0cm9rZVdpZHRoOiA1XG4gICAgICB9KSxcbiAgICAgIFBsb3QuZG90KGFkanVzdGVkRGF0YSwgUGxvdC5wb2ludGVyWCh7XG4gICAgICAgIHg6IFwid2F2ZWxlbmd0aFwiLFxuICAgICAgICB5OiBcInJlZmxlY3RhbmNlXCIsXG4gICAgICAgIGZpbGw6IFwic2FtcGxlXCIsXG4gICAgICAgIHN0cm9rZTogXCJ3aGl0ZVwiLFxuICAgICAgICBtYXJrZXI6IFwiY2lyY2xlXCIsXG4gICAgICAgIHN0cm9rZVdpZHRoOiAzLFxuICAgICAgICByOiA1XG4gICAgICB9KSksXG4gICAgICBQbG90LnRleHQoYWRqdXN0ZWREYXRhLCBQbG90LnBvaW50ZXJYKHtcbiAgICAgICAgcHg6IFwid2F2ZWxlbmd0aFwiLFxuICAgICAgICBweTogXCJyZWZsZWN0YW5jZVwiLFxuICAgICAgICBkeDogd2lkdGggKiAwLjUsXG4gICAgICAgIGR5OiAtMjAsXG4gICAgICAgIGZyYW1lQW5jaG9yOiBcInRvcC1sZWZ0XCIsXG4gICAgICAgIGZvbnRWYXJpYW50OiBcInRhYnVsYXItbnVtc1wiLFxuICAgICAgICBmb250U2l6ZTogZm9udFB4ICogMC44LFxuICAgICAgICB0ZXh0OiBkID0+IGAke2Quc2FtcGxlfSAgIM67ICR7Zm10KGQud2F2ZWxlbmd0aCl9IG5tICAgICR7Zm10VmFsKGQucmVmbGVjdGFuY2UpfWBcbiAgICAgIH0pKSxcbiAgICAgIFBsb3QudGV4dChhZGp1c3RlZERhdGEsIFBsb3Quc2VsZWN0TGFzdCh7XG4gICAgICAgIHg6IFwid2F2ZWxlbmd0aFwiLFxuICAgICAgICB5OiBcInJlZmxlY3RhbmNlXCIsXG4gICAgICAgIHo6IFwic2FtcGxlXCIsXG4gICAgICAgIHRleHQ6IFwic2FtcGxlXCIsXG4gICAgICAgIHRleHRBbmNob3I6IFwic3RhcnRcIixcbiAgICAgICAgZm9udFNpemU6IGZvbnRQeCAqIDAuOSxcbiAgICAgICAgZHg6IDMsXG4gICAgICAgIGNsaXA6IGZhbHNlXG4gICAgICB9KSlcbiAgICBdXG4gIH0pO1xuICBjb25zdCBzd2F0Y2hlcyA9IHAucXVlcnlTZWxlY3RvcignZGl2W2NsYXNzKj1cIi1zd2F0Y2hlcy13cmFwXCJdLCBkaXZbY2xhc3MqPVwiLXN3YXRjaGVzXCJdLCAucGxvdC1zd2F0Y2hlcycpO1xuICBpZiAoc3dhdGNoZXMpIHtcbiAgICBzd2F0Y2hlcy5zdHlsZS5mb250U2l6ZSA9IGAke2ZvbnRQeCAqIDAuNn1weGA7ICAgXG4gIH1cbiAgcmV0dXJuIHA7XG59XG5cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2F0ZWdvcnlTZWwnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc2FtcGxlU2VsJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3NhbXBsZVBhbmVsJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3NsaWRlcicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdub3JtYWxpemUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVzb2x1dGlvblNlbCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd3aW5kb3dTZWwnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/carbon-i\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><img src="./img/Caltech_Logo.png" class="img-fluid"> <br> Lead Institution</p>
+</div>   
+    <div class="nav-footer-center">
+<img src="./img/jpl_logo.png" class="img-fluid"> <br>
+<p>
+Instrument and Mission Management
+</p>
+</div>
+    <div class="nav-footer-right">
+<p><img src="./img/lockheed_logo.png" class="img-fluid"><br> Spacecraft and Mission Operations</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
