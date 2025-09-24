@@ -405,16 +405,13 @@ body {
   /* ---------- Spectra Story block -------------------------- */
   .spectra-plots{
 
-    padding-left: 100px;
+    padding-left: 50px;
 
     input[type="checkbox"] {
       transform: scale(1.5);   
       margin-left: 6px;       
     }
 
-    .container{
-      max-width: 1800px !important; // override bootstrap container size
-    }
     .grid { 
       align-items: stretch; 
 

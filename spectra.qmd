@@ -153,14 +153,14 @@ filteredData = categorizedData.filter(
 ```{ojs}
 plotWidth = Math.min(width, 1800);
 uiPx = Math.max(14, Math.round(plotWidth / 55));
-labelWidth = Math.round(Math.max(160, uiPx * 8));  
-inputWidth = Math.round(Math.max(200, uiPx * 10));
+labelWidth = Math.round(Math.max(160, uiPx * 7));  
+inputWidth = Math.round(Math.max(200, uiPx * 9));
 
 //injected css style to use plotWidth variable
 html`
 <style>
   .spectra-plots {
-    --label-fs: ${uiPx * 0.8}px;
+    --label-fs: ${uiPx * 0.75}px;
   }
   .spectra-plots form[class^="oi-"]{
     --label-width: ${labelWidth}px !important;
@@ -227,9 +227,8 @@ html`
   const p = Plot.plot({
     width: plotWidth,
     height: Math.round(plotWidth * (11/20)),
-    marginRight: 275,
-    marginLeft: 75,   
-    marginTop: 45,   
+    marginRight: 280,
+    marginLeft: 120,   
     marginBottom: 85,
 
     x: {
@@ -237,7 +236,7 @@ html`
       tickPadding: 10,
       tickRotate: rotate,  
       labelAnchor: "center",     
-      labelOffset: 60,
+      labelOffset: 80,
       domain: [minWL, maxWL],                                         
       ticks: d3.range(xTickStart, xTickEnd + 1, 30),
       tickFormat: d3.format("d")                                    
@@ -245,9 +244,10 @@ html`
     y: {
       label: yLabel,
       grid: true,
+      labelAnchor: "center",     
+      labelOffset: 120,
       tickFormat: d => d.toFixed(2),
       ticks: 20,
-      nice: false,
       tickPadding: 10,
       domain: [0, maxY + 0.02]
     },
@@ -286,7 +286,6 @@ html`
       Plot.text(adjustedData, Plot.pointerX({
         px: "wavelength",
         py: "reflectance",
-        dx: width * 0.5,
         dy: -20,
         frameAnchor: "top-left",
         fontVariant: "tabular-nums",
@@ -307,7 +306,7 @@ html`
   });
   const swatches = p.querySelector('div[class*="-swatches-wrap"], div[class*="-swatches"], .plot-swatches');
   if (swatches) {
-    swatches.style.fontSize = `${fontPx * 0.85}px`;   
+    swatches.style.fontSize = `${fontPx * 0.7}px`;   
   }
   return p;
 }
