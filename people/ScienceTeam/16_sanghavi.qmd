@@ -3,7 +3,7 @@ title: "Suniti Sanghavi"
 toc: false
 started: "2020"
 image: ../../img/people/suniti.jpg
-subtitle: "Radiative transfer modeler <br> JPL/Caltech"
+subtitle: "Radiative Transfer Lead <br> JPL/Caltech"
 sortby: "4"
 about:
   id: about-heading
