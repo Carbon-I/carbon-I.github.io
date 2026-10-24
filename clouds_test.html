@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>clouds_test</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -68,15 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="./img/ci_icon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-989cd2d0b4e6e274450c8924673e0cbb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-eb69be1c43d3440e108c52714bb04a88.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -308,50 +313,50 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 </div>
 </div>
 <div class="quarto-ojs-syntax-error">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-startfrom="48" data-syntax-error-position="86" data-source-offset="9"><pre class="sourceCode numberSource numberLines java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 47;"><span id="cb3-48"><a href="#cb3-48"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb3-49"><a href="#cb3-49"></a><span class="co">// Set the dimensions of the graph</span></span>
-<span id="cb3-50"><a href="#cb3-50"></a>width <span class="op">=</span> <span class="dv">800</span><span class="op">;</span></span>
-<span id="cb3-51"><a href="#cb3-51"></a>height <span class="op">=</span> <span class="dv">500</span><span class="op">;</span></span>
-<span id="cb3-52"><a href="#cb3-52"></a>margin <span class="op">=</span> <span class="op">{</span>top<span class="op">:</span> <span class="dv">20</span><span class="op">,</span> right<span class="op">:</span> <span class="dv">30</span><span class="op">,</span> bottom<span class="op">:</span> <span class="dv">40</span><span class="op">,</span> left<span class="op">:</span> <span class="dv">90</span><span class="op">};</span></span>
-<span id="cb3-53"><a href="#cb3-53"></a></span>
-<span id="cb3-54"><a href="#cb3-54"></a><span class="co">// Set up scales</span></span>
-<span id="cb3-55"><a href="#cb3-55"></a><span class="dt">const</span> xScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleBand</span><span class="op">()</span></span>
-<span id="cb3-56"><a href="#cb3-56"></a>  <span class="op">.</span><span class="fu">domain</span><span class="op">(</span>filteredData<span class="op">.</span><span class="fu">map</span><span class="op">(</span>d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">time</span><span class="op">))</span></span>
-<span id="cb3-57"><a href="#cb3-57"></a>  <span class="op">.</span><span class="fu">range</span><span class="op">([</span>margin<span class="op">.</span><span class="fu">left</span><span class="op">,</span> width <span class="op">-</span> margin<span class="op">.</span><span class="fu">right</span><span class="op">])</span></span>
-<span id="cb3-58"><a href="#cb3-58"></a>  <span class="op">.</span><span class="fu">padding</span><span class="op">(</span><span class="fl">0.1</span><span class="op">);</span></span>
-<span id="cb3-59"><a href="#cb3-59"></a></span>
-<span id="cb3-60"><a href="#cb3-60"></a><span class="dt">const</span> yScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span><span class="op">()</span></span>
-<span id="cb3-61"><a href="#cb3-61"></a>  <span class="op">.</span><span class="fu">domain</span><span class="op">([</span><span class="dv">0</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span><span class="op">(</span>filteredData<span class="op">,</span> d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">cloud_free_fraction</span><span class="op">)])</span></span>
-<span id="cb3-62"><a href="#cb3-62"></a>  <span class="op">.</span><span class="fu">nice</span><span class="op">()</span></span>
-<span id="cb3-63"><a href="#cb3-63"></a>  <span class="op">.</span><span class="fu">range</span><span class="op">([</span>height <span class="op">-</span> margin<span class="op">.</span><span class="fu">bottom</span><span class="op">,</span> margin<span class="op">.</span><span class="fu">top</span><span class="op">]);</span></span>
-<span id="cb3-64"><a href="#cb3-64"></a></span>
-<span id="cb3-65"><a href="#cb3-65"></a><span class="co">// SVG container</span></span>
-<span id="cb3-66"><a href="#cb3-66"></a><span class="dt">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span><span class="op">(</span><span class="st">"svg"</span><span class="op">)</span></span>
-<span id="cb3-67"><a href="#cb3-67"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"viewBox"</span><span class="op">,</span> <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> height<span class="op">]);</span></span>
-<span id="cb3-68"><a href="#cb3-68"></a></span>
-<span id="cb3-69"><a href="#cb3-69"></a><span class="co">// Bars</span></span>
-<span id="cb3-70"><a href="#cb3-70"></a>svg<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">"g"</span><span class="op">)</span></span>
-<span id="cb3-71"><a href="#cb3-71"></a>  <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"fill"</span><span class="op">,</span> <span class="st">"steelblue"</span><span class="op">)</span></span>
-<span id="cb3-72"><a href="#cb3-72"></a>  <span class="op">.</span><span class="fu">selectAll</span><span class="op">(</span><span class="st">"rect"</span><span class="op">)</span></span>
-<span id="cb3-73"><a href="#cb3-73"></a>  <span class="op">.</span><span class="fu">data</span><span class="op">(</span>filteredData<span class="op">)</span></span>
-<span id="cb3-74"><a href="#cb3-74"></a>  <span class="op">.</span><span class="fu">join</span><span class="op">(</span><span class="st">"rect"</span><span class="op">)</span></span>
-<span id="cb3-75"><a href="#cb3-75"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"x"</span><span class="op">,</span> d <span class="op">=&gt;</span> <span class="fu">xScale</span><span class="op">(</span>d<span class="op">.</span><span class="fu">time</span><span class="op">))</span></span>
-<span id="cb3-76"><a href="#cb3-76"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"y"</span><span class="op">,</span> d <span class="op">=&gt;</span> <span class="fu">yScale</span><span class="op">(</span>d<span class="op">.</span><span class="fu">cloud_free_fraction</span><span class="op">))</span></span>
-<span id="cb3-77"><a href="#cb3-77"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"height"</span><span class="op">,</span> d <span class="op">=&gt;</span> <span class="fu">yScale</span><span class="op">(</span><span class="dv">0</span><span class="op">)</span> <span class="op">-</span> <span class="fu">yScale</span><span class="op">(</span>d<span class="op">.</span><span class="fu">cloud_free_fraction</span><span class="op">))</span></span>
-<span id="cb3-78"><a href="#cb3-78"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"width"</span><span class="op">,</span> xScale<span class="op">.</span><span class="fu">bandwidth</span><span class="op">());</span></span>
-<span id="cb3-79"><a href="#cb3-79"></a></span>
-<span id="cb3-80"><a href="#cb3-80"></a><span class="co">// X-axis</span></span>
-<span id="cb3-81"><a href="#cb3-81"></a>svg<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">"g"</span><span class="op">)</span></span>
-<span id="cb3-82"><a href="#cb3-82"></a>  <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"transform"</span><span class="op">,</span> `<span class="fu">translate</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span>$<span class="op">{</span>height <span class="op">-</span> margin<span class="op">.</span><span class="fu">bottom</span><span class="op">})</span>`<span class="op">)</span></span>
-<span id="cb3-83"><a href="#cb3-83"></a>  <span class="op">.</span><span class="fu">call</span><span class="op">(</span>d3<span class="op">.</span><span class="fu">axisBottom</span><span class="op">(</span>xScale<span class="op">));</span></span>
-<span id="cb3-84"><a href="#cb3-84"></a></span>
-<span id="cb3-85"><a href="#cb3-85"></a><span class="co">// Y-axis</span></span>
-<span id="cb3-86"><a href="#cb3-86"></a>svg<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">"g"</span><span class="op">)</span></span>
-<span id="cb3-87"><a href="#cb3-87"></a>  <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"transform"</span><span class="op">,</span> `<span class="fu">translate</span><span class="op">(</span>$<span class="op">{</span>margin<span class="op">.</span><span class="fu">left</span><span class="op">},</span><span class="dv">0</span><span class="op">)</span>`<span class="op">)</span></span>
-<span id="cb3-88"><a href="#cb3-88"></a>  <span class="op">.</span><span class="fu">call</span><span class="op">(</span>d3<span class="op">.</span><span class="fu">axisLeft</span><span class="op">(</span>yScale<span class="op">));</span></span>
-<span id="cb3-89"><a href="#cb3-89"></a></span>
-<span id="cb3-90"><a href="#cb3-90"></a><span class="cf">return</span> svg<span class="op">.</span><span class="fu">node</span><span class="op">();</span></span>
-<span id="cb3-91"><a href="#cb3-91"></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-startfrom="48" data-syntax-error-position="86" data-source-offset="9"><pre class="sourceCode numberSource numberLines java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 47;"><span id="cb3-48"><a href="#cb3-48" aria-label="48"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-label="49"></a><span class="co">// Set the dimensions of the graph</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-label="50"></a>width <span class="op">=</span> <span class="dv">800</span><span class="op">;</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-label="51"></a>height <span class="op">=</span> <span class="dv">500</span><span class="op">;</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-label="52"></a>margin <span class="op">=</span> <span class="op">{</span>top<span class="op">:</span> <span class="dv">20</span><span class="op">,</span> right<span class="op">:</span> <span class="dv">30</span><span class="op">,</span> bottom<span class="op">:</span> <span class="dv">40</span><span class="op">,</span> left<span class="op">:</span> <span class="dv">90</span><span class="op">};</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-label="53"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-label="54"></a><span class="co">// Set up scales</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-label="55"></a><span class="dt">const</span> xScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleBand</span><span class="op">()</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-label="56"></a>  <span class="op">.</span><span class="fu">domain</span><span class="op">(</span>filteredData<span class="op">.</span><span class="fu">map</span><span class="op">(</span>d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">time</span><span class="op">))</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-label="57"></a>  <span class="op">.</span><span class="fu">range</span><span class="op">([</span>margin<span class="op">.</span><span class="fu">left</span><span class="op">,</span> width <span class="op">-</span> margin<span class="op">.</span><span class="fu">right</span><span class="op">])</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-label="58"></a>  <span class="op">.</span><span class="fu">padding</span><span class="op">(</span><span class="fl">0.1</span><span class="op">);</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-label="59"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-label="60"></a><span class="dt">const</span> yScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span><span class="op">()</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-label="61"></a>  <span class="op">.</span><span class="fu">domain</span><span class="op">([</span><span class="dv">0</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span><span class="op">(</span>filteredData<span class="op">,</span> d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">cloud_free_fraction</span><span class="op">)])</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-label="62"></a>  <span class="op">.</span><span class="fu">nice</span><span class="op">()</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-label="63"></a>  <span class="op">.</span><span class="fu">range</span><span class="op">([</span>height <span class="op">-</span> margin<span class="op">.</span><span class="fu">bottom</span><span class="op">,</span> margin<span class="op">.</span><span class="fu">top</span><span class="op">]);</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-label="64"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-label="65"></a><span class="co">// SVG container</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-label="66"></a><span class="dt">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span><span class="op">(</span><span class="st">"svg"</span><span class="op">)</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-label="67"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"viewBox"</span><span class="op">,</span> <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> height<span class="op">]);</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-label="68"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-label="69"></a><span class="co">// Bars</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-label="70"></a>svg<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">"g"</span><span class="op">)</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-label="71"></a>  <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"fill"</span><span class="op">,</span> <span class="st">"steelblue"</span><span class="op">)</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-label="72"></a>  <span class="op">.</span><span class="fu">selectAll</span><span class="op">(</span><span class="st">"rect"</span><span class="op">)</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-label="73"></a>  <span class="op">.</span><span class="fu">data</span><span class="op">(</span>filteredData<span class="op">)</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-label="74"></a>  <span class="op">.</span><span class="fu">join</span><span class="op">(</span><span class="st">"rect"</span><span class="op">)</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-label="75"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"x"</span><span class="op">,</span> d <span class="op">=&gt;</span> <span class="fu">xScale</span><span class="op">(</span>d<span class="op">.</span><span class="fu">time</span><span class="op">))</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-label="76"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"y"</span><span class="op">,</span> d <span class="op">=&gt;</span> <span class="fu">yScale</span><span class="op">(</span>d<span class="op">.</span><span class="fu">cloud_free_fraction</span><span class="op">))</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-label="77"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"height"</span><span class="op">,</span> d <span class="op">=&gt;</span> <span class="fu">yScale</span><span class="op">(</span><span class="dv">0</span><span class="op">)</span> <span class="op">-</span> <span class="fu">yScale</span><span class="op">(</span>d<span class="op">.</span><span class="fu">cloud_free_fraction</span><span class="op">))</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-label="78"></a>    <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"width"</span><span class="op">,</span> xScale<span class="op">.</span><span class="fu">bandwidth</span><span class="op">());</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-label="79"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-label="80"></a><span class="co">// X-axis</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-label="81"></a>svg<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">"g"</span><span class="op">)</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-label="82"></a>  <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"transform"</span><span class="op">,</span> `<span class="fu">translate</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span>$<span class="op">{</span>height <span class="op">-</span> margin<span class="op">.</span><span class="fu">bottom</span><span class="op">})</span>`<span class="op">)</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-label="83"></a>  <span class="op">.</span><span class="fu">call</span><span class="op">(</span>d3<span class="op">.</span><span class="fu">axisBottom</span><span class="op">(</span>xScale<span class="op">));</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-label="84"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-label="85"></a><span class="co">// Y-axis</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-label="86"></a>svg<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">"g"</span><span class="op">)</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-label="87"></a>  <span class="op">.</span><span class="fu">attr</span><span class="op">(</span><span class="st">"transform"</span><span class="op">,</span> `<span class="fu">translate</span><span class="op">(</span>$<span class="op">{</span>margin<span class="op">.</span><span class="fu">left</span><span class="op">},</span><span class="dv">0</span><span class="op">)</span>`<span class="op">)</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-label="88"></a>  <span class="op">.</span><span class="fu">call</span><span class="op">(</span>d3<span class="op">.</span><span class="fu">axisLeft</span><span class="op">(</span>yScale<span class="op">));</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-label="89"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-label="90"></a><span class="cf">return</span> svg<span class="op">.</span><span class="fu">node</span><span class="op">();</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-label="91"></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <div class="callout callout-style-default callout-important callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">

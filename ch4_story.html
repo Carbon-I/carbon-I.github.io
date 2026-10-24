@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>ch4_story</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -88,11 +94,10 @@ div.csl-indent {
 <link href="./img/ci_icon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ad95769f6962ecae627b5e7f7d4d0ab8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9786efc5495d813efa00ad026957d5f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -224,7 +229,7 @@ gtag('config', 'G-PE6RLP594L', { 'anonymize_ip': true});
 <div class="about px-md-7 py-3" style="border-bottom: 1px solid #C8C7C7;">
 <section id="what-is-going-on-with-methane" class="level1">
 <h1>What is going on with methane?</h1>
-Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use <span class="citation" data-cites="turner2019interpreting saunois2017variability">(<a href="#ref-saunois2017variability" role="doc-biblioref">Saunois et al., 2017</a>; <a href="#ref-turner2019interpreting" role="doc-biblioref">Turner et al., 2019</a>)</span>. The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks <span class="citation" data-cites="Zhang_2023">(<a href="#ref-Zhang_2023" role="doc-biblioref">Zhang et al., 2023</a>)</span> and anthropogenic sources <span class="citation" data-cites="Jackson_2020">(<a href="#ref-Jackson_2020" role="doc-biblioref">Jackson et al., 2020</a>)</span>.
+Human activities have significantly altered the Earth’s carbon cycle and energy budget through the release of anthropogenic greenhouse gases (GHG), particularly carbon dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>). While we have a good understanding of anthropogenic sources of CO2 at national to continental scales, uncertainties surrounding CH4 are an order of magnitude higher, as sources range from agriculture and waste management to fossil fuel production and use <span class="citation" data-cites="turner2019interpreting saunois2017variability">(<a href="#ref-saunois2017variability" role="doc-biblioref"><span class="nocase">Saunois et al.</span>, 2017</a>; <a href="#ref-turner2019interpreting" role="doc-biblioref">Turner et al., 2019</a>)</span>. The recent acceleration in the methane growth rate creates an urgency to act, yet we do not even understand the relative contribu- tions of natural climate feedbacks <span class="citation" data-cites="Zhang_2023">(<a href="#ref-Zhang_2023" role="doc-biblioref">Zhang et al., 2023</a>)</span> and anthropogenic sources <span class="citation" data-cites="Jackson_2020">(<a href="#ref-Jackson_2020" role="doc-biblioref">Jackson et al., 2020</a>)</span>.
 <div style="padding-bottom:5rem;">
 
 </div>
@@ -802,16 +807,16 @@ window._ojs.runtime.interpretFromScriptTags();
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -857,7 +862,7 @@ window._ojs.runtime.interpretFromScriptTags();
 Jackson, R. B., Saunois, M., Bousquet, P., Canadell, J. G., Poulter, B., Stavert, A. R., et al. (2020). Increasing anthropogenic methane emissions arise equally from agricultural and fossil fuel sources. <em>Environmental Research Letters</em>, <em>15</em>(7), 071002. <a href="https://doi.org/10.1088/1748-9326/ab9ed2">https://doi.org/10.1088/1748-9326/ab9ed2</a>
 </div>
 <div id="ref-saunois2017variability" class="csl-entry" role="listitem">
-Saunois, M., Bousquet, P., Poulter, B., Peregon, A., Ciais, P., Canadell, J. G., et al. (2017). Variability and quasi-decadal changes in the methane budget over the period 2000–2012. <em>Atmospheric Chemistry and Physics</em>, <em>17</em>(18), 11135–11161. <a href="https://doi.org/10.5194/essd-2016-25-rc2">https://doi.org/10.5194/essd-2016-25-rc2</a>
+<span class="nocase">Saunois, M., Bousquet, P., Poulter, B., Peregon, A., Ciais, P., Canadell, J. G., et al.</span> (2017). Variability and quasi-decadal changes in the methane budget over the period 2000–2012. <em>Atmospheric Chemistry and Physics</em>, <em>17</em>(18), 11135–11161. <a href="https://doi.org/10.5194/essd-2016-25-rc2">https://doi.org/10.5194/essd-2016-25-rc2</a>
 </div>
 <div id="ref-turner2019interpreting" class="csl-entry" role="listitem">
 Turner, A. J., Frankenberg, C., &amp; Kort, E. A. (2019). Interpreting contemporary trends in atmospheric methane. <em>Proceedings of the National Academy of Sciences</em>, <em>116</em>(8), 2805–2813. <a href="https://doi.org/10.1073/pnas.1814297116">https://doi.org/10.1073/pnas.1814297116</a>
